@@ -11,20 +11,19 @@ components:
         schema_id:
           type: string
           nullable: true
-          description: A string that uniquely identifies the Schema this Event Type
-            adheres to.
+          description: >-
+            A string that uniquely identifies the Schema this Event Type adheres
+            to.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Event Type was created, given in ISO 8601
-            format.
+          description: 'The date that this Event Type was created, given in ISO 8601 format.'
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Event Type was updated, given in ISO 8601
-            format.
+          description: 'The date that this Event Type was updated, given in ISO 8601 format.'
         description:
           type: string
           nullable: true
@@ -44,7 +43,8 @@ components:
         id:
           type: string
           nullable: true
-          description: The unique identifier of the schema. Each schema can have multiple
+          description: >-
+            The unique identifier of the schema. Each schema can have multiple
             versions, that share the same id.
         url:
           type: string
@@ -55,14 +55,16 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains a dictionary of URL links to nested resources of this
+          description: >-
+            Contains a dictionary of URL links to nested resources of this
             schema.
         latest_version_date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that the latest schema version was created, given
-            in ISO 8601 format.
+          description: >-
+            The date that the latest schema version was created, given in ISO
+            8601 format.
         latest_version:
           type: integer
           nullable: true
@@ -73,7 +75,8 @@ components:
         id:
           type: string
           nullable: true
-          description: The unique identifier of the schema. Each schema can have multiple
+          description: >-
+            The unique identifier of the schema. Each schema can have multiple
             versions, that share the same id.
         schema_version:
           type: integer
@@ -83,8 +86,7 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date the schema version was created, given in ISO 8601
-            format.
+          description: 'The date the schema version was created, given in ISO 8601 format.'
         url:
           type: string
           format: uri
@@ -101,12 +103,12 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Sink was created, given in ISO 8601 format.
+          description: 'The date that this Sink was created, given in ISO 8601 format.'
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Sink was updated, given in ISO 8601 format.
+          description: 'The date that this Sink was updated, given in ISO 8601 format.'
         description:
           type: string
           nullable: true
@@ -115,13 +117,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
+          pattern: '^DG[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this Sink.
         sink_configuration:
           nullable: true
-          description: The information required for Twilio to connect to the provided
-            Sink encoded as JSON.
+          description: >-
+            The information required for Twilio to connect to the provided Sink
+            encoded as JSON.
         sink_type:
           type: string
           $ref: '#/components/schemas/sink_enum_sink_type'
@@ -131,7 +134,8 @@ components:
           type: string
           $ref: '#/components/schemas/sink_enum_status'
           nullable: true
-          description: The Status of this Sink. One of `initialized`, `validating`,
+          description: >-
+            The Status of this Sink. One of `initialized`, `validating`,
             `active` or `failed`.
         url:
           type: string
@@ -142,21 +146,20 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains a dictionary of URL links to nested resources of this
-            Sink.
+          description: Contains a dictionary of URL links to nested resources of this Sink.
     sink_enum_status:
       type: string
       enum:
-      - initialized
-      - validating
-      - active
-      - failed
+        - initialized
+        - validating
+        - active
+        - failed
     sink_enum_sink_type:
       type: string
       enum:
-      - kinesis
-      - webhook
-      - segment
+        - kinesis
+        - webhook
+        - segment
     events.v1.sink.sink_test:
       type: object
       properties:
@@ -178,7 +181,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         type:
@@ -193,7 +196,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
+          pattern: '^DF[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Subscription.
         url:
@@ -208,27 +211,29 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
+          pattern: '^DF[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this Subscription.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Subscription was created, given in ISO 8601
+          description: >-
+            The date that this Subscription was created, given in ISO 8601
             format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Subscription was updated, given in ISO 8601
+          description: >-
+            The date that this Subscription was updated, given in ISO 8601
             format.
         description:
           type: string
@@ -238,10 +243,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
+          pattern: '^DG[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the sink that events selected by this subscription
-            should be sent to. Sink must be active for the subscription to be created.
+          description: >-
+            The SID of the sink that events selected by this subscription should
+            be sent to. Sink must be active for the subscription to be created.
         url:
           type: string
           format: uri
@@ -251,67 +257,72 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains a dictionary of URL links to nested resources of this
+          description: >-
+            Contains a dictionary of URL links to nested resources of this
             Subscription.
   securitySchemes:
     accountSid_authToken:
       type: http
       scheme: basic
 info:
-  title: Twilio - Events
+  title: Twilio Events API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
   /v1/Types:
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Event Types available
     x-twilio:
       defaultOutputProperties:
-      - type
-      - schema_id
-      - description
+        - type
+        - schema_id
+        - description
       pathType: list
       mountName: event_types
     get:
       description: Retrieve a paginated list of all the available Event Types.
       tags:
-      - EventsV1EventType
+        - Events
+        - Event Types
+        - Types
       parameters:
-      - name: SchemaId
-        in: query
-        description: A string parameter filtering the results to return only the Event
-          Types using a given schema.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: SchemaId
+          in: query
+          description: >-
+            A string parameter filtering the results to return only the Event
+            Types using a given schema.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -349,32 +360,35 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListEventType
       x-maturity:
-      - GA
-  /v1/Types/{Type}:
+        - GA
+      summary: Retrieve Types
+  '/v1/Types/{Type}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Event Types available
     x-twilio:
       defaultOutputProperties:
-      - type
-      - schema_id
-      - description
+        - type
+        - schema_id
+        - description
       pathType: instance
       mountName: event_types
     get:
       description: Fetch a specific Event Type.
       tags:
-      - EventsV1EventType
+        - Events
+        - Event Types
+        - Types
       parameters:
-      - name: Type
-        in: path
-        description: A string that uniquely identifies this Event Type.
-        schema:
-          type: string
-        required: true
+        - name: Type
+          in: path
+          description: A string that uniquely identifies this Event Type.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -383,35 +397,38 @@ paths:
                 $ref: '#/components/schemas/events.v1.event_type'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchEventType
       x-maturity:
-      - GA
-  /v1/Schemas/{Id}:
+        - GA
+      summary: Retrieve Type
+  '/v1/Schemas/{Id}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Versioned Schema definitions for Event Types
     x-twilio:
       defaultOutputProperties:
-      - id
+        - id
       pathType: instance
       dependentProperties:
         versions:
           mapping:
             id: id
-          resource_url: /v1/Schemas/{id}/Versions
+          resource_url: '/v1/Schemas/{id}/Versions'
     get:
       description: Fetch a specific schema with its nested versions.
       tags:
-      - EventsV1Schema
+        - Events
+        - Schema
       parameters:
-      - name: Id
-        in: path
-        description: The unique identifier of the schema. Each schema can have multiple
-          versions, that share the same id.
-        schema:
-          type: string
-        required: true
+        - name: Id
+          in: path
+          description: >-
+            The unique identifier of the schema. Each schema can have multiple
+            versions, that share the same id.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -420,66 +437,71 @@ paths:
                 $ref: '#/components/schemas/events.v1.schema'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSchema
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Schema
   /v1/Schemas:
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Versioned Schema definitions for Event Types
     x-twilio:
       defaultOutputProperties:
-      - id
+        - id
       pathType: list
       dependentProperties:
         versions:
           mapping:
             id: id
-          resource_url: /v1/Schemas/{id}/Versions
-  /v1/Schemas/{Id}/Versions:
+          resource_url: '/v1/Schemas/{id}/Versions'
+  '/v1/Schemas/{Id}/Versions':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Version of the Schema
     x-twilio:
       defaultOutputProperties:
-      - id
-      - schema_version
-      - date_created
+        - id
+        - schema_version
+        - date_created
       pathType: list
-      parent: /Schemas/{Id}
+      parent: '/Schemas/{Id}'
       className: schema_version
     get:
       description: Retrieve a paginated list of versions of the schema.
       tags:
-      - EventsV1SchemaVersion
+        - Events
+        - Schema
+        - Versions
       parameters:
-      - name: Id
-        in: path
-        description: The unique identifier of the schema. Each schema can have multiple
-          versions, that share the same id.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Id
+          in: path
+          description: >-
+            The unique identifier of the schema. Each schema can have multiple
+            versions, that share the same id.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -517,40 +539,44 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSchemaVersion
       x-maturity:
-      - GA
-  /v1/Schemas/{Id}/Versions/{SchemaVersion}:
+        - GA
+      summary: Retrieve Schema Versions
+  '/v1/Schemas/{Id}/Versions/{SchemaVersion}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Version of the Schema
     x-twilio:
       defaultOutputProperties:
-      - id
-      - schema_version
-      - date_created
+        - id
+        - schema_version
+        - date_created
       pathType: instance
-      parent: /Schemas/{Id}
+      parent: '/Schemas/{Id}'
       className: schema_version
     get:
       description: Fetch a specific schema and version.
       tags:
-      - EventsV1SchemaVersion
+        - Events
+        - Schema
+        - Versions
       parameters:
-      - name: Id
-        in: path
-        description: The unique identifier of the schema. Each schema can have multiple
-          versions, that share the same id.
-        schema:
-          type: string
-        required: true
-      - name: SchemaVersion
-        in: path
-        description: The version of the schema
-        schema:
-          type: integer
-        required: true
+        - name: Id
+          in: path
+          description: >-
+            The unique identifier of the schema. Each schema can have multiple
+            versions, that share the same id.
+          schema:
+            type: string
+          required: true
+        - name: SchemaVersion
+          in: path
+          description: The version of the schema
+          schema:
+            type: integer
+          required: true
       responses:
         '200':
           content:
@@ -559,47 +585,49 @@ paths:
                 $ref: '#/components/schemas/events.v1.schema.schema_version'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSchemaVersion
       x-maturity:
-      - GA
-  /v1/Sinks/{Sid}:
+        - GA
+      summary: Retrieve Schema Version
+  '/v1/Sinks/{Sid}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Sink destination to send events to
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - description
-      - sid
-      - sink_configuration
-      - sink_type
-      - status
+        - date_created
+        - date_updated
+        - description
+        - sid
+        - sink_configuration
+        - sink_type
+        - status
       pathType: instance
       dependentProperties:
         sink_test:
           mapping:
             sid: sid
-          resource_url: /v1/Sinks/{sid}/Test
+          resource_url: '/v1/Sinks/{sid}/Test'
         sink_validate:
           mapping:
             sid: sid
-          resource_url: /v1/Sinks/{sid}/Validate
+          resource_url: '/v1/Sinks/{sid}/Validate'
     get:
       description: Fetch a specific Sink.
       tags:
-      - EventsV1Sink
+        - Events
+        - Sinks
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Sink.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Sink.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -608,46 +636,50 @@ paths:
                 $ref: '#/components/schemas/events.v1.sink'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSink
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Sink
     delete:
       description: Delete a specific Sink.
       tags:
-      - EventsV1Sink
+        - Events
+        - Sinks
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Sink.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Sink.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSink
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Sink
     post:
       description: Update a specific Sink
       tags:
-      - EventsV1Sink
+        - Events
+        - Sinks
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Sink.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Sink.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -656,10 +688,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.sink'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSink
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -669,37 +701,40 @@ paths:
               properties:
                 Description:
                   type: string
-                  description: A human readable description for the Sink **This value
+                  description: >-
+                    A human readable description for the Sink **This value
                     should not contain PII.**
               required:
-              - Description
+                - Description
+      summary: Update Sink
   /v1/Sinks:
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Sink destination to send events to
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - description
-      - sid
-      - sink_configuration
-      - sink_type
-      - status
+        - date_created
+        - date_updated
+        - description
+        - sid
+        - sink_configuration
+        - sink_type
+        - status
       pathType: list
       dependentProperties:
         sink_test:
           mapping:
             sid: sid
-          resource_url: /v1/Sinks/{sid}/Test
+          resource_url: '/v1/Sinks/{sid}/Test'
         sink_validate:
           mapping:
             sid: sid
-          resource_url: /v1/Sinks/{sid}/Validate
+          resource_url: '/v1/Sinks/{sid}/Validate'
     post:
       description: Create a new Sink
       tags:
-      - EventsV1Sink
+        - Events
+        - Sinks
       responses:
         '201':
           content:
@@ -708,10 +743,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.sink'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSink
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -721,56 +756,64 @@ paths:
               properties:
                 Description:
                   type: string
-                  description: A human readable description for the Sink **This value
+                  description: >-
+                    A human readable description for the Sink **This value
                     should not contain PII.**
                 SinkConfiguration:
-                  description: The information required for Twilio to connect to the
+                  description: >-
+                    The information required for Twilio to connect to the
                     provided Sink encoded as JSON.
                 SinkType:
                   type: string
                   $ref: '#/components/schemas/sink_enum_sink_type'
                   description: The Sink type. Can only be "kinesis" or "webhook" currently.
               required:
-              - Description
-              - SinkConfiguration
-              - SinkType
+                - Description
+                - SinkConfiguration
+                - SinkType
+      summary: Create Sink
     get:
-      description: Retrieve a paginated list of Sinks belonging to the account used
-        to make the request.
+      description: >-
+        Retrieve a paginated list of Sinks belonging to the account used to make
+        the request.
       tags:
-      - EventsV1Sink
+        - Events
+        - Sinks
       parameters:
-      - name: InUse
-        in: query
-        description: A boolean query parameter filtering the results to return sinks
-          used/not used by a subscription.
-        schema:
-          type: boolean
-      - name: Status
-        in: query
-        description: A String query parameter filtering the results by status `initialized`,
-          `validating`, `active` or `failed`.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: InUse
+          in: query
+          description: >-
+            A boolean query parameter filtering the results to return sinks
+            used/not used by a subscription.
+          schema:
+            type: boolean
+        - name: Status
+          in: query
+          description: >-
+            A String query parameter filtering the results by status
+            `initialized`, `validating`, `active` or `failed`.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -808,35 +851,39 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSink
       x-maturity:
-      - GA
-  /v1/Sinks/{Sid}/Test:
+        - GA
+      summary: Retrieve Sinks
+  '/v1/Sinks/{Sid}/Test':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Test sink
     x-twilio:
       defaultOutputProperties:
-      - result
+        - result
       pathType: list
-      parent: /Sinks/{Sid}
+      parent: '/Sinks/{Sid}'
       mountName: sink_test
     post:
       description: Create a new Sink Test Event for the given Sink.
       tags:
-      - EventsV1SinkTest
+        - Events
+        - Sinks
+        - Tests
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies the Sink to be
-          Tested.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies the Sink to be
+            Tested.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -845,35 +892,39 @@ paths:
                 $ref: '#/components/schemas/events.v1.sink.sink_test'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSinkTest
       x-maturity:
-      - GA
-  /v1/Sinks/{Sid}/Validate:
+        - GA
+      summary: Create Sink Test
+  '/v1/Sinks/{Sid}/Validate':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Validate sink
     x-twilio:
       defaultOutputProperties:
-      - result
+        - result
       pathType: list
-      parent: /Sinks/{Sid}
+      parent: '/Sinks/{Sid}'
       mountName: sink_validate
     post:
       description: Validate that a test event for a Sink was received.
       tags:
-      - EventsV1SinkValidate
+        - Events
+        - Sinks
+        - Validate
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies the Sink being
-          validated.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies the Sink being
+            validated.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -882,10 +933,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.sink.sink_validate'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSinkValidate
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -895,55 +946,59 @@ paths:
               properties:
                 TestId:
                   type: string
-                  description: A 34 character string that uniquely identifies the
-                    test event for a Sink being validated.
+                  description: >-
+                    A 34 character string that uniquely identifies the test
+                    event for a Sink being validated.
               required:
-              - TestId
-  /v1/Subscriptions/{SubscriptionSid}/SubscribedEvents:
+                - TestId
+      summary: Validate Sink Test
+  '/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Event subscribed to in the parent Subscription
     x-twilio:
       defaultOutputProperties:
-      - type
-      - schema_version
-      - account_sid
-      - subscription_sid
+        - type
+        - schema_version
+        - account_sid
+        - subscription_sid
       pathType: list
-      parent: /Subscriptions/{Sid}
+      parent: '/Subscriptions/{Sid}'
     get:
       description: Retrieve a list of all Subscribed Event types for a Subscription.
       tags:
-      - EventsV1SubscribedEvent
+        - Events
+        - Subscriptions
       parameters:
-      - name: SubscriptionSid
-        in: path
-        description: The unique SID identifier of the Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: SubscriptionSid
+          in: path
+          description: The unique SID identifier of the Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -955,7 +1010,8 @@ paths:
                   types:
                     type: array
                     items:
-                      $ref: '#/components/schemas/events.v1.subscription.subscribed_event'
+                      $ref: >-
+                        #/components/schemas/events.v1.subscription.subscribed_event
                   meta:
                     type: object
                     properties:
@@ -981,24 +1037,26 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSubscribedEvent
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Subscription Events
     post:
       description: Add an event type to a Subscription.
       tags:
-      - EventsV1SubscribedEvent
+        - Events
+        - Subscriptions
       parameters:
-      - name: SubscriptionSid
-        in: path
-        description: The unique SID identifier of the Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
+        - name: SubscriptionSid
+          in: path
+          description: The unique SID identifier of the Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -1007,10 +1065,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription.subscribed_event'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSubscribedEvent
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1025,39 +1083,43 @@ paths:
                   type: integer
                   description: The schema version that the Subscription should use.
               required:
-              - Type
-  /v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}:
+                - Type
+      summary: Add Subscription Event Type
+  '/v1/Subscriptions/{SubscriptionSid}/SubscribedEvents/{Type}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Event subscribed to in the parent Subscription
     x-twilio:
       defaultOutputProperties:
-      - type
-      - schema_version
-      - account_sid
-      - subscription_sid
+        - type
+        - schema_version
+        - account_sid
+        - subscription_sid
       pathType: instance
-      parent: /Subscriptions/{Sid}
+      parent: '/Subscriptions/{Sid}'
     get:
       description: Read an Event for a Subscription.
       tags:
-      - EventsV1SubscribedEvent
+        - Events
+        - Subscriptions
+        - Event Types
+        - Types
       parameters:
-      - name: SubscriptionSid
-        in: path
-        description: The unique SID identifier of the Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
-      - name: Type
-        in: path
-        description: Type of event being subscribed to.
-        schema:
-          type: string
-        required: true
+        - name: SubscriptionSid
+          in: path
+          description: The unique SID identifier of the Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
+        - name: Type
+          in: path
+          description: Type of event being subscribed to.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -1066,30 +1128,34 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription.subscribed_event'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSubscribedEvent
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Subscription Event
     post:
       description: Update an Event for a Subscription.
       tags:
-      - EventsV1SubscribedEvent
+        - Events
+        - Subscriptions
+        - Event Types
+        - Types
       parameters:
-      - name: SubscriptionSid
-        in: path
-        description: The unique SID identifier of the Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
-      - name: Type
-        in: path
-        description: Type of event being subscribed to.
-        schema:
-          type: string
-        required: true
+        - name: SubscriptionSid
+          in: path
+          description: The unique SID identifier of the Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
+        - name: Type
+          in: path
+          description: Type of event being subscribed to.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -1098,10 +1164,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription.subscribed_event'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSubscribedEvent
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1112,85 +1178,94 @@ paths:
                 SchemaVersion:
                   type: integer
                   description: The schema version that the Subscription should use.
+      summary: Update Subscription Event
     delete:
       description: Remove an event type from a Subscription.
       tags:
-      - EventsV1SubscribedEvent
+        - Events
+        - Subscriptions
+        - Event Types
+        - Types
       parameters:
-      - name: SubscriptionSid
-        in: path
-        description: The unique SID identifier of the Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
-      - name: Type
-        in: path
-        description: Type of event being subscribed to.
-        schema:
-          type: string
-        required: true
+        - name: SubscriptionSid
+          in: path
+          description: The unique SID identifier of the Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
+        - name: Type
+          in: path
+          description: Type of event being subscribed to.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSubscribedEvent
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Subscription Event
   /v1/Subscriptions:
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Subscription to send Event Types to a Sink
     x-twilio:
       defaultOutputProperties:
-      - account_sid
-      - sid
-      - sink_sid
-      - date_created
-      - date_updated
+        - account_sid
+        - sid
+        - sink_sid
+        - date_created
+        - date_updated
       pathType: list
       dependentProperties:
         subscribed_events:
           mapping:
             subscription_sid: sid
-          resource_url: /v1/Subscriptions/{subscription_sid}/SubscribedEvents
+          resource_url: '/v1/Subscriptions/{subscription_sid}/SubscribedEvents'
     get:
-      description: Retrieve a paginated list of Subscriptions belonging to the account
-        used to make the request.
+      description: >-
+        Retrieve a paginated list of Subscriptions belonging to the account used
+        to make the request.
       tags:
-      - EventsV1Subscription
+        - Events
+        - Subscriptions
       parameters:
-      - name: SinkSid
-        in: query
-        description: The SID of the sink that the list of Subscriptions should be
-          filtered by.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DG[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: SinkSid
+          in: query
+          description: >-
+            The SID of the sink that the list of Subscriptions should be
+            filtered by.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DG[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -1228,14 +1303,16 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSubscription
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Subscriptions
     post:
       description: Create a new Subscription.
       tags:
-      - EventsV1Subscription
+        - Events
+        - Subscriptions
       responses:
         '201':
           content:
@@ -1244,10 +1321,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSubscription
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1257,56 +1334,59 @@ paths:
               properties:
                 Description:
                   type: string
-                  description: A human readable description for the Subscription **This
+                  description: >-
+                    A human readable description for the Subscription **This
                     value should not contain PII.**
                 SinkSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^DG[0-9a-fA-F]{32}$
-                  description: The SID of the sink that events selected by this subscription
-                    should be sent to. Sink must be active for the subscription to
-                    be created.
+                  pattern: '^DG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the sink that events selected by this
+                    subscription should be sent to. Sink must be active for the
+                    subscription to be created.
                 Types:
                   type: array
                   items: {}
-                  description: An array of objects containing the subscribed Event
-                    Types
+                  description: An array of objects containing the subscribed Event Types
               required:
-              - Description
-              - SinkSid
-              - Types
-  /v1/Subscriptions/{Sid}:
+                - Description
+                - SinkSid
+                - Types
+      summary: Create Subscription
+  '/v1/Subscriptions/{Sid}':
     servers:
-    - url: https://events.twilio.com
+      - url: 'https://events.twilio.com'
     description: Subscription to send Event Types to a Sink
     x-twilio:
       defaultOutputProperties:
-      - account_sid
-      - sid
-      - sink_sid
-      - date_created
-      - date_updated
+        - account_sid
+        - sid
+        - sink_sid
+        - date_created
+        - date_updated
       pathType: instance
       dependentProperties:
         subscribed_events:
           mapping:
             subscription_sid: sid
-          resource_url: /v1/Subscriptions/{subscription_sid}/SubscribedEvents
+          resource_url: '/v1/Subscriptions/{subscription_sid}/SubscribedEvents'
     get:
       description: Fetch a specific Subscription.
       tags:
-      - EventsV1Subscription
+        - Events
+        - Subscriptions
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -1315,24 +1395,26 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSubscription
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Subscription
     post:
       description: Update a Subscription.
       tags:
-      - EventsV1Subscription
+        - Events
+        - Subscriptions
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -1341,10 +1423,10 @@ paths:
                 $ref: '#/components/schemas/events.v1.subscription'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSubscription
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -1359,44 +1441,58 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^DG[0-9a-fA-F]{32}$
-                  description: The SID of the sink that events selected by this subscription
-                    should be sent to. Sink must be active for the subscription to
-                    be created.
+                  pattern: '^DG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the sink that events selected by this
+                    subscription should be sent to. Sink must be active for the
+                    subscription to be created.
+      summary: Update Subscription
     delete:
       description: Delete a specific Subscription.
       tags:
-      - EventsV1Subscription
+        - Events
+        - Subscriptions
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Subscription.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DF[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Subscription.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSubscription
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Subscription
 servers:
-- url: https://events.twilio.com
+  - url: 'https://events.twilio.com'
 tags:
-- name: EventsV1EventType
-- name: EventsV1Schema
-- name: EventsV1SchemaVersion
-- name: EventsV1Sink
-- name: EventsV1SinkTest
-- name: EventsV1SinkValidate
-- name: EventsV1SubscribedEvent
-- name: EventsV1Subscription
+  - name: Events
+    description: Needs a description.
+  - name: Event Types
+    description: Needs a description.
+  - name: Types
+    description: Needs a description.
+  - name: Schema
+    description: Needs a description.
+  - name: Versions
+    description: Needs a description.
+  - name: Sinks
+    description: Needs a description.
+  - name: Tests
+    description: Needs a description.
+  - name: Validate
+    description: Needs a description.
+  - name: Subscriptions
+    description: Needs a description.
 x-maturity:
-- name: GA
-  description: This product is Generally Available.
+  - name: GA
+    description: This product is Generally Available.
 ---

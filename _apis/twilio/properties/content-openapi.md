@@ -8,28 +8,32 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that that we created to identify the Content
+          description: >-
+            The unique string that that we created to identify the Content
             resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/usage/api/account)
-            that created Content resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/usage/api/account) that
+            created Content resource.
         whatsapp:
           nullable: true
-          description: Contains the whatsapp approval information for the Content
-            resource, with fields such as approval status, rejection reason, and category,
+          description: >-
+            Contains the whatsapp approval information for the Content resource,
+            with fields such as approval status, rejection reason, and category,
             amongst others.
         url:
           type: string
           format: uri
           nullable: true
-          description: The URL of the resource, relative to `https://content.twilio.com`.
+          description: 'The URL of the resource, relative to `https://content.twilio.com`.'
     content.v1.content:
       type: object
       properties:
@@ -37,59 +41,71 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that that we created to identify the Content
+          description: >-
+            The unique string that that we created to identify the Content
             resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/usage/api/account)
-            that created Content resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/usage/api/account) that
+            created Content resource.
         friendly_name:
           type: string
           nullable: true
-          description: A string name used to describe the Content resource. Not visible
-            to the end recipient.
+          description: >-
+            A string name used to describe the Content resource. Not visible to
+            the end recipient.
         language:
           type: string
           nullable: true
-          description: Two-letter (ISO 639-1) language code (e.g., en) identifying
-            the language the Content resource is in.
+          description: >-
+            Two-letter (ISO 639-1) language code (e.g., en) identifying the
+            language the Content resource is in.
         variables:
           nullable: true
-          description: 'Defines the default placeholder values for variables included
-            in the Content resource. e.g. {"1": "Customer_Name"}.'
+          description: >-
+            Defines the default placeholder values for variables included in the
+            Content resource. e.g. {"1": "Customer_Name"}.
         types:
           nullable: true
-          description: The [Content types](https://www.twilio.com/docs/content/content-types-overview)
+          description: >-
+            The [Content
+            types](https://www.twilio.com/docs/content/content-types-overview)
             (e.g. twilio/text) for this Content resource.
         url:
           type: string
           format: uri
           nullable: true
-          description: The URL of the resource, relative to `https://content.twilio.com`.
+          description: 'The URL of the resource, relative to `https://content.twilio.com`.'
         links:
           type: object
           format: uri-map
           nullable: true
-          description: A list of links related to the Content resource, such as approval_fetch
-            and approval_create
+          description: >-
+            A list of links related to the Content resource, such as
+            approval_fetch and approval_create
     content.v1.content_and_approvals:
       type: object
       properties:
@@ -97,52 +113,64 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that that we created to identify the Content
+          description: >-
+            The unique string that that we created to identify the Content
             resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/usage/api/account)
-            that created Content resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/usage/api/account) that
+            created Content resource.
         friendly_name:
           type: string
           nullable: true
-          description: A string name used to describe the Content resource. Not visible
-            to the end recipient.
+          description: >-
+            A string name used to describe the Content resource. Not visible to
+            the end recipient.
         language:
           type: string
           nullable: true
-          description: Two-letter (ISO 639-1) language code (e.g., en) identifying
-            the language the Content resource is in.
+          description: >-
+            Two-letter (ISO 639-1) language code (e.g., en) identifying the
+            language the Content resource is in.
         variables:
           nullable: true
-          description: 'Defines the default placeholder values for variables included
-            in the Content resource. e.g. {"1": "Customer_Name"}.'
+          description: >-
+            Defines the default placeholder values for variables included in the
+            Content resource. e.g. {"1": "Customer_Name"}.
         types:
           nullable: true
-          description: The [Content types](https://www.twilio.com/docs/content/content-types-overview)
+          description: >-
+            The [Content
+            types](https://www.twilio.com/docs/content/content-types-overview)
             (e.g. twilio/text) for this Content resource.
         approval_requests:
           nullable: true
-          description: The submitted information and approval request status of the
-            Content resource.
+          description: >-
+            The submitted information and approval request status of the Content
+            resource.
     content.v1.legacy_content:
       type: object
       properties:
@@ -150,111 +178,128 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT that the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT that the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that that we created to identify the Content
+          description: >-
+            The unique string that that we created to identify the Content
             resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/usage/api/account)
-            that created Content resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/usage/api/account) that
+            created Content resource.
         friendly_name:
           type: string
           nullable: true
-          description: A string name used to describe the Content resource. Not visible
-            to the end recipient.
+          description: >-
+            A string name used to describe the Content resource. Not visible to
+            the end recipient.
         language:
           type: string
           nullable: true
-          description: Two-letter (ISO 639-1) language code (e.g., en) identifying
-            the language the Content resource is in.
+          description: >-
+            Two-letter (ISO 639-1) language code (e.g., en) identifying the
+            language the Content resource is in.
         variables:
           nullable: true
-          description: 'Defines the default placeholder values for variables included
-            in the Content resource. e.g. {"1": "Customer_Name"}.'
+          description: >-
+            Defines the default placeholder values for variables included in the
+            Content resource. e.g. {"1": "Customer_Name"}.
         types:
           nullable: true
-          description: The [Content types](https://www.twilio.com/docs/content/content-types-overview)
+          description: >-
+            The [Content
+            types](https://www.twilio.com/docs/content/content-types-overview)
             (e.g. twilio/text) for this Content resource.
         legacy_template_name:
           type: string
           nullable: true
-          description: The string name of the legacy content template associated with
-            this Content resource, unique across all template names for its account.  Only
-            lowercase letters, numbers and underscores are allowed
+          description: >-
+            The string name of the legacy content template associated with this
+            Content resource, unique across all template names for its account. 
+            Only lowercase letters, numbers and underscores are allowed
         legacy_body:
           type: string
           nullable: true
-          description: The string body field of the legacy content template associated
-            with this Content resource
+          description: >-
+            The string body field of the legacy content template associated with
+            this Content resource
         url:
           type: string
           format: uri
           nullable: true
-          description: The URL of the resource, relative to `https://content.twilio.com`.
+          description: 'The URL of the resource, relative to `https://content.twilio.com`.'
   securitySchemes:
     accountSid_authToken:
       type: http
       scheme: basic
 info:
-  title: Twilio - Content
+  title: Twilio Content API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
-  /v1/Content/{Sid}/ApprovalRequests:
+  '/v1/Content/{Sid}/ApprovalRequests':
     servers:
-    - url: https://content.twilio.com
-    description: An Approval Fetch resource represents the approval status of a Content
+      - url: 'https://content.twilio.com'
+    description: >-
+      An Approval Fetch resource represents the approval status of a Content
       resource.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - account_sid
-      - whatsapp
+        - sid
+        - account_sid
+        - whatsapp
       pathType: instance
-      parent: /Content/{Sid}
+      parent: '/Content/{Sid}'
       mountName: approval_fetch
     get:
-      description: Fetch a Content resource's approval status by its unique Content
-        Sid
+      description: Fetch a Content resource's approval status by its unique Content Sid
       tags:
-      - ContentV1ApprovalFetch
+        - Content
+        - Approval Requests
+        - Approval
+        - Status
       parameters:
-      - name: Sid
-        in: path
-        description: The Twilio-provided string that uniquely identifies the Content
-          resource whose approval information to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The Twilio-provided string that uniquely identifies the Content
+            resource whose approval information to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HX[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -263,30 +308,31 @@ paths:
                 $ref: '#/components/schemas/content.v1.content.approval_fetch'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchApprovalFetch
       x-maturity:
-      - Preview
-  /v1/Content/{Sid}:
+        - Preview
+      summary: Retrieve Content Approval Status
+  '/v1/Content/{Sid}':
     servers:
-    - url: https://content.twilio.com
+      - url: 'https://content.twilio.com'
     description: A Content resource represents rich messaging content.
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - sid
-      - account_sid
-      - friendly_name
-      - language
-      - variables
-      - types
+        - date_created
+        - date_updated
+        - sid
+        - account_sid
+        - friendly_name
+        - language
+        - variables
+        - types
       pathType: instance
       dependentProperties:
         approval_create:
           mapping:
             sid: sid
-          resource_url: /v1/Content/{sid}/ApprovalRequests/whatsapp
+          resource_url: '/v1/Content/{sid}/ApprovalRequests/whatsapp'
         approval_fetch:
           mapping:
             sid: sid
@@ -295,18 +341,19 @@ paths:
     get:
       description: Fetch a Content resource by its unique Content Sid
       tags:
-      - ContentV1Content
+        - Content
       parameters:
-      - name: Sid
-        in: path
-        description: The Twilio-provided string that uniquely identifies the Content
-          resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The Twilio-provided string that uniquely identifies the Content
+            resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HX[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -315,83 +362,88 @@ paths:
                 $ref: '#/components/schemas/content.v1.content'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchContent
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Content
     delete:
       description: Deletes a Content resource
       tags:
-      - ContentV1Content
+        - Content
       parameters:
-      - name: Sid
-        in: path
-        description: The Twilio-provided string that uniquely identifies the Content
-          resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The Twilio-provided string that uniquely identifies the Content
+            resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HX[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteContent
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Content
   /v1/Content:
     servers:
-    - url: https://content.twilio.com
+      - url: 'https://content.twilio.com'
     description: A Content resource represents rich messaging content.
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - sid
-      - account_sid
-      - friendly_name
-      - language
-      - variables
-      - types
+        - date_created
+        - date_updated
+        - sid
+        - account_sid
+        - friendly_name
+        - language
+        - variables
+        - types
       pathType: list
       dependentProperties:
         approval_create:
           mapping:
             sid: sid
-          resource_url: /v1/Content/{sid}/ApprovalRequests/whatsapp
+          resource_url: '/v1/Content/{sid}/ApprovalRequests/whatsapp'
         approval_fetch:
           mapping:
             sid: sid
           resource_url: /v1None
       mountName: contents
     get:
-      description: Retrieve a list of Contents belonging to the account used to make
-        the request
+      description: >-
+        Retrieve a list of Contents belonging to the account used to make the
+        request
       tags:
-      - ContentV1Content
+        - Content
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -429,53 +481,60 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListContent
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Contents
   /v1/ContentAndApprovals:
     servers:
-    - url: https://content.twilio.com
-    description: A Content resource represents rich messaging content and its respective
+      - url: 'https://content.twilio.com'
+    description: >-
+      A Content resource represents rich messaging content and its respective
       approval request status.
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - sid
-      - account_sid
-      - friendly_name
-      - language
-      - variables
-      - types
-      - approval_requests
+        - date_created
+        - date_updated
+        - sid
+        - account_sid
+        - friendly_name
+        - language
+        - variables
+        - types
+        - approval_requests
       pathType: list
       className: content_and_approvals
     get:
-      description: Retrieve a list of Contents with approval statuses belonging to
-        the account used to make the request
+      description: >-
+        Retrieve a list of Contents with approval statuses belonging to the
+        account used to make the request
       tags:
-      - ContentV1ContentAndApprovals
+        - Content
+        - Approval Requests
+        - Approval
+        - Status
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -513,53 +572,57 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListContentAndApprovals
       x-maturity:
-      - Preview
+        - Preview
+      summary: Content Approval Statuses
   /v1/LegacyContent:
     servers:
-    - url: https://content.twilio.com
+      - url: 'https://content.twilio.com'
     description: A Legacy Content resource represents legacy rich messaging content.
     x-twilio:
       defaultOutputProperties:
-      - date_created
-      - date_updated
-      - sid
-      - account_sid
-      - friendly_name
-      - language
-      - variables
-      - types
-      - legacy_template_name
-      - legacy_body
+        - date_created
+        - date_updated
+        - sid
+        - account_sid
+        - friendly_name
+        - language
+        - variables
+        - types
+        - legacy_template_name
+        - legacy_body
       pathType: list
       mountName: legacy_contents
     get:
-      description: Retrieve a list of Legacy Contents belonging to the account used
-        to make the request
+      description: >-
+        Retrieve a list of Legacy Contents belonging to the account used to make
+        the request
       tags:
-      - ContentV1LegacyContent
+        - Content
+        - Legacy
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -597,20 +660,28 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListLegacyContent
       x-maturity:
-      - Preview
+        - Preview
+      summary: Legacy Content
 servers:
-- url: https://content.twilio.com
+  - url: 'https://content.twilio.com'
 tags:
-- name: ContentV1ApprovalFetch
-- name: ContentV1Content
-- name: ContentV1ContentAndApprovals
-- name: ContentV1LegacyContent
+  - name: Content
+    description: Needs a description.
+  - name: Approval Requests
+    description: Needs a description.
+  - name: Approval
+    description: Needs a description.
+  - name: Status
+    description: Needs a description.
+  - name: Legacy
+    description: Needs a description.
 x-maturity:
-- name: Preview
-  description: PLEASE NOTE that this is a Preview product that is subject to change.
-    Use it with caution. If you currently do not have developer preview access, please
-    contact https://www.twilio.com/help/contact.
+  - name: Preview
+    description: >-
+      PLEASE NOTE that this is a Preview product that is subject to change. Use
+      it with caution. If you currently do not have developer preview access,
+      please contact https://www.twilio.com/help/contact.
 ---

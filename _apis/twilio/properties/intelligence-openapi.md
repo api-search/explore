@@ -8,26 +8,26 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         media_url:
           type: string
           format: uri
           nullable: true
-          description: Downloadable URL for media, if stored in Twilio AI.
+          description: 'Downloadable URL for media, if stored in Twilio AI.'
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GA[0-9a-fA-F]{32}$
+          pattern: '^GA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Service.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
+          pattern: '^GT[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Transcript.
         url:
@@ -42,9 +42,10 @@ components:
           type: string
           $ref: '#/components/schemas/operator_result_enum_operator_type'
           nullable: true
-          description: The type of the applied Language Understanding Operator. One
-            of conversation-classify, utterance-classify, extract, extract-normalize,
-            or pii-extract
+          description: >-
+            The type of the applied Language Understanding Operator. One of
+            conversation-classify, utterance-classify, extract,
+            extract-normalize, or pii-extract
         name:
           type: string
           nullable: true
@@ -53,20 +54,21 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^LY[0-9a-fA-F]{32}$
+          pattern: '^LY[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that identifies this Language Understanding
+          description: >-
+            A 34 character string that identifies this Language Understanding
             operator sid.
         extract_match:
           type: boolean
           nullable: true
-          description: Boolean to tell if extract Language Understanding Processing
-            model matches results.
+          description: >-
+            Boolean to tell if extract Language Understanding Processing model
+            matches results.
         match_probability:
           type: number
           nullable: true
-          description: Percentage of 'matching' class needed to consider a sentence
-            matches
+          description: Percentage of 'matching' class needed to consider a sentence matches
         normalized_result:
           type: string
           nullable: true
@@ -83,30 +85,35 @@ components:
         predicted_label:
           type: string
           nullable: true
-          description: The 'matching' class. This might be available on conversation
+          description: >-
+            The 'matching' class. This might be available on conversation
             classify model outputs.
         predicted_probability:
           type: number
           nullable: true
-          description: Percentage of 'matching' class needed to consider a sentence
+          description: >-
+            Percentage of 'matching' class needed to consider a sentence
             matches.
         label_probabilities:
           nullable: true
-          description: The labels probabilities. This might be available on conversation
+          description: >-
+            The labels probabilities. This might be available on conversation
             classify model outputs.
         extract_results:
           nullable: true
-          description: List of text extraction results. This might be available on
+          description: >-
+            List of text extraction results. This might be available on
             classify-extract model outputs.
         text_generation_results:
           nullable: true
-          description: Output of a text generation operator for example Conversation
+          description: >-
+            Output of a text generation operator for example Conversation
             Sumamary.
         transcript_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
+          pattern: '^GT[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this Transcript.
         url:
@@ -117,11 +124,11 @@ components:
     operator_result_enum_operator_type:
       type: string
       enum:
-      - conversation_classify
-      - utterance_classify
-      - extract
-      - extract_normalize
-      - pii_extract
+        - conversation_classify
+        - utterance_classify
+        - extract
+        - extract_normalize
+        - pii_extract
     intelligence.v2.transcript.sentence:
       type: object
       properties:
@@ -136,13 +143,13 @@ components:
         start_time:
           type: number
           nullable: true
-          description: Offset from the beginning of the transcript when this sentence
+          description: >-
+            Offset from the beginning of the transcript when this sentence
             starts.
         end_time:
           type: number
           nullable: true
-          description: Offset from the beginning of the transcript when this sentence
-            ends.
+          description: Offset from the beginning of the transcript when this sentence ends.
         transcript:
           type: string
           nullable: true
@@ -155,7 +162,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GX[0-9a-fA-F]{32}$
+          pattern: '^GX[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this Sentence.
         confidence:
@@ -168,49 +175,52 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique SID identifier of the Account the Service belongs
-            to.
+          description: The unique SID identifier of the Account the Service belongs to.
         auto_redaction:
           type: boolean
           nullable: true
-          description: Instructs the Speech Recognition service to automatically redact
-            PII from all transcripts made on this service.
+          description: >-
+            Instructs the Speech Recognition service to automatically redact PII
+            from all transcripts made on this service.
         media_redaction:
           type: boolean
           nullable: true
-          description: Instructs the Speech Recognition service to automatically redact
-            PII from all transcripts media made on this service. The auto_redaction
+          description: >-
+            Instructs the Speech Recognition service to automatically redact PII
+            from all transcripts media made on this service. The auto_redaction
             flag must be enabled, results in error otherwise.
         auto_transcribe:
           type: boolean
           nullable: true
-          description: Instructs the Speech Recognition service to automatically transcribe
+          description: >-
+            Instructs the Speech Recognition service to automatically transcribe
             all recordings made on the account.
         data_logging:
           type: boolean
           nullable: true
-          description: 'Data logging allows Twilio to improve the quality of the speech
-            recognition & language understanding services through using customer data
-            to refine, fine tune and evaluate machine learning models.
+          description: >-
+            Data logging allows Twilio to improve the quality of the speech
+            recognition & language understanding services through using customer
+            data to refine, fine tune and evaluate machine learning models.
 
-            Note: Data logging cannot be activated via API, only via www.twilio.com,
-            as it requires additional consent.'
+            Note: Data logging cannot be activated via API, only via
+            www.twilio.com, as it requires additional consent.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Service was created, given in ISO 8601 format.
+          description: 'The date that this Service was created, given in ISO 8601 format.'
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Service was updated, given in ISO 8601 format.
+          description: 'The date that this Service was updated, given in ISO 8601 format.'
         friendly_name:
           type: string
           nullable: true
-          description: A human readable description of this resource, up to 64 characters.
+          description: 'A human readable description of this resource, up to 64 characters.'
         language_code:
           type: string
           nullable: true
@@ -222,9 +232,10 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: Provides a unique and addressable name to be assigned to this
-            Service, assigned by the developer, to be optionally used in addition
-            to SID.
+          description: >-
+            Provides a unique and addressable name to be assigned to this
+            Service, assigned by the developer, to be optionally used in
+            addition to SID.
         url:
           type: string
           format: uri
@@ -246,9 +257,9 @@ components:
     service_enum_http_method:
       type: string
       enum:
-      - GET
-      - POST
-      - 'NULL'
+        - GET
+        - POST
+        - 'NULL'
     intelligence.v2.transcript:
       type: object
       properties:
@@ -256,54 +267,53 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GA[0-9a-fA-F]{32}$
+          pattern: '^GA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Service.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
+          pattern: '^GT[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this Transcript.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Transcript was created, given in ISO 8601
-            format.
+          description: 'The date that this Transcript was created, given in ISO 8601 format.'
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Transcript was updated, given in ISO 8601
-            format.
+          description: 'The date that this Transcript was updated, given in ISO 8601 format.'
         status:
           type: string
           $ref: '#/components/schemas/transcript_enum_status'
           nullable: true
-          description: The Status of this Transcript. One of `queued`, `in-progress`,
+          description: >-
+            The Status of this Transcript. One of `queued`, `in-progress`,
             `completed`, `failed` or `canceled`.
         channel:
           nullable: true
-          description: Media Channel describing Transcript Source and Participant
-            Mapping
+          description: Media Channel describing Transcript Source and Participant Mapping
         data_logging:
           type: boolean
           nullable: true
-          description: 'Data logging allows Twilio to improve the quality of the speech
-            recognition & language understanding services through using customer data
-            to refine, fine tune and evaluate machine learning models.
+          description: >-
+            Data logging allows Twilio to improve the quality of the speech
+            recognition & language understanding services through using customer
+            data to refine, fine tune and evaluate machine learning models.
 
-            Note: Data logging cannot be activated via API, only via www.twilio.com,
-            as it requires additional consent.'
+            Note: Data logging cannot be activated via API, only via
+            www.twilio.com, as it requires additional consent.
         language_code:
           type: string
           nullable: true
@@ -315,8 +325,9 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this Transcript's media was started, given in
-            ISO 8601 format.
+          description: >-
+            The date that this Transcript's media was started, given in ISO 8601
+            format.
         duration:
           type: integer
           nullable: true
@@ -329,8 +340,9 @@ components:
         redaction:
           type: boolean
           nullable: true
-          description: If the transcript has been redacted, a redacted alternative
-            of the transcript will be available.
+          description: >-
+            If the transcript has been redacted, a redacted alternative of the
+            transcript will be available.
         links:
           type: object
           format: uri-map
@@ -338,67 +350,70 @@ components:
     transcript_enum_status:
       type: string
       enum:
-      - queued
-      - in-progress
-      - completed
-      - failed
-      - canceled
+        - queued
+        - in-progress
+        - completed
+        - failed
+        - canceled
     transcript_enum_call_direction:
       type: string
       enum:
-      - inbound
-      - outbound
-      - internal
-      - unknown
+        - inbound
+        - outbound
+        - internal
+        - unknown
   securitySchemes:
     accountSid_authToken:
       type: http
       scheme: basic
 info:
-  title: Twilio - Intelligence
+  title: Twilio Intelligence API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
-  /v2/Transcripts/{Sid}/Media:
+  '/v2/Transcripts/{Sid}/Media':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - account_sid
-      - service_sid
-      - sid
+        - account_sid
+        - service_sid
+        - sid
       pathType: instance
-      parent: /Transcripts/{Sid}
+      parent: '/Transcripts/{Sid}'
     get:
       description: Get download URLs for media if possible
       tags:
-      - IntelligenceV2Media
+        - Intelligence
+        - Transcripts
+        - Media
       parameters:
-      - name: Sid
-        in: path
-        description: The unique SID identifier of the Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
-      - name: Redacted
-        in: query
-        description: Grant access to PII Redacted/Unredacted Media. If redaction is
-          enabled, the default is `true` to access redacted media.
-        schema:
-          type: boolean
+        - name: Sid
+          in: path
+          description: The unique SID identifier of the Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
+        - name: Redacted
+          in: query
+          description: >-
+            Grant access to PII Redacted/Unredacted Media. If redaction is
+            enabled, the default is `true` to access redacted media.
+          schema:
+            type: boolean
       responses:
         '200':
           content:
@@ -407,58 +422,63 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.transcript.media'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchMedia
       x-maturity:
-      - Beta
-  /v2/Transcripts/{TranscriptSid}/OperatorResults:
+        - Beta
+      summary: Retrieve Transcript Media
+  '/v2/Transcripts/{TranscriptSid}/OperatorResults':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - operator_sid
+        - operator_sid
       pathType: list
-      parent: /Transcripts/{Sid}
+      parent: '/Transcripts/{Sid}'
     get:
       description: Retrieve a list of Operator Results for the given Transcript.
       tags:
-      - IntelligenceV2OperatorResult
+        - Intelligence
+        - Transcripts
+        - Operators
       parameters:
-      - name: TranscriptSid
-        in: path
-        description: A 34 character string that uniquely identifies this Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
-      - name: Redacted
-        in: query
-        description: Grant access to PII redacted/unredacted Language Understanding
-          operator. If redaction is enabled, the default is True.
-        schema:
-          type: boolean
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: TranscriptSid
+          in: path
+          description: A 34 character string that uniquely identifies this Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
+        - name: Redacted
+          in: query
+          description: >-
+            Grant access to PII redacted/unredacted Language Understanding
+            operator. If redaction is enabled, the default is True.
+          schema:
+            type: boolean
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -470,7 +490,8 @@ paths:
                   operator_results:
                     type: array
                     items:
-                      $ref: '#/components/schemas/intelligence.v2.transcript.operator_result'
+                      $ref: >-
+                        #/components/schemas/intelligence.v2.transcript.operator_result
                   meta:
                     type: object
                     properties:
@@ -496,115 +517,126 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListOperatorResult
       x-maturity:
-      - Beta
-  /v2/Transcripts/{TranscriptSid}/OperatorResults/{OperatorSid}:
+        - Beta
+      summary: Retrieve Transcript Operator Results
+  '/v2/Transcripts/{TranscriptSid}/OperatorResults/{OperatorSid}':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - operator_sid
+        - operator_sid
       pathType: instance
-      parent: /Transcripts/{Sid}
+      parent: '/Transcripts/{Sid}'
     get:
       description: Fetch a specific Operator Result for the given Transcript.
       tags:
-      - IntelligenceV2OperatorResult
+        - Intelligence
+        - Transcripts
+        - Operators
       parameters:
-      - name: TranscriptSid
-        in: path
-        description: A 34 character string that uniquely identifies this Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
-      - name: OperatorSid
-        in: path
-        description: A 34 character string that identifies this Language Understanding
-          operator sid.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^LY[0-9a-fA-F]{32}$
-        required: true
-      - name: Redacted
-        in: query
-        description: Grant access to PII redacted/unredacted Language Understanding
-          operator. If redaction is enabled, the default is True.
-        schema:
-          type: boolean
+        - name: TranscriptSid
+          in: path
+          description: A 34 character string that uniquely identifies this Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
+        - name: OperatorSid
+          in: path
+          description: >-
+            A 34 character string that identifies this Language Understanding
+            operator sid.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^LY[0-9a-fA-F]{32}$'
+          required: true
+        - name: Redacted
+          in: query
+          description: >-
+            Grant access to PII redacted/unredacted Language Understanding
+            operator. If redaction is enabled, the default is True.
+          schema:
+            type: boolean
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/intelligence.v2.transcript.operator_result'
+                $ref: >-
+                  #/components/schemas/intelligence.v2.transcript.operator_result
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchOperatorResult
       x-maturity:
-      - Beta
-  /v2/Transcripts/{TranscriptSid}/Sentences:
+        - Beta
+      summary: Retrieve Transcript Operator Result
+  '/v2/Transcripts/{TranscriptSid}/Sentences':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - media_channel
-      - sentence_index
-      - transcript
-      - start_time
-      - end_time
-      - confidence
+        - sid
+        - media_channel
+        - sentence_index
+        - transcript
+        - start_time
+        - end_time
+        - confidence
       pathType: list
-      parent: /Transcripts/{Sid}
+      parent: '/Transcripts/{Sid}'
     get:
       description: Get all Transcript Sentences by TranscriptSid
       tags:
-      - IntelligenceV2Sentence
+        - Intelligence
+        - Transcripts
+        - Sentences
       parameters:
-      - name: TranscriptSid
-        in: path
-        description: The unique SID identifier of the Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
-      - name: Redacted
-        in: query
-        description: Grant access to PII Redacted/Unredacted Sentences. If redaction
-          is enabled, the default is `true` to access redacted sentences.
-        schema:
-          type: boolean
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: TranscriptSid
+          in: path
+          description: The unique SID identifier of the Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
+        - name: Redacted
+          in: query
+          description: >-
+            Grant access to PII Redacted/Unredacted Sentences. If redaction is
+            enabled, the default is `true` to access redacted sentences.
+          schema:
+            type: boolean
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -642,27 +674,29 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSentence
       x-maturity:
-      - Beta
+        - Beta
+      summary: Retrieve Transcript Sentences
   /v2/Services:
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - unique_name
-      - friendly_name
-      - language_code
-      - date_created
-      - version
+        - sid
+        - unique_name
+        - friendly_name
+        - language_code
+        - date_created
+        - version
       pathType: list
     post:
       description: Create a new Service for the given Account
       tags:
-      - IntelligenceV2Service
+        - Intelligence
+        - Services
       responses:
         '201':
           content:
@@ -671,10 +705,10 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.service'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateService
       x-maturity:
-      - Beta
+        - Beta
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -684,38 +718,45 @@ paths:
               properties:
                 UniqueName:
                   type: string
-                  description: Provides a unique and addressable name to be assigned
-                    to this Service, assigned by the developer, to be optionally used
-                    in addition to SID.
+                  description: >-
+                    Provides a unique and addressable name to be assigned to
+                    this Service, assigned by the developer, to be optionally
+                    used in addition to SID.
                 AutoTranscribe:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
                     transcribe all recordings made on the account.
                 DataLogging:
                   type: boolean
-                  description: 'Data logging allows Twilio to improve the quality
-                    of the speech recognition & language understanding services through
-                    using customer data to refine, fine tune and evaluate machine
-                    learning models.
+                  description: >-
+                    Data logging allows Twilio to improve the quality of the
+                    speech recognition & language understanding services through
+                    using customer data to refine, fine tune and evaluate
+                    machine learning models.
 
-                    Note: Data logging cannot be activated via API, only via www.twilio.com,
-                    as it requires additional consent.'
+                    Note: Data logging cannot be activated via API, only via
+                    www.twilio.com, as it requires additional consent.
                 FriendlyName:
                   type: string
-                  description: A human readable description of this resource, up to
-                    64 characters.
+                  description: >-
+                    A human readable description of this resource, up to 64
+                    characters.
                 LanguageCode:
                   type: string
                   description: The default language code of the audio.
                 AutoRedaction:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
                     redact PII from all transcripts made on this service.
                 MediaRedaction:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
-                    redact PII from all transcripts media made on this service. The
-                    auto_redaction flag must be enabled, results in error otherwise.
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
+                    redact PII from all transcripts media made on this service.
+                    The auto_redaction flag must be enabled, results in error
+                    otherwise.
                 WebhookUrl:
                   type: string
                   description: The URL Twilio will request when executing the Webhook.
@@ -724,31 +765,34 @@ paths:
                   $ref: '#/components/schemas/service_enum_http_method'
                   description: The HTTP method for the Webhook. One of `GET` or `POST`.
               required:
-              - UniqueName
+                - UniqueName
+      summary: Create Service
     get:
       description: Retrieves a list of all Services for an account.
       tags:
-      - IntelligenceV2Service
+        - Intelligence
+        - Services
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -786,53 +830,57 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListService
       x-maturity:
-      - Beta
-  /v2/Services/{Sid}:
+        - Beta
+      summary: Retrieve Services
+  '/v2/Services/{Sid}':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - unique_name
-      - friendly_name
-      - language_code
-      - date_created
-      - version
+        - sid
+        - unique_name
+        - friendly_name
+        - language_code
+        - date_created
+        - version
       pathType: instance
     delete:
       description: Delete a specific Service.
       tags:
-      - IntelligenceV2Service
+        - Intelligence
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Service.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Service.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteService
       x-maturity:
-      - Beta
+        - Beta
+      summary: Delete Service
     get:
       description: Fetch a specific Service.
       tags:
-      - IntelligenceV2Service
+        - Intelligence
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Service.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Service.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -841,26 +889,28 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.service'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchService
       x-maturity:
-      - Beta
+        - Beta
+      summary: Retrieve Service
     post:
       description: Update a specific Service.
       tags:
-      - IntelligenceV2Service
+        - Intelligence
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Service.
-        schema:
-          type: string
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Service.
+          schema:
+            type: string
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -869,10 +919,10 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.service'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateService
       x-maturity:
-      - Beta
+        - Beta
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -882,38 +932,45 @@ paths:
               properties:
                 AutoTranscribe:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
                     transcribe all recordings made on the account.
                 DataLogging:
                   type: boolean
-                  description: 'Data logging allows Twilio to improve the quality
-                    of the speech recognition & language understanding services through
-                    using customer data to refine, fine tune and evaluate machine
-                    learning models.
+                  description: >-
+                    Data logging allows Twilio to improve the quality of the
+                    speech recognition & language understanding services through
+                    using customer data to refine, fine tune and evaluate
+                    machine learning models.
 
-                    Note: Data logging cannot be activated via API, only via www.twilio.com,
-                    as it requires additional consent.'
+                    Note: Data logging cannot be activated via API, only via
+                    www.twilio.com, as it requires additional consent.
                 FriendlyName:
                   type: string
-                  description: A human readable description of this resource, up to
-                    64 characters.
+                  description: >-
+                    A human readable description of this resource, up to 64
+                    characters.
                 LanguageCode:
                   type: string
                   description: The default language code of the audio.
                 UniqueName:
                   type: string
-                  description: Provides a unique and addressable name to be assigned
-                    to this Service, assigned by the developer, to be optionally used
-                    in addition to SID.
+                  description: >-
+                    Provides a unique and addressable name to be assigned to
+                    this Service, assigned by the developer, to be optionally
+                    used in addition to SID.
                 AutoRedaction:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
                     redact PII from all transcripts made on this service.
                 MediaRedaction:
                   type: boolean
-                  description: Instructs the Speech Recognition service to automatically
-                    redact PII from all transcripts media made on this service. The
-                    auto_redaction flag must be enabled, results in error otherwise.
+                  description: >-
+                    Instructs the Speech Recognition service to automatically
+                    redact PII from all transcripts media made on this service.
+                    The auto_redaction flag must be enabled, results in error
+                    otherwise.
                 WebhookUrl:
                   type: string
                   description: The URL Twilio will request when executing the Webhook.
@@ -921,23 +978,24 @@ paths:
                   type: string
                   $ref: '#/components/schemas/service_enum_http_method'
                   description: The HTTP method for the Webhook. One of `GET` or `POST`.
+      summary: Update Service
   /v2/Transcripts:
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - date_created
-      - media_start_time
-      - duration
-      - status
+        - sid
+        - date_created
+        - media_start_time
+        - duration
+        - status
       pathType: list
       dependentProperties:
         sentences:
           mapping:
             transcript_sid: sid
-          resource_url: /v2/Transcripts/{transcript_sid}/Sentences
+          resource_url: '/v2/Transcripts/{transcript_sid}/Sentences'
         media:
           mapping:
             sid: sid
@@ -945,11 +1003,12 @@ paths:
         operator_results:
           mapping:
             transcript_sid: sid
-          resource_url: /v2/Transcripts/{transcript_sid}/OperatorResults
+          resource_url: '/v2/Transcripts/{transcript_sid}/OperatorResults'
     post:
       description: Create a new Transcript for the service
       tags:
-      - IntelligenceV2Transcript
+        - Intelligence
+        - Transcripts
       responses:
         '202':
           content:
@@ -958,10 +1017,10 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.transcript'
           description: Accepted
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateTranscript
       x-maturity:
-      - Beta
+        - Beta
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -973,90 +1032,96 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^GA[0-9a-fA-F]{32}$
+                  pattern: '^GA[0-9a-fA-F]{32}$'
                   description: The unique SID identifier of the Service.
                 Channel:
-                  description: JSON object describing Media Channel including Source
-                    and Participants
+                  description: >-
+                    JSON object describing Media Channel including Source and
+                    Participants
                 CustomerKey:
                   type: string
-                  description: Used to store client provided metadata. Maximum of
-                    64 double-byte UTF8 characters.
+                  description: >-
+                    Used to store client provided metadata. Maximum of 64
+                    double-byte UTF8 characters.
                 MediaStartTime:
                   type: string
                   format: date-time
-                  description: The date that this Transcript's media was started,
-                    given in ISO 8601 format.
+                  description: >-
+                    The date that this Transcript's media was started, given in
+                    ISO 8601 format.
               required:
-              - ServiceSid
-              - Channel
+                - ServiceSid
+                - Channel
+      summary: Create Transcript
     get:
       description: Retrieve a list of Transcripts for a given service.
       tags:
-      - IntelligenceV2Transcript
+        - Intelligence
+        - Transcripts
       parameters:
-      - name: ServiceSid
-        in: query
-        description: The unique SID identifier of the Service.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GA[0-9a-fA-F]{32}$
-      - name: BeforeStartTime
-        in: query
-        description: Filter by before StartTime.
-        schema:
-          type: string
-      - name: AfterStartTime
-        in: query
-        description: Filter by after StartTime.
-        schema:
-          type: string
-      - name: BeforeDateCreated
-        in: query
-        description: Filter by before DateCreated.
-        schema:
-          type: string
-      - name: AfterDateCreated
-        in: query
-        description: Filter by after DateCreated.
-        schema:
-          type: string
-      - name: Status
-        in: query
-        description: Filter by status.
-        schema:
-          type: string
-      - name: LanguageCode
-        in: query
-        description: Filter by Language Code.
-        schema:
-          type: string
-      - name: SourceSid
-        in: query
-        description: Filter by SourceSid.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: query
+          description: The unique SID identifier of the Service.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GA[0-9a-fA-F]{32}$'
+        - name: BeforeStartTime
+          in: query
+          description: Filter by before StartTime.
+          schema:
+            type: string
+        - name: AfterStartTime
+          in: query
+          description: Filter by after StartTime.
+          schema:
+            type: string
+        - name: BeforeDateCreated
+          in: query
+          description: Filter by before DateCreated.
+          schema:
+            type: string
+        - name: AfterDateCreated
+          in: query
+          description: Filter by after DateCreated.
+          schema:
+            type: string
+        - name: Status
+          in: query
+          description: Filter by status.
+          schema:
+            type: string
+        - name: LanguageCode
+          in: query
+          description: Filter by Language Code.
+          schema:
+            type: string
+        - name: SourceSid
+          in: query
+          description: Filter by SourceSid.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -1094,27 +1159,28 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTranscript
       x-maturity:
-      - Beta
-  /v2/Transcripts/{Sid}:
+        - Beta
+      summary: Retrieve Transcripts
+  '/v2/Transcripts/{Sid}':
     servers:
-    - url: https://intelligence.twilio.com
+      - url: 'https://intelligence.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - date_created
-      - media_start_time
-      - duration
-      - status
+        - sid
+        - date_created
+        - media_start_time
+        - duration
+        - status
       pathType: instance
       dependentProperties:
         sentences:
           mapping:
             transcript_sid: sid
-          resource_url: /v2/Transcripts/{transcript_sid}/Sentences
+          resource_url: '/v2/Transcripts/{transcript_sid}/Sentences'
         media:
           mapping:
             sid: sid
@@ -1122,21 +1188,22 @@ paths:
         operator_results:
           mapping:
             transcript_sid: sid
-          resource_url: /v2/Transcripts/{transcript_sid}/OperatorResults
+          resource_url: '/v2/Transcripts/{transcript_sid}/OperatorResults'
     get:
       description: Fetch a specific Transcript.
       tags:
-      - IntelligenceV2Transcript
+        - Intelligence
+        - Transcripts
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -1145,42 +1212,54 @@ paths:
                 $ref: '#/components/schemas/intelligence.v2.transcript'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTranscript
       x-maturity:
-      - Beta
+        - Beta
+      summary: Retrieve Transcript
     delete:
       description: Delete a specific Transcript.
       tags:
-      - IntelligenceV2Transcript
+        - Intelligence
+        - Transcripts
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this Transcript.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^GT[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this Transcript.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^GT[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteTranscript
       x-maturity:
-      - Beta
+        - Beta
+      summary: Delete Transcript
 servers:
-- url: https://intelligence.twilio.com
+  - url: 'https://intelligence.twilio.com'
 tags:
-- name: IntelligenceV2Media
-- name: IntelligenceV2OperatorResult
-- name: IntelligenceV2Sentence
-- name: IntelligenceV2Service
-- name: IntelligenceV2Transcript
+  - name: Tag
+  - name: Intelligence
+    description: Needs a description.
+  - name: Transcripts
+    description: Needs a description.
+  - name: Media
+    description: Needs a description.
+  - name: Operators
+    description: Needs a description.
+  - name: Sentences
+    description: Needs a description.
+  - name: Services
+    description: Needs a description.
 x-maturity:
-- name: Beta
-  description: PLEASE NOTE that this is a Beta product that is subject to change.
-    Use it with caution.
+  - name: Beta
+    description: >-
+      PLEASE NOTE that this is a Beta product that is subject to change. Use it
+      with caution.
 ---

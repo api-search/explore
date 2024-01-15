@@ -141,9 +141,9 @@ paths:
       - friendly_name
       pathType: instance
     post:
-      description: Update a specific Channel.
+      description: Update Channel
       tags:
-      - ChatV3Channel
+      - Chats
       parameters:
       - name: ServiceSid
         in: path
@@ -211,7 +211,7 @@ paths:
 servers:
 - url: https://chat.twilio.com
 tags:
-- name: ChatV3Channel
+- name: Chats
 x-maturity:
 - name: GA
   description: This product is Generally Available.

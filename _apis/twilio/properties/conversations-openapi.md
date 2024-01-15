@@ -8,36 +8,44 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this configuration.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this configuration.
         default_chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the default [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the default [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             used when creating a conversation.
         default_messaging_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MG[0-9a-fA-F]{32}$
+          pattern: '^MG[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the default [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+          description: >-
+            The SID of the default [Messaging
+            Service](https://www.twilio.com/docs/messaging/api/service-resource)
             used when creating a conversation.
         default_inactive_timer:
           type: string
           nullable: true
-          description: Default ISO8601 duration when conversation will be switched
-            to `inactive` state. Minimum value for this timer is 1 minute.
+          description: >-
+            Default ISO8601 duration when conversation will be switched to
+            `inactive` state. Minimum value for this timer is 1 minute.
         default_closed_timer:
           type: string
           nullable: true
-          description: Default ISO8601 duration when conversation will be switched
-            to `closed` state. Minimum value for this timer is 10 minutes.
+          description: >-
+            Default ISO8601 duration when conversation will be switched to
+            `closed` state. Minimum value for this timer is 10 minutes.
         url:
           type: string
           format: uri
@@ -47,7 +55,8 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute API resource URLs to access the webhook and
+          description: >-
+            Contains absolute API resource URLs to access the webhook and
             default service configurations.
     conversations.v1.configuration_address:
       type: object
@@ -56,25 +65,28 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IG[0-9a-fA-F]{32}$
+          pattern: '^IG[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            the address belongs to
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) the address
+            belongs to
         type:
           type: string
           nullable: true
-          description: Type of Address, value can be `whatsapp` or `sms`.
+          description: 'Type of Address, value can be `whatsapp` or `sms`.'
         address:
           type: string
           nullable: true
-          description: The unique address to be configured. The address can be a whatsapp
+          description: >-
+            The unique address to be configured. The address can be a whatsapp
             address or phone number
           x-twilio:
             pii:
@@ -83,7 +95,8 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this configuration, limited to 256
+          description: >-
+            The human-readable name of this configuration, limited to 256
             characters. Optional.
         auto_creation:
           nullable: true
@@ -106,27 +119,28 @@ components:
         address_country:
           type: string
           nullable: true
-          description: An ISO 3166-1 alpha-2n country code which the address belongs
-            to. This is currently only applicable to short code addresses.
+          description: >-
+            An ISO 3166-1 alpha-2n country code which the address belongs to.
+            This is currently only applicable to short code addresses.
     configuration_address_enum_type:
       type: string
       enum:
-      - sms
-      - whatsapp
-      - messenger
-      - gbm
-      - email
+        - sms
+        - whatsapp
+        - messenger
+        - gbm
+        - email
     configuration_address_enum_auto_creation_type:
       type: string
       enum:
-      - webhook
-      - studio
-      - default
+        - webhook
+        - studio
+        - default
     configuration_address_enum_method:
       type: string
       enum:
-      - GET
-      - POST
+        - GET
+        - POST
     conversations.v1.configuration.configuration_webhook:
       type: object
       properties:
@@ -134,10 +148,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         method:
           type: string
           $ref: '#/components/schemas/configuration_webhook_enum_method'
@@ -148,25 +164,25 @@ components:
           items:
             type: string
           nullable: true
-          description: 'The list of webhook event triggers that are enabled for this
-            Service: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`,
-            `onConversationRemoved`, `onParticipantAdded`, `onParticipantUpdated`,
-            `onParticipantRemoved`'
+          description: >-
+            The list of webhook event triggers that are enabled for this
+            Service: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`,
+            `onConversationUpdated`, `onConversationRemoved`,
+            `onParticipantAdded`, `onParticipantUpdated`, `onParticipantRemoved`
         pre_webhook_url:
           type: string
           nullable: true
-          description: The absolute url the pre-event webhook request should be sent
-            to.
+          description: The absolute url the pre-event webhook request should be sent to.
         post_webhook_url:
           type: string
           nullable: true
-          description: The absolute url the post-event webhook request should be sent
-            to.
+          description: The absolute url the post-event webhook request should be sent to.
         target:
           type: string
           $ref: '#/components/schemas/configuration_webhook_enum_target'
           nullable: true
-          description: The routing target of the webhook. Can be ordinary or route
+          description: >-
+            The routing target of the webhook. Can be ordinary or route
             internally to Flex
         url:
           type: string
@@ -176,13 +192,13 @@ components:
     configuration_webhook_enum_target:
       type: string
       enum:
-      - webhook
-      - flex
+        - webhook
+        - flex
     configuration_webhook_enum_method:
       type: string
       enum:
-      - GET
-      - POST
+        - GET
+        - POST
     conversations.v1.conversation:
       type: object
       properties:
@@ -190,37 +206,44 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         messaging_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MG[0-9a-fA-F]{32}$
+          pattern: '^MG[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+          description: >-
+            The unique ID of the [Messaging
+            Service](https://www.twilio.com/docs/messaging/api/service-resource)
             this conversation belongs to.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -229,8 +252,9 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            resource. It can be used to address the resource in place of the resource's
+          description: >-
+            An application-defined string that uniquely identifies the resource.
+            It can be used to address the resource in place of the resource's
             `sid` in the URL.
           x-twilio:
             pii:
@@ -239,9 +263,11 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -250,7 +276,8 @@ components:
           type: string
           $ref: '#/components/schemas/conversation_enum_state'
           nullable: true
-          description: Current state of this conversation. Can be either `active`,
+          description: >-
+            Current state of this conversation. Can be either `active`,
             `inactive` or `closed` and defaults to `active`
         date_created:
           type: string
@@ -274,23 +301,26 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource),
+          description: >-
+            Contains absolute URLs to access the
+            [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource),
             [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource)
-            and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource)
+            and
+            [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource)
             of this conversation.
         bindings:
           nullable: true
     conversation_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
     conversations.v1.conversation.conversation_message:
       type: object
       properties:
@@ -298,36 +328,43 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this message.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this message.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this message.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
+          pattern: '^IM[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         index:
           type: integer
           nullable: true
-          description: The index of the message within the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource).  Indices
-            may skip numbers, but will always be in order of when the message was
-            received.
+          description: >-
+            The index of the message within the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource). 
+            Indices may skip numbers, but will always be in order of when the
+            message was received.
         author:
           type: string
           nullable: true
-          description: The channel specific identifier of the message's author. Defaults
-            to `system`.
+          description: >-
+            The channel specific identifier of the message's author. Defaults to
+            `system`.
           x-twilio:
             pii:
               handling: standard
@@ -335,7 +372,7 @@ components:
         body:
           type: string
           nullable: true
-          description: The content of the message, can be up to 1,600 characters long.
+          description: 'The content of the message, can be up to 1,600 characters long.'
           x-twilio:
             pii:
               handling: sensitive
@@ -344,11 +381,13 @@ components:
           type: array
           items: {}
           nullable: true
-          description: 'An array of objects that describe the Message''s media, if
-            the message contains media. Each object contains these fields: `content_type`
-            with the MIME type of the media, `filename` with the name of the media,
-            `sid` with the SID of the Media resource, and `size` with the media object''s
-            file size in bytes. If the Message has no media, this value is `null`.'
+          description: >-
+            An array of objects that describe the Message's media, if the
+            message contains media. Each object contains these fields:
+            `content_type` with the MIME type of the media, `filename` with the
+            name of the media, `sid` with the SID of the Media resource, and
+            `size` with the media object's file size in bytes. If the Message
+            has no media, this value is `null`.
           x-twilio:
             pii:
               handling: standard
@@ -356,9 +395,10 @@ components:
         attributes:
           type: string
           nullable: true
-          description: A string metadata field you can use to store any data you wish.
-            The string value must contain structurally valid JSON if specified.  **Note**
-            that if the attributes are not set "{}" will be returned.
+          description: >-
+            A string metadata field you can use to store any data you wish. The
+            string value must contain structurally valid JSON if specified. 
+            **Note** that if the attributes are not set "{}" will be returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -367,10 +407,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of messages's author participant. Null in case
-            of `system` sent message.
+          description: >-
+            The unique ID of messages's author participant. Null in case of
+            `system` sent message.
         date_created:
           type: string
           format: date-time
@@ -380,8 +421,9 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was last updated. `null` if the
-            message has not been edited.
+          description: >-
+            The date that this resource was last updated. `null` if the message
+            has not been edited.
         url:
           type: string
           format: uri
@@ -389,32 +431,35 @@ components:
           description: An absolute API resource API URL for this message.
         delivery:
           nullable: true
-          description: An object that contains the summary of delivery statuses for
-            the message to non-chat participants.
+          description: >-
+            An object that contains the summary of delivery statuses for the
+            message to non-chat participants.
         links:
           type: object
           format: uri-map
           nullable: true
-          description: Contains an absolute API resource URL to access the delivery
-            & read receipts of this message.
+          description: >-
+            Contains an absolute API resource URL to access the delivery & read
+            receipts of this message.
         content_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the multi-channel [Rich Content](https://www.twilio.com/docs/content)
-            template.
+          description: >-
+            The unique ID of the multi-channel [Rich
+            Content](https://www.twilio.com/docs/content) template.
     conversation_message_enum_order_type:
       type: string
       enum:
-      - asc
-      - desc
+        - asc
+        - desc
     conversation_message_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.conversation.conversation_message.conversation_message_receipt:
       type: object
       properties:
@@ -422,60 +467,70 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this participant.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this participant.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this message.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DY[0-9a-fA-F]{32}$
+          pattern: '^DY[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         message_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
+          pattern: '^IM[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             the delivery receipt belongs to
         channel_message_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^[a-zA-Z]{2}[0-9a-fA-F]{32}$
+          pattern: '^[a-zA-Z]{2}[0-9a-fA-F]{32}$'
           nullable: true
-          description: 'A messaging channel-specific identifier for the message delivered
-            to participant e.g. `SMxx` for SMS, `WAxx` for Whatsapp etc. '
+          description: >-
+            A messaging channel-specific identifier for the message delivered to
+            participant e.g. `SMxx` for SMS, `WAxx` for Whatsapp etc. 
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the participant the delivery receipt belongs
-            to.
+          description: The unique ID of the participant the delivery receipt belongs to.
         status:
           type: string
-          $ref: '#/components/schemas/conversation_message_receipt_enum_delivery_status'
+          $ref: >-
+            #/components/schemas/conversation_message_receipt_enum_delivery_status
           nullable: true
-          description: The message delivery status, can be `read`, `failed`, `delivered`,
+          description: >-
+            The message delivery status, can be `read`, `failed`, `delivered`,
             `undelivered`, `sent` or null.
         error_code:
           type: integer
           nullable: true
-          description: 'The message [delivery error code](https://www.twilio.com/docs/sms/api/message-resource#delivery-related-errors)
-            for a `failed` status, '
+          description: >-
+            The message [delivery error
+            code](https://www.twilio.com/docs/sms/api/message-resource#delivery-related-errors)
+            for a `failed` status, 
         date_created:
           type: string
           format: date-time
@@ -485,8 +540,9 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was last updated. `null` if the
-            delivery receipt has not been updated.
+          description: >-
+            The date that this resource was last updated. `null` if the delivery
+            receipt has not been updated.
         url:
           type: string
           format: uri
@@ -495,11 +551,11 @@ components:
     conversation_message_receipt_enum_delivery_status:
       type: string
       enum:
-      - read
-      - failed
-      - delivered
-      - undelivered
-      - sent
+        - read
+        - failed
+        - delivered
+        - undelivered
+        - sent
     conversations.v1.conversation.conversation_participant:
       type: object
       properties:
@@ -507,32 +563,38 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this participant.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this participant.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this participant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         identity:
           type: string
           nullable: true
-          description: A unique string identifier for the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-            This parameter is non-null if (and only if) the participant is using the
-            Conversations SDK to communicate. Limited to 256 characters.
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the Conversations SDK to communicate. Limited to 256 characters.
           x-twilio:
             pii:
               handling: standard
@@ -540,17 +602,20 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
               deleteSla: 30
         messaging_binding:
           nullable: true
-          description: Information about how this participant exchanges messages with
-            the conversation. A JSON parameter consisting of type and address fields
+          description: >-
+            Information about how this participant exchanges messages with the
+            conversation. A JSON parameter consisting of type and address fields
             of the participant.
           x-twilio:
             pii:
@@ -560,9 +625,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The SID of a conversation-level
+            [Role](https://www.twilio.com/docs/conversations/api/role-resource)
             to assign to the participant.
         date_created:
           type: string
@@ -582,18 +649,22 @@ components:
         last_read_message_index:
           type: integer
           nullable: true
-          description: "Index of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-            \ for the Participant."
+          description: >-
+            Index of last “read” message in the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for the Participant.
         last_read_timestamp:
           type: string
           nullable: true
-          description: "Timestamp of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-            \ for the Participant."
+          description: >-
+            Timestamp of last “read” message in the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for the Participant.
     conversation_participant_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.conversation.conversation_scoped_webhook:
       type: object
       properties:
@@ -601,24 +672,28 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
+          pattern: '^WH[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this webhook.
         target:
           type: string
@@ -645,14 +720,14 @@ components:
     conversation_scoped_webhook_enum_target:
       type: string
       enum:
-      - webhook
-      - trigger
-      - studio
+        - webhook
+        - trigger
+        - studio
     conversation_scoped_webhook_enum_method:
       type: string
       enum:
-      - GET
-      - POST
+        - GET
+        - POST
     conversations.v1.credential:
       type: object
       properties:
@@ -660,22 +735,25 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CR[0-9a-fA-F]{32}$
+          pattern: '^CR[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this credential.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this credential.
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this credential, limited to 64 characters.
-            Optional.
+          description: >-
+            The human-readable name of this credential, limited to 64
+            characters. Optional.
           x-twilio:
             pii:
               handling: standard
@@ -684,13 +762,15 @@ components:
           type: string
           $ref: '#/components/schemas/credential_enum_push_type'
           nullable: true
-          description: 'The type of push-notification service the credential is for.
-            Can be: `fcm`, `gcm`, or `apn`.'
+          description: >-
+            The type of push-notification service the credential is for. Can be:
+            `fcm`, `gcm`, or `apn`.
         sandbox:
           type: string
           nullable: true
-          description: '[APN only] Whether to send the credential to sandbox APNs.
-            Can be `true` to send to sandbox APNs or `false` to send to production.'
+          description: >-
+            [APN only] Whether to send the credential to sandbox APNs. Can be
+            `true` to send to sandbox APNs or `false` to send to production.
         date_created:
           type: string
           format: date-time
@@ -709,9 +789,9 @@ components:
     credential_enum_push_type:
       type: string
       enum:
-      - apn
-      - gcm
-      - fcm
+        - apn
+        - gcm
+        - fcm
     conversations.v1.participant_conversation:
       type: object
       properties:
@@ -719,48 +799,59 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource).
+          description: >-
+            The unique ID of the
+            [Participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource).
         participant_user_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that identifies the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
+          description: >-
+            The unique string that identifies the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
         participant_identity:
           type: string
           nullable: true
-          description: A unique string identifier for the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-            This parameter is non-null if (and only if) the participant is using the
-            Conversations SDK to communicate. Limited to 256 characters.
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the Conversations SDK to communicate. Limited to 256 characters.
           x-twilio:
             pii:
               handling: standard
               deleteSla: 30
         participant_messaging_binding:
           nullable: true
-          description: Information about how this participant exchanges messages with
-            the conversation. A JSON parameter consisting of type and address fields
+          description: >-
+            Information about how this participant exchanges messages with the
+            conversation. A JSON parameter consisting of type and address fields
             of the participant.
           x-twilio:
             pii:
@@ -770,14 +861,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             this Participant belongs to.
         conversation_unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
+          description: >-
+            An application-defined string that uniquely identifies the
             Conversation resource.
           x-twilio:
             pii:
@@ -786,7 +880,8 @@ components:
         conversation_friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -795,9 +890,11 @@ components:
         conversation_attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -806,14 +903,16 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was created, given in ISO 8601
+          description: >-
+            The date that this conversation was created, given in ISO 8601
             format.
         conversation_date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was last updated, given in
-            ISO 8601 format.
+          description: >-
+            The date that this conversation was last updated, given in ISO 8601
+            format.
         conversation_created_by:
           type: string
           nullable: true
@@ -822,7 +921,8 @@ components:
           type: string
           $ref: '#/components/schemas/participant_conversation_enum_state'
           nullable: true
-          description: The current state of this User Conversation. One of `inactive`,
+          description: >-
+            The current state of this User Conversation. One of `inactive`,
             `active` or `closed`.
         conversation_timers:
           nullable: true
@@ -831,15 +931,18 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
-            and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            Contains absolute URLs to access the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+            and
+            [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             of this conversation.
     participant_conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
     conversations.v1.role:
       type: object
       properties:
@@ -847,24 +950,28 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the Role resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Role resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Role resource.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Role resource is associated with.
         friendly_name:
           type: string
@@ -878,9 +985,12 @@ components:
           type: string
           $ref: '#/components/schemas/role_enum_role_type'
           nullable: true
-          description: 'The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-            roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-            roles.'
+          description: >-
+            The type of role. Can be: `conversation` for
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            roles or `service` for [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            roles.
         permissions:
           type: array
           items:
@@ -891,14 +1001,17 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         url:
           type: string
           format: uri
@@ -907,8 +1020,8 @@ components:
     role_enum_role_type:
       type: string
       enum:
-      - conversation
-      - service
+        - conversation
+        - service
     conversations.v1.service:
       type: object
       properties:
@@ -916,21 +1029,24 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this service.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this service.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this service, limited to 256 characters.
+          description: >-
+            The human-readable name of this service, limited to 256 characters.
             Optional.
           x-twilio:
             pii:
@@ -955,8 +1071,9 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute API resource URLs to access conversations,
-            users, roles, bindings and configuration of this service.
+          description: >-
+            Contains absolute API resource URLs to access conversations, users,
+            roles, bindings and configuration of this service.
     conversations.v1.service.service_binding:
       type: object
       properties:
@@ -964,33 +1081,40 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^BS[0-9a-fA-F]{32}$
+          pattern: '^BS[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this binding.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this binding.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Binding resource is associated with.
         credential_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CR[0-9a-fA-F]{32}$
+          pattern: '^CR[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Credential](https://www.twilio.com/docs/conversations/api/credential-resource)
-            for the binding. See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
+          description: >-
+            The SID of the
+            [Credential](https://www.twilio.com/docs/conversations/api/credential-resource)
+            for the binding. See [push notification
+            configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
             for more info.
         date_created:
           type: string
@@ -1005,8 +1129,9 @@ components:
         endpoint:
           type: string
           nullable: true
-          description: The unique endpoint identifier for the Binding. The format
-            of this value depends on the `binding_type`.
+          description: >-
+            The unique endpoint identifier for the Binding. The format of this
+            value depends on the `binding_type`.
           x-twilio:
             pii:
               handling: standard
@@ -1014,11 +1139,15 @@ components:
         identity:
           type: string
           nullable: true
-          description: The application-defined string that uniquely identifies the
-            [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource)
-            within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource).
-            See [access tokens](https://www.twilio.com/docs/conversations/create-tokens)
-            for more info.
+          description: >-
+            The application-defined string that uniquely identifies the
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource)
+            within the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource).
+            See [access
+            tokens](https://www.twilio.com/docs/conversations/create-tokens) for
+            more info.
           x-twilio:
             pii:
               handling: standard
@@ -1027,15 +1156,19 @@ components:
           type: string
           $ref: '#/components/schemas/service_binding_enum_binding_type'
           nullable: true
-          description: 'The push technology to use for the Binding. Can be: `apn`,
-            `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
-            for more info.'
+          description: >-
+            The push technology to use for the Binding. Can be: `apn`, `gcm`, or
+            `fcm`.  See [push notification
+            configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
+            for more info.
         message_types:
           type: array
           items:
             type: string
           nullable: true
-          description: The [Conversation message types](https://www.twilio.com/docs/chat/push-notification-configuration#push-types)
+          description: >-
+            The [Conversation message
+            types](https://www.twilio.com/docs/chat/push-notification-configuration#push-types)
             the binding is subscribed to.
         url:
           type: string
@@ -1045,9 +1178,9 @@ components:
     service_binding_enum_binding_type:
       type: string
       enum:
-      - apn
-      - gcm
-      - fcm
+        - apn
+        - gcm
+        - fcm
     conversations.v1.service.service_configuration:
       type: object
       properties:
@@ -1055,36 +1188,43 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the Service configuration
-            resource.
+          description: >-
+            The unique string that we created to identify the Service
+            configuration resource.
         default_conversation_creator_role_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The conversation-level role assigned to a conversation creator
-            when they join a new conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The conversation-level role assigned to a conversation creator when
+            they join a new conversation. See [Conversation
+            Role](https://www.twilio.com/docs/conversations/api/role-resource)
             for more info about roles.
         default_conversation_role_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The conversation-level role assigned to users when they are
-            added to a conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The conversation-level role assigned to users when they are added to
+            a conversation. See [Conversation
+            Role](https://www.twilio.com/docs/conversations/api/role-resource)
             for more info about roles.
         default_chat_service_role_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The service-level role assigned to users when they are added
-            to the service. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The service-level role assigned to users when they are added to the
+            service. See [Conversation
+            Role](https://www.twilio.com/docs/conversations/api/role-resource)
             for more info about roles.
         url:
           type: string
@@ -1095,12 +1235,15 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains an absolute API resource URL to access the push notifications
-            configuration of this service.
+          description: >-
+            Contains an absolute API resource URL to access the push
+            notifications configuration of this service.
         reachability_enabled:
           type: boolean
           nullable: true
-          description: Whether the [Reachability Indicator](https://www.twilio.com/docs/conversations/reachability)
+          description: >-
+            Whether the [Reachability
+            Indicator](https://www.twilio.com/docs/conversations/reachability)
             is enabled for this Conversations Service. The default is `false`.
     conversations.v1.service.service_conversation:
       type: object
@@ -1109,37 +1252,44 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         messaging_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MG[0-9a-fA-F]{32}$
+          pattern: '^MG[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+          description: >-
+            The unique ID of the [Messaging
+            Service](https://www.twilio.com/docs/messaging/api/service-resource)
             this conversation belongs to.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -1148,8 +1298,9 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            resource. It can be used to address the resource in place of the resource's
+          description: >-
+            An application-defined string that uniquely identifies the resource.
+            It can be used to address the resource in place of the resource's
             `sid` in the URL.
           x-twilio:
             pii:
@@ -1158,9 +1309,11 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -1169,7 +1322,8 @@ components:
           type: string
           $ref: '#/components/schemas/service_conversation_enum_state'
           nullable: true
-          description: Current state of this conversation. Can be either `active`,
+          description: >-
+            Current state of this conversation. Can be either `active`,
             `inactive` or `closed` and defaults to `active`
         date_created:
           type: string
@@ -1193,23 +1347,26 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource),
+          description: >-
+            Contains absolute URLs to access the
+            [participants](https://www.twilio.com/docs/conversations/api/conversation-participant-resource),
             [messages](https://www.twilio.com/docs/conversations/api/conversation-message-resource)
-            and [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource)
+            and
+            [webhooks](https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource)
             of this conversation.
         bindings:
           nullable: true
     service_conversation_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     service_conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
     conversations.v1.service.service_conversation.service_conversation_message:
       type: object
       properties:
@@ -1217,42 +1374,51 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this message.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this message.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Participant resource is associated with.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this message.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
+          pattern: '^IM[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         index:
           type: integer
           nullable: true
-          description: The index of the message within the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          description: >-
+            The index of the message within the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource).
         author:
           type: string
           nullable: true
-          description: The channel specific identifier of the message's author. Defaults
-            to `system`.
+          description: >-
+            The channel specific identifier of the message's author. Defaults to
+            `system`.
           x-twilio:
             pii:
               handling: standard
@@ -1260,7 +1426,7 @@ components:
         body:
           type: string
           nullable: true
-          description: The content of the message, can be up to 1,600 characters long.
+          description: 'The content of the message, can be up to 1,600 characters long.'
           x-twilio:
             pii:
               handling: sensitive
@@ -1269,11 +1435,13 @@ components:
           type: array
           items: {}
           nullable: true
-          description: 'An array of objects that describe the Message''s media, if
-            the message contains media. Each object contains these fields: `content_type`
-            with the MIME type of the media, `filename` with the name of the media,
-            `sid` with the SID of the Media resource, and `size` with the media object''s
-            file size in bytes. If the Message has no media, this value is `null`.'
+          description: >-
+            An array of objects that describe the Message's media, if the
+            message contains media. Each object contains these fields:
+            `content_type` with the MIME type of the media, `filename` with the
+            name of the media, `sid` with the SID of the Media resource, and
+            `size` with the media object's file size in bytes. If the Message
+            has no media, this value is `null`.
           x-twilio:
             pii:
               handling: standard
@@ -1281,9 +1449,10 @@ components:
         attributes:
           type: string
           nullable: true
-          description: A string metadata field you can use to store any data you wish.
-            The string value must contain structurally valid JSON if specified.  **Note**
-            that if the attributes are not set "{}" will be returned.
+          description: >-
+            A string metadata field you can use to store any data you wish. The
+            string value must contain structurally valid JSON if specified. 
+            **Note** that if the attributes are not set "{}" will be returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -1292,10 +1461,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of messages's author participant. Null in case
-            of `system` sent message.
+          description: >-
+            The unique ID of messages's author participant. Null in case of
+            `system` sent message.
         date_created:
           type: string
           format: date-time
@@ -1305,12 +1475,14 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was last updated. `null` if the
-            message has not been edited.
+          description: >-
+            The date that this resource was last updated. `null` if the message
+            has not been edited.
         delivery:
           nullable: true
-          description: An object that contains the summary of delivery statuses for
-            the message to non-chat participants.
+          description: >-
+            An object that contains the summary of delivery statuses for the
+            message to non-chat participants.
         url:
           type: string
           format: uri
@@ -1320,26 +1492,28 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains an absolute API resource URL to access the delivery
-            & read receipts of this message.
+          description: >-
+            Contains an absolute API resource URL to access the delivery & read
+            receipts of this message.
         content_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HX[0-9a-fA-F]{32}$
+          pattern: '^HX[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the multi-channel [Rich Content](https://www.twilio.com/docs/content)
-            template.
+          description: >-
+            The unique ID of the multi-channel [Rich
+            Content](https://www.twilio.com/docs/content) template.
     service_conversation_message_enum_order_type:
       type: string
       enum:
-      - asc
-      - desc
+        - asc
+        - desc
     service_conversation_message_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.service.service_conversation.service_conversation_message.service_conversation_message_receipt:
       type: object
       properties:
@@ -1347,68 +1521,80 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this participant.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this participant.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Message resource is associated with.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this message.
         message_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
+          pattern: '^IM[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             the delivery receipt belongs to
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DY[0-9a-fA-F]{32}$
+          pattern: '^DY[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         channel_message_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^[a-zA-Z]{2}[0-9a-fA-F]{32}$
+          pattern: '^[a-zA-Z]{2}[0-9a-fA-F]{32}$'
           nullable: true
-          description: 'A messaging channel-specific identifier for the message delivered
-            to participant e.g. `SMxx` for SMS, `WAxx` for Whatsapp etc. '
+          description: >-
+            A messaging channel-specific identifier for the message delivered to
+            participant e.g. `SMxx` for SMS, `WAxx` for Whatsapp etc. 
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the participant the delivery receipt belongs
-            to.
+          description: The unique ID of the participant the delivery receipt belongs to.
         status:
           type: string
-          $ref: '#/components/schemas/service_conversation_message_receipt_enum_delivery_status'
+          $ref: >-
+            #/components/schemas/service_conversation_message_receipt_enum_delivery_status
           nullable: true
-          description: The message delivery status, can be `read`, `failed`, `delivered`,
+          description: >-
+            The message delivery status, can be `read`, `failed`, `delivered`,
             `undelivered`, `sent` or null.
         error_code:
           type: integer
           nullable: true
-          description: 'The message [delivery error code](https://www.twilio.com/docs/sms/api/message-resource#delivery-related-errors)
-            for a `failed` status, '
+          description: >-
+            The message [delivery error
+            code](https://www.twilio.com/docs/sms/api/message-resource#delivery-related-errors)
+            for a `failed` status, 
         date_created:
           type: string
           format: date-time
@@ -1418,8 +1604,9 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was last updated. `null` if the
-            delivery receipt has not been updated.
+          description: >-
+            The date that this resource was last updated. `null` if the delivery
+            receipt has not been updated.
         url:
           type: string
           format: uri
@@ -1428,11 +1615,11 @@ components:
     service_conversation_message_receipt_enum_delivery_status:
       type: string
       enum:
-      - read
-      - failed
-      - delivered
-      - undelivered
-      - sent
+        - read
+        - failed
+        - delivered
+        - undelivered
+        - sent
     conversations.v1.service.service_conversation.service_conversation_participant:
       type: object
       properties:
@@ -1440,41 +1627,50 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this participant.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this participant.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Participant resource is associated with.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this participant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         identity:
           type: string
           nullable: true
-          description: A unique string identifier for the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-            This parameter is non-null if (and only if) the participant is using the
-            [Conversation SDK](https://www.twilio.com/docs/conversations/sdk-overview)
-            to communicate. Limited to 256 characters.
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the [Conversation
+            SDK](https://www.twilio.com/docs/conversations/sdk-overview) to
+            communicate. Limited to 256 characters.
           x-twilio:
             pii:
               handling: standard
@@ -1482,17 +1678,20 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set `{}` will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set `{}` will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
               deleteSla: 30
         messaging_binding:
           nullable: true
-          description: Information about how this participant exchanges messages with
-            the conversation. A JSON parameter consisting of type and address fields
+          description: >-
+            Information about how this participant exchanges messages with the
+            conversation. A JSON parameter consisting of type and address fields
             of the participant.
           x-twilio:
             pii:
@@ -1502,9 +1701,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The SID of a conversation-level
+            [Role](https://www.twilio.com/docs/conversations/api/role-resource)
             to assign to the participant.
         date_created:
           type: string
@@ -1524,18 +1725,22 @@ components:
         last_read_message_index:
           type: integer
           nullable: true
-          description: "Index of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-            \ for the Participant."
+          description: >-
+            Index of last “read” message in the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for the Participant.
         last_read_timestamp:
           type: string
           nullable: true
-          description: "Timestamp of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-            \ for the Participant."
+          description: >-
+            Timestamp of last “read” message in the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for the Participant.
     service_conversation_participant_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.service.service_conversation.service_conversation_scoped_webhook:
       type: object
       properties:
@@ -1543,32 +1748,38 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
+          pattern: '^WH[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Participant resource is associated with.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this webhook.
         target:
           type: string
@@ -1595,14 +1806,14 @@ components:
     service_conversation_scoped_webhook_enum_target:
       type: string
       enum:
-      - webhook
-      - trigger
-      - studio
+        - webhook
+        - trigger
+        - studio
     service_conversation_scoped_webhook_enum_method:
       type: string
       enum:
-      - GET
-      - POST
+        - GET
+        - POST
     conversations.v1.service.service_configuration.service_notification:
       type: object
       properties:
@@ -1610,28 +1821,35 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this configuration.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this configuration.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Configuration applies to.
         new_message:
           nullable: true
           description: The Push Notification configuration for New Messages.
         added_to_conversation:
           nullable: true
-          description: The Push Notification configuration for being added to a Conversation.
+          description: >-
+            The Push Notification configuration for being added to a
+            Conversation.
         removed_from_conversation:
           nullable: true
-          description: The Push Notification configuration for being removed from
-            a Conversation.
+          description: >-
+            The Push Notification configuration for being removed from a
+            Conversation.
         log_enabled:
           type: boolean
           nullable: true
@@ -1648,48 +1866,59 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource).
+          description: >-
+            The unique ID of the
+            [Participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource).
         participant_user_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that identifies the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
+          description: >-
+            The unique string that identifies the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
         participant_identity:
           type: string
           nullable: true
-          description: A unique string identifier for the conversation participant
-            as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-            This parameter is non-null if (and only if) the participant is using the
-            Conversations SDK to communicate. Limited to 256 characters.
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the Conversations SDK to communicate. Limited to 256 characters.
           x-twilio:
             pii:
               handling: standard
               deleteSla: 30
         participant_messaging_binding:
           nullable: true
-          description: Information about how this participant exchanges messages with
-            the conversation. A JSON parameter consisting of type and address fields
+          description: >-
+            Information about how this participant exchanges messages with the
+            conversation. A JSON parameter consisting of type and address fields
             of the participant.
           x-twilio:
             pii:
@@ -1699,14 +1928,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             this Participant belongs to.
         conversation_unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
+          description: >-
+            An application-defined string that uniquely identifies the
             Conversation resource.
           x-twilio:
             pii:
@@ -1715,7 +1947,8 @@ components:
         conversation_friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -1724,9 +1957,11 @@ components:
         conversation_attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -1735,14 +1970,16 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was created, given in ISO 8601
+          description: >-
+            The date that this conversation was created, given in ISO 8601
             format.
         conversation_date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was last updated, given in
-            ISO 8601 format.
+          description: >-
+            The date that this conversation was last updated, given in ISO 8601
+            format.
         conversation_created_by:
           type: string
           nullable: true
@@ -1751,7 +1988,8 @@ components:
           type: string
           $ref: '#/components/schemas/service_participant_conversation_enum_state'
           nullable: true
-          description: The current state of this User Conversation. One of `inactive`,
+          description: >-
+            The current state of this User Conversation. One of `inactive`,
             `active` or `closed`.
         conversation_timers:
           nullable: true
@@ -1760,15 +1998,18 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
-            and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            Contains absolute URLs to access the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+            and
+            [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             of this conversation.
     service_participant_conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
     conversations.v1.service.service_role:
       type: object
       properties:
@@ -1776,24 +2017,28 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the Role resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Role resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Role resource.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the Role resource is associated with.
         friendly_name:
           type: string
@@ -1807,9 +2052,12 @@ components:
           type: string
           $ref: '#/components/schemas/service_role_enum_role_type'
           nullable: true
-          description: 'The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-            roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-            roles.'
+          description: >-
+            The type of role. Can be: `conversation` for
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            roles or `service` for [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            roles.
         permissions:
           type: array
           items:
@@ -1820,14 +2068,17 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         url:
           type: string
           format: uri
@@ -1836,8 +2087,8 @@ components:
     service_role_enum_role_type:
       type: string
       enum:
-      - conversation
-      - service
+        - conversation
+        - service
     conversations.v1.service.service_user:
       type: object
       properties:
@@ -1845,39 +2096,48 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the User resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the User resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the User resource.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the User resource is associated with.
         role_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The SID of a service-level
+            [Role](https://www.twilio.com/docs/conversations/api/role-resource)
             assigned to the user.
         identity:
           type: string
           nullable: true
-          description: The application-defined string that uniquely identifies the
-            resource's User within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource).
-            This value is often a username or an email address, and is case-sensitive.
+          description: >-
+            The application-defined string that uniquely identifies the
+            resource's User within the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource).
+            This value is often a username or an email address, and is
+            case-sensitive.
           x-twilio:
             pii:
               handling: standard
@@ -1893,8 +2153,9 @@ components:
         attributes:
           type: string
           nullable: true
-          description: The JSON Object string that stores application-specific data.
-            If attributes have not been set, `{}` is returned.
+          description: >-
+            The JSON Object string that stores application-specific data. If
+            attributes have not been set, `{}` is returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -1902,34 +2163,40 @@ components:
         is_online:
           type: boolean
           nullable: true
-          description: Whether the User is actively connected to this Conversations
-            Service and online. This value is only returned by Fetch actions that
-            return a single resource and `null` is always returned by a Read action.
-            This value is `null` if the Service's `reachability_enabled` is `false`,
-            if the User has never been online for this Conversations Service, even
-            if the Service's `reachability_enabled` is `true`.
+          description: >-
+            Whether the User is actively connected to this Conversations Service
+            and online. This value is only returned by Fetch actions that return
+            a single resource and `null` is always returned by a Read action.
+            This value is `null` if the Service's `reachability_enabled` is
+            `false`, if the User has never been online for this Conversations
+            Service, even if the Service's `reachability_enabled` is `true`.
         is_notifiable:
           type: boolean
           nullable: true
-          description: Whether the User has a potentially valid Push Notification
-            registration (APN or GCM) for this Conversations Service. If at least
-            one registration exists, `true`; otherwise `false`. This value is only
-            returned by Fetch actions that return a single resource and `null` is
-            always returned by a Read action. This value is `null` if the Service's
-            `reachability_enabled` is `false`, and if the User has never had a notification
-            registration, even if the Service's `reachability_enabled` is `true`.
+          description: >-
+            Whether the User has a potentially valid Push Notification
+            registration (APN or GCM) for this Conversations Service. If at
+            least one registration exists, `true`; otherwise `false`. This value
+            is only returned by Fetch actions that return a single resource and
+            `null` is always returned by a Read action. This value is `null` if
+            the Service's `reachability_enabled` is `false`, and if the User has
+            never had a notification registration, even if the Service's
+            `reachability_enabled` is `true`.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         url:
           type: string
           format: uri
@@ -1942,8 +2209,8 @@ components:
     service_user_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.service.service_user.service_user_conversation:
       type: object
       properties:
@@ -1951,54 +2218,68 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this User Conversation.
         unread_messages_count:
           type: integer
           nullable: true
-          description: The number of unread Messages in the Conversation for the Participant.
+          description: >-
+            The number of unread Messages in the Conversation for the
+            Participant.
         last_read_message_index:
           type: integer
           nullable: true
-          description: The index of the last Message in the Conversation that the
+          description: >-
+            The index of the last Message in the Conversation that the
             Participant has read.
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+          description: >-
+            The unique ID of the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
             the user conversation belongs to.
         user_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that identifies the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
+          description: >-
+            The unique string that identifies the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -2008,7 +2289,8 @@ components:
           type: string
           $ref: '#/components/schemas/service_user_conversation_enum_state'
           nullable: true
-          description: The current state of this User Conversation. One of `inactive`,
+          description: >-
+            The current state of this User Conversation. One of `inactive`,
             `active` or `closed`.
         timers:
           nullable: true
@@ -2016,9 +2298,11 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -2027,30 +2311,35 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was created, given in ISO 8601
+          description: >-
+            The date that this conversation was created, given in ISO 8601
             format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was last updated, given in
-            ISO 8601 format.
+          description: >-
+            The date that this conversation was last updated, given in ISO 8601
+            format.
         created_by:
           type: string
           nullable: true
           description: Identity of the creator of this Conversation.
         notification_level:
           type: string
-          $ref: '#/components/schemas/service_user_conversation_enum_notification_level'
+          $ref: >-
+            #/components/schemas/service_user_conversation_enum_notification_level
           nullable: true
-          description: The Notification Level of this User Conversation. One of `default`
+          description: >-
+            The Notification Level of this User Conversation. One of `default`
             or `muted`.
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            Conversation resource. It can be used to address the resource in place
-            of the resource's `conversation_sid` in the URL.
+          description: >-
+            An application-defined string that uniquely identifies the
+            Conversation resource. It can be used to address the resource in
+            place of the resource's `conversation_sid` in the URL.
           x-twilio:
             pii:
               handling: standard
@@ -2063,20 +2352,23 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
-            and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            Contains absolute URLs to access the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+            and
+            [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             of this conversation.
     service_user_conversation_enum_notification_level:
       type: string
       enum:
-      - default
-      - muted
+        - default
+        - muted
     service_user_conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
     conversations.v1.service.service_configuration.service_webhook_configuration:
       type: object
       properties:
@@ -2084,49 +2376,55 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this service.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this service.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         pre_webhook_url:
           type: string
           format: uri
           nullable: true
-          description: The absolute url the pre-event webhook request should be sent
-            to.
+          description: The absolute url the pre-event webhook request should be sent to.
         post_webhook_url:
           type: string
           format: uri
           nullable: true
-          description: The absolute url the post-event webhook request should be sent
-            to.
+          description: The absolute url the post-event webhook request should be sent to.
         filters:
           type: array
           items:
             type: string
           nullable: true
-          description: The list of events that your configured webhook targets will
-            receive. Events not configured here will not fire. Possible values are
-            `onParticipantAdd`, `onParticipantAdded`, `onDeliveryUpdated`, `onConversationUpdated`,
-            `onConversationRemove`, `onParticipantRemove`, `onConversationUpdate`,
-            `onMessageAdd`, `onMessageRemoved`, `onParticipantUpdated`, `onConversationAdded`,
-            `onMessageAdded`, `onConversationAdd`, `onConversationRemoved`, `onParticipantUpdate`,
-            `onMessageRemove`, `onMessageUpdated`, `onParticipantRemoved`, `onMessageUpdate`
-            or `onConversationStateUpdated`.
+          description: >-
+            The list of events that your configured webhook targets will
+            receive. Events not configured here will not fire. Possible values
+            are `onParticipantAdd`, `onParticipantAdded`, `onDeliveryUpdated`,
+            `onConversationUpdated`, `onConversationRemove`,
+            `onParticipantRemove`, `onConversationUpdate`, `onMessageAdd`,
+            `onMessageRemoved`, `onParticipantUpdated`, `onConversationAdded`,
+            `onMessageAdded`, `onConversationAdd`, `onConversationRemoved`,
+            `onParticipantUpdate`, `onMessageRemove`, `onMessageUpdated`,
+            `onParticipantRemoved`, `onMessageUpdate` or
+            `onConversationStateUpdated`.
         method:
           type: string
           $ref: '#/components/schemas/service_webhook_configuration_enum_method'
           nullable: true
-          description: The HTTP method to be used when sending a webhook request.
-            One of `GET` or `POST`.
+          description: >-
+            The HTTP method to be used when sending a webhook request. One of
+            `GET` or `POST`.
         url:
           type: string
           format: uri
@@ -2135,8 +2433,8 @@ components:
     service_webhook_configuration_enum_method:
       type: string
       enum:
-      - GET
-      - POST
+        - GET
+        - POST
     conversations.v1.user:
       type: object
       properties:
@@ -2144,39 +2442,48 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the User resource.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the User resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the User resource.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             the User resource is associated with.
         role_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
+          pattern: '^RL[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+          description: >-
+            The SID of a service-level
+            [Role](https://www.twilio.com/docs/conversations/api/role-resource)
             assigned to the user.
         identity:
           type: string
           nullable: true
-          description: The application-defined string that uniquely identifies the
-            resource's User within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource).
-            This value is often a username or an email address, and is case-sensitive.
+          description: >-
+            The application-defined string that uniquely identifies the
+            resource's User within the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource).
+            This value is often a username or an email address, and is
+            case-sensitive.
           x-twilio:
             pii:
               handling: standard
@@ -2192,8 +2499,9 @@ components:
         attributes:
           type: string
           nullable: true
-          description: The JSON Object string that stores application-specific data.
-            If attributes have not been set, `{}` is returned.
+          description: >-
+            The JSON Object string that stores application-specific data. If
+            attributes have not been set, `{}` is returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -2201,34 +2509,40 @@ components:
         is_online:
           type: boolean
           nullable: true
-          description: Whether the User is actively connected to this Conversations
-            Service and online. This value is only returned by Fetch actions that
-            return a single resource and `null` is always returned by a Read action.
-            This value is `null` if the Service's `reachability_enabled` is `false`,
-            if the User has never been online for this Conversations Service, even
-            if the Service's `reachability_enabled` is `true`.
+          description: >-
+            Whether the User is actively connected to this Conversations Service
+            and online. This value is only returned by Fetch actions that return
+            a single resource and `null` is always returned by a Read action.
+            This value is `null` if the Service's `reachability_enabled` is
+            `false`, if the User has never been online for this Conversations
+            Service, even if the Service's `reachability_enabled` is `true`.
         is_notifiable:
           type: boolean
           nullable: true
-          description: Whether the User has a potentially valid Push Notification
-            registration (APN or GCM) for this Conversations Service. If at least
-            one registration exists, `true`; otherwise `false`. This value is only
-            returned by Fetch actions that return a single resource and `null` is
-            always returned by a Read action. This value is `null` if the Service's
-            `reachability_enabled` is `false`, and if the User has never had a notification
-            registration, even if the Service's `reachability_enabled` is `true`.
+          description: >-
+            Whether the User has a potentially valid Push Notification
+            registration (APN or GCM) for this Conversations Service. If at
+            least one registration exists, `true`; otherwise `false`. This value
+            is only returned by Fetch actions that return a single resource and
+            `null` is always returned by a Read action. This value is `null` if
+            the Service's `reachability_enabled` is `false`, and if the User has
+            never had a notification registration, even if the Service's
+            `reachability_enabled` is `true`.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         url:
           type: string
           format: uri
@@ -2241,8 +2555,8 @@ components:
     user_enum_webhook_enabled_type:
       type: string
       enum:
-      - 'true'
-      - 'false'
+        - 'true'
+        - 'false'
     conversations.v1.user.user_conversation:
       type: object
       properties:
@@ -2250,54 +2564,68 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            responsible for this conversation.
+          description: >-
+            The unique ID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) responsible
+            for this conversation.
         chat_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
             this conversation belongs to.
         conversation_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CH[0-9a-fA-F]{32}$
+          pattern: '^CH[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             for this User Conversation.
         unread_messages_count:
           type: integer
           nullable: true
-          description: The number of unread Messages in the Conversation for the Participant.
+          description: >-
+            The number of unread Messages in the Conversation for the
+            Participant.
         last_read_message_index:
           type: integer
           nullable: true
-          description: The index of the last Message in the Conversation that the
+          description: >-
+            The index of the last Message in the Conversation that the
             Participant has read.
         participant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MB[0-9a-fA-F]{32}$
+          pattern: '^MB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+          description: >-
+            The unique ID of the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
             the user conversation belongs to.
         user_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^US[0-9a-fA-F]{32}$
+          pattern: '^US[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that identifies the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
+          description: >-
+            The unique string that identifies the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
         friendly_name:
           type: string
           nullable: true
-          description: The human-readable name of this conversation, limited to 256
+          description: >-
+            The human-readable name of this conversation, limited to 256
             characters. Optional.
           x-twilio:
             pii:
@@ -2307,7 +2635,8 @@ components:
           type: string
           $ref: '#/components/schemas/user_conversation_enum_state'
           nullable: true
-          description: The current state of this User Conversation. One of `inactive`,
+          description: >-
+            The current state of this User Conversation. One of `inactive`,
             `active` or `closed`.
         timers:
           nullable: true
@@ -2315,9 +2644,11 @@ components:
         attributes:
           type: string
           nullable: true
-          description: An optional string metadata field you can use to store any
-            data you wish. The string value must contain structurally valid JSON if
-            specified.  **Note** that if the attributes are not set "{}" will be returned.
+          description: >-
+            An optional string metadata field you can use to store any data you
+            wish. The string value must contain structurally valid JSON if
+            specified.  **Note** that if the attributes are not set "{}" will be
+            returned.
           x-twilio:
             pii:
               handling: sensitive
@@ -2326,14 +2657,16 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was created, given in ISO 8601
+          description: >-
+            The date that this conversation was created, given in ISO 8601
             format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this conversation was last updated, given in
-            ISO 8601 format.
+          description: >-
+            The date that this conversation was last updated, given in ISO 8601
+            format.
         created_by:
           type: string
           nullable: true
@@ -2342,14 +2675,16 @@ components:
           type: string
           $ref: '#/components/schemas/user_conversation_enum_notification_level'
           nullable: true
-          description: The Notification Level of this User Conversation. One of `default`
+          description: >-
+            The Notification Level of this User Conversation. One of `default`
             or `muted`.
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            Conversation resource. It can be used to address the resource in place
-            of the resource's `conversation_sid` in the URL.
+          description: >-
+            An application-defined string that uniquely identifies the
+            Conversation resource. It can be used to address the resource in
+            place of the resource's `conversation_sid` in the URL.
           x-twilio:
             pii:
               handling: standard
@@ -2362,53 +2697,58 @@ components:
           type: object
           format: uri-map
           nullable: true
-          description: Contains absolute URLs to access the [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
-            and [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+          description: >-
+            Contains absolute URLs to access the
+            [participant](https://www.twilio.com/docs/conversations/api/conversation-participant-resource)
+            and
+            [conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
             of this conversation.
     user_conversation_enum_notification_level:
       type: string
       enum:
-      - default
-      - muted
+        - default
+        - muted
     user_conversation_enum_state:
       type: string
       enum:
-      - inactive
-      - active
-      - closed
+        - inactive
+        - active
+        - closed
   securitySchemes:
     accountSid_authToken:
       type: http
       scheme: basic
 info:
-  title: Twilio - Conversations
+  title: Twilio Conversations API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
   /v1/Configuration:
     servers:
-    - url: https://conversations.twilio.com
-    description: The Configuration resource manages a set of account-level settings
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      The Configuration resource manages a set of account-level settings
       applicable to the Conversations API.
     x-twilio:
       defaultOutputProperties:
-      - account_sid
-      - default_chat_service_sid
-      - default_messaging_service_sid
+        - account_sid
+        - default_chat_service_sid
+        - default_messaging_service_sid
       pathType: instance
     get:
       description: Fetch the global configuration of conversations on your account
       tags:
-      - ConversationsV1Configuration
+        - Conversations
+        - Configurations
       responses:
         '200':
           content:
@@ -2417,14 +2757,16 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.configuration'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConfiguration
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Configuration
     post:
       description: Update the global configuration of conversations on your account
       tags:
-      - ConversationsV1Configuration
+        - Conversations
+        - Configurations
       responses:
         '200':
           content:
@@ -2433,10 +2775,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.configuration'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConfiguration
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2448,69 +2790,81 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^IS[0-9a-fA-F]{32}$
-                  description: The SID of the default [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
+                  pattern: '^IS[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the default [Conversation
+                    Service](https://www.twilio.com/docs/conversations/api/service-resource)
                     to use when creating a conversation.
                 DefaultMessagingServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^MG[0-9a-fA-F]{32}$
-                  description: The SID of the default [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+                  pattern: '^MG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the default [Messaging
+                    Service](https://www.twilio.com/docs/messaging/api/service-resource)
                     to use when creating a conversation.
                 DefaultInactiveTimer:
                   type: string
-                  description: Default ISO8601 duration when conversation will be
-                    switched to `inactive` state. Minimum value for this timer is
-                    1 minute.
+                  description: >-
+                    Default ISO8601 duration when conversation will be switched
+                    to `inactive` state. Minimum value for this timer is 1
+                    minute.
                 DefaultClosedTimer:
                   type: string
-                  description: Default ISO8601 duration when conversation will be
-                    switched to `closed` state. Minimum value for this timer is 10
+                  description: >-
+                    Default ISO8601 duration when conversation will be switched
+                    to `closed` state. Minimum value for this timer is 10
                     minutes.
+      summary: Update Configuration
   /v1/Configuration/Addresses:
     servers:
-    - url: https://conversations.twilio.com
-    description: Address Configuration resource manages the configurations related
-      to a unique address within Conversations
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      Address Configuration resource manages the configurations related to a
+      unique address within Conversations
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - type
-      - address
-      - friendly_name
+        - sid
+        - type
+        - address
+        - friendly_name
       pathType: list
       mountName: address_configurations
     get:
       description: Retrieve a list of address configurations for an account
       tags:
-      - ConversationsV1AddressConfiguration
+        - Conversations
+        - Configurations
+        - Addresses
       parameters:
-      - name: Type
-        in: query
-        description: 'Filter the address configurations by its type. This value can
-          be one of: `whatsapp`, `sms`.'
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Type
+          in: query
+          description: >-
+            Filter the address configurations by its type. This value can be one
+            of: `whatsapp`, `sms`.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2522,7 +2876,8 @@ paths:
                   address_configurations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.configuration_address'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.configuration_address
                   meta:
                     type: object
                     properties:
@@ -2548,14 +2903,17 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConfigurationAddress
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Configuration Addresses
     post:
       description: Create a new address configuration
       tags:
-      - ConversationsV1AddressConfiguration
+        - Conversations
+        - Configurations
+        - Addresses
       responses:
         '201':
           content:
@@ -2564,10 +2922,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.configuration_address'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateConfigurationAddress
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2581,90 +2939,109 @@ paths:
                   description: Type of Address. Value can be `whatsapp` or `sms`.
                 Address:
                   type: string
-                  description: The unique address to be configured. The address can
-                    be a whatsapp address or phone number
+                  description: >-
+                    The unique address to be configured. The address can be a
+                    whatsapp address or phone number
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this configuration, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this configuration, limited to
+                    256 characters. Optional.
                 AutoCreation.Enabled:
                   type: boolean
-                  description: Enable/Disable auto-creating conversations for messages
-                    to this address
+                  description: >-
+                    Enable/Disable auto-creating conversations for messages to
+                    this address
                 AutoCreation.Type:
                   type: string
-                  $ref: '#/components/schemas/configuration_address_enum_auto_creation_type'
-                  description: Type of Auto Creation. Value can be one of `webhook`,
-                    `studio` or `default`. `default` creates a new Conversation under
-                    the default Conversation service, without a webhook or Studio
-                    integration.
+                  $ref: >-
+                    #/components/schemas/configuration_address_enum_auto_creation_type
+                  description: >-
+                    Type of Auto Creation. Value can be one of `webhook`,
+                    `studio` or `default`. `default` creates a new Conversation
+                    under the default Conversation service, without a webhook or
+                    Studio integration.
                 AutoCreation.ConversationServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^IS[0-9a-fA-F]{32}$
-                  description: Conversation Service for the auto-created conversation.
-                    If not set, the conversation is created in the default service.
+                  pattern: '^IS[0-9a-fA-F]{32}$'
+                  description: >-
+                    Conversation Service for the auto-created conversation. If
+                    not set, the conversation is created in the default service.
                 AutoCreation.WebhookUrl:
                   type: string
-                  description: For type `webhook`, the url for the webhook request.
+                  description: 'For type `webhook`, the url for the webhook request.'
                 AutoCreation.WebhookMethod:
                   type: string
                   $ref: '#/components/schemas/configuration_address_enum_method'
-                  description: For type `webhook`, the HTTP method to be used when
-                    sending a webhook request.
+                  description: >-
+                    For type `webhook`, the HTTP method to be used when sending
+                    a webhook request.
                 AutoCreation.WebhookFilters:
                   type: array
                   items:
                     type: string
-                  description: 'The list of events, firing webhook event for this
-                    Conversation. Values can be any of the following: `onMessageAdded`,
-                    `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`,
-                    `onConversationStateUpdated`, `onConversationRemoved`, `onParticipantAdded`,
-                    `onParticipantUpdated`, `onParticipantRemoved`, `onDeliveryUpdated`'
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation. Values can be any of the following:
+                    `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`,
+                    `onConversationUpdated`, `onConversationStateUpdated`,
+                    `onConversationRemoved`, `onParticipantAdded`,
+                    `onParticipantUpdated`, `onParticipantRemoved`,
+                    `onDeliveryUpdated`
                 AutoCreation.StudioFlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: For type `studio`, the studio flow SID where the webhook
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: >-
+                    For type `studio`, the studio flow SID where the webhook
                     should be sent to.
                 AutoCreation.StudioRetryCount:
                   type: integer
-                  description: For type `studio`, number of times to retry the webhook
+                  description: >-
+                    For type `studio`, number of times to retry the webhook
                     request
                 AddressCountry:
                   type: string
-                  description: An ISO 3166-1 alpha-2n country code which the address
-                    belongs to. This is currently only applicable to short code addresses.
+                  description: >-
+                    An ISO 3166-1 alpha-2n country code which the address
+                    belongs to. This is currently only applicable to short code
+                    addresses.
               required:
-              - Type
-              - Address
-  /v1/Configuration/Addresses/{Sid}:
+                - Type
+                - Address
+      summary: Create Configuration Address
+  '/v1/Configuration/Addresses/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: Address Configuration resource manages the configurations related
-      to a unique address within Conversations
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      Address Configuration resource manages the configurations related to a
+      unique address within Conversations
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - type
-      - address
-      - friendly_name
+        - sid
+        - type
+        - address
+        - friendly_name
       pathType: instance
       mountName: address_configurations
     get:
       description: 'Fetch an address configuration '
       tags:
-      - ConversationsV1AddressConfiguration
+        - Conversations
+        - Configurations
+        - Addresses
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Address Configuration resource. This value can
-          be either the `sid` or the `address` of the configuration
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the Address Configuration resource. This value can be
+            either the `sid` or the `address` of the configuration
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2673,22 +3050,26 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.configuration_address'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConfigurationAddress
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Configuration Address
     post:
       description: Update an existing address configuration
       tags:
-      - ConversationsV1AddressConfiguration
+        - Conversations
+        - Configurations
+        - Addresses
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Address Configuration resource. This value can
-          be either the `sid` or the `address` of the configuration
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the Address Configuration resource. This value can be
+            either the `sid` or the `address` of the configuration
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2697,10 +3078,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.configuration_address'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConfigurationAddress
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2710,117 +3091,141 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this configuration, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this configuration, limited to
+                    256 characters. Optional.
                 AutoCreation.Enabled:
                   type: boolean
-                  description: Enable/Disable auto-creating conversations for messages
-                    to this address
+                  description: >-
+                    Enable/Disable auto-creating conversations for messages to
+                    this address
                 AutoCreation.Type:
                   type: string
-                  $ref: '#/components/schemas/configuration_address_enum_auto_creation_type'
-                  description: Type of Auto Creation. Value can be one of `webhook`,
+                  $ref: >-
+                    #/components/schemas/configuration_address_enum_auto_creation_type
+                  description: >-
+                    Type of Auto Creation. Value can be one of `webhook`,
                     `studio` or `default`.
                 AutoCreation.ConversationServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^IS[0-9a-fA-F]{32}$
-                  description: Conversation Service for the auto-created conversation.
-                    If not set, the conversation is created in the default service.
+                  pattern: '^IS[0-9a-fA-F]{32}$'
+                  description: >-
+                    Conversation Service for the auto-created conversation. If
+                    not set, the conversation is created in the default service.
                 AutoCreation.WebhookUrl:
                   type: string
-                  description: For type `webhook`, the url for the webhook request.
+                  description: 'For type `webhook`, the url for the webhook request.'
                 AutoCreation.WebhookMethod:
                   type: string
                   $ref: '#/components/schemas/configuration_address_enum_method'
-                  description: For type `webhook`, the HTTP method to be used when
-                    sending a webhook request.
+                  description: >-
+                    For type `webhook`, the HTTP method to be used when sending
+                    a webhook request.
                 AutoCreation.WebhookFilters:
                   type: array
                   items:
                     type: string
-                  description: 'The list of events, firing webhook event for this
-                    Conversation. Values can be any of the following: `onMessageAdded`,
-                    `onMessageUpdated`, `onMessageRemoved`, `onConversationUpdated`,
-                    `onConversationStateUpdated`, `onConversationRemoved`, `onParticipantAdded`,
-                    `onParticipantUpdated`, `onParticipantRemoved`, `onDeliveryUpdated`'
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation. Values can be any of the following:
+                    `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`,
+                    `onConversationUpdated`, `onConversationStateUpdated`,
+                    `onConversationRemoved`, `onParticipantAdded`,
+                    `onParticipantUpdated`, `onParticipantRemoved`,
+                    `onDeliveryUpdated`
                 AutoCreation.StudioFlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: For type `studio`, the studio flow SID where the webhook
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: >-
+                    For type `studio`, the studio flow SID where the webhook
                     should be sent to.
                 AutoCreation.StudioRetryCount:
                   type: integer
-                  description: For type `studio`, number of times to retry the webhook
+                  description: >-
+                    For type `studio`, number of times to retry the webhook
                     request
+      summary: Update Configuration Address
     delete:
       description: Remove an existing address configuration
       tags:
-      - ConversationsV1AddressConfiguration
+        - Conversations
+        - Configurations
+        - Addresses
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Address Configuration resource. This value can
-          be either the `sid` or the `address` of the configuration
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the Address Configuration resource. This value can be
+            either the `sid` or the `address` of the configuration
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteConfigurationAddress
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Configuration Address
   /v1/Configuration/Webhooks:
     servers:
-    - url: https://conversations.twilio.com
-    description: A Webhook resource manages a service-level set of callback URLs and
-      their configuration for receiving all conversation events.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Webhook resource manages a service-level set of callback URLs and their
+      configuration for receiving all conversation events.
     x-twilio:
       defaultOutputProperties:
-      - target
-      - method
-      - pre_webhook_url
-      - post_webhook_url
+        - target
+        - method
+        - pre_webhook_url
+        - post_webhook_url
       pathType: instance
       parent: /Configuration
     get:
       description: ''
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Configurations
+        - Webhooks
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.configuration.configuration_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.configuration.configuration_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConfigurationWebhook
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Configuration Webhooks
     post:
       description: ''
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Configurations
+        - Webhooks
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.configuration.configuration_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.configuration.configuration_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConfigurationWebhook
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2835,58 +3240,64 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: 'The list of webhook event triggers that are enabled
-                    for this Service: `onMessageAdded`, `onMessageUpdated`, `onMessageRemoved`,
-                    `onConversationUpdated`, `onConversationRemoved`, `onParticipantAdded`,
-                    `onParticipantUpdated`, `onParticipantRemoved`'
+                  description: >-
+                    The list of webhook event triggers that are enabled for this
+                    Service: `onMessageAdded`, `onMessageUpdated`,
+                    `onMessageRemoved`, `onConversationUpdated`,
+                    `onConversationRemoved`, `onParticipantAdded`,
+                    `onParticipantUpdated`, `onParticipantRemoved`
                 PreWebhookUrl:
                   type: string
-                  description: The absolute url the pre-event webhook request should
-                    be sent to.
+                  description: >-
+                    The absolute url the pre-event webhook request should be
+                    sent to.
                 PostWebhookUrl:
                   type: string
-                  description: The absolute url the post-event webhook request should
-                    be sent to.
+                  description: >-
+                    The absolute url the post-event webhook request should be
+                    sent to.
                 Target:
                   type: string
                   $ref: '#/components/schemas/configuration_webhook_enum_target'
                   description: The routing target of the webhook.
+      summary: Create Configuration Webhooks
   /v1/Conversations:
     servers:
-    - url: https://conversations.twilio.com
-    description: A Conversation resource represents an omnichannel group conversation
-      with an ordered list of messages and a participant roster.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Conversation resource represents an omnichannel group conversation with
+      an ordered list of messages and a participant roster.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: list
       dependentProperties:
         participants:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Participants
+          resource_url: '/v1/Conversations/{conversation_sid}/Participants'
         messages:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Messages
+          resource_url: '/v1/Conversations/{conversation_sid}/Messages'
         webhooks:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Webhooks
+          resource_url: '/v1/Conversations/{conversation_sid}/Webhooks'
     post:
       description: Create a new conversation in your account's default service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
       parameters:
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
       responses:
         '201':
           content:
@@ -2895,10 +3306,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.conversation'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2908,13 +3319,15 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this conversation, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this conversation, limited to 256
+                    characters. Optional.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. It can be used to address the resource in place
-                    of the resource's `sid` in the URL.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. It can be used to address the resource in place of
+                    the resource's `sid` in the URL.
                 DateCreated:
                   type: string
                   format: date-time
@@ -2927,81 +3340,94 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^MG[0-9a-fA-F]{32}$
-                  description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+                  pattern: '^MG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the [Messaging
+                    Service](https://www.twilio.com/docs/messaging/api/service-resource)
                     this conversation belongs to.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 State:
                   type: string
                   $ref: '#/components/schemas/conversation_enum_state'
-                  description: Current state of this conversation. Can be either `active`,
+                  description: >-
+                    Current state of this conversation. Can be either `active`,
                     `inactive` or `closed` and defaults to `active`
                 Timers.Inactive:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `inactive` state. Minimum value for this timer is 1 minute.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `inactive` state. Minimum value for this timer is 1 minute.
                 Timers.Closed:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `closed` state. Minimum value for this timer is 10 minutes.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `closed` state. Minimum value for this timer is 10 minutes.
                 Bindings.Email.Address:
                   type: string
-                  description: The default email address that will be used when sending
+                  description: >-
+                    The default email address that will be used when sending
                     outbound emails in this conversation.
                 Bindings.Email.Name:
                   type: string
-                  description: The default name that will be used when sending outbound
+                  description: >-
+                    The default name that will be used when sending outbound
                     emails in this conversation.
+      summary: Create Conversation
     get:
       description: Retrieve a list of conversations in your account's default service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
       parameters:
-      - name: StartDate
-        in: query
-        description: Start date or time in ISO8601 format for filtering list of Conversations.
-          If a date is provided, the start time of the date is used (YYYY-MM-DDT00:00:00Z).
-          Can be combined with other filters.
-        schema:
-          type: string
-      - name: EndDate
-        in: query
-        description: End date or time in ISO8601 format for filtering list of Conversations.
-          If a date is provided, the end time of the date is used (YYYY-MM-DDT23:59:59Z).
-          Can be combined with other filters.
-        schema:
-          type: string
-      - name: State
-        in: query
-        description: State for sorting and filtering list of Conversations. Can be
-          `active`, `inactive` or `closed`
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_enum_state'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: StartDate
+          in: query
+          description: >-
+            Start date or time in ISO8601 format for filtering list of
+            Conversations. If a date is provided, the start time of the date is
+            used (YYYY-MM-DDT00:00:00Z). Can be combined with other filters.
+          schema:
+            type: string
+        - name: EndDate
+          in: query
+          description: >-
+            End date or time in ISO8601 format for filtering list of
+            Conversations. If a date is provided, the end time of the date is
+            used (YYYY-MM-DDT23:59:59Z). Can be combined with other filters.
+          schema:
+            type: string
+        - name: State
+          in: query
+          description: >-
+            State for sorting and filtering list of Conversations. Can be
+            `active`, `inactive` or `closed`
+          schema:
+            type: string
+            $ref: '#/components/schemas/conversation_enum_state'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3039,53 +3465,56 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConversation
       x-maturity:
-      - GA
-  /v1/Conversations/{Sid}:
+        - GA
+      summary: Retrieve Conversations
+  '/v1/Conversations/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Conversation resource represents an omnichannel group conversation
-      with an ordered list of messages and a participant roster.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Conversation resource represents an omnichannel group conversation with
+      an ordered list of messages and a participant roster.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: instance
       dependentProperties:
         participants:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Participants
+          resource_url: '/v1/Conversations/{conversation_sid}/Participants'
         messages:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Messages
+          resource_url: '/v1/Conversations/{conversation_sid}/Messages'
         webhooks:
           mapping:
             conversation_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Webhooks
+          resource_url: '/v1/Conversations/{conversation_sid}/Webhooks'
     post:
       description: Update an existing conversation in your account's default service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
       responses:
         '200':
           content:
@@ -3094,10 +3523,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.conversation'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3107,8 +3536,9 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this conversation, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this conversation, limited to 256
+                    characters. Optional.
                 DateCreated:
                   type: string
                   format: date-time
@@ -3119,81 +3549,94 @@ paths:
                   description: The date that this resource was last updated.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 MessagingServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^MG[0-9a-fA-F]{32}$
-                  description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+                  pattern: '^MG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the [Messaging
+                    Service](https://www.twilio.com/docs/messaging/api/service-resource)
                     this conversation belongs to.
                 State:
                   type: string
                   $ref: '#/components/schemas/conversation_enum_state'
-                  description: Current state of this conversation. Can be either `active`,
+                  description: >-
+                    Current state of this conversation. Can be either `active`,
                     `inactive` or `closed` and defaults to `active`
                 Timers.Inactive:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `inactive` state. Minimum value for this timer is 1 minute.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `inactive` state. Minimum value for this timer is 1 minute.
                 Timers.Closed:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `closed` state. Minimum value for this timer is 10 minutes.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `closed` state. Minimum value for this timer is 10 minutes.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. It can be used to address the resource in place
-                    of the resource's `sid` in the URL.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. It can be used to address the resource in place of
+                    the resource's `sid` in the URL.
                 Bindings.Email.Address:
                   type: string
-                  description: The default email address that will be used when sending
+                  description: >-
+                    The default email address that will be used when sending
                     outbound emails in this conversation.
                 Bindings.Email.Name:
                   type: string
-                  description: The default name that will be used when sending outbound
+                  description: >-
+                    The default name that will be used when sending outbound
                     emails in this conversation.
+      summary: Update Conversation
     delete:
       description: Remove a conversation from your account's default service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/conversation_enum_webhook_enabled_type'
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Conversation
     get:
       description: Fetch a conversation from your account's default service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -3202,63 +3645,69 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.conversation'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConversation
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Messages:
+        - GA
+      summary: Retrieve Conversation
+  '/v1/Conversations/{ConversationSid}/Messages':
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Message resource represents a message in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - index
-      - author
-      - date_created
+        - sid
+        - index
+        - author
+        - date_created
       pathType: list
       dependentProperties:
         delivery_receipts:
           mapping:
             conversation_sid: conversation_sid
             message_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
+          resource_url: '/v1/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts'
         channel_metadata:
           mapping:
             conversation_sid: conversation_sid
             message_sid: sid
           resource_url: /v1None
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     post:
       description: Add a new message to the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Messages
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_message_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_message_enum_webhook_enabled_type
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_message
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateConversationMessage
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3268,11 +3717,13 @@ paths:
               properties:
                 Author:
                   type: string
-                  description: The channel specific identifier of the message's author.
+                  description: >-
+                    The channel specific identifier of the message's author.
                     Defaults to `system`.
                 Body:
                   type: string
-                  description: The content of the message, can be up to 1,600 characters
+                  description: >-
+                    The content of the message, can be up to 1,600 characters
                     long.
                 DateCreated:
                   type: string
@@ -3281,75 +3732,87 @@ paths:
                 DateUpdated:
                   type: string
                   format: date-time
-                  description: The date that this resource was last updated. `null`
-                    if the message has not been edited.
+                  description: >-
+                    The date that this resource was last updated. `null` if the
+                    message has not been edited.
                 Attributes:
                   type: string
-                  description: A string metadata field you can use to store any data
-                    you wish. The string value must contain structurally valid JSON
-                    if specified.  **Note** that if the attributes are not set "{}"
-                    will be returned.
+                  description: >-
+                    A string metadata field you can use to store any data you
+                    wish. The string value must contain structurally valid JSON
+                    if specified.  **Note** that if the attributes are not set
+                    "{}" will be returned.
                 MediaSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^ME[0-9a-fA-F]{32}$
+                  pattern: '^ME[0-9a-fA-F]{32}$'
                   description: The Media SID to be attached to the new Message.
                 ContentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^HX[0-9a-fA-F]{32}$
-                  description: The unique ID of the multi-channel [Rich Content](https://www.twilio.com/docs/content)
-                    template, required for template-generated messages.  **Note**
-                    that if this field is set, `Body` and `MediaSid` parameters are
+                  pattern: '^HX[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the multi-channel [Rich
+                    Content](https://www.twilio.com/docs/content) template,
+                    required for template-generated messages.  **Note** that if
+                    this field is set, `Body` and `MediaSid` parameters are
                     ignored.
                 ContentVariables:
                   type: string
-                  description: A structurally valid JSON string that contains values
-                    to resolve Rich Content template variables.
+                  description: >-
+                    A structurally valid JSON string that contains values to
+                    resolve Rich Content template variables.
                 Subject:
                   type: string
-                  description: The subject of the message, can be up to 256 characters
+                  description: >-
+                    The subject of the message, can be up to 256 characters
                     long.
+      summary: Create Conversation Message
     get:
       description: Retrieve a list of all messages in the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Messages
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for messages.
-        schema:
-          type: string
-        required: true
-      - name: Order
-        in: query
-        description: 'The sort order of the returned messages. Can be: `asc` (ascending)
-          or `desc` (descending), with `asc` as the default.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_message_enum_order_type'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for messages.
+          schema:
+            type: string
+          required: true
+        - name: Order
+          in: query
+          description: >-
+            The sort order of the returned messages. Can be: `asc` (ascending)
+            or `desc` (descending), with `asc` as the default.
+          schema:
+            type: string
+            $ref: '#/components/schemas/conversation_message_enum_order_type'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3361,7 +3824,8 @@ paths:
                   messages:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.conversation.conversation_message'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.conversation.conversation_message
                   meta:
                     type: object
                     properties:
@@ -3387,72 +3851,78 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConversationMessage
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Messages/{Sid}:
+        - GA
+      summary: Retrieve Conversation Messages
+  '/v1/Conversations/{ConversationSid}/Messages/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Message resource represents a message in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - index
-      - author
-      - date_created
+        - sid
+        - index
+        - author
+        - date_created
       pathType: instance
       dependentProperties:
         delivery_receipts:
           mapping:
             conversation_sid: conversation_sid
             message_sid: sid
-          resource_url: /v1/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
+          resource_url: '/v1/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts'
         channel_metadata:
           mapping:
             conversation_sid: conversation_sid
             message_sid: sid
           resource_url: /v1None
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     post:
       description: Update an existing message in the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Messages
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_message_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_message_enum_webhook_enabled_type
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_message
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConversationMessage
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3462,11 +3932,13 @@ paths:
               properties:
                 Author:
                   type: string
-                  description: The channel specific identifier of the message's author.
+                  description: >-
+                    The channel specific identifier of the message's author.
                     Defaults to `system`.
                 Body:
                   type: string
-                  description: The content of the message, can be up to 1,600 characters
+                  description: >-
+                    The content of the message, can be up to 1,600 characters
                     long.
                 DateCreated:
                   type: string
@@ -3475,199 +3947,231 @@ paths:
                 DateUpdated:
                   type: string
                   format: date-time
-                  description: The date that this resource was last updated. `null`
-                    if the message has not been edited.
+                  description: >-
+                    The date that this resource was last updated. `null` if the
+                    message has not been edited.
                 Attributes:
                   type: string
-                  description: A string metadata field you can use to store any data
-                    you wish. The string value must contain structurally valid JSON
-                    if specified.  **Note** that if the attributes are not set "{}"
-                    will be returned.
+                  description: >-
+                    A string metadata field you can use to store any data you
+                    wish. The string value must contain structurally valid JSON
+                    if specified.  **Note** that if the attributes are not set
+                    "{}" will be returned.
                 Subject:
                   type: string
-                  description: The subject of the message, can be up to 256 characters
+                  description: >-
+                    The subject of the message, can be up to 256 characters
                     long.
+      summary: Update Conversation Message
     delete:
       description: Remove a message from the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Messages
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_message_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_message_enum_webhook_enabled_type
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteConversationMessage
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Conversation Message
     get:
       description: Fetch a message from the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Messages
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_message
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConversationMessage
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}:
+        - GA
+      summary: Retrieve Conversation Message
+  '/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Message Receipt resource represents a delivery/read receipt of
-      a message in a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Message Receipt resource represents a delivery/read receipt of a message
+      in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - message_sid
-      - status
-      - date_created
+        - sid
+        - message_sid
+        - status
+        - date_created
       pathType: instance
-      parent: /Conversations/{ConversationSid}/Messages/{Sid}
+      parent: '/Conversations/{ConversationSid}/Messages/{Sid}'
       mountName: delivery_receipts
     get:
       description: Fetch the delivery and read receipts of the conversation message
       tags:
-      - ConversationsV1DeliveryReceipt
+        - Conversations
+        - Messages
+        - Receipts
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: MessageSid
-        in: path
-        description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          the delivery receipt belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DY[0-9a-fA-F]{32}$
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: MessageSid
+          in: path
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            the delivery receipt belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_message.conversation_message_receipt'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_message.conversation_message_receipt
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConversationMessageReceipt
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts:
+        - GA
+      summary: Retrieve Conversation Message Receipt
+  '/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Message Receipt resource represents a delivery/read receipt of
-      a message in a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Message Receipt resource represents a delivery/read receipt of a message
+      in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - message_sid
-      - status
-      - date_created
+        - sid
+        - message_sid
+        - status
+        - date_created
       pathType: list
-      parent: /Conversations/{ConversationSid}/Messages/{Sid}
+      parent: '/Conversations/{ConversationSid}/Messages/{Sid}'
       mountName: delivery_receipts
     get:
-      description: Retrieve a list of all delivery and read receipts of the conversation
+      description: >-
+        Retrieve a list of all delivery and read receipts of the conversation
         message
       tags:
-      - ConversationsV1DeliveryReceipt
+        - Conversations
+        - Messages
+        - Receipts
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: MessageSid
-        in: path
-        description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          the delivery receipt belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: MessageSid
+          in: path
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            the delivery receipt belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3679,7 +4183,8 @@ paths:
                   delivery_receipts:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.conversation.conversation_message.conversation_message_receipt'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.conversation.conversation_message.conversation_message_receipt
                   meta:
                     type: object
                     properties:
@@ -3705,50 +4210,56 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConversationMessageReceipt
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Participants:
+        - GA
+      summary: Retrieve Conversation Message Receipts
+  '/v1/Conversations/{ConversationSid}/Participants':
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Participant resource represents a member of the conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - messaging_binding
+        - sid
+        - messaging_binding
       pathType: list
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     post:
       description: Add a new participant to the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Participants
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_participant_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_participant_enum_webhook_enabled_type
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_participant
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateConversationParticipant
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3758,23 +4269,29 @@ paths:
               properties:
                 Identity:
                   type: string
-                  description: A unique string identifier for the conversation participant
-                    as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-                    This parameter is non-null if (and only if) the participant is
-                    using the Conversations SDK to communicate. Limited to 256 characters.
+                  description: >-
+                    A unique string identifier for the conversation participant
+                    as [Conversation
+                    User](https://www.twilio.com/docs/conversations/api/user-resource).
+                    This parameter is non-null if (and only if) the participant
+                    is using the Conversations SDK to communicate. Limited to
+                    256 characters.
                 MessagingBinding.Address:
                   type: string
-                  description: The address of the participant's device, e.g. a phone
-                    or WhatsApp number. Together with the Proxy address, this determines
-                    a participant uniquely. This field (with proxy_address) is only
-                    null when the participant is interacting from an SDK endpoint
-                    (see the 'identity' field).
+                  description: >-
+                    The address of the participant's device, e.g. a phone or
+                    WhatsApp number. Together with the Proxy address, this
+                    determines a participant uniquely. This field (with
+                    proxy_address) is only null when the participant is
+                    interacting from an SDK endpoint (see the 'identity' field).
                 MessagingBinding.ProxyAddress:
                   type: string
-                  description: The address of the Twilio phone number (or WhatsApp
-                    number) that the participant is in contact with. This field, together
-                    with participant address, is only null when the participant is
-                    interacting from an SDK endpoint (see the 'identity' field).
+                  description: >-
+                    The address of the Twilio phone number (or WhatsApp number)
+                    that the participant is in contact with. This field,
+                    together with participant address, is only null when the
+                    participant is interacting from an SDK endpoint (see the
+                    'identity' field).
                 DateCreated:
                   type: string
                   format: date-time
@@ -3785,53 +4302,62 @@ paths:
                   description: The date that this resource was last updated.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 MessagingBinding.ProjectedAddress:
                   type: string
-                  description: The address of the Twilio phone number that is used
-                    in Group MMS. Communication mask for the Conversation participant
+                  description: >-
+                    The address of the Twilio phone number that is used in Group
+                    MMS. Communication mask for the Conversation participant
                     with Identity.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a conversation-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the participant.
+      summary: Add Conversation Participant
     get:
       description: Retrieve a list of all participants of the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Participants
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for participants.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for participants.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3843,7 +4369,8 @@ paths:
                   participants:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.conversation.conversation_participant'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.conversation.conversation_participant
                   meta:
                     type: object
                     properties:
@@ -3869,56 +4396,62 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConversationParticipant
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Participants/{Sid}:
+        - GA
+      summary: Retrieve Conversation Participants
+  '/v1/Conversations/{ConversationSid}/Participants/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Participant resource represents a member of the conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - messaging_binding
+        - sid
+        - messaging_binding
       pathType: instance
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     post:
       description: Update an existing participant in the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Participants
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_participant_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_participant_enum_webhook_enabled_type
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_participant
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConversationParticipant
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3936,146 +4469,175 @@ paths:
                   description: The date that this resource was last updated.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a conversation-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the participant.
                 MessagingBinding.ProxyAddress:
                   type: string
-                  description: The address of the Twilio phone number that the participant
+                  description: >-
+                    The address of the Twilio phone number that the participant
                     is in contact with. 'null' value will remove it.
                 MessagingBinding.ProjectedAddress:
                   type: string
-                  description: The address of the Twilio phone number that is used
-                    in Group MMS. 'null' value will remove it.
+                  description: >-
+                    The address of the Twilio phone number that is used in Group
+                    MMS. 'null' value will remove it.
                 Identity:
                   type: string
-                  description: A unique string identifier for the conversation participant
-                    as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-                    This parameter is non-null if (and only if) the participant is
-                    using the Conversations SDK to communicate. Limited to 256 characters.
+                  description: >-
+                    A unique string identifier for the conversation participant
+                    as [Conversation
+                    User](https://www.twilio.com/docs/conversations/api/user-resource).
+                    This parameter is non-null if (and only if) the participant
+                    is using the Conversations SDK to communicate. Limited to
+                    256 characters.
                 LastReadMessageIndex:
                   type: integer
                   nullable: true
-                  description: "Index of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-                    \ for the Participant."
+                  description: >-
+                    Index of last “read” message in the
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    for the Participant.
                 LastReadTimestamp:
                   type: string
-                  description: "Timestamp of last \u201Cread\u201D message in the\
-                    \ [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-                    \ for the Participant."
+                  description: >-
+                    Timestamp of last “read” message in the
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    for the Participant.
+      summary: Update Conversation Participant
     delete:
       description: Remove a participant from the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Participants
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/conversation_participant_enum_webhook_enabled_type'
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/conversation_participant_enum_webhook_enabled_type
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteConversationParticipant
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Conversation Participant
     get:
       description: Fetch a participant of the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Participants
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Alternatively, you can pass a Participant's `identity` rather than the SID.
-        schema:
-          type: string
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource.
+            Alternatively, you can pass a Participant's `identity` rather than
+            the SID.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_participant
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConversationParticipant
       x-maturity:
-      - GA
-  /v1/Conversations/{ConversationSid}/Webhooks:
+        - GA
+      summary: Retrieve Conversation Participant
+  '/v1/Conversations/{ConversationSid}/Webhooks':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Scoped Webhook resource manages a set of callback URLs and their
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Scoped Webhook resource manages a set of callback URLs and their
       configuration for receiving events specific to one conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - target
+        - sid
+        - target
       pathType: list
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     get:
       description: Retrieve a list of all webhooks scoped to the conversation
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Webhooks
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4087,7 +4649,8 @@ paths:
                   webhooks:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.conversation.conversation_scoped_webhook'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.conversation.conversation_scoped_webhook
                   meta:
                     type: object
                     properties:
@@ -4113,34 +4676,39 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Conversation Webhooks
     post:
       description: Create a new webhook scoped to the conversation
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Webhooks
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_scoped_webhook
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4154,8 +4722,7 @@ paths:
                   description: 'The target of this webhook: `webhook`, `studio`, `trigger`'
                 Configuration.Url:
                   type: string
-                  description: The absolute url the webhook request should be sent
-                    to.
+                  description: The absolute url the webhook request should be sent to.
                 Configuration.Method:
                   type: string
                   $ref: '#/components/schemas/conversation_scoped_webhook_enum_method'
@@ -4164,103 +4731,117 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: The list of events, firing webhook event for this Conversation.
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation.
                 Configuration.Triggers:
                   type: array
                   items:
                     type: string
-                  description: The list of keywords, firing webhook event for this
+                  description: >-
+                    The list of keywords, firing webhook event for this
                     Conversation.
                 Configuration.FlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: The studio flow SID, where the webhook should be sent
-                    to.
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: 'The studio flow SID, where the webhook should be sent to.'
                 Configuration.ReplayAfter:
                   type: integer
-                  description: The message index for which and it's successors the
-                    webhook will be replayed. Not set by default
+                  description: >-
+                    The message index for which and it's successors the webhook
+                    will be replayed. Not set by default
               required:
-              - Target
-  /v1/Conversations/{ConversationSid}/Webhooks/{Sid}:
+                - Target
+      summary: Create Conversation Webhook
+  '/v1/Conversations/{ConversationSid}/Webhooks/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Scoped Webhook resource manages a set of callback URLs and their
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Scoped Webhook resource manages a set of callback URLs and their
       configuration for receiving events specific to one conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - target
+        - sid
+        - target
       pathType: instance
-      parent: /Conversations/{Sid}
+      parent: '/Conversations/{Sid}'
     get:
       description: Fetch the configuration of a conversation-scoped webhook
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Webhooks
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_scoped_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Conversation Webhook
     post:
       description: Update an existing conversation-scoped webhook
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Webhooks
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.conversation.conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.conversation.conversation_scoped_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4270,8 +4851,7 @@ paths:
               properties:
                 Configuration.Url:
                   type: string
-                  description: The absolute url the webhook request should be sent
-                    to.
+                  description: The absolute url the webhook request should be sent to.
                 Configuration.Method:
                   type: string
                   $ref: '#/components/schemas/conversation_scoped_webhook_enum_method'
@@ -4280,63 +4860,71 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: The list of events, firing webhook event for this Conversation.
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation.
                 Configuration.Triggers:
                   type: array
                   items:
                     type: string
-                  description: The list of keywords, firing webhook event for this
+                  description: >-
+                    The list of keywords, firing webhook event for this
                     Conversation.
                 Configuration.FlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: The studio flow SID, where the webhook should be sent
-                    to.
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: 'The studio flow SID, where the webhook should be sent to.'
+      summary: Update Conversation Webhook
     delete:
       description: Remove an existing webhook scoped to the conversation
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Webhooks
       parameters:
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Conversation Webhook
   /v1/Credentials:
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Credential resource represents a push notification credential.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: list
     post:
       description: Add a new push notification credential to your account
       tags:
-      - ConversationsV1Credential
+        - Conversations
+        - Credentials
       responses:
         '201':
           content:
@@ -4345,10 +4933,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.credential'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateCredential
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4359,67 +4947,82 @@ paths:
                 Type:
                   type: string
                   $ref: '#/components/schemas/credential_enum_push_type'
-                  description: 'The type of push-notification service the credential
-                    is for. Can be: `fcm`, `gcm`, or `apn`.'
+                  description: >-
+                    The type of push-notification service the credential is for.
+                    Can be: `fcm`, `gcm`, or `apn`.
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    new resource. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the new
+                    resource. It can be up to 64 characters long.
                 Certificate:
                   type: string
-                  description: "[APN only] The URL encoded representation of the certificate.\
-                    \ For example, \n`-----BEGIN CERTIFICATE-----\nMIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A==\n\
-                    -----END CERTIFICATE-----`."
+                  description: >-
+                    [APN only] The URL encoded representation of the
+                    certificate. For example, 
+
+                    `-----BEGIN CERTIFICATE-----
+
+                    MIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A==
+
+                    -----END CERTIFICATE-----`.
                 PrivateKey:
                   type: string
-                  description: '[APN only] The URL encoded representation of the private
+                  description: >-
+                    [APN only] The URL encoded representation of the private
                     key. For example,
 
                     `-----BEGIN RSA PRIVATE KEY-----
 
                     MIIEpQIBAAKCAQEAuyf/lNrH9ck8DmNyo3fG...
 
-                    -----END RSA PRIVATE KEY-----`.'
+                    -----END RSA PRIVATE KEY-----`.
                 Sandbox:
                   type: boolean
-                  description: '[APN only] Whether to send the credential to sandbox
-                    APNs. Can be `true` to send to sandbox APNs or `false` to send
-                    to production.'
+                  description: >-
+                    [APN only] Whether to send the credential to sandbox APNs.
+                    Can be `true` to send to sandbox APNs or `false` to send to
+                    production.
                 ApiKey:
                   type: string
-                  description: '[GCM only] The API key for the project that was obtained
-                    from the Google Developer console for your GCM Service application
-                    credential.'
+                  description: >-
+                    [GCM only] The API key for the project that was obtained
+                    from the Google Developer console for your GCM Service
+                    application credential.
                 Secret:
                   type: string
-                  description: '[FCM only] The **Server key** of your project from
-                    the Firebase console, found under Settings / Cloud messaging.'
+                  description: >-
+                    [FCM only] The **Server key** of your project from the
+                    Firebase console, found under Settings / Cloud messaging.
               required:
-              - Type
+                - Type
+      summary: Create Credential
     get:
       description: Retrieve a list of all push notification credentials on your account
       tags:
-      - ConversationsV1Credential
+        - Conversations
+        - Credentials
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4457,34 +5060,36 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListCredential
       x-maturity:
-      - GA
-  /v1/Credentials/{Sid}:
+        - GA
+      summary: Retrieve Credentials
+  '/v1/Credentials/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
+      - url: 'https://conversations.twilio.com'
     description: A Credential resource represents a push notification credential.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: instance
     post:
       description: Update an existing push notification credential on your account
       tags:
-      - ConversationsV1Credential
+        - Conversations
+        - Credentials
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4493,10 +5098,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.credential'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateCredential
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4507,77 +5112,93 @@ paths:
                 Type:
                   type: string
                   $ref: '#/components/schemas/credential_enum_push_type'
-                  description: 'The type of push-notification service the credential
-                    is for. Can be: `fcm`, `gcm`, or `apn`.'
+                  description: >-
+                    The type of push-notification service the credential is for.
+                    Can be: `fcm`, `gcm`, or `apn`.
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    new resource. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the new
+                    resource. It can be up to 64 characters long.
                 Certificate:
                   type: string
-                  description: "[APN only] The URL encoded representation of the certificate.\
-                    \ For example, \n`-----BEGIN CERTIFICATE-----\nMIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A==\n\
-                    -----END CERTIFICATE-----`."
+                  description: >-
+                    [APN only] The URL encoded representation of the
+                    certificate. For example, 
+
+                    `-----BEGIN CERTIFICATE-----
+
+                    MIIFnTCCBIWgAwIBAgIIAjy9H849+E8wDQYJKoZIhvcNAQEF.....A==
+
+                    -----END CERTIFICATE-----`.
                 PrivateKey:
                   type: string
-                  description: '[APN only] The URL encoded representation of the private
+                  description: >-
+                    [APN only] The URL encoded representation of the private
                     key. For example,
 
                     `-----BEGIN RSA PRIVATE KEY-----
 
                     MIIEpQIBAAKCAQEAuyf/lNrH9ck8DmNyo3fG...
 
-                    -----END RSA PRIVATE KEY-----`.'
+                    -----END RSA PRIVATE KEY-----`.
                 Sandbox:
                   type: boolean
-                  description: '[APN only] Whether to send the credential to sandbox
-                    APNs. Can be `true` to send to sandbox APNs or `false` to send
-                    to production.'
+                  description: >-
+                    [APN only] Whether to send the credential to sandbox APNs.
+                    Can be `true` to send to sandbox APNs or `false` to send to
+                    production.
                 ApiKey:
                   type: string
-                  description: '[GCM only] The API key for the project that was obtained
-                    from the Google Developer console for your GCM Service application
-                    credential.'
+                  description: >-
+                    [GCM only] The API key for the project that was obtained
+                    from the Google Developer console for your GCM Service
+                    application credential.
                 Secret:
                   type: string
-                  description: '[FCM only] The **Server key** of your project from
-                    the Firebase console, found under Settings / Cloud messaging.'
+                  description: >-
+                    [FCM only] The **Server key** of your project from the
+                    Firebase console, found under Settings / Cloud messaging.
+      summary: Update Credential
     delete:
       description: Remove a push notification credential from your account
       tags:
-      - ConversationsV1Credential
+        - Conversations
+        - Credentials
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteCredential
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Credential
     get:
       description: Fetch a push notification credential from your account
       tags:
-      - ConversationsV1Credential
+        - Conversations
+        - Credentials
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4586,61 +5207,70 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.credential'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchCredential
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Credential
   /v1/ParticipantConversations:
     servers:
-    - url: https://conversations.twilio.com
-    description: Participant Conversations resource represents a list of Conversations
-      that this Participant belongs to belonging to a default conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      Participant Conversations resource represents a list of Conversations that
+      this Participant belongs to belonging to a default conversation service.
     x-twilio:
       defaultOutputProperties:
-      - chat_service_sid
-      - participant_sid
-      - conversation_sid
+        - chat_service_sid
+        - participant_sid
+        - conversation_sid
       pathType: list
     get:
-      description: Retrieve a list of all Conversations that this Participant belongs
-        to by identity or by address. Only one parameter should be specified.
+      description: >-
+        Retrieve a list of all Conversations that this Participant belongs to by
+        identity or by address. Only one parameter should be specified.
       tags:
-      - ConversationsV1ParticipantConversation
+        - Conversations
+        - Participants
       parameters:
-      - name: Identity
-        in: query
-        description: A unique string identifier for the conversation participant as
-          [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-          This parameter is non-null if (and only if) the participant is using the
-          Conversations SDK to communicate. Limited to 256 characters.
-        schema:
-          type: string
-      - name: Address
-        in: query
-        description: A unique string identifier for the conversation participant who's
-          not a Conversation User. This parameter could be found in messaging_binding.address
-          field of Participant resource. It should be url-encoded.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Identity
+          in: query
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the Conversations SDK to communicate. Limited to 256 characters.
+          schema:
+            type: string
+        - name: Address
+          in: query
+          description: >-
+            A unique string identifier for the conversation participant who's
+            not a Conversation User. This parameter could be found in
+            messaging_binding.address field of Participant resource. It should
+            be url-encoded.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4652,7 +5282,8 @@ paths:
                   conversations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.participant_conversation'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.participant_conversation
                   meta:
                     type: object
                     properties:
@@ -4678,25 +5309,28 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListParticipantConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Participant Conversations
   /v1/Roles:
     servers:
-    - url: https://conversations.twilio.com
-    description: A Role resource represents a set of permissions granted to a user
-      within a service or a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Role resource represents a set of permissions granted to a user within a
+      service or a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: list
     post:
       description: Create a new user role in your account's default service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Roles
       responses:
         '201':
           content:
@@ -4705,10 +5339,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.role'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateRole
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4718,50 +5352,59 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    new resource. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the new
+                    resource. It can be up to 64 characters long.
                 Type:
                   type: string
                   $ref: '#/components/schemas/role_enum_role_type'
-                  description: 'The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-                    roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-                    roles.'
+                  description: >-
+                    The type of role. Can be: `conversation` for
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    roles or `service` for [Conversation
+                    Service](https://www.twilio.com/docs/conversations/api/service-resource)
+                    roles.
                 Permission:
                   type: array
                   items:
                     type: string
-                  description: A permission that you grant to the new role. Only one
-                    permission can be granted per parameter. To assign more than one
-                    permission, repeat this parameter for each permission value. The
-                    values for this parameter depend on the role's `type`.
+                  description: >-
+                    A permission that you grant to the new role. Only one
+                    permission can be granted per parameter. To assign more than
+                    one permission, repeat this parameter for each permission
+                    value. The values for this parameter depend on the role's
+                    `type`.
               required:
-              - FriendlyName
-              - Type
-              - Permission
+                - FriendlyName
+                - Type
+                - Permission
+      summary: Create Role
     get:
       description: Retrieve a list of all user roles in your account's default service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Roles
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4799,35 +5442,38 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListRole
       x-maturity:
-      - GA
-  /v1/Roles/{Sid}:
+        - GA
+      summary: Retrieve Roles
+  '/v1/Roles/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Role resource represents a set of permissions granted to a user
-      within a service or a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Role resource represents a set of permissions granted to a user within a
+      service or a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: instance
     post:
       description: Update an existing user role in your account's default service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Roles
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4836,10 +5482,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.role'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateRole
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4851,51 +5497,57 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: A permission that you grant to the role. Only one permission
-                    can be granted per parameter. To assign more than one permission,
-                    repeat this parameter for each permission value. Note that the
-                    update action replaces all previously assigned permissions with
-                    those defined in the update action. To remove a permission, do
-                    not include it in the subsequent update action. The values for
-                    this parameter depend on the role's `type`.
+                  description: >-
+                    A permission that you grant to the role. Only one permission
+                    can be granted per parameter. To assign more than one
+                    permission, repeat this parameter for each permission value.
+                    Note that the update action replaces all previously assigned
+                    permissions with those defined in the update action. To
+                    remove a permission, do not include it in the subsequent
+                    update action. The values for this parameter depend on the
+                    role's `type`.
               required:
-              - Permission
+                - Permission
+      summary: Update Roles
     delete:
       description: Remove a user role from your account's default service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Roles
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteRole
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Role
     get:
       description: Fetch a user role from your account's default service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Roles
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4904,37 +5556,39 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.role'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchRole
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Role
   /v1/Services:
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service resource is a top-level conversation resource container
-      that serves as a data silo.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service resource is a top-level conversation resource container that
+      serves as a data silo.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
+        - sid
+        - friendly_name
       pathType: list
       dependentProperties:
         conversations:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations
+          resource_url: '/v1/Services/{chat_service_sid}/Conversations'
         bindings:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Bindings
+          resource_url: '/v1/Services/{chat_service_sid}/Bindings'
         users:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Users
+          resource_url: '/v1/Services/{chat_service_sid}/Users'
         roles:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Roles
+          resource_url: '/v1/Services/{chat_service_sid}/Roles'
         configuration:
           mapping:
             chat_service_sid: sid
@@ -4942,11 +5596,12 @@ paths:
         participant_conversations:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/ParticipantConversations
+          resource_url: '/v1/Services/{chat_service_sid}/ParticipantConversations'
     post:
       description: Create a new conversation service on your account
       tags:
-      - ConversationsV1Service
+        - Conversations
+        - Services
       responses:
         '201':
           content:
@@ -4955,10 +5610,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateService
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4968,34 +5623,38 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this service, limited to
-                    256 characters. Optional.
+                  description: >-
+                    The human-readable name of this service, limited to 256
+                    characters. Optional.
               required:
-              - FriendlyName
+                - FriendlyName
+      summary: Create Service
     get:
       description: Retrieve a list of all conversation services on your account
       tags:
-      - ConversationsV1Service
+        - Conversations
+        - Services
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5033,37 +5692,39 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListService
       x-maturity:
-      - GA
-  /v1/Services/{Sid}:
+        - GA
+      summary: Retrieve Services
+  '/v1/Services/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service resource is a top-level conversation resource container
-      that serves as a data silo.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service resource is a top-level conversation resource container that
+      serves as a data silo.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
+        - sid
+        - friendly_name
       pathType: instance
       dependentProperties:
         conversations:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations
+          resource_url: '/v1/Services/{chat_service_sid}/Conversations'
         bindings:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Bindings
+          resource_url: '/v1/Services/{chat_service_sid}/Bindings'
         users:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Users
+          resource_url: '/v1/Services/{chat_service_sid}/Users'
         roles:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Roles
+          resource_url: '/v1/Services/{chat_service_sid}/Roles'
         configuration:
           mapping:
             chat_service_sid: sid
@@ -5071,44 +5732,48 @@ paths:
         participant_conversations:
           mapping:
             chat_service_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/ParticipantConversations
+          resource_url: '/v1/Services/{chat_service_sid}/ParticipantConversations'
     delete:
-      description: Remove a conversation service with all its nested resources from
-        your account
+      description: >-
+        Remove a conversation service with all its nested resources from your
+        account
       tags:
-      - ConversationsV1Service
+        - Conversations
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteService
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service
     get:
       description: Fetch a conversation service from your account
       tags:
-      - ConversationsV1Service
+        - Conversations
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5117,78 +5782,90 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchService
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Bindings/{Sid}:
+        - GA
+      summary: Retrieve Service
+  '/v1/Services/{ChatServiceSid}/Bindings/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Binding resource represents a push notification binding and its
-      configuration, for delivering conversation events to mobile or web endpoints.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Binding resource represents a push notification binding and its
+      configuration, for delivering conversation events to mobile or web
+      endpoints.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - endpoint
-      - identity
+        - sid
+        - endpoint
+        - identity
       pathType: instance
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     delete:
       description: Remove a push notification binding from the conversation service
       tags:
-      - ConversationsV1Binding
+        - Conversations
+        - Services
+        - Bindings
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to delete the Binding resource from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Binding resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^BS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to delete the Binding resource from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Binding resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^BS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceBinding
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Binding
     get:
       description: Fetch a push notification binding from the conversation service
       tags:
-      - ConversationsV1Binding
+        - Conversations
+        - Services
+        - Bindings
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Binding resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^BS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Binding resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^BS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5197,80 +5874,94 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_binding'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceBinding
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Bindings:
+        - GA
+      summary: Retrieve Service Binding
+  '/v1/Services/{ChatServiceSid}/Bindings':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Binding resource represents a push notification binding and its
-      configuration, for delivering conversation events to mobile or web endpoints.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Binding resource represents a push notification binding and its
+      configuration, for delivering conversation events to mobile or web
+      endpoints.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - endpoint
-      - identity
+        - sid
+        - endpoint
+        - identity
       pathType: list
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     get:
-      description: Retrieve a list of all push notification bindings in the conversation
+      description: >-
+        Retrieve a list of all push notification bindings in the conversation
         service
       tags:
-      - ConversationsV1Binding
+        - Conversations
+        - Services
+        - Bindings
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Binding resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: BindingType
-        in: query
-        description: 'The push technology used by the Binding resources to read.  Can
-          be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
-          for more info.'
-        schema:
-          type: array
-          items:
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Binding resource is associated with.
+          schema:
             type: string
-            $ref: '#/components/schemas/service_binding_enum_binding_type'
-      - name: Identity
-        in: query
-        description: The identity of a [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource)
-          this binding belongs to. See [access tokens](https://www.twilio.com/docs/conversations/create-tokens)
-          for more details.
-        schema:
-          type: array
-          items:
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: BindingType
+          in: query
+          description: >-
+            The push technology used by the Binding resources to read.  Can be:
+            `apn`, `gcm`, or `fcm`.  See [push notification
+            configuration](https://www.twilio.com/docs/chat/push-notification-configuration)
+            for more info.
+          schema:
+            type: array
+            items:
+              type: string
+              $ref: '#/components/schemas/service_binding_enum_binding_type'
+        - name: Identity
+          in: query
+          description: >-
+            The identity of a [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource)
+            this binding belongs to. See [access
+            tokens](https://www.twilio.com/docs/conversations/create-tokens) for
+            more details.
+          schema:
+            type: array
+            items:
+              type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
             type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
       responses:
         '200':
           content:
@@ -5282,7 +5973,8 @@ paths:
                   bindings:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_binding'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_binding
                   meta:
                     type: object
                     properties:
@@ -5308,72 +6000,81 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceBinding
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Configuration:
+        - GA
+      summary: Retrieve Service Bindings
+  '/v1/Services/{ChatServiceSid}/Configuration':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Configuration resource manages service-level settings applicable
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Configuration resource manages service-level settings applicable
       to the Conversation API.
     x-twilio:
       defaultOutputProperties:
-      - chat_service_sid
+        - chat_service_sid
       pathType: instance
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     get:
       description: Fetch the configuration of a conversation service
       tags:
-      - ConversationsV1Configuration
+        - Conversations
+        - Services
+        - Configurations
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the Service configuration resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: The SID of the Service configuration resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConfiguration
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Service Configurations
     post:
       description: Update configuration settings of a conversation service
       tags:
-      - ConversationsV1Configuration
+        - Conversations
+        - Services
+        - Configurations
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the Service configuration resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: The SID of the Service configuration resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceConfiguration
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5385,92 +6086,111 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The conversation-level role assigned to a conversation
-                    creator when they join a new conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The conversation-level role assigned to a conversation
+                    creator when they join a new conversation. See [Conversation
+                    Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     for more info about roles.
                 DefaultConversationRoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The conversation-level role assigned to users when
-                    they are added to a conversation. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The conversation-level role assigned to users when they are
+                    added to a conversation. See [Conversation
+                    Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     for more info about roles.
                 DefaultChatServiceRoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The service-level role assigned to users when they
-                    are added to the service. See [Conversation Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The service-level role assigned to users when they are added
+                    to the service. See [Conversation
+                    Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     for more info about roles.
                 ReachabilityEnabled:
                   type: boolean
-                  description: Whether the [Reachability Indicator](https://www.twilio.com/docs/conversations/reachability)
-                    is enabled for this Conversations Service. The default is `false`.
-  /v1/Services/{ChatServiceSid}/Conversations:
+                  description: >-
+                    Whether the [Reachability
+                    Indicator](https://www.twilio.com/docs/conversations/reachability)
+                    is enabled for this Conversations Service. The default is
+                    `false`.
+      summary: Update Service Configuration
+  '/v1/Services/{ChatServiceSid}/Conversations':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Conversation resource represents an omnichannel group conversation
-      with an ordered list of messages and a participant roster.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Conversation resource represents an omnichannel group
+      conversation with an ordered list of messages and a participant roster.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: list
       dependentProperties:
         participants:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Participants
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Participants
         messages:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages
         webhooks:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Webhooks
-      parent: /Services/{Sid}
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Webhooks
+      parent: '/Services/{Sid}'
     post:
       description: Create a new conversation in your service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
+        - Services
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_enum_webhook_enabled_type
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5480,25 +6200,30 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this conversation, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this conversation, limited to 256
+                    characters. Optional.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. It can be used to address the resource in place
-                    of the resource's `sid` in the URL.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. It can be used to address the resource in place of
+                    the resource's `sid` in the URL.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 MessagingServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^MG[0-9a-fA-F]{32}$
-                  description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+                  pattern: '^MG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the [Messaging
+                    Service](https://www.twilio.com/docs/messaging/api/service-resource)
                     this conversation belongs to.
                 DateCreated:
                   type: string
@@ -5511,79 +6236,92 @@ paths:
                 State:
                   type: string
                   $ref: '#/components/schemas/service_conversation_enum_state'
-                  description: Current state of this conversation. Can be either `active`,
+                  description: >-
+                    Current state of this conversation. Can be either `active`,
                     `inactive` or `closed` and defaults to `active`
                 Timers.Inactive:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `inactive` state. Minimum value for this timer is 1 minute.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `inactive` state. Minimum value for this timer is 1 minute.
                 Timers.Closed:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `closed` state. Minimum value for this timer is 10 minutes.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `closed` state. Minimum value for this timer is 10 minutes.
                 Bindings.Email.Address:
                   type: string
-                  description: The default email address that will be used when sending
+                  description: >-
+                    The default email address that will be used when sending
                     outbound emails in this conversation.
                 Bindings.Email.Name:
                   type: string
-                  description: The default name that will be used when sending outbound
+                  description: >-
+                    The default name that will be used when sending outbound
                     emails in this conversation.
+      summary: Create Service Conversation
     get:
       description: Retrieve a list of conversations in your service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
+        - Services
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: StartDate
-        in: query
-        description: Start date or time in ISO8601 format for filtering list of Conversations.
-          If a date is provided, the start time of the date is used (YYYY-MM-DDT00:00:00Z).
-          Can be combined with other filters.
-        schema:
-          type: string
-      - name: EndDate
-        in: query
-        description: End date or time in ISO8601 format for filtering list of Conversations.
-          If a date is provided, the end time of the date is used (YYYY-MM-DDT23:59:59Z).
-          Can be combined with other filters.
-        schema:
-          type: string
-      - name: State
-        in: query
-        description: State for sorting and filtering list of Conversations. Can be
-          `active`, `inactive` or `closed`
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_enum_state'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: StartDate
+          in: query
+          description: >-
+            Start date or time in ISO8601 format for filtering list of
+            Conversations. If a date is provided, the start time of the date is
+            used (YYYY-MM-DDT00:00:00Z). Can be combined with other filters.
+          schema:
+            type: string
+        - name: EndDate
+          in: query
+          description: >-
+            End date or time in ISO8601 format for filtering list of
+            Conversations. If a date is provided, the end time of the date is
+            used (YYYY-MM-DDT23:59:59Z). Can be combined with other filters.
+          schema:
+            type: string
+        - name: State
+          in: query
+          description: >-
+            State for sorting and filtering list of Conversations. Can be
+            `active`, `inactive` or `closed`
+          schema:
+            type: string
+            $ref: '#/components/schemas/service_conversation_enum_state'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5595,7 +6333,8 @@ paths:
                   conversations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_conversation'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_conversation
                   meta:
                     type: object
                     properties:
@@ -5621,79 +6360,90 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceConversation
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{Sid}:
+        - GA
+      summary: Retrieve Service Conversations
+  '/v1/Services/{ChatServiceSid}/Conversations/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Conversation resource represents an omnichannel group conversation
-      with an ordered list of messages and a participant roster.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Conversation resource represents an omnichannel group
+      conversation with an ordered list of messages and a participant roster.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: instance
       dependentProperties:
         participants:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Participants
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Participants
         messages:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages
         webhooks:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Webhooks
-      parent: /Services/{Sid}
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Webhooks
+      parent: '/Services/{Sid}'
     post:
       description: Update an existing conversation in your service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
+        - Services
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_enum_webhook_enabled_type
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5703,8 +6453,9 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: The human-readable name of this conversation, limited
-                    to 256 characters. Optional.
+                  description: >-
+                    The human-readable name of this conversation, limited to 256
+                    characters. Optional.
                 DateCreated:
                   type: string
                   format: date-time
@@ -5715,124 +6466,147 @@ paths:
                   description: The date that this resource was last updated.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set "{}" will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set "{}" will be returned.
                 MessagingServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^MG[0-9a-fA-F]{32}$
-                  description: The unique ID of the [Messaging Service](https://www.twilio.com/docs/messaging/api/service-resource)
+                  pattern: '^MG[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the [Messaging
+                    Service](https://www.twilio.com/docs/messaging/api/service-resource)
                     this conversation belongs to.
                 State:
                   type: string
                   $ref: '#/components/schemas/service_conversation_enum_state'
-                  description: Current state of this conversation. Can be either `active`,
+                  description: >-
+                    Current state of this conversation. Can be either `active`,
                     `inactive` or `closed` and defaults to `active`
                 Timers.Inactive:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `inactive` state. Minimum value for this timer is 1 minute.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `inactive` state. Minimum value for this timer is 1 minute.
                 Timers.Closed:
                   type: string
-                  description: ISO8601 duration when conversation will be switched
-                    to `closed` state. Minimum value for this timer is 10 minutes.
+                  description: >-
+                    ISO8601 duration when conversation will be switched to
+                    `closed` state. Minimum value for this timer is 10 minutes.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. It can be used to address the resource in place
-                    of the resource's `sid` in the URL.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. It can be used to address the resource in place of
+                    the resource's `sid` in the URL.
                 Bindings.Email.Address:
                   type: string
-                  description: The default email address that will be used when sending
+                  description: >-
+                    The default email address that will be used when sending
                     outbound emails in this conversation.
                 Bindings.Email.Name:
                   type: string
-                  description: The default name that will be used when sending outbound
+                  description: >-
+                    The default name that will be used when sending outbound
                     emails in this conversation.
+      summary: Update Service Conversation
     delete:
       description: Remove a conversation from your service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
+        - Services
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_enum_webhook_enabled_type
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Conversation
     get:
       description: Fetch a conversation from your service
       tags:
-      - ConversationsV1Conversation
+        - Conversations
+        - Services
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Can also be the `unique_name` of the Conversation.
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource. Can
+            also be the `unique_name` of the Conversation.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConversation
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages:
+        - GA
+      summary: Retrieve Service Conversation
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Message resource represents a message in a conversation
-      within a specific service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Message resource represents a message in a conversation within a
+      specific service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - index
-      - author
-      - date_created
+        - sid
+        - index
+        - author
+        - date_created
       pathType: list
       dependentProperties:
         delivery_receipts:
@@ -5840,54 +6614,63 @@ paths:
             chat_service_sid: chat_service_sid
             conversation_sid: conversation_sid
             message_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
         channel_metadata:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: conversation_sid
             message_sid: sid
           resource_url: /v1None
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Add a new message to the conversation in a specific service
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Services
+        - Messages
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_message_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_message_enum_webhook_enabled_type
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceConversationMessage
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5897,11 +6680,13 @@ paths:
               properties:
                 Author:
                   type: string
-                  description: The channel specific identifier of the message's author.
+                  description: >-
+                    The channel specific identifier of the message's author.
                     Defaults to `system`.
                 Body:
                   type: string
-                  description: The content of the message, can be up to 1,600 characters
+                  description: >-
+                    The content of the message, can be up to 1,600 characters
                     long.
                 DateCreated:
                   type: string
@@ -5910,85 +6695,100 @@ paths:
                 DateUpdated:
                   type: string
                   format: date-time
-                  description: The date that this resource was last updated. `null`
-                    if the message has not been edited.
+                  description: >-
+                    The date that this resource was last updated. `null` if the
+                    message has not been edited.
                 Attributes:
                   type: string
-                  description: A string metadata field you can use to store any data
-                    you wish. The string value must contain structurally valid JSON
-                    if specified.  **Note** that if the attributes are not set "{}"
-                    will be returned.
+                  description: >-
+                    A string metadata field you can use to store any data you
+                    wish. The string value must contain structurally valid JSON
+                    if specified.  **Note** that if the attributes are not set
+                    "{}" will be returned.
                 MediaSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^ME[0-9a-fA-F]{32}$
+                  pattern: '^ME[0-9a-fA-F]{32}$'
                   description: The Media SID to be attached to the new Message.
                 ContentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^HX[0-9a-fA-F]{32}$
-                  description: The unique ID of the multi-channel [Rich Content](https://www.twilio.com/docs/content)
-                    template, required for template-generated messages.  **Note**
-                    that if this field is set, `Body` and `MediaSid` parameters are
+                  pattern: '^HX[0-9a-fA-F]{32}$'
+                  description: >-
+                    The unique ID of the multi-channel [Rich
+                    Content](https://www.twilio.com/docs/content) template,
+                    required for template-generated messages.  **Note** that if
+                    this field is set, `Body` and `MediaSid` parameters are
                     ignored.
                 ContentVariables:
                   type: string
-                  description: A structurally valid JSON string that contains values
-                    to resolve Rich Content template variables.
+                  description: >-
+                    A structurally valid JSON string that contains values to
+                    resolve Rich Content template variables.
                 Subject:
                   type: string
-                  description: The subject of the message, can be up to 256 characters
+                  description: >-
+                    The subject of the message, can be up to 256 characters
                     long.
+      summary: Create Service Conversation Message
     get:
       description: Retrieve a list of all messages in the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Services
+        - Messages
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for messages.
-        schema:
-          type: string
-        required: true
-      - name: Order
-        in: query
-        description: 'The sort order of the returned messages. Can be: `asc` (ascending)
-          or `desc` (descending), with `asc` as the default.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_message_enum_order_type'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for messages.
+          schema:
+            type: string
+          required: true
+        - name: Order
+          in: query
+          description: >-
+            The sort order of the returned messages. Can be: `asc` (ascending)
+            or `desc` (descending), with `asc` as the default.
+          schema:
+            type: string
+            $ref: '#/components/schemas/service_conversation_message_enum_order_type'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6000,7 +6800,8 @@ paths:
                   messages:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message
                   meta:
                     type: object
                     properties:
@@ -6026,21 +6827,23 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceConversationMessage
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}:
+        - GA
+      summary: Retrieve Service Conversation Messages
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Message resource represents a message in a conversation
-      within a specific service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Message resource represents a message in a conversation within a
+      specific service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - index
-      - author
-      - date_created
+        - sid
+        - index
+        - author
+        - date_created
       pathType: instance
       dependentProperties:
         delivery_receipts:
@@ -6048,63 +6851,72 @@ paths:
             chat_service_sid: chat_service_sid
             conversation_sid: conversation_sid
             message_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
+          resource_url: >-
+            /v1/Services/{chat_service_sid}/Conversations/{conversation_sid}/Messages/{message_sid}/Receipts
         channel_metadata:
           mapping:
             chat_service_sid: chat_service_sid
             conversation_sid: conversation_sid
             message_sid: sid
           resource_url: /v1None
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Update an existing message in the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Services
+        - Messages
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_message_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_message_enum_webhook_enabled_type
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceConversationMessage
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6114,11 +6926,13 @@ paths:
               properties:
                 Author:
                   type: string
-                  description: The channel specific identifier of the message's author.
+                  description: >-
+                    The channel specific identifier of the message's author.
                     Defaults to `system`.
                 Body:
                   type: string
-                  description: The content of the message, can be up to 1,600 characters
+                  description: >-
+                    The content of the message, can be up to 1,600 characters
                     long.
                 DateCreated:
                   type: string
@@ -6127,239 +6941,285 @@ paths:
                 DateUpdated:
                   type: string
                   format: date-time
-                  description: The date that this resource was last updated. `null`
-                    if the message has not been edited.
+                  description: >-
+                    The date that this resource was last updated. `null` if the
+                    message has not been edited.
                 Attributes:
                   type: string
-                  description: A string metadata field you can use to store any data
-                    you wish. The string value must contain structurally valid JSON
-                    if specified.  **Note** that if the attributes are not set "{}"
-                    will be returned.
+                  description: >-
+                    A string metadata field you can use to store any data you
+                    wish. The string value must contain structurally valid JSON
+                    if specified.  **Note** that if the attributes are not set
+                    "{}" will be returned.
                 Subject:
                   type: string
-                  description: The subject of the message, can be up to 256 characters
+                  description: >-
+                    The subject of the message, can be up to 256 characters
                     long.
+      summary: Update Service Conversation Message
     delete:
       description: Remove a message from the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Services
+        - Messages
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_message_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_message_enum_webhook_enabled_type
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceConversationMessage
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Conversation Message
     get:
       description: Fetch a message from the conversation
       tags:
-      - ConversationsV1Message
+        - Conversations
+        - Services
+        - Messages
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConversationMessage
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}:
+        - GA
+      summary: Retrieve Service Conversation Message
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Message Receipt resource represents a delivery/read receipt
-      of a message in a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Message Receipt resource represents a delivery/read receipt of a
+      message in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - message_sid
-      - status
-      - date_created
+        - sid
+        - message_sid
+        - status
+        - date_created
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}
+      parent: >-
+        /Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}
       mountName: delivery_receipts
     get:
       description: Fetch the delivery and read receipts of the conversation message
       tags:
-      - ConversationsV1DeliveryReceipt
+        - Conversations
+        - Services
+        - Messages
+        - Receipts
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Message resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: MessageSid
-        in: path
-        description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          the delivery receipt belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DY[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Message resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: MessageSid
+          in: path
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            the delivery receipt belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message.service_conversation_message_receipt'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message.service_conversation_message_receipt
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConversationMessageReceipt
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts:
+        - GA
+      summary: Retrieve Service Conversation Message Receipt
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Message Receipt resource represents a delivery/read receipt
-      of a message in a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Message Receipt resource represents a delivery/read receipt of a
+      message in a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - message_sid
-      - status
-      - date_created
+        - sid
+        - message_sid
+        - status
+        - date_created
       pathType: list
-      parent: /Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}
+      parent: >-
+        /Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}
       mountName: delivery_receipts
     get:
-      description: Retrieve a list of all delivery and read receipts of the conversation
+      description: >-
+        Retrieve a list of all delivery and read receipts of the conversation
         message
       tags:
-      - ConversationsV1DeliveryReceipt
+        - Conversations
+        - Services
+        - Messages
+        - Receipts
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Message resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this message.
-        schema:
-          type: string
-        required: true
-      - name: MessageSid
-        in: path
-        description: The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          the delivery receipt belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IM[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Message resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this message.
+          schema:
+            type: string
+          required: true
+        - name: MessageSid
+          in: path
+          description: >-
+            The SID of the message within a
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            the delivery receipt belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IM[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6371,7 +7231,8 @@ paths:
                   delivery_receipts:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_message.service_conversation_message_receipt'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_conversation.service_conversation_message.service_conversation_message_receipt
                   meta:
                     type: object
                     properties:
@@ -6397,61 +7258,71 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceConversationMessageReceipt
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants:
+        - GA
+      summary: Retrieve Service Conversation Message Receipts
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Participant resource represents a member of the conversation
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Participant resource represents a member of the conversation
       within a specific service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - messaging_binding
+        - sid
+        - messaging_binding
       pathType: list
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Add a new participant to the conversation in a specific service
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_participant_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_participant_enum_webhook_enabled_type
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceConversationParticipant
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6461,24 +7332,30 @@ paths:
               properties:
                 Identity:
                   type: string
-                  description: A unique string identifier for the conversation participant
-                    as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-                    This parameter is non-null if (and only if) the participant is
-                    using the [Conversation SDK](https://www.twilio.com/docs/conversations/sdk-overview)
+                  description: >-
+                    A unique string identifier for the conversation participant
+                    as [Conversation
+                    User](https://www.twilio.com/docs/conversations/api/user-resource).
+                    This parameter is non-null if (and only if) the participant
+                    is using the [Conversation
+                    SDK](https://www.twilio.com/docs/conversations/sdk-overview)
                     to communicate. Limited to 256 characters.
                 MessagingBinding.Address:
                   type: string
-                  description: The address of the participant's device, e.g. a phone
-                    or WhatsApp number. Together with the Proxy address, this determines
-                    a participant uniquely. This field (with `proxy_address`) is only
-                    null when the participant is interacting from an SDK endpoint
-                    (see the `identity` field).
+                  description: >-
+                    The address of the participant's device, e.g. a phone or
+                    WhatsApp number. Together with the Proxy address, this
+                    determines a participant uniquely. This field (with
+                    `proxy_address`) is only null when the participant is
+                    interacting from an SDK endpoint (see the `identity` field).
                 MessagingBinding.ProxyAddress:
                   type: string
-                  description: The address of the Twilio phone number (or WhatsApp
-                    number) that the participant is in contact with. This field, together
-                    with participant address, is only null when the participant is
-                    interacting from an SDK endpoint (see the `identity` field).
+                  description: >-
+                    The address of the Twilio phone number (or WhatsApp number)
+                    that the participant is in contact with. This field,
+                    together with participant address, is only null when the
+                    participant is interacting from an SDK endpoint (see the
+                    `identity` field).
                 DateCreated:
                   type: string
                   format: date-time
@@ -6489,62 +7366,74 @@ paths:
                   description: The date on which this resource was last updated.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set `{}` will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set `{}` will be returned.
                 MessagingBinding.ProjectedAddress:
                   type: string
-                  description: The address of the Twilio phone number that is used
-                    in Group MMS.
+                  description: >-
+                    The address of the Twilio phone number that is used in Group
+                    MMS.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a conversation-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the participant.
+      summary: Add Service Conversation Participant
     get:
       description: Retrieve a list of all participants of the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for participants.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for participants.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6556,7 +7445,8 @@ paths:
                   participants:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant
                   meta:
                     type: object
                     properties:
@@ -6582,67 +7472,77 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceConversationParticipant
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}:
+        - GA
+      summary: Retrieve Service Conversation Participants
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Participant resource represents a member of the conversation
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Participant resource represents a member of the conversation
       within a specific service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - messaging_binding
+        - sid
+        - messaging_binding
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Update an existing participant in the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_participant_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_participant_enum_webhook_enabled_type
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceConversationParticipant
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6660,170 +7560,208 @@ paths:
                   description: The date on which this resource was last updated.
                 Identity:
                   type: string
-                  description: A unique string identifier for the conversation participant
-                    as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-                    This parameter is non-null if (and only if) the participant is
-                    using the [Conversation SDK](https://www.twilio.com/docs/conversations/sdk-overview)
+                  description: >-
+                    A unique string identifier for the conversation participant
+                    as [Conversation
+                    User](https://www.twilio.com/docs/conversations/api/user-resource).
+                    This parameter is non-null if (and only if) the participant
+                    is using the [Conversation
+                    SDK](https://www.twilio.com/docs/conversations/sdk-overview)
                     to communicate. Limited to 256 characters.
                 Attributes:
                   type: string
-                  description: An optional string metadata field you can use to store
-                    any data you wish. The string value must contain structurally
-                    valid JSON if specified.  **Note** that if the attributes are
-                    not set `{}` will be returned.
+                  description: >-
+                    An optional string metadata field you can use to store any
+                    data you wish. The string value must contain structurally
+                    valid JSON if specified.  **Note** that if the attributes
+                    are not set `{}` will be returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a conversation-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a conversation-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the participant.
                 MessagingBinding.ProxyAddress:
                   type: string
-                  description: The address of the Twilio phone number that the participant
+                  description: >-
+                    The address of the Twilio phone number that the participant
                     is in contact with. 'null' value will remove it.
                 MessagingBinding.ProjectedAddress:
                   type: string
-                  description: The address of the Twilio phone number that is used
-                    in Group MMS. 'null' value will remove it.
+                  description: >-
+                    The address of the Twilio phone number that is used in Group
+                    MMS. 'null' value will remove it.
                 LastReadMessageIndex:
                   type: integer
                   nullable: true
-                  description: "Index of last \u201Cread\u201D message in the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-                    \ for the Participant."
+                  description: >-
+                    Index of last “read” message in the
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    for the Participant.
                 LastReadTimestamp:
                   type: string
-                  description: "Timestamp of last \u201Cread\u201D message in the\
-                    \ [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)\
-                    \ for the Participant."
+                  description: >-
+                    Timestamp of last “read” message in the
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    for the Participant.
+      summary: Update Service Conversation Participant
     delete:
       description: Remove a participant from the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_conversation_participant_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: >-
+              #/components/schemas/service_conversation_participant_enum_webhook_enabled_type
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceConversationParticipant
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Conversation Participant
     get:
       description: Fetch a participant of the conversation
       tags:
-      - ConversationsV1Participant
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this participant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-          Alternatively, you can pass a Participant's `identity` rather than the SID.
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this participant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this resource.
+            Alternatively, you can pass a Participant's `identity` rather than
+            the SID.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_participant
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConversationParticipant
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks:
+        - GA
+      summary: Retrieve Service Conversation Participant
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Conversation-scoped Webhook resource manages a set of callback
-      URLs and their configuration for receiving events specific to one conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Conversation-scoped Webhook resource manages a set of callback URLs and
+      their configuration for receiving events specific to one conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - target
+        - sid
+        - target
       pathType: list
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Create a new webhook scoped to the conversation in a specific service
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6833,81 +7771,93 @@ paths:
               properties:
                 Target:
                   type: string
-                  $ref: '#/components/schemas/service_conversation_scoped_webhook_enum_target'
+                  $ref: >-
+                    #/components/schemas/service_conversation_scoped_webhook_enum_target
                   description: 'The target of this webhook: `webhook`, `studio`, `trigger`'
                 Configuration.Url:
                   type: string
-                  description: The absolute url the webhook request should be sent
-                    to.
+                  description: The absolute url the webhook request should be sent to.
                 Configuration.Method:
                   type: string
-                  $ref: '#/components/schemas/service_conversation_scoped_webhook_enum_method'
+                  $ref: >-
+                    #/components/schemas/service_conversation_scoped_webhook_enum_method
                   description: The HTTP method to be used when sending a webhook request.
                 Configuration.Filters:
                   type: array
                   items:
                     type: string
-                  description: The list of events, firing webhook event for this Conversation.
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation.
                 Configuration.Triggers:
                   type: array
                   items:
                     type: string
-                  description: The list of keywords, firing webhook event for this
+                  description: >-
+                    The list of keywords, firing webhook event for this
                     Conversation.
                 Configuration.FlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: The studio flow SID, where the webhook should be sent
-                    to.
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: 'The studio flow SID, where the webhook should be sent to.'
                 Configuration.ReplayAfter:
                   type: integer
-                  description: The message index for which and it's successors the
-                    webhook will be replayed. Not set by default
+                  description: >-
+                    The message index for which and it's successors the webhook
+                    will be replayed. Not set by default
               required:
-              - Target
+                - Target
+      summary: Create Service Conversation Webhook
     get:
       description: Retrieve a list of all webhooks scoped to the conversation
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6919,7 +7869,8 @@ paths:
                   webhooks:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook
                   meta:
                     type: object
                     properties:
@@ -6945,64 +7896,73 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceConversationScopedWebhook
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}:
+        - GA
+      summary: Retrieve Service Conversation Webhooks
+  '/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Conversation-scoped Webhook resource manages a set of callback
-      URLs and their configuration for receiving events specific to one conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Conversation-scoped Webhook resource manages a set of callback URLs and
+      their configuration for receiving events specific to one conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - target
+        - sid
+        - target
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Conversations/{Sid}
+      parent: '/Services/{ChatServiceSid}/Conversations/{Sid}'
     post:
       description: Update an existing conversation-scoped webhook
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7012,149 +7972,174 @@ paths:
               properties:
                 Configuration.Url:
                   type: string
-                  description: The absolute url the webhook request should be sent
-                    to.
+                  description: The absolute url the webhook request should be sent to.
                 Configuration.Method:
                   type: string
-                  $ref: '#/components/schemas/service_conversation_scoped_webhook_enum_method'
+                  $ref: >-
+                    #/components/schemas/service_conversation_scoped_webhook_enum_method
                   description: The HTTP method to be used when sending a webhook request.
                 Configuration.Filters:
                   type: array
                   items:
                     type: string
-                  description: The list of events, firing webhook event for this Conversation.
+                  description: >-
+                    The list of events, firing webhook event for this
+                    Conversation.
                 Configuration.Triggers:
                   type: array
                   items:
                     type: string
-                  description: The list of keywords, firing webhook event for this
+                  description: >-
+                    The list of keywords, firing webhook event for this
                     Conversation.
                 Configuration.FlowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^FW[0-9a-fA-F]{32}$
-                  description: The studio flow SID, where the webhook should be sent
-                    to.
+                  pattern: '^FW[0-9a-fA-F]{32}$'
+                  description: 'The studio flow SID, where the webhook should be sent to.'
+      summary: Update Service Conversation Webhook
     delete:
       description: Remove an existing webhook scoped to the conversation
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceConversationScopedWebhook
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Conversation Webhook
     get:
       description: Fetch the configuration of a conversation-scoped webhook
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-          for this webhook.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WH[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique ID of the
+            [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+            for this webhook.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WH[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_conversation.service_conversation_scoped_webhook
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceConversationScopedWebhook
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Configuration/Notifications:
+        - GA
+      summary: Retrieve Service Conversation Webhook
+  '/v1/Services/{ChatServiceSid}/Configuration/Notifications':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Notification resource manages a set of settings to determine
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Notification resource manages a set of settings to determine
       push notification behavior at service level.
     x-twilio:
       defaultOutputProperties:
-      - chat_service_sid
+        - chat_service_sid
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Configuration
+      parent: '/Services/{ChatServiceSid}/Configuration'
     post:
       description: Update push notification service settings
       tags:
-      - ConversationsV1Notification
+        - Conversations
+        - Services
+        - Configurations
+        - Notifications
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Configuration applies to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Configuration applies to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration.service_notification'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration.service_notification
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceNotification
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7167,148 +8152,182 @@ paths:
                   description: Weather the notification logging is enabled.
                 NewMessage.Enabled:
                   type: boolean
-                  description: Whether to send a notification when a new message is
-                    added to a conversation. The default is `false`.
+                  description: >-
+                    Whether to send a notification when a new message is added
+                    to a conversation. The default is `false`.
                 NewMessage.Template:
                   type: string
-                  description: The template to use to create the notification text
-                    displayed when a new message is added to a conversation and `new_message.enabled`
-                    is `true`.
+                  description: >-
+                    The template to use to create the notification text
+                    displayed when a new message is added to a conversation and
+                    `new_message.enabled` is `true`.
                 NewMessage.Sound:
                   type: string
-                  description: The name of the sound to play when a new message is
-                    added to a conversation and `new_message.enabled` is `true`.
+                  description: >-
+                    The name of the sound to play when a new message is added to
+                    a conversation and `new_message.enabled` is `true`.
                 NewMessage.BadgeCountEnabled:
                   type: boolean
-                  description: Whether the new message badge is enabled. The default
-                    is `false`.
+                  description: >-
+                    Whether the new message badge is enabled. The default is
+                    `false`.
                 AddedToConversation.Enabled:
                   type: boolean
-                  description: Whether to send a notification when a participant is
-                    added to a conversation. The default is `false`.
+                  description: >-
+                    Whether to send a notification when a participant is added
+                    to a conversation. The default is `false`.
                 AddedToConversation.Template:
                   type: string
-                  description: The template to use to create the notification text
-                    displayed when a participant is added to a conversation and `added_to_conversation.enabled`
-                    is `true`.
+                  description: >-
+                    The template to use to create the notification text
+                    displayed when a participant is added to a conversation and
+                    `added_to_conversation.enabled` is `true`.
                 AddedToConversation.Sound:
                   type: string
-                  description: The name of the sound to play when a participant is
-                    added to a conversation and `added_to_conversation.enabled` is
+                  description: >-
+                    The name of the sound to play when a participant is added to
+                    a conversation and `added_to_conversation.enabled` is
                     `true`.
                 RemovedFromConversation.Enabled:
                   type: boolean
-                  description: Whether to send a notification to a user when they
-                    are removed from a conversation. The default is `false`.
+                  description: >-
+                    Whether to send a notification to a user when they are
+                    removed from a conversation. The default is `false`.
                 RemovedFromConversation.Template:
                   type: string
-                  description: The template to use to create the notification text
-                    displayed to a user when they are removed from a conversation
-                    and `removed_from_conversation.enabled` is `true`.
+                  description: >-
+                    The template to use to create the notification text
+                    displayed to a user when they are removed from a
+                    conversation and `removed_from_conversation.enabled` is
+                    `true`.
                 RemovedFromConversation.Sound:
                   type: string
-                  description: The name of the sound to play to a user when they are
-                    removed from a conversation and `removed_from_conversation.enabled`
-                    is `true`.
+                  description: >-
+                    The name of the sound to play to a user when they are
+                    removed from a conversation and
+                    `removed_from_conversation.enabled` is `true`.
                 NewMessage.WithMedia.Enabled:
                   type: boolean
-                  description: Whether to send a notification when a new message with
-                    media/file attachments is added to a conversation. The default
-                    is `false`.
+                  description: >-
+                    Whether to send a notification when a new message with
+                    media/file attachments is added to a conversation. The
+                    default is `false`.
                 NewMessage.WithMedia.Template:
                   type: string
-                  description: The template to use to create the notification text
-                    displayed when a new message with media/file attachments is added
-                    to a conversation and `new_message.attachments.enabled` is `true`.
+                  description: >-
+                    The template to use to create the notification text
+                    displayed when a new message with media/file attachments is
+                    added to a conversation and
+                    `new_message.attachments.enabled` is `true`.
+      summary: Create Service Conversation Notification
     get:
       description: Fetch push notification service settings
       tags:
-      - ConversationsV1Notification
+        - Conversations
+        - Services
+        - Configurations
+        - Notifications
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Configuration applies to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Configuration applies to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration.service_notification'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration.service_notification
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceNotification
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/ParticipantConversations:
+        - GA
+      summary: Retrieve Service Conversation Notifications
+  '/v1/Services/{ChatServiceSid}/ParticipantConversations':
     servers:
-    - url: https://conversations.twilio.com
-    description: Service Participant Conversations resource represents a list of Conversations
-      that this Participant belongs to belonging to a specific conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      Service Participant Conversations resource represents a list of
+      Conversations that this Participant belongs to belonging to a specific
+      conversation service.
     x-twilio:
       defaultOutputProperties:
-      - chat_service_sid
-      - participant_sid
-      - conversation_sid
+        - chat_service_sid
+        - participant_sid
+        - conversation_sid
       pathType: list
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     get:
-      description: Retrieve a list of all Conversations that this Participant belongs
-        to by identity or by address. Only one parameter should be specified.
+      description: >-
+        Retrieve a list of all Conversations that this Participant belongs to by
+        identity or by address. Only one parameter should be specified.
       tags:
-      - ConversationsV1ParticipantConversation
+        - Conversations
+        - Services
+        - Participants
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Participant Conversations resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Identity
-        in: query
-        description: A unique string identifier for the conversation participant as
-          [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource).
-          This parameter is non-null if (and only if) the participant is using the
-          Conversations SDK to communicate. Limited to 256 characters.
-        schema:
-          type: string
-      - name: Address
-        in: query
-        description: A unique string identifier for the conversation participant who's
-          not a Conversation User. This parameter could be found in messaging_binding.address
-          field of Participant resource. It should be url-encoded.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Participant Conversations resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Identity
+          in: query
+          description: >-
+            A unique string identifier for the conversation participant as
+            [Conversation
+            User](https://www.twilio.com/docs/conversations/api/user-resource).
+            This parameter is non-null if (and only if) the participant is using
+            the Conversations SDK to communicate. Limited to 256 characters.
+          schema:
+            type: string
+        - name: Address
+          in: query
+          description: >-
+            A unique string identifier for the conversation participant who's
+            not a Conversation User. This parameter could be found in
+            messaging_binding.address field of Participant resource. It should
+            be url-encoded.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7320,7 +8339,8 @@ paths:
                   conversations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_participant_conversation'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_participant_conversation
                   meta:
                     type: object
                     properties:
@@ -7346,37 +8366,43 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceParticipantConversation
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Roles:
+        - GA
+      summary: Retrieve Service Participant Conversations
+  '/v1/Services/{ChatServiceSid}/Roles':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Role resource represents a set of permissions granted to
-      a user within a service or a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Role resource represents a set of permissions granted to a user
+      within a service or a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: list
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     post:
       description: Create a new user role in your service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Services
+        - Roles
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to create the Role resource under.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to create the Role resource under.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -7385,10 +8411,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_role'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceRole
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7398,60 +8424,72 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    new resource. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the new
+                    resource. It can be up to 64 characters long.
                 Type:
                   type: string
                   $ref: '#/components/schemas/service_role_enum_role_type'
-                  description: 'The type of role. Can be: `conversation` for [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
-                    roles or `service` for [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-                    roles.'
+                  description: >-
+                    The type of role. Can be: `conversation` for
+                    [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource)
+                    roles or `service` for [Conversation
+                    Service](https://www.twilio.com/docs/conversations/api/service-resource)
+                    roles.
                 Permission:
                   type: array
                   items:
                     type: string
-                  description: A permission that you grant to the new role. Only one
-                    permission can be granted per parameter. To assign more than one
-                    permission, repeat this parameter for each permission value. The
-                    values for this parameter depend on the role's `type`.
+                  description: >-
+                    A permission that you grant to the new role. Only one
+                    permission can be granted per parameter. To assign more than
+                    one permission, repeat this parameter for each permission
+                    value. The values for this parameter depend on the role's
+                    `type`.
               required:
-              - FriendlyName
-              - Type
-              - Permission
+                - FriendlyName
+                - Type
+                - Permission
+      summary: Create Service Roles
     get:
       description: Retrieve a list of all user roles in your service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Services
+        - Roles
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to read the Role resources from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to read the Role resources from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7463,7 +8501,8 @@ paths:
                   roles:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_role'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_role
                   meta:
                     type: object
                     properties:
@@ -7489,46 +8528,52 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceRole
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Roles/{Sid}:
+        - GA
+      summary: Retrieve Service Roles
+  '/v1/Services/{ChatServiceSid}/Roles/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service Role resource represents a set of permissions granted to
-      a user within a service or a conversation.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service Role resource represents a set of permissions granted to a user
+      within a service or a conversation.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - type
+        - sid
+        - friendly_name
+        - type
       pathType: instance
-      parent: /Services/{Sid}
+      parent: '/Services/{Sid}'
     post:
       description: Update an existing user role in your service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Services
+        - Roles
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to update the Role resource in.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to update the Role resource in.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -7537,10 +8582,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_role'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceRole
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7552,71 +8597,83 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: A permission that you grant to the role. Only one permission
-                    can be granted per parameter. To assign more than one permission,
-                    repeat this parameter for each permission value. Note that the
-                    update action replaces all previously assigned permissions with
-                    those defined in the update action. To remove a permission, do
-                    not include it in the subsequent update action. The values for
-                    this parameter depend on the role's `type`.
+                  description: >-
+                    A permission that you grant to the role. Only one permission
+                    can be granted per parameter. To assign more than one
+                    permission, repeat this parameter for each permission value.
+                    Note that the update action replaces all previously assigned
+                    permissions with those defined in the update action. To
+                    remove a permission, do not include it in the subsequent
+                    update action. The values for this parameter depend on the
+                    role's `type`.
               required:
-              - Permission
+                - Permission
+      summary: Update Service Role
     delete:
       description: Remove a user role from your service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Services
+        - Roles
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to delete the Role resource from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to delete the Role resource from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceRole
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service Role
     get:
       description: Fetch a user role from your service
       tags:
-      - ConversationsV1Role
+        - Conversations
+        - Services
+        - Roles
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to fetch the Role resource from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Role resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^RL[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to fetch the Role resource from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Role resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^RL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -7625,48 +8682,54 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_role'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceRole
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Users:
+        - GA
+      summary: Retrieve Service Role
+  '/v1/Services/{ChatServiceSid}/Users':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service User resource represents a conversation user belonging
-      to a specific conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service User resource represents a conversation user belonging to a
+      specific conversation service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - identity
+        - sid
+        - identity
       pathType: list
       dependentProperties:
         user_conversations:
           mapping:
             chat_service_sid: chat_service_sid
             user_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Users/{user_sid}/Conversations
-      parent: /Services/{Sid}
+          resource_url: '/v1/Services/{chat_service_sid}/Users/{user_sid}/Conversations'
+      parent: '/Services/{Sid}'
     post:
       description: Add a new conversation user to your service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the User resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the User resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
       responses:
         '201':
           content:
@@ -7675,10 +8738,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_user'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateServiceUser
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7688,59 +8751,71 @@ paths:
               properties:
                 Identity:
                   type: string
-                  description: The application-defined string that uniquely identifies
-                    the resource's User within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource).
-                    This value is often a username or an email address, and is case-sensitive.
+                  description: >-
+                    The application-defined string that uniquely identifies the
+                    resource's User within the [Conversation
+                    Service](https://www.twilio.com/docs/conversations/api/service-resource).
+                    This value is often a username or an email address, and is
+                    case-sensitive.
                 FriendlyName:
                   type: string
                   description: The string that you assigned to describe the resource.
                 Attributes:
                   type: string
-                  description: The JSON Object string that stores application-specific
+                  description: >-
+                    The JSON Object string that stores application-specific
                     data. If attributes have not been set, `{}` is returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a service-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the user.
               required:
-              - Identity
+                - Identity
+      summary: Create Service User
     get:
       description: Retrieve a list of all conversation users in your service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to read the User resources from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to read the User resources from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7752,7 +8827,8 @@ paths:
                   users:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_user'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_user
                   meta:
                     type: object
                     properties:
@@ -7778,55 +8854,62 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceUser
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Users/{Sid}:
+        - GA
+      summary: Retrieve Service Users
+  '/v1/Services/{ChatServiceSid}/Users/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service User resource represents a conversation user belonging
-      to a specific conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service User resource represents a conversation user belonging to a
+      specific conversation service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - identity
+        - sid
+        - identity
       pathType: instance
       dependentProperties:
         user_conversations:
           mapping:
             chat_service_sid: chat_service_sid
             user_sid: sid
-          resource_url: /v1/Services/{chat_service_sid}/Users/{user_sid}/Conversations
-      parent: /Services/{Sid}
+          resource_url: '/v1/Services/{chat_service_sid}/Users/{user_sid}/Conversations'
+      parent: '/Services/{Sid}'
     post:
       description: Update an existing conversation user in your service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the User resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the User resource to update. This value can be either
-          the `sid` or the `identity` of the User resource to update.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the User resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to update. This value can be either the
+            `sid` or the `identity` of the User resource to update.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
       responses:
         '200':
           content:
@@ -7835,10 +8918,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_user'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceUser
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7851,73 +8934,88 @@ paths:
                   description: The string that you assigned to describe the resource.
                 Attributes:
                   type: string
-                  description: The JSON Object string that stores application-specific
+                  description: >-
+                    The JSON Object string that stores application-specific
                     data. If attributes have not been set, `{}` is returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a service-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the user.
+      summary: Update Service User
     delete:
       description: Remove a conversation user from your service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to delete the User resource from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the User resource to delete. This value can be either
-          the `sid` or the `identity` of the User resource to delete.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to delete the User resource from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to delete. This value can be either the
+            `sid` or the `identity` of the User resource to delete.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/service_user_enum_webhook_enabled_type'
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceUser
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service User
     get:
       description: Fetch a conversation user from your service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          to fetch the User resource from.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the User resource to fetch. This value can be either
-          the `sid` or the `identity` of the User resource to fetch.
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            to fetch the User resource from.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to fetch. This value can be either the
+            `sid` or the `identity` of the User resource to fetch.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7926,66 +9024,78 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.service.service_user'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceUser
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}:
+        - GA
+      summary: Retrieve Service User
+  '/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service User Conversation resource represents a conversation of
-      the user belonging to a specific conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service User Conversation resource represents a conversation of the user
+      belonging to a specific conversation service.
     x-twilio:
       defaultOutputProperties:
-      - conversation_sid
-      - user_sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - conversation_sid
+        - user_sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Users/{Sid}
+      parent: '/Services/{ChatServiceSid}/Users/{Sid}'
       mountName: user_conversations
     post:
       description: Update a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_user.service_user_conversation'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_user.service_user_conversation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceUserConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7995,153 +9105,188 @@ paths:
               properties:
                 NotificationLevel:
                   type: string
-                  $ref: '#/components/schemas/service_user_conversation_enum_notification_level'
-                  description: The Notification Level of this User Conversation. One
-                    of `default` or `muted`.
+                  $ref: >-
+                    #/components/schemas/service_user_conversation_enum_notification_level
+                  description: >-
+                    The Notification Level of this User Conversation. One of
+                    `default` or `muted`.
                 LastReadTimestamp:
                   type: string
                   format: date-time
-                  description: The date of the last message read in conversation by
-                    the user, given in ISO 8601 format.
+                  description: >-
+                    The date of the last message read in conversation by the
+                    user, given in ISO 8601 format.
                 LastReadMessageIndex:
                   type: integer
                   nullable: true
-                  description: The index of the last Message in the Conversation that
-                    the Participant has read.
+                  description: >-
+                    The index of the last Message in the Conversation that the
+                    Participant has read.
+      summary: Update Service User Conversation
     delete:
       description: Delete a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteServiceUserConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Service User Conversation
     get:
       description: Fetch a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_user.service_user_conversation'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_user.service_user_conversation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceUserConversation
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations:
+        - GA
+      summary: Retrieve Service User Conversation
+  '/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations':
     servers:
-    - url: https://conversations.twilio.com
-    description: A Service User Conversation resource represents a conversation of
-      the user belonging to a specific conversation service.
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A Service User Conversation resource represents a conversation of the user
+      belonging to a specific conversation service.
     x-twilio:
       defaultOutputProperties:
-      - conversation_sid
-      - user_sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - conversation_sid
+        - user_sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: list
-      parent: /Services/{ChatServiceSid}/Users/{Sid}
+      parent: '/Services/{ChatServiceSid}/Users/{Sid}'
       mountName: user_conversations
     get:
       description: Retrieve a list of all User Conversations for the User.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Services
+        - Users
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          the Conversation resource is associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The SID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            the Conversation resource is associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8153,7 +9298,8 @@ paths:
                   conversations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.service.service_user.service_user_conversation'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.service.service_user.service_user_conversation
                   meta:
                     type: object
                     properties:
@@ -8179,48 +9325,56 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListServiceUserConversation
       x-maturity:
-      - GA
-  /v1/Services/{ChatServiceSid}/Configuration/Webhooks:
+        - GA
+      summary: Retrieve Service User Conversations
+  '/v1/Services/{ChatServiceSid}/Configuration/Webhooks':
     servers:
-    - url: https://conversations.twilio.com
-    description: A service webhook configuration resource manages a service-level
-      set of callback URLs and their configuration for receiving all the corresponding
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A service webhook configuration resource manages a service-level set of
+      callback URLs and their configuration for receiving all the corresponding
       service events.
     x-twilio:
       defaultOutputProperties:
-      - chat_service_sid
+        - chat_service_sid
       pathType: instance
-      parent: /Services/{ChatServiceSid}/Configuration
+      parent: '/Services/{ChatServiceSid}/Configuration'
     post:
       description: Update a specific Webhook.
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Configurations
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          this conversation belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            this conversation belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration.service_webhook_configuration'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration.service_webhook_configuration
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateServiceWebhookConfiguration
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8231,83 +9385,100 @@ paths:
                 PreWebhookUrl:
                   type: string
                   format: uri
-                  description: The absolute url the pre-event webhook request should
-                    be sent to.
+                  description: >-
+                    The absolute url the pre-event webhook request should be
+                    sent to.
                 PostWebhookUrl:
                   type: string
                   format: uri
-                  description: The absolute url the post-event webhook request should
-                    be sent to.
+                  description: >-
+                    The absolute url the post-event webhook request should be
+                    sent to.
                 Filters:
                   type: array
                   items:
                     type: string
-                  description: The list of events that your configured webhook targets
-                    will receive. Events not configured here will not fire. Possible
-                    values are `onParticipantAdd`, `onParticipantAdded`, `onDeliveryUpdated`,
-                    `onConversationUpdated`, `onConversationRemove`, `onParticipantRemove`,
-                    `onConversationUpdate`, `onMessageAdd`, `onMessageRemoved`, `onParticipantUpdated`,
-                    `onConversationAdded`, `onMessageAdded`, `onConversationAdd`,
-                    `onConversationRemoved`, `onParticipantUpdate`, `onMessageRemove`,
-                    `onMessageUpdated`, `onParticipantRemoved`, `onMessageUpdate`
-                    or `onConversationStateUpdated`.
+                  description: >-
+                    The list of events that your configured webhook targets will
+                    receive. Events not configured here will not fire. Possible
+                    values are `onParticipantAdd`, `onParticipantAdded`,
+                    `onDeliveryUpdated`, `onConversationUpdated`,
+                    `onConversationRemove`, `onParticipantRemove`,
+                    `onConversationUpdate`, `onMessageAdd`, `onMessageRemoved`,
+                    `onParticipantUpdated`, `onConversationAdded`,
+                    `onMessageAdded`, `onConversationAdd`,
+                    `onConversationRemoved`, `onParticipantUpdate`,
+                    `onMessageRemove`, `onMessageUpdated`,
+                    `onParticipantRemoved`, `onMessageUpdate` or
+                    `onConversationStateUpdated`.
                 Method:
                   type: string
-                  description: The HTTP method to be used when sending a webhook request.
+                  description: >-
+                    The HTTP method to be used when sending a webhook request.
                     One of `GET` or `POST`.
+      summary: Create Service Configuration Webhook
     get:
       description: Fetch a specific service webhook configuration.
       tags:
-      - ConversationsV1Webhook
+        - Conversations
+        - Services
+        - Configurations
+        - Webhooks
       parameters:
-      - name: ChatServiceSid
-        in: path
-        description: The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource)
-          this conversation belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ChatServiceSid
+          in: path
+          description: >-
+            The unique ID of the [Conversation
+            Service](https://www.twilio.com/docs/conversations/api/service-resource)
+            this conversation belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/conversations.v1.service.service_configuration.service_webhook_configuration'
+                $ref: >-
+                  #/components/schemas/conversations.v1.service.service_configuration.service_webhook_configuration
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchServiceWebhookConfiguration
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Service Configuration Webhooks
   /v1/Users:
     servers:
-    - url: https://conversations.twilio.com
-    description: A User resource represents a conversation user belonging to a default
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A User resource represents a conversation user belonging to a default
       conversation service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - identity
+        - sid
+        - identity
       pathType: list
       dependentProperties:
         user_conversations:
           mapping:
             user_sid: sid
-          resource_url: /v1/Users/{user_sid}/Conversations
+          resource_url: '/v1/Users/{user_sid}/Conversations'
     post:
       description: Add a new conversation user to your account's default service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Users
       parameters:
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/user_enum_webhook_enabled_type'
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/user_enum_webhook_enabled_type'
       responses:
         '201':
           content:
@@ -8316,10 +9487,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.user'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUser
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8329,50 +9500,60 @@ paths:
               properties:
                 Identity:
                   type: string
-                  description: The application-defined string that uniquely identifies
-                    the resource's User within the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource).
-                    This value is often a username or an email address, and is case-sensitive.
+                  description: >-
+                    The application-defined string that uniquely identifies the
+                    resource's User within the [Conversation
+                    Service](https://www.twilio.com/docs/conversations/api/service-resource).
+                    This value is often a username or an email address, and is
+                    case-sensitive.
                 FriendlyName:
                   type: string
                   description: The string that you assigned to describe the resource.
                 Attributes:
                   type: string
-                  description: The JSON Object string that stores application-specific
+                  description: >-
+                    The JSON Object string that stores application-specific
                     data. If attributes have not been set, `{}` is returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a service-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the user.
               required:
-              - Identity
+                - Identity
+      summary: Create User
     get:
-      description: Retrieve a list of all conversation users in your account's default
+      description: >-
+        Retrieve a list of all conversation users in your account's default
         service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Users
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8410,44 +9591,47 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUser
       x-maturity:
-      - GA
-  /v1/Users/{Sid}:
+        - GA
+      summary: Retrieve Users
+  '/v1/Users/{Sid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A User resource represents a conversation user belonging to a default
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A User resource represents a conversation user belonging to a default
       conversation service.
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - identity
+        - sid
+        - identity
       pathType: instance
       dependentProperties:
         user_conversations:
           mapping:
             user_sid: sid
-          resource_url: /v1/Users/{user_sid}/Conversations
+          resource_url: '/v1/Users/{user_sid}/Conversations'
     post:
-      description: Update an existing conversation user in your account's default
-        service
+      description: Update an existing conversation user in your account's default service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Users
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the User resource to update. This value can be either
-          the `sid` or the `identity` of the User resource to update.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/user_enum_webhook_enabled_type'
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to update. This value can be either the
+            `sid` or the `identity` of the User resource to update.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/user_enum_webhook_enabled_type'
       responses:
         '200':
           content:
@@ -8456,10 +9640,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.user'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUser
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8472,53 +9656,62 @@ paths:
                   description: The string that you assigned to describe the resource.
                 Attributes:
                   type: string
-                  description: The JSON Object string that stores application-specific
+                  description: >-
+                    The JSON Object string that stores application-specific
                     data. If attributes have not been set, `{}` is returned.
                 RoleSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RL[0-9a-fA-F]{32}$
-                  description: The SID of a service-level [Role](https://www.twilio.com/docs/conversations/api/role-resource)
+                  pattern: '^RL[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a service-level
+                    [Role](https://www.twilio.com/docs/conversations/api/role-resource)
                     to assign to the user.
+      summary: Update User
     delete:
       description: Remove a conversation user from your account's default service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Users
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the User resource to delete. This value can be either
-          the `sid` or the `identity` of the User resource to delete.
-        schema:
-          type: string
-        required: true
-      - name: X-Twilio-Webhook-Enabled
-        in: header
-        description: The X-Twilio-Webhook-Enabled HTTP request header
-        schema:
-          type: string
-          $ref: '#/components/schemas/user_enum_webhook_enabled_type'
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to delete. This value can be either the
+            `sid` or the `identity` of the User resource to delete.
+          schema:
+            type: string
+          required: true
+        - name: X-Twilio-Webhook-Enabled
+          in: header
+          description: The X-Twilio-Webhook-Enabled HTTP request header
+          schema:
+            type: string
+            $ref: '#/components/schemas/user_enum_webhook_enabled_type'
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUser
       x-maturity:
-      - GA
+        - GA
+      summary: Delete User
     get:
       description: Fetch a conversation user from your account's default service
       tags:
-      - ConversationsV1User
+        - Conversations
+        - Users
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the User resource to fetch. This value can be either
-          the `sid` or the `identity` of the User resource to fetch.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            The SID of the User resource to fetch. This value can be either the
+            `sid` or the `identity` of the User resource to fetch.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8527,44 +9720,52 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.user'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUser
       x-maturity:
-      - GA
-  /v1/Users/{UserSid}/Conversations/{ConversationSid}:
+        - GA
+      summary: Retrieve User
+  '/v1/Users/{UserSid}/Conversations/{ConversationSid}':
     servers:
-    - url: https://conversations.twilio.com
-    description: A User Conversation resource represents a conversation of the user
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A User Conversation resource represents a conversation of the user
       belonging to a default conversation service.
     x-twilio:
       defaultOutputProperties:
-      - conversation_sid
-      - user_sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - conversation_sid
+        - user_sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: instance
-      parent: /Users/{Sid}
+      parent: '/Users/{Sid}'
       mountName: user_conversations
     post:
       description: Update a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Users
       parameters:
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8573,10 +9774,10 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.user.user_conversation'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUserConversation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8586,65 +9787,83 @@ paths:
               properties:
                 NotificationLevel:
                   type: string
-                  $ref: '#/components/schemas/user_conversation_enum_notification_level'
-                  description: The Notification Level of this User Conversation. One
-                    of `default` or `muted`.
+                  $ref: >-
+                    #/components/schemas/user_conversation_enum_notification_level
+                  description: >-
+                    The Notification Level of this User Conversation. One of
+                    `default` or `muted`.
                 LastReadTimestamp:
                   type: string
                   format: date-time
-                  description: The date of the last message read in conversation by
-                    the user, given in ISO 8601 format.
+                  description: >-
+                    The date of the last message read in conversation by the
+                    user, given in ISO 8601 format.
                 LastReadMessageIndex:
                   type: integer
                   nullable: true
-                  description: The index of the last Message in the Conversation that
-                    the Participant has read.
+                  description: >-
+                    The index of the last Message in the Conversation that the
+                    Participant has read.
+      summary: Update User Conversation
     delete:
       description: Delete a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Users
       parameters:
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUserConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Delete User Conversation
     get:
       description: Fetch a specific User Conversation.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Users
       parameters:
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: ConversationSid
-        in: path
-        description: The unique SID identifier of the Conversation. This value can
-          be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
-        schema:
-          type: string
-        required: true
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: ConversationSid
+          in: path
+          description: >-
+            The unique SID identifier of the Conversation. This value can be
+            either the `sid` or the `unique_name` of the [Conversation
+            resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8653,56 +9872,63 @@ paths:
                 $ref: '#/components/schemas/conversations.v1.user.user_conversation'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUserConversation
       x-maturity:
-      - GA
-  /v1/Users/{UserSid}/Conversations:
+        - GA
+      summary: Retrieve User Conversation
+  '/v1/Users/{UserSid}/Conversations':
     servers:
-    - url: https://conversations.twilio.com
-    description: A User Conversation resource represents a conversation of the user
+      - url: 'https://conversations.twilio.com'
+    description: >-
+      A User Conversation resource represents a conversation of the user
       belonging to a default conversation service.
     x-twilio:
       defaultOutputProperties:
-      - conversation_sid
-      - user_sid
-      - chat_service_sid
-      - friendly_name
-      - date_created
+        - conversation_sid
+        - user_sid
+        - chat_service_sid
+        - friendly_name
+        - date_created
       pathType: list
-      parent: /Users/{Sid}
+      parent: '/Users/{Sid}'
       mountName: user_conversations
     get:
       description: Retrieve a list of all User Conversations for the User.
       tags:
-      - ConversationsV1UserConversation
+        - Conversations
+        - Users
       parameters:
-      - name: UserSid
-        in: path
-        description: The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource).
-          This value can be either the `sid` or the `identity` of the User resource.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: UserSid
+          in: path
+          description: >-
+            The unique SID identifier of the [User
+            resource](https://www.twilio.com/docs/conversations/api/user-resource).
+            This value can be either the `sid` or the `identity` of the User
+            resource.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8714,7 +9940,8 @@ paths:
                   conversations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/conversations.v1.user.user_conversation'
+                      $ref: >-
+                        #/components/schemas/conversations.v1.user.user_conversation
                   meta:
                     type: object
                     properties:
@@ -8740,29 +9967,41 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUserConversation
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve User Conversations
 servers:
-- url: https://conversations.twilio.com
+  - url: 'https://conversations.twilio.com'
 tags:
-- name: ConversationsV1AddressConfiguration
-- name: ConversationsV1Binding
-- name: ConversationsV1Configuration
-- name: ConversationsV1Conversation
-- name: ConversationsV1Credential
-- name: ConversationsV1DeliveryReceipt
-- name: ConversationsV1Message
-- name: ConversationsV1Notification
-- name: ConversationsV1Participant
-- name: ConversationsV1ParticipantConversation
-- name: ConversationsV1Role
-- name: ConversationsV1Service
-- name: ConversationsV1User
-- name: ConversationsV1UserConversation
-- name: ConversationsV1Webhook
+  - name: Conversations
+    description: Needs a description.
+  - name: Configurations
+    description: Needs a description.
+  - name: Addresses
+    description: Needs a description.
+  - name: Webhooks
+    description: Needs a description.
+  - name: Messages
+    description: Needs a description.
+  - name: Receipts
+    description: Needs a description.
+  - name: Participants
+    description: Needs a description.
+  - name: Credentials
+    description: Needs a description.
+  - name: Roles
+    description: Needs a description.
+  - name: Services
+    description: Needs a description.
+  - name: Bindings
+    description: Needs a description.
+  - name: Notifications
+    description: Needs a description.
+  - name: Users
+    description: Needs a description.
 x-maturity:
-- name: GA
-  description: This product is Generally Available.
+  - name: GA
+    description: This product is Generally Available.
 ---

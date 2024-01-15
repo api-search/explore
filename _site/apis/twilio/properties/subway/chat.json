@@ -1,0 +1,49 @@
+{
+  "tracks": [
+    {
+      "id": "8853e142-ba43-4ce7-a5c2-35743b03895a",
+      "segmentStyle": {
+        "strokeColor": "#ff0000",
+        "strokeWidth": 8,
+        "selectionColor": "#006400",
+        "fullySelected": false
+      },
+      "stationStyle": {
+        "strokeColor": "#000000",
+        "strokeWidth": 4,
+        "fillColor": "white",
+        "stationRadius": 8,
+        "selectionColor": "#006400",
+        "fullySelected": false
+      },
+      "segments": [
+        {
+          "stationA": {
+            "position": {
+              "x": 35,
+              "y": 66
+            },
+            "id": "da6268b0",
+            "name": "Update Channel",
+            "offsetFactor": null
+          },
+          "stationsUser": [
+            {
+              "position": {
+                "x": 35,
+                "y": 66
+              },
+              "id": "da6268b0",
+              "name": "Update Channel",
+              "offsetFactor": null
+            }
+          ],
+          "stationsAuto": [],
+          "id": "f9afdbb6-02f4-46af-8d19-ad1edbb18e53"
+        }
+      ],
+      "stationsMinor": []
+    }
+  ],
+  "connections": []
+}

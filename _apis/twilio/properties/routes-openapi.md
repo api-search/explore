@@ -17,39 +17,42 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^QQ[0-9a-fA-F]{32}$
+          pattern: '^QQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Inbound
+          description: >-
+            A 34 character string that uniquely identifies the Inbound
             Processing Region assignments for this phone number.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         friendly_name:
           type: string
           nullable: true
-          description: A human readable description of the Inbound Processing Region
+          description: >-
+            A human readable description of the Inbound Processing Region
             assignments for this phone number, up to 64 characters.
         voice_region:
           type: string
           nullable: true
-          description: The Inbound Processing Region used for this phone number for
-            voice.
+          description: The Inbound Processing Region used for this phone number for voice.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date that this phone number was assigned an Inbound Processing
+          description: >-
+            The date that this phone number was assigned an Inbound Processing
             Region, given in ISO 8601 format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that the Inbound Processing Region was updated for
-            this phone number, given in ISO 8601 format.
+          description: >-
+            The date that the Inbound Processing Region was updated for this
+            phone number, given in ISO 8601 format.
     routes.v2.sip_domain:
       type: object
       properties:
@@ -64,13 +67,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^QQ[0-9a-fA-F]{32}$
+          pattern: '^QQ[0-9a-fA-F]{32}$'
           nullable: true
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         friendly_name:
           type: string
@@ -102,21 +105,23 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^QQ[0-9a-fA-F]{32}$
+          pattern: '^QQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Inbound
+          description: >-
+            A 34 character string that uniquely identifies the Inbound
             Processing Region assignments for this SIP Trunk.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         friendly_name:
           type: string
           nullable: true
-          description: A human readable description of the Inbound Processing Region
+          description: >-
+            A human readable description of the Inbound Processing Region
             assignments for this SIP Trunk, up to 64 characters.
         voice_region:
           type: string
@@ -126,53 +131,57 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date that this SIP Trunk was assigned an Inbound Processing
+          description: >-
+            The date that this SIP Trunk was assigned an Inbound Processing
             Region, given in ISO 8601 format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that the Inbound Processing Region was updated for
-            this SIP Trunk, given in ISO 8601 format.
+          description: >-
+            The date that the Inbound Processing Region was updated for this SIP
+            Trunk, given in ISO 8601 format.
   securitySchemes:
     accountSid_authToken:
       type: http
       scheme: basic
 info:
-  title: Twilio - Routes
+  title: Twilio Routes API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
-  /v2/PhoneNumbers/{PhoneNumber}:
+  '/v2/PhoneNumbers/{PhoneNumber}':
     servers:
-    - url: https://routes.twilio.com
+      - url: 'https://routes.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: instance
     post:
       description: Assign an Inbound Processing Region to a phone number.
       tags:
-      - RoutesV2PhoneNumber
+        - Routes
+        - Phone Numbers
+        - Numbers
       parameters:
-      - name: PhoneNumber
-        in: path
-        description: The phone number in E.164 format
-        schema:
-          type: string
-        required: true
+        - name: PhoneNumber
+          in: path
+          description: The phone number in E.164 format
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -181,10 +190,10 @@ paths:
                 $ref: '#/components/schemas/routes.v2.phone_number'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdatePhoneNumber
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -194,23 +203,28 @@ paths:
               properties:
                 VoiceRegion:
                   type: string
-                  description: The Inbound Processing Region used for this phone number
-                    for voice
+                  description: >-
+                    The Inbound Processing Region used for this phone number for
+                    voice
                 FriendlyName:
                   type: string
-                  description: A human readable description of this resource, up to
-                    64 characters.
+                  description: >-
+                    A human readable description of this resource, up to 64
+                    characters.
+      summary: Create Phone Number
     get:
       description: Fetch the Inbound Processing Region assigned to a phone number.
       tags:
-      - RoutesV2PhoneNumber
+        - Routes
+        - Phone Numbers
+        - Numbers
       parameters:
-      - name: PhoneNumber
-        in: path
-        description: The phone number in E.164 format
-        schema:
-          type: string
-        required: true
+        - name: PhoneNumber
+          in: path
+          description: The phone number in E.164 format
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -219,31 +233,35 @@ paths:
                 $ref: '#/components/schemas/routes.v2.phone_number'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchPhoneNumber
       x-maturity:
-      - GA
-  /v2/SipDomains/{SipDomain}:
+        - GA
+      summary: Retrieve Phone Number
+  '/v2/SipDomains/{SipDomain}':
     servers:
-    - url: https://routes.twilio.com
+      - url: 'https://routes.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: instance
     post:
       description: ''
       tags:
-      - RoutesV2SipDomain
+        - Routes
+        - SIP Domains
+        - SIP
+        - Domains
       parameters:
-      - name: SipDomain
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: SipDomain
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -252,10 +270,10 @@ paths:
                 $ref: '#/components/schemas/routes.v2.sip_domain'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSipDomain
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -269,17 +287,21 @@ paths:
                 FriendlyName:
                   type: string
                   description: ''
+      summary: Create SIP Domain
     get:
       description: ''
       tags:
-      - RoutesV2SipDomain
+        - Routes
+        - SIP Domains
+        - SIP
+        - Domains
       parameters:
-      - name: SipDomain
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: SipDomain
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -288,31 +310,36 @@ paths:
                 $ref: '#/components/schemas/routes.v2.sip_domain'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSipDomain
       x-maturity:
-      - GA
-  /v2/Trunks/{SipTrunkDomain}:
+        - GA
+      summary: Retrieve SIP Domain
+  '/v2/Trunks/{SipTrunkDomain}':
     servers:
-    - url: https://routes.twilio.com
+      - url: 'https://routes.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: instance
     post:
       description: Assign an Inbound Processing Region to a SIP Trunk
       tags:
-      - RoutesV2Trunk
+        - Routes
+        - Trunks
+        - SIP Trunk
+        - Domain
+        - Trunks
       parameters:
-      - name: SipTrunkDomain
-        in: path
-        description: The absolute URL of the SIP Trunk
-        schema:
-          type: string
-        required: true
+        - name: SipTrunkDomain
+          in: path
+          description: The absolute URL of the SIP Trunk
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -321,10 +348,10 @@ paths:
                 $ref: '#/components/schemas/routes.v2.trunks'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateTrunks
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -334,23 +361,30 @@ paths:
               properties:
                 VoiceRegion:
                   type: string
-                  description: The Inbound Processing Region used for this SIP Trunk
-                    for voice
+                  description: >-
+                    The Inbound Processing Region used for this SIP Trunk for
+                    voice
                 FriendlyName:
                   type: string
-                  description: A human readable description of this resource, up to
-                    64 characters.
+                  description: >-
+                    A human readable description of this resource, up to 64
+                    characters.
+      summary: Create Trunk
     get:
       description: Fetch the Inbound Processing Region assigned to a SIP Trunk.
       tags:
-      - RoutesV2Trunk
+        - Routes
+        - Trunks
+        - SIP Trunk
+        - Domain
+        - Trunks
       parameters:
-      - name: SipTrunkDomain
-        in: path
-        description: The absolute URL of the SIP Trunk
-        schema:
-          type: string
-        required: true
+        - name: SipTrunkDomain
+          in: path
+          description: The absolute URL of the SIP Trunk
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -359,17 +393,34 @@ paths:
                 $ref: '#/components/schemas/routes.v2.trunks'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTrunks
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Trunks
 servers:
-- url: https://routes.twilio.com
+  - url: 'https://routes.twilio.com'
 tags:
-- name: RoutesV2PhoneNumber
-- name: RoutesV2SipDomain
-- name: RoutesV2Trunk
+  - name: Tag
+  - name: Routes
+    description: Needs a description.
+  - name: Phone Numbers
+    description: Needs a description.
+  - name: Numbers
+    description: Needs a description.
+  - name: SIP Domains
+    description: Needs a description.
+  - name: SIP
+    description: Needs a description.
+  - name: Domains
+    description: Needs a description.
+  - name: Trunks
+    description: Needs a description.
+  - name: SIP Trunk
+    description: Needs a description.
+  - name: Domain
+    description: Needs a description.
 x-maturity:
-- name: GA
-  description: This product is Generally Available.
+  - name: GA
+    description: This product is Generally Available.
 ---

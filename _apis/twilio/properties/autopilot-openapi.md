@@ -1085,7 +1085,7 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Assistant
+        - Assistants
       parameters:
         - name: Sid
           in: path
@@ -1111,7 +1111,7 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Assistant
+        - Assistants
       parameters:
         - name: Sid
           in: path
@@ -1184,7 +1184,7 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Assistant
+        - Assistants
       parameters:
         - name: Sid
           in: path
@@ -1249,7 +1249,7 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Assistant
+        - Assistants
       parameters:
         - name: PageSize
           in: query
@@ -1316,7 +1316,7 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Assistant
+        - Assistants
       responses:
         '201':
           content:
@@ -1387,7 +1387,7 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Defaults
+        - Assistants
       parameters:
         - name: AssistantSid
           in: path
@@ -1414,7 +1414,7 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Defaults
+        - Assistants
       parameters:
         - name: AssistantSid
           in: path
@@ -1463,7 +1463,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Dialogue
+        - Assistants
+        - Dialogue
       parameters:
         - name: AssistantSid
           in: path
@@ -1505,6 +1506,34 @@ paths:
         - data
       pathType: list
       parent: '/Assistants/{Sid}'
+    get:
+      description: ''
+      tags:
+        - Assistants
+        - Dialogue
+      parameters:
+        - name: AssistantSid
+          in: path
+          description: >-
+            The SID of the
+            [Assistant](https://www.twilio.com/docs/autopilot/api/assistant)
+            that is the parent of the resource to fetch.
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/autopilot.v1.assistant.dialogue'
+          description: OK
+      security:
+        - accountSid_authToken: []
+      operationId: FetchDialogues
+      x-maturity:
+        - Preview
+      summary: Retrieve Assistant Dialogue s     
   '/v1/Assistants/{AssistantSid}/Tasks/{TaskSid}/Fields/{Sid}':
     servers:
       - url: 'https://autopilot.twilio.com'
@@ -1519,7 +1548,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Field
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1564,7 +1595,9 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Field
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1616,7 +1649,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Field
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1702,7 +1737,9 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Field
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1779,7 +1816,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1FieldType
+        - Assistants
+        - Field Types
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1814,7 +1853,9 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1FieldType
+        - Assistants
+        - Field Types
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1869,7 +1910,9 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1FieldType
+        - Assistants
+        - Field Types
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1918,7 +1961,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1FieldType
+        - Assistants
+        - Field Types
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -1994,7 +2039,9 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1FieldType
+        - Assistants
+        - Field Types
+        - Fields
       parameters:
         - name: AssistantSid
           in: path
@@ -2054,7 +2101,11 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1FieldValue
+        - Assistants
+        - Field Types
+        - Field Values
+        - Fields
+        - Value
       parameters:
         - name: AssistantSid
           in: path
@@ -2097,7 +2148,11 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1FieldValue
+        - Assistants
+        - Field Types
+        - Field Values
+        - Fields
+        - Value
       parameters:
         - name: AssistantSid
           in: path
@@ -2146,7 +2201,11 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1FieldValue
+        - Assistants
+        - Field Types
+        - Field Values
+        - Fields
+        - Value
       parameters:
         - name: AssistantSid
           in: path
@@ -2239,7 +2298,11 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1FieldValue
+        - Assistants
+        - Field Types
+        - Field Values
+        - Fields
+        - Value
       parameters:
         - name: AssistantSid
           in: path
@@ -2311,7 +2374,10 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1ModelBuild
+        - Assistants
+        - Model Builds
+        - Models
+        - Builds
       parameters:
         - name: AssistantSid
           in: path
@@ -2346,7 +2412,10 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1ModelBuild
+        - Assistants
+        - Model Builds
+        - Models
+        - Builds
       parameters:
         - name: AssistantSid
           in: path
@@ -2395,7 +2464,10 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1ModelBuild
+        - Assistants
+        - Model Builds
+        - Models
+        - Builds
       parameters:
         - name: AssistantSid
           in: path
@@ -2438,7 +2510,10 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1ModelBuild
+        - Assistants
+        - Model Builds
+        - Models
+        - Builds
       parameters:
         - name: AssistantSid
           in: path
@@ -2514,7 +2589,10 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1ModelBuild
+        - Assistants
+        - Model Builds
+        - Models
+        - Builds
       parameters:
         - name: AssistantSid
           in: path
@@ -2573,7 +2651,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Query
+        - Assistants
+        - Queries
       parameters:
         - name: AssistantSid
           in: path
@@ -2608,7 +2687,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Query
+        - Assistants
+        - Queries
       parameters:
         - name: AssistantSid
           in: path
@@ -2664,7 +2744,8 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Query
+        - Assistants
+        - Queries
       parameters:
         - name: AssistantSid
           in: path
@@ -2707,7 +2788,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Query
+        - Assistants
+        - Queries
       parameters:
         - name: AssistantSid
           in: path
@@ -2817,7 +2899,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Query
+        - Assistants
+        - Queries
       parameters:
         - name: AssistantSid
           in: path
@@ -2892,7 +2975,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1RestoreAssistant
+        - Assistants
+        - Restore
       responses:
         '200':
           content:
@@ -2935,7 +3019,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Sample
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
         - name: AssistantSid
           in: path
@@ -2983,7 +3069,9 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Sample
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
         - name: AssistantSid
           in: path
@@ -3057,7 +3145,9 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Sample
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
         - name: AssistantSid
           in: path
@@ -3113,7 +3203,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Sample
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
         - name: AssistantSid
           in: path
@@ -3208,7 +3300,9 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Sample
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
         - name: AssistantSid
           in: path
@@ -3282,7 +3376,8 @@ paths:
     get:
       description: Returns Style sheet JSON object for the Assistant
       tags:
-        - AutopilotV1StyleSheet
+        - Assistants
+        - Style Sheets
       parameters:
         - name: AssistantSid
           in: path
@@ -3309,7 +3404,8 @@ paths:
     post:
       description: Updates the style sheet for an Assistant identified by `assistant_sid`.
       tags:
-        - AutopilotV1StyleSheet
+        - Assistants
+        - Style Sheets
       parameters:
         - name: AssistantSid
           in: path
@@ -3377,7 +3473,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Task
+        - Assistants
+        - Tasks
       parameters:
         - name: AssistantSid
           in: path
@@ -3412,7 +3509,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Task
+        - Assistants
+        - Tasks
       parameters:
         - name: AssistantSid
           in: path
@@ -3476,7 +3574,8 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Task
+        - Assistants
+        - Tasks
       parameters:
         - name: AssistantSid
           in: path
@@ -3539,7 +3638,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Task
+        - Assistants
+        - Tasks
       parameters:
         - name: AssistantSid
           in: path
@@ -3615,7 +3715,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Task
+        - Assistants
+        - Tasks
       parameters:
         - name: AssistantSid
           in: path
@@ -3685,7 +3786,9 @@ paths:
     get:
       description: Returns JSON actions for the Task.
       tags:
-        - AutopilotV1TaskActions
+        - Assistants
+        - Tasks
+        - Actions
       parameters:
         - name: AssistantSid
           in: path
@@ -3724,7 +3827,9 @@ paths:
         Updates the actions of an Task identified by {TaskSid} or
         {TaskUniqueName}.
       tags:
-        - AutopilotV1TaskActions
+        - Assistants
+        - Tasks
+        - Actions
       parameters:
         - name: AssistantSid
           in: path
@@ -3784,7 +3889,9 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1TaskStatistics
+        - Assistants
+        - Tasks
+        - Statistics
       parameters:
         - name: AssistantSid
           in: path
@@ -3834,7 +3941,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Webhook
+        - Assistants
+        - Webhooks
       parameters:
         - name: AssistantSid
           in: path
@@ -3869,7 +3977,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Webhook
+        - Assistants
+        - Webhooks
       parameters:
         - name: AssistantSid
           in: path
@@ -3930,7 +4039,8 @@ paths:
     delete:
       description: ''
       tags:
-        - AutopilotV1Webhook
+        - Assistants
+        - Webhooks
       parameters:
         - name: AssistantSid
           in: path
@@ -3974,7 +4084,8 @@ paths:
     get:
       description: ''
       tags:
-        - AutopilotV1Webhook
+        - Assistants
+        - Webhooks
       parameters:
         - name: AssistantSid
           in: path
@@ -4050,7 +4161,8 @@ paths:
     post:
       description: ''
       tags:
-        - AutopilotV1Webhook
+        - Assistants
+        - Webhooks
       parameters:
         - name: AssistantSid
           in: path
@@ -4107,21 +4219,42 @@ paths:
 servers:
   - url: 'https://autopilot.twilio.com'
 tags:
-  - name: AutopilotV1Assistant
-  - name: AutopilotV1Defaults
-  - name: AutopilotV1Dialogue
-  - name: AutopilotV1Field
-  - name: AutopilotV1FieldType
-  - name: AutopilotV1FieldValue
-  - name: AutopilotV1ModelBuild
-  - name: AutopilotV1Query
-  - name: AutopilotV1RestoreAssistant
-  - name: AutopilotV1Sample
-  - name: AutopilotV1StyleSheet
-  - name: AutopilotV1Task
-  - name: AutopilotV1TaskActions
-  - name: AutopilotV1TaskStatistics
-  - name: AutopilotV1Webhook
+  - name: Assistants
+    description: Needs a description.
+  - name: Dialogue
+    description: Needs a description.
+  - name: Tasks
+    description: Needs a description.
+  - name: Fields
+    description: Needs a description.
+  - name: Field Types
+    description: Needs a description.
+  - name: Field Values
+    description: Needs a description.
+  - name: Value
+    description: Needs a description.
+  - name: Model Builds
+    description: Needs a description.
+  - name: Models
+    description: Needs a description.
+  - name: Builds
+    description: Needs a description.
+  - name: Queries
+    description: Needs a description.
+  - name: Query
+    description: Needs a description.
+  - name: Restore
+    description: Needs a description.
+  - name: Samples
+    description: Needs a description.
+  - name: Style Sheets
+    description: Needs a description.
+  - name: Actions
+    description: Needs a description.
+  - name: Statistics
+    description: Needs a description.
+  - name: Webhooks
+    description: Needs a description.
 x-maturity:
   - name: Preview
     description: >-

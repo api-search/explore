@@ -33,7 +33,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/iam/api/account
     - type: OpenAPI
-      url: accounts-openapi.yml
+      url: accounts-openapi
 
 - name: Twilio Autopilot API
   description: Needs description.
@@ -46,7 +46,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: autopilot-openapi.yml
+      url: autopilot-openapi
 
 - name: Twilio Bulk Exports API
   description: Needs description.
@@ -60,7 +60,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: bulk-exports-openapi.yml      
+      url: bulk-exports-openapi      
 
 - name: Twilio Chat API
   description: Needs description.
@@ -73,7 +73,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: chat-openapi.yml  
+      url: chat-openapi  
 
 - name: Twilio Content API
   description: Needs description.
@@ -86,7 +86,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: content-openapi.yml   
+      url: content-openapi   
 
 - name: Twilio Conversations API
   description: Needs description.
@@ -99,7 +99,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: conversations-openapi.yml  
+      url: conversations-openapi  
 
 - name: Twilio Events API
   description: Needs description.
@@ -112,7 +112,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: events-openapi.yml  
+      url: events-openapi  
 
 - name: Twilio Flex API
   description: Needs description.
@@ -128,7 +128,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: fleOpenAPI.yml   
+      url: flex-openapi  
 
 - name: Twilio Frontline API
   description: Needs description.
@@ -141,7 +141,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: frontline-openapi.yml  
+      url: frontline-openapi  
 
 - name: Twilio Insights API
   description: Needs description.
@@ -154,7 +154,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: insights-openapi.yml   
+      url: insights-openapi   
 
 - name: Twilio Intelligence API
   description: Needs description.
@@ -167,7 +167,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: intelligence-openapi.yml  
+      url: intelligence-openapi  
 
 - name: Twilio IP Messaging API
   description: Needs description.
@@ -181,7 +181,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: ip-message-openapi.yml 
+      url: ip-message-openapi 
 
 - name: Twilio Lookups API
   description: Needs description.
@@ -194,7 +194,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: lookups-openapi.yml                                                    
+      url: lookups-openapi                                                    
 
 - name: Twilio Messaging API
   description: Send and receive messages via SMS, MMS, WhatsApp, Facebook Messenger,
@@ -210,7 +210,7 @@ apis:
     - type: Pricing
       url: https://www.twilio.com/en-us/sms/pricing/us 
     - type: OpenAPI
-      url: messaging-openapi.yml
+      url: messaging-openapi
 
 - name: Twilio Microvisor API
   description: Needs description.
@@ -223,7 +223,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: microvisor-openapi.yml 
+      url: microvisor-openapi 
 
 - name: Twilio Monitor API
   description: Needs description.
@@ -236,7 +236,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: monitor-openapi.yml  
+      url: monitor-openapi  
 
 - name: Twilio Notify API
   description: Needs description.
@@ -249,7 +249,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: notify-openapi.yml   
+      url: notify-openapi   
 
 - name: Twilio Numbers API
   description: Needs description.
@@ -262,7 +262,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: numbers-openapi.yml   
+      url: numbers-openapi   
 
 - name: Twilio Preview API
   description: Needs description.
@@ -275,7 +275,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: preview-openapi.yml   
+      url: preview-openapi   
 
 - name: Twilio Pricing API
   description: Needs description.
@@ -288,7 +288,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: pricing-openapi.yml 
+      url: pricing-openapi 
 
 - name: Twilio Proxy API
   description: Needs description.
@@ -301,7 +301,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: proxy-openapi.yml  
+      url: proxy-openapi  
 
 - name: Twilio Routes API
   description: Needs description.
@@ -314,7 +314,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: routes-openapi.yml    
+      url: routes-openapi    
 
 - name: Twilio Serverless API
   description: Needs description.
@@ -327,7 +327,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: serverless-openapi.yml  
+      url: serverless-openapi  
 
 - name: Twilio Studio API
   description: Needs description.
@@ -340,7 +340,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: studio-openapi.yml
+      url: studio-openapi
 
 - name: Twilio Super SIM API
   description: Needs description.
@@ -353,7 +353,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: super-sim-openapi.yml    
+      url: super-sim-openapi    
 
 - name: Twilio Sync API
   description: Needs description.
@@ -366,7 +366,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: sync-openapi.yml   
+      url: sync-openapi   
 
 - name: Twilio Task Router API
   description: Needs description.
@@ -380,7 +380,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: task-router-openapi.yml  
+      url: task-router-openapi  
 
 - name: Twilio Trunking API
   description: Needs description.
@@ -393,7 +393,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: trunking-openapi.yml    
+      url: trunking-openapi    
 
 - name: Twilio Trust Hub API
   description: Needs description.
@@ -406,7 +406,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: trust-hub-openapi.yml                                                                            
+      url: trust-hub-openapi                                                                            
 
 - name: Twilio Verify API
   description: Set up SMS or voice verifications to quickly authenticate users, fight
@@ -423,7 +423,7 @@ apis:
     - type: Pricing
       url: https://www.twilio.com/en-us/verify/pricing 
     - type: OpenAPI
-      url: verify-openapi.yml
+      url: verify-openapi
 
 - name: Twilio Video API
   description: Twilio Video is a programmable real-time communications platform that allows you to add video chat functionality to your web, iOS, and Android applications. The platform provides APIs, SDKs, and helper tools to capture, distribute, record, and render high quality audio and video applications.
@@ -436,7 +436,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/video
     - type: OpenAPI
-      url: video-openapi.yml
+      url: video-openapi
 
 - name: Twilio Voice API
   description: Build custom voice call experiences for your applications to reach
@@ -450,7 +450,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/en-us/voice
     - type: OpenAPI
-      url: voice-openapi.yml
+      url: voice-openapi
 
 - name: Twilio Wireless API
   description: Needs description.
@@ -463,7 +463,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: wireless-openapi.yml        
+      url: wireless-openapi        
 
 # Central Properties
 common:

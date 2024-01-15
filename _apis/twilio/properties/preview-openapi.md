@@ -8,9 +8,10 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^CY[0-9a-fA-F]{32}$
+          pattern: '^CY[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains a 34 character string that uniquely identifies this
+          description: >-
+            Contains a 34 character string that uniquely identifies this
             Certificate credential resource.
         url:
           type: string
@@ -20,45 +21,52 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: Contains a human readable descriptive text for this Certificate
+          description: >-
+            Contains a human readable descriptive text for this Certificate
             credential, up to 256 characters long.
         fleet_sid:
           type: string
           nullable: true
-          description: Specifies the unique string identifier of the Fleet that the
-            given Certificate credential belongs to.
+          description: >-
+            Specifies the unique string identifier of the Fleet that the given
+            Certificate credential belongs to.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Account responsible
+          description: >-
+            Specifies the unique string identifier of the Account responsible
             for this Certificate credential.
         device_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
+          pattern: '^TH[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of a Device authenticated
+          description: >-
+            Specifies the unique string identifier of a Device authenticated
             with this Certificate credential.
         thumbprint:
           type: string
           nullable: true
-          description: Contains a unique hash of the payload of this Certificate credential,
-            used to authenticate the Device.
+          description: >-
+            Contains a unique hash of the payload of this Certificate
+            credential, used to authenticate the Device.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Certificate credential was created,
-            given in UTC ISO 8601 format.
+          description: >-
+            Specifies the date this Certificate credential was created, given in
+            UTC ISO 8601 format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Certificate credential was last updated,
+          description: >-
+            Specifies the date this Certificate credential was last updated,
             given in UTC ISO 8601 format.
     preview.deployed_devices.fleet.deployment:
       type: object
@@ -67,9 +75,10 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
+          pattern: '^DL[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains a 34 character string that uniquely identifies this
+          description: >-
+            Contains a 34 character string that uniquely identifies this
             Deployment resource.
         url:
           type: string
@@ -79,41 +88,47 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: Contains a human readable descriptive text for this Deployment,
-            up to 64 characters long
+          description: >-
+            Contains a human readable descriptive text for this Deployment, up
+            to 64 characters long
         fleet_sid:
           type: string
           nullable: true
-          description: Specifies the unique string identifier of the Fleet that the
-            given Deployment belongs to.
+          description: >-
+            Specifies the unique string identifier of the Fleet that the given
+            Deployment belongs to.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Account responsible
+          description: >-
+            Specifies the unique string identifier of the Account responsible
             for this Deployment.
         sync_service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Twilio Sync service
+          description: >-
+            Specifies the unique string identifier of the Twilio Sync service
             instance linked to and accessible by this Deployment.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Deployment was created, given in UTC
-            ISO 8601 format.
+          description: >-
+            Specifies the date this Deployment was created, given in UTC ISO
+            8601 format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Deployment was last updated, given
-            in UTC ISO 8601 format.
+          description: >-
+            Specifies the date this Deployment was last updated, given in UTC
+            ISO 8601 format.
     preview.deployed_devices.fleet.device:
       type: object
       properties:
@@ -121,10 +136,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
+          pattern: '^TH[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains a 34 character string that uniquely identifies this
-            Device resource.
+          description: >-
+            Contains a 34 character string that uniquely identifies this Device
+            resource.
         url:
           type: string
           format: uri
@@ -133,63 +149,73 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: Contains a unique and addressable name of this Device, assigned
-            by the developer, up to 128 characters long.
+          description: >-
+            Contains a unique and addressable name of this Device, assigned by
+            the developer, up to 128 characters long.
         friendly_name:
           type: string
           nullable: true
-          description: Contains a human readable descriptive text for this Device,
-            up to 256 characters long
+          description: >-
+            Contains a human readable descriptive text for this Device, up to
+            256 characters long
         fleet_sid:
           type: string
           nullable: true
-          description: Specifies the unique string identifier of the Fleet that the
-            given Device belongs to.
+          description: >-
+            Specifies the unique string identifier of the Fleet that the given
+            Device belongs to.
         enabled:
           type: boolean
           nullable: true
-          description: Contains a boolean flag indicating whether the device is enabled
-            or not, blocks device connectivity if set to false.
+          description: >-
+            Contains a boolean flag indicating whether the device is enabled or
+            not, blocks device connectivity if set to false.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Account responsible
+          description: >-
+            Specifies the unique string identifier of the Account responsible
             for this Device.
         identity:
           type: string
           nullable: true
-          description: Contains an arbitrary string identifier representing a human
-            user associated with this Device, assigned by the developer, up to 256
+          description: >-
+            Contains an arbitrary string identifier representing a human user
+            associated with this Device, assigned by the developer, up to 256
             characters long.
         deployment_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
+          pattern: '^DL[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Deployment group
-            that this Device is associated with.
+          description: >-
+            Specifies the unique string identifier of the Deployment group that
+            this Device is associated with.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Device was created, given in UTC ISO
-            8601 format.
+          description: >-
+            Specifies the date this Device was created, given in UTC ISO 8601
+            format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Device was last updated, given in UTC
-            ISO 8601 format.
+          description: >-
+            Specifies the date this Device was last updated, given in UTC ISO
+            8601 format.
         date_authenticated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Device was last authenticated, given
-            in UTC ISO 8601 format.
+          description: >-
+            Specifies the date this Device was last authenticated, given in UTC
+            ISO 8601 format.
     preview.deployed_devices.fleet:
       type: object
       properties:
@@ -197,10 +223,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
+          pattern: '^TH[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains a 34 character string that uniquely identifies this
-            Fleet resource.
+          description: >-
+            Contains a 34 character string that uniquely identifies this Fleet
+            resource.
         url:
           type: string
           format: uri
@@ -209,46 +236,53 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: Contains a unique and addressable name of this Fleet, e.g.
+          description: >-
+            Contains a unique and addressable name of this Fleet, e.g.
             'default', up to 128 characters long.
         friendly_name:
           type: string
           nullable: true
-          description: Contains a human readable descriptive text for this Fleet,
-            up to 256 characters long.
+          description: >-
+            Contains a human readable descriptive text for this Fleet, up to 256
+            characters long.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: Speicifies the unique string identifier of the Account responsible
+          description: >-
+            Speicifies the unique string identifier of the Account responsible
             for this Fleet.
         default_deployment_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
+          pattern: '^DL[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains the string identifier of the automatically provisioned
+          description: >-
+            Contains the string identifier of the automatically provisioned
             default Deployment of this Fleet.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Fleet was created, given in UTC ISO
-            8601 format.
+          description: >-
+            Specifies the date this Fleet was created, given in UTC ISO 8601
+            format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Fleet was last updated, given in UTC
-            ISO 8601 format.
+          description: >-
+            Specifies the date this Fleet was last updated, given in UTC ISO
+            8601 format.
         links:
           type: object
           format: uri-map
           nullable: true
-          description: Contains a dictionary of URL links to nested resources of this
+          description: >-
+            Contains a dictionary of URL links to nested resources of this
             Fleet.
     preview.deployed_devices.fleet.key:
       type: object
@@ -257,10 +291,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^KY[0-9a-fA-F]{32}$
+          pattern: '^KY[0-9a-fA-F]{32}$'
           nullable: true
-          description: Contains a 34 character string that uniquely identifies this
-            Key credential resource.
+          description: >-
+            Contains a 34 character string that uniquely identifies this Key
+            credential resource.
         url:
           type: string
           format: uri
@@ -269,46 +304,53 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: Contains a human readable descriptive text for this Key credential,
+          description: >-
+            Contains a human readable descriptive text for this Key credential,
             up to 256 characters long.
         fleet_sid:
           type: string
           nullable: true
-          description: Specifies the unique string identifier of the Fleet that the
-            given Key credential belongs to.
+          description: >-
+            Specifies the unique string identifier of the Fleet that the given
+            Key credential belongs to.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of the Account responsible
+          description: >-
+            Specifies the unique string identifier of the Account responsible
             for this Key credential.
         device_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
+          pattern: '^TH[0-9a-fA-F]{32}$'
           nullable: true
-          description: Specifies the unique string identifier of a Device authenticated
+          description: >-
+            Specifies the unique string identifier of a Device authenticated
             with this Key credential.
         secret:
           type: string
           nullable: true
-          description: Contains the automatically generated secret belonging to this
-            Key credential, used to authenticate the Device.
+          description: >-
+            Contains the automatically generated secret belonging to this Key
+            credential, used to authenticate the Device.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Key credential was created, given in
-            UTC ISO 8601 format.
+          description: >-
+            Specifies the date this Key credential was created, given in UTC ISO
+            8601 format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: Specifies the date this Key credential was last updated, given
-            in UTC ISO 8601 format.
+          description: >-
+            Specifies the date this Key credential was last updated, given in
+            UTC ISO 8601 format.
     preview.hosted_numbers.authorization_document:
       type: object
       properties:
@@ -316,25 +358,30 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
+          pattern: '^PX[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies this AuthorizationDocument.
+          description: >-
+            A 34 character string that uniquely identifies this
+            AuthorizationDocument.
         address_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AD[0-9a-fA-F]{32}$
+          pattern: '^AD[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Address
-            resource that is associated with this AuthorizationDocument.
+          description: >-
+            A 34 character string that uniquely identifies the Address resource
+            that is associated with this AuthorizationDocument.
         status:
           type: string
           $ref: '#/components/schemas/authorization_document_enum_status'
           nullable: true
-          description: 'Status of an instance resource. It can hold one of the values:
-            1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section
-            entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
-            for more information on each of these statuses.'
+          description: >-
+            Status of an instance resource. It can hold one of the values: 1.
+            opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the
+            section entitled [Status
+            Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
+            for more information on each of these statuses.
         email:
           type: string
           nullable: true
@@ -348,8 +395,9 @@ components:
           items:
             type: string
           nullable: true
-          description: Email recipients who will be informed when an Authorization
-            Document has been sent and signed.
+          description: >-
+            Email recipients who will be informed when an Authorization Document
+            has been sent and signed.
           x-twilio:
             pii:
               handling: standard
@@ -358,13 +406,15 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date this resource was created, given as [GMT RFC 2822](http://www.ietf.org/rfc/rfc2822.txt)
-            format.
+          description: >-
+            The date this resource was created, given as [GMT RFC
+            2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was updated, given as [GMT RFC
+          description: >-
+            The date that this resource was updated, given as [GMT RFC
             2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         url:
           type: string
@@ -377,11 +427,11 @@ components:
     authorization_document_enum_status:
       type: string
       enum:
-      - opened
-      - signing
-      - signed
-      - canceled
-      - failed
+        - opened
+        - signing
+        - signed
+        - canceled
+        - failed
     preview.hosted_numbers.authorization_document.dependent_hosted_number_order:
       type: object
       properties:
@@ -389,40 +439,44 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HR[0-9a-fA-F]{32}$
+          pattern: '^HR[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies this Authorization
+          description: >-
+            A 34 character string that uniquely identifies this Authorization
             Document
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Account.
         incoming_phone_number_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^PN[0-9a-fA-F]{32}$
+          pattern: '^PN[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the IncomingPhoneNumber
-            resource created by this HostedNumberOrder.
+          description: >-
+            A 34 character string that uniquely identifies the
+            IncomingPhoneNumber resource created by this HostedNumberOrder.
         address_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AD[0-9a-fA-F]{32}$
+          pattern: '^AD[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Address
-            resource that represents the address of the owner of this phone number.
+          description: >-
+            A 34 character string that uniquely identifies the Address resource
+            that represents the address of the owner of this phone number.
         signing_document_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
+          pattern: '^PX[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the LOA document
+          description: >-
+            A 34 character string that uniquely identifies the LOA document
             associated with this HostedNumberOrder.
         phone_number:
           type: string
@@ -442,12 +496,13 @@ components:
             fax:
               type: boolean
           nullable: true
-          description: A mapping of capabilities this hosted phone number will have
-            enabled on Twilio's platform.
+          description: >-
+            A mapping of capabilities this hosted phone number will have enabled
+            on Twilio's platform.
         friendly_name:
           type: string
           nullable: true
-          description: A human readable description of this resource, up to 64 characters.
+          description: 'A human readable description of this resource, up to 64 characters.'
           x-twilio:
             pii:
               handling: standard
@@ -455,9 +510,10 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: Provides a unique and addressable name to be assigned to this
-            HostedNumberOrder, assigned by the developer, to be optionally used in
-            addition to SID.
+          description: >-
+            Provides a unique and addressable name to be assigned to this
+            HostedNumberOrder, assigned by the developer, to be optionally used
+            in addition to SID.
           x-twilio:
             pii:
               handling: standard
@@ -466,32 +522,38 @@ components:
           type: string
           $ref: '#/components/schemas/dependent_hosted_number_order_enum_status'
           nullable: true
-          description: 'Status of an instance resource. It can hold one of the values:
-            1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section
-            entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
-            for more information on each of these statuses.'
+          description: >-
+            Status of an instance resource. It can hold one of the values: 1.
+            opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the
+            section entitled [Status
+            Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
+            for more information on each of these statuses.
         failure_reason:
           type: string
           nullable: true
-          description: A message that explains why a hosted_number_order went to status
+          description: >-
+            A message that explains why a hosted_number_order went to status
             "action-required"
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date this resource was created, given as [GMT RFC 2822](http://www.ietf.org/rfc/rfc2822.txt)
-            format.
+          description: >-
+            The date this resource was created, given as [GMT RFC
+            2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was updated, given as [GMT RFC
+          description: >-
+            The date that this resource was updated, given as [GMT RFC
             2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         verification_attempts:
           type: integer
           nullable: true
-          description: The number of attempts made to verify ownership of the phone
-            number that is being hosted.
+          description: >-
+            The number of attempts made to verify ownership of the phone number
+            that is being hosted.
         email:
           type: string
           nullable: true
@@ -505,36 +567,42 @@ components:
           items:
             type: string
           nullable: true
-          description: Email recipients who will be informed when an Authorization
-            Document has been sent and signed
+          description: >-
+            Email recipients who will be informed when an Authorization Document
+            has been sent and signed
           x-twilio:
             pii:
               handling: standard
               deleteSla: 30
         verification_type:
           type: string
-          $ref: '#/components/schemas/dependent_hosted_number_order_enum_verification_type'
+          $ref: >-
+            #/components/schemas/dependent_hosted_number_order_enum_verification_type
           nullable: true
-          description: The method used for verifying ownership of the number to be
-            hosted. One of phone-call (default) or phone-bill.
+          description: >-
+            The method used for verifying ownership of the number to be hosted.
+            One of phone-call (default) or phone-bill.
         verification_document_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RI[0-9a-fA-F]{32}$
+          pattern: '^RI[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Identity
-            Document resource that represents the document for verifying ownership
-            of the number to be hosted.
+          description: >-
+            A 34 character string that uniquely identifies the Identity Document
+            resource that represents the document for verifying ownership of the
+            number to be hosted.
         extension:
           type: string
           nullable: true
-          description: A numerical extension to be used when making the ownership
+          description: >-
+            A numerical extension to be used when making the ownership
             verification call.
         call_delay:
           type: integer
           nullable: true
-          description: A value between 0-30 specifying the number of seconds to delay
+          description: >-
+            A value between 0-30 specifying the number of seconds to delay
             initiating the ownership verification call.
         verification_code:
           type: string
@@ -545,25 +613,26 @@ components:
           items:
             type: string
           nullable: true
-          description: A list of 34 character strings that are unique identifiers
-            for the calls placed as part of ownership verification.
+          description: >-
+            A list of 34 character strings that are unique identifiers for the
+            calls placed as part of ownership verification.
     dependent_hosted_number_order_enum_status:
       type: string
       enum:
-      - received
-      - pending-verification
-      - verified
-      - pending-loa
-      - carrier-processing
-      - testing
-      - completed
-      - failed
-      - action-required
+        - received
+        - pending-verification
+        - verified
+        - pending-loa
+        - carrier-processing
+        - testing
+        - completed
+        - failed
+        - action-required
     dependent_hosted_number_order_enum_verification_type:
       type: string
       enum:
-      - phone-call
-      - phone-bill
+        - phone-call
+        - phone-bill
     preview.hosted_numbers.hosted_number_order:
       type: object
       properties:
@@ -571,47 +640,55 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^HR[0-9a-fA-F]{32}$
+          pattern: '^HR[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies this HostedNumberOrder.
+          description: >-
+            A 34 character string that uniquely identifies this
+            HostedNumberOrder.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies the account.
         incoming_phone_number_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^PN[0-9a-fA-F]{32}$
+          pattern: '^PN[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the [IncomingPhoneNumber](https://www.twilio.com/docs/phone-numbers/api/incomingphonenumber-resource)
+          description: >-
+            A 34 character string that uniquely identifies the
+            [IncomingPhoneNumber](https://www.twilio.com/docs/phone-numbers/api/incomingphonenumber-resource)
             resource that represents the phone number being hosted.
         address_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AD[0-9a-fA-F]{32}$
+          pattern: '^AD[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Address
-            resource that represents the address of the owner of this phone number.
+          description: >-
+            A 34 character string that uniquely identifies the Address resource
+            that represents the address of the owner of this phone number.
         signing_document_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
+          pattern: '^PX[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the [Authorization
+          description: >-
+            A 34 character string that uniquely identifies the [Authorization
             Document](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource)
             the user needs to sign.
         phone_number:
           type: string
           format: phone-number
           nullable: true
-          description: Phone number to be hosted. This must be in [E.164](https://en.wikipedia.org/wiki/E.164)
-            format, e.g., +16175551212
+          description: >-
+            Phone number to be hosted. This must be in
+            [E.164](https://en.wikipedia.org/wiki/E.164) format, e.g.,
+            +16175551212
         capabilities:
           type: object
           format: phone-number-capabilities
@@ -625,12 +702,14 @@ components:
             fax:
               type: boolean
           nullable: true
-          description: Set of booleans describing the capabilities hosted on Twilio's
+          description: >-
+            Set of booleans describing the capabilities hosted on Twilio's
             platform. SMS is currently only supported.
         friendly_name:
           type: string
           nullable: true
-          description: A 64 character string that is a human-readable text that describes
+          description: >-
+            A 64 character string that is a human-readable text that describes
             this resource.
           x-twilio:
             pii:
@@ -639,9 +718,10 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: Provides a unique and addressable name to be assigned to this
-            HostedNumberOrder, assigned by the developer, to be optionally used in
-            addition to SID.
+          description: >-
+            Provides a unique and addressable name to be assigned to this
+            HostedNumberOrder, assigned by the developer, to be optionally used
+            in addition to SID.
           x-twilio:
             pii:
               handling: standard
@@ -650,33 +730,39 @@ components:
           type: string
           $ref: '#/components/schemas/hosted_number_order_enum_status'
           nullable: true
-          description: 'Status of this resource. It can hold one of the values: 1.
-            Twilio Processing 2. Received, 3. Pending LOA, 4. Carrier Processing,
-            5. Completed, 6. Action Required, 7. Failed. See the [HostedNumberOrders
-            Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values)
-            section for more information on each of these statuses.'
+          description: >-
+            Status of this resource. It can hold one of the values: 1. Twilio
+            Processing 2. Received, 3. Pending LOA, 4. Carrier Processing, 5.
+            Completed, 6. Action Required, 7. Failed. See the
+            [HostedNumberOrders Status
+            Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/hosted-number-order-resource#status-values)
+            section for more information on each of these statuses.
         failure_reason:
           type: string
           nullable: true
-          description: A message that explains why a hosted_number_order went to status
+          description: >-
+            A message that explains why a hosted_number_order went to status
             "action-required"
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date this resource was created, given as [GMT RFC 2822](http://www.ietf.org/rfc/rfc2822.txt)
-            format.
+          description: >-
+            The date this resource was created, given as [GMT RFC
+            2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date that this resource was updated, given as [GMT RFC
+          description: >-
+            The date that this resource was updated, given as [GMT RFC
             2822](http://www.ietf.org/rfc/rfc2822.txt) format.
         verification_attempts:
           type: integer
           nullable: true
-          description: The number of attempts made to verify ownership of the phone
-            number that is being hosted.
+          description: >-
+            The number of attempts made to verify ownership of the phone number
+            that is being hosted.
         email:
           type: string
           nullable: true
@@ -690,8 +776,9 @@ components:
           items:
             type: string
           nullable: true
-          description: A list of emails that LOA document for this HostedNumberOrder
-            will be carbon copied to.
+          description: >-
+            A list of emails that LOA document for this HostedNumberOrder will
+            be carbon copied to.
           x-twilio:
             pii:
               handling: standard
@@ -705,56 +792,63 @@ components:
           type: string
           $ref: '#/components/schemas/hosted_number_order_enum_verification_type'
           nullable: true
-          description: The type of ownership verification required to move the number
-            to a `verified` state. The verification methods are `phone-call` or `phone-bill`.
+          description: >-
+            The type of ownership verification required to move the number to a
+            `verified` state. The verification methods are `phone-call` or
+            `phone-bill`.
         verification_document_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^RI[0-9a-fA-F]{32}$
+          pattern: '^RI[0-9a-fA-F]{32}$'
           nullable: true
-          description: A 34 character string that uniquely identifies the Identity
-            Document resource that represents the document for verifying ownership
-            of the number to be hosted.
+          description: >-
+            A 34 character string that uniquely identifies the Identity Document
+            resource that represents the document for verifying ownership of the
+            number to be hosted.
         extension:
           type: string
           nullable: true
-          description: A numerical extension to be used when making the ownership
+          description: >-
+            A numerical extension to be used when making the ownership
             verification call.
         call_delay:
           type: integer
           nullable: true
-          description: A value between 0-30 specifying the number of seconds to delay
+          description: >-
+            A value between 0-30 specifying the number of seconds to delay
             initiating the ownership verification call.
         verification_code:
           type: string
           nullable: true
-          description: A verification code provided in the response for a user to
-            enter when they pick up the phone call.
+          description: >-
+            A verification code provided in the response for a user to enter
+            when they pick up the phone call.
         verification_call_sids:
           type: array
           items:
             type: string
           nullable: true
-          description: A list of 34 character strings that are unique identifiers
-            for the calls placed as part of ownership verification.
+          description: >-
+            A list of 34 character strings that are unique identifiers for the
+            calls placed as part of ownership verification.
     hosted_number_order_enum_status:
       type: string
       enum:
-      - received
-      - pending-verification
-      - verified
-      - pending-loa
-      - carrier-processing
-      - testing
-      - completed
-      - failed
-      - action-required
+        - received
+        - pending-verification
+        - verified
+        - pending-loa
+        - carrier-processing
+        - testing
+        - completed
+        - failed
+        - action-required
     hosted_number_order_enum_verification_type:
       type: string
       enum:
-      - phone-call
-      - phone-bill
+        - phone-call
+        - phone-bill
     preview.marketplace.available_add_on:
       type: object
       properties:
@@ -762,9 +856,10 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XB[0-9a-fA-F]{32}$
+          pattern: '^XB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the AvailableAddOn
+          description: >-
+            The unique string that we created to identify the AvailableAddOn
             resource.
         friendly_name:
           type: string
@@ -780,8 +875,9 @@ components:
           description: How customers are charged for using this Add-on.
         configuration_schema:
           nullable: true
-          description: The JSON object with the configuration that must be provided
-            when installing a given Add-on.
+          description: >-
+            The JSON object with the configuration that must be provided when
+            installing a given Add-on.
         url:
           type: string
           format: uri
@@ -799,17 +895,19 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XF[0-9a-fA-F]{32}$
+          pattern: '^XF[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the AvailableAddOnExtension
-            resource.
+          description: >-
+            The unique string that we created to identify the
+            AvailableAddOnExtension resource.
         available_add_on_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XB[0-9a-fA-F]{32}$
+          pattern: '^XB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the AvailableAddOn resource to which this extension
+          description: >-
+            The SID of the AvailableAddOn resource to which this extension
             applies.
         friendly_name:
           type: string
@@ -822,8 +920,7 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            resource.
+          description: An application-defined string that uniquely identifies the resource.
         url:
           type: string
           format: uri
@@ -836,19 +933,22 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
+          pattern: '^XE[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the InstalledAddOn
-            resource. This Sid can also be found in the Console on that specific Add-ons
-            page as the 'Available Add-on Sid'.
+          description: >-
+            The unique string that we created to identify the InstalledAddOn
+            resource. This Sid can also be found in the Console on that specific
+            Add-ons page as the 'Available Add-on Sid'.
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the InstalledAddOn resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the InstalledAddOn resource.
         friendly_name:
           type: string
           nullable: true
@@ -859,25 +959,28 @@ components:
           description: A short description of the Add-on's functionality.
         configuration:
           nullable: true
-          description: The JSON object that represents the current configuration of
+          description: >-
+            The JSON object that represents the current configuration of
             installed Add-on.
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            resource.
+          description: An application-defined string that uniquely identifies the resource.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         url:
           type: string
           format: uri
@@ -895,17 +998,19 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XF[0-9a-fA-F]{32}$
+          pattern: '^XF[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the InstalledAddOn
+          description: >-
+            The unique string that we created to identify the InstalledAddOn
             Extension resource.
         installed_add_on_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
+          pattern: '^XE[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the InstalledAddOn resource to which this extension
+          description: >-
+            The SID of the InstalledAddOn resource to which this extension
             applies.
         friendly_name:
           type: string
@@ -918,8 +1023,7 @@ components:
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            resource.
+          description: An application-defined string that uniquely identifies the resource.
         enabled:
           type: boolean
           nullable: true
@@ -936,7 +1040,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^ET[0-9a-fA-F]{32}$
+          pattern: '^ET[0-9a-fA-F]{32}$'
           nullable: true
         unique_name:
           type: string
@@ -945,13 +1049,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -984,44 +1088,49 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Twilio Account.
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Sync Service Instance.
         document_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^ET[0-9a-fA-F]{32}$
+          pattern: '^ET[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique SID identifier of the Sync Document to which the
+          description: >-
+            The unique SID identifier of the Sync Document to which the
             Permission applies.
         identity:
           type: string
           nullable: true
-          description: Arbitrary string identifier representing a human user associated
+          description: >-
+            Arbitrary string identifier representing a human user associated
             with an FPA token, assigned by the developer.
         read:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can read the Sync
+          description: >-
+            Boolean flag specifying whether the identity can read the Sync
             Document.
         write:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can update the
-            Sync Document.
+          description: >-
+            Boolean flag specifying whether the identity can update the Sync
+            Document.
         manage:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can delete the
-            Sync Document.
+          description: >-
+            Boolean flag specifying whether the identity can delete the Sync
+            Document.
         url:
           type: string
           format: uri
@@ -1034,13 +1143,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         friendly_name:
           type: string
@@ -1078,7 +1187,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^ES[0-9a-fA-F]{32}$
+          pattern: '^ES[0-9a-fA-F]{32}$'
           nullable: true
         unique_name:
           type: string
@@ -1087,13 +1196,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1127,19 +1236,19 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         list_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^ES[0-9a-fA-F]{32}$
+          pattern: '^ES[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1164,13 +1273,13 @@ components:
     sync_list_item_enum_query_result_order:
       type: string
       enum:
-      - asc
-      - desc
+        - asc
+        - desc
     sync_list_item_enum_query_from_bound_type:
       type: string
       enum:
-      - inclusive
-      - exclusive
+        - inclusive
+        - exclusive
     preview.sync.service.sync_list.sync_list_permission:
       type: object
       properties:
@@ -1178,44 +1287,49 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Twilio Account.
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Sync Service Instance.
         list_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^ES[0-9a-fA-F]{32}$
+          pattern: '^ES[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique SID identifier of the Sync List to which the Permission
+          description: >-
+            The unique SID identifier of the Sync List to which the Permission
             applies.
         identity:
           type: string
           nullable: true
-          description: Arbitrary string identifier representing a human user associated
+          description: >-
+            Arbitrary string identifier representing a human user associated
             with an FPA token, assigned by the developer.
         read:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can read the Sync
-            List and its Items.
+          description: >-
+            Boolean flag specifying whether the identity can read the Sync List
+            and its Items.
         write:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can create, update
-            and delete Items of the Sync List.
+          description: >-
+            Boolean flag specifying whether the identity can create, update and
+            delete Items of the Sync List.
         manage:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can delete the
-            Sync List.
+          description: >-
+            Boolean flag specifying whether the identity can delete the Sync
+            List.
         url:
           type: string
           format: uri
@@ -1228,7 +1342,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MP[0-9a-fA-F]{32}$
+          pattern: '^MP[0-9a-fA-F]{32}$'
           nullable: true
         unique_name:
           type: string
@@ -1237,13 +1351,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1277,19 +1391,19 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
         map_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MP[0-9a-fA-F]{32}$
+          pattern: '^MP[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1314,13 +1428,13 @@ components:
     sync_map_item_enum_query_result_order:
       type: string
       enum:
-      - asc
-      - desc
+        - asc
+        - desc
     sync_map_item_enum_query_from_bound_type:
       type: string
       enum:
-      - inclusive
-      - exclusive
+        - inclusive
+        - exclusive
     preview.sync.service.sync_map.sync_map_permission:
       type: object
       properties:
@@ -1328,44 +1442,49 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Twilio Account.
         service_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
+          pattern: '^IS[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique SID identifier of the Sync Service Instance.
         map_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^MP[0-9a-fA-F]{32}$
+          pattern: '^MP[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique SID identifier of the Sync Map to which the Permission
+          description: >-
+            The unique SID identifier of the Sync Map to which the Permission
             applies.
         identity:
           type: string
           nullable: true
-          description: Arbitrary string identifier representing a human user associated
+          description: >-
+            Arbitrary string identifier representing a human user associated
             with an FPA token, assigned by the developer.
         read:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can read the Sync
-            Map and its Items.
+          description: >-
+            Boolean flag specifying whether the identity can read the Sync Map
+            and its Items.
         write:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can create, update
-            and delete Items of the Sync Map.
+          description: >-
+            Boolean flag specifying whether the identity can create, update and
+            delete Items of the Sync Map.
         manage:
           type: boolean
           nullable: true
-          description: Boolean flag specifying whether the identity can delete the
-            Sync Map.
+          description: >-
+            Boolean flag specifying whether the identity can delete the Sync
+            Map.
         url:
           type: string
           format: uri
@@ -1378,7 +1497,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Assistant.
         date_created:
@@ -1394,16 +1513,18 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: A text description for the Assistant. It is non-unique and
-            can up to 255 characters long.
+          description: >-
+            A text description for the Assistant. It is non-unique and can up to
+            255 characters long.
         latest_model_build_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UG[0-9a-fA-F]{32}$
+          pattern: '^UG[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID (Sid) of the latest model build. Null if no model
-            has been built.
+          description: >-
+            The unique ID (Sid) of the latest model build. Null if no model has
+            been built.
         links:
           type: object
           format: uri-map
@@ -1411,21 +1532,23 @@ components:
         log_queries:
           type: boolean
           nullable: true
-          description: A boolean that specifies whether queries should be logged for
-            30 days further training. If false, no queries will be stored, if true,
+          description: >-
+            A boolean that specifies whether queries should be logged for 30
+            days further training. If false, no queries will be stored, if true,
             queries will be stored for 30 days and deleted thereafter.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         unique_name:
           type: string
           nullable: true
-          description: A user-provided string that uniquely identifies this resource
-            as an alternative to the sid. You can use the unique name in the URL path.
+          description: >-
+            A user-provided string that uniquely identifies this resource as an
+            alternative to the sid. You can use the unique name in the URL path.
             Unique up to 64 characters long.
         url:
           type: string
@@ -1447,13 +1570,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1468,13 +1591,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
         url:
           type: string
@@ -1489,21 +1612,21 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field.
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UK[0-9a-fA-F]{32}$
+          pattern: '^UK[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Dialogue
         data:
@@ -1520,7 +1643,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field.
         date_created:
@@ -1536,35 +1659,37 @@ components:
         field_type:
           type: string
           nullable: true
-          description: The Field Type of this field. It can be any [Built-in Field
+          description: >-
+            The Field Type of this field. It can be any [Built-in Field
             Type](https://www.twilio.com/docs/assistant/api/built-in-field-types)
             or the unique_name or sid of a custom Field Type.
         task_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UD[0-9a-fA-F]{32}$
+          pattern: '^UD[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Task associated with this Field.
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UE[0-9a-fA-F]{32}$
+          pattern: '^UE[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         unique_name:
           type: string
           nullable: true
-          description: A user-provided string that uniquely identifies this resource
-            as an alternative to the sid. Unique up to 64 characters long.
+          description: >-
+            A user-provided string that uniquely identifies this resource as an
+            alternative to the sid. Unique up to 64 characters long.
         url:
           type: string
           format: uri
@@ -1576,7 +1701,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field Type.
         date_created:
@@ -1592,7 +1717,8 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: A user-provided string that identifies this resource. It is
+          description: >-
+            A user-provided string that identifies this resource. It is
             non-unique and can up to 255 characters long.
         links:
           type: object
@@ -1602,21 +1728,22 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UB[0-9a-fA-F]{32}$
+          pattern: '^UB[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         unique_name:
           type: string
           nullable: true
-          description: A user-provided string that uniquely identifies this resource
-            as an alternative to the sid. Unique up to 64 characters long.
+          description: >-
+            A user-provided string that uniquely identifies this resource as an
+            alternative to the sid. Unique up to 64 characters long.
         url:
           type: string
           format: uri
@@ -1628,7 +1755,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field Value.
         date_created:
@@ -1645,10 +1772,9 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UB[0-9a-fA-F]{32}$
+          pattern: '^UB[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique ID of the Field Type associated with this Field
-            Value.
+          description: The unique ID of the Field Type associated with this Field Value.
         language:
           type: string
           nullable: true
@@ -1657,14 +1783,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UC[0-9a-fA-F]{32}$
+          pattern: '^UC[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         value:
@@ -1679,10 +1805,11 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UC[0-9a-fA-F]{32}$
+          pattern: '^UC[0-9a-fA-F]{32}$'
           nullable: true
-          description: A value that indicates this field value is a synonym of. Empty
-            if the value is not a synonym.
+          description: >-
+            A value that indicates this field value is a synonym of. Empty if
+            the value is not a synonym.
     preview.understand.assistant.model_build:
       type: object
       properties:
@@ -1690,7 +1817,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Model Build.
         date_created:
@@ -1707,27 +1834,29 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UG[0-9a-fA-F]{32}$
+          pattern: '^UG[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         status:
           type: string
           $ref: '#/components/schemas/model_build_enum_status'
           nullable: true
-          description: 'A string that described the model build status. The values
-            can be: enqueued, building, completed, failed'
+          description: >-
+            A string that described the model build status. The values can be:
+            enqueued, building, completed, failed
         unique_name:
           type: string
           nullable: true
-          description: A user-provided string that uniquely identifies this resource
-            as an alternative to the sid. Unique up to 64 characters long.
+          description: >-
+            A user-provided string that uniquely identifies this resource as an
+            alternative to the sid. Unique up to 64 characters long.
         url:
           type: string
           format: uri
@@ -1742,11 +1871,11 @@ components:
     model_build_enum_status:
       type: string
       enum:
-      - enqueued
-      - building
-      - completed
-      - failed
-      - canceled
+        - enqueued
+        - building
+        - completed
+        - failed
+        - canceled
     preview.understand.assistant.query:
       type: object
       properties:
@@ -1754,7 +1883,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Query.
         date_created:
@@ -1769,7 +1898,8 @@ components:
           description: The date that this resource was last updated
         results:
           nullable: true
-          description: The natural language analysis results which include the Task
+          description: >-
+            The natural language analysis results which include the Task
             recognized, the confidence score and a list of identified Fields.
         language:
           type: string
@@ -1779,7 +1909,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UG[0-9a-fA-F]{32}$
+          pattern: '^UG[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Model Build queried.
         query:
@@ -1794,28 +1924,29 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UF[0-9a-fA-F]{32}$
+          pattern: '^UF[0-9a-fA-F]{32}$'
           nullable: true
           description: An optional reference to the Sample created from this query.
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UH[0-9a-fA-F]{32}$
+          pattern: '^UH[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         status:
           type: string
           nullable: true
-          description: 'A string that described the query status. The values can be:
-            pending_review, reviewed, discarded'
+          description: >-
+            A string that described the query status. The values can be:
+            pending_review, reviewed, discarded
         url:
           type: string
           format: uri
@@ -1831,7 +1962,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Sample.
         date_created:
@@ -1848,7 +1979,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UD[0-9a-fA-F]{32}$
+          pattern: '^UD[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Task associated with this Sample.
         language:
@@ -1859,21 +1990,22 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UF[0-9a-fA-F]{32}$
+          pattern: '^UF[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         tagged_text:
           type: string
           nullable: true
-          description: The text example of how end-users may express this task. The
-            sample may contain Field tag blocks.
+          description: >-
+            The text example of how end-users may express this task. The sample
+            may contain Field tag blocks.
         url:
           type: string
           format: uri
@@ -1881,9 +2013,10 @@ components:
         source_channel:
           type: string
           nullable: true
-          description: 'The communication channel the sample was captured. It can
-            be: *voice*, *sms*, *chat*, *alexa*, *google-assistant*, or *slack*. If
-            not included the value will be null'
+          description: >-
+            The communication channel the sample was captured. It can be:
+            *voice*, *sms*, *chat*, *alexa*, *google-assistant*, or *slack*. If
+            not included the value will be null
     preview.understand.assistant.style_sheet:
       type: object
       properties:
@@ -1891,14 +2024,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Assistant
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Assistant
         url:
@@ -1915,7 +2048,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Task.
         date_created:
@@ -1931,7 +2064,8 @@ components:
         friendly_name:
           type: string
           nullable: true
-          description: A user-provided string that identifies this resource. It is
+          description: >-
+            A user-provided string that identifies this resource. It is
             non-unique and can up to 255 characters long.
         links:
           type: object
@@ -1941,27 +2075,27 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Assistant.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UD[0-9a-fA-F]{32}$
+          pattern: '^UD[0-9a-fA-F]{32}$'
           nullable: true
           description: A 34 character string that uniquely identifies this resource.
         unique_name:
           type: string
           nullable: true
-          description: A user-provided string that uniquely identifies this resource
-            as an alternative to the sid. Unique up to 64 characters long.
+          description: >-
+            A user-provided string that uniquely identifies this resource as an
+            alternative to the sid. Unique up to 64 characters long.
         actions_url:
           type: string
           format: uri
           nullable: true
-          description: User-provided HTTP endpoint where from the assistant fetches
-            actions
+          description: User-provided HTTP endpoint where from the assistant fetches actions
         url:
           type: string
           format: uri
@@ -1973,21 +2107,21 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field.
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         task_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UD[0-9a-fA-F]{32}$
+          pattern: '^UD[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Task.
         url:
@@ -2003,21 +2137,21 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Account that created this Field.
         assistant_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UA[0-9a-fA-F]{32}$
+          pattern: '^UA[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the parent Assistant.
         task_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^UD[0-9a-fA-F]{32}$
+          pattern: '^UD[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique ID of the Task associated with this Field.
         samples_count:
@@ -2039,25 +2173,25 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DC[0-9a-fA-F]{32}$
+          pattern: '^DC[0-9a-fA-F]{32}$'
           nullable: true
         account_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         device_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DE[0-9a-fA-F]{32}$
+          pattern: '^DE[0-9a-fA-F]{32}$'
           nullable: true
         sim_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DE[0-9a-fA-F]{32}$
+          pattern: '^DE[0-9a-fA-F]{32}$'
           nullable: true
         command:
           type: string
@@ -2090,7 +2224,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WP[0-9a-fA-F]{32}$
+          pattern: '^WP[0-9a-fA-F]{32}$'
           nullable: true
         unique_name:
           type: string
@@ -2099,7 +2233,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         friendly_name:
           type: string
@@ -2146,7 +2280,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DE[0-9a-fA-F]{32}$
+          pattern: '^DE[0-9a-fA-F]{32}$'
           nullable: true
         unique_name:
           type: string
@@ -2155,13 +2289,13 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         rate_plan_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WP[0-9a-fA-F]{32}$
+          pattern: '^WP[0-9a-fA-F]{32}$'
           nullable: true
         friendly_name:
           type: string
@@ -2186,12 +2320,12 @@ components:
           type: string
           format: http-method
           enum:
-          - HEAD
-          - GET
-          - POST
-          - PATCH
-          - PUT
-          - DELETE
+            - HEAD
+            - GET
+            - POST
+            - PATCH
+            - PUT
+            - DELETE
           nullable: true
         sms_fallback_url:
           type: string
@@ -2201,12 +2335,12 @@ components:
           type: string
           format: http-method
           enum:
-          - HEAD
-          - GET
-          - POST
-          - PATCH
-          - PUT
-          - DELETE
+            - HEAD
+            - GET
+            - POST
+            - PATCH
+            - PUT
+            - DELETE
           nullable: true
         sms_url:
           type: string
@@ -2216,12 +2350,12 @@ components:
           type: string
           format: http-method
           enum:
-          - HEAD
-          - GET
-          - POST
-          - PATCH
-          - PUT
-          - DELETE
+            - HEAD
+            - GET
+            - POST
+            - PATCH
+            - PUT
+            - DELETE
           nullable: true
         voice_fallback_url:
           type: string
@@ -2231,12 +2365,12 @@ components:
           type: string
           format: http-method
           enum:
-          - HEAD
-          - GET
-          - POST
-          - PATCH
-          - PUT
-          - DELETE
+            - HEAD
+            - GET
+            - POST
+            - PATCH
+            - PUT
+            - DELETE
           nullable: true
         voice_url:
           type: string
@@ -2265,7 +2399,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^DE[0-9a-fA-F]{32}$
+          pattern: '^DE[0-9a-fA-F]{32}$'
           nullable: true
         sim_unique_name:
           type: string
@@ -2274,7 +2408,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
         period:
           nullable: true
@@ -2295,125 +2429,145 @@ components:
       type: http
       scheme: basic
 info:
-  title: Twilio - Preview
+  title: Twilio Preview API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
-  /DeployedDevices/Fleets/{FleetSid}/Certificates/{Sid}:
+  '/DeployedDevices/Fleets/{FleetSid}/Certificates/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     get:
-      description: Fetch information about a specific Certificate credential in the
-        Fleet.
+      description: Fetch information about a specific Certificate credential in the Fleet.
       tags:
-      - PreviewDeployedDevicesCertificate
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Certificates
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Certificate credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Certificate credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.deployed_devices.fleet.certificate'
+                $ref: >-
+                  #/components/schemas/preview.deployed_devices.fleet.certificate
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchDeployedDevicesCertificate
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Deployed Device Fleet Certificate
     delete:
-      description: Unregister a specific Certificate credential from the Fleet, effectively
+      description: >-
+        Unregister a specific Certificate credential from the Fleet, effectively
         disallowing any inbound client connections that are presenting it.
       tags:
-      - PreviewDeployedDevicesCertificate
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Certificates
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Certificate credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Certificate credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteDeployedDevicesCertificate
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Deployed Device Fleet Certificate
     post:
-      description: Update the given properties of a specific Certificate credential
-        in the Fleet, giving it a friendly name or assigning to a Device.
+      description: >-
+        Update the given properties of a specific Certificate credential in the
+        Fleet, giving it a friendly name or assigning to a Device.
       tags:
-      - PreviewDeployedDevicesCertificate
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Certificates
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Certificate credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^CY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Certificate credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^CY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.deployed_devices.fleet.certificate'
+                $ref: >-
+                  #/components/schemas/preview.deployed_devices.fleet.certificate
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateDeployedDevicesCertificate
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2423,47 +2577,56 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
+                  description: >-
+                    Provides a human readable descriptive text for this
                     Certificate credential, up to 256 characters long.
                 DeviceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^TH[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of an existing
-                    Device to become authenticated with this Certificate credential.
-  /DeployedDevices/Fleets/{FleetSid}/Certificates:
+                  pattern: '^TH[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of an existing Device
+                    to become authenticated with this Certificate credential.
+      summary: Update Deployed Device Fleet Certificate
+  '/DeployedDevices/Fleets/{FleetSid}/Certificates':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     post:
-      description: Enroll a new Certificate credential to the Fleet, optionally giving
-        it a friendly name and assigning to a Device.
+      description: >-
+        Enroll a new Certificate credential to the Fleet, optionally giving it a
+        friendly name and assigning to a Device.
       tags:
-      - PreviewDeployedDevicesCertificate
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Certificates
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.deployed_devices.fleet.certificate'
+                $ref: >-
+                  #/components/schemas/preview.deployed_devices.fleet.certificate
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateDeployedDevicesCertificate
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2473,61 +2636,70 @@ paths:
               properties:
                 CertificateData:
                   type: string
-                  description: Provides a URL encoded representation of the public
+                  description: >-
+                    Provides a URL encoded representation of the public
                     certificate in PEM format.
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
+                  description: >-
+                    Provides a human readable descriptive text for this
                     Certificate credential, up to 256 characters long.
                 DeviceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^TH[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of an existing
-                    Device to become authenticated with this Certificate credential.
+                  pattern: '^TH[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of an existing Device
+                    to become authenticated with this Certificate credential.
               required:
-              - CertificateData
+                - CertificateData
+      summary: Create Deployed Device Fleet Certificate
     get:
-      description: Retrieve a list of all Certificate credentials belonging to the
-        Fleet.
+      description: Retrieve a list of all Certificate credentials belonging to the Fleet.
       tags:
-      - PreviewDeployedDevicesCertificate
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Certificates
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: DeviceSid
-        in: query
-        description: Filters the resulting list of Certificates by a unique string
-          identifier of an authenticated Device.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: DeviceSid
+          in: query
+          description: >-
+            Filters the resulting list of Certificates by a unique string
+            identifier of an authenticated Device.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^TH[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2539,7 +2711,8 @@ paths:
                   certificates:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.deployed_devices.fleet.certificate'
+                      $ref: >-
+                        #/components/schemas/preview.deployed_devices.fleet.certificate
                   meta:
                     type: object
                     properties:
@@ -2565,39 +2738,44 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListDeployedDevicesCertificate
       x-maturity:
-      - Preview
-  /DeployedDevices/Fleets/{FleetSid}/Deployments/{Sid}:
+        - Preview
+      summary: Retrieve Deployed Device Fleet Certificates
+  '/DeployedDevices/Fleets/{FleetSid}/Deployments/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     get:
       description: Fetch information about a specific Deployment in the Fleet.
       tags:
-      - PreviewDeployedDevicesDeployment
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Deployment resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Deployment resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -2606,63 +2784,75 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.deployment'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchDeployedDevicesDeployment
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Deployed Device Fleet Deployment
     delete:
-      description: Delete a specific Deployment from the Fleet, leaving associated
-        devices effectively undeployed.
+      description: >-
+        Delete a specific Deployment from the Fleet, leaving associated devices
+        effectively undeployed.
       tags:
-      - PreviewDeployedDevicesDeployment
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Deployment resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Deployment resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteDeployedDevicesDeployment
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Deployed Device Fleet Deployment
     post:
-      description: Update the given properties of a specific Deployment credential
-        in the Fleet, giving it a friendly name or linking to a specific Twilio Sync
+      description: >-
+        Update the given properties of a specific Deployment credential in the
+        Fleet, giving it a friendly name or linking to a specific Twilio Sync
         service instance.
       tags:
-      - PreviewDeployedDevicesDeployment
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Deployment resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Deployment resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DL[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -2671,10 +2861,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.deployment'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateDeployedDevicesDeployment
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2684,36 +2874,43 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
+                  description: >-
+                    Provides a human readable descriptive text for this
                     Deployment, up to 64 characters long
                 SyncServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^IS[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of the Twilio
-                    Sync service instance that will be linked to and accessible by
+                  pattern: '^IS[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of the Twilio Sync
+                    service instance that will be linked to and accessible by
                     this Deployment.
-  /DeployedDevices/Fleets/{FleetSid}/Deployments:
+      summary: Update Deployed Device Fleet Deployment
+  '/DeployedDevices/Fleets/{FleetSid}/Deployments':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     post:
-      description: Create a new Deployment in the Fleet, optionally giving it a friendly
+      description: >-
+        Create a new Deployment in the Fleet, optionally giving it a friendly
         name and linking to a specific Twilio Sync service instance.
       tags:
-      - PreviewDeployedDevicesDeployment
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -2722,10 +2919,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.deployment'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateDeployedDevicesDeployment
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2735,46 +2932,53 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
+                  description: >-
+                    Provides a human readable descriptive text for this
                     Deployment, up to 256 characters long.
                 SyncServiceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^IS[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of the Twilio
-                    Sync service instance that will be linked to and accessible by
+                  pattern: '^IS[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of the Twilio Sync
+                    service instance that will be linked to and accessible by
                     this Deployment.
+      summary: Create Deployed Device Fleet Deployment
     get:
       description: Retrieve a list of all Deployments belonging to the Fleet.
       tags:
-      - PreviewDeployedDevicesDeployment
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2786,7 +2990,8 @@ paths:
                   deployments:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.deployed_devices.fleet.deployment'
+                      $ref: >-
+                        #/components/schemas/preview.deployed_devices.fleet.deployment
                   meta:
                     type: object
                     properties:
@@ -2812,36 +3017,41 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListDeployedDevicesDeployment
       x-maturity:
-      - Preview
-  /DeployedDevices/Fleets/{FleetSid}/Devices/{Sid}:
+        - Preview
+      summary: Retrieve Deployed Device Fleet Deployments
+  '/DeployedDevices/Fleets/{FleetSid}/Devices/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     get:
       description: Fetch information about a specific Device in the Fleet.
       tags:
-      - PreviewDeployedDevicesDevice
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Device resource.
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Device resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2850,56 +3060,68 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.device'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchDeployedDevicesDevice
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Deployed Device Fleet Device
     delete:
-      description: Delete a specific Device from the Fleet, also removing it from
+      description: >-
+        Delete a specific Device from the Fleet, also removing it from
         associated Deployments.
       tags:
-      - PreviewDeployedDevicesDevice
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Device resource.
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Device resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteDeployedDevicesDevice
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Deployed Device Fleet Device
     post:
-      description: Update the given properties of a specific Device in the Fleet,
-        giving it a friendly name, assigning to a Deployment, or a human identity.
+      description: >-
+        Update the given properties of a specific Device in the Fleet, giving it
+        a friendly name, assigning to a Deployment, or a human identity.
       tags:
-      - PreviewDeployedDevicesDevice
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Device resource.
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Device resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2908,10 +3130,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.device'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateDeployedDevicesDevice
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2921,43 +3143,51 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text to be assigned
-                    to this Device, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text to be assigned to
+                    this Device, up to 256 characters long.
                 Identity:
                   type: string
-                  description: Provides an arbitrary string identifier representing
-                    a human user to be associated with this Device, up to 256 characters
+                  description: >-
+                    Provides an arbitrary string identifier representing a human
+                    user to be associated with this Device, up to 256 characters
                     long.
                 DeploymentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^DL[0-9a-fA-F]{32}$
-                  description: Specifies the unique string identifier of the Deployment
+                  pattern: '^DL[0-9a-fA-F]{32}$'
+                  description: >-
+                    Specifies the unique string identifier of the Deployment
                     group that this Device is going to be associated with.
                 Enabled:
                   type: boolean
                   description: ''
-  /DeployedDevices/Fleets/{FleetSid}/Devices:
+      summary: Update Deployed Device Fleet Device
+  '/DeployedDevices/Fleets/{FleetSid}/Devices':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     post:
-      description: Create a new Device in the Fleet, optionally giving it a unique
-        name, friendly name, and assigning to a Deployment and/or human identity.
+      description: >-
+        Create a new Device in the Fleet, optionally giving it a unique name,
+        friendly name, and assigning to a Deployment and/or human identity.
       tags:
-      - PreviewDeployedDevicesDevice
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -2966,10 +3196,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.device'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateDeployedDevicesDevice
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2979,67 +3209,77 @@ paths:
               properties:
                 UniqueName:
                   type: string
-                  description: Provides a unique and addressable name to be assigned
-                    to this Device, to be used in addition to SID, up to 128 characters
-                    long.
+                  description: >-
+                    Provides a unique and addressable name to be assigned to
+                    this Device, to be used in addition to SID, up to 128
+                    characters long.
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text to be assigned
-                    to this Device, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text to be assigned to
+                    this Device, up to 256 characters long.
                 Identity:
                   type: string
-                  description: Provides an arbitrary string identifier representing
-                    a human user to be associated with this Device, up to 256 characters
+                  description: >-
+                    Provides an arbitrary string identifier representing a human
+                    user to be associated with this Device, up to 256 characters
                     long.
                 DeploymentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^DL[0-9a-fA-F]{32}$
-                  description: Specifies the unique string identifier of the Deployment
+                  pattern: '^DL[0-9a-fA-F]{32}$'
+                  description: >-
+                    Specifies the unique string identifier of the Deployment
                     group that this Device is going to be associated with.
                 Enabled:
                   type: boolean
                   description: ''
+      summary: Create Deployed Device Fleet Device
     get:
       description: Retrieve a list of all Devices belonging to the Fleet.
       tags:
-      - PreviewDeployedDevicesDevice
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: DeploymentSid
-        in: query
-        description: Filters the resulting list of Devices by a unique string identifier
-          of the Deployment they are associated with.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DL[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: DeploymentSid
+          in: query
+          description: >-
+            Filters the resulting list of Devices by a unique string identifier
+            of the Deployment they are associated with.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DL[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3051,7 +3291,8 @@ paths:
                   devices:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.deployed_devices.fleet.device'
+                      $ref: >-
+                        #/components/schemas/preview.deployed_devices.fleet.device
                   meta:
                     type: object
                     properties:
@@ -3077,13 +3318,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListDeployedDevicesDevice
       x-maturity:
-      - Preview
-  /DeployedDevices/Fleets/{Sid}:
+        - Preview
+      summary: Retrieve Deployed Device Fleet Devices
+  '/DeployedDevices/Fleets/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -3092,31 +3334,35 @@ paths:
         devices:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Devices
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Devices'
         deployments:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Deployments
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Deployments'
         certificates:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Certificates
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Certificates'
         keys:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Keys
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Keys'
     get:
       description: Fetch information about a specific Fleet in your account.
       tags:
-      - PreviewDeployedDevicesFleet
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Fleet resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Fleet resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -3125,43 +3371,54 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchDeployedDevicesFleet
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Deployed Device Fleet
     delete:
-      description: 'Delete a specific Fleet from your account, also destroys all nested
-        resources: Devices, Deployments, Certificates, Keys.'
+      description: >-
+        Delete a specific Fleet from your account, also destroys all nested
+        resources: Devices, Deployments, Certificates, Keys.
       tags:
-      - PreviewDeployedDevicesFleet
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Fleet resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Fleet resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteDeployedDevicesFleet
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Deployed Device Fleet
     post:
       description: Update the friendly name property of a specific Fleet in your account.
       tags:
-      - PreviewDeployedDevicesFleet
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Fleet resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Fleet resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -3170,10 +3427,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateDeployedDevicesFleet
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3183,18 +3440,21 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
-                    Fleet, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text for this Fleet,
+                    up to 256 characters long.
                 DefaultDeploymentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^DL[0-9a-fA-F]{32}$
-                  description: Provides a string identifier of a Deployment that is
-                    going to be used as a default one for this Fleet.
+                  pattern: '^DL[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides a string identifier of a Deployment that is going
+                    to be used as a default one for this Fleet.
+      summary: Update Deployed Device Fleet
   /DeployedDevices/Fleets:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -3203,24 +3463,26 @@ paths:
         devices:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Devices
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Devices'
         deployments:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Deployments
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Deployments'
         certificates:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Certificates
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Certificates'
         keys:
           mapping:
             fleet_sid: sid
-          resource_url: /DeployedDevices/Fleets/{fleet_sid}/Keys
+          resource_url: '/DeployedDevices/Fleets/{fleet_sid}/Keys'
     post:
-      description: Create a new Fleet for scoping of deployed devices within your
-        account.
+      description: Create a new Fleet for scoping of deployed devices within your account.
       tags:
-      - PreviewDeployedDevicesFleet
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       responses:
         '201':
           content:
@@ -3229,10 +3491,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateDeployedDevicesFleet
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3242,32 +3504,38 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
-                    Fleet, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text for this Fleet,
+                    up to 256 characters long.
+      summary: Create Deployed Device Fleet
     get:
       description: Retrieve a list of all Fleets belonging to your account.
       tags:
-      - PreviewDeployedDevicesFleet
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3305,39 +3573,45 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListDeployedDevicesFleet
       x-maturity:
-      - Preview
-  /DeployedDevices/Fleets/{FleetSid}/Keys/{Sid}:
+        - Preview
+      summary: Retrieve Deployed Device Fleets
+  '/DeployedDevices/Fleets/{FleetSid}/Keys/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     get:
       description: Fetch information about a specific Key credential in the Fleet.
       tags:
-      - PreviewDeployedDevicesKey
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Keys
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Key credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^KY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Key credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^KY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -3346,62 +3620,76 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.key'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchDeployedDevicesKey
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Deployed Device Fleet Key
     delete:
-      description: Delete a specific Key credential from the Fleet, effectively disallowing
+      description: >-
+        Delete a specific Key credential from the Fleet, effectively disallowing
         any inbound client connections that are presenting it.
       tags:
-      - PreviewDeployedDevicesKey
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Keys
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Key credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^KY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Key credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^KY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteDeployedDevicesKey
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Deployed Device Fleet Key
     post:
-      description: Update the given properties of a specific Key credential in the
-        Fleet, giving it a friendly name or assigning to a Device.
+      description: >-
+        Update the given properties of a specific Key credential in the Fleet,
+        giving it a friendly name or assigning to a Device.
       tags:
-      - PreviewDeployedDevicesKey
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Keys
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: Provides a 34 character string that uniquely identifies the requested
-          Key credential resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^KY[0-9a-fA-F]{32}$
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: >-
+            Provides a 34 character string that uniquely identifies the
+            requested Key credential resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^KY[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -3410,10 +3698,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.key'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateDeployedDevicesKey
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3423,35 +3711,43 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
-                    Key credential, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text for this Key
+                    credential, up to 256 characters long.
                 DeviceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^TH[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of an existing
-                    Device to become authenticated with this Key credential.
-  /DeployedDevices/Fleets/{FleetSid}/Keys:
+                  pattern: '^TH[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of an existing Device
+                    to become authenticated with this Key credential.
+      summary: Update Deployed Device Fleet Key
+  '/DeployedDevices/Fleets/{FleetSid}/Keys':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Fleets/{Sid}
+      parent: '/Fleets/{Sid}'
     post:
-      description: Create a new Key credential in the Fleet, optionally giving it
-        a friendly name and assigning to a Device.
+      description: >-
+        Create a new Key credential in the Fleet, optionally giving it a
+        friendly name and assigning to a Device.
       tags:
-      - PreviewDeployedDevicesKey
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Keys
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -3460,10 +3756,10 @@ paths:
                 $ref: '#/components/schemas/preview.deployed_devices.fleet.key'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateDeployedDevicesKey
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3473,54 +3769,63 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: Provides a human readable descriptive text for this
-                    Key credential, up to 256 characters long.
+                  description: >-
+                    Provides a human readable descriptive text for this Key
+                    credential, up to 256 characters long.
                 DeviceSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^TH[0-9a-fA-F]{32}$
-                  description: Provides the unique string identifier of an existing
-                    Device to become authenticated with this Key credential.
+                  pattern: '^TH[0-9a-fA-F]{32}$'
+                  description: >-
+                    Provides the unique string identifier of an existing Device
+                    to become authenticated with this Key credential.
+      summary: Create Deployed Device Fleet Key
     get:
       description: Retrieve a list of all Keys credentials belonging to the Fleet.
       tags:
-      - PreviewDeployedDevicesKey
+        - Previews
+        - Deployed
+        - Devices
+        - Fleets
+        - Keys
       parameters:
-      - name: FleetSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: DeviceSid
-        in: query
-        description: Filters the resulting list of Keys by a unique string identifier
-          of an authenticated Device.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^TH[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: FleetSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: DeviceSid
+          in: query
+          description: >-
+            Filters the resulting list of Keys by a unique string identifier of
+            an authenticated Device.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^TH[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3558,13 +3863,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListDeployedDevicesKey
       x-maturity:
-      - Preview
-  /HostedNumbers/AuthorizationDocuments/{Sid}:
+        - Preview
+      summary: Retrieve Deployed Device Fleet Keys
+  '/HostedNumbers/AuthorizationDocuments/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -3573,59 +3879,77 @@ paths:
         dependent_hosted_number_orders:
           mapping:
             signing_document_sid: sid
-          resource_url: /HostedNumbers/AuthorizationDocuments/{signing_document_sid}/DependentHostedNumberOrders
+          resource_url: >-
+            /HostedNumbers/AuthorizationDocuments/{signing_document_sid}/DependentHostedNumberOrders
     get:
       description: Fetch a specific AuthorizationDocument.
       tags:
-      - PreviewHostedNumbersAuthorizationDocument
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Authorization
+        - Documents
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this AuthorizationDocument.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this
+            AuthorizationDocument.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^PX[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.authorization_document'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.authorization_document
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchHostedNumbersAuthorizationDocument
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Hosted Number Authorization Document
     post:
       description: Updates a specific AuthorizationDocument.
       tags:
-      - PreviewHostedNumbersAuthorizationDocument
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Authorization
+        - Documents
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this AuthorizationDocument.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this
+            AuthorizationDocument.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^PX[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.authorization_document'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.authorization_document
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateHostedNumbersAuthorizationDocument
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3637,44 +3961,53 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: A list of HostedNumberOrder sids that this AuthorizationDocument
-                    will authorize for hosting phone number capabilities on Twilio's
-                    platform.
+                  description: >-
+                    A list of HostedNumberOrder sids that this
+                    AuthorizationDocument will authorize for hosting phone
+                    number capabilities on Twilio's platform.
                 AddressSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^AD[0-9a-fA-F]{32}$
-                  description: A 34 character string that uniquely identifies the
-                    Address resource that is associated with this AuthorizationDocument.
+                  pattern: '^AD[0-9a-fA-F]{32}$'
+                  description: >-
+                    A 34 character string that uniquely identifies the Address
+                    resource that is associated with this AuthorizationDocument.
                 Email:
                   type: string
-                  description: Email that this AuthorizationDocument will be sent
-                    to for signing.
+                  description: >-
+                    Email that this AuthorizationDocument will be sent to for
+                    signing.
                 CcEmails:
                   type: array
                   items:
                     type: string
-                  description: Email recipients who will be informed when an Authorization
+                  description: >-
+                    Email recipients who will be informed when an Authorization
                     Document has been sent and signed
                 Status:
                   type: string
                   $ref: '#/components/schemas/authorization_document_enum_status'
-                  description: 'Status of an instance resource. It can hold one of
-                    the values: 1. opened 2. signing, 3. signed LOA, 4. canceled,
-                    5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
-                    for more information on each of these statuses.'
+                  description: >-
+                    Status of an instance resource. It can hold one of the
+                    values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5.
+                    failed. See the section entitled [Status
+                    Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
+                    for more information on each of these statuses.
                 ContactTitle:
                   type: string
-                  description: The title of the person authorized to sign the Authorization
+                  description: >-
+                    The title of the person authorized to sign the Authorization
                     Document for this phone number.
                 ContactPhoneNumber:
                   type: string
-                  description: The contact phone number of the person authorized to
-                    sign the Authorization Document.
+                  description: >-
+                    The contact phone number of the person authorized to sign
+                    the Authorization Document.
+      summary: Update Hosted Number Authorization Document
   /HostedNumbers/AuthorizationDocuments:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -3683,50 +4016,60 @@ paths:
         dependent_hosted_number_orders:
           mapping:
             signing_document_sid: sid
-          resource_url: /HostedNumbers/AuthorizationDocuments/{signing_document_sid}/DependentHostedNumberOrders
+          resource_url: >-
+            /HostedNumbers/AuthorizationDocuments/{signing_document_sid}/DependentHostedNumberOrders
     get:
-      description: Retrieve a list of AuthorizationDocuments belonging to the account
+      description: >-
+        Retrieve a list of AuthorizationDocuments belonging to the account
         initiating the request.
       tags:
-      - PreviewHostedNumbersAuthorizationDocument
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Authorization
+        - Documents
       parameters:
-      - name: Email
-        in: query
-        description: Email that this AuthorizationDocument will be sent to for signing.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: Status
-        in: query
-        description: 'Status of an instance resource. It can hold one of the values:
-          1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section
-          entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
-          for more information on each of these statuses.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/authorization_document_enum_status'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Email
+          in: query
+          description: Email that this AuthorizationDocument will be sent to for signing.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: Status
+          in: query
+          description: >-
+            Status of an instance resource. It can hold one of the values: 1.
+            opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the
+            section entitled [Status
+            Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
+            for more information on each of these statuses.
+          schema:
+            type: string
+            $ref: '#/components/schemas/authorization_document_enum_status'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3738,7 +4081,8 @@ paths:
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.hosted_numbers.authorization_document'
+                      $ref: >-
+                        #/components/schemas/preview.hosted_numbers.authorization_document
                   meta:
                     type: object
                     properties:
@@ -3764,27 +4108,35 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListHostedNumbersAuthorizationDocument
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Hosted Number Authorization Documents
     post:
-      description: Create an AuthorizationDocument for authorizing the hosting of
-        phone number capabilities on Twilio's platform.
+      description: >-
+        Create an AuthorizationDocument for authorizing the hosting of phone
+        number capabilities on Twilio's platform.
       tags:
-      - PreviewHostedNumbersAuthorizationDocument
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Authorization
+        - Documents
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.authorization_document'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.authorization_document
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateHostedNumbersAuthorizationDocument
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3796,127 +4148,147 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: A list of HostedNumberOrder sids that this AuthorizationDocument
-                    will authorize for hosting phone number capabilities on Twilio's
-                    platform.
+                  description: >-
+                    A list of HostedNumberOrder sids that this
+                    AuthorizationDocument will authorize for hosting phone
+                    number capabilities on Twilio's platform.
                 AddressSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^AD[0-9a-fA-F]{32}$
-                  description: A 34 character string that uniquely identifies the
-                    Address resource that is associated with this AuthorizationDocument.
+                  pattern: '^AD[0-9a-fA-F]{32}$'
+                  description: >-
+                    A 34 character string that uniquely identifies the Address
+                    resource that is associated with this AuthorizationDocument.
                 Email:
                   type: string
-                  description: Email that this AuthorizationDocument will be sent
-                    to for signing.
+                  description: >-
+                    Email that this AuthorizationDocument will be sent to for
+                    signing.
                 ContactTitle:
                   type: string
-                  description: The title of the person authorized to sign the Authorization
+                  description: >-
+                    The title of the person authorized to sign the Authorization
                     Document for this phone number.
                 ContactPhoneNumber:
                   type: string
-                  description: The contact phone number of the person authorized to
-                    sign the Authorization Document.
+                  description: >-
+                    The contact phone number of the person authorized to sign
+                    the Authorization Document.
                 CcEmails:
                   type: array
                   items:
                     type: string
-                  description: Email recipients who will be informed when an Authorization
+                  description: >-
+                    Email recipients who will be informed when an Authorization
                     Document has been sent and signed.
               required:
-              - HostedNumberOrderSids
-              - AddressSid
-              - Email
-              - ContactTitle
-              - ContactPhoneNumber
-  /HostedNumbers/AuthorizationDocuments/{SigningDocumentSid}/DependentHostedNumberOrders:
+                - HostedNumberOrderSids
+                - AddressSid
+                - Email
+                - ContactTitle
+                - ContactPhoneNumber
+      summary: Create Hosted Number Authorization Document
+  '/HostedNumbers/AuthorizationDocuments/{SigningDocumentSid}/DependentHostedNumberOrders':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /AuthorizationDocuments/{Sid}
+      parent: '/AuthorizationDocuments/{Sid}'
     get:
-      description: Retrieve a list of dependent HostedNumberOrders belonging to the
+      description: >-
+        Retrieve a list of dependent HostedNumberOrders belonging to the
         AuthorizationDocument.
       tags:
-      - PreviewHostedNumbersDependentHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Authorization
+        - Documents
+        - Dependents
       parameters:
-      - name: SigningDocumentSid
-        in: path
-        description: A 34 character string that uniquely identifies the LOA document
-          associated with this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^PX[0-9a-fA-F]{32}$
-        required: true
-      - name: Status
-        in: query
-        description: 'Status of an instance resource. It can hold one of the values:
-          1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section
-          entitled [Status Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
-          for more information on each of these statuses.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/dependent_hosted_number_order_enum_status'
-      - name: PhoneNumber
-        in: query
-        description: An E164 formatted phone number hosted by this HostedNumberOrder.
-        schema:
-          type: string
-          format: phone-number
-      - name: IncomingPhoneNumberSid
-        in: query
-        description: A 34 character string that uniquely identifies the IncomingPhoneNumber
-          resource created by this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^PN[0-9a-fA-F]{32}$
-      - name: FriendlyName
-        in: query
-        description: A human readable description of this resource, up to 64 characters.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: UniqueName
-        in: query
-        description: Provides a unique and addressable name to be assigned to this
-          HostedNumberOrder, assigned by the developer, to be optionally used in addition
-          to SID.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: SigningDocumentSid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies the LOA document
+            associated with this HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^PX[0-9a-fA-F]{32}$'
+          required: true
+        - name: Status
+          in: query
+          description: >-
+            Status of an instance resource. It can hold one of the values: 1.
+            opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the
+            section entitled [Status
+            Values](https://www.twilio.com/docs/phone-numbers/hosted-numbers/hosted-numbers-api/authorization-document-resource#status-values)
+            for more information on each of these statuses.
+          schema:
+            type: string
+            $ref: '#/components/schemas/dependent_hosted_number_order_enum_status'
+        - name: PhoneNumber
+          in: query
+          description: An E164 formatted phone number hosted by this HostedNumberOrder.
+          schema:
+            type: string
+            format: phone-number
+        - name: IncomingPhoneNumberSid
+          in: query
+          description: >-
+            A 34 character string that uniquely identifies the
+            IncomingPhoneNumber resource created by this HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^PN[0-9a-fA-F]{32}$'
+        - name: FriendlyName
+          in: query
+          description: 'A human readable description of this resource, up to 64 characters.'
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: UniqueName
+          in: query
+          description: >-
+            Provides a unique and addressable name to be assigned to this
+            HostedNumberOrder, assigned by the developer, to be optionally used
+            in addition to SID.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3928,7 +4300,8 @@ paths:
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.hosted_numbers.authorization_document.dependent_hosted_number_order'
+                      $ref: >-
+                        #/components/schemas/preview.hosted_numbers.authorization_document.dependent_hosted_number_order
                   meta:
                     type: object
                     properties:
@@ -3954,13 +4327,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListHostedNumbersDependentHostedNumberOrder
       x-maturity:
-      - Preview
-  /HostedNumbers/HostedNumberOrders/{Sid}:
+        - Preview
+      summary: Retrieve Hosted Number Authorization Document Orders
+  '/HostedNumbers/HostedNumberOrders/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -3968,78 +4342,98 @@ paths:
     get:
       description: Fetch a specific HostedNumberOrder.
       tags:
-      - PreviewHostedNumbersHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this
+            HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.hosted_number_order'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.hosted_number_order
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchHostedNumbersHostedNumberOrder
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Hosted Number Order
     delete:
-      description: Cancel the HostedNumberOrder (only available when the status is
-        in `received`).
+      description: >-
+        Cancel the HostedNumberOrder (only available when the status is in
+        `received`).
       tags:
-      - PreviewHostedNumbersHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this
+            HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteHostedNumbersHostedNumberOrder
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Hosted Number Order
     post:
       description: Updates a specific HostedNumberOrder.
       tags:
-      - PreviewHostedNumbersHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^HR[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: >-
+            A 34 character string that uniquely identifies this
+            HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^HR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.hosted_number_order'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.hosted_number_order
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateHostedNumbersHostedNumberOrder
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4049,129 +4443,152 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A 64 character string that is a human readable text
-                    that describes this resource.
+                  description: >-
+                    A 64 character string that is a human readable text that
+                    describes this resource.
                 UniqueName:
                   type: string
-                  description: Provides a unique and addressable name to be assigned
-                    to this HostedNumberOrder, assigned by the developer, to be optionally
-                    used in addition to SID.
+                  description: >-
+                    Provides a unique and addressable name to be assigned to
+                    this HostedNumberOrder, assigned by the developer, to be
+                    optionally used in addition to SID.
                 Email:
                   type: string
-                  description: Email of the owner of this phone number that is being
+                  description: >-
+                    Email of the owner of this phone number that is being
                     hosted.
                 CcEmails:
                   type: array
                   items:
                     type: string
-                  description: Optional. A list of emails that LOA document for this
+                  description: >-
+                    Optional. A list of emails that LOA document for this
                     HostedNumberOrder will be carbon copied to.
                 Status:
                   type: string
                   $ref: '#/components/schemas/hosted_number_order_enum_status'
-                  description: User can only post to `pending-verification` status
-                    to transition the HostedNumberOrder to initiate a verification
-                    call or verification of ownership with a copy of a phone bill.
+                  description: >-
+                    User can only post to `pending-verification` status to
+                    transition the HostedNumberOrder to initiate a verification
+                    call or verification of ownership with a copy of a phone
+                    bill.
                 VerificationCode:
                   type: string
-                  description: A verification code that is given to the user via a
-                    phone call to the phone number that is being hosted.
+                  description: >-
+                    A verification code that is given to the user via a phone
+                    call to the phone number that is being hosted.
                 VerificationType:
                   type: string
-                  $ref: '#/components/schemas/hosted_number_order_enum_verification_type'
-                  description: Optional. The method used for verifying ownership of
-                    the number to be hosted. One of phone-call (default) or phone-bill.
+                  $ref: >-
+                    #/components/schemas/hosted_number_order_enum_verification_type
+                  description: >-
+                    Optional. The method used for verifying ownership of the
+                    number to be hosted. One of phone-call (default) or
+                    phone-bill.
                 VerificationDocumentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RI[0-9a-fA-F]{32}$
-                  description: Optional. The unique sid identifier of the Identity
-                    Document that represents the document for verifying ownership
-                    of the number to be hosted. Required when VerificationType is
+                  pattern: '^RI[0-9a-fA-F]{32}$'
+                  description: >-
+                    Optional. The unique sid identifier of the Identity Document
+                    that represents the document for verifying ownership of the
+                    number to be hosted. Required when VerificationType is
                     phone-bill.
                 Extension:
                   type: string
                   description: Digits to dial after connecting the verification call.
                 CallDelay:
                   type: integer
-                  description: The number of seconds, between 0 and 60, to delay before
+                  description: >-
+                    The number of seconds, between 0 and 60, to delay before
                     initiating the verification call. Defaults to 0.
+      summary: Update Hosted Number Order
   /HostedNumbers/HostedNumberOrders:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
     get:
-      description: Retrieve a list of HostedNumberOrders belonging to the account
+      description: >-
+        Retrieve a list of HostedNumberOrders belonging to the account
         initiating the request.
       tags:
-      - PreviewHostedNumbersHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Orders
       parameters:
-      - name: Status
-        in: query
-        description: The Status of this HostedNumberOrder. One of `received`, `pending-verification`,
-          `verified`, `pending-loa`, `carrier-processing`, `testing`, `completed`,
-          `failed`, or `action-required`.
-        schema:
-          type: string
-          $ref: '#/components/schemas/hosted_number_order_enum_status'
-      - name: PhoneNumber
-        in: query
-        description: An E164 formatted phone number hosted by this HostedNumberOrder.
-        schema:
-          type: string
-          format: phone-number
-      - name: IncomingPhoneNumberSid
-        in: query
-        description: A 34 character string that uniquely identifies the IncomingPhoneNumber
-          resource created by this HostedNumberOrder.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^PN[0-9a-fA-F]{32}$
-      - name: FriendlyName
-        in: query
-        description: A human readable description of this resource, up to 64 characters.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: UniqueName
-        in: query
-        description: Provides a unique and addressable name to be assigned to this
-          HostedNumberOrder, assigned by the developer, to be optionally used in addition
-          to SID.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Status
+          in: query
+          description: >-
+            The Status of this HostedNumberOrder. One of `received`,
+            `pending-verification`, `verified`, `pending-loa`,
+            `carrier-processing`, `testing`, `completed`, `failed`, or
+            `action-required`.
+          schema:
+            type: string
+            $ref: '#/components/schemas/hosted_number_order_enum_status'
+        - name: PhoneNumber
+          in: query
+          description: An E164 formatted phone number hosted by this HostedNumberOrder.
+          schema:
+            type: string
+            format: phone-number
+        - name: IncomingPhoneNumberSid
+          in: query
+          description: >-
+            A 34 character string that uniquely identifies the
+            IncomingPhoneNumber resource created by this HostedNumberOrder.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^PN[0-9a-fA-F]{32}$'
+        - name: FriendlyName
+          in: query
+          description: 'A human readable description of this resource, up to 64 characters.'
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: UniqueName
+          in: query
+          description: >-
+            Provides a unique and addressable name to be assigned to this
+            HostedNumberOrder, assigned by the developer, to be optionally used
+            in addition to SID.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4183,7 +4600,8 @@ paths:
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.hosted_numbers.hosted_number_order'
+                      $ref: >-
+                        #/components/schemas/preview.hosted_numbers.hosted_number_order
                   meta:
                     type: object
                     properties:
@@ -4209,26 +4627,32 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListHostedNumbersHostedNumberOrder
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Hosted Number Orders
     post:
       description: Host a phone number's capability on Twilio's platform.
       tags:
-      - PreviewHostedNumbersHostedNumberOrder
+        - Preview
+        - Hosted Numbers
+        - Hosted
+        - Numbers
+        - Orders
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.hosted_numbers.hosted_number_order'
+                $ref: >-
+                  #/components/schemas/preview.hosted_numbers.hosted_number_order
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateHostedNumbersHostedNumberOrder
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4239,131 +4663,151 @@ paths:
                 PhoneNumber:
                   type: string
                   format: phone-number
-                  description: The number to host in [+E.164](https://en.wikipedia.org/wiki/E.164)
-                    format
+                  description: >-
+                    The number to host in
+                    [+E.164](https://en.wikipedia.org/wiki/E.164) format
                 SmsCapability:
                   type: boolean
-                  description: Used to specify that the SMS capability will be hosted
-                    on Twilio's platform.
+                  description: >-
+                    Used to specify that the SMS capability will be hosted on
+                    Twilio's platform.
                 AccountSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^AC[0-9a-fA-F]{32}$
-                  description: This defaults to the AccountSid of the authorization
-                    the user is using. This can be provided to specify a subaccount
+                  pattern: '^AC[0-9a-fA-F]{32}$'
+                  description: >-
+                    This defaults to the AccountSid of the authorization the
+                    user is using. This can be provided to specify a subaccount
                     to add the HostedNumberOrder to.
                 FriendlyName:
                   type: string
-                  description: A 64 character string that is a human readable text
-                    that describes this resource.
+                  description: >-
+                    A 64 character string that is a human readable text that
+                    describes this resource.
                 UniqueName:
                   type: string
-                  description: Optional. Provides a unique and addressable name to
-                    be assigned to this HostedNumberOrder, assigned by the developer,
-                    to be optionally used in addition to SID.
+                  description: >-
+                    Optional. Provides a unique and addressable name to be
+                    assigned to this HostedNumberOrder, assigned by the
+                    developer, to be optionally used in addition to SID.
                 CcEmails:
                   type: array
                   items:
                     type: string
-                  description: Optional. A list of emails that the LOA document for
-                    this HostedNumberOrder will be carbon copied to.
+                  description: >-
+                    Optional. A list of emails that the LOA document for this
+                    HostedNumberOrder will be carbon copied to.
                 SmsUrl:
                   type: string
                   format: uri
-                  description: The URL that Twilio should request when somebody sends
-                    an SMS to the phone number. This will be copied onto the IncomingPhoneNumber
-                    resource.
+                  description: >-
+                    The URL that Twilio should request when somebody sends an
+                    SMS to the phone number. This will be copied onto the
+                    IncomingPhoneNumber resource.
                 SmsMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: The HTTP method that should be used to request the
-                    SmsUrl. Must be either `GET` or `POST`.  This will be copied onto
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method that should be used to request the SmsUrl.
+                    Must be either `GET` or `POST`.  This will be copied onto
                     the IncomingPhoneNumber resource.
                 SmsFallbackUrl:
                   type: string
                   format: uri
-                  description: A URL that Twilio will request if an error occurs requesting
-                    or executing the TwiML defined by SmsUrl. This will be copied
-                    onto the IncomingPhoneNumber resource.
+                  description: >-
+                    A URL that Twilio will request if an error occurs requesting
+                    or executing the TwiML defined by SmsUrl. This will be
+                    copied onto the IncomingPhoneNumber resource.
                 SmsFallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: The HTTP method that should be used to request the
-                    SmsFallbackUrl. Must be either `GET` or `POST`. This will be copied
-                    onto the IncomingPhoneNumber resource.
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method that should be used to request the
+                    SmsFallbackUrl. Must be either `GET` or `POST`. This will be
+                    copied onto the IncomingPhoneNumber resource.
                 StatusCallbackUrl:
                   type: string
                   format: uri
-                  description: Optional. The Status Callback URL attached to the IncomingPhoneNumber
-                    resource.
+                  description: >-
+                    Optional. The Status Callback URL attached to the
+                    IncomingPhoneNumber resource.
                 StatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: Optional. The Status Callback Method attached to the
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    Optional. The Status Callback Method attached to the
                     IncomingPhoneNumber resource.
                 SmsApplicationSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^AP[0-9a-fA-F]{32}$
-                  description: Optional. The 34 character sid of the application Twilio
-                    should use to handle SMS messages sent to this number. If a `SmsApplicationSid`
-                    is present, Twilio will ignore all of the SMS urls above and use
-                    those set on the application.
+                  pattern: '^AP[0-9a-fA-F]{32}$'
+                  description: >-
+                    Optional. The 34 character sid of the application Twilio
+                    should use to handle SMS messages sent to this number. If a
+                    `SmsApplicationSid` is present, Twilio will ignore all of
+                    the SMS urls above and use those set on the application.
                 AddressSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^AD[0-9a-fA-F]{32}$
-                  description: Optional. A 34 character string that uniquely identifies
-                    the Address resource that represents the address of the owner
-                    of this phone number.
+                  pattern: '^AD[0-9a-fA-F]{32}$'
+                  description: >-
+                    Optional. A 34 character string that uniquely identifies the
+                    Address resource that represents the address of the owner of
+                    this phone number.
                 Email:
                   type: string
-                  description: Optional. Email of the owner of this phone number that
-                    is being hosted.
+                  description: >-
+                    Optional. Email of the owner of this phone number that is
+                    being hosted.
                 VerificationType:
                   type: string
-                  $ref: '#/components/schemas/hosted_number_order_enum_verification_type'
-                  description: Optional. The method used for verifying ownership of
-                    the number to be hosted. One of phone-call (default) or phone-bill.
+                  $ref: >-
+                    #/components/schemas/hosted_number_order_enum_verification_type
+                  description: >-
+                    Optional. The method used for verifying ownership of the
+                    number to be hosted. One of phone-call (default) or
+                    phone-bill.
                 VerificationDocumentSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^RI[0-9a-fA-F]{32}$
-                  description: Optional. The unique sid identifier of the Identity
-                    Document that represents the document for verifying ownership
-                    of the number to be hosted. Required when VerificationType is
+                  pattern: '^RI[0-9a-fA-F]{32}$'
+                  description: >-
+                    Optional. The unique sid identifier of the Identity Document
+                    that represents the document for verifying ownership of the
+                    number to be hosted. Required when VerificationType is
                     phone-bill.
               required:
-              - PhoneNumber
-              - SmsCapability
-  /marketplace/AvailableAddOns/{Sid}:
+                - PhoneNumber
+                - SmsCapability
+      summary: Create Hosted Number Order
+  '/marketplace/AvailableAddOns/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -4372,21 +4816,24 @@ paths:
         extensions:
           mapping:
             available_add_on_sid: sid
-          resource_url: /marketplace/AvailableAddOns/{available_add_on_sid}/Extensions
+          resource_url: '/marketplace/AvailableAddOns/{available_add_on_sid}/Extensions'
     get:
       description: Fetch an instance of an Add-on currently available to be installed.
       tags:
-      - PreviewMarketplaceAvailableAddOn
+        - Previews
+        - Marketplaces
+        - Available
+        - Add-Ons
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the AvailableAddOn resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XB[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the AvailableAddOn resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XB[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4395,13 +4842,14 @@ paths:
                 $ref: '#/components/schemas/preview.marketplace.available_add_on'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchMarketplaceAvailableAddOn
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Marketplace Available Add-On
   /marketplace/AvailableAddOns:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -4410,31 +4858,35 @@ paths:
         extensions:
           mapping:
             available_add_on_sid: sid
-          resource_url: /marketplace/AvailableAddOns/{available_add_on_sid}/Extensions
+          resource_url: '/marketplace/AvailableAddOns/{available_add_on_sid}/Extensions'
     get:
       description: Retrieve a list of Add-ons currently available to be installed.
       tags:
-      - PreviewMarketplaceAvailableAddOn
+        - Previews
+        - Marketplaces
+        - Available
+        - Add-Ons
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4446,7 +4898,8 @@ paths:
                   available_add_ons:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.marketplace.available_add_on'
+                      $ref: >-
+                        #/components/schemas/preview.marketplace.available_add_on
                   meta:
                     type: object
                     properties:
@@ -4472,98 +4925,108 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListMarketplaceAvailableAddOn
       x-maturity:
-      - Preview
-  /marketplace/AvailableAddOns/{AvailableAddOnSid}/Extensions/{Sid}:
+        - Preview
+      summary: Retrieve Marketplace Available Add-Ons
+  '/marketplace/AvailableAddOns/{AvailableAddOnSid}/Extensions/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /AvailableAddOns/{Sid}
+      parent: '/AvailableAddOns/{Sid}'
       className: available_add_on_extension
     get:
       description: Fetch an instance of an Extension for the Available Add-on.
       tags:
-      - PreviewMarketplaceAvailableAddOnExtension
+        - Previews
+        - Marketplaces
+        - Available
+        - Add-Ons
+        - Extensions
       parameters:
-      - name: AvailableAddOnSid
-        in: path
-        description: The SID of the AvailableAddOn resource with the extension to
-          fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XB[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the AvailableAddOn Extension resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XF[0-9a-fA-F]{32}$
-        required: true
+        - name: AvailableAddOnSid
+          in: path
+          description: The SID of the AvailableAddOn resource with the extension to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XB[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the AvailableAddOn Extension resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.marketplace.available_add_on.available_add_on_extension'
+                $ref: >-
+                  #/components/schemas/preview.marketplace.available_add_on.available_add_on_extension
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchMarketplaceAvailableAddOnExtension
       x-maturity:
-      - Preview
-  /marketplace/AvailableAddOns/{AvailableAddOnSid}/Extensions:
+        - Preview
+      summary: Retrieve Marketplace Available Add-On Extension
+  '/marketplace/AvailableAddOns/{AvailableAddOnSid}/Extensions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /AvailableAddOns/{Sid}
+      parent: '/AvailableAddOns/{Sid}'
       className: available_add_on_extension
     get:
       description: Retrieve a list of Extensions for the Available Add-on.
       tags:
-      - PreviewMarketplaceAvailableAddOnExtension
+        - Previews
+        - Marketplaces
+        - Available
+        - Add-Ons
+        - Extensions
       parameters:
-      - name: AvailableAddOnSid
-        in: path
-        description: The SID of the AvailableAddOn resource with the extensions to
-          read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XB[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AvailableAddOnSid
+          in: path
+          description: The SID of the AvailableAddOn resource with the extensions to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XB[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4575,7 +5038,8 @@ paths:
                   extensions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.marketplace.available_add_on.available_add_on_extension'
+                      $ref: >-
+                        #/components/schemas/preview.marketplace.available_add_on.available_add_on_extension
                   meta:
                     type: object
                     properties:
@@ -4601,13 +5065,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListMarketplaceAvailableAddOnExtension
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Marketplace Available Add-On Extensions
   /marketplace/InstalledAddOns:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -4616,15 +5081,18 @@ paths:
         extensions:
           mapping:
             installed_add_on_sid: sid
-          resource_url: /marketplace/InstalledAddOns/{installed_add_on_sid}/Extensions
+          resource_url: '/marketplace/InstalledAddOns/{installed_add_on_sid}/Extensions'
         usage:
           mapping:
             installed_add_on_sid: sid
-          resource_url: /marketplace/InstalledAddOns/{installed_add_on_sid}/Usage
+          resource_url: '/marketplace/InstalledAddOns/{installed_add_on_sid}/Usage'
     post:
       description: Install an Add-on for the Account specified.
       tags:
-      - PreviewMarketplaceInstalledAddOn
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
       responses:
         '201':
           content:
@@ -4633,10 +5101,10 @@ paths:
                 $ref: '#/components/schemas/preview.marketplace.installed_add_on'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateMarketplaceInstalledAddOn
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4648,45 +5116,52 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^XB[0-9a-fA-F]{32}$
+                  pattern: '^XB[0-9a-fA-F]{32}$'
                   description: The SID of the AvaliableAddOn to install.
                 AcceptTermsOfService:
                   type: boolean
                   description: Whether the Terms of Service were accepted.
                 Configuration:
-                  description: The JSON object that represents the configuration of
-                    the new Add-on being installed.
+                  description: >-
+                    The JSON object that represents the configuration of the new
+                    Add-on being installed.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. This value must be unique within the Account.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. This value must be unique within the Account.
               required:
-              - AvailableAddOnSid
-              - AcceptTermsOfService
+                - AvailableAddOnSid
+                - AcceptTermsOfService
+      summary: Create Marketplace Installed Add-On
     get:
       description: Retrieve a list of Add-ons currently installed on this Account.
       tags:
-      - PreviewMarketplaceInstalledAddOn
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4698,7 +5173,8 @@ paths:
                   installed_add_ons:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.marketplace.installed_add_on'
+                      $ref: >-
+                        #/components/schemas/preview.marketplace.installed_add_on
                   meta:
                     type: object
                     properties:
@@ -4724,13 +5200,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListMarketplaceInstalledAddOn
       x-maturity:
-      - Preview
-  /marketplace/InstalledAddOns/{Sid}:
+        - Preview
+      summary: Retrieve Marketplace Installed Add-Ons
+  '/marketplace/InstalledAddOns/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -4739,47 +5216,54 @@ paths:
         extensions:
           mapping:
             installed_add_on_sid: sid
-          resource_url: /marketplace/InstalledAddOns/{installed_add_on_sid}/Extensions
+          resource_url: '/marketplace/InstalledAddOns/{installed_add_on_sid}/Extensions'
         usage:
           mapping:
             installed_add_on_sid: sid
-          resource_url: /marketplace/InstalledAddOns/{installed_add_on_sid}/Usage
+          resource_url: '/marketplace/InstalledAddOns/{installed_add_on_sid}/Usage'
     delete:
       description: Remove an Add-on installation from your account
       tags:
-      - PreviewMarketplaceInstalledAddOn
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the InstalledAddOn resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the InstalledAddOn resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteMarketplaceInstalledAddOn
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Marketplace Installed Add-On
     get:
       description: Fetch an instance of an Add-on currently installed on this Account.
       tags:
-      - PreviewMarketplaceInstalledAddOn
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the InstalledAddOn resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the InstalledAddOn resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4788,24 +5272,28 @@ paths:
                 $ref: '#/components/schemas/preview.marketplace.installed_add_on'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchMarketplaceInstalledAddOn
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Marketplace Installed Add-On
     post:
       description: Update an Add-on installation for the Account specified.
       tags:
-      - PreviewMarketplaceInstalledAddOn
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the InstalledAddOn resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the InstalledAddOn resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4814,10 +5302,10 @@ paths:
                 $ref: '#/components/schemas/preview.marketplace.installed_add_on'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateMarketplaceInstalledAddOn
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4826,94 +5314,106 @@ paths:
               title: UpdateMarketplaceInstalledAddOnRequest
               properties:
                 Configuration:
-                  description: Valid JSON object that conform to the configuration
-                    schema exposed by the associated AvailableAddOn resource. This
-                    is only required by Add-ons that need to be configured
+                  description: >-
+                    Valid JSON object that conform to the configuration schema
+                    exposed by the associated AvailableAddOn resource. This is
+                    only required by Add-ons that need to be configured
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the resource. This value must be unique within the Account.
-  /marketplace/InstalledAddOns/{InstalledAddOnSid}/Extensions/{Sid}:
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    resource. This value must be unique within the Account.
+      summary: Update Marketplace Installed Add-On
+  '/marketplace/InstalledAddOns/{InstalledAddOnSid}/Extensions/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /InstalledAddOns/{Sid}
+      parent: '/InstalledAddOns/{Sid}'
       className: installed_add_on_extension
     get:
       description: Fetch an instance of an Extension for the Installed Add-on.
       tags:
-      - PreviewMarketplaceInstalledAddOnExtension
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
+        - Extensions
       parameters:
-      - name: InstalledAddOnSid
-        in: path
-        description: The SID of the InstalledAddOn resource with the extension to
-          fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the InstalledAddOn Extension resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XF[0-9a-fA-F]{32}$
-        required: true
+        - name: InstalledAddOnSid
+          in: path
+          description: The SID of the InstalledAddOn resource with the extension to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the InstalledAddOn Extension resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension'
+                $ref: >-
+                  #/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchMarketplaceInstalledAddOnExtension
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Marketplace Installed Add-On Extension
     post:
       description: Update an Extension for an Add-on installation.
       tags:
-      - PreviewMarketplaceInstalledAddOnExtension
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
+        - Extensions
       parameters:
-      - name: InstalledAddOnSid
-        in: path
-        description: The SID of the InstalledAddOn resource with the extension to
-          update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the InstalledAddOn Extension resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XF[0-9a-fA-F]{32}$
-        required: true
+        - name: InstalledAddOnSid
+          in: path
+          description: The SID of the InstalledAddOn resource with the extension to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the InstalledAddOn Extension resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension'
+                $ref: >-
+                  #/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateMarketplaceInstalledAddOnExtension
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4925,50 +5425,55 @@ paths:
                   type: boolean
                   description: Whether the Extension should be invoked.
               required:
-              - Enabled
-  /marketplace/InstalledAddOns/{InstalledAddOnSid}/Extensions:
+                - Enabled
+      summary: Update Marketplace Installed Add-On Extension
+  '/marketplace/InstalledAddOns/{InstalledAddOnSid}/Extensions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /InstalledAddOns/{Sid}
+      parent: '/InstalledAddOns/{Sid}'
       className: installed_add_on_extension
     get:
       description: Retrieve a list of Extensions for the Installed Add-on.
       tags:
-      - PreviewMarketplaceInstalledAddOnExtension
+        - Previews
+        - Marketplaces
+        - Installed
+        - Add-Ons
+        - Extensions
       parameters:
-      - name: InstalledAddOnSid
-        in: path
-        description: The SID of the InstalledAddOn resource with the extensions to
-          read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^XE[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: InstalledAddOnSid
+          in: path
+          description: The SID of the InstalledAddOn resource with the extensions to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^XE[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4980,7 +5485,8 @@ paths:
                   extensions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension'
+                      $ref: >-
+                        #/components/schemas/preview.marketplace.installed_add_on.installed_add_on_extension
                   meta:
                     type: object
                     properties:
@@ -5006,13 +5512,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListMarketplaceInstalledAddOnExtension
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Documents/{Sid}:
+        - Preview
+      summary: Retrieve Marketplace Installed Add-On Extensions
+  '/Sync/Services/{ServiceSid}/Documents/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5022,28 +5529,31 @@ paths:
           mapping:
             service_sid: service_sid
             document_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Documents/{document_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Documents/{document_sid}/Permissions'
+      parent: '/Services/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewSyncDocument
+        - Previews
+        - Sync
+        - Services
+        - Documents
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -5052,63 +5562,71 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.document'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncDocument
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Service Document
     delete:
       description: ''
       tags:
-      - PreviewSyncDocument
+        - Previews
+        - Sync
+        - Services
+        - Documents
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncDocument
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Service Document
     post:
       description: ''
       tags:
-      - PreviewSyncDocument
+        - Previews
+        - Sync
+        - Services
+        - Documents
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5117,10 +5635,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.document'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncDocument
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5131,10 +5649,11 @@ paths:
                 Data:
                   description: ''
               required:
-              - Data
-  /Sync/Services/{ServiceSid}/Documents:
+                - Data
+      summary: Update Service Document
+  '/Sync/Services/{ServiceSid}/Documents':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5144,22 +5663,25 @@ paths:
           mapping:
             service_sid: service_sid
             document_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Documents/{document_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Documents/{document_sid}/Permissions'
+      parent: '/Services/{Sid}'
     post:
       description: ''
       tags:
-      - PreviewSyncDocument
+        - Previews
+        - Sync
+        - Services
+        - Documents
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -5168,10 +5690,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.document'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncDocument
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5184,39 +5706,44 @@ paths:
                   description: ''
                 Data:
                   description: ''
+      summary: Create Service Document
     get:
       description: ''
       tags:
-      - PreviewSyncDocument
+        - Previews
+        - Sync
+        - Services
+        - Documents
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5254,132 +5781,155 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncDocument
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}:
+        - Preview
+      summary: Retrieve Service Documents
+  '/Sync/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions/{Identity}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Services/{ServiceSid}/Documents/{Sid}
+      parent: '/Services/{ServiceSid}/Documents/{Sid}'
       mountName: document_permissions
     get:
       description: Fetch a specific Sync Document Permission.
       tags:
-      - PreviewSyncDocumentPermission
+        - Previews
+        - Sync
+        - Services
+        - Documents
+        - Permissions
+        - Identity
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: DocumentSid
-        in: path
-        description: Identifier of the Sync Document. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: DocumentSid
+          in: path
+          description: Identifier of the Sync Document. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.document.document_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.document.document_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncDocumentPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Service Document Permission
     delete:
       description: Delete a specific Sync Document Permission.
       tags:
-      - PreviewSyncDocumentPermission
+        - Previews
+        - Sync
+        - Services
+        - Documents
+        - Permissions
+        - Identity
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: DocumentSid
-        in: path
-        description: Identifier of the Sync Document. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: DocumentSid
+          in: path
+          description: Identifier of the Sync Document. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncDocumentPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Service Document Permission
     post:
       description: Update an identity's access to a specific Sync Document.
       tags:
-      - PreviewSyncDocumentPermission
+        - Previews
+        - Sync
+        - Services
+        - Documents
+        - Permissions
+        - Identity
       parameters:
-      - name: ServiceSid
-        in: path
-        description: The unique SID identifier of the Sync Service Instance.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: DocumentSid
-        in: path
-        description: Identifier of the Sync Document. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a human user associated
-          with an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: The unique SID identifier of the Sync Service Instance.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: DocumentSid
+          in: path
+          description: Identifier of the Sync Document. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a human user associated
+            with an FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.document.document_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.document.document_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncDocumentPermission
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5389,68 +5939,77 @@ paths:
               properties:
                 Read:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can read
-                    the Sync Document.
+                  description: >-
+                    Boolean flag specifying whether the identity can read the
+                    Sync Document.
                 Write:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can update
-                    the Sync Document.
+                  description: >-
+                    Boolean flag specifying whether the identity can update the
+                    Sync Document.
                 Manage:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can delete
-                    the Sync Document.
+                  description: >-
+                    Boolean flag specifying whether the identity can delete the
+                    Sync Document.
               required:
-              - Read
-              - Write
-              - Manage
-  /Sync/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions:
+                - Read
+                - Write
+                - Manage
+      summary: Update Service Document Permission
+  '/Sync/Services/{ServiceSid}/Documents/{DocumentSid}/Permissions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Services/{ServiceSid}/Documents/{Sid}
+      parent: '/Services/{ServiceSid}/Documents/{Sid}'
       mountName: document_permissions
     get:
       description: Retrieve a list of all Permissions applying to a Sync Document.
       tags:
-      - PreviewSyncDocumentPermission
+        - Previews
+        - Sync
+        - Services
+        - Documents
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: DocumentSid
-        in: path
-        description: Identifier of the Sync Document. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: DocumentSid
+          in: path
+          description: Identifier of the Sync Document. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5462,7 +6021,8 @@ paths:
                   permissions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.sync.service.document.document_permission'
+                      $ref: >-
+                        #/components/schemas/preview.sync.service.document.document_permission
                   meta:
                     type: object
                     properties:
@@ -5488,13 +6048,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncDocumentPermission
       x-maturity:
-      - Preview
-  /Sync/Services/{Sid}:
+        - Preview
+      summary: Retrieve Service Document Permissions
+  '/Sync/Services/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5503,29 +6064,31 @@ paths:
         documents:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Documents
+          resource_url: '/Sync/Services/{service_sid}/Documents'
         sync_lists:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists
+          resource_url: '/Sync/Services/{service_sid}/Lists'
         sync_maps:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps
+          resource_url: '/Sync/Services/{service_sid}/Maps'
     get:
       description: ''
       tags:
-      - PreviewSyncService
+        - Previews
+        - Sync
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5534,46 +6097,52 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncService
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service
     delete:
       description: ''
       tags:
-      - PreviewSyncService
+        - Previews
+        - Sync
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncService
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Sync Service
     post:
       description: ''
       tags:
-      - PreviewSyncService
+        - Previews
+        - Sync
+        - Services
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5582,10 +6151,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncService
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5606,9 +6175,10 @@ paths:
                 AclEnabled:
                   type: boolean
                   description: ''
+      summary: Update Sync Service
   /Sync/Services:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5617,19 +6187,21 @@ paths:
         documents:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Documents
+          resource_url: '/Sync/Services/{service_sid}/Documents'
         sync_lists:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists
+          resource_url: '/Sync/Services/{service_sid}/Lists'
         sync_maps:
           mapping:
             service_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps
+          resource_url: '/Sync/Services/{service_sid}/Maps'
     post:
       description: ''
       tags:
-      - PreviewSyncService
+        - Previews
+        - Sync
+        - Services
       responses:
         '201':
           content:
@@ -5638,10 +6210,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncService
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5662,30 +6234,34 @@ paths:
                 AclEnabled:
                   type: boolean
                   description: ''
+      summary: Create Sync Service
     get:
       description: ''
       tags:
-      - PreviewSyncService
+        - Previews
+        - Sync
+        - Services
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5723,13 +6299,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncService
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Lists/{Sid}:
+        - Preview
+      summary: Retrieve Sync Services
+  '/Sync/Services/{ServiceSid}/Lists/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5739,34 +6316,37 @@ paths:
           mapping:
             service_sid: service_sid
             list_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists/{list_sid}/Items
+          resource_url: '/Sync/Services/{service_sid}/Lists/{list_sid}/Items'
         sync_list_permissions:
           mapping:
             service_sid: service_sid
             list_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists/{list_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Lists/{list_sid}/Permissions'
+      parent: '/Services/{Sid}'
       mountName: sync_lists
     get:
       description: ''
       tags:
-      - PreviewSyncSyncList
+        - Previews
+        - Sync
+        - Services
+        - Lists
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -5775,41 +6355,46 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.sync_list'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncList
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service List
     delete:
       description: ''
       tags:
-      - PreviewSyncSyncList
+        - Previews
+        - Sync
+        - Services
+        - Lists
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncList
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Lists:
+        - Preview
+      summary: Delete Sync Service List
+  '/Sync/Services/{ServiceSid}/Lists':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -5819,28 +6404,31 @@ paths:
           mapping:
             service_sid: service_sid
             list_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists/{list_sid}/Items
+          resource_url: '/Sync/Services/{service_sid}/Lists/{list_sid}/Items'
         sync_list_permissions:
           mapping:
             service_sid: service_sid
             list_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Lists/{list_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Lists/{list_sid}/Permissions'
+      parent: '/Services/{Sid}'
       mountName: sync_lists
     post:
       description: ''
       tags:
-      - PreviewSyncSyncList
+        - Previews
+        - Sync
+        - Services
+        - Lists
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -5849,10 +6437,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.sync_list'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncSyncList
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5863,39 +6451,44 @@ paths:
                 UniqueName:
                   type: string
                   description: ''
+      summary: Create Sync Service List
     get:
       description: ''
       tags:
-      - PreviewSyncSyncList
+        - Previews
+        - Sync
+        - Services
+        - Lists
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5933,139 +6526,156 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncList
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}:
+        - Preview
+      summary: Retrieve Sync Service Lists
+  '/Sync/Services/{ServiceSid}/Lists/{ListSid}/Items/{Index}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Services/{ServiceSid}/Lists/{Sid}
+      parent: '/Services/{ServiceSid}/Lists/{Sid}'
       mountName: sync_list_items
     get:
       description: ''
       tags:
-      - PreviewSyncSyncListItem
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Index
-        in: path
-        description: ''
-        schema:
-          type: integer
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Index
+          in: path
+          description: ''
+          schema:
+            type: integer
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_list.sync_list_item
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncListItem
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service List Item
     delete:
       description: ''
       tags:
-      - PreviewSyncSyncListItem
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Index
-        in: path
-        description: ''
-        schema:
-          type: integer
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Index
+          in: path
+          description: ''
+          schema:
+            type: integer
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncListItem
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Sync Service List Item
     post:
       description: ''
       tags:
-      - PreviewSyncSyncListItem
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Index
-        in: path
-        description: ''
-        schema:
-          type: integer
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Index
+          in: path
+          description: ''
+          schema:
+            type: integer
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_list.sync_list_item
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncSyncListItem
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6076,48 +6686,54 @@ paths:
                 Data:
                   description: ''
               required:
-              - Data
-  /Sync/Services/{ServiceSid}/Lists/{ListSid}/Items:
+                - Data
+      summary: Update Sync Service List Item
+  '/Sync/Services/{ServiceSid}/Lists/{ListSid}/Items':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Services/{ServiceSid}/Lists/{Sid}
+      parent: '/Services/{ServiceSid}/Lists/{Sid}'
       mountName: sync_list_items
     post:
       description: ''
       tags:
-      - PreviewSyncSyncListItem
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_list.sync_list_item
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncSyncListItem
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6128,63 +6744,69 @@ paths:
                 Data:
                   description: ''
               required:
-              - Data
+                - Data
+      summary: Create Sync Service List Item
     get:
       description: ''
       tags:
-      - PreviewSyncSyncListItem
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Order
-        in: query
-        description: ''
-        schema:
-          type: string
-          $ref: '#/components/schemas/sync_list_item_enum_query_result_order'
-      - name: From
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Bounds
-        in: query
-        description: ''
-        schema:
-          type: string
-          $ref: '#/components/schemas/sync_list_item_enum_query_from_bound_type'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Order
+          in: query
+          description: ''
+          schema:
+            type: string
+            $ref: '#/components/schemas/sync_list_item_enum_query_result_order'
+        - name: From
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Bounds
+          in: query
+          description: ''
+          schema:
+            type: string
+            $ref: '#/components/schemas/sync_list_item_enum_query_from_bound_type'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6196,7 +6818,8 @@ paths:
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_item'
+                      $ref: >-
+                        #/components/schemas/preview.sync.service.sync_list.sync_list_item
                   meta:
                     type: object
                     properties:
@@ -6222,132 +6845,155 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncListItem
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}:
+        - Preview
+      summary: Retrieve Sync Service List Items
+  '/Sync/Services/{ServiceSid}/Lists/{ListSid}/Permissions/{Identity}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Services/{ServiceSid}/Lists/{Sid}
+      parent: '/Services/{ServiceSid}/Lists/{Sid}'
       mountName: sync_list_permissions
     get:
       description: Fetch a specific Sync List Permission.
       tags:
-      - PreviewSyncSyncListPermission
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: Identifier of the Sync List. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: Identifier of the Sync List. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_list.sync_list_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncListPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service List Permission
     delete:
       description: Delete a specific Sync List Permission.
       tags:
-      - PreviewSyncSyncListPermission
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: Identifier of the Sync List. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: Identifier of the Sync List. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncListPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Sync Service List Permission
     post:
       description: Update an identity's access to a specific Sync List.
       tags:
-      - PreviewSyncSyncListPermission
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: The unique SID identifier of the Sync Service Instance.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: Identifier of the Sync List. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a human user associated
-          with an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: The unique SID identifier of the Sync Service Instance.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: Identifier of the Sync List. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a human user associated
+            with an FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_list.sync_list_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncSyncListPermission
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6357,68 +7003,78 @@ paths:
               properties:
                 Read:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can read
-                    the Sync List.
+                  description: >-
+                    Boolean flag specifying whether the identity can read the
+                    Sync List.
                 Write:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can create,
+                  description: >-
+                    Boolean flag specifying whether the identity can create,
                     update and delete Items of the Sync List.
                 Manage:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can delete
-                    the Sync List.
+                  description: >-
+                    Boolean flag specifying whether the identity can delete the
+                    Sync List.
               required:
-              - Read
-              - Write
-              - Manage
-  /Sync/Services/{ServiceSid}/Lists/{ListSid}/Permissions:
+                - Read
+                - Write
+                - Manage
+      summary: Update Sync Service List Permission
+  '/Sync/Services/{ServiceSid}/Lists/{ListSid}/Permissions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Services/{ServiceSid}/Lists/{Sid}
+      parent: '/Services/{ServiceSid}/Lists/{Sid}'
       mountName: sync_list_permissions
     get:
       description: Retrieve a list of all Permissions applying to a Sync List.
       tags:
-      - PreviewSyncSyncListPermission
+        - Previews
+        - Sync
+        - Services
+        - Lists
+        - Items
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: ListSid
-        in: path
-        description: Identifier of the Sync List. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ListSid
+          in: path
+          description: Identifier of the Sync List. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6430,7 +7086,8 @@ paths:
                   permissions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.sync.service.sync_list.sync_list_permission'
+                      $ref: >-
+                        #/components/schemas/preview.sync.service.sync_list.sync_list_permission
                   meta:
                     type: object
                     properties:
@@ -6456,13 +7113,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncListPermission
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Maps/{Sid}:
+        - Preview
+      summary: Retrieve Sync Service List Permissions
+  '/Sync/Services/{ServiceSid}/Maps/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -6472,34 +7130,37 @@ paths:
           mapping:
             service_sid: service_sid
             map_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps/{map_sid}/Items
+          resource_url: '/Sync/Services/{service_sid}/Maps/{map_sid}/Items'
         sync_map_permissions:
           mapping:
             service_sid: service_sid
             map_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps/{map_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Maps/{map_sid}/Permissions'
+      parent: '/Services/{Sid}'
       mountName: sync_maps
     get:
       description: ''
       tags:
-      - PreviewSyncSyncMap
+        - Previews
+        - Sync
+        - Services
+        - Maps
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -6508,41 +7169,46 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.sync_map'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncMap
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service Map
     delete:
       description: ''
       tags:
-      - PreviewSyncSyncMap
+        - Previews
+        - Sync
+        - Services
+        - Maps
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncMap
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Maps:
+        - Preview
+      summary: Delete Sync Service Map
+  '/Sync/Services/{ServiceSid}/Maps':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -6552,28 +7218,31 @@ paths:
           mapping:
             service_sid: service_sid
             map_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps/{map_sid}/Items
+          resource_url: '/Sync/Services/{service_sid}/Maps/{map_sid}/Items'
         sync_map_permissions:
           mapping:
             service_sid: service_sid
             map_sid: sid
-          resource_url: /Sync/Services/{service_sid}/Maps/{map_sid}/Permissions
-      parent: /Services/{Sid}
+          resource_url: '/Sync/Services/{service_sid}/Maps/{map_sid}/Permissions'
+      parent: '/Services/{Sid}'
       mountName: sync_maps
     post:
       description: ''
       tags:
-      - PreviewSyncSyncMap
+        - Previews
+        - Sync
+        - Services
+        - Maps
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -6582,10 +7251,10 @@ paths:
                 $ref: '#/components/schemas/preview.sync.service.sync_map'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncSyncMap
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6596,39 +7265,44 @@ paths:
                 UniqueName:
                   type: string
                   description: ''
+      summary: Create Sync Service Map
     get:
       description: ''
       tags:
-      - PreviewSyncSyncMap
+        - Previews
+        - Sync
+        - Services
+        - Maps
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6666,139 +7340,156 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncMap
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}:
+        - Preview
+      summary: Retrieve Sync Service Maps
+  '/Sync/Services/{ServiceSid}/Maps/{MapSid}/Items/{Key}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Services/{ServiceSid}/Maps/{Sid}
+      parent: '/Services/{ServiceSid}/Maps/{Sid}'
       mountName: sync_map_items
     get:
       description: ''
       tags:
-      - PreviewSyncSyncMapItem
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Key
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Key
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_map.sync_map_item
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncMapItem
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service Map Item
     delete:
       description: ''
       tags:
-      - PreviewSyncSyncMapItem
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Key
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Key
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncMapItem
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Sync Service Map Item
     post:
       description: ''
       tags:
-      - PreviewSyncSyncMapItem
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Key
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Key
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_map.sync_map_item
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncSyncMapItem
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6809,48 +7500,54 @@ paths:
                 Data:
                   description: ''
               required:
-              - Data
-  /Sync/Services/{ServiceSid}/Maps/{MapSid}/Items:
+                - Data
+      summary: Update Sync Service Map Item
+  '/Sync/Services/{ServiceSid}/Maps/{MapSid}/Items':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Services/{ServiceSid}/Maps/{Sid}
+      parent: '/Services/{ServiceSid}/Maps/{Sid}'
       mountName: sync_map_items
     post:
       description: ''
       tags:
-      - PreviewSyncSyncMapItem
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_item'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_map.sync_map_item
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateSyncSyncMapItem
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6864,64 +7561,70 @@ paths:
                 Data:
                   description: ''
               required:
-              - Key
-              - Data
+                - Key
+                - Data
+      summary: Create Sync Service Map Item
     get:
       description: ''
       tags:
-      - PreviewSyncSyncMapItem
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Items
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Order
-        in: query
-        description: ''
-        schema:
-          type: string
-          $ref: '#/components/schemas/sync_map_item_enum_query_result_order'
-      - name: From
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Bounds
-        in: query
-        description: ''
-        schema:
-          type: string
-          $ref: '#/components/schemas/sync_map_item_enum_query_from_bound_type'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Order
+          in: query
+          description: ''
+          schema:
+            type: string
+            $ref: '#/components/schemas/sync_map_item_enum_query_result_order'
+        - name: From
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Bounds
+          in: query
+          description: ''
+          schema:
+            type: string
+            $ref: '#/components/schemas/sync_map_item_enum_query_from_bound_type'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6933,7 +7636,8 @@ paths:
                   items:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_item'
+                      $ref: >-
+                        #/components/schemas/preview.sync.service.sync_map.sync_map_item
                   meta:
                     type: object
                     properties:
@@ -6959,132 +7663,152 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncMapItem
       x-maturity:
-      - Preview
-  /Sync/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}:
+        - Preview
+      summary: Retrieve Sync Service Map Items
+  '/Sync/Services/{ServiceSid}/Maps/{MapSid}/Permissions/{Identity}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Services/{ServiceSid}/Maps/{Sid}
+      parent: '/Services/{ServiceSid}/Maps/{Sid}'
       mountName: sync_map_permissions
     get:
       description: Fetch a specific Sync Map Permission.
       tags:
-      - PreviewSyncSyncMapPermission
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: Identifier of the Sync Map. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: Identifier of the Sync Map. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_map.sync_map_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchSyncSyncMapPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Sync Service Map Permission
     delete:
       description: Delete a specific Sync Map Permission.
       tags:
-      - PreviewSyncSyncMapPermission
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: Identifier of the Sync Map. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a user associated with
-          an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: Identifier of the Sync Map. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a user associated with an
+            FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteSyncSyncMapPermission
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Sync Service Map Permission
     post:
       description: Update an identity's access to a specific Sync Map.
       tags:
-      - PreviewSyncSyncMapPermission
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: The unique SID identifier of the Sync Service Instance.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: Identifier of the Sync Map. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: Identity
-        in: path
-        description: Arbitrary string identifier representing a human user associated
-          with an FPA token, assigned by the developer.
-        schema:
-          type: string
-        required: true
+        - name: ServiceSid
+          in: path
+          description: The unique SID identifier of the Sync Service Instance.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: Identifier of the Sync Map. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: Identity
+          in: path
+          description: >-
+            Arbitrary string identifier representing a human user associated
+            with an FPA token, assigned by the developer.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_permission'
+                $ref: >-
+                  #/components/schemas/preview.sync.service.sync_map.sync_map_permission
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateSyncSyncMapPermission
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7094,68 +7818,77 @@ paths:
               properties:
                 Read:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can read
-                    the Sync Map.
+                  description: >-
+                    Boolean flag specifying whether the identity can read the
+                    Sync Map.
                 Write:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can create,
+                  description: >-
+                    Boolean flag specifying whether the identity can create,
                     update and delete Items of the Sync Map.
                 Manage:
                   type: boolean
-                  description: Boolean flag specifying whether the identity can delete
-                    the Sync Map.
+                  description: >-
+                    Boolean flag specifying whether the identity can delete the
+                    Sync Map.
               required:
-              - Read
-              - Write
-              - Manage
-  /Sync/Services/{ServiceSid}/Maps/{MapSid}/Permissions:
+                - Read
+                - Write
+                - Manage
+      summary: Update Sync Service Map Permission
+  '/Sync/Services/{ServiceSid}/Maps/{MapSid}/Permissions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Services/{ServiceSid}/Maps/{Sid}
+      parent: '/Services/{ServiceSid}/Maps/{Sid}'
       mountName: sync_map_permissions
     get:
       description: Retrieve a list of all Permissions applying to a Sync Map.
       tags:
-      - PreviewSyncSyncMapPermission
+        - Previews
+        - Sync
+        - Services
+        - Maps
+        - Permissions
       parameters:
-      - name: ServiceSid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^IS[0-9a-fA-F]{32}$
-        required: true
-      - name: MapSid
-        in: path
-        description: Identifier of the Sync Map. Either a SID or a unique name.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: ServiceSid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^IS[0-9a-fA-F]{32}$'
+          required: true
+        - name: MapSid
+          in: path
+          description: Identifier of the Sync Map. Either a SID or a unique name.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7167,7 +7900,8 @@ paths:
                   permissions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.sync.service.sync_map.sync_map_permission'
+                      $ref: >-
+                        #/components/schemas/preview.sync.service.sync_map.sync_map_permission
                   meta:
                     type: object
                     properties:
@@ -7193,13 +7927,14 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListSyncSyncMapPermission
       x-maturity:
-      - Preview
-  /understand/Assistants/{Sid}:
+        - Preview
+      summary: Retrieve Sync Service Map Permissions
+  '/understand/Assistants/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -7208,19 +7943,19 @@ paths:
         field_types:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/FieldTypes
+          resource_url: '/understand/Assistants/{assistant_sid}/FieldTypes'
         tasks:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks'
         model_builds:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/ModelBuilds
+          resource_url: '/understand/Assistants/{assistant_sid}/ModelBuilds'
         queries:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Queries
+          resource_url: '/understand/Assistants/{assistant_sid}/Queries'
         assistant_fallback_actions:
           mapping:
             assistant_sid: sid
@@ -7232,7 +7967,7 @@ paths:
         dialogues:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Dialogues
+          resource_url: '/understand/Assistants/{assistant_sid}/Dialogues'
         style_sheet:
           mapping:
             assistant_sid: sid
@@ -7240,14 +7975,16 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewUnderstandAssistant
+        - Previews
+        - Understand
+        - Assistants
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7256,21 +7993,24 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandAssistant
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant
     post:
       description: ''
       tags:
-      - PreviewUnderstandAssistant
+        - Previews
+        - Understand
+        - Assistants
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7279,10 +8019,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandAssistant
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7292,58 +8032,68 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A text description for the Assistant. It is non-unique
-                    and can up to 255 characters long.
+                  description: >-
+                    A text description for the Assistant. It is non-unique and
+                    can up to 255 characters long.
                 LogQueries:
                   type: boolean
-                  description: A boolean that specifies whether queries should be
-                    logged for 30 days further training. If false, no queries will
-                    be stored, if true, queries will be stored for 30 days and deleted
-                    thereafter. Defaults to true if no value is provided.
+                  description: >-
+                    A boolean that specifies whether queries should be logged
+                    for 30 days further training. If false, no queries will be
+                    stored, if true, queries will be stored for 30 days and
+                    deleted thereafter. Defaults to true if no value is
+                    provided.
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 CallbackUrl:
                   type: string
                   format: uri
                   description: A user-provided URL to send event callbacks to.
                 CallbackEvents:
                   type: string
-                  description: Space-separated list of callback events that will trigger
+                  description: >-
+                    Space-separated list of callback events that will trigger
                     callbacks.
                 FallbackActions:
-                  description: The JSON actions to be executed when the user's input
-                    is not recognized as matching any Task.
+                  description: >-
+                    The JSON actions to be executed when the user's input is not
+                    recognized as matching any Task.
                 InitiationActions:
-                  description: The JSON actions to be executed on inbound phone calls
-                    when the Assistant has to say something first.
+                  description: >-
+                    The JSON actions to be executed on inbound phone calls when
+                    the Assistant has to say something first.
                 StyleSheet:
-                  description: The JSON object that holds the style sheet for the
-                    assistant
+                  description: The JSON object that holds the style sheet for the assistant
+      summary: Update Understand Assistant
     delete:
       description: ''
       tags:
-      - PreviewUnderstandAssistant
+        - Previews
+        - Understand
+        - Assistants
       parameters:
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandAssistant
       x-maturity:
-      - Preview
+        - Preview
+      summary: Delete Understand Assistant
   /understand/Assistants:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -7352,19 +8102,19 @@ paths:
         field_types:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/FieldTypes
+          resource_url: '/understand/Assistants/{assistant_sid}/FieldTypes'
         tasks:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks'
         model_builds:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/ModelBuilds
+          resource_url: '/understand/Assistants/{assistant_sid}/ModelBuilds'
         queries:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Queries
+          resource_url: '/understand/Assistants/{assistant_sid}/Queries'
         assistant_fallback_actions:
           mapping:
             assistant_sid: sid
@@ -7376,7 +8126,7 @@ paths:
         dialogues:
           mapping:
             assistant_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Dialogues
+          resource_url: '/understand/Assistants/{assistant_sid}/Dialogues'
         style_sheet:
           mapping:
             assistant_sid: sid
@@ -7384,27 +8134,30 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewUnderstandAssistant
+        - Previews
+        - Understand
+        - Assistants
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7442,14 +8195,17 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandAssistant
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistants
     post:
       description: ''
       tags:
-      - PreviewUnderstandAssistant
+        - Previews
+        - Understand
+        - Assistants
       responses:
         '201':
           content:
@@ -7458,10 +8214,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandAssistant
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7471,92 +8227,110 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A text description for the Assistant. It is non-unique
-                    and can up to 255 characters long.
+                  description: >-
+                    A text description for the Assistant. It is non-unique and
+                    can up to 255 characters long.
                 LogQueries:
                   type: boolean
-                  description: A boolean that specifies whether queries should be
-                    logged for 30 days further training. If false, no queries will
-                    be stored, if true, queries will be stored for 30 days and deleted
-                    thereafter. Defaults to true if no value is provided.
+                  description: >-
+                    A boolean that specifies whether queries should be logged
+                    for 30 days further training. If false, no queries will be
+                    stored, if true, queries will be stored for 30 days and
+                    deleted thereafter. Defaults to true if no value is
+                    provided.
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 CallbackUrl:
                   type: string
                   format: uri
                   description: A user-provided URL to send event callbacks to.
                 CallbackEvents:
                   type: string
-                  description: Space-separated list of callback events that will trigger
+                  description: >-
+                    Space-separated list of callback events that will trigger
                     callbacks.
                 FallbackActions:
-                  description: The JSON actions to be executed when the user's input
-                    is not recognized as matching any Task.
+                  description: >-
+                    The JSON actions to be executed when the user's input is not
+                    recognized as matching any Task.
                 InitiationActions:
-                  description: The JSON actions to be executed on inbound phone calls
-                    when the Assistant has to say something first.
+                  description: >-
+                    The JSON actions to be executed on inbound phone calls when
+                    the Assistant has to say something first.
                 StyleSheet:
-                  description: The JSON object that holds the style sheet for the
-                    assistant
-  /understand/Assistants/{AssistantSid}/FallbackActions:
+                  description: The JSON object that holds the style sheet for the assistant
+      summary: Create Understand Assistant
+  '/understand/Assistants/{AssistantSid}/FallbackActions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
       mountName: assistant_fallback_actions
       className: assistant_fallback_actions
     get:
       description: ''
       tags:
-      - PreviewUnderstandAssistantFallbackActions
+        - Previews
+        - Understand
+        - Assistants
+        - Fallback
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.assistant_fallback_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.assistant_fallback_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandAssistantFallbackActions
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Fallback Actions
     post:
       description: ''
       tags:
-      - PreviewUnderstandAssistantFallbackActions
+        - Previews
+        - Understand
+        - Assistants
+        - Fallback
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.assistant_fallback_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.assistant_fallback_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandAssistantFallbackActions
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7566,62 +8340,74 @@ paths:
               properties:
                 FallbackActions:
                   description: ''
-  /understand/Assistants/{AssistantSid}/InitiationActions:
+      summary: Create Understand Assistant Fallback Action
+  '/understand/Assistants/{AssistantSid}/InitiationActions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
       mountName: assistant_initiation_actions
       className: assistant_initiation_actions
     get:
       description: ''
       tags:
-      - PreviewUnderstandAssistantInitiationActions
+        - Previews
+        - Understand
+        - Assistants
+        - Initiation
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.assistant_initiation_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.assistant_initiation_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandAssistantInitiationActions
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Initiation Actions
     post:
       description: ''
       tags:
-      - PreviewUnderstandAssistantInitiationActions
+        - Previews
+        - Understand
+        - Assistants
+        - Initiation
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.assistant_initiation_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.assistant_initiation_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandAssistantInitiationActions
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7631,31 +8417,35 @@ paths:
               properties:
                 InitiationActions:
                   description: ''
-  /understand/Assistants/{AssistantSid}/Dialogues/{Sid}:
+      summary: Create Understand Assistant Initiation Action
+  '/understand/Assistants/{AssistantSid}/Dialogues/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandDialogue
+        - Previews
+        - Understand
+        - Assistants
+        - Dialogue
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7664,49 +8454,54 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.dialogue'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandDialogue
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/Dialogues:
+        - Preview
+      summary: Retrieve Understand Assistant Dialogue
+  '/understand/Assistants/{AssistantSid}/Dialogues':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{Sid}
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Fields/{Sid}:
+      parent: '/Assistants/{Sid}'
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Fields/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandField
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Field.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Field.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7715,85 +8510,96 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task.field'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandField
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task Field
     delete:
       description: ''
       tags:
-      - PreviewUnderstandField
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Field.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Field.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandField
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Fields:
+        - Preview
+      summary: Delete Understand Assistant Task Field
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Fields':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandField
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Field.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Field.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -7805,7 +8611,8 @@ paths:
                   fields:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.understand.assistant.task.field'
+                      $ref: >-
+                        #/components/schemas/preview.understand.assistant.task.field
                   meta:
                     type: object
                     properties:
@@ -7831,27 +8638,32 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandField
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task Fields
     post:
       description: ''
       tags:
-      - PreviewUnderstandField
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Fields
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Field.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Field.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -7860,10 +8672,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task.field'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandField
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7873,20 +8685,25 @@ paths:
               properties:
                 FieldType:
                   type: string
-                  description: The unique name or sid of the FieldType. It can be
-                    any [Built-in Field Type](https://www.twilio.com/docs/assistant/api/built-in-field-types)
-                    or the unique_name or the Field Type sid of a custom Field Type.
+                  description: >-
+                    The unique name or sid of the FieldType. It can be any
+                    [Built-in Field
+                    Type](https://www.twilio.com/docs/assistant/api/built-in-field-types)
+                    or the unique_name or the Field Type sid of a custom Field
+                    Type.
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
               required:
-              - FieldType
-              - UniqueName
-  /understand/Assistants/{AssistantSid}/FieldTypes/{Sid}:
+                - FieldType
+                - UniqueName
+      summary: Create Understand Assistant Task Field
+  '/understand/Assistants/{AssistantSid}/FieldTypes/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -7896,25 +8713,31 @@ paths:
           mapping:
             assistant_sid: assistant_sid
             field_type_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/FieldTypes/{field_type_sid}/FieldValues
-      parent: /Assistants/{Sid}
+          resource_url: >-
+            /understand/Assistants/{assistant_sid}/FieldTypes/{field_type_sid}/FieldValues
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandFieldType
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7923,27 +8746,33 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.field_type'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandFieldType
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Field Type
     post:
       description: ''
       tags:
-      - PreviewUnderstandFieldType
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -7952,10 +8781,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.field_type'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandFieldType
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -7965,41 +8794,50 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A user-provided string that identifies this resource.
-                    It is non-unique and can up to 255 characters long.
+                  description: >-
+                    A user-provided string that identifies this resource. It is
+                    non-unique and can up to 255 characters long.
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
+      summary: Update Understand Assistant Field Type
     delete:
       description: ''
       tags:
-      - PreviewUnderstandFieldType
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandFieldType
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/FieldTypes:
+        - Preview
+      summary: Delete Understand Assistant Field Type
+  '/understand/Assistants/{AssistantSid}/FieldTypes':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -8009,38 +8847,45 @@ paths:
           mapping:
             assistant_sid: assistant_sid
             field_type_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/FieldTypes/{field_type_sid}/FieldValues
-      parent: /Assistants/{Sid}
+          resource_url: >-
+            /understand/Assistants/{assistant_sid}/FieldTypes/{field_type_sid}/FieldValues
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandFieldType
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8052,7 +8897,8 @@ paths:
                   field_types:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.understand.assistant.field_type'
+                      $ref: >-
+                        #/components/schemas/preview.understand.assistant.field_type
                   meta:
                     type: object
                     properties:
@@ -8078,21 +8924,27 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandFieldType
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Field Types
     post:
       description: ''
       tags:
-      - PreviewUnderstandFieldType
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -8101,10 +8953,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.field_type'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandFieldType
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8114,138 +8966,166 @@ paths:
               properties:
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 FriendlyName:
                   type: string
-                  description: A user-provided string that identifies this resource.
-                    It is non-unique and can up to 255 characters long.
+                  description: >-
+                    A user-provided string that identifies this resource. It is
+                    non-unique and can up to 255 characters long.
               required:
-              - UniqueName
-  /understand/Assistants/{AssistantSid}/FieldTypes/{FieldTypeSid}/FieldValues/{Sid}:
+                - UniqueName
+      summary: Create Understand Assistant Field Type
+  '/understand/Assistants/{AssistantSid}/FieldTypes/{FieldTypeSid}/FieldValues/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{AssistantSid}/FieldTypes/{Sid}
+      parent: '/Assistants/{AssistantSid}/FieldTypes/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandFieldValue
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
+        - Values
+        - Field Values
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: FieldTypeSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: FieldTypeSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.field_type.field_value'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.field_type.field_value
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandFieldValue
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Field Type Field Value
     delete:
       description: ''
       tags:
-      - PreviewUnderstandFieldValue
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
+        - Values
+        - Field Values
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: FieldTypeSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: FieldTypeSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandFieldValue
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/FieldTypes/{FieldTypeSid}/FieldValues:
+        - Preview
+      summary: Delete Understand Assistant Field Type Field Value
+  '/understand/Assistants/{AssistantSid}/FieldTypes/{FieldTypeSid}/FieldValues':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{AssistantSid}/FieldTypes/{Sid}
+      parent: '/Assistants/{AssistantSid}/FieldTypes/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandFieldValue
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
+        - Values
+        - Field Values
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: FieldTypeSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Language
-        in: query
-        description: 'An ISO language-country string of the value. For example: *en-US*'
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: FieldTypeSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Language
+          in: query
+          description: 'An ISO language-country string of the value. For example: *en-US*'
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8257,7 +9137,8 @@ paths:
                   field_values:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.understand.assistant.field_type.field_value'
+                      $ref: >-
+                        #/components/schemas/preview.understand.assistant.field_type.field_value
                   meta:
                     type: object
                     properties:
@@ -8283,39 +9164,48 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandFieldValue
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Field Type Field Values
     post:
       description: ''
       tags:
-      - PreviewUnderstandFieldValue
+        - Previews
+        - Understand
+        - Assistants
+        - Fields
+        - Types
+        - Field Types
+        - Values
+        - Field Values
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: FieldTypeSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: FieldTypeSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.field_type.field_value'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.field_type.field_value
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandFieldValue
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8328,41 +9218,48 @@ paths:
                   description: An ISO language-country string of the value.
                 Value:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 SynonymOf:
                   type: string
-                  description: A value that indicates this field value is a synonym
-                    of. Empty if the value is not a synonym.
+                  description: >-
+                    A value that indicates this field value is a synonym of.
+                    Empty if the value is not a synonym.
               required:
-              - Language
-              - Value
-  /understand/Assistants/{AssistantSid}/ModelBuilds/{Sid}:
+                - Language
+                - Value
+      summary: Create Understand Assistant Field Type Field Value
+  '/understand/Assistants/{AssistantSid}/ModelBuilds/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandModelBuild
+        - Previews
+        - Understand
+        - Assistants
+        - Models
+        - Builds
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8371,27 +9268,32 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.model_build'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandModelBuild
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Model Build
     post:
       description: ''
       tags:
-      - PreviewUnderstandModelBuild
+        - Previews
+        - Understand
+        - Assistants
+        - Models
+        - Builds
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8400,10 +9302,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.model_build'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandModelBuild
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8413,72 +9315,84 @@ paths:
               properties:
                 UniqueName:
                   type: string
-                  description: 'A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long. For example: v0.1'
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long. For example: v0.1
+      summary: Update Understand Assistant Model Build
     delete:
       description: ''
       tags:
-      - PreviewUnderstandModelBuild
+        - Previews
+        - Understand
+        - Assistants
+        - Models
+        - Builds
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandModelBuild
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/ModelBuilds:
+        - Preview
+      summary: Delete Understand Assistant Model Build
+  '/understand/Assistants/{AssistantSid}/ModelBuilds':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandModelBuild
+        - Previews
+        - Understand
+        - Assistants
+        - Models
+        - Builds
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8490,7 +9404,8 @@ paths:
                   model_builds:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.understand.assistant.model_build'
+                      $ref: >-
+                        #/components/schemas/preview.understand.assistant.model_build
                   meta:
                     type: object
                     properties:
@@ -8516,21 +9431,25 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandModelBuild
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Model Builds
     post:
       description: ''
       tags:
-      - PreviewUnderstandModelBuild
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -8539,10 +9458,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.model_build'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandModelBuild
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8556,34 +9475,39 @@ paths:
                   description: ''
                 UniqueName:
                   type: string
-                  description: 'A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long. For example: v0.1'
-  /understand/Assistants/{AssistantSid}/Queries/{Sid}:
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long. For example: v0.1
+      summary: Create Understand Assistant Model Build
+  '/understand/Assistants/{AssistantSid}/Queries/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandQuery
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8592,27 +9516,31 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.query'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandQuery
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Query
     post:
       description: ''
       tags:
-      - PreviewUnderstandQuery
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -8621,10 +9549,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.query'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandQuery
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8636,92 +9564,102 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^UF[0-9a-fA-F]{32}$
-                  description: An optional reference to the Sample created from this
-                    query.
+                  pattern: '^UF[0-9a-fA-F]{32}$'
+                  description: An optional reference to the Sample created from this query.
                 Status:
                   type: string
-                  description: 'A string that described the query status. The values
-                    can be: pending_review, reviewed, discarded'
+                  description: >-
+                    A string that described the query status. The values can be:
+                    pending_review, reviewed, discarded
+      summary: Update Understand Assistant Query
     delete:
       description: ''
       tags:
-      - PreviewUnderstandQuery
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandQuery
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/Queries:
+        - Preview
+      summary: Delete Understand Assistant Query
+  '/understand/Assistants/{AssistantSid}/Queries':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandQuery
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Language
-        in: query
-        description: An ISO language-country string of the sample.
-        schema:
-          type: string
-      - name: ModelBuild
-        in: query
-        description: The Model Build Sid or unique name of the Model Build to be queried.
-        schema:
-          type: string
-      - name: Status
-        in: query
-        description: 'A string that described the query status. The values can be:
-          pending_review, reviewed, discarded'
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Language
+          in: query
+          description: An ISO language-country string of the sample.
+          schema:
+            type: string
+        - name: ModelBuild
+          in: query
+          description: The Model Build Sid or unique name of the Model Build to be queried.
+          schema:
+            type: string
+        - name: Status
+          in: query
+          description: >-
+            A string that described the query status. The values can be:
+            pending_review, reviewed, discarded
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -8759,21 +9697,25 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandQuery
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Queries
     post:
       description: ''
       tags:
-      - PreviewUnderstandQuery
+        - Previews
+        - Understand
+        - Assistants
+        - Queries
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -8782,10 +9724,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.query'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandQuery
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8798,60 +9740,70 @@ paths:
                   description: An ISO language-country string of the sample.
                 Query:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. It can be up to 2048 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. It can be up to 2048
+                    characters long.
                 Tasks:
                   type: string
-                  description: Constraints the query to a set of tasks. Useful when
-                    you need to constrain the paths the user can take. Tasks should
-                    be comma separated *task-unique-name-1*, *task-unique-name-2*
+                  description: >-
+                    Constraints the query to a set of tasks. Useful when you
+                    need to constrain the paths the user can take. Tasks should
+                    be comma separated *task-unique-name-1*,
+                    *task-unique-name-2*
                 ModelBuild:
                   type: string
-                  description: The Model Build Sid or unique name of the Model Build
-                    to be queried.
+                  description: >-
+                    The Model Build Sid or unique name of the Model Build to be
+                    queried.
                 Field:
                   type: string
-                  description: Constraints the query to a given Field with an task.
-                    Useful when you know the Field you are expecting. It accepts one
+                  description: >-
+                    Constraints the query to a given Field with an task. Useful
+                    when you know the Field you are expecting. It accepts one
                     field in the format *task-unique-name-1*:*field-unique-name*
               required:
-              - Language
-              - Query
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Samples/{Sid}:
+                - Language
+                - Query
+      summary: Create Understand Assistant Query
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Samples/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandSample
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Sample.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^UF[0-9a-fA-F]{32}$
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Sample.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^UF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -8860,36 +9812,41 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task.sample'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandSample
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task Sample
     post:
       description: ''
       tags:
-      - PreviewUnderstandSample
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Sample.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^UF[0-9a-fA-F]{32}$
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Sample.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^UF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -8898,10 +9855,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task.sample'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandSample
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -8914,96 +9871,109 @@ paths:
                   description: An ISO language-country string of the sample.
                 TaggedText:
                   type: string
-                  description: The text example of how end-users may express this
-                    task. The sample may contain Field tag blocks.
+                  description: >-
+                    The text example of how end-users may express this task. The
+                    sample may contain Field tag blocks.
                 SourceChannel:
                   type: string
-                  description: 'The communication channel the sample was captured.
-                    It can be: *voice*, *sms*, *chat*, *alexa*, *google-assistant*,
-                    or *slack*. If not included the value will be null'
+                  description: >-
+                    The communication channel the sample was captured. It can
+                    be: *voice*, *sms*, *chat*, *alexa*, *google-assistant*, or
+                    *slack*. If not included the value will be null
+      summary: Update Understand Assistant Task Sample
     delete:
       description: ''
       tags:
-      - PreviewUnderstandSample
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Sample.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^UF[0-9a-fA-F]{32}$
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Sample.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^UF[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandSample
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Samples:
+        - Preview
+      summary: Delete Understand Assistant Task Sample
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Samples':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: list
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandSample
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Sample.
-        schema:
-          type: string
-        required: true
-      - name: Language
-        in: query
-        description: An ISO language-country string of the sample.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Sample.
+          schema:
+            type: string
+          required: true
+        - name: Language
+          in: query
+          description: An ISO language-country string of the sample.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -9015,7 +9985,8 @@ paths:
                   samples:
                     type: array
                     items:
-                      $ref: '#/components/schemas/preview.understand.assistant.task.sample'
+                      $ref: >-
+                        #/components/schemas/preview.understand.assistant.task.sample
                   meta:
                     type: object
                     properties:
@@ -9041,27 +10012,32 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandSample
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task Samples
     post:
       description: ''
       tags:
-      - PreviewUnderstandSample
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Samples
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Sample.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Sample.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -9070,10 +10046,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task.sample'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandSample
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9086,35 +10062,41 @@ paths:
                   description: An ISO language-country string of the sample.
                 TaggedText:
                   type: string
-                  description: The text example of how end-users may express this
-                    task. The sample may contain Field tag blocks.
+                  description: >-
+                    The text example of how end-users may express this task. The
+                    sample may contain Field tag blocks.
                 SourceChannel:
                   type: string
-                  description: 'The communication channel the sample was captured.
-                    It can be: *voice*, *sms*, *chat*, *alexa*, *google-assistant*,
-                    or *slack*. If not included the value will be null'
+                  description: >-
+                    The communication channel the sample was captured. It can
+                    be: *voice*, *sms*, *chat*, *alexa*, *google-assistant*, or
+                    *slack*. If not included the value will be null
               required:
-              - Language
-              - TaggedText
-  /understand/Assistants/{AssistantSid}/StyleSheet:
+                - Language
+                - TaggedText
+      summary: Create Understand Assistant Task Sample
+  '/understand/Assistants/{AssistantSid}/StyleSheet':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: Returns Style sheet JSON object for this Assistant
       tags:
-      - PreviewUnderstandStyleSheet
+        - Previews
+        - Understand
+        - Assistants
+        - Style Sheets
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9123,22 +10105,27 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.style_sheet'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandStyleSheet
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Style Sheet
     post:
-      description: Updates the style sheet for an assistant identified by {AssistantSid}
-        or {AssistantUniqueName}.
+      description: >-
+        Updates the style sheet for an assistant identified by {AssistantSid} or
+        {AssistantUniqueName}.
       tags:
-      - PreviewUnderstandStyleSheet
+        - Previews
+        - Understand
+        - Assistants
+        - Style Sheets
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9147,10 +10134,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.style_sheet'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandStyleSheet
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9160,9 +10147,10 @@ paths:
               properties:
                 StyleSheet:
                   description: The JSON Style sheet string
-  /understand/Assistants/{AssistantSid}/Tasks/{Sid}:
+      summary: Update Understand Assistant Style Sheet
+  '/understand/Assistants/{AssistantSid}/Tasks/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9172,12 +10160,12 @@ paths:
           mapping:
             assistant_sid: assistant_sid
             task_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Fields
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Fields'
         samples:
           mapping:
             assistant_sid: assistant_sid
             task_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Samples
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Samples'
         task_actions:
           mapping:
             assistant_sid: assistant_sid
@@ -9188,24 +10176,27 @@ paths:
             assistant_sid: assistant_sid
             task_sid: sid
           resource_url: /understandNone
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandTask
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9214,27 +10205,31 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandTask
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task
     post:
       description: ''
       tags:
-      - PreviewUnderstandTask
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9243,10 +10238,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandTask
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9256,49 +10251,58 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A user-provided string that identifies this resource.
-                    It is non-unique and can up to 255 characters long.
+                  description: >-
+                    A user-provided string that identifies this resource. It is
+                    non-unique and can up to 255 characters long.
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 Actions:
-                  description: A user-provided JSON object encoded as a string to
-                    specify the actions for this task. It is optional and non-unique.
+                  description: >-
+                    A user-provided JSON object encoded as a string to specify
+                    the actions for this task. It is optional and non-unique.
                 ActionsUrl:
                   type: string
                   format: uri
-                  description: User-provided HTTP endpoint where from the assistant
-                    fetches actions
+                  description: >-
+                    User-provided HTTP endpoint where from the assistant fetches
+                    actions
+      summary: Update Understand Assistant Task
     delete:
       description: ''
       tags:
-      - PreviewUnderstandTask
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: Sid
-        in: path
-        description: A 34 character string that uniquely identifies this resource.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: Sid
+          in: path
+          description: A 34 character string that uniquely identifies this resource.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteUnderstandTask
       x-maturity:
-      - Preview
-  /understand/Assistants/{AssistantSid}/Tasks:
+        - Preview
+      summary: Delete Understand Assistant Task
+  '/understand/Assistants/{AssistantSid}/Tasks':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9308,12 +10312,12 @@ paths:
           mapping:
             assistant_sid: assistant_sid
             task_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Fields
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Fields'
         samples:
           mapping:
             assistant_sid: assistant_sid
             task_sid: sid
-          resource_url: /understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Samples
+          resource_url: '/understand/Assistants/{assistant_sid}/Tasks/{task_sid}/Samples'
         task_actions:
           mapping:
             assistant_sid: assistant_sid
@@ -9324,37 +10328,41 @@ paths:
             assistant_sid: assistant_sid
             task_sid: sid
           resource_url: /understandNone
-      parent: /Assistants/{Sid}
+      parent: '/Assistants/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewUnderstandTask
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -9392,21 +10400,25 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListUnderstandTask
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Tasks
     post:
       description: ''
       tags:
-      - PreviewUnderstandTask
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the Assistant.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the Assistant.
+          schema:
+            type: string
+          required: true
       responses:
         '201':
           content:
@@ -9415,10 +10427,10 @@ paths:
                 $ref: '#/components/schemas/preview.understand.assistant.task'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateUnderstandTask
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9428,91 +10440,109 @@ paths:
               properties:
                 UniqueName:
                   type: string
-                  description: A user-provided string that uniquely identifies this
-                    resource as an alternative to the sid. Unique up to 64 characters
-                    long.
+                  description: >-
+                    A user-provided string that uniquely identifies this
+                    resource as an alternative to the sid. Unique up to 64
+                    characters long.
                 FriendlyName:
                   type: string
-                  description: A user-provided string that identifies this resource.
-                    It is non-unique and can up to 255 characters long.
+                  description: >-
+                    A user-provided string that identifies this resource. It is
+                    non-unique and can up to 255 characters long.
                 Actions:
-                  description: A user-provided JSON object encoded as a string to
-                    specify the actions for this task. It is optional and non-unique.
+                  description: >-
+                    A user-provided JSON object encoded as a string to specify
+                    the actions for this task. It is optional and non-unique.
                 ActionsUrl:
                   type: string
                   format: uri
-                  description: User-provided HTTP endpoint where from the assistant
-                    fetches actions
+                  description: >-
+                    User-provided HTTP endpoint where from the assistant fetches
+                    actions
               required:
-              - UniqueName
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Actions:
+                - UniqueName
+      summary: Create Understand Assistant Task
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Actions':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
       mountName: task_actions
       className: task_actions
     get:
       description: Returns JSON actions for this Task.
       tags:
-      - PreviewUnderstandTaskActions
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.task.task_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.task.task_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandTaskActions
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Understand Assistant Task Actions
     post:
-      description: Updates the actions of an Task identified by {TaskSid} or {TaskUniqueName}.
+      description: >-
+        Updates the actions of an Task identified by {TaskSid} or
+        {TaskUniqueName}.
       tags:
-      - PreviewUnderstandTaskActions
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Actions
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.task.task_actions'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.task.task_actions
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateUnderstandTaskActions
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9521,49 +10551,57 @@ paths:
               title: UpdateUnderstandTaskActionsRequest
               properties:
                 Actions:
-                  description: The JSON actions that instruct the Assistant how to
-                    perform this task.
-  /understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Statistics:
+                  description: >-
+                    The JSON actions that instruct the Assistant how to perform
+                    this task.
+      summary: Create Understand Assistant Task Action
+  '/understand/Assistants/{AssistantSid}/Tasks/{TaskSid}/Statistics':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Assistants/{AssistantSid}/Tasks/{Sid}
+      parent: '/Assistants/{AssistantSid}/Tasks/{Sid}'
       className: task_statistics
     get:
       description: ''
       tags:
-      - PreviewUnderstandTaskStatistics
+        - Previews
+        - Understand
+        - Assistants
+        - Tasks
+        - Statistics
       parameters:
-      - name: AssistantSid
-        in: path
-        description: The unique ID of the parent Assistant.
-        schema:
-          type: string
-        required: true
-      - name: TaskSid
-        in: path
-        description: The unique ID of the Task associated with this Field.
-        schema:
-          type: string
-        required: true
+        - name: AssistantSid
+          in: path
+          description: The unique ID of the parent Assistant.
+          schema:
+            type: string
+          required: true
+        - name: TaskSid
+          in: path
+          description: The unique ID of the Task associated with this Field.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/preview.understand.assistant.task.task_statistics'
+                $ref: >-
+                  #/components/schemas/preview.understand.assistant.task.task_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchUnderstandTaskStatistics
       x-maturity:
-      - Preview
-  /wireless/Commands/{Sid}:
+        - Preview
+      summary: Retrieve Understand Assistant Task Statistics
+  '/wireless/Commands/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9571,17 +10609,19 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessCommand
+        - Previews
+        - Wireless
+        - Commands
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^DC[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^DC[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -9590,13 +10630,14 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.command'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWirelessCommand
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless Command
   /wireless/Commands:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9604,47 +10645,50 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessCommand
+        - Previews
+        - Wireless
+        - Commands
       parameters:
-      - name: Device
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Sim
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Status
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Direction
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Device
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Sim
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Status
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Direction
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -9682,14 +10726,17 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWirelessCommand
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless Commands
     post:
       description: ''
       tags:
-      - PreviewWirelessCommand
+        - Previews
+        - Wireless
+        - Commands
       responses:
         '201':
           content:
@@ -9698,10 +10745,10 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.command'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateWirelessCommand
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9732,10 +10779,11 @@ paths:
                   type: string
                   description: ''
               required:
-              - Command
+                - Command
+      summary: Create Wireless Command
   /wireless/RatePlans:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9743,27 +10791,31 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessRatePlan
+        - Previews
+        - Wireless
+        - Rate Plans
+        - Plans
       parameters:
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -9801,14 +10853,18 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWirelessRatePlan
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless Rate Plans
     post:
       description: ''
       tags:
-      - PreviewWirelessRatePlan
+        - Previews
+        - Wireless
+        - Rate Plans
+        - Plans
       responses:
         '201':
           content:
@@ -9817,10 +10873,10 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.rate_plan'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateWirelessRatePlan
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9860,9 +10916,10 @@ paths:
                   items:
                     type: string
                   description: ''
-  /wireless/RatePlans/{Sid}:
+      summary: Create Wireless Rate Plan
+  '/wireless/RatePlans/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9870,14 +10927,17 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessRatePlan
+        - Previews
+        - Wireless
+        - Rate Plans
+        - Plans
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9886,21 +10946,25 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.rate_plan'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWirelessRatePlan
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless Rate Plan
     post:
       description: ''
       tags:
-      - PreviewWirelessRatePlan
+        - Previews
+        - Wireless
+        - Rate Plans
+        - Plans
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9909,10 +10973,10 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.rate_plan'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWirelessRatePlan
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -9926,28 +10990,33 @@ paths:
                 FriendlyName:
                   type: string
                   description: ''
+      summary: Update Wireless Rate Plan
     delete:
       description: ''
       tags:
-      - PreviewWirelessRatePlan
+        - Previews
+        - Wireless
+        - Rate Plans
+        - Plans
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteWirelessRatePlan
       x-maturity:
-      - Preview
-  /wireless/Sims/{Sid}:
+        - Preview
+      summary: Delete Wireless Rate Plan
+  '/wireless/Sims/{Sid}':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -9960,14 +11029,16 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessSim
+        - Previews
+        - Wireless
+        - SIM
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9976,21 +11047,22 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.sim'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWirelessSim
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless SIM
     post:
       description: ''
       tags:
-      - PreviewWirelessSim
+        - PreviewWirelessSim
       parameters:
-      - name: Sid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
+        - name: Sid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -9999,10 +11071,10 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.sim'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWirelessSim
       x-maturity:
-      - Preview
+        - Preview
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -10033,12 +11105,12 @@ paths:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
                   description: ''
                 CommandsCallbackUrl:
                   type: string
@@ -10048,12 +11120,12 @@ paths:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
                   description: ''
                 SmsFallbackUrl:
                   type: string
@@ -10063,12 +11135,12 @@ paths:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
                   description: ''
                 SmsUrl:
                   type: string
@@ -10078,12 +11150,12 @@ paths:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
                   description: ''
                 VoiceFallbackUrl:
                   type: string
@@ -10093,20 +11165,21 @@ paths:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
                   description: ''
                 VoiceUrl:
                   type: string
                   format: uri
                   description: ''
+      summary: Update Wireless SIM
   /wireless/Sims:
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
@@ -10119,52 +11192,59 @@ paths:
     get:
       description: ''
       tags:
-      - PreviewWirelessSim
+        - PreviewWirelessSim
+        - wireless
+        - Sims
+        - Sid
+        - Update
+        - Wireless
+        - SIM
       parameters:
-      - name: Status
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Iccid
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: RatePlan
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: EId
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: SimRegistrationCode
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: Status
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Iccid
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: RatePlan
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: EId
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: SimRegistrationCode
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -10202,39 +11282,47 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWirelessSim
       x-maturity:
-      - Preview
-  /wireless/Sims/{SimSid}/Usage:
+        - Preview
+      summary: Retrieve Wireless SIMs
+  '/wireless/Sims/{SimSid}/Usage':
     servers:
-    - url: https://preview.twilio.com
+      - url: 'https://preview.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties: []
       pathType: instance
-      parent: /Sims/{Sid}
+      parent: '/Sims/{Sid}'
     get:
       description: ''
       tags:
-      - PreviewWirelessUsage
+        - PreviewWirelessSim
+        - wireless
+        - Sims
+        - Sid
+        - Update
+        - Wireless
+        - SIM
+        - Usage
       parameters:
-      - name: SimSid
-        in: path
-        description: ''
-        schema:
-          type: string
-        required: true
-      - name: End
-        in: query
-        description: ''
-        schema:
-          type: string
-      - name: Start
-        in: query
-        description: ''
-        schema:
-          type: string
+        - name: SimSid
+          in: path
+          description: ''
+          schema:
+            type: string
+          required: true
+        - name: End
+          in: query
+          description: ''
+          schema:
+            type: string
+        - name: Start
+          in: query
+          description: ''
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -10243,55 +11331,131 @@ paths:
                 $ref: '#/components/schemas/preview.wireless.sim.usage'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWirelessUsage
       x-maturity:
-      - Preview
+        - Preview
+      summary: Retrieve Wireless SIM Usage
 servers:
-- url: https://preview.twilio.com
+  - url: 'https://preview.twilio.com'
 tags:
-- name: PreviewDeployedDevicesCertificate
-- name: PreviewDeployedDevicesDeployment
-- name: PreviewDeployedDevicesDevice
-- name: PreviewDeployedDevicesFleet
-- name: PreviewDeployedDevicesKey
-- name: PreviewHostedNumbersAuthorizationDocument
-- name: PreviewHostedNumbersDependentHostedNumberOrder
-- name: PreviewHostedNumbersHostedNumberOrder
-- name: PreviewMarketplaceAvailableAddOn
-- name: PreviewMarketplaceAvailableAddOnExtension
-- name: PreviewMarketplaceInstalledAddOn
-- name: PreviewMarketplaceInstalledAddOnExtension
-- name: PreviewSyncDocument
-- name: PreviewSyncDocumentPermission
-- name: PreviewSyncService
-- name: PreviewSyncSyncList
-- name: PreviewSyncSyncListItem
-- name: PreviewSyncSyncListPermission
-- name: PreviewSyncSyncMap
-- name: PreviewSyncSyncMapItem
-- name: PreviewSyncSyncMapPermission
-- name: PreviewUnderstandAssistant
-- name: PreviewUnderstandAssistantFallbackActions
-- name: PreviewUnderstandAssistantInitiationActions
-- name: PreviewUnderstandDialogue
-- name: PreviewUnderstandField
-- name: PreviewUnderstandFieldType
-- name: PreviewUnderstandFieldValue
-- name: PreviewUnderstandModelBuild
-- name: PreviewUnderstandQuery
-- name: PreviewUnderstandSample
-- name: PreviewUnderstandStyleSheet
-- name: PreviewUnderstandTask
-- name: PreviewUnderstandTaskActions
-- name: PreviewUnderstandTaskStatistics
-- name: PreviewWirelessCommand
-- name: PreviewWirelessRatePlan
-- name: PreviewWirelessSim
-- name: PreviewWirelessUsage
+  - name: Tag
+  - name: Previews
+    description: Needs a description.
+  - name: Deployed
+    description: Needs a description.
+  - name: Devices
+    description: Needs a description.
+  - name: Fleets
+    description: Needs a description.
+  - name: Certificates
+    description: Needs a description.
+  - name: Keys
+    description: Needs a description.
+  - name: Preview
+    description: Needs a description.
+  - name: Hosted Numbers
+    description: Needs a description.
+  - name: Hosted
+    description: Needs a description.
+  - name: Numbers
+    description: Needs a description.
+  - name: Authorization
+    description: Needs a description.
+  - name: Documents
+    description: Needs a description.
+  - name: Dependents
+    description: Needs a description.
+  - name: Orders
+    description: Needs a description.
+  - name: Marketplaces
+    description: Needs a description.
+  - name: Available
+    description: Needs a description.
+  - name: Add-Ons
+    description: Needs a description.
+  - name: Extensions
+    description: Needs a description.
+  - name: Installed
+    description: Needs a description.
+  - name: Sync
+    description: Needs a description.
+  - name: Services
+    description: Needs a description.
+  - name: Permissions
+    description: Needs a description.
+  - name: Identity
+    description: Needs a description.
+  - name: Lists
+    description: Needs a description.
+  - name: Items
+    description: Needs a description.
+  - name: Maps
+    description: Needs a description.
+  - name: Understand
+    description: Needs a description.
+  - name: Assistants
+    description: Needs a description.
+  - name: Fallback
+    description: Needs a description.
+  - name: Actions
+    description: Needs a description.
+  - name: Initiation
+    description: Needs a description.
+  - name: Dialogue
+    description: Needs a description.
+  - name: Tasks
+    description: Needs a description.
+  - name: Fields
+    description: Needs a description.
+  - name: Types
+    description: Needs a description.
+  - name: Field Types
+    description: Needs a description.
+  - name: Values
+    description: Needs a description.
+  - name: Field Values
+    description: Needs a description.
+  - name: Models
+    description: Needs a description.
+  - name: Builds
+    description: Needs a description.
+  - name: Queries
+    description: Needs a description.
+  - name: Samples
+    description: Needs a description.
+  - name: Style Sheets
+    description: Needs a description.
+  - name: Statistics
+    description: Needs a description.
+  - name: Wireless
+    description: Needs a description.
+  - name: Commands
+    description: Needs a description.
+  - name: Rate
+    description: Needs a description.
+  - name: Plans
+    description: Needs a description.
+  - name: SIM
+    description: Needs a description.
+  - name: Rate Plans
+    description: Needs a description.
+  - name: PreviewWirelessSim
+    description: Needs a description.
+  - name: wireless
+    description: Needs a description.
+  - name: Sims
+    description: Needs a description.
+  - name: Sid
+    description: Needs a description.
+  - name: Update
+    description: Needs a description.
+  - name: Usage
+    description: Needs a description.
 x-maturity:
-- name: Preview
-  description: PLEASE NOTE that this is a Preview product that is subject to change.
-    Use it with caution. If you currently do not have developer preview access, please
-    contact https://www.twilio.com/help/contact.
+  - name: Preview
+    description: >-
+      PLEASE NOTE that this is a Preview product that is subject to change. Use
+      it with caution. If you currently do not have developer preview access,
+      please contact https://www.twilio.com/help/contact.
 ---

@@ -241,7 +241,9 @@ paths:
         token, all requests to Twilio using your old primary Auth Token will
         result in an error.
       tags:
-        - AccountsV1AuthTokenPromotion
+        - Authentication
+        - Promotions
+        - Tokens
       responses:
         '200':
           content:
@@ -278,7 +280,8 @@ paths:
         Retrieves a collection of AWS Credentials belonging to the account used
         to make the request
       tags:
-        - AccountsV1Aws
+        - Credentials
+        - AWS
       parameters:
         - name: PageSize
           in: query
@@ -346,7 +349,8 @@ paths:
     post:
       description: Create a new AWS Credential
       tags:
-        - AccountsV1Aws
+        - Credentials
+        - AWS
       responses:
         '201':
           content:
@@ -404,7 +408,8 @@ paths:
     get:
       description: Fetch the AWS credentials specified by the provided Credential Sid
       tags:
-        - AccountsV1Aws
+        - Credentials
+        - AWS
       parameters:
         - name: Sid
           in: path
@@ -433,7 +438,8 @@ paths:
     post:
       description: Modify the properties of a given Account
       tags:
-        - AccountsV1Aws
+        - Credentials
+        - AWS
       parameters:
         - name: Sid
           in: path
@@ -474,7 +480,8 @@ paths:
     delete:
       description: Delete a Credential from your account
       tags:
-        - AccountsV1Aws
+        - Credentials
+        - AWS
       parameters:
         - name: Sid
           in: path
@@ -513,7 +520,9 @@ paths:
         Retrieves a collection of Public Key Credentials belonging to the
         account used to make the request
       tags:
-        - AccountsV1PublicKey
+        - Credentials
+        - Public Keys
+        - Keys
       parameters:
         - name: PageSize
           in: query
@@ -581,7 +590,9 @@ paths:
     post:
       description: Create a new Public Key Credential
       tags:
-        - AccountsV1PublicKey
+        - Credentials
+        - Public Keys
+        - Keys
       responses:
         '201':
           content:
@@ -640,7 +651,9 @@ paths:
     get:
       description: Fetch the public key specified by the provided Credential Sid
       tags:
-        - AccountsV1PublicKey
+        - Credentials
+        - Public Keys
+        - Keys
       parameters:
         - name: Sid
           in: path
@@ -670,7 +683,9 @@ paths:
     post:
       description: Modify the properties of a given Account
       tags:
-        - AccountsV1PublicKey
+        - Credentials
+        - Public Keys
+        - Keys
       parameters:
         - name: Sid
           in: path
@@ -712,7 +727,9 @@ paths:
     delete:
       description: Delete a Credential from your account
       tags:
-        - AccountsV1PublicKey
+        - Credentials
+        - Public Keys
+        - Keys
       parameters:
         - name: Sid
           in: path
@@ -747,7 +764,10 @@ paths:
     post:
       description: Add a new phone number to SafeList.
       tags:
-        - AccountsV1Safelist
+        - Lists
+        - Numbers
+        - Phone Numbers
+        - Safety
       responses:
         '201':
           content:
@@ -779,7 +799,10 @@ paths:
     get:
       description: Check if a phone number exists in SafeList.
       tags:
-        - AccountsV1Safelist
+        - Lists
+        - Numbers
+        - Phone Numbers
+        - Safety
       parameters:
         - name: PhoneNumber
           in: query
@@ -808,7 +831,10 @@ paths:
     delete:
       description: Remove a phone number from SafeList.
       tags:
-        - AccountsV1Safelist
+        - Lists
+        - Numbers
+        - Phone Numbers
+        - Safety
       parameters:
         - name: PhoneNumber
           in: query
@@ -844,7 +870,8 @@ paths:
     post:
       description: Create a new secondary Auth Token
       tags:
-        - AccountsV1SecondaryAuthToken
+        - Authentication
+        - Tokens
       responses:
         '201':
           content:
@@ -861,7 +888,8 @@ paths:
     delete:
       description: Delete the secondary Auth Token from your account
       tags:
-        - AccountsV1SecondaryAuthToken
+        - Authentication
+        - Tokens
       responses:
         '204':
           description: The resource was deleted successfully.
@@ -874,11 +902,28 @@ paths:
 servers:
   - url: 'https://accounts.twilio.com'
 tags:
-  - name: AccountsV1AuthTokenPromotion
-  - name: AccountsV1Aws
-  - name: AccountsV1PublicKey
-  - name: AccountsV1Safelist
-  - name: AccountsV1SecondaryAuthToken
+  - name: Authentication
+    description: Needs a description.
+  - name: Promotion
+    description: Needs a description.
+  - name: Tokens
+    description: Needs a description.
+  - name: Credentials
+    description: Needs a description.
+  - name: AWS
+    description: Needs a description.
+  - name: Public Keys
+    description: Needs a description.
+  - name: Keys
+    description: Needs a description.
+  - name: Lists
+    description: Needs a description.
+  - name: Numbers
+    description: Needs a description.
+  - name: Phone Numbers
+    description: Needs a description.
+  - name: Safety
+    description: Needs a description.
 x-maturity:
   - name: GA
     description: This product is Generally Available.

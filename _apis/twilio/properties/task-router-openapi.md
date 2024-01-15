@@ -8,29 +8,35 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Activity resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Activity resource.
         available:
           type: boolean
           nullable: true
-          description: Whether the Worker is eligible to receive a Task when it occupies
-            the Activity. A value of `true`, `1`, or `yes` indicates the Activity
-            is available. All other values indicate that it is not. The value cannot
-            be changed after the Activity is created.
+          description: >-
+            Whether the Worker is eligible to receive a Task when it occupies
+            the Activity. A value of `true`, `1`, or `yes` indicates the
+            Activity is available. All other values indicate that it is not. The
+            value cannot be changed after the Activity is created.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         friendly_name:
           type: string
           nullable: true
@@ -39,15 +45,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the Activity
-            resource.
+          description: The unique string that we created to identify the Activity resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Activity.
         url:
@@ -66,15 +71,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Event resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Event resource.
         actor_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^[a-zA-Z]{2}[0-9a-fA-F]{32}$
+          pattern: '^[a-zA-Z]{2}[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the resource that triggered the event.
         actor_type:
@@ -92,13 +99,16 @@ components:
           description: A description of the event.
         event_data:
           nullable: true
-          description: Data about the event. For more information, see [Event types](https://www.twilio.com/docs/taskrouter/api/event#event-types).
+          description: >-
+            Data about the event. For more information, see [Event
+            types](https://www.twilio.com/docs/taskrouter/api/event#event-types).
         event_date:
           type: string
           format: date-time
           nullable: true
-          description: The time the event was sent, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-            format.
+          description: >-
+            The time the event was sent, specified in [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         event_date_ms:
           type: integer
           format: int64
@@ -112,15 +122,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^[a-zA-Z]{2}[0-9a-fA-F]{32}$
+          pattern: '^[a-zA-Z]{2}[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the object the event is most relevant to, such as
-            a TaskSid, ReservationSid, or a  WorkerSid.
+          description: >-
+            The SID of the object the event is most relevant to, such as a
+            TaskSid, ReservationSid, or a  WorkerSid.
         resource_type:
           type: string
           nullable: true
-          description: The type of object the event is most relevant to, such as a
-            Task, Reservation, or a Worker).
+          description: >-
+            The type of object the event is most relevant to, such as a Task,
+            Reservation, or a Worker).
         resource_url:
           type: string
           format: uri
@@ -130,7 +142,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^EV[0-9a-fA-F]{32}$
+          pattern: '^EV[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the Event resource.
         source:
@@ -150,7 +162,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Event.
     taskrouter.v1.workspace.task:
@@ -160,10 +172,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Task resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Task resource.
         age:
           type: integer
           nullable: true
@@ -172,14 +186,16 @@ components:
           type: string
           $ref: '#/components/schemas/task_enum_status'
           nullable: true
-          description: 'The current status of the Task''s assignment. Can be: `pending`,
-            `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.'
+          description: >-
+            The current status of the Task's assignment. Can be: `pending`,
+            `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.
         attributes:
           type: string
           nullable: true
-          description: The JSON string with custom attributes of the work. **Note**
-            If this property has been assigned a value, it will only be displayed
-            in FETCH action that returns a single resource. Otherwise, it will be
+          description: >-
+            The JSON string with custom attributes of the work. **Note** If this
+            property has been assigned a value, it will only be displayed in
+            FETCH action that returns a single resource. Otherwise, it will be
             null.
           x-twilio:
             pii:
@@ -188,48 +204,56 @@ components:
         addons:
           type: string
           nullable: true
-          description: An object that contains the [Add-on](https://www.twilio.com/docs/add-ons)
-            data for all installed Add-ons.
+          description: >-
+            An object that contains the
+            [Add-on](https://www.twilio.com/docs/add-ons) data for all installed
+            Add-ons.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         task_queue_entered_date:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the Task entered the TaskQueue,
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the Task entered the TaskQueue,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         priority:
           type: integer
           nullable: true
-          description: The current priority score of the Task as assigned to a Worker
-            by the workflow. Tasks with higher priority values will be assigned before
-            Tasks with lower values.
+          description: >-
+            The current priority score of the Task as assigned to a Worker by
+            the workflow. Tasks with higher priority values will be assigned
+            before Tasks with lower values.
         reason:
           type: string
           nullable: true
-          description: The reason the Task was canceled or completed, if applicable.
+          description: 'The reason the Task was canceled or completed, if applicable.'
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the Task resource.
         task_queue_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the TaskQueue.
         task_queue_friendly_name:
@@ -240,7 +264,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TC[0-9a-fA-F]{32}$
+          pattern: '^TC[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the TaskChannel.
         task_channel_unique_name:
@@ -250,13 +274,14 @@ components:
         timeout:
           type: integer
           nullable: true
-          description: The amount of time in seconds that the Task can live before
-            being assigned.
+          description: >-
+            The amount of time in seconds that the Task can live before being
+            assigned.
         workflow_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
+          pattern: '^WW[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workflow that is controlling the Task.
         workflow_friendly_name:
@@ -267,7 +292,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Task.
         url:
@@ -284,18 +309,19 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT indicating the ordering for routing
-            of the Task specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The date and time in GMT indicating the ordering for routing of the
+            Task specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format.
     task_enum_status:
       type: string
       enum:
-      - pending
-      - reserved
-      - assigned
-      - canceled
-      - completed
-      - wrapping
+        - pending
+        - reserved
+        - assigned
+        - canceled
+        - completed
+        - wrapping
     taskrouter.v1.workspace.task_channel:
       type: object
       properties:
@@ -303,22 +329,27 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Task Channel resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Task Channel resource.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         friendly_name:
           type: string
           nullable: true
@@ -327,27 +358,31 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TC[0-9a-fA-F]{32}$
+          pattern: '^TC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the Task Channel
+          description: >-
+            The unique string that we created to identify the Task Channel
             resource.
         unique_name:
           type: string
           nullable: true
-          description: An application-defined string that uniquely identifies the
-            Task Channel, such as `voice` or `sms`.
+          description: >-
+            An application-defined string that uniquely identifies the Task
+            Channel, such as `voice` or `sms`.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Task Channel.
         channel_optimized_routing:
           type: boolean
           nullable: true
-          description: Whether the Task Channel will prioritize Workers that have
-            been idle. When `true`, Workers that have been idle the longest are prioritized.
+          description: >-
+            Whether the Task Channel will prioritize Workers that have been
+            idle. When `true`, Workers that have been idle the longest are
+            prioritized.
         url:
           type: string
           format: uri
@@ -365,35 +400,42 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         assignment_activity_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the Activity to assign Workers when a task is assigned
+          description: >-
+            The SID of the Activity to assign Workers when a task is assigned
             for them.
         assignment_activity_name:
           type: string
           nullable: true
-          description: The name of the Activity to assign Workers when a task is assigned
+          description: >-
+            The name of the Activity to assign Workers when a task is assigned
             for them.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         friendly_name:
           type: string
           nullable: true
@@ -405,46 +447,53 @@ components:
         max_reserved_workers:
           type: integer
           nullable: true
-          description: The maximum number of Workers to reserve for the assignment
-            of a task in the queue. Can be an integer between 1 and 50, inclusive
-            and defaults to 1.
+          description: >-
+            The maximum number of Workers to reserve for the assignment of a
+            task in the queue. Can be an integer between 1 and 50, inclusive and
+            defaults to 1.
         reservation_activity_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the Activity to assign Workers once a task is reserved
+          description: >-
+            The SID of the Activity to assign Workers once a task is reserved
             for them.
         reservation_activity_name:
           type: string
           nullable: true
-          description: The name of the Activity to assign Workers once a task is reserved
+          description: >-
+            The name of the Activity to assign Workers once a task is reserved
             for them.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the TaskQueue
+          description: >-
+            The unique string that we created to identify the TaskQueue
             resource.
         target_workers:
           type: string
           nullable: true
-          description: A string describing the Worker selection criteria for any Tasks
-            that enter the TaskQueue. For example `'"language" == "spanish"'` If no
-            TargetWorkers parameter is provided, Tasks will wait in the TaskQueue
-            until they are either deleted or moved to another TaskQueue. Additional
-            examples on how to describing Worker selection criteria below. Defaults
-            to 1==1.
+          description: >-
+            A string describing the Worker selection criteria for any Tasks that
+            enter the TaskQueue. For example `'"language" == "spanish"'` If no
+            TargetWorkers parameter is provided, Tasks will wait in the
+            TaskQueue until they are either deleted or moved to another
+            TaskQueue. Additional examples on how to describing Worker selection
+            criteria below. Defaults to 1==1.
         task_order:
           type: string
           $ref: '#/components/schemas/task_queue_enum_task_order'
           nullable: true
-          description: How Tasks will be assigned to Workers. Set this parameter to
-            `LIFO` to assign most recently created Task first or `FIFO` to assign
-            the oldest Task. Default is FIFO. [Click here](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo)
+          description: >-
+            How Tasks will be assigned to Workers. Set this parameter to `LIFO`
+            to assign most recently created Task first or `FIFO` to assign the
+            oldest Task. Default is FIFO. [Click
+            here](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo)
             to learn more.
         url:
           type: string
@@ -455,7 +504,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueue.
         links:
@@ -466,8 +515,8 @@ components:
     task_queue_enum_task_order:
       type: string
       enum:
-      - FIFO
-      - LIFO
+        - FIFO
+        - LIFO
     taskrouter.v1.workspace.task_queue.task_queue_bulk_real_time_statistics:
       type: object
       properties:
@@ -475,35 +524,38 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueue.
         task_queue_data:
           type: array
           items: {}
           nullable: true
-          description: 'The real-time statistics for each requested TaskQueue SID.
+          description: >
+            The real-time statistics for each requested TaskQueue SID.
             `task_queue_data` returns the following attributes:
 
 
-            `task_queue_sid`: The SID of the TaskQueue from which these statistics
-            were calculated.
+            `task_queue_sid`: The SID of the TaskQueue from which these
+            statistics were calculated.
 
 
-            `total_available_workers`: The total number of Workers available for Tasks
-            in the TaskQueue.
+            `total_available_workers`: The total number of Workers available for
+            Tasks in the TaskQueue.
 
 
-            `total_eligible_workers`: The total number of Workers eligible for Tasks
-            in the TaskQueue, regardless of their Activity state.
+            `total_eligible_workers`: The total number of Workers eligible for
+            Tasks in the TaskQueue, regardless of their Activity state.
 
 
             `total_tasks`: The total number of Tasks.
@@ -515,15 +567,15 @@ components:
             `longest_task_waiting_sid`: The SID of the longest waiting Task.
 
 
-            `tasks_by_status`: The number of Tasks grouped by their current status.
+            `tasks_by_status`: The number of Tasks grouped by their current
+            status.
 
 
             `tasks_by_priority`: The number of Tasks grouped by priority.
 
 
-            `activity_statistics`: The number of current Workers grouped by Activity.
-
-            '
+            `activity_statistics`: The number of current Workers grouped by
+            Activity.
         task_queue_response_count:
           type: integer
           nullable: true
@@ -540,10 +592,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         avg_task_acceptance_time:
           type: integer
           nullable: true
@@ -552,15 +606,18 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The beginning of the interval during which these statistics
-            were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The beginning of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format.
         end_time:
           type: string
           format: date-time
           nullable: true
-          description: The end of the interval during which these statistics were
-            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The end of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         reservations_created:
           type: integer
           nullable: true
@@ -568,22 +625,26 @@ components:
         reservations_accepted:
           type: integer
           nullable: true
-          description: The total number of Reservations accepted for Tasks in the
+          description: >-
+            The total number of Reservations accepted for Tasks in the
             TaskQueue.
         reservations_rejected:
           type: integer
           nullable: true
-          description: The total number of Reservations rejected for Tasks in the
+          description: >-
+            The total number of Reservations rejected for Tasks in the
             TaskQueue.
         reservations_timed_out:
           type: integer
           nullable: true
-          description: The total number of Reservations that timed out for Tasks in
-            the TaskQueue.
+          description: >-
+            The total number of Reservations that timed out for Tasks in the
+            TaskQueue.
         reservations_canceled:
           type: integer
           nullable: true
-          description: The total number of Reservations canceled for Tasks in the
+          description: >-
+            The total number of Reservations canceled for Tasks in the
             TaskQueue.
         reservations_rescinded:
           type: integer
@@ -591,32 +652,38 @@ components:
           description: The total number of Reservations rescinded.
         split_by_wait_time:
           nullable: true
-          description: A list of objects that describe the number of Tasks canceled
-            and reservations accepted above and below the thresholds specified in
+          description: >-
+            A list of objects that describe the number of Tasks canceled and
+            reservations accepted above and below the thresholds specified in
             seconds.
         task_queue_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the TaskQueue from which these statistics were calculated.
+          description: >-
+            The SID of the TaskQueue from which these statistics were
+            calculated.
         wait_duration_until_accepted:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks accepted while in the TaskQueue. Calculation is based on the
-            time when the Tasks were created. For transfers, the wait duration is
-            counted from the moment ***the Task was created***, and not from when
-            the transfer was initiated.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks accepted while in the TaskQueue. Calculation is based on the
+            time when the Tasks were created. For transfers, the wait duration
+            is counted from the moment ***the Task was created***, and not from
+            when the transfer was initiated.
         wait_duration_until_canceled:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks canceled while in the TaskQueue.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks canceled while in the TaskQueue.
         wait_duration_in_queue_until_accepted:
           nullable: true
-          description: The relative wait duration statistics (`avg`, `min`, `max`,
-            `total`) for Tasks accepted while in the TaskQueue. Calculation is based
-            on the time when the Tasks entered the TaskQueue.
+          description: >-
+            The relative wait duration statistics (`avg`, `min`, `max`, `total`)
+            for Tasks accepted while in the TaskQueue. Calculation is based on
+            the time when the Tasks entered the TaskQueue.
         tasks_canceled:
           type: integer
           nullable: true
@@ -636,13 +703,12 @@ components:
         tasks_moved:
           type: integer
           nullable: true
-          description: The total number of Tasks that were moved from one queue to
-            another.
+          description: The total number of Tasks that were moved from one queue to another.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueue.
         url:
@@ -657,10 +723,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         activity_statistics:
           type: array
           items: {}
@@ -674,37 +742,46 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the longest waiting Task.
         longest_relative_task_age_in_queue:
           type: integer
           nullable: true
-          description: The relative age in the TaskQueue for the longest waiting Task.
-            Calculation is based on the time when the Task entered the TaskQueue.
+          description: >-
+            The relative age in the TaskQueue for the longest waiting Task.
+            Calculation is based on the time when the Task entered the
+            TaskQueue.
         longest_relative_task_sid_in_queue:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
-          description: The Task SID of the Task waiting in the TaskQueue the longest.
-            Calculation is based on the time when the Task entered the TaskQueue.
+          description: >-
+            The Task SID of the Task waiting in the TaskQueue the longest.
+            Calculation is based on the time when the Task entered the
+            TaskQueue.
         task_queue_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the TaskQueue from which these statistics were calculated.
+          description: >-
+            The SID of the TaskQueue from which these statistics were
+            calculated.
         tasks_by_priority:
           nullable: true
-          description: 'The number of Tasks by priority. For example: `{"0": "10",
-            "99": "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.'
+          description: >-
+            The number of Tasks by priority. For example: `{"0": "10", "99":
+            "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.
         tasks_by_status:
           nullable: true
-          description: 'The number of Tasks by their current status. For example:
-            `{"pending": "1", "reserved": "3", "assigned": "2", "completed": "5"}`.'
+          description: >-
+            The number of Tasks by their current status. For example:
+            `{"pending": "1", "reserved": "3", "assigned": "2", "completed":
+            "5"}`.
         total_available_workers:
           type: integer
           nullable: true
@@ -712,7 +789,8 @@ components:
         total_eligible_workers:
           type: integer
           nullable: true
-          description: The total number of Workers eligible for Tasks in the TaskQueue,
+          description: >-
+            The total number of Workers eligible for Tasks in the TaskQueue,
             independent of their Activity state.
         total_tasks:
           type: integer
@@ -722,7 +800,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueue.
         url:
@@ -737,10 +815,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         cumulative:
           nullable: true
           description: An object that contains the cumulative statistics for the TaskQueue.
@@ -751,14 +831,16 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the TaskQueue from which these statistics were calculated.
+          description: >-
+            The SID of the TaskQueue from which these statistics were
+            calculated.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueue.
         url:
@@ -773,13 +855,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskQueue resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskQueue resource.
         cumulative:
           nullable: true
-          description: An object that contains the cumulative statistics for the TaskQueues.
+          description: >-
+            An object that contains the cumulative statistics for the
+            TaskQueues.
         realtime:
           nullable: true
           description: An object that contains the real-time statistics for the TaskQueues.
@@ -787,14 +873,16 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
+          pattern: '^WQ[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the TaskQueue from which these statistics were calculated.
+          description: >-
+            The SID of the TaskQueue from which these statistics were
+            calculated.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the TaskQueues.
     taskrouter.v1.workspace.task.task_reservation:
@@ -804,41 +892,48 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the TaskReservation resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the TaskReservation resource.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         reservation_status:
           type: string
           $ref: '#/components/schemas/task_reservation_enum_status'
           nullable: true
-          description: 'The current status of the reservation. Can be: `pending`,
-            `accepted`, `rejected`, or `timeout`.'
+          description: >-
+            The current status of the reservation. Can be: `pending`,
+            `accepted`, `rejected`, or `timeout`.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
+          pattern: '^WR[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the TaskReservation
+          description: >-
+            The unique string that we created to identify the TaskReservation
             resource.
         task_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the reserved Task resource.
         worker_name:
@@ -849,14 +944,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
+          pattern: '^WK[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the reserved Worker resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that this task is contained within.
         url:
@@ -872,37 +967,37 @@ components:
     task_reservation_enum_status:
       type: string
       enum:
-      - pending
-      - accepted
-      - rejected
-      - timeout
-      - canceled
-      - rescinded
-      - wrapping
-      - completed
+        - pending
+        - accepted
+        - rejected
+        - timeout
+        - canceled
+        - rescinded
+        - wrapping
+        - completed
     task_reservation_enum_call_status:
       type: string
       enum:
-      - initiated
-      - ringing
-      - answered
-      - completed
+        - initiated
+        - ringing
+        - answered
+        - completed
     task_reservation_enum_conference_event:
       type: string
       enum:
-      - start
-      - end
-      - join
-      - leave
-      - mute
-      - hold
-      - speaker
+        - start
+        - end
+        - join
+        - leave
+        - mute
+        - hold
+        - speaker
     task_reservation_enum_supervisor_mode:
       type: string
       enum:
-      - monitor
-      - whisper
-      - barge
+        - monitor
+        - whisper
+        - barge
     taskrouter.v1.workspace.worker:
       type: object
       properties:
@@ -910,10 +1005,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         activity_name:
           type: string
           nullable: true
@@ -922,18 +1019,20 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Worker's current Activity.
         attributes:
           type: string
           nullable: true
-          description: 'The JSON string that describes the Worker. For example: `{
-            "email": "Bob@example.com", "phone": "+5095551234" }`. **Note** If this
-            property has been assigned a value, it will only be displayed in FETCH
-            actions that return a single resource. Otherwise, this property will be
-            null, even if it has a value. This data is passed to the `assignment_callback_url`
-            when TaskRouter assigns a Task to the Worker.'
+          description: >-
+            The JSON string that describes the Worker. For example: `{ "email":
+            "Bob@example.com", "phone": "+5095551234" }`. **Note** If this
+            property has been assigned a value, it will only be displayed in
+            FETCH actions that return a single resource. Otherwise, this
+            property will be null, even if it has a value. This data is passed
+            to the `assignment_callback_url` when TaskRouter assigns a Task to
+            the Worker.
           x-twilio:
             pii:
               handling: sensitive
@@ -946,26 +1045,32 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_status_changed:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT of the last change to the Worker's
-            activity specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The date and time in GMT of the last change to the Worker's activity
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format. Used to calculate Workflow statistics.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         friendly_name:
           type: string
           nullable: true
-          description: The string that you assigned to describe the resource. Friendly
-            names are case insensitive, and unique within the TaskRouter Workspace.
+          description: >-
+            The string that you assigned to describe the resource. Friendly
+            names are case insensitive, and unique within the TaskRouter
+            Workspace.
           x-twilio:
             pii:
               handling: standard
@@ -974,14 +1079,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
+          pattern: '^WK[0-9a-fA-F]{32}$'
           nullable: true
           description: The unique string that we created to identify the Worker resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Worker.
         url:
@@ -1001,76 +1106,85 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         assigned_tasks:
           type: integer
           nullable: true
-          description: The total number of Tasks assigned to Worker for the TaskChannel
+          description: >-
+            The total number of Tasks assigned to Worker for the TaskChannel
             type.
         available:
           type: boolean
           nullable: true
-          description: Whether the Worker should receive Tasks of the TaskChannel
-            type.
+          description: Whether the Worker should receive Tasks of the TaskChannel type.
         available_capacity_percentage:
           type: integer
           nullable: true
-          description: The current percentage of capacity the TaskChannel has available.
-            Can be a number between `0` and `100`. A value of `0` indicates that TaskChannel
-            has no capacity available and a value of `100` means the  Worker is available
-            to receive any Tasks of this TaskChannel type.
+          description: >-
+            The current percentage of capacity the TaskChannel has available.
+            Can be a number between `0` and `100`. A value of `0` indicates that
+            TaskChannel has no capacity available and a value of `100` means
+            the  Worker is available to receive any Tasks of this TaskChannel
+            type.
         configured_capacity:
           type: integer
           nullable: true
-          description: The current configured capacity for the WorkerChannel. TaskRouter
-            will not create any reservations after the assigned Tasks for the Worker
-            reaches the value.
+          description: >-
+            The current configured capacity for the WorkerChannel. TaskRouter
+            will not create any reservations after the assigned Tasks for the
+            Worker reaches the value.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WC[0-9a-fA-F]{32}$
+          pattern: '^WC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the WorkerChannel
+          description: >-
+            The unique string that we created to identify the WorkerChannel
             resource.
         task_channel_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^TC[0-9a-fA-F]{32}$
+          pattern: '^TC[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the TaskChannel.
         task_channel_unique_name:
           type: string
           nullable: true
-          description: The unique name of the TaskChannel, such as `voice` or `sms`.
+          description: 'The unique name of the TaskChannel, such as `voice` or `sms`.'
         worker_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
+          pattern: '^WK[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Worker that contains the WorkerChannel.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the WorkerChannel.
         url:
@@ -1085,10 +1199,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         cumulative:
           nullable: true
           description: An object that contains the cumulative statistics for the Worker.
@@ -1096,14 +1212,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
+          pattern: '^WK[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Worker that contains the WorkerChannel.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the WorkerChannel.
         url:
@@ -1118,41 +1234,48 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the WorkerReservation resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the WorkerReservation resource.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         reservation_status:
           type: string
           $ref: '#/components/schemas/worker_reservation_enum_status'
           nullable: true
-          description: 'The current status of the reservation. Can be: `pending`,
-            `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.'
+          description: >-
+            The current status of the reservation. Can be: `pending`,
+            `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
+          pattern: '^WR[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the WorkerReservation
+          description: >-
+            The unique string that we created to identify the WorkerReservation
             resource.
         task_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the reserved Task resource.
         worker_name:
@@ -1163,14 +1286,14 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
+          pattern: '^WK[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the reserved Worker resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that this worker is contained within.
         url:
@@ -1186,31 +1309,31 @@ components:
     worker_reservation_enum_status:
       type: string
       enum:
-      - pending
-      - accepted
-      - rejected
-      - timeout
-      - canceled
-      - rescinded
-      - wrapping
-      - completed
+        - pending
+        - accepted
+        - rejected
+        - timeout
+        - canceled
+        - rescinded
+        - wrapping
+        - completed
     worker_reservation_enum_call_status:
       type: string
       enum:
-      - initiated
-      - ringing
-      - answered
-      - completed
+        - initiated
+        - ringing
+        - answered
+        - completed
     worker_reservation_enum_conference_event:
       type: string
       enum:
-      - start
-      - end
-      - join
-      - leave
-      - mute
-      - hold
-      - speaker
+        - start
+        - end
+        - join
+        - leave
+        - mute
+        - hold
+        - speaker
     taskrouter.v1.workspace.worker.worker_statistics:
       type: object
       properties:
@@ -1224,15 +1347,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Worker.
         url:
@@ -1247,29 +1372,35 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         start_time:
           type: string
           format: date-time
           nullable: true
-          description: The beginning of the interval during which these statistics
-            were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The beginning of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format.
         end_time:
           type: string
           format: date-time
           nullable: true
-          description: The end of the interval during which these statistics were
-            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The end of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         activity_durations:
           type: array
           items: {}
           nullable: true
-          description: The minimum, average, maximum, and total time (in seconds)
-            that Workers spent in each Activity.
+          description: >-
+            The minimum, average, maximum, and total time (in seconds) that
+            Workers spent in each Activity.
         reservations_created:
           type: integer
           nullable: true
@@ -1298,7 +1429,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workers.
         url:
@@ -1313,10 +1444,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Worker resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Worker resource.
         activity_statistics:
           type: array
           items: {}
@@ -1330,7 +1463,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workers.
         url:
@@ -1345,34 +1478,42 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workflow resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workflow resource.
         assignment_callback_url:
           type: string
           format: uri
           nullable: true
-          description: The URL that we call when a task managed by the Workflow is
-            assigned to a Worker. See Assignment Callback URL for more information.
+          description: >-
+            The URL that we call when a task managed by the Workflow is assigned
+            to a Worker. See Assignment Callback URL for more information.
         configuration:
           type: string
           nullable: true
-          description: A JSON string that contains the Workflow's configuration. See
-            [Configuring Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
+          description: >-
+            A JSON string that contains the Workflow's configuration. See
+            [Configuring
+            Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
             for more information.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [RFC 2822](https://www.ietf.org/rfc/rfc2822.txt)
+            format.
         document_content_type:
           type: string
           nullable: true
@@ -1381,13 +1522,15 @@ components:
           type: string
           format: uri
           nullable: true
-          description: The URL that we call when a call to the `assignment_callback_url`
+          description: >-
+            The URL that we call when a call to the `assignment_callback_url`
             fails.
         friendly_name:
           type: string
           nullable: true
-          description: The string that you assigned to describe the Workflow resource.
-            For example, `Customer Support` or `2014 Election Campaign`.
+          description: >-
+            The string that you assigned to describe the Workflow resource. For
+            example, `Customer Support` or `2014 Election Campaign`.
           x-twilio:
             pii:
               handling: standard
@@ -1396,21 +1539,21 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
+          pattern: '^WW[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the Workflow
-            resource.
+          description: The unique string that we created to identify the Workflow resource.
         task_reservation_timeout:
           type: integer
           nullable: true
-          description: How long TaskRouter will wait for a confirmation response from
-            your application after it assigns a Task to a Worker. Can be up to `86,400`
-            (24 hours) and the default is `120`.
+          description: >-
+            How long TaskRouter will wait for a confirmation response from your
+            application after it assigns a Task to a Worker. Can be up to
+            `86,400` (24 hours) and the default is `120`.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workflow.
         url:
@@ -1430,10 +1573,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workflow resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workflow resource.
         avg_task_acceptance_time:
           type: integer
           nullable: true
@@ -1442,15 +1587,18 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The beginning of the interval during which these statistics
-            were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The beginning of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format.
         end_time:
           type: string
           format: date-time
           nullable: true
-          description: The end of the interval during which these statistics were
-            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The end of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         reservations_created:
           type: integer
           nullable: true
@@ -1477,17 +1625,20 @@ components:
           description: The total number of Reservations that were rescinded.
         split_by_wait_time:
           nullable: true
-          description: A list of objects that describe the number of Tasks canceled
-            and reservations accepted above and below the thresholds specified in
+          description: >-
+            A list of objects that describe the number of Tasks canceled and
+            reservations accepted above and below the thresholds specified in
             seconds.
         wait_duration_until_accepted:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks that were accepted.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks that were accepted.
         wait_duration_until_canceled:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks that were canceled.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks that were canceled.
         tasks_canceled:
           type: integer
           nullable: true
@@ -1507,26 +1658,27 @@ components:
         tasks_moved:
           type: integer
           nullable: true
-          description: The total number of Tasks that were moved from one queue to
-            another.
+          description: The total number of Tasks that were moved from one queue to another.
         tasks_timed_out_in_workflow:
           type: integer
           nullable: true
-          description: The total number of Tasks that were timed out of their Workflows
+          description: >-
+            The total number of Tasks that were timed out of their Workflows
             (and deleted).
         workflow_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
+          pattern: '^WW[0-9a-fA-F]{32}$'
           nullable: true
-          description: Returns the list of Tasks that are being controlled by the
-            Workflow with the specified Sid value.
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified Sid value.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workflow.
         url:
@@ -1541,10 +1693,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workflow resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workflow resource.
         longest_task_waiting_age:
           type: integer
           nullable: true
@@ -1553,17 +1707,20 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the longest waiting Task.
         tasks_by_priority:
           nullable: true
-          description: 'The number of Tasks by priority. For example: `{"0": "10",
-            "99": "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.'
+          description: >-
+            The number of Tasks by priority. For example: `{"0": "10", "99":
+            "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.
         tasks_by_status:
           nullable: true
-          description: 'The number of Tasks by their current status. For example:
-            `{"pending": "1", "reserved": "3", "assigned": "2", "completed": "5"}`.'
+          description: >-
+            The number of Tasks by their current status. For example:
+            `{"pending": "1", "reserved": "3", "assigned": "2", "completed":
+            "5"}`.
         total_tasks:
           type: integer
           nullable: true
@@ -1572,15 +1729,16 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
+          pattern: '^WW[0-9a-fA-F]{32}$'
           nullable: true
-          description: Returns the list of Tasks that are being controlled by the
-            Workflow with the specified SID value.
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified SID value.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workflow.
         url:
@@ -1595,10 +1753,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workflow resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workflow resource.
         cumulative:
           nullable: true
           description: An object that contains the cumulative statistics for the Workflow.
@@ -1609,15 +1769,16 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
+          pattern: '^WW[0-9a-fA-F]{32}$'
           nullable: true
-          description: Returns the list of Tasks that are being controlled by the
-            Workflow with the specified SID value.
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified SID value.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace that contains the Workflow.
         url:
@@ -1632,22 +1793,27 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workspace resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workspace resource.
         date_created:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was created specified
-            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was created specified in
+            [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
         date_updated:
           type: string
           format: date-time
           nullable: true
-          description: The date and time in GMT when the resource was last updated
-            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The date and time in GMT when the resource was last updated
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         default_activity_name:
           type: string
           nullable: true
@@ -1656,31 +1822,38 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the Activity that will be used when new Workers
-            are created in the Workspace.
+          description: >-
+            The SID of the Activity that will be used when new Workers are
+            created in the Workspace.
         event_callback_url:
           type: string
           format: uri
           nullable: true
-          description: The URL we call when an event occurs. If provided, the Workspace
-            will publish events to this URL, for example, to collect data for reporting.
-            See [Workspace Events](https://www.twilio.com/docs/taskrouter/api/event)
-            for more information. This parameter supports Twilio's [Webhooks (HTTP
-            callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
+          description: >-
+            The URL we call when an event occurs. If provided, the Workspace
+            will publish events to this URL, for example, to collect data for
+            reporting. See [Workspace
+            Events](https://www.twilio.com/docs/taskrouter/api/event) for more
+            information. This parameter supports Twilio's [Webhooks (HTTP
+            callbacks) Connection
+            Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
         events_filter:
           type: string
           nullable: true
-          description: The list of Workspace events for which to call `event_callback_url`.
-            For example, if `EventsFilter=task.created, task.canceled, worker.activity.update`,
-            then TaskRouter will call event_callback_url only when a task is created,
-            canceled, or a Worker activity is updated.
+          description: >-
+            The list of Workspace events for which to call `event_callback_url`.
+            For example, if `EventsFilter=task.created, task.canceled,
+            worker.activity.update`, then TaskRouter will call
+            event_callback_url only when a task is created, canceled, or a
+            Worker activity is updated.
         friendly_name:
           type: string
           nullable: true
-          description: The string that you assigned to describe the Workspace resource.
-            For example `Customer Support` or `2014 Election Campaign`.
+          description: >-
+            The string that you assigned to describe the Workspace resource. For
+            example `Customer Support` or `2014 Election Campaign`.
           x-twilio:
             pii:
               handling: standard
@@ -1688,19 +1861,23 @@ components:
         multi_task_enabled:
           type: boolean
           nullable: true
-          description: Whether multi-tasking is enabled. The default is `true`, which
-            enables multi-tasking. Multi-tasking allows Workers to handle multiple
-            Tasks simultaneously. When enabled (`true`), each Worker can receive parallel
-            reservations up to the per-channel maximums defined in the Workers section.
-            In single-tasking each Worker would only receive a new reservation when
-            the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).
+          description: >-
+            Whether multi-tasking is enabled. The default is `true`, which
+            enables multi-tasking. Multi-tasking allows Workers to handle
+            multiple Tasks simultaneously. When enabled (`true`), each Worker
+            can receive parallel reservations up to the per-channel maximums
+            defined in the Workers section. In single-tasking each Worker would
+            only receive a new reservation when the previous task is completed.
+            Learn more at
+            [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).
         sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
-          description: The unique string that we created to identify the Workspace
+          description: >-
+            The unique string that we created to identify the Workspace
             resource.
         timeout_activity_name:
           type: string
@@ -1710,17 +1887,20 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
+          pattern: '^WA[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the Activity that will be assigned to a Worker when
-            a Task reservation times out without a response.
+          description: >-
+            The SID of the Activity that will be assigned to a Worker when a
+            Task reservation times out without a response.
         prioritize_queue_order:
           type: string
           $ref: '#/components/schemas/workspace_enum_queue_order'
           nullable: true
-          description: 'The type of TaskQueue to prioritize when Workers are receiving
-            Tasks from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the
-            default is `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).'
+          description: >-
+            The type of TaskQueue to prioritize when Workers are receiving Tasks
+            from both types of TaskQueues. Can be: `LIFO` or `FIFO` and the
+            default is `FIFO`. For more information, see [Queue
+            Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).
         url:
           type: string
           format: uri
@@ -1734,8 +1914,8 @@ components:
     workspace_enum_queue_order:
       type: string
       enum:
-      - FIFO
-      - LIFO
+        - FIFO
+        - LIFO
     taskrouter.v1.workspace.workspace_cumulative_statistics:
       type: object
       properties:
@@ -1743,10 +1923,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workspace resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workspace resource.
         avg_task_acceptance_time:
           type: integer
           nullable: true
@@ -1755,15 +1937,18 @@ components:
           type: string
           format: date-time
           nullable: true
-          description: The beginning of the interval during which these statistics
-            were calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          description: >-
+            The beginning of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
             format.
         end_time:
           type: string
           format: date-time
           nullable: true
-          description: The end of the interval during which these statistics were
-            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+          description: >-
+            The end of the interval during which these statistics were
+            calculated, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
         reservations_created:
           type: integer
           nullable: true
@@ -1790,17 +1975,20 @@ components:
           description: The total number of Reservations that were rescinded.
         split_by_wait_time:
           nullable: true
-          description: A list of objects that describe the number of Tasks canceled
-            and reservations accepted above and below the thresholds specified in
+          description: >-
+            A list of objects that describe the number of Tasks canceled and
+            reservations accepted above and below the thresholds specified in
             seconds.
         wait_duration_until_accepted:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks that were accepted.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks that were accepted.
         wait_duration_until_canceled:
           nullable: true
-          description: The wait duration statistics (`avg`, `min`, `max`, `total`)
-            for Tasks that were canceled.
+          description: >-
+            The wait duration statistics (`avg`, `min`, `max`, `total`) for
+            Tasks that were canceled.
         tasks_canceled:
           type: integer
           nullable: true
@@ -1820,18 +2008,18 @@ components:
         tasks_moved:
           type: integer
           nullable: true
-          description: The total number of Tasks that were moved from one queue to
-            another.
+          description: The total number of Tasks that were moved from one queue to another.
         tasks_timed_out_in_workflow:
           type: integer
           nullable: true
-          description: The total number of Tasks that were timed out of their Workflows
+          description: >-
+            The total number of Tasks that were timed out of their Workflows
             (and deleted).
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace.
         url:
@@ -1846,10 +2034,12 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workspace resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workspace resource.
         activity_statistics:
           type: array
           items: {}
@@ -1863,17 +2053,20 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
+          pattern: '^WT[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the longest waiting Task.
         tasks_by_priority:
           nullable: true
-          description: 'The number of Tasks by priority. For example: `{"0": "10",
-            "99": "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.'
+          description: >-
+            The number of Tasks by priority. For example: `{"0": "10", "99":
+            "5"}` shows 10 Tasks at priority 0 and 5 at priority 99.
         tasks_by_status:
           nullable: true
-          description: 'The number of Tasks by their current status. For example:
-            `{"pending": "1", "reserved": "3", "assigned": "2", "completed": "5"}`.'
+          description: >-
+            The number of Tasks by their current status. For example:
+            `{"pending": "1", "reserved": "3", "assigned": "2", "completed":
+            "5"}`.
         total_tasks:
           type: integer
           nullable: true
@@ -1886,7 +2079,7 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace.
         url:
@@ -1907,15 +2100,17 @@ components:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^AC[0-9a-fA-F]{32}$
+          pattern: '^AC[0-9a-fA-F]{32}$'
           nullable: true
-          description: The SID of the [Account](https://www.twilio.com/docs/iam/api/account)
-            that created the Workspace resource.
+          description: >-
+            The SID of the
+            [Account](https://www.twilio.com/docs/iam/api/account) that created
+            the Workspace resource.
         workspace_sid:
           type: string
           minLength: 34
           maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
+          pattern: '^WS[0-9a-fA-F]{32}$'
           nullable: true
           description: The SID of the Workspace.
         url:
@@ -1928,53 +2123,55 @@ components:
       type: http
       scheme: basic
 info:
-  title: Twilio - Taskrouter
+  title: Twilio Task Router API
   description: This is the public Twilio REST API.
-  termsOfService: https://www.twilio.com/legal/tos
+  termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
-    url: https://support.twilio.com
+    url: 'https://support.twilio.com'
     email: support@twilio.com
   license:
     name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
   version: 1.52.0
 openapi: 3.0.1
 paths:
-  /v1/Workspaces/{WorkspaceSid}/Activities/{Sid}:
+  '/v1/Workspaces/{WorkspaceSid}/Activities/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Activity
+        - Task Routers
+        - Workspaces
+        - Activities
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Activity resources to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Activity resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Activity resources to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Activity resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WA[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -1983,33 +2180,36 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.activity'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchActivity
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Activity
     post:
       description: ''
       tags:
-      - TaskrouterV1Activity
+        - Task Routers
+        - Workspaces
+        - Activities
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Activity resources to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Activity resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Activity resources to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Activity resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WA[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -2018,10 +2218,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.activity'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateActivity
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2031,99 +2231,109 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: 'A descriptive string that you create to describe the
-                    Activity resource. It can be up to 64 characters long. These names
-                    are used to calculate and expose statistics about Workers, and
-                    provide visibility into the state of each Worker. Examples of
-                    friendly names include: `on-call`, `break`, and `email`.'
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Activity resource. It can be up to 64 characters long. These
+                    names are used to calculate and expose statistics about
+                    Workers, and provide visibility into the state of each
+                    Worker. Examples of friendly names include: `on-call`,
+                    `break`, and `email`.
+      summary: Update Workspace Activity
     delete:
       description: ''
       tags:
-      - TaskrouterV1Activity
+        - Task Routers
+        - Workspaces
+        - Activities
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Activity resources to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Activity resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Activity resources to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Activity resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WA[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteActivity
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Activities:
+        - GA
+      summary: Delete Workspace Activity
+  '/v1/Workspaces/{WorkspaceSid}/Activities':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: list
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Activity
+        - Task Routers
+        - Workspaces
+        - Activities
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Activity resources to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the Activity resources to read.
-        schema:
-          type: string
-      - name: Available
-        in: query
-        description: Whether return only Activity resources that are available or
-          unavailable. A value of `true` returns only available activities. Values
-          of '1' or `yes` also indicate `true`. All other values represent `false`
-          and return activities that are unavailable.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Activity resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: FriendlyName
+          in: query
+          description: The `friendly_name` of the Activity resources to read.
+          schema:
+            type: string
+        - name: Available
+          in: query
+          description: >-
+            Whether return only Activity resources that are available or
+            unavailable. A value of `true` returns only available activities.
+            Values of '1' or `yes` also indicate `true`. All other values
+            represent `false` and return activities that are unavailable.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2161,24 +2371,27 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListActivity
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Activities
     post:
       description: ''
       tags:
-      - TaskrouterV1Activity
+        - Task Routers
+        - Workspaces
+        - Activities
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new Activity belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new Activity belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -2187,10 +2400,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.activity'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateActivity
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2200,54 +2413,60 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: 'A descriptive string that you create to describe the
-                    Activity resource. It can be up to 64 characters long. These names
-                    are used to calculate and expose statistics about Workers, and
-                    provide visibility into the state of each Worker. Examples of
-                    friendly names include: `on-call`, `break`, and `email`.'
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Activity resource. It can be up to 64 characters long. These
+                    names are used to calculate and expose statistics about
+                    Workers, and provide visibility into the state of each
+                    Worker. Examples of friendly names include: `on-call`,
+                    `break`, and `email`.
                 Available:
                   type: boolean
-                  description: Whether the Worker should be eligible to receive a
-                    Task when it occupies the Activity. A value of `true`, `1`, or
-                    `yes` specifies the Activity is available. All other values specify
-                    that it is not. The value cannot be changed after the Activity
-                    is created.
+                  description: >-
+                    Whether the Worker should be eligible to receive a Task when
+                    it occupies the Activity. A value of `true`, `1`, or `yes`
+                    specifies the Activity is available. All other values
+                    specify that it is not. The value cannot be changed after
+                    the Activity is created.
               required:
-              - FriendlyName
-  /v1/Workspaces/{WorkspaceSid}/Events/{Sid}:
+                - FriendlyName
+      summary: Create Workspace Activity
+  '/v1/Workspaces/{WorkspaceSid}/Events/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - description
-      - event_date
+        - sid
+        - description
+        - event_date
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Event
+        - Task Routers
+        - Workspaces
+        - Events
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Event to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Event resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^EV[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Event to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Event resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^EV[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -2256,141 +2475,159 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.event'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchEvent
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Events:
+        - GA
+      summary: Retrieve Workspace Event
+  '/v1/Workspaces/{WorkspaceSid}/Events':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - description
-      - event_date
+        - sid
+        - description
+        - event_date
       pathType: list
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Event
+        - Task Routers
+        - Workspaces
+        - Events
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Events to read. Returns only
-          the Events that pertain to the specified Workspace.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only include Events that occurred on or before this date, specified
-          in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: EventType
-        in: query
-        description: The type of Events to read. Returns only Events of the type specified.
-        schema:
-          type: string
-      - name: Minutes
-        in: query
-        description: The period of events to read in minutes. Returns only Events
-          that occurred since this many minutes in the past. The default is `15` minutes.
-          Task Attributes for Events occuring more 43,200 minutes ago will be redacted.
-        schema:
-          type: integer
-      - name: ReservationSid
-        in: query
-        description: The SID of the Reservation with the Events to read. Returns only
-          Events that pertain to the specified Reservation.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
-      - name: StartDate
-        in: query
-        description: Only include Events from on or after this date and time, specified
-          in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Task Attributes
-          for Events older than 30 days will be redacted.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskQueueSid
-        in: query
-        description: The SID of the TaskQueue with the Events to read. Returns only
-          the Events that pertain to the specified TaskQueue.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-      - name: TaskSid
-        in: query
-        description: The SID of the Task with the Events to read. Returns only the
-          Events that pertain to the specified Task.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-      - name: WorkerSid
-        in: query
-        description: The SID of the Worker with the Events to read. Returns only the
-          Events that pertain to the specified Worker.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-      - name: WorkflowSid
-        in: query
-        description: The SID of the Workflow with the Events to read. Returns only
-          the Events that pertain to the specified Workflow.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-      - name: TaskChannel
-        in: query
-        description: The TaskChannel with the Events to read. Returns only the Events
-          that pertain to the specified TaskChannel.
-        schema:
-          type: string
-      - name: Sid
-        in: query
-        description: The SID of the Event resource to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^EV[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: >-
+            The SID of the Workspace with the Events to read. Returns only the
+            Events that pertain to the specified Workspace.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only include Events that occurred on or before this date, specified
+            in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: EventType
+          in: query
+          description: >-
+            The type of Events to read. Returns only Events of the type
+            specified.
+          schema:
+            type: string
+        - name: Minutes
+          in: query
+          description: >-
+            The period of events to read in minutes. Returns only Events that
+            occurred since this many minutes in the past. The default is `15`
+            minutes. Task Attributes for Events occuring more 43,200 minutes ago
+            will be redacted.
+          schema:
+            type: integer
+        - name: ReservationSid
+          in: query
+          description: >-
+            The SID of the Reservation with the Events to read. Returns only
+            Events that pertain to the specified Reservation.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WR[0-9a-fA-F]{32}$'
+        - name: StartDate
+          in: query
+          description: >-
+            Only include Events from on or after this date and time, specified
+            in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format. Task
+            Attributes for Events older than 30 days will be redacted.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskQueueSid
+          in: query
+          description: >-
+            The SID of the TaskQueue with the Events to read. Returns only the
+            Events that pertain to the specified TaskQueue.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+        - name: TaskSid
+          in: query
+          description: >-
+            The SID of the Task with the Events to read. Returns only the Events
+            that pertain to the specified Task.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+        - name: WorkerSid
+          in: query
+          description: >-
+            The SID of the Worker with the Events to read. Returns only the
+            Events that pertain to the specified Worker.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+        - name: WorkflowSid
+          in: query
+          description: >-
+            The SID of the Workflow with the Events to read. Returns only the
+            Events that pertain to the specified Workflow.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+        - name: TaskChannel
+          in: query
+          description: >-
+            The TaskChannel with the Events to read. Returns only the Events
+            that pertain to the specified TaskChannel.
+          schema:
+            type: string
+        - name: Sid
+          in: query
+          description: The SID of the Event resource to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^EV[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2428,52 +2665,55 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListEvent
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}:
+        - GA
+      summary: Retrieve Workspace Events
+  '/v1/Workspaces/{WorkspaceSid}/Tasks/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - age
-      - assignment_status
-      - priority
-      - reason
+        - sid
+        - age
+        - assignment_status
+        - priority
+        - reason
       pathType: instance
       dependentProperties:
         reservations:
           mapping:
             workspace_sid: workspace_sid
             task_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Tasks/{task_sid}/Reservations
-      parent: /Workspaces/{Sid}
+          resource_url: '/v1/Workspaces/{workspace_sid}/Tasks/{task_sid}/Reservations'
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Task
+        - Task Routers
+        - Workspaces
+        - Tasks
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -2482,40 +2722,46 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTask
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task
     post:
       description: ''
       tags:
-      - TaskrouterV1Task
+        - Task Routers
+        - Workspaces
+        - Tasks
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: If provided, applies this mutation if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
-          header of the Task matches the provided value. This matches the semantics
-          of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: >-
+            If provided, applies this mutation if (and only if) the
+            [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+            header of the Task matches the provided value. This matches the
+            semantics of (and is implemented with) the HTTP [If-Match
+            header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2524,10 +2770,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateTask
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2537,195 +2783,226 @@ paths:
               properties:
                 Attributes:
                   type: string
-                  description: The JSON string that describes the custom attributes
-                    of the task.
+                  description: >-
+                    The JSON string that describes the custom attributes of the
+                    task.
                 AssignmentStatus:
                   type: string
                   $ref: '#/components/schemas/task_enum_status'
-                  description: 'The new status of the task. Can be: `canceled`, to
-                    cancel a Task that is currently `pending` or `reserved`; `wrapping`,
-                    to move the Task to wrapup state; or `completed`, to move a Task
-                    to the completed state.'
+                  description: >-
+                    The new status of the task. Can be: `canceled`, to cancel a
+                    Task that is currently `pending` or `reserved`; `wrapping`,
+                    to move the Task to wrapup state; or `completed`, to move a
+                    Task to the completed state.
                 Reason:
                   type: string
-                  description: The reason that the Task was canceled or completed.
-                    This parameter is required only if the Task is canceled or completed.
-                    Setting this value queues the task for deletion and logs the reason.
+                  description: >-
+                    The reason that the Task was canceled or completed. This
+                    parameter is required only if the Task is canceled or
+                    completed. Setting this value queues the task for deletion
+                    and logs the reason.
                 Priority:
                   type: integer
-                  description: The Task's new priority value. When supplied, the Task
-                    takes on the specified priority unless it matches a Workflow Target
-                    with a Priority set. Value can be 0 to 2^31^ (2,147,483,647).
+                  description: >-
+                    The Task's new priority value. When supplied, the Task takes
+                    on the specified priority unless it matches a Workflow
+                    Target with a Priority set. Value can be 0 to 2^31^
+                    (2,147,483,647).
                 TaskChannel:
                   type: string
-                  description: When MultiTasking is enabled, specify the TaskChannel
-                    with the task to update. Can be the TaskChannel's SID or its `unique_name`,
-                    such as `voice`, `sms`, or `default`.
+                  description: >-
+                    When MultiTasking is enabled, specify the TaskChannel with
+                    the task to update. Can be the TaskChannel's SID or its
+                    `unique_name`, such as `voice`, `sms`, or `default`.
                 VirtualStartTime:
                   type: string
                   format: date-time
-                  description: The task's new virtual start time value. When supplied,
-                    the Task takes on the specified virtual start time. Value can't
+                  description: >-
+                    The task's new virtual start time value. When supplied, the
+                    Task takes on the specified virtual start time. Value can't
                     be in the future.
+      summary: Update Workspace Task
     delete:
       description: ''
       tags:
-      - TaskrouterV1Task
+        - Task Routers
+        - Workspaces
+        - Tasks
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: If provided, deletes this Task if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
-          header of the Task matches the provided value. This matches the semantics
-          of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: >-
+            If provided, deletes this Task if (and only if) the
+            [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
+            header of the Task matches the provided value. This matches the
+            semantics of (and is implemented with) the HTTP [If-Match
+            header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+          schema:
+            type: string
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteTask
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Tasks:
+        - GA
+      summary: Delete Workspace Task
+  '/v1/Workspaces/{WorkspaceSid}/Tasks':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - age
-      - assignment_status
-      - priority
-      - reason
+        - sid
+        - age
+        - assignment_status
+        - priority
+        - reason
       pathType: list
       dependentProperties:
         reservations:
           mapping:
             workspace_sid: workspace_sid
             task_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Tasks/{task_sid}/Reservations
-      parent: /Workspaces/{Sid}
+          resource_url: '/v1/Workspaces/{workspace_sid}/Tasks/{task_sid}/Reservations'
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Task
+        - Task Routers
+        - Workspaces
+        - Tasks
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Tasks to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Priority
-        in: query
-        description: The priority value of the Tasks to read. Returns the list of
-          all Tasks in the Workspace with the specified priority.
-        schema:
-          type: integer
-      - name: AssignmentStatus
-        in: query
-        description: 'The `assignment_status` of the Tasks you want to read. Can be:
-          `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or `completed`.
-          Returns all Tasks in the Workspace with the specified `assignment_status`.'
-        schema:
-          type: array
-          items:
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Tasks to read.
+          schema:
             type: string
-      - name: WorkflowSid
-        in: query
-        description: The SID of the Workflow with the Tasks to read. Returns the Tasks
-          controlled by the Workflow identified by this SID.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-      - name: WorkflowName
-        in: query
-        description: The friendly name of the Workflow with the Tasks to read. Returns
-          the Tasks controlled by the Workflow identified by this friendly name.
-        schema:
-          type: string
-      - name: TaskQueueSid
-        in: query
-        description: The SID of the TaskQueue with the Tasks to read. Returns the
-          Tasks waiting in the TaskQueue identified by this SID.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-      - name: TaskQueueName
-        in: query
-        description: The `friendly_name` of the TaskQueue with the Tasks to read.
-          Returns the Tasks waiting in the TaskQueue identified by this friendly name.
-        schema:
-          type: string
-      - name: EvaluateTaskAttributes
-        in: query
-        description: The attributes of the Tasks to read. Returns the Tasks that match
-          the attributes specified in this parameter.
-        schema:
-          type: string
-      - name: Ordering
-        in: query
-        description: 'How to order the returned Task resources. By default, Tasks
-          are sorted by ascending DateCreated. This value is specified as: `Attribute:Order`,
-          where `Attribute` can be either `DateCreated`, `Priority`, or `VirtualStartTime`
-          and `Order` can be either `asc` or `desc`. For example, `Priority:desc`
-          returns Tasks ordered in descending order of their Priority. Pairings of
-          sort orders can be specified in a comma-separated list such as `Priority:desc,DateCreated:asc`,
-          which returns the Tasks in descending Priority order and ascending DateCreated
-          Order. The only ordering pairing not allowed is DateCreated and VirtualStartTime.'
-        schema:
-          type: string
-      - name: HasAddons
-        in: query
-        description: Whether to read Tasks with Add-ons. If `true`, returns only Tasks
-          with Add-ons. If `false`, returns only Tasks without Add-ons.
-        schema:
-          type: boolean
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Priority
+          in: query
+          description: >-
+            The priority value of the Tasks to read. Returns the list of all
+            Tasks in the Workspace with the specified priority.
+          schema:
+            type: integer
+        - name: AssignmentStatus
+          in: query
+          description: >-
+            The `assignment_status` of the Tasks you want to read. Can be:
+            `pending`, `reserved`, `assigned`, `canceled`, `wrapping`, or
+            `completed`. Returns all Tasks in the Workspace with the specified
+            `assignment_status`.
+          schema:
+            type: array
+            items:
+              type: string
+        - name: WorkflowSid
+          in: query
+          description: >-
+            The SID of the Workflow with the Tasks to read. Returns the Tasks
+            controlled by the Workflow identified by this SID.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+        - name: WorkflowName
+          in: query
+          description: >-
+            The friendly name of the Workflow with the Tasks to read. Returns
+            the Tasks controlled by the Workflow identified by this friendly
+            name.
+          schema:
+            type: string
+        - name: TaskQueueSid
+          in: query
+          description: >-
+            The SID of the TaskQueue with the Tasks to read. Returns the Tasks
+            waiting in the TaskQueue identified by this SID.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+        - name: TaskQueueName
+          in: query
+          description: >-
+            The `friendly_name` of the TaskQueue with the Tasks to read. Returns
+            the Tasks waiting in the TaskQueue identified by this friendly name.
+          schema:
+            type: string
+        - name: EvaluateTaskAttributes
+          in: query
+          description: >-
+            The attributes of the Tasks to read. Returns the Tasks that match
+            the attributes specified in this parameter.
+          schema:
+            type: string
+        - name: Ordering
+          in: query
+          description: >-
+            How to order the returned Task resources. By default, Tasks are
+            sorted by ascending DateCreated. This value is specified as:
+            `Attribute:Order`, where `Attribute` can be either `DateCreated`,
+            `Priority`, or `VirtualStartTime` and `Order` can be either `asc` or
+            `desc`. For example, `Priority:desc` returns Tasks ordered in
+            descending order of their Priority. Pairings of sort orders can be
+            specified in a comma-separated list such as
+            `Priority:desc,DateCreated:asc`, which returns the Tasks in
+            descending Priority order and ascending DateCreated Order. The only
+            ordering pairing not allowed is DateCreated and VirtualStartTime.
+          schema:
+            type: string
+        - name: HasAddons
+          in: query
+          description: >-
+            Whether to read Tasks with Add-ons. If `true`, returns only Tasks
+            with Add-ons. If `false`, returns only Tasks without Add-ons.
+          schema:
+            type: boolean
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -2763,24 +3040,27 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTask
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Tasks
     post:
       description: ''
       tags:
-      - TaskrouterV1Task
+        - Task Routers
+        - Workspaces
+        - Tasks
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new Task belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new Task belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -2789,10 +3069,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateTask
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2802,77 +3082,90 @@ paths:
               properties:
                 Timeout:
                   type: integer
-                  description: The amount of time in seconds the new task can live
-                    before being assigned. Can be up to a maximum of 2 weeks (1,209,600
-                    seconds). The default value is 24 hours (86,400 seconds). On timeout,
-                    the `task.canceled` event will fire with description `Task TTL
-                    Exceeded`.
+                  description: >-
+                    The amount of time in seconds the new task can live before
+                    being assigned. Can be up to a maximum of 2 weeks (1,209,600
+                    seconds). The default value is 24 hours (86,400 seconds). On
+                    timeout, the `task.canceled` event will fire with
+                    description `Task TTL Exceeded`.
                 Priority:
                   type: integer
-                  description: The priority to assign the new task and override the
-                    default. When supplied, the new Task will have this priority unless
-                    it matches a Workflow Target with a Priority set. When not supplied,
-                    the new Task will have the priority of the matching Workflow Target.
-                    Value can be 0 to 2^31^ (2,147,483,647).
+                  description: >-
+                    The priority to assign the new task and override the
+                    default. When supplied, the new Task will have this priority
+                    unless it matches a Workflow Target with a Priority set.
+                    When not supplied, the new Task will have the priority of
+                    the matching Workflow Target. Value can be 0 to 2^31^
+                    (2,147,483,647).
                 TaskChannel:
                   type: string
-                  description: When MultiTasking is enabled, specify the TaskChannel
-                    by passing either its `unique_name` or `sid`. Default value is
+                  description: >-
+                    When MultiTasking is enabled, specify the TaskChannel by
+                    passing either its `unique_name` or `sid`. Default value is
                     `default`.
                 WorkflowSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WW[0-9a-fA-F]{32}$
-                  description: The SID of the Workflow that you would like to handle
-                    routing for the new Task. If there is only one Workflow defined
-                    for the Workspace that you are posting the new task to, this parameter
-                    is optional.
+                  pattern: '^WW[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Workflow that you would like to handle
+                    routing for the new Task. If there is only one Workflow
+                    defined for the Workspace that you are posting the new task
+                    to, this parameter is optional.
                 Attributes:
                   type: string
-                  description: 'A URL-encoded JSON string with the attributes of the
-                    new task. This value is passed to the Workflow''s `assignment_callback_url`
-                    when the Task is assigned to a Worker. For example: `{ "task_type":
-                    "call", "twilio_call_sid": "CAxxx", "customer_ticket_number":
-                    "12345" }`.'
+                  description: >-
+                    A URL-encoded JSON string with the attributes of the new
+                    task. This value is passed to the Workflow's
+                    `assignment_callback_url` when the Task is assigned to a
+                    Worker. For example: `{ "task_type": "call",
+                    "twilio_call_sid": "CAxxx", "customer_ticket_number":
+                    "12345" }`.
                 VirtualStartTime:
                   type: string
                   format: date-time
-                  description: The virtual start time to assign the new task and override
-                    the default. When supplied, the new task will have this virtual
-                    start time. When not supplied, the new task will have the virtual
-                    start time equal to `date_created`. Value can't be in the future.
-  /v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}:
+                  description: >-
+                    The virtual start time to assign the new task and override
+                    the default. When supplied, the new task will have this
+                    virtual start time. When not supplied, the new task will
+                    have the virtual start time equal to `date_created`. Value
+                    can't be in the future.
+      summary: Create Workspace Task
+  '/v1/Workspaces/{WorkspaceSid}/TaskChannels/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Types of tasks
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskChannel
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task Channel to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task Channel resource to fetch.
-        schema:
-          type: string
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task Channel to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task Channel resource to fetch.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2881,30 +3174,34 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_channel'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskChannel
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task Channel
     post:
       description: ''
       tags:
-      - TaskrouterV1TaskChannel
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task Channel to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task Channel resource to update.
-        schema:
-          type: string
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task Channel to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task Channel resource to update.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
@@ -2913,10 +3210,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_channel'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateTaskChannel
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -2926,85 +3223,96 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    Task Channel. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the Task
+                    Channel. It can be up to 64 characters long.
                 ChannelOptimizedRouting:
                   type: boolean
-                  description: Whether the TaskChannel should prioritize Workers that
-                    have been idle. If `true`, Workers that have been idle the longest
-                    are prioritized.
+                  description: >-
+                    Whether the TaskChannel should prioritize Workers that have
+                    been idle. If `true`, Workers that have been idle the
+                    longest are prioritized.
+      summary: Update Workspace Task Channel
     delete:
       description: ''
       tags:
-      - TaskrouterV1TaskChannel
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task Channel to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Task Channel resource to delete.
-        schema:
-          type: string
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task Channel to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Task Channel resource to delete.
+          schema:
+            type: string
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteTaskChannel
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/TaskChannels:
+        - GA
+      summary: Delete Workspace Task Channel
+  '/v1/Workspaces/{WorkspaceSid}/TaskChannels':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Types of tasks
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - date_created
+        - sid
+        - friendly_name
+        - date_created
       pathType: list
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskChannel
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Task Channel to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Task Channel to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3016,7 +3324,8 @@ paths:
                   channels:
                     type: array
                     items:
-                      $ref: '#/components/schemas/taskrouter.v1.workspace.task_channel'
+                      $ref: >-
+                        #/components/schemas/taskrouter.v1.workspace.task_channel
                   meta:
                     type: object
                     properties:
@@ -3042,24 +3351,28 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTaskChannel
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task Channels
     post:
       description: ''
       tags:
-      - TaskrouterV1TaskChannel
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new Task Channel belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new Task Channel belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -3068,10 +3381,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_channel'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateTaskChannel
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3081,29 +3394,33 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    Task Channel. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the Task
+                    Channel. It can be up to 64 characters long.
                 UniqueName:
                   type: string
-                  description: An application-defined string that uniquely identifies
-                    the Task Channel, such as `voice` or `sms`.
+                  description: >-
+                    An application-defined string that uniquely identifies the
+                    Task Channel, such as `voice` or `sms`.
                 ChannelOptimizedRouting:
                   type: boolean
-                  description: Whether the Task Channel should prioritize Workers
-                    that have been idle. If `true`, Workers that have been idle the
+                  description: >-
+                    Whether the Task Channel should prioritize Workers that have
+                    been idle. If `true`, Workers that have been idle the
                     longest are prioritized.
               required:
-              - FriendlyName
-              - UniqueName
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}:
+                - FriendlyName
+                - UniqueName
+      summary: Create Workspace Task Channel
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - task_order
+        - sid
+        - friendly_name
+        - task_order
       pathType: instance
       dependentProperties:
         statistics:
@@ -3121,30 +3438,33 @@ paths:
             workspace_sid: workspace_sid
             task_queue_sid: sid
           resource_url: /v1None
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueue
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the TaskQueue resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the TaskQueue resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -3153,33 +3473,37 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskQueue
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task Queue
     post:
       description: ''
       tags:
-      - TaskrouterV1TaskQueue
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the TaskQueue resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the TaskQueue resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -3188,10 +3512,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateTaskQueue
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3201,81 +3525,94 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    TaskQueue. For example `Support-Tier 1`, `Sales`, or `Escalation`.
+                  description: >-
+                    A descriptive string that you create to describe the
+                    TaskQueue. For example `Support-Tier 1`, `Sales`, or
+                    `Escalation`.
                 TargetWorkers:
                   type: string
-                  description: A string describing the Worker selection criteria for
-                    any Tasks that enter the TaskQueue. For example '"language" ==
-                    "spanish"' If no TargetWorkers parameter is provided, Tasks will
-                    wait in the queue until they are either deleted or moved to another
-                    queue. Additional examples on how to describing Worker selection
-                    criteria below.
+                  description: >-
+                    A string describing the Worker selection criteria for any
+                    Tasks that enter the TaskQueue. For example '"language" ==
+                    "spanish"' If no TargetWorkers parameter is provided, Tasks
+                    will wait in the queue until they are either deleted or
+                    moved to another queue. Additional examples on how to
+                    describing Worker selection criteria below.
                 ReservationActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity to assign Workers when a task
-                    is reserved for them.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity to assign Workers when a task is
+                    reserved for them.
                 AssignmentActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity to assign Workers when a task
-                    is assigned for them.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity to assign Workers when a task is
+                    assigned for them.
                 MaxReservedWorkers:
                   type: integer
-                  description: The maximum number of Workers to create reservations
-                    for the assignment of a task while in the queue. Maximum of 50.
+                  description: >-
+                    The maximum number of Workers to create reservations for the
+                    assignment of a task while in the queue. Maximum of 50.
                 TaskOrder:
                   type: string
                   $ref: '#/components/schemas/task_queue_enum_task_order'
-                  description: 'How Tasks will be assigned to Workers. Can be: `FIFO`
-                    or `LIFO` and the default is `FIFO`. Use `FIFO` to assign the
-                    oldest task first and `LIFO` to assign the most recent task first.
-                    For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).'
+                  description: >-
+                    How Tasks will be assigned to Workers. Can be: `FIFO` or
+                    `LIFO` and the default is `FIFO`. Use `FIFO` to assign the
+                    oldest task first and `LIFO` to assign the most recent task
+                    first. For more information, see [Queue
+                    Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).
+      summary: Update Workspace Task Queue
     delete:
       description: ''
       tags:
-      - TaskrouterV1TaskQueue
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the TaskQueue resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the TaskQueue resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteTaskQueue
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues:
+        - GA
+      summary: Delete Workspace Task Queue
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - task_order
+        - sid
+        - friendly_name
+        - task_order
       pathType: list
       dependentProperties:
         statistics:
@@ -3293,68 +3630,73 @@ paths:
             workspace_sid: workspace_sid
             task_queue_sid: sid
           resource_url: /v1None
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueue
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the TaskQueue resources to read.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: EvaluateWorkerAttributes
-        in: query
-        description: The attributes of the Workers to read. Returns the TaskQueues
-          with Workers that match the attributes specified in this parameter.
-        schema:
-          type: string
-      - name: WorkerSid
-        in: query
-        description: The SID of the Worker with the TaskQueue resources to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-      - name: Ordering
-        in: query
-        description: Sorting parameter for TaskQueues
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: FriendlyName
+          in: query
+          description: The `friendly_name` of the TaskQueue resources to read.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: EvaluateWorkerAttributes
+          in: query
+          description: >-
+            The attributes of the Workers to read. Returns the TaskQueues with
+            Workers that match the attributes specified in this parameter.
+          schema:
+            type: string
+        - name: WorkerSid
+          in: query
+          description: The SID of the Worker with the TaskQueue resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+        - name: Ordering
+          in: query
+          description: Sorting parameter for TaskQueues
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3392,24 +3734,28 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTaskQueue
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task Queues
     post:
       description: ''
       tags:
-      - TaskrouterV1TaskQueue
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new TaskQueue belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new TaskQueue belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -3418,10 +3764,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateTaskQueue
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3431,360 +3777,418 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    TaskQueue. For example `Support-Tier 1`, `Sales`, or `Escalation`.
+                  description: >-
+                    A descriptive string that you create to describe the
+                    TaskQueue. For example `Support-Tier 1`, `Sales`, or
+                    `Escalation`.
                 TargetWorkers:
                   type: string
-                  description: A string that describes the Worker selection criteria
-                    for any Tasks that enter the TaskQueue. For example, `'"language"
-                    == "spanish"'`. The default value is `1==1`. If this value is
-                    empty, Tasks will wait in the TaskQueue until they are deleted
-                    or moved to another TaskQueue. For more information about Worker
-                    selection, see [Describing Worker selection criteria](https://www.twilio.com/docs/taskrouter/api/taskqueues#target-workers).
+                  description: >-
+                    A string that describes the Worker selection criteria for
+                    any Tasks that enter the TaskQueue. For example,
+                    `'"language" == "spanish"'`. The default value is `1==1`. If
+                    this value is empty, Tasks will wait in the TaskQueue until
+                    they are deleted or moved to another TaskQueue. For more
+                    information about Worker selection, see [Describing Worker
+                    selection
+                    criteria](https://www.twilio.com/docs/taskrouter/api/taskqueues#target-workers).
                 MaxReservedWorkers:
                   type: integer
-                  description: The maximum number of Workers to reserve for the assignment
-                    of a Task in the queue. Can be an integer between 1 and 50, inclusive
-                    and defaults to 1.
+                  description: >-
+                    The maximum number of Workers to reserve for the assignment
+                    of a Task in the queue. Can be an integer between 1 and 50,
+                    inclusive and defaults to 1.
                 TaskOrder:
                   type: string
                   $ref: '#/components/schemas/task_queue_enum_task_order'
-                  description: How Tasks will be assigned to Workers. Set this parameter
-                    to `LIFO` to assign most recently created Task first or FIFO to
-                    assign the oldest Task first. Default is `FIFO`. [Click here](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo)
+                  description: >-
+                    How Tasks will be assigned to Workers. Set this parameter to
+                    `LIFO` to assign most recently created Task first or FIFO to
+                    assign the oldest Task first. Default is `FIFO`. [Click
+                    here](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo)
                     to learn more.
                 ReservationActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity to assign Workers when a task
-                    is reserved for them.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity to assign Workers when a task is
+                    reserved for them.
                 AssignmentActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity to assign Workers when a task
-                    is assigned to them.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity to assign Workers when a task is
+                    assigned to them.
               required:
-              - FriendlyName
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/RealTimeStatistics:
+                - FriendlyName
+      summary: Create Workspace Task Queue
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/RealTimeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - account_sid
-      - workspace_sid
-      - task_queue_data
-      - task_queue_response_count
+        - account_sid
+        - workspace_sid
+        - task_queue_data
+        - task_queue_response_count
       pathType: list
-      parent: /Workspaces/{WorkspaceSid}/TaskQueues
+      parent: '/Workspaces/{WorkspaceSid}/TaskQueues'
       mountName: bulk_real_time_statistics
       className: task_queue_bulk_real_time_statistics
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/CumulativeStatistics:
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/CumulativeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - start_time
-      - end_time
-      - avg_task_acceptance_time
-      - tasks_completed
+        - start_time
+        - end_time
+        - avg_task_acceptance_time
+        - tasks_completed
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/TaskQueues/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}'
       className: task_queue_cumulative_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueueCumulativeStatistics
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
+        - Cumulative
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskQueueSid
-        in: path
-        description: The SID of the TaskQueue for which to fetch statistics.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default is 15 minutes.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate cumulative statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed. TaskRouter will calculate statistics
-          on up to 10,000 Tasks/Reservations for any given threshold.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskQueueSid
+          in: path
+          description: The SID of the TaskQueue for which to fetch statistics.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default is 15 minutes.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate cumulative statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed. TaskRouter
+            will calculate statistics on up to 10,000 Tasks/Reservations for any
+            given threshold.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_cumulative_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_cumulative_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskQueueCumulativeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/RealTimeStatistics:
+        - GA
+      summary: Retrieve Workspace Task Queue Cumulative Statistics
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/RealTimeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - longest_task_waiting_age
-      - longest_task_waiting_sid
-      - total_tasks
+        - longest_task_waiting_age
+        - longest_task_waiting_sid
+        - total_tasks
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/TaskQueues/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}'
       className: task_queue_real_time_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueueRealTimeStatistics
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
+        - Real-Time
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskQueueSid
-        in: path
-        description: The SID of the TaskQueue for which to fetch statistics.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskChannel
-        in: query
-        description: The TaskChannel for which to fetch statistics. Can be the TaskChannel's
-          SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskQueueSid
+          in: path
+          description: The SID of the TaskQueue for which to fetch statistics.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskChannel
+          in: query
+          description: >-
+            The TaskChannel for which to fetch statistics. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_real_time_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_real_time_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskQueueRealTimeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/Statistics:
+        - GA
+      summary: Retrieve Workspace Task Queue Real-Time Statistics
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/{TaskQueueSid}/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/TaskQueues/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/TaskQueues/{Sid}'
       className: task_queue_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueueStatistics
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueue to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskQueueSid
-        in: path
-        description: The SID of the TaskQueue for which to fetch statistics.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default is 15 minutes.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate real-time and cumulative statistics for the specified
-          TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as
-          `voice`, `sms`, or `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueue to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskQueueSid
+          in: path
+          description: The SID of the TaskQueue for which to fetch statistics.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default is 15 minutes.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate real-time and cumulative statistics for the specified
+            TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such
+            as `voice`, `sms`, or `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.task_queue.task_queue_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskQueueStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/TaskQueues/Statistics:
+        - GA
+      summary: Retrieve Workspace Task Queue Statistics
+  '/v1/Workspaces/{WorkspaceSid}/TaskQueues/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: list
-      parent: /Workspaces/{WorkspaceSid}/TaskQueues
+      parent: '/Workspaces/{WorkspaceSid}/TaskQueues'
       className: task_queues_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1TaskQueuesStatistics
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Queues
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskQueues to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the TaskQueue statistics to read.
-        schema:
-          type: string
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default is 15 minutes.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate statistics on this TaskChannel. Can be the TaskChannel's
-          SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed.
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskQueues to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: FriendlyName
+          in: query
+          description: The `friendly_name` of the TaskQueue statistics to read.
+          schema:
+            type: string
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default is 15 minutes.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed.
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3796,7 +4200,8 @@ paths:
                   task_queues_statistics:
                     type: array
                     items:
-                      $ref: '#/components/schemas/taskrouter.v1.workspace.task_queue.task_queues_statistics'
+                      $ref: >-
+                        #/components/schemas/taskrouter.v1.workspace.task_queue.task_queues_statistics
                   meta:
                     type: object
                     properties:
@@ -3822,81 +4227,88 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTaskQueuesStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations:
+        - GA
+      summary: Retrieve Workspace Task Queues Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Tasks reserved for workers
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - reservation_status
-      - worker_name
-      - worker_sid
+        - sid
+        - reservation_status
+        - worker_name
+        - worker_sid
       pathType: list
-      parent: /Workspaces/{WorkspaceSid}/Tasks/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskReservation resources to
-          read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskSid
-        in: path
-        description: The SID of the reserved Task resource with the TaskReservation
-          resources to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
-      - name: ReservationStatus
-        in: query
-        description: 'Returns the list of reservations for a task with a specified
-          ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or `timeout`.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/task_reservation_enum_status'
-      - name: WorkerSid
-        in: query
-        description: The SID of the reserved Worker resource to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskReservation resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskSid
+          in: path
+          description: >-
+            The SID of the reserved Task resource with the TaskReservation
+            resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
+        - name: ReservationStatus
+          in: query
+          description: >-
+            Returns the list of reservations for a task with a specified
+            ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or
+            `timeout`.
+          schema:
+            type: string
+            $ref: '#/components/schemas/task_reservation_enum_status'
+        - name: WorkerSid
+          in: query
+          description: The SID of the reserved Worker resource to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -3908,7 +4320,8 @@ paths:
                   reservations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/taskrouter.v1.workspace.task.task_reservation'
+                      $ref: >-
+                        #/components/schemas/taskrouter.v1.workspace.task.task_reservation
                   meta:
                     type: object
                     properties:
@@ -3934,119 +4347,131 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListTaskReservation
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}:
+        - GA
+      summary: Retrieve Workspace Task Reservations
+  '/v1/Workspaces/{WorkspaceSid}/Tasks/{TaskSid}/Reservations/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Tasks reserved for workers
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - reservation_status
-      - worker_name
-      - worker_sid
+        - sid
+        - reservation_status
+        - worker_name
+        - worker_sid
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Tasks/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Tasks/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskReservation resource to
-          fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskSid
-        in: path
-        description: The SID of the reserved Task resource with the TaskReservation
-          resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the TaskReservation resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the TaskReservation resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskSid
+          in: path
+          description: >-
+            The SID of the reserved Task resource with the TaskReservation
+            resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the TaskReservation resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.task.task_reservation'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.task.task_reservation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchTaskReservation
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Task Reservation
     post:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Tasks
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the TaskReservation resources to
-          update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskSid
-        in: path
-        description: The SID of the reserved Task resource with the TaskReservation
-          resources to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WT[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the TaskReservation resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: >-
+            The SID of the Workspace with the TaskReservation resources to
+            update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskSid
+          in: path
+          description: >-
+            The SID of the reserved Task resource with the TaskReservation
+            resources to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WT[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the TaskReservation resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WR[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.task.task_reservation'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.task.task_reservation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateTaskReservation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4057,13 +4482,14 @@ paths:
                 ReservationStatus:
                   type: string
                   $ref: '#/components/schemas/task_reservation_enum_status'
-                  description: 'The new status of the reservation. Can be: `pending`,
-                    `accepted`, `rejected`, or `timeout`.'
+                  description: >-
+                    The new status of the reservation. Can be: `pending`,
+                    `accepted`, `rejected`, or `timeout`.
                 WorkerActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
+                  pattern: '^WA[0-9a-fA-F]{32}$'
                   description: The new worker activity SID if rejecting a reservation.
                 Instruction:
                   type: string
@@ -4072,250 +4498,303 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity resource to start after executing
-                    a Dequeue instruction.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity resource to start after executing a
+                    Dequeue instruction.
                 DequeueFrom:
                   type: string
-                  description: The Caller ID of the call to the worker when executing
-                    a Dequeue instruction.
+                  description: >-
+                    The Caller ID of the call to the worker when executing a
+                    Dequeue instruction.
                 DequeueRecord:
                   type: string
-                  description: Whether to record both legs of a call when executing
-                    a Dequeue instruction or which leg to record.
+                  description: >-
+                    Whether to record both legs of a call when executing a
+                    Dequeue instruction or which leg to record.
                 DequeueTimeout:
                   type: integer
                   description: Timeout for call when executing a Dequeue instruction.
                 DequeueTo:
                   type: string
-                  description: The Contact URI of the worker when executing a Dequeue
-                    instruction. Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The Contact URI of the worker when executing a Dequeue
+                    instruction. Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 DequeueStatusCallbackUrl:
                   type: string
                   format: uri
-                  description: The Callback URL for completed call event when executing
-                    a Dequeue instruction.
+                  description: >-
+                    The Callback URL for completed call event when executing a
+                    Dequeue instruction.
                 CallFrom:
                   type: string
-                  description: The Caller ID of the outbound call when executing a
-                    Call instruction.
+                  description: >-
+                    The Caller ID of the outbound call when executing a Call
+                    instruction.
                 CallRecord:
                   type: string
-                  description: Whether to record both legs of a call when executing
-                    a Call instruction or which leg to record.
+                  description: >-
+                    Whether to record both legs of a call when executing a Call
+                    instruction or which leg to record.
                 CallTimeout:
                   type: integer
                   description: Timeout for call when executing a Call instruction.
                 CallTo:
                   type: string
-                  description: The Contact URI of the worker when executing a Call
-                    instruction.  Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The Contact URI of the worker when executing a Call
+                    instruction.  Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 CallUrl:
                   type: string
                   format: uri
-                  description: TwiML URI executed on answering the worker's leg as
-                    a result of the Call instruction.
+                  description: >-
+                    TwiML URI executed on answering the worker's leg as a result
+                    of the Call instruction.
                 CallStatusCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL to call  for the completed call event when
-                    executing a Call instruction.
+                  description: >-
+                    The URL to call  for the completed call event when executing
+                    a Call instruction.
                 CallAccept:
                   type: boolean
-                  description: Whether to accept a reservation when executing a Call
+                  description: >-
+                    Whether to accept a reservation when executing a Call
                     instruction.
                 RedirectCallSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^CA[0-9a-fA-F]{32}$
-                  description: The Call SID of the call parked in the queue when executing
+                  pattern: '^CA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The Call SID of the call parked in the queue when executing
                     a Redirect instruction.
                 RedirectAccept:
                   type: boolean
-                  description: Whether the reservation should be accepted when executing
-                    a Redirect instruction.
+                  description: >-
+                    Whether the reservation should be accepted when executing a
+                    Redirect instruction.
                 RedirectUrl:
                   type: string
                   format: uri
-                  description: TwiML URI to redirect the call to when executing the
+                  description: >-
+                    TwiML URI to redirect the call to when executing the
                     Redirect instruction.
                 To:
                   type: string
-                  description: The Contact URI of the worker when executing a Conference
-                    instruction. Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The Contact URI of the worker when executing a Conference
+                    instruction. Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 From:
                   type: string
-                  description: The Caller ID of the call to the worker when executing
-                    a Conference instruction.
+                  description: >-
+                    The Caller ID of the call to the worker when executing a
+                    Conference instruction.
                 StatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `status_callback_method`
-                    to send status information to your application.
+                  description: >-
+                    The URL we should call using the `status_callback_method` to
+                    send status information to your application.
                 StatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `status_callback`.
-                    Can be: `POST` or `GET` and the default is `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call `status_callback`. Can
+                    be: `POST` or `GET` and the default is `POST`.
                 StatusCallbackEvent:
                   type: array
                   items:
                     type: string
                     $ref: '#/components/schemas/task_reservation_enum_call_status'
-                  description: 'The call progress events that we will send to `status_callback`.
-                    Can be: `initiated`, `ringing`, `answered`, or `completed`.'
+                  description: >-
+                    The call progress events that we will send to
+                    `status_callback`. Can be: `initiated`, `ringing`,
+                    `answered`, or `completed`.
                 Timeout:
                   type: integer
                   description: Timeout for call when executing a Conference instruction.
                 Record:
                   type: boolean
-                  description: Whether to record the participant and their conferences,
-                    including the time between conferences. The default is `false`.
+                  description: >-
+                    Whether to record the participant and their conferences,
+                    including the time between conferences. The default is
+                    `false`.
                 Muted:
                   type: boolean
-                  description: Whether the agent is muted in the conference. The default
-                    is `false`.
+                  description: >-
+                    Whether the agent is muted in the conference. The default is
+                    `false`.
                 Beep:
                   type: string
-                  description: 'Whether to play a notification beep when the participant
-                    joins or when to play a beep. Can be: `true`, `false`, `onEnter`,
-                    or `onExit`. The default value is `true`.'
+                  description: >-
+                    Whether to play a notification beep when the participant
+                    joins or when to play a beep. Can be: `true`, `false`,
+                    `onEnter`, or `onExit`. The default value is `true`.
                 StartConferenceOnEnter:
                   type: boolean
-                  description: Whether to start the conference when the participant
-                    joins, if it has not already started. The default is `true`. If
-                    `false` and the conference has not started, the participant is
-                    muted and hears background music until another participant starts
-                    the conference.
+                  description: >-
+                    Whether to start the conference when the participant joins,
+                    if it has not already started. The default is `true`. If
+                    `false` and the conference has not started, the participant
+                    is muted and hears background music until another
+                    participant starts the conference.
                 EndConferenceOnExit:
                   type: boolean
                   description: Whether to end the conference when the agent leaves.
                 WaitUrl:
                   type: string
                   format: uri
-                  description: The URL we should call using the `wait_method` for
-                    the music to play while participants are waiting for the conference
-                    to start. The default value is the URL of our standard hold music.
-                    [Learn more about hold music](https://www.twilio.com/labs/twimlets/holdmusic).
+                  description: >-
+                    The URL we should call using the `wait_method` for the music
+                    to play while participants are waiting for the conference to
+                    start. The default value is the URL of our standard hold
+                    music. [Learn more about hold
+                    music](https://www.twilio.com/labs/twimlets/holdmusic).
                 WaitMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: The HTTP method we should use to call `wait_url`. Can
-                    be `GET` or `POST` and the default is `POST`. When using a static
-                    audio file, this should be `GET` so that we can cache the file.
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call `wait_url`. Can be
+                    `GET` or `POST` and the default is `POST`. When using a
+                    static audio file, this should be `GET` so that we can cache
+                    the file.
                 EarlyMedia:
                   type: boolean
-                  description: Whether to allow an agent to hear the state of the
-                    outbound call, including ringing or disconnect messages. The default
+                  description: >-
+                    Whether to allow an agent to hear the state of the outbound
+                    call, including ringing or disconnect messages. The default
                     is `true`.
                 MaxParticipants:
                   type: integer
-                  description: The maximum number of participants in the conference.
-                    Can be a positive integer from `2` to `250`. The default value
-                    is `250`.
+                  description: >-
+                    The maximum number of participants in the conference. Can be
+                    a positive integer from `2` to `250`. The default value is
+                    `250`.
                 ConferenceStatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `conference_status_callback_method`
-                    when the conference events in `conference_status_callback_event`
-                    occur. Only the value set by the first participant to join the
-                    conference is used. Subsequent `conference_status_callback` values
-                    are ignored.
+                  description: >-
+                    The URL we should call using the
+                    `conference_status_callback_method` when the conference
+                    events in `conference_status_callback_event` occur. Only the
+                    value set by the first participant to join the conference is
+                    used. Subsequent `conference_status_callback` values are
+                    ignored.
                 ConferenceStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `conference_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call
+                    `conference_status_callback`. Can be: `GET` or `POST` and
+                    defaults to `POST`.
                 ConferenceStatusCallbackEvent:
                   type: array
                   items:
                     type: string
-                    $ref: '#/components/schemas/task_reservation_enum_conference_event'
-                  description: 'The conference status events that we will send to
-                    `conference_status_callback`. Can be: `start`, `end`, `join`,
-                    `leave`, `mute`, `hold`, `speaker`.'
+                    $ref: >-
+                      #/components/schemas/task_reservation_enum_conference_event
+                  description: >-
+                    The conference status events that we will send to
+                    `conference_status_callback`. Can be: `start`, `end`,
+                    `join`, `leave`, `mute`, `hold`, `speaker`.
                 ConferenceRecord:
                   type: string
-                  description: 'Whether to record the conference the participant is
-                    joining or when to record the conference. Can be: `true`, `false`,
-                    `record-from-start`, and `do-not-record`. The default value is
-                    `false`.'
+                  description: >-
+                    Whether to record the conference the participant is joining
+                    or when to record the conference. Can be: `true`, `false`,
+                    `record-from-start`, and `do-not-record`. The default value
+                    is `false`.
                 ConferenceTrim:
                   type: string
-                  description: 'How to trim the leading and trailing silence from
-                    your recorded conference audio files. Can be: `trim-silence` or
-                    `do-not-trim` and defaults to `trim-silence`.'
+                  description: >-
+                    How to trim the leading and trailing silence from your
+                    recorded conference audio files. Can be: `trim-silence` or
+                    `do-not-trim` and defaults to `trim-silence`.
                 RecordingChannels:
                   type: string
-                  description: 'The recording channels for the final recording. Can
-                    be: `mono` or `dual` and the default is `mono`.'
+                  description: >-
+                    The recording channels for the final recording. Can be:
+                    `mono` or `dual` and the default is `mono`.
                 RecordingStatusCallback:
                   type: string
                   format: uri
-                  description: The URL that we should call using the `recording_status_callback_method`
-                    when the recording status changes.
+                  description: >-
+                    The URL that we should call using the
+                    `recording_status_callback_method` when the recording status
+                    changes.
                 RecordingStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use when we call `recording_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use when we call
+                    `recording_status_callback`. Can be: `GET` or `POST` and
+                    defaults to `POST`.
                 ConferenceRecordingStatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `conference_recording_status_callback_method`
-                    when the conference recording is available.
+                  description: >-
+                    The URL we should call using the
+                    `conference_recording_status_callback_method` when the
+                    conference recording is available.
                 ConferenceRecordingStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `conference_recording_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call
+                    `conference_recording_status_callback`. Can be: `GET` or
+                    `POST` and defaults to `POST`.
                 Region:
                   type: string
-                  description: The [region](https://support.twilio.com/hc/en-us/articles/223132167-How-global-low-latency-routing-and-region-selection-work-for-conferences-and-Client-calls)
-                    where we should mix the recorded audio. Can be:`us1`, `ie1`, `de1`,
-                    `sg1`, `br1`, `au1`, or `jp1`.
+                  description: >-
+                    The
+                    [region](https://support.twilio.com/hc/en-us/articles/223132167-How-global-low-latency-routing-and-region-selection-work-for-conferences-and-Client-calls)
+                    where we should mix the recorded audio. Can be:`us1`, `ie1`,
+                    `de1`, `sg1`, `br1`, `au1`, or `jp1`.
                 SipAuthUsername:
                   type: string
                   description: The SIP username used for authentication.
@@ -4326,43 +4805,49 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: The Call progress events sent via webhooks as a result
-                    of a Dequeue instruction.
+                  description: >-
+                    The Call progress events sent via webhooks as a result of a
+                    Dequeue instruction.
                 PostWorkActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The new worker activity SID after executing a Conference
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The new worker activity SID after executing a Conference
                     instruction.
                 SupervisorMode:
                   type: string
                   $ref: '#/components/schemas/task_reservation_enum_supervisor_mode'
-                  description: The Supervisor mode when executing the Supervise instruction.
+                  description: >-
+                    The Supervisor mode when executing the Supervise
+                    instruction.
                 Supervisor:
                   type: string
-                  description: The Supervisor SID/URI when executing the Supervise
+                  description: >-
+                    The Supervisor SID/URI when executing the Supervise
                     instruction.
                 EndConferenceOnCustomerExit:
                   type: boolean
                   description: Whether to end the conference when the customer leaves.
                 BeepOnCustomerEntrance:
                   type: boolean
-                  description: Whether to play a notification beep when the customer
-                    joins.
+                  description: Whether to play a notification beep when the customer joins.
                 JitterBufferSize:
                   type: string
-                  description: 'The jitter buffer size for conference. Can be: `small`,
-                    `medium`, `large`, `off`.'
-  /v1/Workspaces/{WorkspaceSid}/Workers:
+                  description: >-
+                    The jitter buffer size for conference. Can be: `small`,
+                    `medium`, `large`, `off`.
+      summary: Create Workspace Task Reservation
+  '/v1/Workspaces/{WorkspaceSid}/Workers':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - available
+        - sid
+        - friendly_name
+        - available
       pathType: list
       dependentProperties:
         real_time_statistics:
@@ -4382,103 +4867,109 @@ paths:
           mapping:
             workspace_sid: workspace_sid
             worker_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Reservations
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Reservations'
         worker_channels:
           mapping:
             workspace_sid: workspace_sid
             worker_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Channels
-      parent: /Workspaces/{Sid}
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Channels'
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Worker
+        - Task Routers
+        - Workspaces
+        - Workers
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workers to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: ActivityName
-        in: query
-        description: The `activity_name` of the Worker resources to read.
-        schema:
-          type: string
-      - name: ActivitySid
-        in: query
-        description: The `activity_sid` of the Worker resources to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WA[0-9a-fA-F]{32}$
-      - name: Available
-        in: query
-        description: Whether to return only Worker resources that are available or
-          unavailable. Can be `true`, `1`, or `yes` to return Worker resources that
-          are available, and `false`, or any value returns the Worker resources that
-          are not available.
-        schema:
-          type: string
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the Worker resources to read.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: TargetWorkersExpression
-        in: query
-        description: 'Filter by Workers that would match an expression. In addition
-          to fields in the workers'' attributes, the expression can include the following
-          worker fields: `sid`, `friendly_name`, `activity_sid`, or `activity_name`'
-        schema:
-          type: string
-      - name: TaskQueueName
-        in: query
-        description: The `friendly_name` of the TaskQueue that the Workers to read
-          are eligible for.
-        schema:
-          type: string
-      - name: TaskQueueSid
-        in: query
-        description: The SID of the TaskQueue that the Workers to read are eligible
-          for.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-      - name: Ordering
-        in: query
-        description: Sorting parameter for Workers
-        schema:
-          type: string
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workers to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: ActivityName
+          in: query
+          description: The `activity_name` of the Worker resources to read.
+          schema:
+            type: string
+        - name: ActivitySid
+          in: query
+          description: The `activity_sid` of the Worker resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WA[0-9a-fA-F]{32}$'
+        - name: Available
+          in: query
+          description: >-
+            Whether to return only Worker resources that are available or
+            unavailable. Can be `true`, `1`, or `yes` to return Worker resources
+            that are available, and `false`, or any value returns the Worker
+            resources that are not available.
+          schema:
+            type: string
+        - name: FriendlyName
+          in: query
+          description: The `friendly_name` of the Worker resources to read.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: TargetWorkersExpression
+          in: query
+          description: >-
+            Filter by Workers that would match an expression. In addition to
+            fields in the workers' attributes, the expression can include the
+            following worker fields: `sid`, `friendly_name`, `activity_sid`, or
+            `activity_name`
+          schema:
+            type: string
+        - name: TaskQueueName
+          in: query
+          description: >-
+            The `friendly_name` of the TaskQueue that the Workers to read are
+            eligible for.
+          schema:
+            type: string
+        - name: TaskQueueSid
+          in: query
+          description: The SID of the TaskQueue that the Workers to read are eligible for.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+        - name: Ordering
+          in: query
+          description: Sorting parameter for Workers
+          schema:
+            type: string
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4516,24 +5007,27 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWorker
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Workers
     post:
       description: ''
       tags:
-      - TaskrouterV1Worker
+        - Task Routers
+        - Workspaces
+        - Workers
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new Worker belongs to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new Worker belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -4542,10 +5036,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.worker'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateWorker
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4555,34 +5049,41 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    new Worker. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the new
+                    Worker. It can be up to 64 characters long.
                 ActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of a valid Activity that will describe the
-                    new Worker's initial state. See [Activities](https://www.twilio.com/docs/taskrouter/api/activity)
-                    for more information. If not provided, the new Worker's initial
-                    state is the `default_activity_sid` configured on the Workspace.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a valid Activity that will describe the new
+                    Worker's initial state. See
+                    [Activities](https://www.twilio.com/docs/taskrouter/api/activity)
+                    for more information. If not provided, the new Worker's
+                    initial state is the `default_activity_sid` configured on
+                    the Workspace.
                 Attributes:
                   type: string
-                  description: 'A valid JSON string that describes the new Worker.
-                    For example: `{ "email": "Bob@example.com", "phone": "+5095551234"
-                    }`. This data is passed to the `assignment_callback_url` when
-                    TaskRouter assigns a Task to the Worker. Defaults to {}.'
+                  description: >-
+                    A valid JSON string that describes the new Worker. For
+                    example: `{ "email": "Bob@example.com", "phone":
+                    "+5095551234" }`. This data is passed to the
+                    `assignment_callback_url` when TaskRouter assigns a Task to
+                    the Worker. Defaults to {}.
               required:
-              - FriendlyName
-  /v1/Workspaces/{WorkspaceSid}/Workers/{Sid}:
+                - FriendlyName
+      summary: Create Workspace Worker
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - available
+        - sid
+        - friendly_name
+        - available
       pathType: instance
       dependentProperties:
         real_time_statistics:
@@ -4602,36 +5103,38 @@ paths:
           mapping:
             workspace_sid: workspace_sid
             worker_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Reservations
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Reservations'
         worker_channels:
           mapping:
             workspace_sid: workspace_sid
             worker_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Channels
-      parent: /Workspaces/{Sid}
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers/{worker_sid}/Channels'
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Worker
+        - Task Routers
+        - Workspaces
+        - Workers
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Worker to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Worker resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Worker to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Worker resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -4640,38 +5143,41 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.worker'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorker
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Worker
     post:
       description: ''
       tags:
-      - TaskrouterV1Worker
+        - Task Routers
+        - Workspaces
+        - Workers
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Worker to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Worker resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Worker to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Worker resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4680,10 +5186,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.worker'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWorker
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4695,115 +5201,129 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of a valid Activity that will describe the
-                    Worker's initial state. See [Activities](https://www.twilio.com/docs/taskrouter/api/activity)
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of a valid Activity that will describe the Worker's
+                    initial state. See
+                    [Activities](https://www.twilio.com/docs/taskrouter/api/activity)
                     for more information.
                 Attributes:
                   type: string
-                  description: 'The JSON string that describes the Worker. For example:
-                    `{ "email": "Bob@example.com", "phone": "+5095551234" }`. This
-                    data is passed to the `assignment_callback_url` when TaskRouter
-                    assigns a Task to the Worker. Defaults to {}.'
+                  description: >-
+                    The JSON string that describes the Worker. For example: `{
+                    "email": "Bob@example.com", "phone": "+5095551234" }`. This
+                    data is passed to the `assignment_callback_url` when
+                    TaskRouter assigns a Task to the Worker. Defaults to {}.
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    Worker. It can be up to 64 characters long.
+                  description: >-
+                    A descriptive string that you create to describe the Worker.
+                    It can be up to 64 characters long.
                 RejectPendingReservations:
                   type: boolean
-                  description: Whether to reject the Worker's pending reservations.
-                    This option is only valid if the Worker's new [Activity](https://www.twilio.com/docs/taskrouter/api/activity)
+                  description: >-
+                    Whether to reject the Worker's pending reservations. This
+                    option is only valid if the Worker's new
+                    [Activity](https://www.twilio.com/docs/taskrouter/api/activity)
                     resource has its `availability` property set to `False`.
+      summary: Update Workspace Worker
     delete:
       description: ''
       tags:
-      - TaskrouterV1Worker
+        - Task Routers
+        - Workspaces
+        - Workers
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Worker to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Worker resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Worker to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Worker resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteWorker
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels:
+        - GA
+      summary: Delete Workspace Worker
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - task_channel_sid
-      - task_channel_unique_name
+        - sid
+        - task_channel_sid
+        - task_channel_unique_name
       pathType: list
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
       mountName: worker_channels
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkerChannel
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerChannels to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the Worker with the WorkerChannels to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the WorkerChannels to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: The SID of the Worker with the WorkerChannels to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -4815,7 +5335,8 @@ paths:
                   channels:
                     type: array
                     items:
-                      $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_channel'
+                      $ref: >-
+                        #/components/schemas/taskrouter.v1.workspace.worker.worker_channel
                   meta:
                     type: object
                     properties:
@@ -4841,104 +5362,114 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWorkerChannel
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}:
+        - GA
+      summary: Retrieve Workspace Worker Channels
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Channels/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - task_channel_sid
-      - task_channel_unique_name
+        - sid
+        - task_channel_sid
+        - task_channel_unique_name
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
       mountName: worker_channels
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkerChannel
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerChannel to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the Worker with the WorkerChannel to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the WorkerChannel to fetch.
-        schema:
-          type: string
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the WorkerChannel to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: The SID of the Worker with the WorkerChannel to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the WorkerChannel to fetch.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_channel'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_channel
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkerChannel
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Worker Channel
     post:
       description: ''
       tags:
-      - TaskrouterV1WorkerChannel
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Channels
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerChannel to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the Worker with the WorkerChannel to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the WorkerChannel to update.
-        schema:
-          type: string
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the WorkerChannel to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: The SID of the Worker with the WorkerChannel to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the WorkerChannel to update.
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_channel'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_channel
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWorkerChannel
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -4948,151 +5479,173 @@ paths:
               properties:
                 Capacity:
                   type: integer
-                  description: The total number of Tasks that the Worker should handle
-                    for the TaskChannel type. TaskRouter creates reservations for
-                    Tasks of this TaskChannel type up to the specified capacity. If
-                    the capacity is 0, no new reservations will be created.
+                  description: >-
+                    The total number of Tasks that the Worker should handle for
+                    the TaskChannel type. TaskRouter creates reservations for
+                    Tasks of this TaskChannel type up to the specified capacity.
+                    If the capacity is 0, no new reservations will be created.
                 Available:
                   type: boolean
-                  description: Whether the WorkerChannel is available. Set to `false`
-                    to prevent the Worker from receiving any new Tasks of this TaskChannel
-                    type.
-  /v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Statistics:
+                  description: >-
+                    Whether the WorkerChannel is available. Set to `false` to
+                    prevent the Worker from receiving any new Tasks of this
+                    TaskChannel type.
+      summary: Update Workspace Worker Channel
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
       className: worker_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkerStatistics
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerChannel to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the Worker with the WorkerChannel to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: EndDate
-        in: query
-        description: Only include usage that occurred on or before this date, specified
-          in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate statistics on this TaskChannel. Can be the TaskChannel's
-          SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the WorkerChannel to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: The SID of the Worker with the WorkerChannel to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: EndDate
+          in: query
+          description: >-
+            Only include usage that occurred on or before this date, specified
+            in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_instance_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_instance_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkerInstanceStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations:
+        - GA
+      summary: Retrieve Workspace Worker Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Current and past reservations for a worker
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - reservation_status
-      - date_created
+        - sid
+        - reservation_status
+        - date_created
       pathType: list
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerReservation resources
-          to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the reserved Worker resource with the WorkerReservation
-          resources to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: ReservationStatus
-        in: query
-        description: 'Returns the list of reservations for a worker with a specified
-          ReservationStatus. Can be: `pending`, `accepted`, `rejected`, `timeout`,
-          `canceled`, or `rescinded`.'
-        schema:
-          type: string
-          $ref: '#/components/schemas/worker_reservation_enum_status'
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: >-
+            The SID of the Workspace with the WorkerReservation resources to
+            read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: >-
+            The SID of the reserved Worker resource with the WorkerReservation
+            resources to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: ReservationStatus
+          in: query
+          description: >-
+            Returns the list of reservations for a worker with a specified
+            ReservationStatus. Can be: `pending`, `accepted`, `rejected`,
+            `timeout`, `canceled`, or `rescinded`.
+          schema:
+            type: string
+            $ref: '#/components/schemas/worker_reservation_enum_status'
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -5104,7 +5657,8 @@ paths:
                   reservations:
                     type: array
                     items:
-                      $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_reservation'
+                      $ref: >-
+                        #/components/schemas/taskrouter.v1.workspace.worker.worker_reservation
                   meta:
                     type: object
                     properties:
@@ -5130,118 +5684,132 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWorkerReservation
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}:
+        - GA
+      summary: Retrieve Workspace Worker Reservations
+  '/v1/Workspaces/{WorkspaceSid}/Workers/{WorkerSid}/Reservations/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: Current and past reservations for a worker
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - reservation_status
-      - date_created
+        - sid
+        - reservation_status
+        - date_created
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerReservation resource
-          to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the reserved Worker resource with the WorkerReservation
-          resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the WorkerReservation resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: >-
+            The SID of the Workspace with the WorkerReservation resource to
+            fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: >-
+            The SID of the reserved Worker resource with the WorkerReservation
+            resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the WorkerReservation resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WR[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_reservation'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_reservation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkerReservation
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Worker Reservation
     post:
       description: ''
       tags:
-      - TaskrouterV1Reservation
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Reservations
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the WorkerReservation resources
-          to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkerSid
-        in: path
-        description: The SID of the reserved Worker resource with the WorkerReservation
-          resources to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WK[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the WorkerReservation resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WR[0-9a-fA-F]{32}$
-        required: true
-      - name: If-Match
-        in: header
-        description: The If-Match HTTP request header
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: >-
+            The SID of the Workspace with the WorkerReservation resources to
+            update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkerSid
+          in: path
+          description: >-
+            The SID of the reserved Worker resource with the WorkerReservation
+            resources to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WK[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the WorkerReservation resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WR[0-9a-fA-F]{32}$'
+          required: true
+        - name: If-Match
+          in: header
+          description: The If-Match HTTP request header
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_reservation'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_reservation
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWorkerReservation
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5252,13 +5820,15 @@ paths:
                 ReservationStatus:
                   type: string
                   $ref: '#/components/schemas/worker_reservation_enum_status'
-                  description: 'The new status of the reservation. Can be: `pending`,
-                    `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.'
+                  description: >-
+                    The new status of the reservation. Can be: `pending`,
+                    `accepted`, `rejected`, `timeout`, `canceled`, or
+                    `rescinded`.
                 WorkerActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
+                  pattern: '^WA[0-9a-fA-F]{32}$'
                   description: The new worker activity SID if rejecting a reservation.
                 Instruction:
                   type: string
@@ -5267,252 +5837,305 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity resource to start after executing
-                    a Dequeue instruction.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity resource to start after executing a
+                    Dequeue instruction.
                 DequeueFrom:
                   type: string
-                  description: The caller ID of the call to the worker when executing
-                    a Dequeue instruction.
+                  description: >-
+                    The caller ID of the call to the worker when executing a
+                    Dequeue instruction.
                 DequeueRecord:
                   type: string
-                  description: Whether to record both legs of a call when executing
-                    a Dequeue instruction or which leg to record.
+                  description: >-
+                    Whether to record both legs of a call when executing a
+                    Dequeue instruction or which leg to record.
                 DequeueTimeout:
                   type: integer
                   description: The timeout for call when executing a Dequeue instruction.
                 DequeueTo:
                   type: string
-                  description: The contact URI of the worker when executing a Dequeue
-                    instruction. Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The contact URI of the worker when executing a Dequeue
+                    instruction. Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 DequeueStatusCallbackUrl:
                   type: string
                   format: uri
-                  description: The callback URL for completed call event when executing
-                    a Dequeue instruction.
+                  description: >-
+                    The callback URL for completed call event when executing a
+                    Dequeue instruction.
                 CallFrom:
                   type: string
-                  description: The Caller ID of the outbound call when executing a
-                    Call instruction.
+                  description: >-
+                    The Caller ID of the outbound call when executing a Call
+                    instruction.
                 CallRecord:
                   type: string
-                  description: Whether to record both legs of a call when executing
-                    a Call instruction.
+                  description: >-
+                    Whether to record both legs of a call when executing a Call
+                    instruction.
                 CallTimeout:
                   type: integer
                   description: The timeout for a call when executing a Call instruction.
                 CallTo:
                   type: string
-                  description: The contact URI of the worker when executing a Call
-                    instruction. Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The contact URI of the worker when executing a Call
+                    instruction. Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 CallUrl:
                   type: string
                   format: uri
-                  description: TwiML URI executed on answering the worker's leg as
-                    a result of the Call instruction.
+                  description: >-
+                    TwiML URI executed on answering the worker's leg as a result
+                    of the Call instruction.
                 CallStatusCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL to call for the completed call event when executing
+                  description: >-
+                    The URL to call for the completed call event when executing
                     a Call instruction.
                 CallAccept:
                   type: boolean
-                  description: Whether to accept a reservation when executing a Call
+                  description: >-
+                    Whether to accept a reservation when executing a Call
                     instruction.
                 RedirectCallSid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^CA[0-9a-fA-F]{32}$
-                  description: The Call SID of the call parked in the queue when executing
+                  pattern: '^CA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The Call SID of the call parked in the queue when executing
                     a Redirect instruction.
                 RedirectAccept:
                   type: boolean
-                  description: Whether the reservation should be accepted when executing
-                    a Redirect instruction.
+                  description: >-
+                    Whether the reservation should be accepted when executing a
+                    Redirect instruction.
                 RedirectUrl:
                   type: string
                   format: uri
-                  description: TwiML URI to redirect the call to when executing the
+                  description: >-
+                    TwiML URI to redirect the call to when executing the
                     Redirect instruction.
                 To:
                   type: string
-                  description: The Contact URI of the worker when executing a Conference
-                    instruction. Can be the URI of the Twilio Client, the SIP URI
-                    for Programmable SIP, or the [E.164](https://www.twilio.com/docs/glossary/what-e164)
+                  description: >-
+                    The Contact URI of the worker when executing a Conference
+                    instruction. Can be the URI of the Twilio Client, the SIP
+                    URI for Programmable SIP, or the
+                    [E.164](https://www.twilio.com/docs/glossary/what-e164)
                     formatted phone number, depending on the destination.
                 From:
                   type: string
-                  description: The caller ID of the call to the worker when executing
-                    a Conference instruction.
+                  description: >-
+                    The caller ID of the call to the worker when executing a
+                    Conference instruction.
                 StatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `status_callback_method`
-                    to send status information to your application.
+                  description: >-
+                    The URL we should call using the `status_callback_method` to
+                    send status information to your application.
                 StatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `status_callback`.
-                    Can be: `POST` or `GET` and the default is `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call `status_callback`. Can
+                    be: `POST` or `GET` and the default is `POST`.
                 StatusCallbackEvent:
                   type: array
                   items:
                     type: string
                     $ref: '#/components/schemas/worker_reservation_enum_call_status'
-                  description: 'The call progress events that we will send to `status_callback`.
-                    Can be: `initiated`, `ringing`, `answered`, or `completed`.'
+                  description: >-
+                    The call progress events that we will send to
+                    `status_callback`. Can be: `initiated`, `ringing`,
+                    `answered`, or `completed`.
                 Timeout:
                   type: integer
-                  description: The timeout for a call when executing a Conference
+                  description: >-
+                    The timeout for a call when executing a Conference
                     instruction.
                 Record:
                   type: boolean
-                  description: Whether to record the participant and their conferences,
-                    including the time between conferences. Can be `true` or `false`
-                    and the default is `false`.
+                  description: >-
+                    Whether to record the participant and their conferences,
+                    including the time between conferences. Can be `true` or
+                    `false` and the default is `false`.
                 Muted:
                   type: boolean
-                  description: Whether the agent is muted in the conference. Defaults
-                    to `false`.
+                  description: >-
+                    Whether the agent is muted in the conference. Defaults to
+                    `false`.
                 Beep:
                   type: string
-                  description: 'Whether to play a notification beep when the participant
-                    joins or when to play a beep. Can be: `true`, `false`, `onEnter`,
-                    or `onExit`. The default value is `true`.'
+                  description: >-
+                    Whether to play a notification beep when the participant
+                    joins or when to play a beep. Can be: `true`, `false`,
+                    `onEnter`, or `onExit`. The default value is `true`.
                 StartConferenceOnEnter:
                   type: boolean
-                  description: 'Whether to start the conference when the participant
-                    joins, if it has not already started. Can be: `true` or `false`
-                    and the default is `true`. If `false` and the conference has not
-                    started, the participant is muted and hears background music until
-                    another participant starts the conference.'
+                  description: >-
+                    Whether to start the conference when the participant joins,
+                    if it has not already started. Can be: `true` or `false` and
+                    the default is `true`. If `false` and the conference has not
+                    started, the participant is muted and hears background music
+                    until another participant starts the conference.
                 EndConferenceOnExit:
                   type: boolean
                   description: Whether to end the conference when the agent leaves.
                 WaitUrl:
                   type: string
                   format: uri
-                  description: The URL we should call using the `wait_method` for
-                    the music to play while participants are waiting for the conference
-                    to start. The default value is the URL of our standard hold music.
-                    [Learn more about hold music](https://www.twilio.com/labs/twimlets/holdmusic).
+                  description: >-
+                    The URL we should call using the `wait_method` for the music
+                    to play while participants are waiting for the conference to
+                    start. The default value is the URL of our standard hold
+                    music. [Learn more about hold
+                    music](https://www.twilio.com/labs/twimlets/holdmusic).
                 WaitMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: The HTTP method we should use to call `wait_url`. Can
-                    be `GET` or `POST` and the default is `POST`. When using a static
-                    audio file, this should be `GET` so that we can cache the file.
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call `wait_url`. Can be
+                    `GET` or `POST` and the default is `POST`. When using a
+                    static audio file, this should be `GET` so that we can cache
+                    the file.
                 EarlyMedia:
                   type: boolean
-                  description: Whether to allow an agent to hear the state of the
-                    outbound call, including ringing or disconnect messages. The default
+                  description: >-
+                    Whether to allow an agent to hear the state of the outbound
+                    call, including ringing or disconnect messages. The default
                     is `true`.
                 MaxParticipants:
                   type: integer
-                  description: The maximum number of participants allowed in the conference.
-                    Can be a positive integer from `2` to `250`. The default value
-                    is `250`.
+                  description: >-
+                    The maximum number of participants allowed in the
+                    conference. Can be a positive integer from `2` to `250`. The
+                    default value is `250`.
                 ConferenceStatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `conference_status_callback_method`
-                    when the conference events in `conference_status_callback_event`
-                    occur. Only the value set by the first participant to join the
-                    conference is used. Subsequent `conference_status_callback` values
-                    are ignored.
+                  description: >-
+                    The URL we should call using the
+                    `conference_status_callback_method` when the conference
+                    events in `conference_status_callback_event` occur. Only the
+                    value set by the first participant to join the conference is
+                    used. Subsequent `conference_status_callback` values are
+                    ignored.
                 ConferenceStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `conference_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call
+                    `conference_status_callback`. Can be: `GET` or `POST` and
+                    defaults to `POST`.
                 ConferenceStatusCallbackEvent:
                   type: array
                   items:
                     type: string
-                    $ref: '#/components/schemas/worker_reservation_enum_conference_event'
-                  description: 'The conference status events that we will send to
-                    `conference_status_callback`. Can be: `start`, `end`, `join`,
-                    `leave`, `mute`, `hold`, `speaker`.'
+                    $ref: >-
+                      #/components/schemas/worker_reservation_enum_conference_event
+                  description: >-
+                    The conference status events that we will send to
+                    `conference_status_callback`. Can be: `start`, `end`,
+                    `join`, `leave`, `mute`, `hold`, `speaker`.
                 ConferenceRecord:
                   type: string
-                  description: 'Whether to record the conference the participant is
-                    joining or when to record the conference. Can be: `true`, `false`,
-                    `record-from-start`, and `do-not-record`. The default value is
-                    `false`.'
+                  description: >-
+                    Whether to record the conference the participant is joining
+                    or when to record the conference. Can be: `true`, `false`,
+                    `record-from-start`, and `do-not-record`. The default value
+                    is `false`.
                 ConferenceTrim:
                   type: string
-                  description: 'Whether to trim leading and trailing silence from
-                    your recorded conference audio files. Can be: `trim-silence` or
-                    `do-not-trim` and defaults to `trim-silence`.'
+                  description: >-
+                    Whether to trim leading and trailing silence from your
+                    recorded conference audio files. Can be: `trim-silence` or
+                    `do-not-trim` and defaults to `trim-silence`.
                 RecordingChannels:
                   type: string
-                  description: 'The recording channels for the final recording. Can
-                    be: `mono` or `dual` and the default is `mono`.'
+                  description: >-
+                    The recording channels for the final recording. Can be:
+                    `mono` or `dual` and the default is `mono`.
                 RecordingStatusCallback:
                   type: string
                   format: uri
-                  description: The URL that we should call using the `recording_status_callback_method`
-                    when the recording status changes.
+                  description: >-
+                    The URL that we should call using the
+                    `recording_status_callback_method` when the recording status
+                    changes.
                 RecordingStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use when we call `recording_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use when we call
+                    `recording_status_callback`. Can be: `GET` or `POST` and
+                    defaults to `POST`.
                 ConferenceRecordingStatusCallback:
                   type: string
                   format: uri
-                  description: The URL we should call using the `conference_recording_status_callback_method`
-                    when the conference recording is available.
+                  description: >-
+                    The URL we should call using the
+                    `conference_recording_status_callback_method` when the
+                    conference recording is available.
                 ConferenceRecordingStatusCallbackMethod:
                   type: string
                   format: http-method
                   enum:
-                  - HEAD
-                  - GET
-                  - POST
-                  - PATCH
-                  - PUT
-                  - DELETE
-                  description: 'The HTTP method we should use to call `conference_recording_status_callback`.
-                    Can be: `GET` or `POST` and defaults to `POST`.'
+                    - HEAD
+                    - GET
+                    - POST
+                    - PATCH
+                    - PUT
+                    - DELETE
+                  description: >-
+                    The HTTP method we should use to call
+                    `conference_recording_status_callback`. Can be: `GET` or
+                    `POST` and defaults to `POST`.
                 Region:
                   type: string
-                  description: The [region](https://support.twilio.com/hc/en-us/articles/223132167-How-global-low-latency-routing-and-region-selection-work-for-conferences-and-Client-calls)
-                    where we should mix the recorded audio. Can be:`us1`, `ie1`, `de1`,
-                    `sg1`, `br1`, `au1`, or `jp1`.
+                  description: >-
+                    The
+                    [region](https://support.twilio.com/hc/en-us/articles/223132167-How-global-low-latency-routing-and-region-selection-work-for-conferences-and-Client-calls)
+                    where we should mix the recorded audio. Can be:`us1`, `ie1`,
+                    `de1`, `sg1`, `br1`, `au1`, or `jp1`.
                 SipAuthUsername:
                   type: string
                   description: The SIP username used for authentication.
@@ -5523,233 +6146,266 @@ paths:
                   type: array
                   items:
                     type: string
-                  description: The call progress events sent via webhooks as a result
-                    of a Dequeue instruction.
+                  description: >-
+                    The call progress events sent via webhooks as a result of a
+                    Dequeue instruction.
                 PostWorkActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The new worker activity SID after executing a Conference
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The new worker activity SID after executing a Conference
                     instruction.
                 EndConferenceOnCustomerExit:
                   type: boolean
                   description: Whether to end the conference when the customer leaves.
                 BeepOnCustomerEntrance:
                   type: boolean
-                  description: Whether to play a notification beep when the customer
-                    joins.
+                  description: Whether to play a notification beep when the customer joins.
                 JitterBufferSize:
                   type: string
-                  description: 'The jitter buffer size for conference. Can be: `small`,
-                    `medium`, `large`, `off`.'
-  /v1/Workspaces/{WorkspaceSid}/Workers/Statistics:
+                  description: >-
+                    The jitter buffer size for conference. Can be: `small`,
+                    `medium`, `large`, `off`.
+      summary: Update Workspace Worker Reservations
+  '/v1/Workspaces/{WorkspaceSid}/Workers/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers
+      parent: '/Workspaces/{WorkspaceSid}/Workers'
       className: workers_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkersStatistics
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Worker to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskQueueSid
-        in: query
-        description: The SID of the TaskQueue for which to fetch Worker statistics.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WQ[0-9a-fA-F]{32}$
-      - name: TaskQueueName
-        in: query
-        description: The `friendly_name` of the TaskQueue for which to fetch Worker
-          statistics.
-        schema:
-          type: string
-      - name: FriendlyName
-        in: query
-        description: Only include Workers with `friendly_name` values that match this
-          parameter.
-        schema:
-          type: string
-      - name: TaskChannel
-        in: query
-        description: Only calculate statistics on this TaskChannel. Can be the TaskChannel's
-          SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Worker to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskQueueSid
+          in: query
+          description: The SID of the TaskQueue for which to fetch Worker statistics.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WQ[0-9a-fA-F]{32}$'
+        - name: TaskQueueName
+          in: query
+          description: >-
+            The `friendly_name` of the TaskQueue for which to fetch Worker
+            statistics.
+          schema:
+            type: string
+        - name: FriendlyName
+          in: query
+          description: >-
+            Only include Workers with `friendly_name` values that match this
+            parameter.
+          schema:
+            type: string
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.worker_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.worker_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkerStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics:
+        - GA
+      summary: Retrieve Workspace Worker Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workers/CumulativeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - reservations_created
-      - reservations_accepted
-      - reservations_rejected
-      - reservations_timed_out
-      - reservations_canceled
-      - reservations_rescinded
+        - reservations_created
+        - reservations_accepted
+        - reservations_rejected
+        - reservations_timed_out
+        - reservations_canceled
+        - reservations_rescinded
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
       className: workers_cumulative_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkersCumulativeStatistics
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate cumulative statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate cumulative statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.workers_cumulative_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.workers_cumulative_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkersCumulativeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workers/RealTimeStatistics:
+        - GA
+      summary: Retrieve Workspace Worker Cumulative Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workers/RealTimeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - total_workers
+        - total_workers
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workers/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workers/{Sid}'
       className: workers_real_time_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkersRealTimeStatistics
+        - Task Routers
+        - Workspaces
+        - Workers
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskChannel
-        in: query
-        description: Only calculate real-time statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate real-time statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.worker.workers_real_time_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.worker.workers_real_time_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkersRealTimeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}:
+        - GA
+      summary: Retrieve Workspace Worker Real-Time Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workflows/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - document_content_type
+        - sid
+        - friendly_name
+        - document_content_type
       pathType: instance
       dependentProperties:
         statistics:
@@ -5767,30 +6423,32 @@ paths:
             workspace_sid: workspace_sid
             workflow_sid: sid
           resource_url: /v1None
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Workflow
+        - Task Routers
+        - Workspaces
+        - Workflows
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Workflow resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workflow resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5799,33 +6457,36 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.workflow'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkflow
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Workflow
     post:
       description: ''
       tags:
-      - TaskrouterV1Workflow
+        - Task Routers
+        - Workspaces
+        - Workflows
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Workflow resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workflow resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -5834,10 +6495,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.workflow'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWorkflow
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -5847,75 +6508,87 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    Workflow resource. For example, `Inbound Call Workflow` or `2014
-                    Outbound Campaign`.
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Workflow resource. For example, `Inbound Call Workflow` or
+                    `2014 Outbound Campaign`.
                 AssignmentCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL from your application that will process task
-                    assignment events. See [Handling Task Assignment Callback](https://www.twilio.com/docs/taskrouter/handle-assignment-callbacks)
+                  description: >-
+                    The URL from your application that will process task
+                    assignment events. See [Handling Task Assignment
+                    Callback](https://www.twilio.com/docs/taskrouter/handle-assignment-callbacks)
                     for more details.
                 FallbackAssignmentCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL that we should call when a call to the `assignment_callback_url`
-                    fails.
+                  description: >-
+                    The URL that we should call when a call to the
+                    `assignment_callback_url` fails.
                 Configuration:
                   type: string
-                  description: A JSON string that contains the rules to apply to the
-                    Workflow. See [Configuring Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
+                  description: >-
+                    A JSON string that contains the rules to apply to the
+                    Workflow. See [Configuring
+                    Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
                     for more information.
                 TaskReservationTimeout:
                   type: integer
-                  description: How long TaskRouter will wait for a confirmation response
-                    from your application after it assigns a Task to a Worker. Can
-                    be up to `86,400` (24 hours) and the default is `120`.
+                  description: >-
+                    How long TaskRouter will wait for a confirmation response
+                    from your application after it assigns a Task to a Worker.
+                    Can be up to `86,400` (24 hours) and the default is `120`.
                 ReEvaluateTasks:
                   type: string
-                  description: Whether or not to re-evaluate Tasks. The default is
-                    `false`, which means Tasks in the Workflow will not be processed
+                  description: >-
+                    Whether or not to re-evaluate Tasks. The default is `false`,
+                    which means Tasks in the Workflow will not be processed
                     through the assignment loop again.
+      summary: Update Workspace Workflow
     delete:
       description: ''
       tags:
-      - TaskrouterV1Workflow
+        - Task Routers
+        - Workspaces
+        - Workflows
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Sid
-        in: path
-        description: The SID of the Workflow resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workflow resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteWorkflow
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workflows:
+        - GA
+      summary: Delete Workspace Workflow
+  '/v1/Workspaces/{WorkspaceSid}/Workflows':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - document_content_type
+        - sid
+        - friendly_name
+        - document_content_type
       pathType: list
       dependentProperties:
         statistics:
@@ -5933,49 +6606,52 @@ paths:
             workspace_sid: workspace_sid
             workflow_sid: sid
           resource_url: /v1None
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
     get:
       description: ''
       tags:
-      - TaskrouterV1Workflow
+        - Task Routers
+        - Workspaces
+        - Workflows
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to read.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the Workflow resources to read.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to read.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: FriendlyName
+          in: query
+          description: The `friendly_name` of the Workflow resources to read.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6013,25 +6689,27 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWorkflow
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Workflows
     post:
       description: ''
       tags:
-      - TaskrouterV1Workflow
+        - Task Routers
+        - Workspaces
+        - Workflows
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace that the new Workflow to create belongs
-          to.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace that the new Workflow to create belongs to.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '201':
           content:
@@ -6040,10 +6718,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace.workflow'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateWorkflow
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6053,300 +6731,344 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: A descriptive string that you create to describe the
-                    Workflow resource. For example, `Inbound Call Workflow` or `2014
-                    Outbound Campaign`.
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Workflow resource. For example, `Inbound Call Workflow` or
+                    `2014 Outbound Campaign`.
                 Configuration:
                   type: string
-                  description: A JSON string that contains the rules to apply to the
-                    Workflow. See [Configuring Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
+                  description: >-
+                    A JSON string that contains the rules to apply to the
+                    Workflow. See [Configuring
+                    Workflows](https://www.twilio.com/docs/taskrouter/workflow-configuration)
                     for more information.
                 AssignmentCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL from your application that will process task
-                    assignment events. See [Handling Task Assignment Callback](https://www.twilio.com/docs/taskrouter/handle-assignment-callbacks)
+                  description: >-
+                    The URL from your application that will process task
+                    assignment events. See [Handling Task Assignment
+                    Callback](https://www.twilio.com/docs/taskrouter/handle-assignment-callbacks)
                     for more details.
                 FallbackAssignmentCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL that we should call when a call to the `assignment_callback_url`
-                    fails.
+                  description: >-
+                    The URL that we should call when a call to the
+                    `assignment_callback_url` fails.
                 TaskReservationTimeout:
                   type: integer
-                  description: How long TaskRouter will wait for a confirmation response
-                    from your application after it assigns a Task to a Worker. Can
-                    be up to `86,400` (24 hours) and the default is `120`.
+                  description: >-
+                    How long TaskRouter will wait for a confirmation response
+                    from your application after it assigns a Task to a Worker.
+                    Can be up to `86,400` (24 hours) and the default is `120`.
               required:
-              - FriendlyName
-              - Configuration
-  /v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/CumulativeStatistics:
+                - FriendlyName
+                - Configuration
+      summary: Create Workspace Workflow
+  '/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/CumulativeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - start_time
-      - end_time
-      - avg_task_acceptance_time
-      - tasks_completed
+        - start_time
+        - end_time
+        - avg_task_acceptance_time
+        - tasks_completed
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workflows/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workflows/{Sid}'
       className: workflow_cumulative_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkflowCumulativeStatistics
+        - Task Routers
+        - Workspaces
+        - Workflows
+        - Cumulative
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkflowSid
-        in: path
-        description: Returns the list of Tasks that are being controlled by the Workflow
-          with the specified Sid value.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only include usage that occurred on or before this date, specified
-          in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate cumulative statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed. For example, `5,30` would show splits
-          of Tasks that were canceled or accepted before and after 5 seconds and before
-          and after 30 seconds. This can be used to show short abandoned Tasks or
-          Tasks that failed to meet an SLA. TaskRouter will calculate statistics on
-          up to 10,000 Tasks for any given threshold.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkflowSid
+          in: path
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified Sid value.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only include usage that occurred on or before this date, specified
+            in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate cumulative statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed. For example,
+            `5,30` would show splits of Tasks that were canceled or accepted
+            before and after 5 seconds and before and after 30 seconds. This can
+            be used to show short abandoned Tasks or Tasks that failed to meet
+            an SLA. TaskRouter will calculate statistics on up to 10,000 Tasks
+            for any given threshold.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workflow.workflow_cumulative_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workflow.workflow_cumulative_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkflowCumulativeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/RealTimeStatistics:
+        - GA
+      summary: Retrieve Workspace Workflow Cumulative Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/RealTimeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - longest_task_waiting_age
-      - longest_task_waiting_sid
-      - total_tasks
+        - longest_task_waiting_age
+        - longest_task_waiting_sid
+        - total_tasks
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workflows/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workflows/{Sid}'
       className: workflow_real_time_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkflowRealTimeStatistics
+        - Task Routers
+        - Workspaces
+        - Workflows
+        - Real-Time
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkflowSid
-        in: path
-        description: Returns the list of Tasks that are being controlled by the Workflow
-          with the specified SID value.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskChannel
-        in: query
-        description: Only calculate real-time statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkflowSid
+          in: path
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified SID value.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate real-time statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workflow.workflow_real_time_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workflow.workflow_real_time_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkflowRealTimeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/Statistics:
+        - GA
+      summary: Retrieve Workspace Workflow Real-Time Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Workflows/{WorkflowSid}/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: instance
-      parent: /Workspaces/{WorkspaceSid}/Workflows/{Sid}
+      parent: '/Workspaces/{WorkspaceSid}/Workflows/{Sid}'
       className: workflow_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkflowStatistics
+        - Task Routers
+        - Workspaces
+        - Workflows
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace with the Workflow to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: WorkflowSid
-        in: path
-        description: Returns the list of Tasks that are being controlled by the Workflow
-          with the specified SID value.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WW[0-9a-fA-F]{32}$
-        required: true
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate real-time statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed. For example, `5,30` would show splits
-          of Tasks that were canceled or accepted before and after 5 seconds and before
-          and after 30 seconds. This can be used to show short abandoned Tasks or
-          Tasks that failed to meet an SLA.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace with the Workflow to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: WorkflowSid
+          in: path
+          description: >-
+            Returns the list of Tasks that are being controlled by the Workflow
+            with the specified SID value.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WW[0-9a-fA-F]{32}$'
+          required: true
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate real-time statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed. For example,
+            `5,30` would show splits of Tasks that were canceled or accepted
+            before and after 5 seconds and before and after 30 seconds. This can
+            be used to show short abandoned Tasks or Tasks that failed to meet
+            an SLA.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workflow.workflow_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workflow.workflow_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkflowStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{Sid}:
+        - GA
+      summary: Retrieve Workspace Workflow Statistics
+  '/v1/Workspaces/{Sid}':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - prioritize_queue_order
+        - sid
+        - friendly_name
+        - prioritize_queue_order
       pathType: instance
       dependentProperties:
         activities:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Activities
+          resource_url: '/v1/Workspaces/{workspace_sid}/Activities'
         events:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Events
+          resource_url: '/v1/Workspaces/{workspace_sid}/Events'
         tasks:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Tasks
+          resource_url: '/v1/Workspaces/{workspace_sid}/Tasks'
         task_queues:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/TaskQueues
+          resource_url: '/v1/Workspaces/{workspace_sid}/TaskQueues'
         workers:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers'
         workflows:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workflows
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workflows'
         statistics:
           mapping:
             workspace_sid: sid
@@ -6362,21 +7084,22 @@ paths:
         task_channels:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/TaskChannels
+          resource_url: '/v1/Workspaces/{workspace_sid}/TaskChannels'
     get:
       description: ''
       tags:
-      - TaskrouterV1Workspace
+        - Task Routers
+        - Workspaces
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Workspace resource to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workspace resource to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -6385,24 +7108,26 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkspace
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace
     post:
       description: ''
       tags:
-      - TaskrouterV1Workspace
+        - Task Routers
+        - Workspaces
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Workspace resource to update.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workspace resource to update.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '200':
           content:
@@ -6411,10 +7136,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace'
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: UpdateWorkspace
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6426,110 +7151,126 @@ paths:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity that will be used when new
-                    Workers are created in the Workspace.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity that will be used when new Workers
+                    are created in the Workspace.
                 EventCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL we should call when an event occurs. See [Workspace
-                    Events](https://www.twilio.com/docs/taskrouter/api/event) for
-                    more information. This parameter supports Twilio's [Webhooks (HTTP
-                    callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
+                  description: >-
+                    The URL we should call when an event occurs. See [Workspace
+                    Events](https://www.twilio.com/docs/taskrouter/api/event)
+                    for more information. This parameter supports Twilio's
+                    [Webhooks (HTTP callbacks) Connection
+                    Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
                 EventsFilter:
                   type: string
-                  description: The list of Workspace events for which to call event_callback_url.
-                    For example if `EventsFilter=task.created,task.canceled,worker.activity.update`,
-                    then TaskRouter will call event_callback_url only when a task
-                    is created, canceled, or a Worker activity is updated.
+                  description: >-
+                    The list of Workspace events for which to call
+                    event_callback_url. For example if
+                    `EventsFilter=task.created,task.canceled,worker.activity.update`,
+                    then TaskRouter will call event_callback_url only when a
+                    task is created, canceled, or a Worker activity is updated.
                 FriendlyName:
                   type: string
-                  description: 'A descriptive string that you create to describe the
-                    Workspace resource. For example: `Sales Call Center` or `Customer
-                    Support Team`.'
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Workspace resource. For example: `Sales Call Center` or
+                    `Customer Support Team`.
                 MultiTaskEnabled:
                   type: boolean
-                  description: 'Whether to enable multi-tasking. Can be: `true` to
-                    enable multi-tasking, or `false` to disable it. However, all workspaces
-                    should be maintained as multi-tasking. There is no default when
-                    omitting this parameter. A multi-tasking Workspace can''t be updated
-                    to single-tasking unless it is not a Flex Project and another
-                    (legacy) single-tasking Workspace exists. Multi-tasking allows
-                    Workers to handle multiple Tasks simultaneously. In multi-tasking
-                    mode, each Worker can receive parallel reservations up to the
-                    per-channel maximums defined in the Workers section. In single-tasking
-                    mode (legacy mode), each Worker will only receive a new reservation
-                    when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).'
+                  description: >-
+                    Whether to enable multi-tasking. Can be: `true` to enable
+                    multi-tasking, or `false` to disable it. However, all
+                    workspaces should be maintained as multi-tasking. There is
+                    no default when omitting this parameter. A multi-tasking
+                    Workspace can't be updated to single-tasking unless it is
+                    not a Flex Project and another (legacy) single-tasking
+                    Workspace exists. Multi-tasking allows Workers to handle
+                    multiple Tasks simultaneously. In multi-tasking mode, each
+                    Worker can receive parallel reservations up to the
+                    per-channel maximums defined in the Workers section. In
+                    single-tasking mode (legacy mode), each Worker will only
+                    receive a new reservation when the previous task is
+                    completed. Learn more at
+                    [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).
                 TimeoutActivitySid:
                   type: string
                   minLength: 34
                   maxLength: 34
-                  pattern: ^WA[0-9a-fA-F]{32}$
-                  description: The SID of the Activity that will be assigned to a
-                    Worker when a Task reservation times out without a response.
+                  pattern: '^WA[0-9a-fA-F]{32}$'
+                  description: >-
+                    The SID of the Activity that will be assigned to a Worker
+                    when a Task reservation times out without a response.
                 PrioritizeQueueOrder:
                   type: string
                   $ref: '#/components/schemas/workspace_enum_queue_order'
-                  description: 'The type of TaskQueue to prioritize when Workers are
-                    receiving Tasks from both types of TaskQueues. Can be: `LIFO`
-                    or `FIFO`. For more information, see [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).'
+                  description: >-
+                    The type of TaskQueue to prioritize when Workers are
+                    receiving Tasks from both types of TaskQueues. Can be:
+                    `LIFO` or `FIFO`. For more information, see [Queue
+                    Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).
+      summary: Update Workspace
     delete:
       description: ''
       tags:
-      - TaskrouterV1Workspace
+        - Task Routers
+        - Workspaces
       parameters:
-      - name: Sid
-        in: path
-        description: The SID of the Workspace resource to delete.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
+        - name: Sid
+          in: path
+          description: The SID of the Workspace resource to delete.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
       responses:
         '204':
           description: The resource was deleted successfully.
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: DeleteWorkspace
       x-maturity:
-      - GA
+        - GA
+      summary: Delete Workspace
   /v1/Workspaces:
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - sid
-      - friendly_name
-      - prioritize_queue_order
+        - sid
+        - friendly_name
+        - prioritize_queue_order
       pathType: list
       dependentProperties:
         activities:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Activities
+          resource_url: '/v1/Workspaces/{workspace_sid}/Activities'
         events:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Events
+          resource_url: '/v1/Workspaces/{workspace_sid}/Events'
         tasks:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Tasks
+          resource_url: '/v1/Workspaces/{workspace_sid}/Tasks'
         task_queues:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/TaskQueues
+          resource_url: '/v1/Workspaces/{workspace_sid}/TaskQueues'
         workers:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workers
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workers'
         workflows:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/Workflows
+          resource_url: '/v1/Workspaces/{workspace_sid}/Workflows'
         statistics:
           mapping:
             workspace_sid: sid
@@ -6545,41 +7286,44 @@ paths:
         task_channels:
           mapping:
             workspace_sid: sid
-          resource_url: /v1/Workspaces/{workspace_sid}/TaskChannels
+          resource_url: '/v1/Workspaces/{workspace_sid}/TaskChannels'
     get:
       description: ''
       tags:
-      - TaskrouterV1Workspace
+        - Task Routers
+        - Workspaces
       parameters:
-      - name: FriendlyName
-        in: query
-        description: The `friendly_name` of the Workspace resources to read. For example
-          `Customer Support` or `2014 Election Campaign`.
-        schema:
-          type: string
-        x-twilio:
-          pii:
-            handling: standard
-            deleteSla: 30
-      - name: PageSize
-        in: query
-        description: How many resources to return in each list page. The default is
-          50, and the maximum is 1000.
-        schema:
-          type: integer
-          minimum: 1
-          maximum: 1000
-      - name: Page
-        in: query
-        description: The page index. This value is simply for client state.
-        schema:
-          type: integer
-          minimum: 0
-      - name: PageToken
-        in: query
-        description: The page token. This is provided by the API.
-        schema:
-          type: string
+        - name: FriendlyName
+          in: query
+          description: >-
+            The `friendly_name` of the Workspace resources to read. For example
+            `Customer Support` or `2014 Election Campaign`.
+          schema:
+            type: string
+          x-twilio:
+            pii:
+              handling: standard
+              deleteSla: 30
+        - name: PageSize
+          in: query
+          description: >-
+            How many resources to return in each list page. The default is 50,
+            and the maximum is 1000.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: Page
+          in: query
+          description: The page index. This value is simply for client state.
+          schema:
+            type: integer
+            minimum: 0
+        - name: PageToken
+          in: query
+          description: The page token. This is provided by the API.
+          schema:
+            type: string
       responses:
         '200':
           content:
@@ -6617,14 +7361,16 @@ paths:
                         type: string
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: ListWorkspace
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspaces
     post:
       description: ''
       tags:
-      - TaskrouterV1Workspace
+        - Task Routers
+        - Workspaces
       responses:
         '201':
           content:
@@ -6633,10 +7379,10 @@ paths:
                 $ref: '#/components/schemas/taskrouter.v1.workspace'
           description: Created
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: CreateWorkspace
       x-maturity:
-      - GA
+        - GA
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -6646,280 +7392,332 @@ paths:
               properties:
                 FriendlyName:
                   type: string
-                  description: 'A descriptive string that you create to describe the
-                    Workspace resource. It can be up to 64 characters long. For example:
-                    `Customer Support` or `2014 Election Campaign`.'
+                  description: >-
+                    A descriptive string that you create to describe the
+                    Workspace resource. It can be up to 64 characters long. For
+                    example: `Customer Support` or `2014 Election Campaign`.
                 EventCallbackUrl:
                   type: string
                   format: uri
-                  description: The URL we should call when an event occurs. If provided,
-                    the Workspace will publish events to this URL, for example, to
-                    collect data for reporting. See [Workspace Events](https://www.twilio.com/docs/taskrouter/api/event)
-                    for more information. This parameter supports Twilio's [Webhooks
-                    (HTTP callbacks) Connection Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
+                  description: >-
+                    The URL we should call when an event occurs. If provided,
+                    the Workspace will publish events to this URL, for example,
+                    to collect data for reporting. See [Workspace
+                    Events](https://www.twilio.com/docs/taskrouter/api/event)
+                    for more information. This parameter supports Twilio's
+                    [Webhooks (HTTP callbacks) Connection
+                    Overrides](https://www.twilio.com/docs/usage/webhooks/webhooks-connection-overrides).
                 EventsFilter:
                   type: string
-                  description: The list of Workspace events for which to call event_callback_url.
-                    For example, if `EventsFilter=task.created, task.canceled, worker.activity.update`,
-                    then TaskRouter will call event_callback_url only when a task
-                    is created, canceled, or a Worker activity is updated.
+                  description: >-
+                    The list of Workspace events for which to call
+                    event_callback_url. For example, if
+                    `EventsFilter=task.created, task.canceled,
+                    worker.activity.update`, then TaskRouter will call
+                    event_callback_url only when a task is created, canceled, or
+                    a Worker activity is updated.
                 MultiTaskEnabled:
                   type: boolean
-                  description: 'Whether to enable multi-tasking. Can be: `true` to
-                    enable multi-tasking, or `false` to disable it. However, all workspaces
-                    should be created as multi-tasking. The default is `true`. Multi-tasking
-                    allows Workers to handle multiple Tasks simultaneously. When enabled
-                    (`true`), each Worker can receive parallel reservations up to
-                    the per-channel maximums defined in the Workers section. In single-tasking
-                    mode (legacy mode), each Worker will only receive a new reservation
-                    when the previous task is completed. Learn more at [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).'
+                  description: >-
+                    Whether to enable multi-tasking. Can be: `true` to enable
+                    multi-tasking, or `false` to disable it. However, all
+                    workspaces should be created as multi-tasking. The default
+                    is `true`. Multi-tasking allows Workers to handle multiple
+                    Tasks simultaneously. When enabled (`true`), each Worker can
+                    receive parallel reservations up to the per-channel maximums
+                    defined in the Workers section. In single-tasking mode
+                    (legacy mode), each Worker will only receive a new
+                    reservation when the previous task is completed. Learn more
+                    at
+                    [Multitasking](https://www.twilio.com/docs/taskrouter/multitasking).
                 Template:
                   type: string
-                  description: 'An available template name. Can be: `NONE` or `FIFO`
-                    and the default is `NONE`. Pre-configures the Workspace with the
-                    Workflow and Activities specified in the template. `NONE` will
-                    create a Workspace with only a set of default activities. `FIFO`
-                    will configure TaskRouter with a set of default activities and
-                    a single TaskQueue for first-in, first-out distribution, which
-                    can be useful when you are getting started with TaskRouter.'
+                  description: >-
+                    An available template name. Can be: `NONE` or `FIFO` and the
+                    default is `NONE`. Pre-configures the Workspace with the
+                    Workflow and Activities specified in the template. `NONE`
+                    will create a Workspace with only a set of default
+                    activities. `FIFO` will configure TaskRouter with a set of
+                    default activities and a single TaskQueue for first-in,
+                    first-out distribution, which can be useful when you are
+                    getting started with TaskRouter.
                 PrioritizeQueueOrder:
                   type: string
                   $ref: '#/components/schemas/workspace_enum_queue_order'
-                  description: 'The type of TaskQueue to prioritize when Workers are
-                    receiving Tasks from both types of TaskQueues. Can be: `LIFO`
-                    or `FIFO` and the default is `FIFO`. For more information, see
-                    [Queue Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).'
+                  description: >-
+                    The type of TaskQueue to prioritize when Workers are
+                    receiving Tasks from both types of TaskQueues. Can be:
+                    `LIFO` or `FIFO` and the default is `FIFO`. For more
+                    information, see [Queue
+                    Ordering](https://www.twilio.com/docs/taskrouter/queue-ordering-last-first-out-lifo).
               required:
-              - FriendlyName
-  /v1/Workspaces/{WorkspaceSid}/CumulativeStatistics:
+                - FriendlyName
+      summary: Create Workspace
+  '/v1/Workspaces/{WorkspaceSid}/CumulativeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - start_time
-      - end_time
-      - avg_task_acceptance_time
-      - tasks_completed
+        - start_time
+        - end_time
+        - avg_task_acceptance_time
+        - tasks_completed
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
       className: workspace_cumulative_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkspaceCumulativeStatistics
+        - Task Routers
+        - Workspaces
+        - Cumulative
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: EndDate
-        in: query
-        description: Only include usage that occurred on or before this date, specified
-          in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate cumulative statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed. For example, `5,30` would show splits
-          of Tasks that were canceled or accepted before and after 5 seconds and before
-          and after 30 seconds. This can be used to show short abandoned Tasks or
-          Tasks that failed to meet an SLA. TaskRouter will calculate statistics on
-          up to 10,000 Tasks for any given threshold.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: EndDate
+          in: query
+          description: >-
+            Only include usage that occurred on or before this date, specified
+            in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate cumulative statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed. For example,
+            `5,30` would show splits of Tasks that were canceled or accepted
+            before and after 5 seconds and before and after 30 seconds. This can
+            be used to show short abandoned Tasks or Tasks that failed to meet
+            an SLA. TaskRouter will calculate statistics on up to 10,000 Tasks
+            for any given threshold.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workspace_cumulative_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workspace_cumulative_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkspaceCumulativeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/RealTimeStatistics:
+        - GA
+      summary: Retrieve Workspace Cumulative Statistics
+  '/v1/Workspaces/{WorkspaceSid}/RealTimeStatistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - longest_task_waiting_age
-      - longest_task_waiting_sid
-      - total_tasks
+        - longest_task_waiting_age
+        - longest_task_waiting_sid
+        - total_tasks
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
       className: workspace_real_time_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkspaceRealTimeStatistics
+        - Task Routers
+        - Workspaces
+        - Real-Time
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: TaskChannel
-        in: query
-        description: Only calculate real-time statistics on this TaskChannel. Can
-          be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
-          `default`.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate real-time statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workspace_real_time_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workspace_real_time_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkspaceRealTimeStatistics
       x-maturity:
-      - GA
-  /v1/Workspaces/{WorkspaceSid}/Statistics:
+        - GA
+      summary: Retrieve Workspace Real-Time Statistics
+  '/v1/Workspaces/{WorkspaceSid}/Statistics':
     servers:
-    - url: https://taskrouter.twilio.com
+      - url: 'https://taskrouter.twilio.com'
     description: 'TODO: Resource-level docs'
     x-twilio:
       defaultOutputProperties:
-      - cumulative
+        - cumulative
       pathType: instance
-      parent: /Workspaces/{Sid}
+      parent: '/Workspaces/{Sid}'
       className: workspace_statistics
     get:
       description: ''
       tags:
-      - TaskrouterV1WorkspaceStatistics
+        - Task Routers
+        - Workspaces
+        - Statistics
       parameters:
-      - name: WorkspaceSid
-        in: path
-        description: The SID of the Workspace to fetch.
-        schema:
-          type: string
-          minLength: 34
-          maxLength: 34
-          pattern: ^WS[0-9a-fA-F]{32}$
-        required: true
-      - name: Minutes
-        in: query
-        description: Only calculate statistics since this many minutes in the past.
-          The default 15 minutes. This is helpful for displaying statistics for the
-          last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see
-          trends.
-        schema:
-          type: integer
-      - name: StartDate
-        in: query
-        description: Only calculate statistics from this date and time and later,
-          specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
-        schema:
-          type: string
-          format: date-time
-      - name: EndDate
-        in: query
-        description: Only calculate statistics from this date and time and earlier,
-          specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
-          date-time.
-        schema:
-          type: string
-          format: date-time
-      - name: TaskChannel
-        in: query
-        description: Only calculate statistics on this TaskChannel. Can be the TaskChannel's
-          SID or its `unique_name`, such as `voice`, `sms`, or `default`.
-        schema:
-          type: string
-      - name: SplitByWaitTime
-        in: query
-        description: A comma separated list of values that describes the thresholds,
-          in seconds, to calculate statistics on. For each threshold specified, the
-          number of Tasks canceled and reservations accepted above and below the specified
-          thresholds in seconds are computed. For example, `5,30` would show splits
-          of Tasks that were canceled or accepted before and after 5 seconds and before
-          and after 30 seconds. This can be used to show short abandoned Tasks or
-          Tasks that failed to meet an SLA.
-        schema:
-          type: string
+        - name: WorkspaceSid
+          in: path
+          description: The SID of the Workspace to fetch.
+          schema:
+            type: string
+            minLength: 34
+            maxLength: 34
+            pattern: '^WS[0-9a-fA-F]{32}$'
+          required: true
+        - name: Minutes
+          in: query
+          description: >-
+            Only calculate statistics since this many minutes in the past. The
+            default 15 minutes. This is helpful for displaying statistics for
+            the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8
+            hours) to see trends.
+          schema:
+            type: integer
+        - name: StartDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and later,
+            specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+            format.
+          schema:
+            type: string
+            format: date-time
+        - name: EndDate
+          in: query
+          description: >-
+            Only calculate statistics from this date and time and earlier,
+            specified in GMT as an [ISO
+            8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+          schema:
+            type: string
+            format: date-time
+        - name: TaskChannel
+          in: query
+          description: >-
+            Only calculate statistics on this TaskChannel. Can be the
+            TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or
+            `default`.
+          schema:
+            type: string
+        - name: SplitByWaitTime
+          in: query
+          description: >-
+            A comma separated list of values that describes the thresholds, in
+            seconds, to calculate statistics on. For each threshold specified,
+            the number of Tasks canceled and reservations accepted above and
+            below the specified thresholds in seconds are computed. For example,
+            `5,30` would show splits of Tasks that were canceled or accepted
+            before and after 5 seconds and before and after 30 seconds. This can
+            be used to show short abandoned Tasks or Tasks that failed to meet
+            an SLA.
+          schema:
+            type: string
       responses:
         '200':
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/taskrouter.v1.workspace.workspace_statistics'
+                $ref: >-
+                  #/components/schemas/taskrouter.v1.workspace.workspace_statistics
           description: OK
       security:
-      - accountSid_authToken: []
+        - accountSid_authToken: []
       operationId: FetchWorkspaceStatistics
       x-maturity:
-      - GA
+        - GA
+      summary: Retrieve Workspace Statistics
 servers:
-- url: https://taskrouter.twilio.com
+  - url: 'https://taskrouter.twilio.com'
 tags:
-- name: TaskrouterV1Activity
-- name: TaskrouterV1Event
-- name: TaskrouterV1Reservation
-- name: TaskrouterV1Task
-- name: TaskrouterV1TaskChannel
-- name: TaskrouterV1TaskQueue
-- name: TaskrouterV1TaskQueueCumulativeStatistics
-- name: TaskrouterV1TaskQueueRealTimeStatistics
-- name: TaskrouterV1TaskQueueStatistics
-- name: TaskrouterV1TaskQueuesStatistics
-- name: TaskrouterV1Worker
-- name: TaskrouterV1WorkerChannel
-- name: TaskrouterV1WorkerStatistics
-- name: TaskrouterV1WorkersCumulativeStatistics
-- name: TaskrouterV1WorkersRealTimeStatistics
-- name: TaskrouterV1WorkersStatistics
-- name: TaskrouterV1Workflow
-- name: TaskrouterV1WorkflowCumulativeStatistics
-- name: TaskrouterV1WorkflowRealTimeStatistics
-- name: TaskrouterV1WorkflowStatistics
-- name: TaskrouterV1Workspace
-- name: TaskrouterV1WorkspaceCumulativeStatistics
-- name: TaskrouterV1WorkspaceRealTimeStatistics
-- name: TaskrouterV1WorkspaceStatistics
+  - name: Tag
+  - name: Task Routers
+    description: Needs a description.
+  - name: Workspaces
+    description: Needs a description.
+  - name: Activities
+    description: Needs a description.
+  - name: Events
+    description: Needs a description.
+  - name: Tasks
+    description: Needs a description.
+  - name: Channels
+    description: Needs a description.
+  - name: Queues
+    description: Needs a description.
+  - name: Cumulative
+    description: Needs a description.
+  - name: Statistics
+    description: Needs a description.
+  - name: Real-Time
+    description: Needs a description.
+  - name: Reservations
+    description: Needs a description.
+  - name: Workers
+    description: Needs a description.
+  - name: Workflow
+    description: Needs a description.
+  - name: Workflows
+    description: Needs a description.
 x-maturity:
-- name: GA
-  description: This product is Generally Available.
+  - name: GA
+    description: This product is Generally Available.
 ---
