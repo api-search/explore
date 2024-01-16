@@ -160,7 +160,7 @@ p{
                         {% endif %}   
 
                         {% if subway_slug == this_subway_slug %} 
-                            <h2>APIs ({{ subway_slug }} / {{ this_subway_slug }} / {{ slug }})</h2>   
+                            <h2>APIs</h2>   
                             <div class="tag-wrapper" id="map-{{ slug }}">                         
                                 <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ slug }}"></script>
                                 <textarea id="map-{{ slug }}-store" style="display: none;">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>        
@@ -257,7 +257,7 @@ p{
                             {% for api in site.apis %} 
                                 {% assign subway_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
                                 {% if subway_slug == this_subway_slug %} 
-                                    <h2>Operations ({{ subway_slug }} / {{ this_subway_slug }} / {{ this_slug }})</h2>   
+                                    <h2>Operations</h2>   
                                     <div class="tag-wrapper" id="map-{{ this_slug }}">                         
                                         <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ this_slug }}"></script>
                                         <textarea style="display: none;" id="map-{{ this_slug }}-store">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>        
@@ -296,8 +296,7 @@ p{
                     
                     <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
 
-                        <h1>{{ page.name | escape }} Ratings Card</h1>
-
+                        <h1>{{ api.name | escape }} Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ api.name | escape }} offering a visual snapshot of how the API sizes up against the API landscape.</i>
                         <!-- Begin Ratings -->
                         {% for ratings in site.apis %} 
                             {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}                            
