@@ -1,4 +1,4 @@
-title:              APIs.io
+title:              Explore APIs.io
 description:        APIs.io, the first API search engine.
 lang:               en
 
@@ -9,7 +9,7 @@ baseurl:            ""
 permalink: /:categories/:title/
 
 # Site base hostname & protocol, e.g. http://example.com
-url:                "https://developer.apis.io"
+url:                "https://explore.apis.io"
 search_url:         "https://search-api.apis.io/search/apis"
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
