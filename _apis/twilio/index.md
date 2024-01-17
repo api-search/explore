@@ -16,9 +16,6 @@ tags:
   - SMS
   - Voice
   - Messaging
-  - Identity
-  - Verification
-  - Conversations
 
 apis:
 
