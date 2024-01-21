@@ -32,6 +32,20 @@ apis:
     - type: OpenAPI
       url: accounts-openapi
 
+- name: Twilio Assistant API
+  description: Needs description.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.twilio.com/blog/what-is-intelligent-virtual-assistant
+  baseURL: https:/api.twilio.com
+  tags:
+    - Assistant
+    - Artificial Intelligence
+  properties:
+    - type: Documentation
+      url: https://www.twilio.com/blog/what-is-intelligent-virtual-assistant
+    - type: OpenAPI
+      url: assistant-openapi         
+
 - name: Twilio Autopilot API
   description: Needs description.
   image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -58,19 +72,6 @@ apis:
       url: https://www.twilio.com/docs/
     - type: OpenAPI
       url: bulk-exports-openapi      
-
-- name: Twilio Chat API
-  description: Needs description.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://www.twilio.com/docs/
-  baseURL: https:/api.twilio.com
-  tags:
-    - Chats
-  properties:
-    - type: Documentation
-      url: https://www.twilio.com/docs/
-    - type: OpenAPI
-      url: chat-openapi  
 
 - name: Twilio Content API
   description: Needs description.
@@ -110,22 +111,6 @@ apis:
       url: https://www.twilio.com/docs/
     - type: OpenAPI
       url: events-openapi  
-
-- name: Twilio Flex API
-  description: Needs description.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://www.twilio.com/docs/
-  baseURL: https:/api.twilio.com
-  tags:
-    - Engagement
-    - Sales
-    - Customers
-    - Support
-  properties:
-    - type: Documentation
-      url: https://www.twilio.com/docs/
-    - type: OpenAPI
-      url: flex-openapi  
 
 - name: Twilio Frontline API
   description: Needs description.
@@ -178,20 +163,36 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: ip-message-openapi 
+      url: ip-message-openapi                                                  
 
-- name: Twilio Lookups API
+- name: Twilio Marketplace API
   description: Needs description.
   image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://www.twilio.com/docs/
+  humanURL: https://www.twilio.com/docs/add-ons/marketplace
   baseURL: https:/api.twilio.com
   tags:
-    - Lookups
+    - Marketplace
+    - Add-Ons
+    - Extensions
   properties:
     - type: Documentation
-      url: https://www.twilio.com/docs/
+      url: https://www.twilio.com/docs/add-ons/marketplace
     - type: OpenAPI
-      url: lookups-openapi                                                    
+      url: marketplace-openapi 
+
+- name: Twilio Media API
+  description: Needs description.
+  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  humanURL: https://www.twilio.com/docs/media
+  baseURL: https:/api.twilio.com
+  tags:
+    - Media
+    - Videos
+  properties:
+    - type: Documentation
+      url: https://www.twilio.com/docs/media
+    - type: OpenAPI
+      url: media-openapi       
 
 - name: Twilio Messaging API
   description: Send and receive messages via SMS, MMS, WhatsApp, Facebook Messenger,
@@ -260,19 +261,6 @@ apis:
       url: https://www.twilio.com/docs/
     - type: OpenAPI
       url: numbers-openapi   
-
-- name: Twilio Preview API
-  description: Needs description.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://www.twilio.com/docs/
-  baseURL: https:/api.twilio.com
-  tags:
-    - Previews
-  properties:
-    - type: Documentation
-      url: https://www.twilio.com/docs/
-    - type: OpenAPI
-      url: preview-openapi   
 
 - name: Twilio Pricing API
   description: Needs description.

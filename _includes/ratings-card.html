@@ -8,57 +8,57 @@
         {% if rule contains "openapi-info" %}
 
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                                
 
             {% if rule contains "openapi-info-title" %}                                                
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TITLE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TITLE</span></div>
             {% endif %}
 
             {% if rule contains "openapi-info-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
             {% endif %}
             
             {% if rule contains "openapi-info-contact-name" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT NAME</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT NAME</span></div>
             {% endif %}
 
             {% if rule contains "openapi-info-contact-email" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT EMAIL</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT EMAIL</span></div>
             {% endif %}
             
             {% if rule contains "openapi-info-contact-url" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT URL</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT URL</span></div>
             {% endif %}                                                
             
             {% if rule contains "openapi-info-terms-of-service" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TOS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TOS</span></div>
             {% endif %}                                                
 
             {% if rule contains "openapi-info-license" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">LICENSE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">LICENSE</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-info-version" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">VERSION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">VERSION</span></div>
             {% endif %}          
             
         {% endif %}                                                                                   
@@ -77,33 +77,33 @@
         {% if rule contains "path-" %}
 
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                                
 
             {% if rule contains "openapi-no-path-trailing-slash" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NO TRAILING SLASH</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NO TRAILING SLASH</span></div>
             {% endif %}
 
             {% if rule contains "openapi-path-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
             {% endif %}    
                                                       
             
@@ -123,41 +123,41 @@
         {% if rule contains "-operation" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
             {% if rule contains "openapi-operations-summary" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SUMMARY</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SUMMARY</span></div>
             {% endif %}
 
             {% if rule contains "openapi-operations-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
             {% endif %}  
 
             {% if rule contains "openapi-operations-operation-ids" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION ID</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION ID</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-operations-tags" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
             {% endif %}                                                 
 
         {% endif %}                                                                                   
@@ -176,85 +176,85 @@
         {% if rule contains "-parameter" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
             {% if rule contains "openapi-parameters-name" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NAME</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NAME</span></div>
             {% endif %}
 
             {% if rule contains "openapi-parameters-query-names-camel-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CAMEL CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CAMEL CASE</span></div>
             {% endif %}
             
             {% if rule contains "openapi-parameters-query-names-snake-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SNAKE CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SNAKE CASE</span></div>
             {% endif %}                                                
 
             {% if rule contains "openapi-parameters-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
             {% endif %}  
 
             {% if rule contains "openapi-parameters-required" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">REQUIRED</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">REQUIRED</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-parameters-schema" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
             {% endif %}  
 
             {% if rule contains "openapi-parameters-schema-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TYPE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TYPE</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-parameters-schema-type-string-minlength" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MINLENGTH</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MINLENGTH</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-parameters-schema-type-string-maxlength" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MAXLENGTH</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MAXLENGTH</span></div>
             {% endif %}
             
             {% if rule contains "openapi-parameters-schema-type-string-pattern" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING PATTERN</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING PATTERN</span></div>
             {% endif %}                                              
             
             {% if rule contains "openapi-parameters-schema-type-integer-minimum" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MINIMUM</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MINIMUM</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-parameters-schema-type-integer-maximum" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MAXIMUM</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MAXIMUM</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-parameters-schema-anyof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ANYOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ANYOF</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-parameters-schema-oneof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ONEOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ONEOF</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-parameters-schema-allof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ALLOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ALLOF</span></div>
             {% endif %}                                                 
 
         {% endif %}                                                                                   
@@ -273,61 +273,61 @@
         {% if rule contains "-request-body" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
             {% if rule contains "openapi-no-request-body-on-get-info" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET</span></div>
             {% endif %}
 
             {% if rule contains "openapi-no-request-body-on-delete-info" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE</span></div>
             {% endif %}                                                
 
             {% if rule contains "openapi-request-body-content-on-post-info" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST</span></div>
             {% endif %}   
 
             {% if rule contains "openapi-request-body-content-on-put-info" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT</span></div>
             {% endif %}                                                                                               
             
             {% if rule contains "openapi-request-body-have-schema" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
             {% endif %}         
             
             {% if rule contains "openapi-request-body-have-application-x-www-form-url-encoded" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">X-WWW-FORM-URL-ENCODED</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">X-WWW-FORM-URL-ENCODED</span></div>
             {% endif %}                                                   
 
             {% if rule contains "openapi-request-body-json-media-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">APPLICATION/JSON</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">APPLICATION/JSON</span></div>
             {% endif %}   
 
             {% if rule contains "openapi-request-body-schema-ref" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">$REF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">$REF</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-request-body-have-schema-properties" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">COMPONENTS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">COMPONENTS</span></div>
             {% endif %}                                                 
 
         {% endif %}                                                                                   
@@ -346,130 +346,130 @@
         {% if rule contains "-response" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
 
             {% if rule contains "openapi-response-get-200-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200</span></div>
             {% endif %}
 
             {% if rule contains "openapi-response-get-400-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 400</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 400</span></div>
             {% endif %}
 
             {% if rule contains "openapi-response-get-404-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 404</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 404</span></div>
             {% endif %}                                                
 
             {% if rule contains "openapi-response-get-500-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-response-get-500-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-response-get-200-media-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 APPLICATION/JSON</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 APPLICATION/JSON</span></div>
             {% endif %}  
 
             {% if rule contains "openapi-response-get-200-media-type-schema" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 SCHEMA</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 SCHEMA</span></div>
             {% endif %}                                                  
             
             {% if rule contains "openapi-response-get-200-schema-ref" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 $REF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 $REF</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-get-200-schema-components" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 COMPONENTS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 COMPONENTS</span></div>
             {% endif %}                                                  
 
             {% if rule contains "openapi-response-get-default-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT</span></div>
             {% endif %}     
             
             {% if rule contains "openapi-response-get-default-media-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT APPLICATION/JSON</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT APPLICATION/JSON</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-response-get-default-media-type-schema" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT SCHEMA</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT SCHEMA</span></div>
             {% endif %}          
             
             {% if rule contains "openapi-response-get-default-schema-ref" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT $REF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT $REF</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-post-201-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 201</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 201</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-post-400-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 400</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 400</span></div>
             {% endif %}        
             
             {% if rule contains "openapi-response-post-404-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 404</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 404</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-post-500-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 500</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 500</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-response-put-204-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 204</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 204</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-put-400-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 400</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 400</span></div>
             {% endif %}        
             
             {% if rule contains "openapi-response-put-404-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 404</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 404</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-put-500-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 500</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 500</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-delete-204-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 204</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 204</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-delete-400-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 400</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 400</span></div>
             {% endif %}        
             
             {% if rule contains "openapi-response-delete-404-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 404</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 404</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-response-delete-500-status-code" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 500</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 500</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-responses-examples" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXAMPLES</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXAMPLES</span></div>
             {% endif %}                                                     
 
         {% endif %}                                                                                   
@@ -488,162 +488,162 @@
         {% if rule contains "openapi-schema" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
 
             {% if rule contains "openapi-schema-names-snake-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME SNAKE CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME SNAKE CASE</span></div>
             {% endif %}
 
             {% if rule contains "openapi-schema-names-pascal-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME PASCAL CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME PASCAL CASE</span></div>
             {% endif %}
             
             {% if rule contains "openapi-schema-names-camel-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME CAMEL CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME CAMEL CASE</span></div>
             {% endif %}                                                
 
 
             
             {% if rule contains "openapi-schema-require" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA TYPE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA TYPE</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-schema-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA REQUIRED</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA REQUIRED</span></div>
             {% endif %}     
             
             {% if rule contains "openapi-schema-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA DESCRIPTION</span></div>
             {% endif %}     
             
 
             {% if rule contains "openapi-schema-properties" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-schema-properties-names-camel-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME SNAKE CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME SNAKE CASE</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-schema-properties-names-pascal-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME PASCAL CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME PASCAL CASE</span></div>
             {% endif %}     
             
             {% if rule contains "openapi-schema-properties-names-camel-case" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME CAMEL CASE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME CAMEL CASE</span></div>
             {% endif %}                                                  
 
             {% if rule contains "openapi-schema-properties-descriptions" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES DESCRIPTION</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES DESCRIPTION</span></div>
             {% endif %}      
             
             {% if rule contains "openapi-schema-properties-type" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES TYPE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES TYPE</span></div>
             {% endif %}       
             
             {% if rule contains "openapi-schema-properties-format" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES FORMAT</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES FORMAT</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-schema-required" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES REQUIRED</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES REQUIRED</span></div>
             {% endif %}                                                  
             
             {% if rule contains "openapi-schema-properties-anyof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ANYOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ANYOF</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-schema-properties-oneof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ONEOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ONEOF</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-schema-properties-allof" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ALLOF</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ALLOF</span></div>
             {% endif %}   
             
             {% if rule contains "openapi-schema-properties-nullable" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NULLABLE</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NULLABLE</span></div>
             {% endif %}                                                    
           
                        
             {% if rule contains "openapi-schema-properties-type-string-pattern" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING PATTERN</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING PATTERN</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-schema-properties-string-minlength" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MINLENGTH</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MINLENGTH</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-schema-properties-string-maxlength" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MAXLENGTH</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MAXLENGTH</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-schema-properties-define-number-minimum" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MINIMUM</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MINIMUM</span></div>
             {% endif %} 
             
             {% if rule contains "openapi-schema-properties-define-number-maximum" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MAXIMUM</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MAXIMUM</span></div>
             {% endif %}      
             
             {% if rule contains "openapi-schema-properties-allowed-integer-format" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES INTEGER FORMAT</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES INTEGER FORMAT</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-schema-properties-enum" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ENUM</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ENUM</span></div>
             {% endif %}          
             
             {% if rule contains "openapi-schema-properties-array-items" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY ITEMS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY ITEMS</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-schema-properties-array-minitems" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MINITEMS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MINITEMS</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-schema-properties-array-maxitems" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-schema-properties-array-maxitems" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-schema-x-expandableFields" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXPANDABLE FIELDS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXPANDABLE FIELDS</span></div>
             {% endif %}  
             
             {% if rule contains "openapi-schema-properties-x-expandableFields" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANDABLE FIELDS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANDABLE FIELDS</span></div>
             {% endif %}     
             
             {% if rule contains "openapi-schema-properties-x-expansion-resources" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANSION RESOURCES</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANSION RESOURCES</span></div>
             {% endif %}                                                   
 
             {% if rule contains "openapi-schema-properties-pii" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES PII</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES PII</span></div>
             {% endif %}                                                   
 
         {% endif %}                                                                                   
@@ -662,41 +662,41 @@
         {% if rule contains "-tag" %}    
         
             {% assign color = '#000000' %}
-            {% assign size = '18px' %}
+            {% assign size = '16px' %}
             {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
                 {% assign color = '#FF0000' %}
-                {% assign size = '16px' %}
+                {% assign size = '14px' %}
             {% endif %}
 
             {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
                 {% assign color = '#FFEA00' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                           
 
             {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
                 {% assign color = '#000000' %}
-                {% assign size = '20px' %}
+                {% assign size = '18px' %}
             {% endif %}   
             
             {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
                 {% assign color = '#BF40BF' %}
-                {% assign size = '18px' %}
+                {% assign size = '16px' %}
             {% endif %}                                             
 
             {% if rule contains "openapi-tags-object" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
             {% endif %}
 
             {% if rule contains "openapi-tags-name" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG NAMES</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG NAMES</span></div>
             {% endif %}
             
             {% if rule contains "openapi-tags-description" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG DESCRIPTIONS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG DESCRIPTIONS</span></div>
             {% endif %}    
             
             {% if rule contains "openapi-operations-tags" %}
-                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 10px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION TAGS</span></div>
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION TAGS</span></div>
             {% endif %}                                                
 
         {% endif %}                                                                                   
