@@ -1,4 +1,7 @@
 ---
+specificationVersion: '0.16'
+specificationType: 'Index'
+
 name: Twilio
 description: We are a software company that strengthens businesses by unifying their
   data to build insightful paths to customers, so they are smarter with every interaction
@@ -9,7 +12,6 @@ url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/twilio.yml
 
 created: 2023/9/25
 modified: 2023/9/26
-specificationVersion: '0.16'
 
 tags:
 
@@ -30,7 +32,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/iam/api/account
     - type: OpenAPI
-      url: accounts-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/accounts-openapi.md
 
 - name: Twilio Assistant API
   description: Needs description.
@@ -44,7 +46,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/blog/what-is-intelligent-virtual-assistant
     - type: OpenAPI
-      url: assistant-openapi         
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/assistant-openapi.md         
 
 - name: Twilio Autopilot API
   description: Needs description.
@@ -57,7 +59,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: autopilot-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/autopilot-openapi.md
 
 - name: Twilio Bulk Exports API
   description: Needs description.
@@ -71,7 +73,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: bulk-exports-openapi      
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/bulk-exports-openapi.md      
 
 - name: Twilio Content API
   description: Needs description.
@@ -84,7 +86,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: content-openapi   
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/content-openapi.md   
 
 - name: Twilio Conversations API
   description: Needs description.
@@ -97,7 +99,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: conversations-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/conversations-openapi.md  
 
 - name: Twilio Events API
   description: Needs description.
@@ -110,7 +112,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: events-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/events-openapi.md  
 
 - name: Twilio Frontline API
   description: Needs description.
@@ -123,7 +125,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: frontline-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/frontline-openapi.md  
 
 - name: Twilio Insights API
   description: Needs description.
@@ -136,7 +138,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: insights-openapi   
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/insights-openapi.md   
 
 - name: Twilio Intelligence API
   description: Needs description.
@@ -149,7 +151,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: intelligence-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/intelligence-openapi.md  
 
 - name: Twilio IP Messaging API
   description: Needs description.
@@ -163,7 +165,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: ip-message-openapi                                                  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/ip-message-openapi.md                                                 
 
 - name: Twilio Marketplace API
   description: Needs description.
@@ -178,7 +180,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/add-ons/marketplace
     - type: OpenAPI
-      url: marketplace-openapi 
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/marketplace-openapi.md 
 
 - name: Twilio Media API
   description: Needs description.
@@ -192,7 +194,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/media
     - type: OpenAPI
-      url: media-openapi       
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/media-openapi.md       
 
 - name: Twilio Messaging API
   description: Send and receive messages via SMS, MMS, WhatsApp, Facebook Messenger,
@@ -208,7 +210,7 @@ apis:
     - type: Pricing
       url: https://www.twilio.com/en-us/sms/pricing/us 
     - type: OpenAPI
-      url: messaging-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/messaging-openapi.md
 
 - name: Twilio Microvisor API
   description: Needs description.
@@ -221,7 +223,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: microvisor-openapi 
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/microvisor-openapi.md 
 
 - name: Twilio Monitor API
   description: Needs description.
@@ -234,7 +236,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: monitor-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/monitor-openapi.md  
 
 - name: Twilio Notify API
   description: Needs description.
@@ -247,7 +249,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: notify-openapi   
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/notify-openapi.md   
 
 - name: Twilio Numbers API
   description: Needs description.
@@ -260,7 +262,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: numbers-openapi   
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/numbers-openapi.md   
 
 - name: Twilio Pricing API
   description: Needs description.
@@ -273,7 +275,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: pricing-openapi 
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/pricing-openapi.md 
 
 - name: Twilio Proxy API
   description: Needs description.
@@ -286,7 +288,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: proxy-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/proxy-openapi.md  
 
 - name: Twilio Routes API
   description: Needs description.
@@ -299,7 +301,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: routes-openapi    
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/routes-openapi.md    
 
 - name: Twilio Serverless API
   description: Needs description.
@@ -312,7 +314,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: serverless-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/serverless-openapi.md  
 
 - name: Twilio Studio API
   description: Needs description.
@@ -325,7 +327,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: studio-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/studio-openapi.md
 
 - name: Twilio Super SIM API
   description: Needs description.
@@ -338,7 +340,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: super-sim-openapi    
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/super-sim-openapi.md    
 
 - name: Twilio Sync API
   description: Needs description.
@@ -351,7 +353,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: sync-openapi   
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/sync-openapi.md   
 
 - name: Twilio Task Router API
   description: Needs description.
@@ -365,7 +367,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: task-router-openapi  
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/task-router-openapi.md  
 
 - name: Twilio Trunking API
   description: Needs description.
@@ -378,7 +380,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: trunking-openapi    
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/trunking-openapi.md    
 
 - name: Twilio Trust Hub API
   description: Needs description.
@@ -391,7 +393,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: trust-hub-openapi                                                                            
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/trust-hub-openapi.md                                                                            
 
 - name: Twilio Verify API
   description: Set up SMS or voice verifications to quickly authenticate users, fight
@@ -408,7 +410,7 @@ apis:
     - type: Pricing
       url: https://www.twilio.com/en-us/verify/pricing 
     - type: OpenAPI
-      url: verify-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/verify-openapi.md
 
 - name: Twilio Video API
   description: Twilio Video is a programmable real-time communications platform that allows you to add video chat functionality to your web, iOS, and Android applications. The platform provides APIs, SDKs, and helper tools to capture, distribute, record, and render high quality audio and video applications.
@@ -421,7 +423,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/video
     - type: OpenAPI
-      url: video-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/video-openapi.md
 
 - name: Twilio Voice API
   description: Build custom voice call experiences for your applications to reach
@@ -435,7 +437,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/en-us/voice
     - type: OpenAPI
-      url: voice-openapi
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/voice-openapi.md
 
 - name: Twilio Wireless API
   description: Needs description.
@@ -448,7 +450,7 @@ apis:
     - type: Documentation
       url: https://www.twilio.com/docs/
     - type: OpenAPI
-      url: wireless-openapi        
+      url: https://raw.githubusercontent.com/api-search/explore/main/_apis/twilio/properties/wireless-openapi.md        
 
 # Central Properties
 common:

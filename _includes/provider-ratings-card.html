@@ -1,0 +1,205 @@
+
+<!--- BEGIN INFO -->
+<div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 20px; padding-left: 5px; padding-right: 5px;">Info</div>
+<div id="rating-info-{{ rating_slug }}" class="rating-info-wrapper">                                        
+{% for rule in ratings %}                                               
+
+    {% if rule contains "apis-json" %}
+
+        {% assign color = '#000000' %}
+        {% assign size = '16px' %}
+        {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+            {% assign color = '#FF0000' %}
+            {% assign size = '14px' %}
+        {% endif %}
+
+        {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+            {% assign color = '#FFEA00' %}
+            {% assign size = '16px' %}
+        {% endif %}                                           
+
+        {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+            {% assign color = '#000000' %}
+            {% assign size = '18px' %}
+        {% endif %}   
+        
+        {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+            {% assign color = '#BF40BF' %}
+            {% assign size = '16px' %}
+        {% endif %}                                                
+
+        {% if rule contains "apis-json-v15-name" %}                                                
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NAME</span></div>
+        {% endif %}
+
+        {% if rule contains "apis-json-v15-description" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+        {% endif %}
+        
+        {% if rule contains "apis-json-v15-image" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">IMAGE</span></div>
+        {% endif %}
+
+        {% if rule contains "apis-json-v15-url" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">URL</span></div>
+        {% endif %}
+        
+        {% if rule contains "apis-json-v15-created" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CREATED</span></div>
+        {% endif %}    
+        
+        {% if rule contains "apis-json-v15-modified" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">MODIFIED</span></div>
+        {% endif %}          
+        
+        {% if rule contains "apis-json-v15-tags" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+        {% endif %}    
+        
+        {% if rule contains "apis-json-v15-apis-properties-sdk" %}
+            <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SDKs</span></div>
+        {% endif %}          
+                                                                                              
+    {% endif %}      
+{% endfor %} 
+</div>
+<!--- END INFO -->
+
+
+<!--- BEGIN APIS -->
+<div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 20px; padding-left: 5px; padding-right: 5px;">APIs</div>
+<div id="rating-info-{{ rating_slug }}" class="rating-info-wrapper">                                        
+{% for rule in ratings %}                                               
+
+    {% if rule contains "apis-json" %}
+
+            {% assign color = '#000000' %}
+            {% assign size = '16px' %}
+            {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                {% assign color = '#FF0000' %}
+                {% assign size = '14px' %}
+            {% endif %}
+
+            {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                {% assign color = '#FFEA00' %}
+                {% assign size = '16px' %}
+            {% endif %}                                           
+
+            {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                {% assign color = '#000000' %}
+                {% assign size = '18px' %}
+            {% endif %}   
+            
+            {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                {% assign color = '#BF40BF' %}
+                {% assign size = '16px' %}
+            {% endif %}                                                
+
+            {% if rule contains "apis-json-v15-apis-name" %}                                                
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NAME</span></div>
+            {% endif %}
+
+            {% if rule contains "apis-json-v15-apis-description" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+            {% endif %}
+            
+            {% if rule contains "apis-json-v15-apis-image" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">IMAGE</span></div>
+            {% endif %}
+
+            {% if rule contains "apis-json-v15-apis-humanURL" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">HUMAN URL</span></div>
+            {% endif %}
+            
+            {% if rule contains "apis-json-v15-apis-baseURL" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">BASE URL</span></div>
+            {% endif %}                                                
+            
+            {% if rule contains "apis-json-v15-tags" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+            {% endif %}                                                         
+                                                                                          
+    {% endif %}      
+{% endfor %} 
+</div>
+<!--- END APIS -->
+
+<!--- BEGIN PROPERTIES -->
+<div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 20px; padding-left: 5px; padding-right: 5px;">Properties</div>
+<div id="rating-info-{{ rating_slug }}" class="rating-info-wrapper">                                        
+{% for rule in ratings %}                                               
+
+    {% if rule contains "apis-json" %}
+
+            {% assign color = '#000000' %}
+            {% assign size = '16px' %}
+            {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                {% assign color = '#FF0000' %}
+                {% assign size = '14px' %}
+            {% endif %}
+
+            {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                {% assign color = '#FFEA00' %}
+                {% assign size = '16px' %}
+            {% endif %}                                           
+
+            {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                {% assign color = '#000000' %}
+                {% assign size = '18px' %}
+            {% endif %}   
+            
+            {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                {% assign color = '#BF40BF' %}
+                {% assign size = '16px' %}
+            {% endif %}                                                
+
+            {% if rule contains "apis-json-v15-apis-properties-documentation" %}                                                
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DOCUMENTATION</span></div>
+            {% endif %}
+
+            {% if rule contains "apis-json-v15-apis-properties-documentation-openapi" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPENAPI</span></div>
+            {% endif %}
+            
+            {% if rule contains "apis-json-v15-apis-properties-management-signup" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SIGNUP</span></div>
+            {% endif %}
+
+            {% if rule contains "apis-json-v15-apis-properties-communications-blog" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">BLOG</span></div>
+            {% endif %}
+            
+            {% if rule contains "apis-json-v15-apis-properties-status" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STATUS</span></div>
+            {% endif %}                                                
+            
+            {% if rule contains "apis-json-v15-apis-properties-change-change-log" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CHANGE-LOG</span></div>
+            {% endif %}       
+            
+            {% if rule contains "apis-json-v15-apis-properties-legal-terms-of-service" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TERMS-OF-SERVICE</span></div>
+            {% endif %}     
+            
+            {% if rule contains "apis-json-v15-apis-properties-support-support" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SUPPORT</span></div>
+            {% endif %}   
+            
+            {% if rule contains "apis-json-v15-maintainers" %}
+                <div style="padding:3px; display: inline; border: 2px solid #000; border-radius: 25px; padding: 4px; margin: 8px; border-color: {{ color }};"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">MAINTAINERS</span></div>
+            {% endif %}             
+                                                                                          
+    {% endif %}      
+{% endfor %} 
+</div>
+<!--- END PROPERTIES -->
+
+<!--
+<ul>     
+    {% for rule in ratings %}        
+        {% if rule contains "apis-json" %}
+            <li>{{ rule }} - {{ ratings[rule].errors }}/{{ ratings[rule].warn }}/{{ ratings[rule].info }}/{{ ratings[rule].hints }}</li>
+        {% endif %}                                                                                   
+    {% endfor %} 
+</ul>
+-->

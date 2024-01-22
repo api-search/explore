@@ -1,4 +1,7 @@
 ---
+specificationVersion: '0.16'
+specificationType: 'Index'
+
 name: Stripe
 description: Millions of companies of all sizes use Stripe online and in person to
   accept payments, send payouts, automate financial processes, and ultimately grow
@@ -7,7 +10,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/stripe.yml
 created: 2023/10/06
 modified: 2023/10/06
-specificationVersion: '0.16'
+
 tags:
 - Payments
 - Payouts
@@ -26,7 +29,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/accounts
   - type: OpenAPI
-    url: accounts-openapi
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/accounts-openapi.md
 
 - name: Stripe Apple Pay API
   description: Stripe users can accept Apple Pay in iOS applications in iOS 9 and above, and on the web in Safari starting with iOS 10 or macOS Sierra. There are no additional fees to process Apple Pay payments, and the pricing is the same as other card transactions.
@@ -39,7 +42,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/apple-pay
   - type: OpenAPI
-    url: apple-pay-openapi
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/apple-pay-openapi.md
 
 - name: Stripe Application Fees API
   description: When you collect a transaction fee on top of a charge made for your user (using Connect), an Application Fee object is created in your account. You can list, retrieve, and refund application fees.
@@ -52,7 +55,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/application_fees
   - type: OpenAPI
-    url: application-fees-openapi    
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/application-fees-openapi.md    
 
 - name: Stripe Application Secrets API
   description: Secret Store is an API that allows Stripe Apps developers to securely persist secrets for use by UI Extensions and app backends.
@@ -65,7 +68,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/secret_management
   - type: OpenAPI
-    url: application-secrets-openapi   
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/application-secrets-openapi.md   
 
 - name: Stripe Balance API
   description: This is an object representing your Stripe balance. You can retrieve it to see the balance currently on your Stripe account. You can also retrieve the balance history, which contains a list of transactions that contributed to the balance (charges, payouts, and so forth).
@@ -78,7 +81,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/balance
   - type: OpenAPI
-    url: balance-openapi    
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/balance-openapi.md    
 
 - name: Stripe Billing API
   description: Create and manage subscriptions, recurring payments, and recurring revenue.
@@ -91,7 +94,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/billing
   - type: OpenAPI
-    url: billing-openapi     
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/billing-openapi.md     
 
 - name: Stripe Charges API
   description: The Charge object represents a single attempt to move money into your Stripe account. PaymentIntent confirmation is the most common way to create Charges, but transferring money to a different Stripe account through Connect also creates Charges. Some legacy payment flows create Charges directly, which is not recommended for new integrations.
@@ -104,7 +107,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/charges
   - type: OpenAPI
-    url: charges-openapi    
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/charges-openapi.md    
 
 - name: Stripe Checkout API
   description: Checkout is a low-code payment integration that creates a customizable form for collecting payments. You can embed Checkout directly in your website or redirect customers to a Stripe-hosted payment page. It supports one-time payments and subscriptions and accepts over 40 local payment methods. 
@@ -117,7 +120,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/payments/checkout
   - type: OpenAPI
-    url: checkout-openapi    
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/checkout-openapi.md    
 
 - name: Stripe Climate API
   description: Stripe Climate is the easiest way to help promising permanent carbon removal technologies launch and scale. Join a growing group of ambitious businesses that are changing the course of carbon removal.
@@ -130,7 +133,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/climate
   - type: OpenAPI
-    url: climate-openapi                  
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/climate-openapi.md                  
 
 - name: Stripe Country API
   description: Stripe needs to collect certain pieces of information about each account created. These requirements can differ depending on the account’s country. The Country Specs API makes these rules available to your integration.
@@ -143,7 +146,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/country_specs
   - type: OpenAPI
-    url: country-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/country-openapi.md      
 
 - name: Stripe Coupons API
   description: A coupon contains information about a percent-off or amount-off discount you might want to apply to a customer. Coupons may be applied to subscriptions, invoices, checkout sessions, quotes, and more. Coupons do not work with conventional one-off charges or payment intents.
@@ -156,7 +159,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/coupons
   - type: OpenAPI
-    url: coupons-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/coupons-openapi.md      
 
 - name: Stripe Credit Notes API
   description: Issue a credit note to adjust an invoice’s amount after the invoice is finalized.
@@ -169,7 +172,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/credit_notes
   - type: OpenAPI
-    url: credit-notes-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/credit-notes-openapi.md      
 
 - name: Stripe Customers API
   description: This object represents a customer of your business. Use it to create recurring charges and track payments that belong to the same customer.
@@ -182,7 +185,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/customers
   - type: OpenAPI
-    url: customers-openapi    
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/customers-openapi.md    
 
 - name: Stripe Disputes API
   description: A dispute occurs when a customer questions your charge with their card issuer. When this happens, you have the opportunity to respond to the dispute with evidence that shows that the charge is legitimate.
@@ -195,7 +198,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/disputes
   - type: OpenAPI
-    url: disputes-openapi        
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/disputes-openapi.md        
 
 - name: Stripe Ephemeral Keys API
   description: Stripe.js uses ephemeral keys to securely retrieve Card information from the Stripe API without publicly exposing your secret keys. You need to do some of the ephemeral key exchange on the server-side to set this up.
@@ -208,7 +211,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/issuing/elements
   - type: OpenAPI
-    url: ephemeral-keys-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/ephemeral-keys-openapi.md      
 
 - name: Stripe Events API
   description: Events are our way of letting you know when something interesting happens in your account. When an interesting event occurs, we create a new Event object.
@@ -221,7 +224,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/events
   - type: OpenAPI
-    url: events-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/events-openapi.md      
 
 - name: Stripe Exchange Rates API
   description: Stripe supports processing charges in 135+ currencies allowing you to present prices in a customer’s native currency. Doing so can improve sales and help customers avoid conversion costs. In order to present prices in your customer’s currency, you need to specify the presentment currency when creating a PaymentIntent or a charge.
@@ -234,7 +237,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/currencies/conversions
   - type: OpenAPI
-    url: exchange-rates-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/exchange-rates-openapi.md      
 
 - name: Stripe Files API
   description: This object represents files hosted on Stripe’s servers. You can upload files with the create file request (for example, when uploading dispute evidence). Stripe also creates files independently (for example, the results of a Sigma scheduled query).
@@ -247,7 +250,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/files
   - type: OpenAPI
-    url: files-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/files-openapi.md      
 
 - name: Stripe Financial Connections API
   description: Financial Connections lets your users securely share their financial data by linking their financial accounts to your business. Use Financial Connections to access user-permissioned account data such as tokenized account and routing numbers, balances, ownerships details, and transactions.
@@ -260,7 +263,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/financial-connections
   - type: OpenAPI
-    url: financial-connections-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/financial-connections-openapi.md      
 
 - name: Stripe Identity API
   description: Use Stripe Identity to confirm the identity of global users to prevent fraud, streamline risk operations, and increase trust and safety. 
@@ -273,7 +276,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/identity
   - type: OpenAPI
-    url: identity-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/identity-openapi.md      
 
 - name: Stripe Invoice API
   description: Invoices are statements of amounts owed by a customer, and are either generated one-off, or generated periodically from a subscription.
@@ -286,7 +289,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/invoices
   - type: OpenAPI
-    url: invoice-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/invoice-openapi.md      
 
 - name: Stripe Issuing API
   description: An API for businesses to instantly create, manage, and distribute payment cards.
@@ -299,7 +302,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/issuing
   - type: OpenAPI
-    url: issuing-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/issuing-openapi.md      
 
 - name: Stripe Link API
   description: You can use the Payment Links API to create a payment link that you can share with your customers. Stripe redirects customers who open this link to a Stripe-hosted payment page.
@@ -312,7 +315,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/payment-links/api
   - type: OpenAPI
-    url: link-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/link-openapi.md      
 
 - name: Stripe Payment Intents API
   description: A PaymentIntent guides you through the process of collecting a payment from your customer. We recommend that you create exactly one PaymentIntent for each order or customer session in your system. You can reference the PaymentIntent later to see the history of payment attempts for a particular session.
@@ -325,7 +328,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/payment_intents
   - type: OpenAPI
-    url: payment-intents-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/payment-intents-openapi.md      
 
 - name: Stripe Payment Links API
   description: A payment link is a shareable URL that will take your customers to a hosted payment page. A payment link can be shared and used multiple times. When a customer opens a payment link it will open a new checkout session to render the payment page. You can use checkout session events to track payments through payment links.
@@ -338,7 +341,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/payment_links/payment_links
   - type: OpenAPI
-    url: payment-links-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/payment-links-openapi.md      
 
 - name: Stripe Payment Method API
   description: The Payment Methods API allows you to accept a variety of payment methods through a single API. A PaymentMethod object contains the payment method details to create payments. 
@@ -351,7 +354,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/payments/payment-methods
   - type: OpenAPI
-    url: payment-method-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/payment-method-openapi.md      
 
 - name: Stripe Payouts API
   description: A Payout object is created when you receive funds from Stripe, or when you initiate a payout to either a bank account or debit card of a connected Stripe account. You can retrieve individual payouts, and list all payouts. Payouts are made on varying schedules, depending on your country and industry.
@@ -364,7 +367,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/payouts
   - type: OpenAPI
-    url: payouts-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/payouts-openapi.md      
 
 - name: Stripe Plans API
   description: You can now model subscriptions more flexibly using the Prices API. It replaces the Plans API and is backwards compatible to simplify your migration.
@@ -377,7 +380,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/plans
   - type: OpenAPI
-    url: plans-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/plans-openapi.md      
 
 - name: Stripe Prices API
   description: Prices define the unit cost, currency, and (optional) billing cycle for both recurring and one-time purchases of products. Products help you track inventory or provisioning, and prices help you track payment terms. Different physical goods or levels of service should be represented by products, and pricing options should be represented by prices. This approach lets you change prices without having to change your provisioning scheme.
@@ -390,7 +393,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/prices
   - type: OpenAPI
-    url: prices-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/prices-openapi.md      
 
 - name: Stripe Products API
   description: Products describe the specific goods or services you offer to your customers. For example, you might offer a Standard and Premium version of your goods or service; each version would be a separate Product. They can be used in conjunction with Prices to configure pricing in Payment Links, Checkout, and Subscriptions.
@@ -403,7 +406,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/products
   - type: OpenAPI
-    url: products-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/products-openapi.md      
 
 - name: Stripe Promotion Codes API
   description: A Promotion Code represents a customer-redeemable code for a coupon. It can be used to create multiple codes for a single coupon.
@@ -416,7 +419,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/promotion_codes
   - type: OpenAPI
-    url: promotion-codes-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/promotion-codes-openapi.md      
 
 - name: Stripe Quotes API
   description: A Quote is a way to model prices that you’d like to provide to a customer. Once accepted, it will automatically create an invoice, subscription or subscription schedule.
@@ -429,7 +432,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/quotes
   - type: OpenAPI
-    url: quotes-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/quotes-openapi.md      
 
 - name: Stripe Radar API
   description: Stripe Radar provides real-time fraud protection and requires no additional development time. Fraud professionals can add Radar for Fraud Teams to customize protection and get deeper insights.
@@ -442,7 +445,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/radar
   - type: OpenAPI
-    url: radar-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/radar-openapi.md      
 
 - name: Stripe Refunds API
   description: Refund objects allow you to refund a previously created charge that isn’t refunded yet. Funds are refunded to the credit or debit card that’s initially charged.
@@ -455,7 +458,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/refunds
   - type: OpenAPI
-    url: refunds-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/refunds-openapi.md      
 
 - name: Stripe Reporting API
   description: The financial reports in the Dashboard provide downloadable reports in CSV format for a variety of accounting and reconciliation tasks. These reports are also available through the API, so you can schedule them to run automatically or run them whenever you need to receive the associated report files for accounting purposes.
@@ -468,7 +471,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/reports/api
   - type: OpenAPI
-    url: reporting-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/reporting-openapi.md      
 
 - name: Stripe Reviews API
   description: Reviews can be used to supplement automated fraud detection with human expertise.
@@ -481,7 +484,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/radar/reviews
   - type: OpenAPI
-    url: reviews-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/reviews-openapi.md      
 
 - name: Stripe Setup API
   description: Use the Setup Intents API to set up a payment method for future payments. It’s similar to a payment, but no charge is created. Set up a payment method for future payments now.
@@ -494,7 +497,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/payments/setup-intents
   - type: OpenAPI
-    url: setup-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/setup-openapi.md      
 
 - name: Stripe Shipping Rates API
   description: Shipping rates describe the price of shipping presented to your customers and applied to a purchase. 
@@ -507,7 +510,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/shipping_rates
   - type: OpenAPI
-    url: shipping-rates-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/shipping-rates-openapi.md      
 
 - name: Stripe Sigma API
   description: If you have scheduled a Sigma query, you’ll receive a sigma.scheduled_query_run.created webhook each time the query runs. The webhook contains a ScheduledQueryRun object, which you can use to retrieve the query results.
@@ -520,7 +523,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/sigma/scheduled_queries
   - type: OpenAPI
-    url: sigma-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/sigma-openapi.md      
 
 - name: Stripe Sources API
   description: Source objects allow you to accept a variety of payment methods. They represent a customer’s payment instrument, and can be used with the Stripe API just like a Card object once chargeable, they can be charged, or can be attached to customers.
@@ -533,7 +536,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/sources
   - type: OpenAPI
-    url: sources-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/sources-openapi.md      
 
 - name: Stripe Subscription API
   description: Subscriptions allow you to charge a customer on a recurring basis.
@@ -546,7 +549,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/subscriptions
   - type: OpenAPI
-    url: subscription-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/subscription-openapi.md      
 
 - name: Stripe Tax API
   description: Automate sales tax, VAT, and GST compliance on all your transactions—low or no code integrations available.
@@ -559,7 +562,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/tax
   - type: OpenAPI
-    url: tax-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/tax-openapi.md      
 
 - name: Stripe Terminal API
   description: Use Stripe Terminal to accept in-person payments and extend Stripe payments to your point of sale.
@@ -572,7 +575,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/terminal
   - type: OpenAPI
-    url: terminal-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/terminal-openapi.md      
 
 - name: Stripe Test Helpers API
   description: Stripe provides a number of resources for testing your integration. Make sure to test the following use cases before launch, and use our Postman collection to make the testing process simpler.
@@ -585,7 +588,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/implementation-guides/billing/testing
   - type: OpenAPI
-    url: test-helpers-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/test-helpers-openapi.md      
 
 - name: Stripe Tokens API
   description: Tokenization is the process Stripe uses to collect sensitive card or bank account details, or personally identifiable information (PII), directly from your customers in a secure manner. A token representing this information is returned to your server to use. Use our recommended payments integrations to perform this process on the client-side. This guarantees that no sensitive card data touches your server, and allows your integration to operate in a PCI-compliant way.
@@ -598,7 +601,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/tokens
   - type: OpenAPI
-    url: tokens-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/tokens-openapi.md      
 
 - name: Stripe Topups API
   description: To top up your Stripe balance, you create a top-up object. You can retrieve individual top-ups, as well as list all top-ups. Top-ups are identified by a unique, random ID.
@@ -611,7 +614,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/topups
   - type: OpenAPI
-    url: topups-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/topups-openapi.md      
 
 - name: Stripe Transfers API
   description: A Transfer object is created when you move funds between Stripe accounts as part of Connect.
@@ -624,7 +627,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/transfers
   - type: OpenAPI
-    url: transfers-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/transfers-openapi.md      
 
 - name: Stripe Treasury API
   description: Stripe Treasury is a banking-as-a-service API that lets you embed financial services in your product. With Stripe’s API, you can enable businesses to hold funds, pay bills, earn yield, and manage their cash flow. Many users build Stripe Issuing in conjunction with Stripe Treasury to attach cards to spend funds in the account.
@@ -637,7 +640,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/treasury
   - type: OpenAPI
-    url: treasury-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/treasury-openapi.md      
 
 - name: Stripe Webhook API
   description: You can configure webhook endpoints via the API to be notified about events that happen in your Stripe account or connected accounts.
@@ -650,7 +653,7 @@ apis:
   - type: Documentation
     url: https://stripe.com/docs/api/webhook_endpoints
   - type: OpenAPI
-    url: webhook-openapi      
+    url: https://raw.githubusercontent.com/api-search/explore/main/_apis/stripe/properties/webhook-openapi.md      
 
 common:
 
@@ -671,5 +674,4 @@ common:
 maintainers:
 - FN: API Evangelist
   email: https://apievangelist.com
-  
 ---

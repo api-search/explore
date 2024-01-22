@@ -130,6 +130,7 @@ p{
             {% assign slug = page.url | replace: '/apis/','' | replace: '/index/','' %}
             {% assign slug_replace = slug %}                
             {% assign this_subway_slug = slug | append: '-subway' %}    
+            {% assign this_ratings_slug = slug | append: '-ratings' %}    
 
             <div class="article-content">
 
@@ -163,7 +164,7 @@ p{
                             <div class="tag-wrapper" id="map-{{ slug }}">                         
                                 <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ slug }}"></script>
                                 <textarea id="map-{{ slug }}-store" style="display: none;">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>                                                     
-                                <canvas style="padding: 0px; margin: 0px; width: 100%; height: 500px; border: 0px solid #FFF;" id="canvas-{{ slug }}"></canvas>
+                                <canvas style="padding: 0px; margin: 0px; width: 100%; height: 525px; border: 0px solid #FFF;" id="canvas-{{ slug }}"></canvas>
                             </div>
 
                         {% endif %}    
@@ -176,7 +177,7 @@ p{
                     {% for property in properties %}
                         {% if property != '' %}
                             {% assign property = property | upcase %}
-                            <div class="profile-tag">{{ property | upcase }}</div> 
+                            <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property | upcase }}</a></div> 
                         {% endif %}
                     {% endfor %}
                     </div> 
@@ -192,14 +193,37 @@ p{
 
                 </div>
 
+                <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
+
+                    <h1>{{ page.name | escape }} Provider Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ page.name.name | escape }} offering a visual snapshot of how the API provider sizes up against the API landscape.</i>
+                    <!-- Begin Ratings -->
+                    {% for ratings in site.apis %} 
+                        {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug_replace,'' | replace: '/properties/','' | replace: '/','' %}                            
+
+                        {% if rating_slug == "-ratings" %} 
+                            {% assign rating_slug = slug | append: "-ratings" %}
+                        {% endif %}                         
+
+                        {% if rating_slug == this_ratings_slug %} 
+                            <div style="overflow: auto; border: 1px solid #FFF">                                   
+                                {% include provider-ratings-card.html %}
+                            </div>                                
+
+                        {% endif %}    
+                    {% endfor %}  
+                    <!-- Begin Ratings --> 
+                        
+                </div>                
+
                 {% assign api_count = 1 %}
                 {% for api in page.apis %} 
 
                     {% for property in api.properties %} 
 
                         {% if property.type == 'OpenAPI' %}
-                
-                            {% assign this_slug = property.url | replace: '.yml','' | replace: '-openapi','' | replace: '.md','' %}
+                                            
+                            {% assign this_slug = property.url | replace: '.yml','' | replace: '.md','' | replace: '-openapi','' | replace: 'https://raw.githubusercontent.com/api-search/explore/main/_apis/','' | replace: slug_replace,'' | replace: '/properties/','' %}
+
                             {% assign this_openapi_slug = this_slug | append: '-openapi' %}
                             {% assign this_subway_slug = this_slug | append: '-subway' %}
                             {% assign this_ratings_slug = this_slug | append: '-ratings' %}
@@ -278,7 +302,7 @@ p{
                                     <div class="tag-wrapper" id="map-{{ this_slug }}">                         
                                         <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ this_slug }}"></script>
                                         <textarea style="display: none;" id="map-{{ this_slug }}-store">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>                                                     
-                                        <canvas style="padding: 0px; margin: 0px; width: 100%; height: 500px; border: 0px solid #FFF;" id="canvas-{{ this_slug }}"></canvas>
+                                        <canvas style="padding: 0px; margin: 0px; width: 100%; height: 525px; border: 0px solid #FFF;" id="canvas-{{ this_slug }}"></canvas>
                                     </div>
 
                                 {% endif %}    
@@ -288,7 +312,7 @@ p{
                             <h3>API Properties</h3>           
                             <div class="tag-wrapper" id="map-{{ this_slug }}-properties">
                                 {% for property in api.properties %}
-                                    <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; text-decoration: none;">{{ property.type | upcase }}</a></div>
+                                    <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property.type | upcase }}</a></div>
                                 {% endfor %}
                             </div>
         
@@ -298,7 +322,7 @@ p{
                             {% for property in properties %}
                                 {% if property != '' %}
                                     {% assign property = property | upcase %}
-                                    <div class="profile-tag">{{ property | upcase }}</div> 
+                                    <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property | upcase }}</a></div> 
                                 {% endif %}
                             {% endfor %}
                             </div>                     
@@ -312,14 +336,14 @@ p{
                     
                     <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
 
-                        <h1>{{ api.name | escape }} Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ api.name | escape }} offering a visual snapshot of how the API sizes up against the API landscape.</i>
+                        <h1>{{ api.name | escape }} API Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ api.name | escape }} offering a visual snapshot of how the API sizes up against the API landscape.</i>
                         <!-- Begin Ratings -->
                         {% for ratings in site.apis %} 
-                            {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}                            
+                            {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}                                                        
                             {% if rating_slug == this_ratings_slug %} 
                                 
-                                <div style="overflow: auto; height: 500px; border: 1px solid #FFF">                                   
-                                    {% include ratings-card.html %}
+                                <div style="overflow: auto; border: 1px solid #FFF">                                   
+                                    {% include api-ratings-card.html %}
                                 </div>                                
 
                             {% endif %}    
