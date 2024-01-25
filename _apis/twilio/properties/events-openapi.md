@@ -266,7 +266,7 @@ components:
       scheme: basic
 info:
   title: Twilio Events API
-  description: This is the public Twilio REST API.
+  description: Event Streams is an API that allows you to tap into a unified stream of every interaction sent or received on Twilio. Event Streams evolves event delivery at Twilio beyond a single-producer-to-single-consumer model, giving developers flexibility to stream events to multiple sinks.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

@@ -368,7 +368,7 @@ components:
       scheme: basic
 info:
   title: Twilio Intelligence API
-  description: This is the public Twilio REST API.
+  description: Voice Intelligence API empowers you to analyze and extract actionable business intelligence from the conversations that take place every day between your customers and your agents.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

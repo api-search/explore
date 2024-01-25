@@ -421,7 +421,7 @@ components:
       scheme: basic
 info:
   title: Twilio Media API
-  description: This is the public Twilio REST API.
+  description: The Media subresource of the Message resource represents a piece of media, such as an image, that is associated with a Message. Twilio creates a Media resource and stores the contents of the media when the following events occur.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

@@ -1441,7 +1441,7 @@ components:
       scheme: basic
 info:
   title: Twilio Insights API
-  description: This is the public Twilio REST API.
+  description: Voice Insights provides call quality analytics and aggregation tools for investigating Twilio calls and conferences. Sensors in the Twilio Voice SDKs and on Twilio media gateways gather call metrics and events and send them to the Voice Insights platform for analysis and aggregation.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

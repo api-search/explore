@@ -379,7 +379,7 @@ components:
       scheme: basic
 info:
   title: Twilio Monitor API
-  description: This is the public Twilio REST API.
+  description: An Alert resource instance represents a single log entry for an error or warning encountered when Twilio makes a webhook request to your server, or when your application makes a request to the REST API. These can be very useful for debugging purposes, and you can configure new email or webhook notifications using Alarms.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

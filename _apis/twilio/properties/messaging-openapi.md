@@ -1464,7 +1464,7 @@ components:
       scheme: basic
 info:
   title: Twilio Messaging API
-  description: This is the public Twilio REST API.
+  description: Send messages to customers across preferred channels like SMS, MMS, and WhatsApp with one API. Find the documentation, sample code, and developer tools you need to build your solution for alerts, notifications, promotions, marketing messages, and more.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

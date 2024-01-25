@@ -1163,8 +1163,8 @@ components:
       type: http
       scheme: basic
 info:
-  title: Assistants
-  description: Needs description.
+  title: Assistant API
+  description: Intelligent virtual assistants (IVA) are incredibly sophisticated applications with the potential to revolutionize the way modern businesses service customers.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

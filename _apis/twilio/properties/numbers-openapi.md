@@ -1180,7 +1180,7 @@ components:
       scheme: basic
 info:
   title: Twilio Numbers API
-  description: This is the public Twilio REST API.
+  description: Twilio's virtual phone numbers give you instant access to local, national, mobile, and toll-free phone numbers in over 100 countries for your voice call and messaging applications. Leverage local phone numbers for your customers to call and text, or use your own number.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

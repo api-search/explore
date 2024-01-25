@@ -1027,7 +1027,7 @@ components:
       scheme: basic
 info:
   title: Twilio - Autopilot
-  description: This is the public Twilio REST API.
+  description: Twilio's Autopilot product will officially shut down on August 25, 2023. After this date, Autopilot APIs will no longer function, and starting February 25, 2023, Customer Support will cease responding to new requests.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

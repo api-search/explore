@@ -361,7 +361,7 @@ components:
       scheme: basic
 info:
   title: Twilio Pricing API
-  description: This is the public Twilio REST API.
+  description: Whether you programmatically markup Twilio prices for your own customers or make dynamic decisions based on what it will cost to make / receive a call — the Pricing API was designed to help you by providing up-to-date prices relevant to your account.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

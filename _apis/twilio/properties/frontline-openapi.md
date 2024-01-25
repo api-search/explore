@@ -63,7 +63,7 @@ components:
       scheme: basic
 info:
   title: Twilio Frontline API
-  description: This is the public Twilio REST API.
+  description: Twilio Frontline is limited to existing Frontline accounts only. New and existing Twilio customers without previous access to Frontline will not be able to get Frontline through Twilio’s Console nor access developer documentation.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

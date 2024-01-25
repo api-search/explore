@@ -555,7 +555,7 @@ components:
       scheme: basic
 info:
   title: Twilio Notify API
-  description: This is the public Twilio REST API.
+  description: The Notify REST API allows you to control your notifications workflow from your server. You can create bindings, credentials, and services, as well as send notifications using the endpoints in this REST API.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

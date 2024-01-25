@@ -768,7 +768,7 @@ components:
       scheme: basic
 info:
   title: Twilio IP Messaging API
-  description: This is the public Twilio REST API.
+  description: The Programmable Messaging REST API helps you add robust messaging capabilities to your applications.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

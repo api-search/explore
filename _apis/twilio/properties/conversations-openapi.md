@@ -2720,7 +2720,7 @@ components:
       scheme: basic
 info:
   title: Twilio Conversations API
-  description: This is the public Twilio REST API.
+  description: Create 1-to-1 or multiparty conversations for customer care and conversational commerce. Get to market quickly with web and mobile SDKs, and create custom conversational experiences with just a single API.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

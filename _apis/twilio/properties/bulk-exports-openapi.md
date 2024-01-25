@@ -254,7 +254,7 @@ components:
       scheme: basic
 info:
   title: Twilio Bulk Exports API
-  description: This is the public Twilio REST API.
+  description: he BulkExport API provides an efficient mechanism for retrieving all of your activity logs from the Twilio platform on an ongoing basis, or for one-off downloads. Using BulkExport, you can access daily dumps of the previous day's Messages, Calls, Conferences, or conference Participants, eliminating the need to iterate through the list resource one page at a time to download your records. 
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

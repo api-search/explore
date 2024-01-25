@@ -1,7 +1,7 @@
 ---
 info:
-  title: Marketplace API
-  description: Needs description.
+  title: Twilio Marketplace API
+  description: Add-ons are available through the Twilio Marketplace. At a functional level, Add-ons package a publisher's APIs and annotate the content that Twilio provides by tapping into the publisher's data sources or by using the publisher's technology to analyze the content. 
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

@@ -229,7 +229,7 @@ components:
       scheme: basic
 info:
   title: Twilio Microvisor API
-  description: This is the public Twilio REST API.
+  description: The Microvisor API allows you to manage Microvisor-empowered devices and the applications they run — and to do so from anywhere in the world.
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

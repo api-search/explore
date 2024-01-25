@@ -255,7 +255,7 @@ components:
       scheme: basic
 info:
   title: Twilio Content API
-  description: This is the public Twilio REST API.
+  description: Create and send rich messaging content over any Twilio-supported messaging channel using Twilio's Content Template Builder. As you build out your messaging user experience, Content Templates offer a common framework to maintain a consistent user experience across all channels, without sweating the implementation details. 
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support

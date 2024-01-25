@@ -212,7 +212,7 @@ components:
       scheme: basic
 info:
   title: Twilio - Accounts
-  description: This is the public Twilio REST API.
+  description: When you first sign up with Twilio, you have just one account, your main account. But you can also create more accounts. subaccounts are useful for things like segmenting phone numbers and usage data for your customers and controlling access to data. 
   termsOfService: 'https://www.twilio.com/legal/tos'
   contact:
     name: Twilio Support
