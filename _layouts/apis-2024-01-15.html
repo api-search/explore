@@ -1,0 +1,1040 @@
+---
+layout: default
+---
+
+<style>
+
+@font-face {
+    font-family: customfont;
+    src: url(/assets/fonts/subway.ttf);
+}
+
+h1{
+    font-size: 24px; 
+    color: #000;
+    font-family: customfont;     
+}
+h2{
+    font-size: 22px; 
+    color: #000;
+    font-family: customfont;   
+    padding-top: 5px; 
+    display: block;
+    top: 35px; 
+}
+h3{
+    font-size: 18px; 
+    color: #000;
+    font-family: customfont; 
+    padding-top: 5px;      
+}
+p{ 
+    font-size: 14px; 
+    color: #000;
+    font-family: customfont;     
+}
+.tag-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    border-radius: 25px; 
+    padding: 20px;
+    }
+    
+.tag-title {
+    margin-top: -50px;
+    margin-left: 10px;
+    background-color: #FFF;
+    display:block;
+    width: 150px;
+    }
+
+.profile-tag{
+    border: 2px solid #000; 
+    font-size: 18px; 
+    color: #000;
+    font-family: customfont; 
+    display: inline; 
+    line-height: 50px;
+    margin: 10px 10px 10px 10px; 
+    padding: 10px 10px 10px 10px;
+    border-radius: 25px;    
+}
+  
+.rating-info-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px;   
+    display: block; 
+}
+
+.rating-path-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px;  
+    display: block;   
+}
+
+.rating-operation-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px;
+    display: block;     
+}
+
+.rating-parameter-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px; 
+    display: block;    
+}
+
+.rating-response-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px;  
+    display: block;   
+}
+
+.rating-schema-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px;  
+    display: block;   
+}
+
+.rating-tag-wrapper{
+    border: 4px dashed black;
+    background-color:#FFF;
+    width: 100%;
+    border-radius: 25px; 
+    padding: 20px; 
+    display: block;    
+}
+</style>
+<div class="uk-section">
+    <div class="uk-container uk-container-xlarge">
+        <article class="uk-article">            
+
+            <div class="article-content">
+
+                <div style="border: 5px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
+
+                    <h1 class="uk-article-title">{{ page.name | escape }}</h1>
+
+                    <p>{{ page.description }}</p>  
+
+                    {% assign slug = page.url | replace: '/apis/','' | replace: '/index/','' %}
+                    {% assign slug_replace = slug %}                
+                    {% assign this_subway_slug = slug | append: '-subway' %}
+
+                    <h2>Tags</h2>
+                    {% include tags-openapi.html %}
+                    <div class="tag-wrapper">
+                        {% for tag in tags %}
+                            {% if tag != '' %}
+                                {% assign tag = tag | upcase %}
+                                <div class="profile-tag">{{ tag | upcase }}</div>
+                            {% endif %}
+                        {% endfor %}    
+                    </div>                         
+                                
+                    <!-- Begin Subway Map -->
+                    {% for api in site.apis %} 
+                    
+                        {% assign subway_slug = api.url | replace: '/apis/','' | replace: 'properties/','' | replace: '/','' | replace: slug_replace,'' %}
+                        
+                        {% if subway_slug == "-subway" %} 
+                            {% assign subway_slug = slug | append: "-subway" %}
+                        {% endif %}   
+
+                        {% if subway_slug == this_subway_slug %} 
+                            <h2>APIs ({{ subway_slug }} / {{ this_subway_slug }} / {{ slug }})</h2>   
+                            <div class="tag-wrapper" id="map-{{ slug }}">                         
+                                <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ slug }}"></script>
+                                <textarea id="map-{{ slug }}-store" style="display: none;">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>        
+                                <div id="canvas-{{ slug }}-wrapper">                                                
+                                    <canvas style="padding: 0px; margin: 0px; width: 100%; height: 500px; border: 0px solid #FFF;" id="canvas-{{ slug }}">MOUSOVER!!!</canvas>
+                                </div>
+                            </div>
+
+                        {% endif %}    
+                    {% endfor %} 
+                    <!-- Begin Subway Map -->   
+
+                    <h2>Properties</h2>
+                    {% include properties-openapi.html %}                
+                    <div class="tag-wrapper">
+                    {% for property in properties %}
+                        {% if property != '' %}
+                            {% assign property = property | upcase %}
+                            <div class="profile-tag">{{ property | upcase }}</div> 
+                        {% endif %}
+                    {% endfor %}
+                    </div> 
+                    
+                    {% assign all_paths = "" %}
+
+                    {% assign all_apis = site.apis %}
+                    
+                    <textarea id="subway-maps" style="display: none;">
+                    ["map-{{ slug }}"{% for api in site.apis %}{% assign this_slug = api.url | replace: '/apis/','' | replace: 'properties/','' | replace: '/','' %}{% if this_slug contains "subway" %}{% if this_slug contains slug %}{% assign this_slug = this_slug | replace: '-subway','' | replace: slug_replace,'' %}{% if this_slug != '' %}
+                    ,"map-{{ this_slug }}"{% endif %}{% endif %}{% endif %}{% endfor %}  
+                    ]</textarea>
+
+                </div>
+
+                {% assign api_count = 1 %}
+                {% for api in page.apis %} 
+                
+                    <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
+
+                    {% for property in api.properties %} 
+
+                        {% if property.type == 'OpenAPI' %}
+                        
+                            {% assign this_slug = property.url | replace: '.yml','' | replace: '-openapi','' | replace: '.md','' %}
+                            {% assign this_openapi_slug = this_slug | append: '-openapi' %}
+                            {% assign this_subway_slug = this_slug | append: '-subway' %}
+                            {% assign this_ratings_slug = this_slug | append: '-ratings' %}
+
+                            <h1>{{ api.name }}</h1>
+                            <p>{{ api.description }}</p>
+
+                            {% assign api_tags = "" %}
+
+                            {% for api in site.apis %} 
+                                {% assign openapi_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
+                                {% if openapi_slug == this_openapi_slug %}
+                                
+                                    {% for path in api.paths %} 
+                                        {% for operation in path[1] %} 
+                                            {% for operation_tag in operation[1].tags %} 
+                                                {% assign already = 0 %}
+                                                {% if api_tags contains operation_tag %}
+                                                    {% assign already = 1 %}
+                                                {% endif %}   
+                                                {% if already == 0 %}
+                                                    {% assign api_tags = api_tags | append: ',' | append: operation_tag %}
+                                                {% endif %}                                                                                                      
+                                            {% endfor %}                                                  
+                                        {% endfor %}
+                                    {% endfor %}
+                                {% endif %}    
+                            {% endfor %}  
+                            {% for api_tag in api.tags %} 
+                                {% assign already = 0 %}
+                                {% if api_tags contains api_tag %}
+                                    {% assign already = 1 %}
+                                {% endif %}   
+                                {% if already == 0 %}
+                                    {% assign api_tags = api_tags | append: ',' | append: api_tag %}
+                                {% endif %}                                                                                                      
+                            {% endfor %}                       
+                            {% assign api_tags = api_tags | remove_first: "," | replace: ",",", " %}                                          
+
+                            <h2>Tags:</h2>
+                            {% assign api_tags_icons = api_tags | split: ", " %}
+                            <div class="tag-wrapper">
+                                {% for tag in api_tags_icons %}
+                                    {% assign tag = tag | upcase %}
+                                    <div class="profile-tag">{{ tag | upcase }}</div>
+                                {% endfor %}     
+                            </div>                             
+
+                            <!-- Begin Subway Map -->
+                            {% for api in site.apis %} 
+                                {% assign subway_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
+                                {% if subway_slug == this_subway_slug %} 
+                                    <h2>Operations ({{ subway_slug }} / {{ this_subway_slug }} / {{ this_slug }})</h2>   
+                                    <div class="tag-wrapper" id="map-{{ this_slug }}">                         
+                                        <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ this_slug }}"></script>
+                                        <textarea style="display: none;" id="map-{{ this_slug }}-store">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>        
+                                        <div id="canvas-{{ this_slug }}-wrapper">                                                
+                                            <canvas style="padding: 0px; margin: 0px; width: 100%; height: 500px; border: 0px solid #FFF;" id="canvas-{{ this_slug }}">MOUSOVER!!!</canvas>
+                                        </div>
+                                    </div>
+
+                                {% endif %}    
+                            {% endfor %} 
+                            <!-- Begin Subway Map -->                               
+
+                        {% endif %}           
+
+                    {% endfor %}   
+
+                    <h3>API Properties</h3>           
+                    <div class="tag-wrapper">
+                        {% for property in api.properties %}
+                            <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; text-decoration: none;">{{ property.type | upcase }}</a></div>
+                        {% endfor %}
+                    </div>
+
+                    <h2>Common Properties</h2>
+                    {% include properties-openapi.html %}                
+                    <div class="tag-wrapper">
+                    {% for property in properties %}
+                        {% if property != '' %}
+                            {% assign property = property | upcase %}
+                            <div class="profile-tag">{{ property | upcase }}</div> 
+                        {% endif %}
+                    {% endfor %}
+                    </div>                     
+
+                    </div>
+                    
+                    <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
+
+                        <h1>{{ page.name | escape }} Ratings Card</h1>
+
+                        <!-- Begin Ratings -->
+                        {% for ratings in site.apis %} 
+                            {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}                            
+                            {% if rating_slug == this_ratings_slug %} 
+                                
+                                <div style="overflow: auto; height: 500px; border: 1px solid #FFF">
+                                   
+                                    <!--- BEGIN INFO -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Info</div>
+                                    <div id="rating-info-{{ rating_slug }}" class="rating-info-wrapper">                                        
+                                    {% for rule in ratings %}                                               
+
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "openapi-info" %}
+
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-info-title" %}                                                
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TITLE</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-info-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-info-contact-name" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT NAME</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-info-contact-email" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT EMAIL</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-info-contact-url" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CONTACT URL</span></div>
+                                                {% endif %}                                                
+                                                
+                                                {% if rule contains "openapi-info-terms-of-service" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TOS</span></div>
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-info-license" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">LICENSE</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-info-version" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">VERSION</span></div>
+                                                {% endif %}          
+                                                
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END INFO -->
+
+                                    <!--- BEGIN PATH -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Paths</div>
+                                    <div id="rating-path-{{ rating_slug }}" class="rating-path-wrapper">                                        
+                                    {% for rule in ratings %}                                                                         
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "path-" %}
+
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-no-path-trailing-slash" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NO TRAILING SLASH</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-path-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                                                {% endif %}    
+                                                                                          
+                                                
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END PATH -->   
+                                    
+                                    <!--- BEGIN OPERATION -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Operations</div>
+                                    <div id="rating-operation-{{ rating_slug }}" class="rating-operation-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "-operation" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+                                                {% if rule contains "openapi-operations-summary" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SUMMARY</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-operations-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                                                {% endif %}  
+
+                                                {% if rule contains "openapi-operations-operation-ids" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION ID</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-operations-tags" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+                                                {% endif %}                                                 
+
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END OPERATION -->   
+                                    
+                                    <!--- BEGIN PARAMETER -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Parameters</div>
+                                    <div id="rating-parameter-{{ rating_slug }}" class="rating-parameter-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "-parameter" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+                                                {% if rule contains "openapi-parameters-name" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">NAME</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-parameters-query-names-camel-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">CAMEL CASE</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-parameters-query-names-snake-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SNAKE CASE</span></div>
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-parameters-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DESCRIPTION</span></div>
+                                                {% endif %}  
+
+                                                {% if rule contains "openapi-parameters-required" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">REQUIRED</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-parameters-schema" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
+                                                {% endif %}  
+
+                                                {% if rule contains "openapi-parameters-schema-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TYPE</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-parameters-schema-type-string-minlength" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MINLENGTH</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-parameters-schema-type-string-maxlength" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING MAXLENGTH</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-parameters-schema-type-string-pattern" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">STRING PATTERN</span></div>
+                                                {% endif %}                                              
+                                                
+                                                {% if rule contains "openapi-parameters-schema-type-integer-minimum" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MINIMUM</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-parameters-schema-type-integer-maximum" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">INTEGER MAXIMUM</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-parameters-schema-anyof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ANYOF</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-parameters-schema-oneof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ONEOF</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-parameters-schema-allof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">ALLOF</span></div>
+                                                {% endif %}                                                 
+            
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END PARAMETER -->  
+                                    
+                                    <!--- BEGIN REQUEST BODIES -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Request Bodies</div>
+                                    <div id="rating-parameter-{{ rating_slug }}" class="rating-parameter-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "-request-body" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+                                                {% if rule contains "openapi-no-request-body-on-get-info" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-no-request-body-on-delete-info" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE</span></div>
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-request-body-content-on-post-info" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST</span></div>
+                                                {% endif %}   
+
+                                                {% if rule contains "openapi-request-body-content-on-put-info" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT</span></div>
+                                                {% endif %}                                                                                               
+                                                
+                                                {% if rule contains "openapi-request-body-have-schema" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA</span></div>
+                                                {% endif %}         
+                                                
+                                                {% if rule contains "openapi-request-body-have-application-x-www-form-url-encoded" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">X-WWW-FORM-URL-ENCODED</span></div>
+                                                {% endif %}                                                   
+
+                                                {% if rule contains "openapi-request-body-json-media-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">APPLICATION/JSON</span></div>
+                                                {% endif %}   
+
+                                                {% if rule contains "openapi-request-body-schema-ref" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">$REF</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-request-body-have-schema-properties" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">COMPONENTS</span></div>
+                                                {% endif %}                                                 
+
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END REQUEST BODIES --> 
+                                    
+                                    <!--- BEGIN RESPONSES -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Responses</div>
+                                    <div id="rating-response-{{ rating_slug }}" class="rating-response-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "-response" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+
+                                                {% if rule contains "openapi-response-get-200-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-response-get-400-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 400</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-response-get-404-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 404</span></div>
+                                                {% endif %}                                                
+
+                                                {% if rule contains "openapi-response-get-500-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-response-get-500-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 500</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-response-get-200-media-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 APPLICATION/JSON</span></div>
+                                                {% endif %}  
+
+                                                {% if rule contains "openapi-response-get-200-media-type-schema" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 SCHEMA</span></div>
+                                                {% endif %}                                                  
+                                                
+                                                {% if rule contains "openapi-response-get-200-schema-ref" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 $REF</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-get-200-schema-components" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET 200 COMPONENTS</span></div>
+                                                {% endif %}                                                  
+                                   
+                                                {% if rule contains "openapi-response-get-default-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT</span></div>
+                                                {% endif %}     
+                                                
+                                                {% if rule contains "openapi-response-get-default-media-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT APPLICATION/JSON</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-response-get-default-media-type-schema" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT SCHEMA</span></div>
+                                                {% endif %}          
+                                                
+                                                {% if rule contains "openapi-response-get-default-schema-ref" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">GET DEFAULT $REF</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-post-201-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 201</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-post-400-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 400</span></div>
+                                                {% endif %}        
+                                                
+                                                {% if rule contains "openapi-response-post-404-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 404</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-post-500-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">POST 500</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-response-put-204-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 204</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-put-400-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 400</span></div>
+                                                {% endif %}        
+                                                
+                                                {% if rule contains "openapi-response-put-404-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 404</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-put-500-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PUT 500</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-delete-204-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 204</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-delete-400-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 400</span></div>
+                                                {% endif %}        
+                                                
+                                                {% if rule contains "openapi-response-delete-404-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 404</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-response-delete-500-status-code" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">DELETE 500</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-responses-examples" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXAMPLES</span></div>
+                                                {% endif %}                                                     
+
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END RESPONSES -->  
+                                    
+                                    <!--- BEGIN SCHEMA -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Schema</div>
+                                    <div id="rating-schema-{{ rating_slug }}" class="rating-schema-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "openapi-schema" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+
+                                                {% if rule contains "openapi-schema-names-snake-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME SNAKE CASE</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-schema-names-pascal-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME PASCAL CASE</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-schema-names-camel-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA NAME CAMEL CASE</span></div>
+                                                {% endif %}                                                
+
+  
+                                                
+                                                {% if rule contains "openapi-schema-require" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA TYPE</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-schema-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA REQUIRED</span></div>
+                                                {% endif %}     
+                                                
+                                                {% if rule contains "openapi-schema-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA DESCRIPTION</span></div>
+                                                {% endif %}     
+                                                
+
+                                                {% if rule contains "openapi-schema-properties" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-schema-properties-names-camel-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME SNAKE CASE</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-schema-properties-names-pascal-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME PASCAL CASE</span></div>
+                                                {% endif %}     
+                                                
+                                                {% if rule contains "openapi-schema-properties-names-camel-case" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NAME CAMEL CASE</span></div>
+                                                {% endif %}                                                  
+
+                                                {% if rule contains "openapi-schema-properties-descriptions" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES DESCRIPTION</span></div>
+                                                {% endif %}      
+                                                
+                                                {% if rule contains "openapi-schema-properties-type" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES TYPE</span></div>
+                                                {% endif %}       
+                                                
+                                                {% if rule contains "openapi-schema-properties-format" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES FORMAT</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-schema-required" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES REQUIRED</span></div>
+                                                {% endif %}                                                  
+                                                
+                                                {% if rule contains "openapi-schema-properties-anyof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ANYOF</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-schema-properties-oneof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ONEOF</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-schema-properties-allof" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ALLOF</span></div>
+                                                {% endif %}   
+                                                
+                                                {% if rule contains "openapi-schema-properties-nullable" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NULLABLE</span></div>
+                                                {% endif %}                                                    
+                                              
+                                                           
+                                                {% if rule contains "openapi-schema-properties-type-string-pattern" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING PATTERN</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-schema-properties-string-minlength" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MINLENGTH</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-schema-properties-string-maxlength" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES STRING MAXLENGTH</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-schema-properties-define-number-minimum" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MINIMUM</span></div>
+                                                {% endif %} 
+                                                
+                                                {% if rule contains "openapi-schema-properties-define-number-maximum" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES NUMBER MAXIMUM</span></div>
+                                                {% endif %}      
+                                                
+                                                {% if rule contains "openapi-schema-properties-allowed-integer-format" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES INTEGER FORMAT</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-schema-properties-enum" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ENUM</span></div>
+                                                {% endif %}          
+                                                
+                                                {% if rule contains "openapi-schema-properties-array-items" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY ITEMS</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-schema-properties-array-minitems" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MINITEMS</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-schema-properties-array-maxitems" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-schema-properties-array-maxitems" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES ARRAY MAXITEMS</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-schema-x-expandableFields" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">SCHEMA EXPANDABLE FIELDS</span></div>
+                                                {% endif %}  
+                                                
+                                                {% if rule contains "openapi-schema-properties-x-expandableFields" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANDABLE FIELDS</span></div>
+                                                {% endif %}     
+                                                
+                                                {% if rule contains "openapi-schema-properties-x-expansion-resources" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES EXPANSION RESOURCES</span></div>
+                                                {% endif %}                                                   
+
+                                                {% if rule contains "openapi-schema-properties-pii" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">PROPERTIES PII</span></div>
+                                                {% endif %}                                                   
+
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END SCHEMA -->   
+                                    
+                                    <!--- BEGIN TAG -->
+                                    <div style="position: relative; top: 20px; display: inline; left: 30px; background-color: #FFF; border: 1px solid #FFF; font-family: customfont; font-size: 22px; padding-left: 5px; padding-right: 5px;">Tags</div>
+                                    <div id="rating-tag-{{ rating_slug }}" class="rating-tag-wrapper">                                        
+                                    {% for rule in ratings %}                                        
+                                        
+                                        {% if rule contains "openapi" %}
+
+                                            {% if rule contains "-tag" %}    
+                                            
+                                                {% assign color = '#000000' %}
+                                                {% assign size = '18px' %}
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info == 0 %}
+                                                    {% assign color = '#FF0000' %}
+                                                    {% assign size = '16px' %}
+                                                {% endif %}
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info == 0 and ratings[rule].warn > 0 %}
+                                                    {% assign color = '#FFEA00' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                           
+        
+                                                {% if ratings[rule].errors == 0 and ratings[rule].info > 0 and ratings[rule].warn == 0 %}
+                                                    {% assign color = '#000000' %}
+                                                    {% assign size = '22px' %}
+                                                {% endif %}   
+                                                
+                                                {% if ratings[rule].errors > 0 and ratings[rule].info > 0 %}
+                                                    {% assign color = '#BF40BF' %}
+                                                    {% assign size = '18px' %}
+                                                {% endif %}                                             
+
+                                                {% if rule contains "openapi-tags-object" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAGS</span></div>
+                                                {% endif %}
+
+                                                {% if rule contains "openapi-tags-name" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG NAMES</span></div>
+                                                {% endif %}
+                                                
+                                                {% if rule contains "openapi-tags-description" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">TAG DESCRIPTIONS</span></div>
+                                                {% endif %}    
+                                                
+                                                {% if rule contains "openapi-operations-tags" %}
+                                                    <div style="padding:3px; display: inline;"><span style="font-size: {{ size }}; color: {{ color }}; font-family: customfont; padding-left: 3px; padding-right: 3px;">OPERATION TAGS</span></div>
+                                                {% endif %}                                                
+
+                                            {% endif %}                                                                                   
+                                        {% endif %}      
+                                    {% endfor %} 
+                                    </div>
+                                    <!--- END TAG -->                                     
+                                <!--
+                                    <ul>     
+                                        {% for rule in ratings %}        
+                                            {% if rule contains "openapi" %}
+                                                <li>{{ ratings[rule].message }} ({{ rule }}): {{ ratings[rule].errors }}/{{ ratings[rule].warn }}/{{ ratings[rule].info }}/{{ ratings[rule].hints }}</li>
+                                            {% endif %}                                                                                   
+                                        {% endfor %} 
+                                    </ul>
+                                --->
+
+                                </div>                                
+
+                            {% endif %}    
+                        {% endfor %}  
+                        <!-- Begin Ratings --> 
+                            
+                    </div>
+
+                    {% assign api_count = api_count | plus: 1 %}
+                {% endfor %}                                      
+
+            </div>
+
+        </article>
+
+    </div>
+</div>

@@ -83,18 +83,21 @@ exclude:
   - node_modules
 
 sass:
-  style:            compressed
+  style: compressed
 
 collections:
   apis:
     output: true
     permalink: /apis/:path/
-  tags:
+  one:
     output: true
-    permalink: /tags/:path/
-  properties:
+    permalink: /one/:path/
+  two:
     output: true
-    permalink: /properties/:path/
+    permalink: /two/:path/
+  three:
+    output: true
+    permalink: /three/:path/
 
 defaults:
 
@@ -106,12 +109,18 @@ defaults:
 
   - scope:
       path:         ""
-      type:         tags
+      type:         one
     values:
-      layout:       tags
+      layout:       one
 
   - scope:
       path:         ""
-      type:         properties
+      type:         two
     values:
-      layout:       properties            
+      layout:       two            
+
+  - scope:
+      path:         ""
+      type:         three
+    values:
+      layout:       three             
