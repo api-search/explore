@@ -3,12 +3,12 @@ name: Buckets
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/buckets.png
 url: https://example.com/apis/buckets.yml
-created: 2024/1/1
-modified: 2024/1/1
+created: 2024/2/13
+modified: 2024/2/13
 specificationVersion: '0.16'
-tags: []
+tags:
+  - Buckets
 apis: []
-common: []
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com

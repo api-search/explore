@@ -3,4 +3,7 @@ left:
   - title: Home
     url: / 
 
+  - title: APIs
+    url: /apis/
+
 right: 

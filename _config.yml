@@ -10,7 +10,9 @@ permalink: /:categories/:title/
 
 # Site base hostname & protocol, e.g. http://example.com
 url:                "https://explore.apis.io"
+
 search_url:         "https://search-api.apis.io/search/apis"
+search_local: true
 
 # Site logo # e.g. logo.png, upload logo image file to /uploads/ folder
 logo:               https://kinlane-productions2.s3.amazonaws.com/apis-io/apis-io-api-search-logo.jpg
@@ -18,6 +20,7 @@ logo:               https://kinlane-productions2.s3.amazonaws.com/apis-io/apis-i
 navbar:
     sticky:         true
     search:         false
+    
   
 # Default author settings
 author:
@@ -89,15 +92,6 @@ collections:
   apis:
     output: true
     permalink: /apis/:path/
-  one:
-    output: true
-    permalink: /one/:path/
-  two:
-    output: true
-    permalink: /two/:path/
-  three:
-    output: true
-    permalink: /three/:path/
 
 defaults:
 
@@ -106,21 +100,3 @@ defaults:
       type:         apis
     values:
       layout:       apis
-
-  - scope:
-      path:         ""
-      type:         one
-    values:
-      layout:       one
-
-  - scope:
-      path:         ""
-      type:         two
-    values:
-      layout:       two            
-
-  - scope:
-      path:         ""
-      type:         three
-    values:
-      layout:       three             

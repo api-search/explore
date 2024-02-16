@@ -3,12 +3,12 @@ name: Certificates
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/certificates.png
 url: https://example.com/apis/certificates.yml
-created: 2024/1/1
-modified: 2024/1/1
+created: 2024/2/13
+modified: 2024/2/13
 specificationVersion: '0.16'
-tags: []
+tags:
+  - Certificates
 apis: []
-common: []
 maintainers:
   - FN: API Evangelist
     email: info@apievangelist.com
