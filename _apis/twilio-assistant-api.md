@@ -1,10 +1,7 @@
 ---
 id: assistant
 name: Twilio Assistant API
-description: >-
-  Intelligent virtual assistants (IVA) are incredibly sophisticated applications
-  with the potential to revolutionize the way modern businesses service
-  customers.
+description: Needs description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 humanURL: https://www.twilio.com/blog/what-is-intelligent-virtual-assistant
 baseURL: https:/api.twilio.com

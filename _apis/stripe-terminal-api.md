@@ -9,6 +9,7 @@ humanURL: https://stripe.com/docs/terminal
 baseURL: https://api.stripe.com
 tags:
   - Payments
+  - Terminal
 properties:
   - type: Documentation
     url: https://stripe.com/docs/terminal

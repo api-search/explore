@@ -10,7 +10,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/api/sigma/scheduled_queries
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Sigma
 properties:
   - type: Documentation
     url: https://stripe.com/docs/api/sigma/scheduled_queries

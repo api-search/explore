@@ -1,0 +1,15 @@
+---
+name: Historical
+description: Needs a description.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/historical.png
+url: https://example.com/apis/historical.yml
+created: 2024/2/15
+modified: 2024/2/15
+specificationVersion: '0.16'
+tags:
+  - Historical
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---

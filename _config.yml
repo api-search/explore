@@ -92,6 +92,9 @@ collections:
   apis:
     output: true
     permalink: /apis/:path/
+  tags:
+    output: true
+    permalink: /tags/:path/    
 
 defaults:
 
@@ -100,3 +103,9 @@ defaults:
       type:         apis
     values:
       layout:       apis
+
+  - scope:
+      path:         ""
+      type:         tags
+    values:
+      layout:       tags      

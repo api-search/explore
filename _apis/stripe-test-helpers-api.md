@@ -9,7 +9,8 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/implementation-guides/billing/testing
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Testing
+  - Helpers
 properties:
   - type: Documentation
     url: https://stripe.com/docs/implementation-guides/billing/testing

@@ -11,7 +11,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/api/payment_links/payment_links
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Links
 properties:
   - type: Documentation
     url: https://stripe.com/docs/api/payment_links/payment_links

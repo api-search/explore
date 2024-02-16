@@ -10,7 +10,8 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/api/coupons
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Coupons
+  - Discounts
 properties:
   - type: Documentation
     url: https://stripe.com/docs/api/coupons

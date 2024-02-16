@@ -10,6 +10,7 @@ humanURL: https://stripe.com/docs/payments/setup-intents
 baseURL: https://api.stripe.com
 tags:
   - Payments
+  - Setup
 properties:
   - type: Documentation
     url: https://stripe.com/docs/payments/setup-intents

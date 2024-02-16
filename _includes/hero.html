@@ -72,6 +72,8 @@
                                                 if(search.data.length > 0){
                                                     for (let i = 1; i < search.data.length; i++) {
 
+                                                        console.log(search.data[i].name);
+
                                                         var query_search = query.toLowerCase();
                                                         var name_search = search.data[i].name.toLowerCase();
                                                         var description_search = search.data[i].description.toLowerCase();
@@ -81,12 +83,13 @@
 
                                                         var tag_match = false;
                                                         for (let j = 1; j < search.data[i].tags.length; j++) {
-                                                            var tag_search = search.data[i].tags[j].toLowerCase();
-                                                            tag_match = tag_search.includes(query_search);
+                                                            //console.log(search.data[i].tags[j]);
+                                                            var tag_search = search.data[i].tags[j].toLowerCase();                                                       
+                                                            tag_match = tag_search.includes(query_search);                                    
                                                         }
 
                                                         //console.log(query_search);
-                                                        //console.log(name_search);
+                                                        //console.log(search.data[i].name);
                                                         //console.log(name_match);
                                                         //console.log(description_match);
                                                         //console.log(tag_match);

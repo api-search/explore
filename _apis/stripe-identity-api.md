@@ -8,7 +8,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/identity
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Identity
 properties:
   - type: Documentation
     url: https://stripe.com/docs/identity

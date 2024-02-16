@@ -11,6 +11,7 @@ humanURL: https://stripe.com/docs/api/sources
 baseURL: https://api.stripe.com
 tags:
   - Payments
+  - Sources
 properties:
   - type: Documentation
     url: https://stripe.com/docs/api/sources

@@ -8,7 +8,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/api/webhook_endpoints
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Webhook
 properties:
   - type: Documentation
     url: https://stripe.com/docs/api/webhook_endpoints

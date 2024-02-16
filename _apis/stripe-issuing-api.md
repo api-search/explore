@@ -8,6 +8,7 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/issuing
 baseURL: https://api.stripe.com
 tags:
+  - Issuing
   - Payments
 properties:
   - type: Documentation

@@ -9,7 +9,8 @@ image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jp
 humanURL: https://stripe.com/docs/radar
 baseURL: https://api.stripe.com
 tags:
-  - Payments
+  - Radar
+  - Fraud
 properties:
   - type: Documentation
     url: https://stripe.com/docs/radar
