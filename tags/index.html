@@ -11,8 +11,10 @@ title: Explore - Tags
             <table width="100%">
             {% for tag in site.tags %}
                 <tr>
-                    <td>{{ tag.name }}</td>
-                    <td><a href="{{ tag.url }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
+                    <td width="40%">{{ tag.name }}</td>
+                    <td width="20%" align="center>"><a href="{{ tag.url }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
+                    <td width="20%" align="center>"><a href="https://www.google.com/search?q=api+{{ tag.url }}" target="_blank"><button type="button" class="btn btn-outline-info">Google Search</button></a></td>
+                    <td width="20%" align="center>"><a href="https://www.bing.com/search?q=api+{{ tag.url }}" target="_blank"><button type="button" class="btn btn-outline-info">Bing Search</button></a></td>
                 </tr>
             {% endfor %}  
             </table>          

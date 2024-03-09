@@ -1,367 +1,56 @@
 ---
 layout: default
 ---
-
-<style>
-
-@font-face {
-    font-family: customfont;
-    src: url(/assets/fonts/subway.ttf);
-}
-
-h1{
-    font-size: 24px; 
-    color: #000;
-    font-family: customfont;     
-}
-h2{
-    font-size: 22px; 
-    color: #000;
-    font-family: customfont;   
-    padding-top: 5px; 
-    display: block;
-    top: 35px; 
-}
-h3{
-    font-size: 18px; 
-    color: #000;
-    font-family: customfont; 
-    padding-top: 5px;      
-}
-p{ 
-    font-size: 14px; 
-    color: #000;
-    font-family: customfont;     
-}
-.tag-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    border-radius: 25px; 
-    padding: 20px;
-    }
-    
-.tag-title {
-    margin-top: -50px;
-    margin-left: 10px;
-    background-color: #FFF;
-    display:block;
-    width: 150px;
-    }
-
-.profile-tag{
-    border: 2px solid #000; 
-    border-radius: 25px; 
-    font-size: 18px; 
-    color: #000;
-    font-family: customfont; 
-    display: inline; 
-    line-height: 50px;
-    margin: 10px 10px 10px 10px; 
-    padding: 10px 10px 10px 10px;   
-}
-  
-.rating-info-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px;   
-    display: block; 
-}
-
-.rating-path-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px;  
-    display: block;   
-}
-
-.rating-operation-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px;
-    display: block;     
-}
-
-.rating-parameter-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px; 
-    display: block;    
-}
-
-.rating-response-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px;  
-    display: block;   
-}
-
-.rating-schema-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px;  
-    display: block;   
-}
-
-.rating-tag-wrapper{
-    border: 4px dashed black;
-    background-color:#FFF;
-    width: 100%;
-    border-radius: 25px; 
-    padding: 20px; 
-    display: block;    
-}
-</style>
 <div class="uk-section">
     <div class="uk-container uk-container-xlarge">
         <article class="uk-article">       
             
-            {% assign slug = page.url | replace: '/apis/','' | replace: '/index/','' %}
-            {% assign slug_replace = slug %}                
-            {% assign this_subway_slug = slug | append: '-subway' %}    
-            {% assign this_ratings_slug = slug | append: '-ratings' %}    
-
+            {% assign slug = page.url | replace: '/apis/','' | replace: '/index/','' %}         
             <div class="article-content">
 
-                <div style="border: 5px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;" id="map-{{ slug }}-shell">
+                <div style="border: 0px solid #000; width: 100%; padding: 0px; margin: 0px; border-radius: 25px;" id="map-{{ slug }}-shell">
 
                     <h1 class="uk-article-title">{{ page.name | escape }}</h1>
 
                     <p>{{ page.description }}</p>  
 
                     <h2>Tags</h2>
-                    <div class="tag-wrapper" id="map-{{ slug }}-tags">
+                    <ul>
                         {% for tag in page.tags %}
                             {% if tag != '' %}
-                                {% assign tag = tag | upcase %}
-                                <div class="profile-tag">{{ tag | upcase }}</div>
+                                <li>{{ tag }}</li>
                             {% endif %}
                         {% endfor %}    
-                    </div>                         
-                                
-                    <!-- Begin Subway Map -->
-                    {% for api in site.apis %} 
+                    </ul> 
+
+                    {% for api in page.apis %}
+                        <h3>{{ api.name }}</h3>
+                        <p>{{ api.description }}</p> 
+                        <h4>Properties</h4>
+                        <ul id="">
+                            <li><a href="{{ api.humanURL }}">Human URL</a></li>
+                            {% if api.baseURL != 'https://api.example.com' %}
+                                <li><a href="{{ api.baseURL }}">Base URL</a></li>
+                            {% endif %}
+                            {% for property in api.properties %}
+                                <li><a href="{{ property.url }}">{{ property.type }}</a></li>
+                            {% endfor %}    
+                        </ul>   
+                        <h4>Tags</h4>
+                        <ul id="">
+                            {% for tag in api.tags %}
+                                {% if tag != '' %}
+                                    <li>{{ tag }}</li>
+                                {% endif %}
+                            {% endfor %}    
+                        </ul>  
+                        <hr>                                                                   
+                    {% endfor %}                                     
                     
-                        {% assign subway_slug = api.url | replace: '/apis/','' | replace: 'properties/','' | replace: '/','' | replace: slug_replace,'' %}
-                        
-                        {% if subway_slug == "-subway" %} 
-                            {% assign subway_slug = slug | append: "-subway" %}
-                        {% endif %}   
-
-                        {% if subway_slug == this_subway_slug %} 
-                            <h2>APIs</h2>   
-                            <div class="tag-wrapper" id="map-{{ slug }}">                         
-                                <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ slug }}"></script>
-                                <textarea id="map-{{ slug }}-store" style="display: none;">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>                                                     
-                                <canvas style="padding: 0px; margin: 0px; width: 100%; height: 525px; border: 0px solid #FFF;" id="canvas-{{ slug }}"></canvas>
-                            </div>
-
-                        {% endif %}    
-                    {% endfor %} 
-                    <!-- Begin Subway Map -->   
-
-                    <h2>Properties</h2>
-                    {% include properties-openapi.html %}                
-                    <div class="tag-wrapper" id="map-{{ slug }}-properties">
-                    {% for property in properties %}
-                        {% if property != '' %}
-                            {% assign property = property | upcase %}
-                            <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property | upcase }}</a></div> 
-                        {% endif %}
-                    {% endfor %}
-                    </div> 
-                    
-                    {% assign all_paths = "" %}
-
-                    {% assign all_apis = site.apis %}
-                    
-                    <textarea id="subway-maps" style="display: none;">
-                    ["map-{{ slug }}"{% for api in site.apis %}{% assign this_slug = api.url | replace: '/apis/','' | replace: 'properties/','' | replace: '/','' %}{% if this_slug contains "subway" %}{% if this_slug contains slug %}{% assign this_slug = this_slug | replace: '-subway','' | replace: slug_replace,'' %}{% if this_slug != '' %}
-                    ,"map-{{ this_slug }}"{% endif %}{% endif %}{% endif %}{% endfor %}  
-                    ]</textarea>
-
                 </div>
 
-                <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
-
-                    <h1>{{ page.name | escape }} Provider Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ page.name.name | escape }} offering a visual snapshot of how the API provider sizes up against the API landscape.</i>
-                    <!-- Begin Ratings -->
-                    {% for ratings in site.apis %} 
-                        {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug_replace,'' | replace: '/properties/','' | replace: '/','' %}                            
-
-                        {% if rating_slug == "-ratings" %} 
-                            {% assign rating_slug = slug | append: "-ratings" %}
-                        {% endif %}                         
-
-                        {% if rating_slug == this_ratings_slug %} 
-                            <div style="overflow: auto; border: 1px solid #FFF">                                   
-                                {% include provider-ratings-card.html %}
-                            </div>                                
-
-                        {% endif %}    
-                    {% endfor %}  
-                    <!-- Begin Ratings --> 
-                        
-                </div>                
-
-                {% assign api_count = 1 %}
-                {% for api in page.apis %} 
-
-                    {% for property in api.properties %} 
-
-                        {% if property.type == 'OpenAPI' %}
-                                            
-                            {% assign this_slug = property.url | replace: '.yml','' | replace: '.md','' | replace: '-openapi','' | replace: 'https://raw.githubusercontent.com/api-search/explore/main/_apis/','' | replace: slug_replace,'' | replace: '/properties/','' %}
-
-                            {% assign this_openapi_slug = this_slug | append: '-openapi' %}
-                            {% assign this_subway_slug = this_slug | append: '-subway' %}
-                            {% assign this_ratings_slug = this_slug | append: '-ratings' %}
-
-                            <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;" id="map-{{ this_slug }}-shell">
-
-                            <h1>{{ api.name }}</h1>
-                            <p>{{ api.description }}</p>
-
-                            {% assign api_tags = "" %}
-
-                            {% for api in site.apis %} 
-                                {% assign openapi_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
-                                {% if openapi_slug == this_openapi_slug %}
-                                
-                                    {% for path in api.paths %} 
-                                        {% for operation in path[1] %} 
-                                            {% for operation_tag in operation[1].tags %} 
-                                                {% assign already = 0 %}
-                                                {% if api_tags contains operation_tag %}
-                                                    {% assign already = 1 %}
-                                                {% endif %}   
-                                                {% if already == 0 %}
-                                                    {% assign api_tags = api_tags | append: ',' | append: operation_tag %}
-                                                {% endif %}                                                                                                      
-                                            {% endfor %}                                                  
-                                        {% endfor %}
-                                    {% endfor %}
-                                {% endif %}    
-                            {% endfor %}  
-                            {% for api_tag in api.tags %} 
-                                {% assign already = 0 %}
-                                {% if api_tags contains api_tag %}
-                                    {% assign already = 1 %}
-                                {% endif %}   
-                                {% if already == 0 %}
-                                    {% assign api_tags = api_tags | append: ',' | append: api_tag %}
-                                {% endif %}                                                                                                      
-                            {% endfor %}                       
-                            {% assign api_tags = api_tags | remove_first: "," | replace: ",",", " %}                                          
-
-                            <h2>Tags:</h2>
-                            {% assign api_tags_icons = api_tags | split: ", " %}
-                            <div class="tag-wrapper" id="map-{{ this_slug }}-tags">
-                                {% for tag in api_tags_icons %}
-                                    {% assign tag = tag | upcase %}
-                                    <div class="profile-tag">{{ tag | upcase }}</div>
-                                {% endfor %}     
-                            </div>  
-                            
-                            <!--<h3>Operations (Words)</h3>
-                            <p>
-                            {% for api in site.apis %} 
-                                {% assign openapi_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
-                                {% if openapi_slug == this_openapi_slug %}
-                                    {% for path in api.paths %} 
-                                        {% for operation in path[1] %} 
-                                            {% if operation[0] == 'get' or operation[0] == 'post' or operation[0] == 'put' or operation[0] == 'patch' or operation[0] == 'delete' %}
-                                                {% if operation[1].summary %}
-                                                    {{ operation[1].summary }}<br>
-                                                {% else %} 
-                                                    {{ operation[1].description }}<br>
-                                                {% endif %} 
-                                            {% endif %}    
-                                        {% endfor %}
-                                    {% endfor %}
-                                {% endif %}    
-                            {% endfor %}  
-                            </p> --->                             
-
-                            <!-- Begin Subway Map -->
-                            {% for api in site.apis %} 
-                                {% assign subway_slug = api.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}
-                                {% if subway_slug == this_subway_slug %} 
-                                    <h2>Operations</h2>   
-                                    <div class="tag-wrapper" id="map-{{ this_slug }}">                         
-                                        <script type="text/paperscript" src="../../../assets/js/viewer.js" canvas="canvas-{{ this_slug }}"></script>
-                                        <textarea style="display: none;" id="map-{{ this_slug }}-store">{"tracks":{{ api.tracks | jsonify }},"connections":[]}</textarea>                                                     
-                                        <canvas style="padding: 0px; margin: 0px; width: 100%; height: 525px; border: 0px solid #FFF;" id="canvas-{{ this_slug }}"></canvas>
-                                    </div>
-
-                                {% endif %}    
-                            {% endfor %} 
-                            <!-- Begin Subway Map -->      
-                            
-                            <h3>API Properties</h3>           
-                            <div class="tag-wrapper" id="map-{{ this_slug }}-properties">
-                                {% for property in api.properties %}
-                                    <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property.type | upcase }}</a></div>
-                                {% endfor %}
-                            </div>
-        
-                            <h2>Common Properties</h2>
-                            {% include properties-openapi.html %}                
-                            <div class="tag-wrapper" id="map-{{ this_slug }}-common-properties">
-                            {% for property in properties %}
-                                {% if property != '' %}
-                                    {% assign property = property | upcase %}
-                                    <div class="profile-tag"><a href="{{ property.url }}" target="_blank" style="color: #000; ">{{ property | upcase }}</a></div> 
-                                {% endif %}
-                            {% endfor %}
-                            </div>                     
-        
-                            </div>                            
-
-                        {% endif %}           
-
-                    {% endfor %}   
-
-                    
-                    <div style="border: 3px solid #000; width: 100%; padding: 20px; margin: 5px; border-radius: 25px;">
-
-                        <h1>{{ api.name | escape }} API Ratings Card</h1><i>This is a card summarizes the results of ratings applied to {{ api.name | escape }} offering a visual snapshot of how the API sizes up against the API landscape.</i>
-                        <!-- Begin Ratings -->
-                        {% for ratings in site.apis %} 
-                            {% assign rating_slug = ratings.url | replace: '/apis/','' | replace: slug,'' | replace: '/properties/','' | replace: '/','' %}                                                        
-                            {% if rating_slug == this_ratings_slug %} 
-                                
-                                <div style="overflow: auto; border: 1px solid #FFF">                                   
-                                    {% include api-ratings-card.html %}
-                                </div>                                
-
-                            {% endif %}    
-                        {% endfor %}  
-                        <!-- Begin Ratings --> 
-                            
-                    </div>
-
-                    {% assign api_count = api_count | plus: 1 %}
-                {% endfor %}                                      
-
             </div>
-<script>
-//var map = document.getElementById('map-twilio');
-//var mouseoverEvent = new Event('mouseover');
-//map.dispatchEvent(mouseoverEvent);
-//console.log("done!");
-</script>
+
         </article>
 
     </div>
