@@ -39,6 +39,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://gist.github.com/psliwka/a696bccd01a0e93560d64d46f10304ac-openapi-search.yml
+    aid: hashicorp:hashicorp-key-management-secrets-engine-api
 common:
   - type: Portal
     url: https://developer.hashicorp.com/
@@ -61,4 +62,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: hashicorp
 ---

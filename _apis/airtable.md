@@ -32,6 +32,7 @@ apis:
       - type: OpenAPI
         url: https://airtable.com/developers/web/api/introduction
     overlays: []
+    aid: airtable:airtable-api
 common:
   - type: Authentication
     url: https://airtable.com/developers/web/api/authentication
@@ -58,4 +59,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: airtable
 ---

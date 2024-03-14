@@ -31,6 +31,7 @@ apis:
       - type: OpenAPI
         url: https://app.getpostman.com/run-collection/646e6e84894af0def366
     overlays: []
+    aid: typeform:typeform-create-api
   - name: TypeForm Responses API
     description: >-
       The Responses API lets you access the data your typeforms collect — on
@@ -46,6 +47,7 @@ apis:
       - type: OpenAPI
         url: https://www.typeform.com/developers/responses/
     overlays: []
+    aid: typeform:typeform-responses-api
   - name: TypeForm Webhooks API
     description: >-
       Where do you want to send your typeform’s data? With our Webhooks API, you
@@ -62,6 +64,7 @@ apis:
       - type: OpenAPI
         url: https://www.typeform.com/developers/webhooks/
     overlays: []
+    aid: typeform:typeform-webhooks-api
 common:
   - type: OAuth Scopes
     url: https://www.typeform.com/developers/get-started/scopes/
@@ -102,4 +105,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: typeform
 ---

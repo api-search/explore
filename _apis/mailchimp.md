@@ -37,6 +37,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.mailchimp.com/schema/3.0/Swagger.json?expand-openapi-search.yml
+    aid: mailchimp:mailchimp-marketing-api
   - name: Mailchimp Transactional API
     description: >-
       Mailchimp Transactional is a powerful email delivery service that lets you
@@ -59,6 +60,7 @@ apis:
       - type: OpenAPI
         url: https://mailchimp.com/developer/transactional/docs/webhooks/
     overlays: []
+    aid: mailchimp:mailchimp-transactional-api
   - name: MailChimp Open Commerce
     description: >-
       An open source, API-first, modular commerce stack made for technical,
@@ -79,6 +81,7 @@ apis:
       - type: OpenAPI
         url: https://mailchimp.com/developer/open-commerce/playground/
     overlays: []
+    aid: mailchimp:mailchimp-open-commerce
 common:
   - type: Tools
     url: https://mailchimp.com/developer/tools/
@@ -97,4 +100,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: mailchimp
 ---

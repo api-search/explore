@@ -25,6 +25,8 @@ apis:
       - type: OpenAPI
         url: https://www.ncbi.nlm.nih.gov/home/develop/api/
     overlays: []
+    aid: >-
+      united-states-national-library-of-medicine:united-states-national-library-of-medicine-blast-url-api
 common:
   - type: Portal
     url: https://www.ncbi.nlm.nih.gov/home/develop/api/
@@ -35,4 +37,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: united-states-national-library-of-medicine
 ---

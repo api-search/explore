@@ -26,6 +26,8 @@ apis:
       - type: OpenAPI
         url: https://api.nasa.gov/
     overlays: []
+    aid: >-
+      the-national-aeronautics-and-space-administration-nasa:the-national-aeronautics-and-space-administration-nasa-api
 common:
   - type: Property
     url: https://example.com
@@ -36,4 +38,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: the-national-aeronautics-and-space-administration-nasa
 ---

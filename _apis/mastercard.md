@@ -31,6 +31,7 @@ apis:
       - type: OpenAPI
         url: https://developer.mastercard.com/product/account-services-catalogue/
     overlays: []
+    aid: mastercard:mastercard-universal-specification-submission-api
   - name: Mastercard Account to Account Commerce for Creditor Service Providers
     description: >-
       Online checkouts can be frustrating and tedious. As shopping habits shift
@@ -55,6 +56,8 @@ apis:
         url: >-
           https://developer.mastercard.com/account-to-account-commerce-for-csp/documentation/
     overlays: []
+    aid: >-
+      mastercard:mastercard-account-to-account-commerce-for-creditor-service-providers
   - name: Mastercard Debtor Service Provider Resources API
     description: >-
       Online checkouts can be frustrating and tedious. As shopping habits shift
@@ -77,6 +80,7 @@ apis:
         url: >-
           https://developer.mastercard.com/account-to-account-commerce-for-dsp/documentation/
     overlays: []
+    aid: mastercard:mastercard-debtor-service-provider-resources-api
   - name: Mastercard Automatic Billing Updater API
     description: >-
       Automatic Billing Updater (ABU) is a web service that provides access to
@@ -99,6 +103,7 @@ apis:
         url: >-
           https://developer.mastercard.com/automatic-billing-updater/documentation
     overlays: []
+    aid: mastercard:mastercard-automatic-billing-updater-api
   - name: Mastercard Benefit Eligibility Service API
     description: >-
       This API is for third-parties who want to enable eligibility checks based
@@ -117,6 +122,7 @@ apis:
       - type: OpenAPI
         url: https://developer.mastercard.com/eligibility-api/documentation/
     overlays: []
+    aid: mastercard:mastercard-benefit-eligibility-service-api
   - name: Mastercard Bill Pay API
     description: >-
       The Mastercard Bill Pay Experience Design Guide was created to provide
@@ -137,6 +143,7 @@ apis:
         url: >-
           https://developer.mastercard.com/bill-pay-experience-design-guide/documentation
     overlays: []
+    aid: mastercard:mastercard-bill-pay-api
 common:
   - type: Partners
     url: https://developer.mastercard.com/partners
@@ -163,4 +170,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: mastercard
 ---

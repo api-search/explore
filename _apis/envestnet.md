@@ -41,6 +41,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.envestnet.com/products/yodlee/account-aggregation/docs/api-reference-openapi-search.yml
+    aid: envestnet:evestnet-account-aggregation
 common:
   - type: Use Cases
     url: https://developer.envestnet.com/use-cases
@@ -67,4 +68,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: envestnet
 ---

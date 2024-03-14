@@ -29,6 +29,7 @@ apis:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/weather-current
     overlays: []
+    aid: weatherbit:weatherbit-current-weather-api
   - name: Weatherbit Severe Weather Alerts API
     description: >+
       This API returns severe weather alerts issued by local meteorological
@@ -47,6 +48,7 @@ apis:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/alerts
     overlays: []
+    aid: weatherbit:weatherbit-severe-weather-alerts-api
   - name: Weatherbit Weather Forecast API
     description: >-
       Improve your business applications with accurate forecasts derived from
@@ -61,11 +63,12 @@ apis:
     baseURL: https://api.example.com
     tags:
       - Weather
-      - Forecast
+      - Forecasts
     properties:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/weather-forecast-api
     overlays: []
+    aid: weatherbit:weatherbit-weather-forecast-api
   - name: Weatherbit Historical Weather API
     description: >-
       The Historical Weather API allows you to quickly retrieve accurate, high
@@ -85,6 +88,7 @@ apis:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/historical-weather-api
     overlays: []
+    aid: weatherbit:weatherbit-historical-weather-api
   - name: Weatherbit Ag-Weather API
     description: >-
       Use our service to retrieve derived data specific to the agriculture
@@ -100,6 +104,7 @@ apis:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/agweather-api
     overlays: []
+    aid: weatherbit:weatherbit-ag-weather-api
   - name: Weatherbit Air Quality API
     description: >
       Enrich your business applications with high quality air quality data
@@ -116,6 +121,7 @@ apis:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/air-quality-api
     overlays: []
+    aid: weatherbit:weatherbit-air-quality-api
 common:
   - type: Plans
     url: https://www.weatherbit.io/pricing
@@ -146,4 +152,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: weatherbit
 ---

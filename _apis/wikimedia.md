@@ -26,6 +26,7 @@ apis:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Core_REST_API
     overlays: []
+    aid: wikimedia:wikimedia-core-rest-api
   - name: Wikimedia Feed API
     description: Get daily featured articles, most read pages, and more.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -33,11 +34,12 @@ apis:
     baseURL: https://api.example.com
     tags:
       - Wiki
-      - Feed
+      - Feeds
     properties:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Feed_API
     overlays: []
+    aid: wikimedia:wikimedia-feed-api
   - name: Wikimedia Lift Wing API
     description: Use machine learning to make predictions about pages and edits.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -50,6 +52,7 @@ apis:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Lift_Wing_API
     overlays: []
+    aid: wikimedia:wikimedia-lift-wing-api
   - name: Page Description API
     description: Interact with page descriptions.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -62,6 +65,7 @@ apis:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Page_Description_API
     overlays: []
+    aid: wikimedia:page-description-api
   - name: Wikimedia Link Recommendation API
     description: Suggest links to add to an article on Wikipedia.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -75,6 +79,7 @@ apis:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Link_Recommendation_API
     overlays: []
+    aid: wikimedia:wikimedia-link-recommendation-api
 common:
   - type: Guidelines
     url: https://api.wikimedia.org/wiki/Maintainers/API_guidelines
@@ -95,4 +100,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: wikimedia
 ---

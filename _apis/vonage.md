@@ -36,6 +36,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.vonage.com/api/v1/developer/api/file/sms?format=yml-openapi-search.yml
+    aid: vonage:vonage-sms-api
   - name: Vonage Message API
     description: >-
       The Messages API consolidates and normalises exchanges across all
@@ -63,6 +64,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.vonage.com/api/v1/developer/api/file/messages-olympus?format=yml-openapi-search.yml
+    aid: vonage:vonage-message-api
   - name: Vonage Meetings API
     description: >-
       The Vonage Meetings API allows you to integrate real-time, high-quality
@@ -83,6 +85,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.vonage.com/api/v1/developer/api/file/meetings?format=yml-openapi-search.yml
+    aid: vonage:vonage-meetings-api
 common:
   - type: Portal
     url: https://developer.vonage.com/
@@ -113,4 +116,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: vonage
 ---

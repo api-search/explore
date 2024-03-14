@@ -32,6 +32,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/zoom/api-v1/5478bfe304a827f97acfed9aa5a0ba840b8d1aa9/openapi.v2.json-openapi-search.yml
+    aid: zoom:zoom-rest-api
   - name: Zoom GraphQL API
     description: >-
       Zoom GraphQL is in a public beta. See the GraphQL beta FAQ for details.
@@ -47,6 +48,7 @@ apis:
       - type: OpenAPI
         url: https://developers.zoom.us/docs/api/graphql/overview/
     overlays: []
+    aid: zoom:zoom-graphql-api
 common:
   - type: Blog
     url: https://developers.zoom.us/blog/
@@ -72,4 +74,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: zoom
 ---

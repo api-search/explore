@@ -37,6 +37,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/accounting-notifications-openapi-search.yml
+    aid: adyen:adyen-accounting-notifications-api
   - name: Adyen Account API
     description: >-
       This API is used for the classic integration. If you are just starting
@@ -69,39 +70,44 @@ apis:
             - Verification
           tags:
             - name: Account holders
-            - name: Verification
+            - name: Verifications
             - name: Accounts
           paths:
             /checkAccountHolder:
               post:
                 tags:
+                  - Trigger
                   - Verification
+                  - Account
+                  - Holder
                 summary: Trigger verification
                 description: >-
                   Triggers the verification of an account holder even if the
                   checks are not yet required for the volume that they are
                   currently processing.
-                x-addedInVersion: '5'
-                x-groupName: Verification
-                x-sortIndex: 3
-                x-methodName: checkAccountHolder
             /closeAccount:
               post:
                 tags:
-                  - Accounts
+                  - Close
+                  - An
+                  - Account
+                  - Account
+                  - Holder
                 summary: Close an account
                 description: >-
                   Closes an account. If an account is closed, you cannot process
                   transactions, pay out its funds, or reopen it. If payments are
                   made to a closed account, the payments are sent to your liable
                   account.
-                x-groupName: Accounts
-                x-sortIndex: 3
-                x-methodName: closeAccount
             /closeAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Close
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
                 summary: Close an account holder
                 description: >-
                   Changes the [status of an account
@@ -112,35 +118,40 @@ apis:
                   holder with a **Closed**
                   [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status),
                   the payments are sent to your liable account.
-                x-groupName: Account holders
-                x-sortIndex: 7
-                x-methodName: closeAccountHolder
             /closeStores:
               post:
                 tags:
-                  - Account holders
+                  - Close
+                  - Stores
+                  - Account
+                  - Holder
+                  - Stores
                 summary: Close stores
                 description: Closes stores associated with an account holder.
-                x-addedInVersion: '5'
-                x-groupName: Account holders
-                x-sortIndex: 9
-                x-methodName: closeStores
             /createAccount:
               post:
                 tags:
-                  - Accounts
+                  - Create
+                  - An
+                  - Account
+                  - Account
+                  - Holder
+                  - Stores
                 summary: Create an account
                 description: >-
                   Creates an account under an account holder. An account holder
                   can have [multiple
                   accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#create-additional-accounts).
-                x-groupName: Accounts
-                x-sortIndex: 1
-                x-methodName: createAccount
             /createAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Create
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
+                  - Stores
                 summary: Create an account holder
                 description: >-
                   Creates an account holder that [represents the sub-merchant's
@@ -149,106 +160,207 @@ apis:
                   request depend on the sub-merchant's legal entity type. For
                   more information, refer to [Account holder and
                   accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#legal-entity-types).
-                x-groupName: Account holders
-                x-sortIndex: 1
-                x-methodName: createAccountHolder
             /deleteBankAccounts:
               post:
                 tags:
-                  - Verification
+                  - Delete
+                  - Bank
+                  - Accounts
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
                 summary: Delete bank accounts
                 description: 'Deletes bank accounts associated with an account holder. '
-                x-groupName: Verification
-                x-sortIndex: 4
-                x-methodName: deleteBankAccounts
             /deleteLegalArrangements:
               post:
                 tags:
-                  - Verification
+                  - Delete
+                  - Legal
+                  - Arrangements
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
                 summary: Delete legal arrangements
                 description: >-
                   Deletes legal arrangements and/or legal arrangement entities
                   associated with an account holder.
-                x-groupName: Verification
-                x-sortIndex: 6
-                x-methodName: deleteLegalArrangements
             /deletePayoutMethods:
               post:
                 tags:
-                  - Verification
+                  - Delete
+                  - Payout
+                  - Methods
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
                 summary: Delete payout methods
                 description: Deletes payout methods associated with an account holder.
-                x-addedInVersion: '5'
-                x-groupName: Verification
-                x-sortIndex: 5
-                x-methodName: deletePayoutMethods
             /deleteShareholders:
               post:
                 tags:
-                  - Verification
+                  - Delete
+                  - Shareholders
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
                 summary: Delete shareholders
                 description: Deletes shareholders associated with an account holder.
-                x-groupName: Verification
-                x-sortIndex: 7
-                x-methodName: deleteShareholders
             /deleteSignatories:
               post:
                 tags:
-                  - Verification
+                  - Delete
+                  - Signatories
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
                 summary: Delete signatories
                 description: Deletes signatories associated with an account holder.
-                x-groupName: Verification
-                x-sortIndex: 8
-                x-methodName: deleteSignatories
             /getAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Get
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
                 summary: Get an account holder
                 description: Returns the details of an account holder.
-                x-groupName: Account holders
-                x-sortIndex: 2
-                x-methodName: getAccountHolder
             /getTaxForm:
               post:
                 tags:
-                  - Account holders
+                  - Get
+                  - Tax
+                  - Form
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
                 summary: Get a tax form
                 description: >-
                   Generates a tax form for account holders operating in the US.
                   For more information, refer to [Providing tax
                   forms](https://docs.adyen.com/marketplaces-and-platforms/classic/tax-forms).
-                x-groupName: Account holders
-                x-sortIndex: 8
-                x-methodName: getTaxForm
             /getUploadedDocuments:
               post:
                 tags:
-                  - Verification
+                  - Get
+                  - Documents
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
                 summary: Get documents
                 description: >
                   Returns documents that were previously uploaded for an account
                   holder. Adyen uses the documents during the [verification
                   process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
-                x-groupName: Verification
-                x-sortIndex: 2
-                x-methodName: getUploadedDocuments
             /suspendAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Suspend
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
                 summary: Suspend an account holder
                 description: >-
                   Changes the [status of an account
                   holder](https://docs.adyen.com/marketplaces-and-platforms/classic/account-holders-and-accounts#account-holder-statuses)
                   to **Suspended**.
-                x-groupName: Account holders
-                x-sortIndex: 5
-                x-methodName: suspendAccountHolder
             /unSuspendAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Unsuspend
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
+                  - Suspend
                 summary: Unsuspend an account holder
                 description: >-
                   Changes the [status of an account
@@ -265,22 +377,53 @@ apis:
                   You can only unsuspend account holders if they do not have
                   verification checks with a **FAILED**
                   [`status`](https://docs.adyen.com/api-explorer/#/Account/latest/post/getAccountHolder__resParam_verification-accountHolder-checks-status).
-                x-groupName: Account holders
-                x-sortIndex: 6
-                x-methodName: unSuspendAccountHolder
             /updateAccount:
               post:
                 tags:
+                  - Update
+                  - An
+                  - Account
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
                   - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
+                  - Suspend
                 summary: Update an account
                 description: Updates the description or payout schedule of an account.
-                x-groupName: Accounts
-                x-sortIndex: 2
-                x-methodName: updateAccount
             /updateAccountHolder:
               post:
                 tags:
-                  - Account holders
+                  - Update
+                  - An
+                  - Account
+                  - Holder
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
+                  - Suspend
                 summary: Update an account holder
                 description: >+
                   Updates the `accountHolderDetails` and `processingTier` of an
@@ -317,35 +460,67 @@ apis:
                   or shareholder details without a `bankAccountUUID` or a
                   `shareholderCode`.
 
-                x-groupName: Account holders
-                x-sortIndex: 3
-                x-methodName: updateAccountHolder
             /updateAccountHolderState:
               post:
                 tags:
-                  - Account holders
+                  - Update
+                  - Payout
+                  - Or
+                  - Processing
+                  - State
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
+                  - Suspend
+                  - State
                 summary: Update payout or processing state
                 description: >-
                   Disables or enables the processing or payout state of an
                   account holder.
-                x-groupName: Account holders
-                x-sortIndex: 4
-                x-methodName: updateAccountHolderState
             /uploadDocument:
               post:
                 tags:
-                  - Verification
+                  - Upload
+                  - Document
+                  - Account
+                  - Holder
+                  - Stores
+                  - Bank
+                  - Accounts
+                  - Legal
+                  - Arrangements
+                  - Payout
+                  - Methods
+                  - Shareholders
+                  - Signatories
+                  - Tax
+                  - Form
+                  - Uploaded
+                  - Documents
+                  - Suspend
+                  - State
+                  - Document
                 summary: Upload a document
                 description: >-
                   Uploads a document for an account holder. Adyen uses the
                   documents during the [verification
-                  process](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
-                x-groupName: Verification
-                x-sortIndex: 1
-                x-methodName: uploadDocument
+                  process](https://docs.adyen.com/marketplaces-and-platforms/classi
     overlays:
       - type: APIs.io Search
         url: overlays/accounts-openapi-search.yml
+    aid: adyen:adyen-account-api
   - name: Adyen Authentication Webhooks API
     description: >-
       Adyen sends webhooks to inform your system about events related to
@@ -365,6 +540,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/authentication-webhooks-openapi-search.yml
+    aid: adyen:adyen-authentication-webhooks-api
   - name: Adyen Balance Control API
     description: >-
       The Balance Control API lets you transfer funds between merchant accounts
@@ -396,7 +572,10 @@ apis:
             /balanceTransfer:
               post:
                 tags:
-                  - General
+                  - Start
+                  - Balance
+                  - Transfer
+                  - Transfer
                 summary: Start a balance transfer
                 description: >
                   Starts a balance transfer request between merchant accounts.
@@ -418,13 +597,11 @@ apis:
                   When sending multiple API requests with the same source and
                   destination merchant accounts, send the requests sequentially
                   and *not* in parallel. Some requests may not be processed if
-                  the requests are sent in parallel.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: balanceTransfer
+                  the reques
     overlays:
       - type: APIs.io Search
         url: overlays/balance-control-openapi-search.yml
+    aid: adyen:adyen-balance-control-api
   - name: Adyen BinLookup API
     description: >-
       The BIN Lookup API provides endpoints for retrieving information, such as
@@ -451,7 +628,12 @@ apis:
             /get3dsAvailability:
               post:
                 tags:
-                  - General
+                  - Check
+                  - If
+                  - Secure
+                  - Is
+                  - Available
+                  - Availability
                 summary: Check if 3D Secure is available
                 description: >-
                   Verifies whether 3D Secure is available for the specified BIN
@@ -461,13 +643,16 @@ apis:
 
                   For more information, refer to [3D Secure
                   2](https://docs.adyen.com/online-payments/3d-secure/native-3ds2).
-                x-addedInVersion: '1'
-                x-sortIndex: 0
-                x-methodName: get3dsAvailability
             /getCostEstimate:
               post:
                 tags:
-                  - General
+                  - Get
+                  - Fees
+                  - Cost
+                  - Estimate
+                  - Availability
+                  - Cost
+                  - Estimate
                 summary: Get a fees cost estimate
                 description: >-
                   >This API is available only for merchants operating in
@@ -491,19 +676,18 @@ apis:
                   if the cardholder will successfully authenticate via 3D Secure
                   or if you also plan to provide additional Level 2/3 data), the
                   returned amounts are based on a set of assumption criteria you
-                  define in the `assumptions` parameter.
-                x-sortIndex: 0
-                x-methodName: getCostEstimate
+                  define in the 
     overlays:
       - type: APIs.io Search
         url: overlays/binlookup-openapi-search.yml
+    aid: adyen:adyen-binlookup-api
   - name: Adyen Checkout API
     description: This is the description of your API.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.adyen.com/api-explorer/Checkout/71/overview
     baseURL: https://api.example.com
     tags:
-      - Checkout
+      - Checkouts
       - Commerce
     properties:
       - type: OpenAPI
@@ -528,7 +712,13 @@ apis:
             /applePay/sessions:
               post:
                 tags:
-                  - Utility
+                  - Get
+                  - An
+                  - Apple
+                  - Pay
+                  - Session
+                  - Pay
+                  - Sessions
                 summary: Get an Apple Pay session
                 description: >-
                   You need to use this endpoint if you have an API-only
@@ -539,12 +729,16 @@ apis:
                   The endpoint returns the Apple Pay session data which you need
                   to complete the [Apple Pay session
                   validation](https://docs.adyen.com/payment-methods/apple-pay/api-only?tab=adyen-certificate-validation_1#complete-apple-pay-session-validation).
-                x-sortIndex: 2
-                x-methodName: getApplePaySession
             /cancels:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - An
+                  - Authorised
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
                 summary: Cancel an authorised payment
                 description: >-
                   Cancels the authorisation on a payment that has not yet been
@@ -570,12 +764,20 @@ apis:
 
                   For more information, refer to
                   [Cancel](https://docs.adyen.com/online-payments/cancel).
-                x-sortIndex: 3
-                x-methodName: cancelAuthorisedPayment
             /cardDetails:
               post:
                 tags:
-                  - Payments
+                  - Get
+                  - The
+                  - List
+                  - Of
+                  - Brands
+                  - 'On'
+                  - Card
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
                 summary: Get the list of brands on the card
                 description: >+
                   Send a request with at least the first 6 digits of the card
@@ -592,11 +794,17 @@ apis:
                   For co-branded cards, you must let the shopper choose the
                   brand to pay with  if you support both brands.
 
-                x-sortIndex: 6
-                x-methodName: cardDetails
             /donations:
               post:
                 tags:
+                  - Start
+                  - Transaction
+                  - For
+                  - Donations
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
                   - Donations
                 summary: Start a transaction for donations
                 description: >-
@@ -607,35 +815,59 @@ apis:
 
                   For more information, see
                   [Donations](https://docs.adyen.com/online-payments/donations).
-                x-sortIndex: 2
-                x-methodName: donations
             /orders:
               post:
                 tags:
+                  - Create
+                  - An
+                  - Order
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
                   - Orders
                 summary: Create an order
                 description: >-
                   Creates an order to be used for partial payments. Make a POST
                   `/orders` call before making a `/payments` call when
                   processing payments with different payment methods.
-                x-sortIndex: 2
-                x-methodName: orders
             /orders/cancel:
               post:
                 tags:
+                  - Cancel
+                  - An
+                  - Order
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
                   - Orders
+                  - Cancel
                 summary: Cancel an order
                 description: >-
                   Cancels an order. Cancellation of an order results in an
                   automatic rollback of all payments made in the order, either
                   by canceling or refunding the payment, depending on the type
                   of payment method.
-                x-sortIndex: 3
-                x-methodName: cancelOrder
             /originKeys:
               post:
                 tags:
-                  - Utility
+                  - Create
+                  - Origin
+                  - Key
+                  - Values
+                  - For
+                  - Domains
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
                 summary: Create originKey values for domains
                 description: >-
                   This operation takes the origin domains and returns a JSON
@@ -648,14 +880,21 @@ apis:
                   This allows you to use a single key for all origins, add or
                   remove origins without generating a new key, and detect the
                   card type from the number entered in your payment form. 
-                deprecated: true
-                x-deprecatedInVersion: '67'
-                x-sortIndex: 1
-                x-methodName: originKeys
             /paymentLinks:
               post:
                 tags:
-                  - Payment links
+                  - Create
+                  - Payment
+                  - Link
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
                 summary: Create a payment link
                 description: >-
                   Creates a payment link to our hosted payment form where
@@ -666,32 +905,72 @@ apis:
 
                   For more information, refer to [Pay by Link
                   documentation](https://docs.adyen.com/online-payments/pay-by-link#create-payment-links-through-api).
-                x-sortIndex: 1
-                x-methodName: paymentLinks
             /paymentLinks/{linkId}:
               get:
                 tags:
-                  - Payment links
+                  - Get
+                  - Payment
+                  - Link
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
                 summary: Get a payment link
                 description: >-
                   Retrieves the payment link details using the payment link
                   `id`.
-                x-sortIndex: 2
-                x-methodName: getPaymentLink
               patch:
                 tags:
-                  - Payment links
+                  - Update
+                  - The
+                  - Status
+                  - Of
+                  - Payment
+                  - Link
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
                 summary: Update the status of a payment link
                 description: >-
                   Updates the status of a payment link. Use this endpoint to
                   [force the expiry of a payment
                   link](https://docs.adyen.com/online-payments/pay-by-link#update-payment-link-status).
-                x-sortIndex: 3
-                x-methodName: updatePaymentLink
             /paymentMethods:
               post:
                 tags:
-                  - Payments
+                  - Get
+                  - List
+                  - Of
+                  - Available
+                  - Payment
+                  - Methods
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
                 summary: Get a list of available payment methods
                 description: >-
                   Queries the available payment methods for a transaction based
@@ -707,24 +986,54 @@ apis:
                   methods, its usage is optional. You can, for example, also
                   cache the `/paymentMethods` response and update it once a
                   week.
-                x-sortIndex: 2
-                x-methodName: paymentMethods
             /paymentMethods/balance:
               post:
                 tags:
+                  - Get
+                  - The
+                  - Balance
+                  - Of
+                  - Gift
+                  - Card
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
                   - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
                 summary: Get the balance of a gift card
                 description: >-
                   Retrieves the balance remaining on a shopper's gift card. To
                   check a gift card's balance, make a POST
                   `/paymentMethods/balance` call and include the gift card's
                   details inside a `paymentMethod` object.
-                x-sortIndex: 1
-                x-methodName: getBalanceOfGiftCard
             /paymentSession:
               post:
                 tags:
-                  - Classic Checkout SDK
+                  - Create
+                  - Payment
+                  - Session
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
                 summary: Create a payment session
                 description: >-
                   Provides the data object that can be used to start the
@@ -736,13 +1045,25 @@ apis:
 
                   For more information, refer to [How it
                   works](https://docs.adyen.com/online-payments#howitworks).
-                deprecated: true
-                x-deprecatedInVersion: '37'
-                x-sortIndex: 1
-                x-methodName: paymentSession
             /payments:
               post:
                 tags:
+                  - Start
+                  - Transaction
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
                   - Payments
                 summary: Start a transaction
                 description: >-
@@ -761,11 +1082,27 @@ apis:
 
                   * For a redirect or additional action, the response contains
                   an `action` object. 
-                x-sortIndex: 3
-                x-methodName: payments
             /payments/details:
               post:
                 tags:
+                  - Submit
+                  - Details
+                  - For
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
                   - Payments
                 summary: Submit details for a payment
                 description: >+
@@ -774,12 +1111,28 @@ apis:
                   the `/payments` request, for example when the shopper was
                   redirected to another page to complete the payment.
 
-                x-sortIndex: 4
-                x-methodName: paymentsDetails
             /payments/result:
               post:
                 tags:
-                  - Classic Checkout SDK
+                  - Verify
+                  - Payment
+                  - Result
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
                 summary: Verify a payment result
                 description: >-
                   Verifies the payment result using the payload returned from
@@ -788,14 +1141,33 @@ apis:
 
                   For more information, refer to [How it
                   works](https://docs.adyen.com/online-payments#howitworks).
-                deprecated: true
-                x-deprecatedInVersion: '37'
-                x-sortIndex: 2
-                x-methodName: verifyPaymentResult
             /payments/{paymentPspReference}/amountUpdates:
               post:
                 tags:
-                  - Modifications
+                  - Update
+                  - An
+                  - Authorised
+                  - Amount
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
                 summary: Update an authorised amount
                 description: >-
                   Increases or decreases the authorised payment amount and
@@ -815,12 +1187,33 @@ apis:
 
                   For more information, refer to [Authorisation
                   adjustment](https://docs.adyen.com/online-payments/adjust-authorisation#use-cases).
-                x-sortIndex: 6
-                x-methodName: updateAuthorisedAmount
             /payments/{paymentPspReference}/cancels:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - An
+                  - Authorised
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
                 summary: Cancel an authorised payment
                 description: >-
                   Cancels the authorisation on a payment that has not yet been
@@ -845,12 +1238,34 @@ apis:
 
                   For more information, refer to
                   [Cancel](https://docs.adyen.com/online-payments/cancel).
-                x-sortIndex: 2
-                x-methodName: cancelAuthorisedPaymentByPspReference
             /payments/{paymentPspReference}/captures:
               post:
                 tags:
-                  - Modifications
+                  - Capture
+                  - An
+                  - Authorised
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
                 summary: Capture an authorised payment
                 description: >2-
                    Captures an authorised payment and returns a unique reference for this request. You get the outcome of the request asynchronously, in a [**CAPTURE** webhook](https://docs.adyen.com/online-payments/capture#capture-notification).
@@ -872,12 +1287,34 @@ apis:
 
                   For more information, refer to
                   [Capture](https://docs.adyen.com/online-payments/capture).
-                x-sortIndex: 1
-                x-methodName: captureAuthorisedPayment
             /payments/{paymentPspReference}/refunds:
               post:
                 tags:
-                  - Modifications
+                  - Refund
+                  - Captured
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
                 summary: Refund a captured payment
                 description: >-
                   Refunds a payment that has been
@@ -909,12 +1346,36 @@ apis:
 
                   For more information, refer to
                   [Refund](https://docs.adyen.com/online-payments/refund).
-                x-sortIndex: 4
-                x-methodName: refundCapturedPayment
             /payments/{paymentPspReference}/reversals:
               post:
                 tags:
-                  - Modifications
+                  - Refund
+                  - Or
+                  - Cancel
+                  - Payment
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
+                  - Reversals
                 summary: Refund or cancel a payment
                 description: >-
                   [Refunds](https://docs.adyen.com/api-explorer/#/CheckoutService/latest/post/payments/{paymentPspReference}/refunds)
@@ -934,12 +1395,35 @@ apis:
 
                   For more information, refer to
                   [Reversal](https://docs.adyen.com/online-payments/reversal).
-                x-sortIndex: 5
-                x-methodName: refundOrCancelPayment
             /sessions:
               post:
                 tags:
+                  - Create
+                  - Payment
+                  - Session
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
                   - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
+                  - Reversals
                 summary: Create a payment session
                 description: >-
                   Creates a payment session for [Web
@@ -957,24 +1441,75 @@ apis:
                   You get the payment outcome asynchronously, in an
                   [AUTHORISATION](https://docs.adyen.com/api-explorer/#/Webhooks/latest/post/AUTHORISATION)
                   webhook.
-                x-addedInVersion: '68'
-                x-sortIndex: 1
-                x-methodName: sessions
             /sessions/{sessionId}:
               get:
                 tags:
+                  - Get
+                  - The
+                  - Result
+                  - Of
+                  - Payment
+                  - Session
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
                   - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
+                  - Reversals
                 summary: Get the result of a payment session
                 description: >-
                   Returns the status of the payment session with the `sessionId`
                   and `sessionResult` specified in the path.
-                x-addedInVersion: '68'
-                x-sortIndex: 2
-                x-methodName: getResultOfPaymentSession
             /storedPaymentMethods:
               get:
                 tags:
-                  - Recurring
+                  - Get
+                  - Tokens
+                  - For
+                  - Stored
+                  - Payment
+                  - Details
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
+                  - Reversals
+                  - Payment
                 summary: Get tokens for stored payment details
                 description: >+
                   Lists the tokens for stored payment details for the shopper
@@ -982,23 +1517,49 @@ apis:
                   ID can be used with payment requests for the shopper's
                   payment. A summary of the stored details is included.
 
-                x-addedInVersion: '70'
-                x-sortIndex: 2
-                x-methodName: getTokensForStoredPaymentDetails
             /storedPaymentMethods/{storedPaymentMethodId}:
               delete:
                 tags:
-                  - Recurring
+                  - Delete
+                  - Token
+                  - For
+                  - Stored
+                  - Payment
+                  - Details
+                  - Pay
+                  - Sessions
+                  - Cancels
+                  - Details
+                  - Donations
+                  - Orders
+                  - Cancel
+                  - Keys
+                  - Links
+                  - Link
+                  - Id
+                  - Methods
+                  - Balance
+                  - Session
+                  - Payments
+                  - Result
+                  - Psp
+                  - Reference
+                  - Amount
+                  - Updates
+                  - Captures
+                  - Refunds
+                  - Reversals
+                  - Payment
+                  - Stored
+                  - Method
                 summary: Delete a token for stored payment details
                 description: >-
                   Deletes the token identified in the path. The token can no
-                  longer be used with payment requests.
-                x-addedInVersion: '70'
-                x-sortIndex: 4
-                x-methodName: deleteTokenForStoredPaymentDetails
+                  longer be use
     overlays:
       - type: APIs.io Search
         url: overlays/checkout-openapi-search.yml
+    aid: adyen:adyen-checkout-api
   - name: Adyen Configuration API
     description: >-
       The Configuration API enables you to create a platform where you can
@@ -1008,7 +1569,7 @@ apis:
     humanURL: https://docs.adyen.com/api-explorer/balanceplatform/2/overview
     baseURL: https://api.example.com
     tags:
-      - Configuration
+      - Configurations
       - Accounts
       - Balances
       - Cards
@@ -1040,39 +1601,55 @@ apis:
             /accountHolders:
               post:
                 tags:
-                  - Account holders
+                  - Create
+                  - An
+                  - Account
+                  - Holder
+                  - Holders
                 summary: Create an account holder
                 description: >+
                   Creates an account holder linked to a [legal
                   entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities).
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createAccountHolder
             /accountHolders/{id}:
               get:
                 tags:
-                  - Account holders
+                  - Get
+                  - An
+                  - Account
+                  - Holder
+                  - Holders
+                  - Id
                 summary: Get an account holder
                 description: Returns an account holder.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getAccountHolder
               patch:
                 tags:
-                  - Account holders
+                  - Update
+                  - An
+                  - Account
+                  - Holder
+                  - Holders
+                  - Id
                 summary: Update an account holder
                 description: >-
                   Updates an account holder. When updating an account holder
                   resource, if a parameter is not provided in the request, it is
                   left unchanged.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: updateAccountHolder
             /accountHolders/{id}/balanceAccounts:
               get:
                 tags:
-                  - Account holders
+                  - Get
+                  - All
+                  - Balance
+                  - Accounts
+                  - Of
+                  - An
+                  - Account
+                  - Holder
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
                 summary: Get all balance accounts of an account holder
                 description: >-
                   Returns a paginated list of the balance accounts associated
@@ -1083,36 +1660,56 @@ apis:
                   For example, to limit the page to 5 balance accounts and skip
                   the first 10, use
                   `/accountHolders/{id}/balanceAccounts?limit=5&offset=10`.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getAllBalanceAccountsOfAccountHolder
             /accountHolders/{id}/taxForms:
               get:
                 tags:
-                  - Account holders
+                  - Get
+                  - Tax
+                  - Form
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
                 summary: Get a tax form
                 description: >-
                   Generates a tax form for account holders operating in the US.
                   For more information, refer to [Providing tax
                   forms](https://docs.adyen.com/marketplaces-and-platforms/us-tax-forms/).
-                x-addedInVersion: '2'
-                x-sortIndex: 5
-                x-methodName: getTaxForm
             /balanceAccounts:
               post:
                 tags:
-                  - Balance accounts
+                  - Create
+                  - Balance
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
                 summary: Create a balance account
                 description: >-
                   Creates a balance account that holds the funds of the
                   associated account holder.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createBalanceAccount
             /balanceAccounts/{balanceAccountId}/sweeps:
               get:
                 tags:
-                  - Balance accounts
+                  - Get
+                  - All
+                  - Sweeps
+                  - For
+                  - Balance
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
                 summary: Get all sweeps for a balance account
                 description: >-
                   Returns a list of the sweeps configured for a balance account.
@@ -1122,12 +1719,18 @@ apis:
                   example, to limit the page to 5 sweeps and to skip the first
                   10, use
                   `/balanceAccounts/{balanceAccountId}/sweeps?limit=5&offset=10`.
-                x-addedInVersion: '2'
-                x-sortIndex: 7
-                x-methodName: getAllSweepsForBalanceAccount
               post:
                 tags:
-                  - Balance accounts
+                  - Create
+                  - Sweep
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
                 summary: Create a sweep
                 description: >-
                   Creates a sweep that results in moving funds from or to a
@@ -1136,60 +1739,111 @@ apis:
 
                   A sweep pulls in or pushes out funds based on a defined
                   schedule, amount, currency, and a source or a destination.
-                x-addedInVersion: '2'
-                x-sortIndex: 5
-                x-methodName: createSweep
             /balanceAccounts/{balanceAccountId}/sweeps/{sweepId}:
               delete:
                 tags:
-                  - Balance accounts
+                  - Delete
+                  - Sweep
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
                 summary: Delete a sweep
                 description: Deletes a sweep for a balance account.
-                x-addedInVersion: '2'
-                x-sortIndex: 9
-                x-methodName: deleteSweep
               get:
                 tags:
-                  - Balance accounts
+                  - Get
+                  - Sweep
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
                 summary: Get a sweep
                 description: Returns a sweep.
-                x-addedInVersion: '2'
-                x-sortIndex: 8
-                x-methodName: getSweep
               patch:
                 tags:
-                  - Balance accounts
+                  - Update
+                  - Sweep
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
                 summary: Update a sweep
                 description: >-
                   Updates a sweep. When updating a sweep resource, note that if
                   a request parameter is not provided, the parameter is left
                   unchanged.
-                x-addedInVersion: '2'
-                x-sortIndex: 6
-                x-methodName: updateSweep
             /balanceAccounts/{id}:
               get:
                 tags:
-                  - Balance accounts
+                  - Get
+                  - Balance
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
                 summary: Get a balance account
                 description: >-
                   Returns a balance account and its balances for the default
                   currency and other currencies with a non-zero balance.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getBalanceAccount
               patch:
                 tags:
-                  - Balance accounts
+                  - Update
+                  - Balance
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
                 summary: Update a balance account
                 description: Updates a balance account.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: updateBalanceAccount
             /balanceAccounts/{id}/paymentInstruments:
               get:
                 tags:
-                  - Balance accounts
+                  - Get
+                  - Payment
+                  - Instruments
+                  - Linked
+                  - To
+                  - Balance
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
                 summary: Get payment instruments linked to a balance account
                 description: >-
                   Returns a paginated list of the payment instruments associated
@@ -1200,22 +1854,48 @@ apis:
                   to limit the page to 3 payment instruments which are in active
                   status and to skip the first 6, use
                   `/balanceAccounts/{id}/paymentInstruments?limit=3&offset=6&status=active`.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getPaymentInstrumentsLinkedToBalanceAccount
             /balancePlatforms/{id}:
               get:
                 tags:
+                  - Get
+                  - Balance
                   - Platform
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
                 summary: Get a balance platform
                 description: Returns a balance platform.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getBalancePlatform
             /balancePlatforms/{id}/accountHolders:
               get:
                 tags:
+                  - Get
+                  - All
+                  - Account
+                  - Holders
+                  - Under
+                  - Balance
                   - Platform
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
                 summary: Get all account holders under a balance platform
                 description: >-
                   Returns a paginated list of all the account holders that
@@ -1226,156 +1906,457 @@ apis:
                   For example, to limit the page to 5 account holders and to
                   skip the first 20, use
                   `/balancePlatforms/{id}/accountHolders?limit=5&offset=20`.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getAllAccountHoldersUnderBalancePlatform
             /cardorders:
               get:
                 tags:
-                  - Card orders
+                  - Get
+                  - List
+                  - Of
+                  - Card
+                  - Orders
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
                 summary: Get a list of card orders
                 description: Returns a paginated list of card orders.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: listCardOrders
             /cardorders/{id}/items:
               get:
                 tags:
-                  - Card orders
+                  - Get
+                  - Card
+                  - Order
+                  - Items
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
                 summary: Get card order items
                 description: Returns the item list of a specific card order.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getCardOrderItems
             /grantAccounts/{id}:
               get:
                 tags:
-                  - Grant accounts
+                  - Get
+                  - Grant
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
                 summary: Get a grant account
                 description: >-
                   Returns the details of the [grant
                   account](https://docs.adyen.com/marketplaces-and-platforms/capital#grant-account).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getGrantAccount
             /grantOffers:
               get:
                 tags:
-                  - Grant offers
+                  - Get
+                  - All
+                  - Available
+                  - Grant
+                  - Offers
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
                 summary: Get all available grant offers
                 description: >-
                   Returns a list of all [grant
                   offers](https://docs.adyen.com/marketplaces-and-platforms/capital#grant-offers)
                   available for `accountHolderId` specified as a query
                   parameter.
-                x-addedInVersion: '2'
-                x-sortIndex: 1
-                x-methodName: getAllAvailableGrantOffers
             /grantOffers/{grantOfferId}:
               get:
                 tags:
-                  - Grant offers
+                  - Get
+                  - Grant
+                  - Offer
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
                 summary: Get a grant offer
                 description: Returns the details of a single grant offer.
-                x-addedInVersion: '2'
-                x-sortIndex: 1
-                x-methodName: getGrantOffer
             /networkTokens/{networkTokenId}:
               get:
                 tags:
-                  - Network tokens
+                  - Get
+                  - Network
+                  - Token
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
                 summary: Get a network token
                 description: Returns the details of a network token.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getNetworkToken
               patch:
                 tags:
-                  - Network tokens
+                  - Update
+                  - Network
+                  - Token
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
                 summary: Update a network token
                 description: Updates the status of the network token.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: updateNetworkToken
             /paymentInstrumentGroups:
               post:
                 tags:
-                  - Payment instrument groups
+                  - Create
+                  - Payment
+                  - Instrument
+                  - Group
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
                 summary: Create a payment instrument group
                 description: >-
                   Creates a payment instrument group to associate and group
                   payment instrument resources together. You can apply a
                   transaction rule to a payment instrument group.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createPaymentInstrumentGroup
             /paymentInstrumentGroups/{id}:
               get:
                 tags:
-                  - Payment instrument groups
+                  - Get
+                  - Payment
+                  - Instrument
+                  - Group
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
                 summary: Get a payment instrument group
                 description: Returns the details of a payment instrument group.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getPaymentInstrumentGroup
             /paymentInstrumentGroups/{id}/transactionRules:
               get:
                 tags:
-                  - Payment instrument groups
+                  - Get
+                  - All
+                  - Transaction
+                  - Rules
+                  - For
+                  - Payment
+                  - Instrument
+                  - Group
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
                 summary: Get all transaction rules for a payment instrument group
                 description: >-
                   Returns a list of all the transaction rules associated with a
                   payment instrument group.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getAllTransactionRulesForPaymentInstrumentGroup
             /paymentInstruments:
               post:
                 tags:
-                  - Payment instruments
+                  - Create
+                  - Payment
+                  - Instrument
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
                 summary: Create a payment instrument
                 description: >-
                   Creates a payment instrument to issue a physical card, a
                   virtual card, or a business account to your user.
 
                    For more information, refer to [Issue cards](https://docs.adyen.com/issuing/create-cards) or [Issue business accounts](https://docs.adyen.com/marketplaces-and-platforms/business-accounts).
-                x-addedInVersion: '1'
-                x-sortIndex: 11
-                x-methodName: createPaymentInstrument
             /paymentInstruments/{id}:
               get:
                 tags:
-                  - Payment instruments
+                  - Get
+                  - Payment
+                  - Instrument
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
                 summary: Get a payment instrument
                 description: Returns the details of a payment instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 13
-                x-methodName: getPaymentInstrument
               patch:
                 tags:
-                  - Payment instruments
+                  - Update
+                  - Payment
+                  - Instrument
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
                 summary: Update a payment instrument
                 description: >-
                   Updates a payment instrument. Once a payment instrument is
                   already active, you can only update its status. However, for
                   cards created with **inactive** status, you can still update
                   the balance account associated with the card.
-                x-addedInVersion: '1'
-                x-sortIndex: 12
-                x-methodName: updatePaymentInstrument
             /paymentInstruments/{id}/networkTokens:
               get:
                 tags:
-                  - Payment instruments
+                  - List
+                  - Network
+                  - Tokens
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
                 summary: List network tokens
                 description: List the network tokens connected to a payment instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 15
-                x-methodName: listNetworkTokens
             /paymentInstruments/{id}/reveal:
               get:
                 tags:
-                  - Payment instruments
+                  - Get
+                  - The
+                  - Of
+                  - Payment
+                  - Instrument
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
                 summary: Get the PAN of a payment instrument
                 description: >-
                   Returns the primary account number (PAN) of a payment
@@ -1388,51 +2369,184 @@ apis:
 
 
                   * Balance Platform BCL PCI role
-                x-addedInVersion: '1'
-                x-sortIndex: 14
-                x-methodName: getPanOfPaymentInstrument
             /paymentInstruments/{id}/transactionRules:
               get:
                 tags:
-                  - Payment instruments
+                  - Get
+                  - All
+                  - Transaction
+                  - Rules
+                  - For
+                  - Payment
+                  - Instrument
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
                 summary: Get all transaction rules for a payment instrument
                 description: >-
                   Returns a list of transaction rules associated with a payment
                   instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 14
-                x-methodName: getAllTransactionRulesForPaymentInstrument
             /pins/change:
               post:
                 tags:
-                  - PIN functionality
+                  - Change
+                  - Pin
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
                 summary: Change Pin
                 description: Change Pin
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: changePin
             /pins/publicKey:
               get:
                 tags:
-                  - PIN functionality
+                  - Get
+                  - Public
+                  - Key
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
                 summary: Get RSA publicKey
                 description: Get RSA publicKey
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getRsaPublickey
             /pins/reveal:
               post:
                 tags:
-                  - PIN functionality
+                  - Reveal
+                  - Pin
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
                 summary: Reveal Pin
                 description: Reveal Pin
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: revealPin
             /transactionRules:
               post:
                 tags:
-                  - Transaction rules
+                  - Create
+                  - Transaction
+                  - Rule
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
                 summary: Create a transaction rule
                 description: >-
                   Creates a [transaction
@@ -1443,29 +2557,113 @@ apis:
                   transaction rule to several cards, such as all the cards in
                   your platform, or to a specific card. For use cases, see
                   [examples](https://docs.adyen.com/issuing/transaction-rules/examples).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createTransactionRule
             /transactionRules/{transactionRuleId}:
               delete:
                 tags:
-                  - Transaction rules
+                  - Delete
+                  - Transaction
+                  - Rule
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
+                  - Rule
                 summary: Delete a transaction rule
                 description: Deletes a transaction rule.
-                x-addedInVersion: '1'
-                x-sortIndex: 5
-                x-methodName: deleteTransactionRule
               get:
                 tags:
-                  - Transaction rules
+                  - Get
+                  - Transaction
+                  - Rule
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
+                  - Rule
                 summary: Get a transaction rule
                 description: Returns the details of a transaction rule.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getTransactionRule
               patch:
                 tags:
-                  - Transaction rules
+                  - Update
+                  - Transaction
+                  - Rule
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
+                  - Rule
                 summary: Update a transaction rule
                 description: >-
                   Updates a transaction rule. 
@@ -1479,13 +2677,43 @@ apis:
                   * When updating any other parameter, you need to send all
                   existing resource parameters. If you omit a parameter in the
                   request, that parameter is removed from the resource.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: updateTransactionRule
             /transferRoutes/calculate:
               post:
                 tags:
-                  - Transfer routes
+                  - Calculate
+                  - Transfer
+                  - Routes
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
+                  - Rule
+                  - Routes
+                  - Calculate
                 summary: Calculate transfer routes
                 description: >-
                   Returns available transfer routes based on a combination of
@@ -1493,13 +2721,45 @@ apis:
                   `priorities`. Use this endpoint to find optimal transfer
                   priorities and associated requirements before you [make a
                   transfer](https://docs.adyen.com/api-explorer/transfers/latest/post/transfers).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: calculateTransferRoutes
             /validateBankAccountIdentification:
               post:
                 tags:
-                  - Bank account validation
+                  - Validate
+                  - Bank
+                  - Account
+                  - Holders
+                  - Id
+                  - Balance
+                  - Accounts
+                  - Tax
+                  - Forms
+                  - Account
+                  - Sweeps
+                  - Sweep
+                  - Payment
+                  - Instruments
+                  - Platforms
+                  - Cardorders
+                  - Items
+                  - Offers
+                  - Grant
+                  - Offer
+                  - Tokens
+                  - Network
+                  - Token
+                  - Instrument
+                  - Groups
+                  - Transaction
+                  - Rules
+                  - Reveal
+                  - Pins
+                  - Change
+                  - Key
+                  - Rule
+                  - Routes
+                  - Calculate
+                  - Bank
+                  - Identification
                 summary: Validate a bank account
                 description: >-
                   Validates bank account identification details. You can use
@@ -1507,13 +2767,11 @@ apis:
                   [make a
                   transfer](https://docs.adyen.com/api-explorer/transfers/latest/post/transfers)
                   or [create a transfer
-                  instrument](https://docs.adyen.com/api-explorer/legalentity/latest/post/transferInstruments).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: validateBankAccountIdentification
+                  instrument](https://docs.adyen.com/api-explorer/legalentity/latest/po
     overlays:
       - type: APIs.io Search
         url: overlays/configuration-openapi-search.yml
+    aid: adyen:adyen-configuration-api
   - name: Adyen Configuration Webhooks API
     description: >-
       Adyen sends webhooks to inform your system about events that occur in your
@@ -1526,7 +2784,7 @@ apis:
     humanURL: https://docs.adyen.com/api-explorer/balanceplatform-webhooks/1/overview
     baseURL: https://api.example.com
     tags:
-      - Configuration
+      - Configurations
       - Webhooks
       - Accounts
     properties:
@@ -1538,6 +2796,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/configuration-webhooks-openapi-search.yml
+    aid: adyen:adyen-configuration-webhooks-api
   - name: Adyen Data Protection API
     description: >-
       Adyen Data Protection API provides a way for you to process [Subject
@@ -1568,16 +2827,18 @@ apis:
             /requestSubjectErasure:
               post:
                 tags:
-                  - General
+                  - Submit
+                  - Subject
+                  - Erasure
+                  - Request.
+                  - Subject
+                  - Erasure
                 summary: Submit a Subject Erasure Request.
-                description: >-
-                  Sends the PSP reference containing the shopper data that
-                  should be deleted.
-                x-sortIndex: 0
-                x-methodName: requestSubjectErasure
+                description: Sends the PSP reference containing the shopper
     overlays:
       - type: APIs.io Search
         url: overlays/data-protection-openapi-search.yml
+    aid: adyen:adyen-data-protection-api
   - name: Adyen Disputes API
     description: >-
       You can use the Disputes API to automate the dispute handling process so
@@ -1606,55 +2867,65 @@ apis:
             /acceptDispute:
               post:
                 tags:
-                  - General
+                  - Accept
+                  - Dispute
+                  - Dispute
                 summary: Accept a dispute
                 description: Accepts a specific dispute.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: acceptDispute
             /defendDispute:
               post:
                 tags:
-                  - General
+                  - Defend
+                  - Dispute
+                  - Dispute
                 summary: Defend a dispute
                 description: Defends a specific dispute.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: defendDispute
             /deleteDisputeDefenseDocument:
               post:
                 tags:
-                  - General
+                  - Delete
+                  - Defense
+                  - Document
+                  - Dispute
+                  - Defense
+                  - Document
                 summary: Delete a defense document
                 description: >-
                   Deletes a specific dispute defense document that was supplied
                   earlier.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: deleteDisputeDefenseDocument
             /retrieveApplicableDefenseReasons:
               post:
                 tags:
-                  - General
+                  - Get
+                  - Applicable
+                  - Defense
+                  - Reasons
+                  - Dispute
+                  - Defense
+                  - Document
+                  - Applicable
+                  - Reasons
                 summary: Get applicable defense reasons
                 description: >-
                   Returns a list of all applicable defense reasons to defend a
                   specific dispute.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: retrieveApplicableDefenseReasons
             /supplyDefenseDocument:
               post:
                 tags:
-                  - General
+                  - Supply
+                  - Defense
+                  - Document
+                  - Dispute
+                  - Defense
+                  - Document
+                  - Applicable
+                  - Reasons
                 summary: Supply a defense document
-                description: Supplies a specific dispute defense document.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: supplyDefenseDocument
+                description: Supplies a specific d
     overlays:
       - type: APIs.io Search
         url: overlays/disputes-openapi-search.yml
+    aid: adyen:adyen-disputes-api
   - name: Adyen Funds API
     description: >-
       The Fund API provides endpoints for managing the funds in the accounts on
@@ -1689,20 +2960,32 @@ apis:
             /accountHolderBalance:
               post:
                 tags:
-                  - General
+                  - Get
+                  - The
+                  - Balances
+                  - Of
+                  - An
+                  - Account
+                  - Holder
+                  - Holder
+                  - Balance
                 summary: Get the balances of an account holder
                 description: >-
                   Returns the account balances of an account holder. An
                   account's balances are organized according by currencies. This
                   mean that an account may have multiple balances: one for each
                   currency.
-                x-groupName: General
-                x-sortIndex: 1
-                x-methodName: accountHolderBalance
             /accountHolderTransactionList:
               post:
                 tags:
-                  - General
+                  - Get
+                  - List
+                  - Of
+                  - Transactions
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
                 summary: Get a list of transactions
                 description: >-
                   Returns a list of transactions for an account holder's
@@ -1712,13 +2995,18 @@ apis:
                   transactions, you must make another call with the 'page' value
                   incremented. Transactions are listed in chronological order,
                   with the most recent transaction first.
-                x-groupName: General
-                x-sortIndex: 2
-                x-methodName: accountHolderTransactionList
             /debitAccountHolder:
               post:
                 tags:
-                  - General
+                  - Send
+                  - Direct
+                  - Debit
+                  - Request
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
                 summary: Send a direct debit request
                 description: >-
                   Sends a direct debit request to an account holder's bank
@@ -1729,36 +3017,69 @@ apis:
                   notification webhook.
 
                    To learn more about direct debits, see [Top up accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/top-up-accounts).
-                x-groupName: General
-                x-sortIndex: 8
-                x-methodName: debitAccountHolder
             /payoutAccountHolder:
               post:
                 tags:
-                  - General
+                  - Pay
+                  - Out
+                  - From
+                  - An
+                  - Account
+                  - To
+                  - The
+                  - Holder
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
                 summary: Pay out from an account to the account holder
                 description: >-
                   Pays out a specified amount from an account to the bank
                   account of account holder.
-                x-groupName: General
-                x-sortIndex: 3
-                x-methodName: payoutAccountHolder
             /refundFundsTransfer:
               post:
                 tags:
-                  - General
+                  - Refund
+                  - Funds
+                  - Transfer
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
+                  - Funds
+                  - Transfer
                 summary: Refund a funds transfer
                 description: >-
                   Refunds funds transferred from one account to another. Both
                   accounts must be in the same platform, but can have different
                   account holders. 
-                x-groupName: General
-                x-sortIndex: 5
-                x-methodName: refundFundsTransfer
             /refundNotPaidOutTransfers:
               post:
                 tags:
-                  - General
+                  - Refund
+                  - All
+                  - Transactions
+                  - Of
+                  - An
+                  - Account
+                  - Since
+                  - The
+                  - Most
+                  - Recent
+                  - Payout
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
+                  - Funds
+                  - Transfer
+                  - Not
+                  - Paid
+                  - Out
+                  - Transfers
                 summary: >-
                   Refund all transactions of an account since the most recent
                   payout
@@ -1770,13 +3091,30 @@ apis:
                   is refunded. The commissions, fees, and payments to other
                   accounts remain in the accounts to which they were sent as
                   designated by the original payment's split details.
-                x-groupName: General
-                x-sortIndex: 7
-                x-methodName: refundNotPaidOutTransfers
             /setupBeneficiary:
               post:
                 tags:
-                  - General
+                  - Designate
+                  - Beneficiary
+                  - Account
+                  - And
+                  - Transfer
+                  - The
+                  - Benefactor's
+                  - Current
+                  - Balance
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
+                  - Funds
+                  - Transfer
+                  - Not
+                  - Paid
+                  - Out
+                  - Transfers
+                  - Beneficiary
                 summary: >-
                   Designate a beneficiary account and transfer the benefactor's
                   current balance
@@ -1788,26 +3126,36 @@ apis:
                   benefactor account are automatically sent to the beneficiary
                   account. A series of benefactor/beneficiaries may not exceed
                   four beneficiaries and may not have a cycle in it.
-                x-groupName: General
-                x-sortIndex: 6
-                x-methodName: setupBeneficiary
             /transferFunds:
               post:
                 tags:
-                  - General
+                  - Transfer
+                  - Funds
+                  - Between
+                  - Platform
+                  - Accounts
+                  - Holder
+                  - Balance
+                  - Transaction
+                  - List
+                  - Account
+                  - Funds
+                  - Transfer
+                  - Not
+                  - Paid
+                  - Out
+                  - Transfers
+                  - Beneficiary
                 summary: Transfer funds between platform accounts
                 description: >-
                   Transfers funds from one account to another account. Both
                   accounts must be in the same platform, but can have different
                   account holders. The transfer must include a transfer code,
-                  which should be determined by the platform, in compliance with
-                  local regulations.
-                x-groupName: General
-                x-sortIndex: 4
-                x-methodName: transferFunds
+                  which should be determined by the platform, in compliance
     overlays:
       - type: APIs.io Search
         url: overlays/funds-openapi-search.yml
+    aid: adyen:adyen-funds-api
   - name: Adyen Hosted Onboarding API
     description: >-
       The Fund API provides endpoints for managing the funds in the accounts on
@@ -1844,31 +3192,41 @@ apis:
             /getOnboardingUrl:
               post:
                 tags:
-                  - Hosted Onboarding Page
+                  - Get
+                  - Link
+                  - To
+                  - Adyen-hosted
+                  - Onboarding
+                  - Page
+                  - Onboarding
+                  - Url
                 summary: Get a link to a Adyen-hosted onboarding page
                 description: >-
                   Returns a link to an Adyen-hosted onboarding page (HOP) that
                   you can send to your account holder. For more information on
                   how to use HOP, refer to [Hosted
                   onboarding](https://docs.adyen.com/marketplaces-and-platforms/classic/collect-verification-details/hosted-onboarding-page). 
-                x-groupName: Hosted Onboarding Page
-                x-sortIndex: 1
-                x-methodName: getOnboardingUrl
             /getPciQuestionnaireUrl:
               post:
                 tags:
-                  - PCI Compliance Questionnaire Page
+                  - Get
+                  - Link
+                  - To
+                  - Compliance
+                  - Questionnaire
+                  - Onboarding
+                  - Url
+                  - Pci
+                  - Questionnaire
                 summary: Get a link to a PCI compliance questionnaire
                 description: >-
                   Returns a link to a PCI compliance questionnaire that you can
                   send to your account holder.
-                   > You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/platforms-for-partners).
-                x-groupName: PCI Compliance Questionnaire Page
-                x-sortIndex: 1
-                x-methodName: getPciQuestionnaireUrl
+                   > You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/
     overlays:
       - type: APIs.io Search
         url: overlays/hosted-onboarding-openapi-search.yml
+    aid: adyen:adyen-hosted-onboarding-api
   - name: Adyen Legal Entity API
     description: >-
       The Legal Entity Management API enables you to manage legal entities that
@@ -1880,7 +3238,7 @@ apis:
     tags: &ref_0
       - Legal
       - Entities
-      - Verification
+      - Verifications
     properties:
       - type: OpenAPI
         url: >-
@@ -1904,7 +3262,10 @@ apis:
             /businessLines:
               post:
                 tags:
-                  - Business lines
+                  - Create
+                  - Business
+                  - Line
+                  - Lines
                 summary: Create a business line
                 description: >+
                   Creates a business line. 
@@ -1920,40 +3281,47 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 12
-                x-methodName: createBusinessLine
             /businessLines/{id}:
               delete:
                 tags:
-                  - Business lines
+                  - Delete
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Delete a business line
                 description: |-
                   Deletes a business line.
 
                    >If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
-                x-addedInVersion: '1'
-                x-sortIndex: 14
-                x-methodName: deleteBusinessLine
               get:
                 tags:
-                  - Business lines
+                  - Get
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Get a business line
                 description: Returns the detail of a business line.
-                x-addedInVersion: '1'
-                x-sortIndex: 13
-                x-methodName: getBusinessLine
               patch:
                 tags:
-                  - Business lines
+                  - Update
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Update a business line
                 description: Updates a business line.
-                x-addedInVersion: '2'
-                x-sortIndex: 15
-                x-methodName: updateBusinessLine
             /documents:
               post:
                 tags:
+                  - Upload
+                  - Document
+                  - For
+                  - Verification
+                  - Checks
+                  - Lines
+                  - Id
                   - Documents
                 summary: Upload a document for verification checks
                 description: |-
@@ -1964,41 +3332,47 @@ apis:
                    You should only upload documents when Adyen requests additional information for the legal entity.
 
                    >You can upload a maximum of 15 pages for photo IDs.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: uploadDocumentForVerificationChecks
             /documents/{id}:
               delete:
                 tags:
+                  - Delete
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Delete a document
                 description: Deletes a document.
-                x-addedInVersion: '1'
-                x-sortIndex: 7
-                x-methodName: deleteDocument
               get:
                 tags:
+                  - Get
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Get a document
                 description: Returns a document.
-                x-addedInVersion: '1'
-                x-sortIndex: 5
-                x-methodName: getDocument
               patch:
                 tags:
+                  - Update
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Update a document
                 description: |-
                   Updates a document.
 
                    >You can upload a maximum of 15 pages for photo IDs.
-                x-addedInVersion: '1'
-                x-sortIndex: 6
-                x-methodName: updateDocument
             /legalEntities:
               post:
                 tags:
-                  - Legal entities
+                  - Create
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Create a legal entity
                 description: >+
                   Creates a legal entity. 
@@ -2014,53 +3388,86 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createLegalEntity
             /legalEntities/{id}:
               get:
                 tags:
-                  - Legal entities
+                  - Get
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Get a legal entity
                 description: Returns a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getLegalEntity
               patch:
                 tags:
-                  - Legal entities
+                  - Update
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Update a legal entity
                 description: |-
                   Updates a legal entity.
 
                    >To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: updateLegalEntity
             /legalEntities/{id}/businessLines:
               get:
                 tags:
-                  - Legal entities
+                  - Get
+                  - All
+                  - Business
+                  - Lines
+                  - Under
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
                 summary: Get all business lines under a legal entity
                 description: Returns the business lines owned by a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getAllBusinessLinesUnderLegalEntity
             /legalEntities/{id}/checkVerificationErrors:
               post:
                 tags:
-                  - Legal entities
+                  - Check
+                  - Legal
+                  - Entity's
+                  - Verification
+                  - Errors
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
                 summary: Check a legal entity's verification errors
                 description: >-
                   Returns the verification errors for a legal entity and its
                   supporting entities.
-                x-addedInVersion: '3'
-                x-sortIndex: 2
-                x-methodName: checkLegalEntitysVerificationErrors
             /legalEntities/{id}/confirmDataReview:
               post:
                 tags:
-                  - Legal entities
+                  - Confirm
+                  - Data
+                  - Review
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
                 summary: Confirm data review
                 description: >-
                   Confirms that your user has reviewed the data for the legal
@@ -2068,13 +3475,29 @@ apis:
                   Adyen that your user reviewed and verified that the data is
                   up-to-date. The endpoint returns the timestamp of when Adyen
                   received the request.
-                x-addedInVersion: '3'
-                x-sortIndex: 22
-                x-methodName: confirmDataReview
             /legalEntities/{id}/onboardingLinks:
               post:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - Link
+                  - To
+                  - An
+                  - Adyen-hosted
+                  - Onboarding
+                  - Page
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
                 summary: Get a link to an Adyen-hosted onboarding page
                 description: >+
                   Returns a link to an Adyen-hosted onboarding page where you
@@ -2084,89 +3507,283 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getLinkToAdyenhostedOnboardingPage
             /legalEntities/{id}/pciQuestionnaires:
               get:
                 tags:
-                  - PCI questionnaires
+                  - Get
+                  - Questionnaire
+                  - Details
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
                 summary: Get PCI questionnaire details
                 description: Get a list of signed PCI questionnaires.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getPciQuestionnaireDetails
             /legalEntities/{id}/pciQuestionnaires/generatePciTemplates:
               post:
                 tags:
-                  - PCI questionnaires
+                  - Generate
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
                 summary: Generate PCI questionnaire
                 description: >-
                   Generates the required PCI questionnaires based on the user's
                   [salesChannel](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/businessLines__reqParam_salesChannels).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: generatePciQuestionnaire
             /legalEntities/{id}/pciQuestionnaires/signPciTemplates:
               post:
                 tags:
-                  - PCI questionnaires
+                  - Sign
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
                 summary: Sign PCI questionnaire
                 description: Signs the required PCI questionnaire.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: signPciQuestionnaire
             /legalEntities/{id}/pciQuestionnaires/{pciid}:
               get:
                 tags:
-                  - PCI questionnaires
+                  - Get
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
                 summary: Get PCI questionnaire
                 description: Returns the signed PCI questionnaire.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getPciQuestionnaire
             /legalEntities/{id}/termsOfService:
               post:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Document
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
                 summary: Get Terms of Service document
                 description: Returns the Terms of Service document for a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getTermsOfServiceDocument
             /legalEntities/{id}/termsOfService/{termsofservicedocumentid}:
               patch:
                 tags:
-                  - Terms of Service
+                  - Accept
+                  - Terms
+                  - Of
+                  - Service
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
                 summary: Accept Terms of Service
                 description: Accepts Terms of Service.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: acceptTermsOfService
             /legalEntities/{id}/termsOfServiceAcceptanceInfos:
               get:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Information
+                  - For
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
                 summary: Get Terms of Service information for a legal entity
                 description: Returns Terms of Service information for a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getTermsOfServiceInformationForLegalEntity
             /legalEntities/{id}/termsOfServiceStatus:
               get:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Status
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
                 summary: Get Terms of Service status
                 description: >-
                   Returns the required types of Terms of Service that need to be
                   accepted by a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getTermsOfServiceStatus
             /themes:
               get:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - List
+                  - Of
+                  - Hosted
+                  - Onboarding
+                  - Page
+                  - Themes
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
                 summary: Get a list of hosted onboarding page themes
                 description: >+
                   Returns a list of hosted onboarding page themes.
@@ -2175,26 +3792,81 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: listHostedOnboardingPageThemes
             /themes/{id}:
               get:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - An
+                  - Onboarding
+                  - Link
+                  - Theme
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
                 summary: Get an onboarding link theme
                 description: >+
                   Returns the details of the theme identified in the path.>If
                   you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getOnboardingLinkTheme
             /transferInstruments:
               post:
                 tags:
-                  - Transfer instruments
+                  - Create
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Create a transfer instrument
                 description: >-
                   Creates a transfer instrument. 
@@ -2210,37 +3882,116 @@ apis:
                   When the transfer instrument passes the verification checks,
                   you can start sending funds from the balance platform to the
                   transfer instrument (such as payouts).
-                x-addedInVersion: '1'
-                x-sortIndex: 8
-                x-methodName: createTransferInstrument
             /transferInstruments/{id}:
               delete:
                 tags:
-                  - Transfer instruments
+                  - Delete
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Delete a transfer instrument
                 description: Deletes a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 11
-                x-methodName: deleteTransferInstrument
               get:
                 tags:
-                  - Transfer instruments
+                  - Get
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Get a transfer instrument
                 description: Returns the details of a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 9
-                x-methodName: getTransferInstrument
               patch:
                 tags:
-                  - Transfer instruments
+                  - Update
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Update a transfer instrument
-                description: Updates a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 10
-                x-methodName: updateTransferInstrument
+                description: Updat
     overlays:
       - type: APIs.io Search
         url: overlays/legal-entity-openapi-search.yml
+    aid: adyen:adyen-legal-entity-api
   - name: Adyen Legal Entity API
     description: >-
       The Legal Entity Management API enables you to manage legal entities that
@@ -2273,7 +4024,10 @@ apis:
             /businessLines:
               post:
                 tags:
-                  - Business lines
+                  - Create
+                  - Business
+                  - Line
+                  - Lines
                 summary: Create a business line
                 description: >+
                   Creates a business line. 
@@ -2289,40 +4043,47 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 12
-                x-methodName: createBusinessLine
             /businessLines/{id}:
               delete:
                 tags:
-                  - Business lines
+                  - Delete
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Delete a business line
                 description: |-
                   Deletes a business line.
 
                    >If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
-                x-addedInVersion: '1'
-                x-sortIndex: 14
-                x-methodName: deleteBusinessLine
               get:
                 tags:
-                  - Business lines
+                  - Get
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Get a business line
                 description: Returns the detail of a business line.
-                x-addedInVersion: '1'
-                x-sortIndex: 13
-                x-methodName: getBusinessLine
               patch:
                 tags:
-                  - Business lines
+                  - Update
+                  - Business
+                  - Line
+                  - Lines
+                  - Id
                 summary: Update a business line
                 description: Updates a business line.
-                x-addedInVersion: '2'
-                x-sortIndex: 15
-                x-methodName: updateBusinessLine
             /documents:
               post:
                 tags:
+                  - Upload
+                  - Document
+                  - For
+                  - Verification
+                  - Checks
+                  - Lines
+                  - Id
                   - Documents
                 summary: Upload a document for verification checks
                 description: |-
@@ -2333,41 +4094,47 @@ apis:
                    You should only upload documents when Adyen requests additional information for the legal entity.
 
                    >You can upload a maximum of 15 pages for photo IDs.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: uploadDocumentForVerificationChecks
             /documents/{id}:
               delete:
                 tags:
+                  - Delete
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Delete a document
                 description: Deletes a document.
-                x-addedInVersion: '1'
-                x-sortIndex: 7
-                x-methodName: deleteDocument
               get:
                 tags:
+                  - Get
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Get a document
                 description: Returns a document.
-                x-addedInVersion: '1'
-                x-sortIndex: 5
-                x-methodName: getDocument
               patch:
                 tags:
+                  - Update
+                  - Document
+                  - Lines
+                  - Id
                   - Documents
                 summary: Update a document
                 description: |-
                   Updates a document.
 
                    >You can upload a maximum of 15 pages for photo IDs.
-                x-addedInVersion: '1'
-                x-sortIndex: 6
-                x-methodName: updateDocument
             /legalEntities:
               post:
                 tags:
-                  - Legal entities
+                  - Create
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Create a legal entity
                 description: >+
                   Creates a legal entity. 
@@ -2383,53 +4150,86 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: createLegalEntity
             /legalEntities/{id}:
               get:
                 tags:
-                  - Legal entities
+                  - Get
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Get a legal entity
                 description: Returns a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getLegalEntity
               patch:
                 tags:
-                  - Legal entities
+                  - Update
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
                 summary: Update a legal entity
                 description: |-
                   Updates a legal entity.
 
                    >To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: updateLegalEntity
             /legalEntities/{id}/businessLines:
               get:
                 tags:
-                  - Legal entities
+                  - Get
+                  - All
+                  - Business
+                  - Lines
+                  - Under
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
                 summary: Get all business lines under a legal entity
                 description: Returns the business lines owned by a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getAllBusinessLinesUnderLegalEntity
             /legalEntities/{id}/checkVerificationErrors:
               post:
                 tags:
-                  - Legal entities
+                  - Check
+                  - Legal
+                  - Entity's
+                  - Verification
+                  - Errors
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
                 summary: Check a legal entity's verification errors
                 description: >-
                   Returns the verification errors for a legal entity and its
                   supporting entities.
-                x-addedInVersion: '3'
-                x-sortIndex: 2
-                x-methodName: checkLegalEntitysVerificationErrors
             /legalEntities/{id}/confirmDataReview:
               post:
                 tags:
-                  - Legal entities
+                  - Confirm
+                  - Data
+                  - Review
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
                 summary: Confirm data review
                 description: >-
                   Confirms that your user has reviewed the data for the legal
@@ -2437,13 +4237,29 @@ apis:
                   Adyen that your user reviewed and verified that the data is
                   up-to-date. The endpoint returns the timestamp of when Adyen
                   received the request.
-                x-addedInVersion: '3'
-                x-sortIndex: 22
-                x-methodName: confirmDataReview
             /legalEntities/{id}/onboardingLinks:
               post:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - Link
+                  - To
+                  - An
+                  - Adyen-hosted
+                  - Onboarding
+                  - Page
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
                 summary: Get a link to an Adyen-hosted onboarding page
                 description: >+
                   Returns a link to an Adyen-hosted onboarding page where you
@@ -2453,89 +4269,283 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getLinkToAdyenhostedOnboardingPage
             /legalEntities/{id}/pciQuestionnaires:
               get:
                 tags:
-                  - PCI questionnaires
+                  - Get
+                  - Questionnaire
+                  - Details
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
                 summary: Get PCI questionnaire details
                 description: Get a list of signed PCI questionnaires.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getPciQuestionnaireDetails
             /legalEntities/{id}/pciQuestionnaires/generatePciTemplates:
               post:
                 tags:
-                  - PCI questionnaires
+                  - Generate
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
                 summary: Generate PCI questionnaire
                 description: >-
                   Generates the required PCI questionnaires based on the user's
                   [salesChannel](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/businessLines__reqParam_salesChannels).
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: generatePciQuestionnaire
             /legalEntities/{id}/pciQuestionnaires/signPciTemplates:
               post:
                 tags:
-                  - PCI questionnaires
+                  - Sign
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
                 summary: Sign PCI questionnaire
                 description: Signs the required PCI questionnaire.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: signPciQuestionnaire
             /legalEntities/{id}/pciQuestionnaires/{pciid}:
               get:
                 tags:
-                  - PCI questionnaires
+                  - Get
+                  - Questionnaire
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
                 summary: Get PCI questionnaire
                 description: Returns the signed PCI questionnaire.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getPciQuestionnaire
             /legalEntities/{id}/termsOfService:
               post:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Document
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
                 summary: Get Terms of Service document
                 description: Returns the Terms of Service document for a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getTermsOfServiceDocument
             /legalEntities/{id}/termsOfService/{termsofservicedocumentid}:
               patch:
                 tags:
-                  - Terms of Service
+                  - Accept
+                  - Terms
+                  - Of
+                  - Service
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
                 summary: Accept Terms of Service
                 description: Accepts Terms of Service.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: acceptTermsOfService
             /legalEntities/{id}/termsOfServiceAcceptanceInfos:
               get:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Information
+                  - For
+                  - Legal
+                  - Entity
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
                 summary: Get Terms of Service information for a legal entity
                 description: Returns Terms of Service information for a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 3
-                x-methodName: getTermsOfServiceInformationForLegalEntity
             /legalEntities/{id}/termsOfServiceStatus:
               get:
                 tags:
-                  - Terms of Service
+                  - Get
+                  - Terms
+                  - Of
+                  - Service
+                  - Status
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
                 summary: Get Terms of Service status
                 description: >-
                   Returns the required types of Terms of Service that need to be
                   accepted by a legal entity.
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getTermsOfServiceStatus
             /themes:
               get:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - List
+                  - Of
+                  - Hosted
+                  - Onboarding
+                  - Page
+                  - Themes
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
                 summary: Get a list of hosted onboarding page themes
                 description: >+
                   Returns a list of hosted onboarding page themes.
@@ -2544,26 +4554,81 @@ apis:
                   >If you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: listHostedOnboardingPageThemes
             /themes/{id}:
               get:
                 tags:
-                  - Hosted Onboarding
+                  - Get
+                  - An
+                  - Onboarding
+                  - Link
+                  - Theme
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
                 summary: Get an onboarding link theme
                 description: >+
                   Returns the details of the theme identified in the path.>If
                   you are using hosted onboarding and just beginning your
                   integration, use v3 for your API requests. Otherwise, use v2.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 4
-                x-methodName: getOnboardingLinkTheme
             /transferInstruments:
               post:
                 tags:
-                  - Transfer instruments
+                  - Create
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Create a transfer instrument
                 description: >-
                   Creates a transfer instrument. 
@@ -2579,37 +4644,116 @@ apis:
                   When the transfer instrument passes the verification checks,
                   you can start sending funds from the balance platform to the
                   transfer instrument (such as payouts).
-                x-addedInVersion: '1'
-                x-sortIndex: 8
-                x-methodName: createTransferInstrument
             /transferInstruments/{id}:
               delete:
                 tags:
-                  - Transfer instruments
+                  - Delete
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Delete a transfer instrument
                 description: Deletes a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 11
-                x-methodName: deleteTransferInstrument
               get:
                 tags:
-                  - Transfer instruments
+                  - Get
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Get a transfer instrument
                 description: Returns the details of a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 9
-                x-methodName: getTransferInstrument
               patch:
                 tags:
-                  - Transfer instruments
+                  - Update
+                  - Transfer
+                  - Instrument
+                  - Lines
+                  - Id
+                  - Documents
+                  - Entities
+                  - Business
+                  - Check
+                  - Verification
+                  - Errors
+                  - Confirm
+                  - Data
+                  - Review
+                  - Onboarding
+                  - Links
+                  - Pci
+                  - Questionnaires
+                  - Generate
+                  - Templates
+                  - Sign
+                  - Pciid
+                  - Terms
+                  - Of
+                  - Service
+                  - Termsofservicedocumentid
+                  - Acceptance
+                  - Infos
+                  - Status
+                  - Themes
+                  - Instruments
                 summary: Update a transfer instrument
-                description: Updates a transfer instrument.
-                x-addedInVersion: '1'
-                x-sortIndex: 10
-                x-methodName: updateTransferInstrument
+                description: Updat
     overlays:
       - type: APIs.io Search
         url: overlays/legal-entity-openapi-search.yml
+    aid: adyen:adyen-legal-entity-api
   - name: Adyen Management API
     description: >-
       Configure and manage your Adyen company and merchant accounts, stores, and
@@ -2666,7 +4810,12 @@ apis:
             /companies:
               get:
                 tags:
-                  - Account - company level
+                  - Get
+                  - List
+                  - Of
+                  - Company
+                  - Accounts
+                  - Companies
                 summary: Get a list of company accounts
                 description: >-
                   Returns the list of company accounts that your API credential
@@ -2680,12 +4829,14 @@ apis:
 
 
                   * Management API—Account read
-                x-sortIndex: 0
-                x-methodName: listCompanyAccounts
             /companies/{companyId}:
               get:
                 tags:
-                  - Account - company level
+                  - Get
+                  - Company
+                  - Account
+                  - Companies
+                  - Id
                 summary: Get a company account
                 description: >-
                   Returns the company account specified in the path. Your API
@@ -2697,12 +4848,18 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Account read
-                x-sortIndex: 0
-                x-methodName: getCompanyAccount
             /companies/{companyId}/androidApps:
               get:
                 tags:
-                  - Android files - company level
+                  - Get
+                  - List
+                  - Of
+                  - Android
+                  - Apps
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
                 summary: Get a list of Android apps
                 description: >-
                   Returns a list of the Android apps that are available for the
@@ -2724,11 +4881,15 @@ apis:
                   * Management API—Terminal actions read
 
                   * Management API—Terminal actions read and write
-                x-sortIndex: 1
-                x-methodName: listAndroidApps
               post:
                 tags:
-                  - Android files - company level
+                  - Upload
+                  - Android
+                  - App
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
                 summary: Upload Android App
                 description: >-
                   Uploads an Android APK file to Adyen.
@@ -2746,13 +4907,16 @@ apis:
                   applications on an Adyen payment terminal, you accept full
                   responsibility and liability for any consequences of
                   uploading, installing, or running any such applications.
-                x-addedInVersion: '3'
-                x-sortIndex: 4
-                x-methodName: uploadAndroidApp
             /companies/{companyId}/androidApps/{id}:
               get:
                 tags:
-                  - Android files - company level
+                  - Get
+                  - Android
+                  - App
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
                 summary: Get Android app
                 description: >-
                   Returns the details of the Android app identified in the
@@ -2770,12 +4934,19 @@ apis:
                   * Management API—Android files read
 
                   * Management API—Android files read and write
-                x-sortIndex: 3
-                x-methodName: getAndroidApp
             /companies/{companyId}/androidCertificates:
               get:
                 tags:
-                  - Android files - company level
+                  - Get
+                  - List
+                  - Of
+                  - Android
+                  - Certificates
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
                 summary: Get a list of Android certificates
                 description: >-
                   Returns a list of the Android certificates that are available
@@ -2799,12 +4970,20 @@ apis:
                   * Management API—Terminal actions read
 
                   * Management API—Terminal actions read and write
-                x-sortIndex: 2
-                x-methodName: listAndroidCertificates
             /companies/{companyId}/apiCredentials:
               get:
                 tags:
-                  - API credentials - company level
+                  - Get
+                  - List
+                  - Of
+                  - Credentials
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
                 summary: Get a list of API credentials
                 description: >-
                   Returns the list of [API
@@ -2818,11 +4997,18 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: listApiCredentials
               post:
                 tags:
-                  - API credentials - company level
+                  - Create
+                  - An
+                  - Credential.
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
                 summary: Create an API credential.
                 description: >-
                   Creates an [API
@@ -2862,12 +5048,20 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: createApiCredential
             /companies/{companyId}/apiCredentials/{apiCredentialId}:
               get:
                 tags:
-                  - API credentials - company level
+                  - Get
+                  - An
+                  - Credential
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
                 summary: Get an API credential
                 description: >-
                   Returns the [API
@@ -2880,11 +5074,19 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: getApiCredential
               patch:
                 tags:
-                  - API credentials - company level
+                  - Update
+                  - An
+                  - Credential.
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
                 summary: Update an API credential.
                 description: >-
                   Changes the API credential's roles, merchant account access,
@@ -2899,12 +5101,24 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: updateApiCredential
             /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins:
               get:
                 tags:
-                  - Allowed origins - company level
+                  - Get
+                  - List
+                  - Of
+                  - Allowed
+                  - Origins
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
                 summary: Get a list of allowed origins
                 description: >-
                   Returns the list of [allowed
@@ -2917,11 +5131,22 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: listAllowedOrigins
               post:
                 tags:
-                  - Allowed origins - company level
+                  - Create
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
                 summary: Create an allowed origin
                 description: >-
                   Adds a new [allowed
@@ -2934,12 +5159,24 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: createAllowedOrigin
             /companies/{companyId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}:
               delete:
                 tags:
-                  - Allowed origins - company level
+                  - Delete
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
                 summary: Delete an allowed origin
                 description: >-
                   Removes the [allowed
@@ -2954,11 +5191,23 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: deleteAllowedOrigin
               get:
                 tags:
-                  - Allowed origins - company level
+                  - Get
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
                 summary: Get an allowed origin
                 description: >-
                   Returns the [allowed
@@ -2971,12 +5220,25 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: getAllowedOrigin
             /companies/{companyId}/apiCredentials/{apiCredentialId}/generateApiKey:
               post:
                 tags:
-                  - API key - company level
+                  - Generate
+                  - New
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
                 summary: Generate new API key
                 description: >-
                   Returns a new API key for the API credential. You can use the
@@ -2989,12 +5251,27 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: generateNewApiKey
             /companies/{companyId}/apiCredentials/{apiCredentialId}/generateClientKey:
               post:
                 tags:
-                  - Client key - company level
+                  - Generate
+                  - New
+                  - Client
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
                 summary: Generate new client key
                 description: >-
                   Returns a new [client
@@ -3009,12 +5286,30 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: generateNewClientKey
             /companies/{companyId}/billingEntities:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - List
+                  - Of
+                  - Billing
+                  - Entities
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
                 summary: Get a list of billing entities
                 description: >-
                   Returns the billing entities of the company identified in the
@@ -3032,12 +5327,31 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 3
-                x-methodName: listBillingEntities
             /companies/{companyId}/merchants:
               get:
                 tags:
-                  - Account - company level
+                  - Get
+                  - List
+                  - Of
+                  - Merchant
+                  - Accounts
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
                 summary: Get a list of merchant accounts
                 description: >-
                   Returns the list of merchant accounts under the company
@@ -3051,12 +5365,33 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Account read
-                x-sortIndex: 0
-                x-methodName: listMerchantAccounts
             /companies/{companyId}/shippingLocations:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - List
+                  - Of
+                  - Shipping
+                  - Locations
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
                 summary: Get a list of shipping locations
                 description: >-
                   Returns the shipping locations for the company identified in
@@ -3074,11 +5409,30 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 4
-                x-methodName: listShippingLocations
               post:
                 tags:
-                  - Terminal orders - company level
+                  - Create
+                  - Shipping
+                  - Location
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
                 summary: Create a shipping location
                 description: >-
                   Creates a shipping location for the company identified in the
@@ -3091,12 +5445,35 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 5
-                x-methodName: createShippingLocation
             /companies/{companyId}/terminalActions:
               get:
                 tags:
-                  - Terminal actions - company level
+                  - Get
+                  - List
+                  - Of
+                  - Terminal
+                  - Actions
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
                 summary: Get a list of terminal actions
                 description: >-
                   Returns the [terminal
@@ -3112,12 +5489,34 @@ apis:
                   * Management API—Terminal actions read
 
                   * Management API—Terminal actions read and write
-                x-sortIndex: 1
-                x-methodName: listTerminalActions
             /companies/{companyId}/terminalActions/{actionId}:
               get:
                 tags:
-                  - Terminal actions - company level
+                  - Get
+                  - Terminal
+                  - Action
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
                 summary: Get terminal action
                 description: >-
                   Returns the details of the [terminal
@@ -3131,12 +5530,36 @@ apis:
                   * Management API—Terminal actions read
 
                   * Management API—Terminal actions read and write
-                x-sortIndex: 2
-                x-methodName: getTerminalAction
             /companies/{companyId}/terminalLogos:
               get:
                 tags:
-                  - Terminal settings - company level
+                  - Get
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
                 summary: Get the terminal logo
                 description: >-
                   Returns the logo that is configured for a specific payment
@@ -3158,11 +5581,35 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 2
-                x-methodName: getTerminalLogo
               patch:
                 tags:
-                  - Terminal settings - company level
+                  - Update
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
                 summary: Update the terminal logo
                 description: >-
                   Updates the logo that is configured for a specific payment
@@ -3186,12 +5633,38 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 4
-                x-methodName: updateTerminalLogo
             /companies/{companyId}/terminalModels:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - List
+                  - Of
+                  - Terminal
+                  - Models
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
                 summary: Get a list of terminal models
                 description: >-
                   Returns a list of payment terminal models that the company
@@ -3209,12 +5682,38 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 1
-                x-methodName: listTerminalModels
             /companies/{companyId}/terminalOrders:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - List
+                  - Of
+                  - Orders
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
                 summary: Get a list of orders
                 description: >-
                   Returns a lists of terminal products orders for the company
@@ -3230,11 +5729,36 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 7
-                x-methodName: listOrders
               post:
                 tags:
-                  - Terminal orders - company level
+                  - Create
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
                 summary: Create an order
                 description: >-
                   Creates an order for payment terminal products for the company
@@ -3252,12 +5776,38 @@ apis:
                   need to [submit a sales
                   order](https://docs.adyen.com/point-of-sale/managing-terminals/order-terminals/#sales-order-steps)
                   in your Customer Area.
-                x-sortIndex: 6
-                x-methodName: createOrder
             /companies/{companyId}/terminalOrders/{orderId}:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
                 summary: Get an order
                 description: >-
                   Returns the details of the terminal products order identified
@@ -3271,11 +5821,37 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 8
-                x-methodName: getOrder
               patch:
                 tags:
-                  - Terminal orders - company level
+                  - Update
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
                 summary: Update an order
                 description: >-
                   Updates the terminal products order identified in the path.
@@ -3297,12 +5873,39 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 9
-                x-methodName: updateOrder
             /companies/{companyId}/terminalOrders/{orderId}/cancel:
               post:
                 tags:
-                  - Terminal orders - company level
+                  - Cancel
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
                 summary: Cancel an order
                 description: >-
                   Cancels the terminal products order identified in the path.
@@ -3320,12 +5923,42 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 10
-                x-methodName: cancelOrder
             /companies/{companyId}/terminalProducts:
               get:
                 tags:
-                  - Terminal orders - company level
+                  - Get
+                  - List
+                  - Of
+                  - Terminal
+                  - Products
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
                 summary: Get a list of terminal products
                 description: >-
                   Returns a country-specific list of payment terminal packages
@@ -3339,12 +5972,41 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 2
-                x-methodName: listTerminalProducts
             /companies/{companyId}/terminalSettings:
               get:
                 tags:
-                  - Terminal settings - company level
+                  - Get
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
                 summary: Get terminal settings
                 description: >-
                   Returns the payment terminal settings that are configured for
@@ -3368,11 +6030,40 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 1
-                x-methodName: getTerminalSettings
               patch:
                 tags:
-                  - Terminal settings - company level
+                  - Update
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
                 summary: Update terminal settings
                 description: >-
                   Updates payment terminal settings for the company identified
@@ -3406,12 +6097,43 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 3
-                x-methodName: updateTerminalSettings
             /companies/{companyId}/users:
               get:
                 tags:
-                  - Users - company level
+                  - Get
+                  - List
+                  - Of
+                  - Users
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
                 summary: Get a list of users
                 description: >
                   Returns the list of users for the `companyId` identified in
@@ -3423,11 +6145,41 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: listUsers
               post:
                 tags:
-                  - Users - company level
+                  - Create
+                  - New
+                  - User
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
                 summary: Create a new user
                 description: >
                   Creates the user for the `companyId` identified in the path.
@@ -3438,12 +6190,43 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: createNewUser
             /companies/{companyId}/users/{userId}:
               get:
                 tags:
-                  - Users - company level
+                  - Get
+                  - User
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
                 summary: Get user details
                 description: >
                   Returns user details for the `userId` and the `companyId`
@@ -3455,11 +6238,42 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: getUserDetails
               patch:
                 tags:
-                  - Users - company level
+                  - Update
+                  - User
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
                 summary: Update user details
                 description: >
                   Updates user details for the `userId` and the `companyId`
@@ -3471,12 +6285,44 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: updateUserDetails
             /companies/{companyId}/webhooks:
               get:
                 tags:
-                  - Webhooks - company level
+                  - List
+                  - All
+                  - Webhooks
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
                 summary: List all webhooks
                 description: >-
                   Lists all webhook configurations for the company account.
@@ -3489,11 +6335,43 @@ apis:
                   * Management API—Webhooks read
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 2
-                x-methodName: listAllWebhooks
               post:
                 tags:
-                  - Webhooks - company level
+                  - Set
+                  - Up
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
                 summary: Set up a webhook
                 description: >-
                   Subscribe to receive webhook notifications about events
@@ -3506,12 +6384,44 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 1
-                x-methodName: setUpWebhook
             /companies/{companyId}/webhooks/{webhookId}:
               delete:
                 tags:
-                  - Webhooks - company level
+                  - Remove
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
                 summary: Remove a webhook
                 description: >-
                   Remove the configuration for the webhook identified in the
@@ -3523,11 +6433,43 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 5
-                x-methodName: removeWebhook
               get:
                 tags:
-                  - Webhooks - company level
+                  - Get
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
                 summary: Get a webhook
                 description: >-
                   Returns the configuration for the webhook identified in the
@@ -3541,11 +6483,43 @@ apis:
                   * Management API—Webhooks read
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 3
-                x-methodName: getWebhook
               patch:
                 tags:
-                  - Webhooks - company level
+                  - Update
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
                 summary: Update a webhook
                 description: >-
                   Make changes to the configuration of the webhook identified in
@@ -3560,12 +6534,46 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 4
-                x-methodName: updateWebhook
             /companies/{companyId}/webhooks/{webhookId}/generateHmac:
               post:
                 tags:
-                  - Webhooks - company level
+                  - Generate
+                  - An
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
                 summary: Generate an HMAC key
                 description: >-
                   Returns an [HMAC key](https://en.wikipedia.org/wiki/HMAC) for
@@ -3583,12 +6591,46 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 6
-                x-methodName: generateHmacKey
             /companies/{companyId}/webhooks/{webhookId}/test:
               post:
                 tags:
-                  - Webhooks - company level
+                  - Test
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
                 summary: Test a webhook
                 description: >-
                   Sends sample notifications to test if the webhook is set up
@@ -3619,12 +6661,48 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 7
-                x-methodName: testWebhook
             /me:
               get:
                 tags:
-                  - My API credential
+                  - Get
+                  - Credential
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Get API credential details
                 description: >-
                   Returns your [API
@@ -3634,12 +6712,48 @@ apis:
 
                   You can make this request with any of the Management API
                   roles.
-                x-sortIndex: 0
-                x-methodName: getApiCredentialDetails
             /me/allowedOrigins:
               get:
                 tags:
-                  - My API credential
+                  - Get
+                  - Allowed
+                  - Origins
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Get allowed origins
                 description: >-
                   Returns the list of [allowed
@@ -3651,11 +6765,47 @@ apis:
 
                   You can make this request with any of the Management API
                   roles.
-                x-sortIndex: 0
-                x-methodName: getAllowedOrigins
               post:
                 tags:
-                  - My API credential
+                  - Add
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Add allowed origin
                 description: >-
                   Adds an allowed origin to the list of [allowed
@@ -3668,12 +6818,48 @@ apis:
 
                   You can make this request with any of the Management API
                   roles.
-                x-sortIndex: 0
-                x-methodName: addAllowedOrigin
             /me/allowedOrigins/{originId}:
               delete:
                 tags:
-                  - My API credential
+                  - Remove
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Remove allowed origin
                 description: >-
                   Removes the [allowed
@@ -3686,11 +6872,48 @@ apis:
 
                   You can make this request with any of the Management API
                   roles.
-                x-sortIndex: 0
-                x-methodName: removeAllowedOrigin
               get:
                 tags:
-                  - My API credential
+                  - Get
+                  - Allowed
+                  - Origin
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Get allowed origin details
                 description: >-
                   Returns the details of the [allowed
@@ -3703,12 +6926,48 @@ apis:
 
                   You can make this request with any of the Management API
                   roles.
-                x-sortIndex: 0
-                x-methodName: getAllowedOriginDetails
             /me/generateClientKey:
               post:
                 tags:
-                  - My API credential
+                  - Generate
+                  - Client
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Generate a client key
                 description: >-
                   Generates a new [client
@@ -3727,12 +6986,50 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: generateClientKey
             /merchants:
               get:
                 tags:
-                  - Account - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Merchant
+                  - Accounts
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Get a list of merchant accounts
                 description: >-
                   Returns the list of merchant accounts that your API credential
@@ -3745,11 +7042,47 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Account read
-                x-sortIndex: 4
-                x-methodName: listMerchantAccounts
               post:
                 tags:
-                  - Account - merchant level
+                  - Create
+                  - Merchant
+                  - Account
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Create a merchant account
                 description: >-
                   Creates a merchant account for the company account specified
@@ -3766,12 +7099,48 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Accounts read and write
-                x-sortIndex: 1
-                x-methodName: createMerchantAccount
             /merchants/{merchantId}:
               get:
                 tags:
-                  - Account - merchant level
+                  - Get
+                  - Merchant
+                  - Account
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
                 summary: Get a merchant account
                 description: >-
                   Returns the merchant account specified in the path. Your API
@@ -3783,12 +7152,51 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Account read
-                x-sortIndex: 3
-                x-methodName: getMerchantAccount
             /merchants/{merchantId}/activate:
               post:
                 tags:
-                  - Account - merchant level
+                  - Request
+                  - To
+                  - Activate
+                  - Merchant
+                  - Account
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Request to activate a merchant account
                 description: >-
                   Sends a request to activate the merchant account identified in
@@ -3811,12 +7219,50 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Accounts read and write
-                x-sortIndex: 2
-                x-methodName: requestToActivateMerchantAccount
             /merchants/{merchantId}/apiCredentials:
               get:
                 tags:
-                  - API credentials - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Credentials
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Get a list of API credentials
                 description: >-
                   Returns the list of [API
@@ -3830,11 +7276,48 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: listApiCredentials
               post:
                 tags:
-                  - API credentials - merchant level
+                  - Create
+                  - An
+                  - Credential
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Create an API credential
                 description: >-
                   Creates an [API
@@ -3873,12 +7356,49 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: createApiCredential
             /merchants/{merchantId}/apiCredentials/{apiCredentialId}:
               get:
                 tags:
-                  - API credentials - merchant level
+                  - Get
+                  - An
+                  - Credential
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Get an API credential
                 description: >-
                   Returns the [API
@@ -3891,11 +7411,48 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: getApiCredential
               patch:
                 tags:
-                  - API credentials - merchant level
+                  - Update
+                  - An
+                  - Credential
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Update an API credential
                 description: >-
                   Changes the API credential's roles, or allowed origins. The
@@ -3909,12 +7466,51 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: updateApiCredential
             /merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins:
               get:
                 tags:
-                  - Allowed origins - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Allowed
+                  - Origins
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Get a list of allowed origins
                 description: >-
                   Returns the list of [allowed
@@ -3927,11 +7523,49 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: listAllowedOrigins
               post:
                 tags:
-                  - Allowed origins - merchant level
+                  - Create
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Create an allowed origin
                 description: >-
                   Adds a new [allowed
@@ -3944,12 +7578,50 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: createAllowedOrigin
             /merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}:
               delete:
                 tags:
-                  - Allowed origins - merchant level
+                  - Delete
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Delete an allowed origin
                 description: >-
                   Removes the [allowed
@@ -3964,11 +7636,49 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: deleteAllowedOrigin
               get:
                 tags:
-                  - Allowed origins - merchant level
+                  - Get
+                  - An
+                  - Allowed
+                  - Origin
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Get an allowed origin
                 description: >-
                   Returns the [allowed
@@ -3981,12 +7691,49 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: getAllowedOrigin
             /merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey:
               post:
                 tags:
-                  - API key - merchant level
+                  - Generate
+                  - New
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Generate new API key
                 description: >-
                   Returns a new API key for the API credential. You can use the
@@ -3999,12 +7746,50 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: generateNewApiKey
             /merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateClientKey:
               post:
                 tags:
-                  - Client key - merchant level
+                  - Generate
+                  - New
+                  - Client
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Generate new client key
                 description: >-
                   Returns a new [client
@@ -4019,12 +7804,51 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—API credentials read and write
-                x-sortIndex: 0
-                x-methodName: generateNewClientKey
             /merchants/{merchantId}/billingEntities:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Billing
+                  - Entities
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
                 summary: Get a list of billing entities
                 description: >-
                   Returns the billing entities of the merchant account
@@ -4042,12 +7866,52 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 3
-                x-methodName: listBillingEntities
             /merchants/{merchantId}/paymentMethodSettings:
               get:
                 tags:
-                  - Payment methods - merchant level
+                  - Get
+                  - All
+                  - Payment
+                  - Methods
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
                 summary: Get all payment methods
                 description: >
                   Returns details for all payment methods of the merchant
@@ -4059,11 +7923,50 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read
-                x-sortIndex: 2
-                x-methodName: getAllPaymentMethods
               post:
                 tags:
-                  - Payment methods - merchant level
+                  - Request
+                  - Payment
+                  - Method
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
                 summary: Request a payment method
                 description: >
                   Sends a request to add a new payment method to the merchant
@@ -4075,12 +7978,52 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read and write
-                x-sortIndex: 1
-                x-methodName: requestPaymentMethod
             /merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}:
               get:
                 tags:
-                  - Payment methods - merchant level
+                  - Get
+                  - Payment
+                  - Method
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
                 summary: Get payment method details
                 description: >
                   Returns details for the merchant account and the payment
@@ -4092,11 +8035,50 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read
-                x-sortIndex: 3
-                x-methodName: getPaymentMethodDetails
               patch:
                 tags:
-                  - Payment methods - merchant level
+                  - Update
+                  - Payment
+                  - Method
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
                 summary: Update a payment method
                 description: >
                   Updates payment method details for the merchant account and
@@ -4108,12 +8090,57 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read and write
-                x-sortIndex: 4
-                x-methodName: updatePaymentMethod
             /merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains:
               post:
                 tags:
-                  - Payment methods - merchant level
+                  - Add
+                  - An
+                  - Apple
+                  - Pay
+                  - Domain
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
                 summary: Add an Apple Pay domain
                 description: >
                   Adds the new domain to the list of Apple Pay domains that are
@@ -4127,12 +8154,57 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read and write
-                x-sortIndex: 5
-                x-methodName: addApplePayDomain
             /merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains:
               get:
                 tags:
-                  - Payment methods - merchant level
+                  - Get
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
                 summary: Get Apple Pay domains
                 description: >
                   Returns all Apple Pay domains that are registered with the
@@ -4146,12 +8218,59 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payment methods read
-                x-sortIndex: 6
-                x-methodName: getApplePayDomains
             /merchants/{merchantId}/payoutSettings:
               get:
                 tags:
-                  - Payout settings - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Payout
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Get a list of payout settings
                 description: >-
                   Returns the list of payout settings for the merchant account
@@ -4168,11 +8287,56 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payout account settings read
-                x-sortIndex: 3
-                x-methodName: listPayoutSettings
               post:
                 tags:
-                  - Payout settings - merchant level
+                  - Add
+                  - Payout
+                  - Setting
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Add a payout setting
                 description: >-
                   Sends a request to add a payout setting for the merchant
@@ -4199,12 +8363,57 @@ apis:
 
 
                   * Management API—Payout account settings read and write
-                x-sortIndex: 1
-                x-methodName: addPayoutSetting
             /merchants/{merchantId}/payoutSettings/{payoutSettingsId}:
               delete:
                 tags:
-                  - Payout settings - merchant level
+                  - Delete
+                  - Payout
+                  - Setting
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Delete a payout setting
                 description: >-
                   Deletes the payout setting identified in the path.
@@ -4221,11 +8430,56 @@ apis:
 
 
                   * Management API—Payout account settings read and write
-                x-sortIndex: 5
-                x-methodName: deletePayoutSetting
               get:
                 tags:
-                  - Payout settings - merchant level
+                  - Get
+                  - Payout
+                  - Setting
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Get a payout setting
                 description: >-
                   Returns the payout setting identified in the path.
@@ -4241,11 +8495,56 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Payout account settings read
-                x-sortIndex: 4
-                x-methodName: getPayoutSetting
               patch:
                 tags:
-                  - Payout settings - merchant level
+                  - Update
+                  - Payout
+                  - Setting
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Update a payout setting
                 description: >-
                   Updates the payout setting identified in the path. You can
@@ -4263,12 +8562,59 @@ apis:
 
 
                   * Management API—Payout account settings read and write
-                x-sortIndex: 2
-                x-methodName: updatePayoutSetting
             /merchants/{merchantId}/shippingLocations:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Shipping
+                  - Locations
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Get a list of shipping locations
                 description: >-
                   Returns the shipping locations for the merchant account
@@ -4286,11 +8632,56 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 4
-                x-methodName: listShippingLocations
               post:
                 tags:
-                  - Terminal orders - merchant level
+                  - Create
+                  - Shipping
+                  - Location
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
                 summary: Create a shipping location
                 description: >-
                   Creates a shipping location for the merchant account
@@ -4303,12 +8694,61 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 5
-                x-methodName: createShippingLocation
             /merchants/{merchantId}/splitConfigurations:
               get:
                 tags:
-                  - Split configuration - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Split
+                  - Configurations
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
                 summary: Get a list of split configurations
                 description: >-
                   Returns the list of split configurations for the merchant
@@ -4320,11 +8760,58 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 3
-                x-methodName: listSplitConfigurations
               post:
                 tags:
-                  - Split configuration - merchant level
+                  - Create
+                  - Split
+                  - Configuration
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
                 summary: Create a split configuration
                 description: >-
                   Creates a split configuration for the merchant account
@@ -4336,12 +8823,60 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 1
-                x-methodName: createSplitConfiguration
             /merchants/{merchantId}/splitConfigurations/{splitConfigurationId}:
               delete:
                 tags:
-                  - Split configuration - merchant level
+                  - Delete
+                  - Split
+                  - Configuration
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
                 summary: Delete a split configuration
                 description: >-
                   Deletes the split configuration specified in the path.
@@ -4352,11 +8887,59 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 8
-                x-methodName: deleteSplitConfiguration
               get:
                 tags:
-                  - Split configuration - merchant level
+                  - Get
+                  - Split
+                  - Configuration
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
                 summary: Get a split configuration
                 description: >-
                   Returns the split configuration specified in the path.
@@ -4367,11 +8950,60 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 4
-                x-methodName: getSplitConfiguration
               patch:
                 tags:
-                  - Split configuration - merchant level
+                  - Update
+                  - Split
+                  - Configuration
+                  - Description
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
                 summary: Update split configuration description
                 description: >-
                   Changes the description of the split configuration specified
@@ -4383,11 +9015,58 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 5
-                x-methodName: updateSplitConfigurationDescription
               post:
                 tags:
-                  - Split configuration - merchant level
+                  - Create
+                  - Rule
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
                 summary: Create a rule
                 description: >-
                   Creates a rule in the split configuration specified in the
@@ -4399,12 +9078,63 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 2
-                x-methodName: createRule
             /merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}:
               delete:
                 tags:
-                  - Split configuration - merchant level
+                  - Delete
+                  - Split
+                  - Configuration
+                  - Rule
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
                 summary: Delete a split configuration rule
                 description: >-
                   Deletes the split configuration rule specified in the path.
@@ -4415,11 +9145,61 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 9
-                x-methodName: deleteSplitConfigurationRule
               patch:
                 tags:
-                  - Split configuration - merchant level
+                  - Update
+                  - Split
+                  - Conditions
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
                 summary: Update split conditions
                 description: >-
                   Changes the conditions of the split configuration rule
@@ -4431,12 +9211,64 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 6
-                x-methodName: updateSplitConditions
             /merchants/{merchantId}/splitConfigurations/{splitConfigurationId}/rules/{ruleId}/splitLogic/{splitLogicId}:
               patch:
                 tags:
-                  - Split configuration - merchant level
+                  - Update
+                  - The
+                  - Split
+                  - Logic
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
                 summary: Update the split logic
                 description: >-
                   Changes the split logic specified in the path.
@@ -4447,12 +9279,65 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API - SplitConfiguration read and write
-                x-sortIndex: 7
-                x-methodName: updateSplitLogic
             /merchants/{merchantId}/stores:
               get:
                 tags:
-                  - Account - store level
+                  - Get
+                  - List
+                  - Of
+                  - Stores
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
                 summary: Get a list of stores
                 description: >-
                   Returns a list of stores for the merchant account identified
@@ -4467,11 +9352,62 @@ apis:
                   * Management API—Stores read
 
                   * Management API—Stores read and write
-                x-sortIndex: 1
-                x-methodName: listStoresByMerchantId
               post:
                 tags:
-                  - Account - store level
+                  - Create
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
                 summary: Create a store
                 description: >-
                   Creates a store for the merchant account identified in the
@@ -4483,12 +9419,66 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Stores read and write
-                x-sortIndex: 0
-                x-methodName: createStoreByMerchantId
             /merchants/{merchantId}/stores/{reference}/terminalLogos:
               get:
                 tags:
-                  - Terminal settings - store level
+                  - Get
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
                 summary: Get the terminal logo
                 description: >-
                   Returns the logo that is configured for a specific payment
@@ -4509,11 +9499,65 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 2
-                x-methodName: getTerminalLogo
               patch:
                 tags:
-                  - Terminal settings - store level
+                  - Update
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
                 summary: Update the terminal logo
                 description: >-
                   Updates the logo that is configured for a specific payment
@@ -4537,12 +9581,65 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 4
-                x-methodName: updateTerminalLogo
             /merchants/{merchantId}/stores/{reference}/terminalSettings:
               get:
                 tags:
-                  - Terminal settings - store level
+                  - Get
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
                 summary: Get terminal settings
                 description: >-
                   Returns the payment terminal settings that are configured for
@@ -4565,11 +9662,64 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 1
-                x-methodName: getTerminalSettings
               patch:
                 tags:
-                  - Terminal settings - store level
+                  - Update
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
                 summary: Update terminal settings
                 description: >-
                   Updates payment terminal settings for the store identified in
@@ -4603,12 +9753,65 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 3
-                x-methodName: updateTerminalSettings
             /merchants/{merchantId}/stores/{storeId}:
               get:
                 tags:
-                  - Account - store level
+                  - Get
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a store
                 description: >-
                   Returns the details of the store identified in the path.
@@ -4621,11 +9824,64 @@ apis:
                   * Management API—Stores read
 
                   * Management API—Stores read and write
-                x-sortIndex: 2
-                x-methodName: getStore
               patch:
                 tags:
-                  - Account - store level
+                  - Update
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update a store
                 description: >-
                   Updates the store identified in the path. You can only update
@@ -4637,12 +9893,67 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Stores read and write
-                x-sortIndex: 3
-                x-methodName: updateStore
             /merchants/{merchantId}/terminalLogos:
               get:
                 tags:
-                  - Terminal settings - merchant level
+                  - Get
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get the terminal logo
                 description: >-
                   Returns the logo that is configured for a specific payment
@@ -4664,11 +9975,66 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 2
-                x-methodName: getTerminalLogo
               patch:
                 tags:
-                  - Terminal settings - merchant level
+                  - Update
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update the terminal logo
                 description: >-
                   Updates the logo for a specific payment terminal model at the
@@ -4692,12 +10058,68 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 4
-                x-methodName: updateTerminalLogo
             /merchants/{merchantId}/terminalModels:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Terminal
+                  - Models
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a list of terminal models
                 description: >-
                   Returns the payment terminal models that merchant account
@@ -4714,12 +10136,67 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 1
-                x-methodName: listTerminalModels
             /merchants/{merchantId}/terminalOrders:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Orders
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a list of orders
                 description: >-
                   Returns a list of terminal products orders for the merchant
@@ -4733,11 +10210,65 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 7
-                x-methodName: listOrders
               post:
                 tags:
-                  - Terminal orders - merchant level
+                  - Create
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Create an order
                 description: >-
                   Creates an order for payment terminal products for the
@@ -4755,12 +10286,66 @@ apis:
                   need to [submit a sales
                   order](https://docs.adyen.com/point-of-sale/managing-terminals/order-terminals/#sales-order-steps)
                   in your Customer Area.
-                x-sortIndex: 6
-                x-methodName: createOrder
             /merchants/{merchantId}/terminalOrders/{orderId}:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get an order
                 description: >-
                   Returns the details of the terminal products order identified
@@ -4774,11 +10359,65 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 8
-                x-methodName: getOrder
               patch:
                 tags:
-                  - Terminal orders - merchant level
+                  - Update
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update an order
                 description: >-
                   Updates the terminal products order identified in the path.
@@ -4800,12 +10439,66 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 9
-                x-methodName: updateOrder
             /merchants/{merchantId}/terminalOrders/{orderId}/cancel:
               post:
                 tags:
-                  - Terminal orders - merchant level
+                  - Cancel
+                  - An
+                  - Order
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Cancel an order
                 description: >-
                   Cancels the terminal products order identified in the path.
@@ -4823,12 +10516,68 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 10
-                x-methodName: cancelOrder
             /merchants/{merchantId}/terminalProducts:
               get:
                 tags:
-                  - Terminal orders - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Terminal
+                  - Products
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a list of terminal products
                 description: >-
                   Returns a country-specific list of payment terminal packages
@@ -4843,12 +10592,66 @@ apis:
                   * Management API—Terminal ordering read
 
                   * Management API—Terminal ordering read and write
-                x-sortIndex: 2
-                x-methodName: listTerminalProducts
             /merchants/{merchantId}/terminalSettings:
               get:
                 tags:
-                  - Terminal settings - merchant level
+                  - Get
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get terminal settings
                 description: >-
                   Returns the payment terminal settings that are configured for
@@ -4865,11 +10668,65 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 1
-                x-methodName: getTerminalSettings
               patch:
                 tags:
-                  - Terminal settings - merchant level
+                  - Update
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update terminal settings
                 description: >-
                   Updates payment terminal settings for the merchant account
@@ -4898,12 +10755,67 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 3
-                x-methodName: updateTerminalSettings
             /merchants/{merchantId}/users:
               get:
                 tags:
-                  - Users - merchant level
+                  - Get
+                  - List
+                  - Of
+                  - Users
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a list of users
                 description: >
                   Returns a list of users associated with the `merchantId`
@@ -4915,11 +10827,65 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: listUsers
               post:
                 tags:
-                  - Users - merchant level
+                  - Create
+                  - New
+                  - User
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Create a new user
                 description: >
                   Creates a user for the `merchantId` specified in the path.
@@ -4930,12 +10896,66 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: createNewUser
             /merchants/{merchantId}/users/{userId}:
               get:
                 tags:
-                  - Users - merchant level
+                  - Get
+                  - User
+                  - Details
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get user details
                 description: >
                   Returns user details for the `userId` and the `merchantId`
@@ -4947,11 +10967,64 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: getUserDetails
               patch:
                 tags:
-                  - Users - merchant level
+                  - Update
+                  - User
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update a user
                 description: >
                   Updates user details for the `userId` and the `merchantId`
@@ -4963,12 +11036,66 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Users read and write
-                x-sortIndex: 0
-                x-methodName: updateUser
             /merchants/{merchantId}/webhooks:
               get:
                 tags:
-                  - Webhooks - merchant level
+                  - List
+                  - All
+                  - Webhooks
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: List all webhooks
                 description: >-
                   Lists all webhook configurations for the merchant account.
@@ -4981,11 +11108,65 @@ apis:
                   * Management API—Webhooks read
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 2
-                x-methodName: listAllWebhooks
               post:
                 tags:
-                  - Webhooks - merchant level
+                  - Set
+                  - Up
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Set up a webhook
                 description: >-
                   Subscribe to receive webhook notifications about events
@@ -4998,12 +11179,65 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 1
-                x-methodName: setUpWebhook
             /merchants/{merchantId}/webhooks/{webhookId}:
               delete:
                 tags:
-                  - Webhooks - merchant level
+                  - Remove
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Remove a webhook
                 description: >-
                   Remove the configuration for the webhook identified in the
@@ -5015,11 +11249,64 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 5
-                x-methodName: removeWebhook
               get:
                 tags:
-                  - Webhooks - merchant level
+                  - Get
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a webhook
                 description: >-
                   Returns the configuration for the webhook identified in the
@@ -5033,11 +11320,64 @@ apis:
                   * Management API—Webhooks read
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 3
-                x-methodName: getWebhook
               patch:
                 tags:
-                  - Webhooks - merchant level
+                  - Update
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update a webhook
                 description: >-
                   Make changes to the configuration of the webhook identified in
@@ -5052,12 +11392,66 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 4
-                x-methodName: updateWebhook
             /merchants/{merchantId}/webhooks/{webhookId}/generateHmac:
               post:
                 tags:
-                  - Webhooks - merchant level
+                  - Generate
+                  - An
+                  - Key
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Generate an HMAC key
                 description: >-
                   Returns an [HMAC key](https://en.wikipedia.org/wiki/HMAC) for
@@ -5075,12 +11469,65 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 6
-                x-methodName: generateHmacKey
             /merchants/{merchantId}/webhooks/{webhookId}/test:
               post:
                 tags:
-                  - Webhooks - merchant level
+                  - Test
+                  - Webhook
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Test a webhook
                 description: >-
                   Sends sample notifications to test if the webhook is set up
@@ -5104,12 +11551,67 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Webhooks read and write
-                x-sortIndex: 7
-                x-methodName: testWebhook
             /stores:
               get:
                 tags:
-                  - Account - store level
+                  - Get
+                  - List
+                  - Of
+                  - Stores
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a list of stores
                 description: >-
                   Returns a list of stores. The list is grouped into pages as
@@ -5123,11 +11625,64 @@ apis:
                   * Management API—Stores read
 
                   * Management API—Stores read and write
-                x-sortIndex: 4
-                x-methodName: listStores
               post:
                 tags:
-                  - Account - store level
+                  - Create
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Create a store
                 description: >-
                   Creates a store for the merchant account specified in the
@@ -5139,12 +11694,65 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Stores read and write
-                x-sortIndex: 5
-                x-methodName: createStore
             /stores/{storeId}:
               get:
                 tags:
-                  - Account - store level
+                  - Get
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get a store
                 description: >-
                   Returns the details of the store identified in the path.
@@ -5157,11 +11765,64 @@ apis:
                   * Management API—Stores read
 
                   * Management API—Stores read and write
-                x-sortIndex: 6
-                x-methodName: getStoreById
               patch:
                 tags:
-                  - Account - store level
+                  - Update
+                  - Store
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update a store
                 description: >-
                   Updates the store identified in the path.
@@ -5174,12 +11835,67 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Stores read and write
-                x-sortIndex: 7
-                x-methodName: updateStoreById
             /stores/{storeId}/terminalLogos:
               get:
                 tags:
-                  - Terminal settings - store level
+                  - Get
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get the terminal logo
                 description: >-
                   Returns the logo that is configured for a specific payment
@@ -5200,11 +11916,66 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 2
-                x-methodName: getTerminalLogoByStoreId
               patch:
                 tags:
-                  - Terminal settings - store level
+                  - Update
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update the terminal logo
                 description: >-
                   Updates the logo that is configured for a specific payment
@@ -5228,12 +11999,66 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 4
-                x-methodName: updateTerminalLogoByStoreId
             /stores/{storeId}/terminalSettings:
               get:
                 tags:
-                  - Terminal settings - store level
+                  - Get
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Get terminal settings
                 description: >-
                   Returns the payment terminal settings that are configured for
@@ -5256,11 +12081,65 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 1
-                x-methodName: getTerminalSettingsByStoreId
               patch:
                 tags:
-                  - Terminal settings - store level
+                  - Update
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
                 summary: Update terminal settings
                 description: >-
                   Updates payment terminal settings for the store identified in
@@ -5294,12 +12173,68 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 3
-                x-methodName: updateTerminalSettingsByStoreId
             /terminals:
               get:
                 tags:
-                  - Terminals - terminal level
+                  - Get
+                  - List
+                  - Of
+                  - Terminals
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
                 summary: Get a list of terminals
                 description: >-
                   Returns the payment terminals that the API credential has
@@ -5310,12 +12245,67 @@ apis:
                   [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API — Terminal actions read
-                x-sortIndex: 1
-                x-methodName: listTerminals
             /terminals/scheduleActions:
               post:
                 tags:
-                  - Terminal actions - terminal level
+                  - Create
+                  - Terminal
+                  - Action
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
                 summary: Create a terminal action
                 description: >-
                   Schedules a [terminal
@@ -5344,12 +12334,67 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal actions read and write
-                x-sortIndex: 1
-                x-methodName: createTerminalAction
             /terminals/{terminalId}/reassign:
               post:
                 tags:
-                  - Terminals - terminal level
+                  - Reassign
+                  - Terminal
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
+                  - Reassign
                 summary: Reassign a terminal
                 description: >-
                   Reassigns a payment terminal to a company account, merchant
@@ -5361,13 +12406,69 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Assign Terminal
-                x-addedInVersion: '3'
-                x-sortIndex: 2
-                x-methodName: reassignTerminal
             /terminals/{terminalId}/terminalLogos:
               get:
                 tags:
-                  - Terminal settings - terminal level
+                  - Get
+                  - The
+                  - Terminal
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
+                  - Reassign
                 summary: Get the terminal logo
                 description: >-
                   Returns the logo that is configured for the payment terminal
@@ -5384,11 +12485,67 @@ apis:
                   * Management API—Terminal settings read
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 4
-                x-methodName: getTerminalLogo
               patch:
                 tags:
-                  - Terminal settings - terminal level
+                  - Update
+                  - The
+                  - Logo
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
+                  - Reassign
                 summary: Update the logo
                 description: >-
                   Updates the logo for the payment terminal identified in the
@@ -5408,12 +12565,68 @@ apis:
                   [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 
                   * Management API—Terminal settings read and write
-                x-sortIndex: 6
-                x-methodName: updateLogo
             /terminals/{terminalId}/terminalSettings:
               get:
                 tags:
-                  - Terminal settings - terminal level
+                  - Get
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
+                  - Reassign
                 summary: Get terminal settings
                 description: >-
                   Returns the settings that are configured for the payment
@@ -5434,11 +12647,67 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 3
-                x-methodName: getTerminalSettings
               patch:
                 tags:
-                  - Terminal settings - terminal level
+                  - Update
+                  - Terminal
+                  - Settings
+                  - Companies
+                  - Id
+                  - Android
+                  - Apps
+                  - Certificates
+                  - Api
+                  - Credentials
+                  - Credential
+                  - Allowed
+                  - Origins
+                  - Origin
+                  - Generate
+                  - Key
+                  - Client
+                  - Billing
+                  - Entities
+                  - Merchants
+                  - Shipping
+                  - Locations
+                  - Terminal
+                  - Actions
+                  - Action
+                  - Logos
+                  - Models
+                  - Orders
+                  - Order
+                  - Cancel
+                  - Products
+                  - Settings
+                  - Users
+                  - User
+                  - Webhooks
+                  - Webhook
+                  - Hmac
+                  - Test
+                  - Me
+                  - Activate
+                  - Payment
+                  - Method
+                  - Add
+                  - Apple
+                  - Pay
+                  - Domains
+                  - Get
+                  - Payout
+                  - Split
+                  - Configurations
+                  - Configuration
+                  - Rules
+                  - Rule
+                  - Logic
+                  - Stores
+                  - Reference
+                  - Store
+                  - Terminals
+                  - Reassign
                 summary: Update terminal settings
                 description: >-
                   Updates the settings that are configured for the payment
@@ -5469,12 +12738,11 @@ apis:
                   settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings),
                   your API credential must have the following role:
 
-                  * Management API—Terminal settings Advanced read and write
-                x-sortIndex: 5
-                x-methodName: updateTerminalSettings
+                  * Management API—Terminal settings
     overlays:
       - type: APIs.io Search
         url: overlays/management-openapi-search.yml
+    aid: adyen:adyen-management-api
   - name: Adyen Management Webhooks API
     description: >-
       Adyen uses webhooks to inform your system about events that happen with
@@ -5501,6 +12769,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/management-webhooks-openapi-search.yml
+    aid: adyen:adyen-management-webhooks-api
   - name: Adyen Notification Configuration API
     description: >-
       This API is used for the classic integration. If you are just starting
@@ -5536,7 +12805,11 @@ apis:
             /createNotificationConfiguration:
               post:
                 tags:
-                  - General
+                  - Subscribe
+                  - To
+                  - Notifications
+                  - Notification
+                  - Configuration
                 summary: Subscribe to notifications
                 description: >-
                   Creates a subscription to notifications informing you of
@@ -5549,74 +12822,90 @@ apis:
                   endpoint(s). A marketplace may have multiple endpoints if
                   desired; an event notification may be sent to as many or as
                   few different endpoints as configured.
-                x-groupName: General
-                x-sortIndex: 1
-                x-methodName: createNotificationConfiguration
             /deleteNotificationConfigurations:
               post:
                 tags:
-                  - General
+                  - Delete
+                  - Notification
+                  - Subscription
+                  - Configuration
+                  - Notification
+                  - Configuration
+                  - Configurations
                 summary: Delete a notification subscription configuration
                 description: >-
                   Deletes an existing notification subscription configuration.
                   After the subscription is deleted, no further event
                   notifications will be sent to the URL defined in the
                   subscription.
-                x-groupName: General
-                x-sortIndex: 6
-                x-methodName: deleteNotificationConfigurations
             /getNotificationConfiguration:
               post:
                 tags:
-                  - General
+                  - Get
+                  - Notification
+                  - Subscription
+                  - Configuration
+                  - Notification
+                  - Configuration
+                  - Configurations
                 summary: Get a notification subscription configuration
                 description: >-
                   Returns the details of the configuration of a notification
                   subscription.
-                x-groupName: General
-                x-sortIndex: 2
-                x-methodName: getNotificationConfiguration
             /getNotificationConfigurationList:
               post:
                 tags:
-                  - General
+                  - Get
+                  - List
+                  - Of
+                  - Notification
+                  - Subscription
+                  - Configurations
+                  - Notification
+                  - Configuration
+                  - Configurations
+                  - List
                 summary: Get a list of notification subscription configurations
                 description: >-
                   Returns the details of the configurations of all of the
                   notification subscriptions in the platform of the executing
                   user.
-                x-groupName: General
-                x-sortIndex: 3
-                x-methodName: getNotificationConfigurationList
             /testNotificationConfiguration:
               post:
                 tags:
-                  - General
+                  - Test
+                  - Notification
+                  - Configuration
+                  - Notification
+                  - Configuration
+                  - Configurations
+                  - List
                 summary: Test a notification configuration
                 description: >-
                   Tests an existing notification subscription configuration. For
                   each event type specified, a test notification will be
                   generated and sent to the URL configured in the subscription
                   specified.
-                x-groupName: General
-                x-sortIndex: 4
-                x-methodName: testNotificationConfiguration
             /updateNotificationConfiguration:
               post:
                 tags:
-                  - General
+                  - Update
+                  - Notification
+                  - Subscription
+                  - Configuration
+                  - Notification
+                  - Configuration
+                  - Configurations
+                  - List
                 summary: Update a notification subscription configuration
                 description: >-
                   Updates an existing notification subscription configuration.
                   If you are updating the event types, you must provide all
-                  event types, otherwise the previous event type configuration
-                  will be overwritten.
-                x-groupName: General
-                x-sortIndex: 5
-                x-methodName: updateNotificationConfiguration
+                  event types, otherwise the previous event type configurat
     overlays:
       - type: APIs.io Search
         url: overlays/notification-configurations-openapi-search.yml
+    aid: adyen:adyen-notification-configuration-api
   - name: Adyen Notification Webhooks API
     description: >-
       Adyen sends notifications through webhooks to inform your system about
@@ -5643,6 +12932,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/notification-webhooks-openapi-search.yml
+    aid: adyen:adyen-notification-webhooks-api
   - name: Adyen Notifications API
     description: >-
       The Notification API sends notifications to the endpoints specified in a
@@ -5664,6 +12954,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/notifications-openapi-search.yml
+    aid: adyen:adyen-notifications-api
   - name: Adyen Payments API
     description: >-
       A set of API endpoints that allow you to initiate, settle, and modify
@@ -5692,7 +12983,11 @@ apis:
             /adjustAuthorisation:
               post:
                 tags:
-                  - Modifications
+                  - Change
+                  - The
+                  - Authorised
+                  - Amount
+                  - Authorisation
                 summary: Change the authorised amount
                 description: >-
                   Allows you to increase or decrease the authorised amount after
@@ -5718,13 +13013,14 @@ apis:
                   > * [Synchronous
                   adjustments](https://docs.adyen.com/online-payments/adjust-authorisation#asynchronous-or-synchronous-adjustment),
                   use this endpoint.
-                x-addedInVersion: '30'
-                x-sortIndex: 6
-                x-methodName: adjustAuthorisation
             /authorise:
               post:
                 tags:
-                  - Payments
+                  - Create
+                  - An
+                  - Authorisation
+                  - Authorisation
+                  - Authorise
                 summary: Create an authorisation
                 description: >-
                   Creates a payment with a unique reference (`pspReference`) and
@@ -5739,12 +13035,14 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments)
                   endpoint under Checkout API instead.
-                x-sortIndex: 1
-                x-methodName: authorise
             /authorise3d:
               post:
                 tags:
-                  - Payments
+                  - Complete
+                  - Authorisation
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
                 summary: Complete a 3DS authorisation
                 description: >-
                   For an authenticated 3D Secure session, completes the payment
@@ -5759,12 +13057,16 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments/details`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments/details)
                   endpoint under Checkout API instead.
-                x-sortIndex: 2
-                x-methodName: authorise3d
             /authorise3ds2:
               post:
                 tags:
-                  - Payments
+                  - Complete
+                  - S2
+                  - Authorisation
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
                 summary: Complete a 3DS2 authorisation
                 description: >-
                   For an authenticated 3D Secure 2 session, completes the
@@ -5778,13 +13080,17 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments/details`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments/details)
                   endpoint under Checkout API instead.
-                x-addedInVersion: '37'
-                x-sortIndex: 3
-                x-methodName: authorise3ds2
             /cancel:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - An
+                  - Authorisation
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
                 summary: Cancel an authorisation
                 description: >-
                   Cancels the authorisation hold on a payment, returning a
@@ -5803,12 +13109,20 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments/{paymentPspReference}/cancels`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments/{paymentPspReference}/cancels)
                   endpoint under Checkout API instead.
-                x-sortIndex: 2
-                x-methodName: cancel
             /cancelOrRefund:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Payment
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
                 summary: Cancel or refund a payment
                 description: >-
                   Cancels a payment if it has not been captured yet, or refunds
@@ -5833,12 +13147,20 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments/{paymentPspReference}/reversals`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments/{paymentPspReference}/reversals)
                   endpoint under Checkout API instead.
-                x-sortIndex: 4
-                x-methodName: cancelOrRefund
             /capture:
               post:
                 tags:
-                  - Modifications
+                  - Capture
+                  - An
+                  - Authorisation
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
                 summary: Capture an authorisation
                 description: >+
                   Captures the authorisation hold on a payment, returning a
@@ -5866,12 +13188,20 @@ apis:
                   [`/payments/{paymentPspReference}/captures`](https://docs.adyen.com/api-explorer/#/CheckoutService/v67/post/payments/{paymentPspReference}/captures)
                   endpoint on Checkout API instead.
 
-                x-sortIndex: 1
-                x-methodName: capture
             /donate:
               post:
                 tags:
-                  - Modifications
+                  - Create
+                  - Donation
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
                 summary: Create a donation
                 description: >-
                   Schedules a new payment to be created (including a new
@@ -5885,24 +13215,45 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/donations`](https://docs.adyen.com/api-explorer/#/CheckoutService/latest/post/donations)
                   endpoint under Checkout API instead.
-                x-addedInVersion: '40'
-                x-sortIndex: 6
-                x-methodName: donate
             /getAuthenticationResult:
               post:
                 tags:
-                  - Payments
+                  - Get
+                  - The
+                  - Authentication
+                  - Result
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
+                  - Authentication
+                  - Result
                 summary: Get the 3DS authentication result
                 description: >-
                   Return the authentication result after doing a 3D Secure
                   authentication only.
-                x-addedInVersion: '51'
-                x-sortIndex: 4
-                x-methodName: getAuthenticationResult
             /refund:
               post:
                 tags:
-                  - Modifications
+                  - Refund
+                  - Captured
+                  - Payment
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
+                  - Authentication
+                  - Result
                 summary: Refund a captured payment
                 description: >-
                   Refunds a payment that has previously been captured, returning
@@ -5931,23 +13282,49 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/payments/{paymentPspReference}/refunds`](https://docs.adyen.com/api-explorer/#/CheckoutService/payments/{paymentPspReference}/refunds)
                   endpoint under Checkout API instead.
-                x-sortIndex: 3
-                x-methodName: refund
             /retrieve3ds2Result:
               post:
                 tags:
-                  - Payments
+                  - Get
+                  - The
+                  - S2
+                  - Authentication
+                  - Result
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
+                  - Authentication
+                  - Result
                 summary: Get the 3DS2 authentication result
                 description: >-
                   Retrieves the `threeDS2Result` after doing a 3D Secure 2
                   authentication only.
-                x-addedInVersion: '40'
-                x-sortIndex: 4
-                x-methodName: retrieve3ds2Result
             /technicalCancel:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - An
+                  - Authorisation
+                  - Using
+                  - Your
+                  - Reference
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
+                  - Authentication
+                  - Result
                 summary: Cancel an authorisation using your reference
                 description: >-
                   This endpoint allows you to cancel a payment if you do not
@@ -5969,13 +13346,25 @@ apis:
                   integration](https://docs.adyen.com/online-payments), use the
                   [`/cancels`](https://docs.adyen.com/api-explorer/#/CheckoutService/cancels)
                   endpoint under Checkout API instead.
-                x-addedInVersion: '30'
-                x-sortIndex: 5
-                x-methodName: technicalCancel
             /voidPendingRefund:
               post:
                 tags:
-                  - Modifications
+                  - Cancel
+                  - An
+                  - In-person
+                  - Refund
+                  - Authorisation
+                  - Authorise
+                  - Authorise3d
+                  - Authorise3ds2
+                  - Cancel
+                  - Or
+                  - Refund
+                  - Capture
+                  - Donate
+                  - Authentication
+                  - Result
+                  - Pending
                 summary: Cancel an in-person refund
                 description: >-
                   This endpoint allows you to cancel an unreferenced refund
@@ -5989,13 +13378,11 @@ apis:
 
 
                   For more information, refer to [Cancel an unreferenced
-                  refund](https://docs.adyen.com/point-of-sale/refund-payment/cancel-unreferenced).
-                x-addedInVersion: '25'
-                x-sortIndex: 7
-                x-methodName: voidPendingRefund
+                  refund](https://docs.adyen.com/point-of-sale/refund-payme
     overlays:
       - type: APIs.io Search
         url: overlays/payments-openapi-search.yml
+    aid: adyen:adyen-payments-api
   - name: Adyen Payouts API
     description: >-
       A set of API endpoints that allow you to store payout details, confirm, or
@@ -6024,19 +13411,22 @@ apis:
             /confirmThirdParty:
               post:
                 tags:
-                  - Reviewing
+                  - Confirm
+                  - Payout
+                  - Third
+                  - Party
                 summary: Confirm a payout
                 description: |-
                   Confirms a previously submitted payout.
 
                   To cancel a payout, use the `/declineThirdParty` endpoint.
-                x-addedInVersion: '10'
-                x-sortIndex: 1
-                x-methodName: confirmThirdParty
             /declineThirdParty:
               post:
                 tags:
-                  - Reviewing
+                  - Cancel
+                  - Payout
+                  - Third
+                  - Party
                 summary: Cancel a payout
                 description: >-
                   Cancels a previously submitted payout.
@@ -6044,13 +13434,17 @@ apis:
 
                   To confirm and send a payout, use the `/confirmThirdParty`
                   endpoint.
-                x-addedInVersion: '10'
-                x-sortIndex: 2
-                x-methodName: declineThirdParty
             /payout:
               post:
                 tags:
-                  - Instant payouts
+                  - Make
+                  - An
+                  - Instant
+                  - Card
+                  - Payout
+                  - Third
+                  - Party
+                  - Payout
                 summary: Make an instant card payout
                 description: >-
                   With this call, you can pay out to your customers, and funds
@@ -6058,24 +13452,35 @@ apis:
                   bank account (this is dependent on whether the issuer supports
                   this functionality). Instant card payouts are only supported
                   for Visa and Mastercard cards.
-                x-addedInVersion: '11'
-                x-sortIndex: 1
-                x-methodName: payout
             /storeDetail:
               post:
                 tags:
-                  - Initialization
+                  - Store
+                  - Payout
+                  - Details
+                  - Third
+                  - Party
+                  - Payout
+                  - Detail
                 summary: Store payout details
                 description: >-
                   Stores payment details under the `PAYOUT` recurring contract.
                   These payment details can be used later to submit a payout via
                   the `/submitThirdParty` call.
-                x-sortIndex: 2
-                x-methodName: storeDetail
             /storeDetailAndSubmitThirdParty:
               post:
                 tags:
-                  - Initialization
+                  - Store
+                  - Details
+                  - And
+                  - Submit
+                  - Payout
+                  - Third
+                  - Party
+                  - Payout
+                  - Detail
+                  - And
+                  - Submit
                 summary: Store details and submit a payout
                 description: >-
                   Submits a payout and stores its details for subsequent
@@ -6085,13 +13490,17 @@ apis:
                   The submitted payout must be confirmed or declined either by a
                   reviewer or via `/confirmThirdParty` or `/declineThirdParty`
                   calls.
-                x-addedInVersion: '10'
-                x-sortIndex: 1
-                x-methodName: storeDetailAndSubmitThirdParty
             /submitThirdParty:
               post:
                 tags:
-                  - Initialization
+                  - Submit
+                  - Payout
+                  - Third
+                  - Party
+                  - Payout
+                  - Detail
+                  - And
+                  - Submit
                 summary: Submit a payout
                 description: >-
                   Submits a payout using the previously stored payment details.
@@ -6099,14 +13508,11 @@ apis:
 
 
                   The submitted payout must be confirmed or declined either by a
-                  reviewer or via `/confirmThirdParty` or `/declineThirdParty`
-                  calls.
-                x-addedInVersion: '10'
-                x-sortIndex: 3
-                x-methodName: submitThirdParty
+                  reviewer or via `/confirmThirdParty` or `/d
     overlays:
       - type: APIs.io Search
         url: overlays/payouts-openapi-search.yml
+    aid: adyen:adyen-payouts-api
   - name: Adyen POS Terminal API
     description: >-
       This API provides endpoints for managing your point-of-sale (POS) payment
@@ -6138,62 +13544,93 @@ apis:
             /assignTerminals:
               post:
                 tags:
-                  - General
+                  - Assign
+                  - Terminals
+                  - Terminals
                 summary: Assign terminals
                 description: >-
                   Assigns one or more payment terminals to a merchant account or
                   a store. You can also use this endpoint to reassign terminals
                   between merchant accounts or stores, and to unassign a
                   terminal and return it to company inventory.
-                x-sortIndex: 1
-                x-methodName: assignTerminals
             /findTerminal:
               post:
                 tags:
-                  - General
+                  - Get
+                  - The
+                  - Account
+                  - Or
+                  - Store
+                  - Of
+                  - Terminal
+                  - Terminals
+                  - Terminal
                 summary: Get the account or store of a terminal
                 description: >-
                   Returns the company account, merchant account, or store that a
                   payment terminal is assigned to.
-                x-sortIndex: 1
-                x-methodName: findTerminal
             /getStoresUnderAccount:
               post:
                 tags:
-                  - General
+                  - Get
+                  - The
+                  - Stores
+                  - Of
+                  - An
+                  - Account
+                  - Terminals
+                  - Terminal
+                  - Stores
+                  - Under
+                  - Account
                 summary: Get the stores of an account
                 description: >-
                   Returns a list of stores associated with a company account or
                   a merchant account, including the status of each store.
-                x-sortIndex: 1
-                x-methodName: getStoresUnderAccount
             /getTerminalDetails:
               post:
                 tags:
-                  - General
+                  - Get
+                  - The
+                  - Details
+                  - Of
+                  - Terminal
+                  - Terminals
+                  - Terminal
+                  - Stores
+                  - Under
+                  - Account
+                  - Details
                 summary: Get the details of a terminal
                 description: >-
                   Returns the details of a payment terminal, including where the
                   terminal is assigned to. The response returns the same details
                   that are provided in the terminal list in your Customer Area
                   and in the Terminal Fleet report.
-                x-sortIndex: 1
-                x-methodName: getTerminalDetails
             /getTerminalsUnderAccount:
               post:
                 tags:
-                  - General
+                  - Get
+                  - The
+                  - List
+                  - Of
+                  - Terminals
+                  - Terminals
+                  - Terminal
+                  - Stores
+                  - Under
+                  - Account
+                  - Details
                 summary: Get the list of terminals
                 description: >-
                   Returns a list of payment terminals associated with a company
                   account, merchant account, or store. The response shows
                   whether the terminals are in the inventory, or in-store (ready
-                  for boarding or already boarded).
-                x-sortIndex: 1
-                x-methodName: getTerminalsUnderAccount
+                  for board
     overlays:
       - type: APIs.io Search
         url: overlays/pos-terminal-openapi-search.yml
+    aid: adyen:adyen-pos-terminal-api
   - name: Adyen Recurring API
     description: >-
       The Recurring APIs allow you to manage and remove your tokens or saved
@@ -6221,18 +13658,27 @@ apis:
             /createPermit:
               post:
                 tags:
-                  - General
+                  - Create
+                  - New
+                  - Permits
+                  - Linked
+                  - To
+                  - Recurring
+                  - Contract.
+                  - Permit
                 summary: Create new permits linked to a recurring contract.
                 description: >-
                   Create permits for a recurring contract, including support for
                   defining restrictions.
-                x-addedInVersion: '40'
-                x-sortIndex: 0
-                x-methodName: createPermit
             /disable:
               post:
                 tags:
-                  - General
+                  - Disable
+                  - Stored
+                  - Payment
+                  - Details
+                  - Permit
+                  - Disable
                 summary: Disable stored payment details
                 description: >-
                   Disables stored payment details to stop charging a shopper
@@ -6241,23 +13687,30 @@ apis:
 
                   For more information, refer to [Disable stored
                   details](https://docs.adyen.com/classic-integration/recurring-payments/disable-stored-details/).
-                x-sortIndex: 2
-                x-methodName: disable
             /disablePermit:
               post:
                 tags:
-                  - General
+                  - Disable
+                  - An
+                  - Existing
+                  - Permit.
+                  - Permit
+                  - Disable
                 summary: Disable an existing permit.
                 description: >-
                   Disable a permit that was previously linked to a
                   recurringDetailReference.
-                x-addedInVersion: '61'
-                x-sortIndex: 0
-                x-methodName: disablePermit
             /listRecurringDetails:
               post:
                 tags:
-                  - General
+                  - Get
+                  - Stored
+                  - Payment
+                  - Details
+                  - Permit
+                  - Disable
+                  - Recurring
+                  - Details
                 summary: Get stored payment details
                 description: >-
                   Lists the stored payment details for a shopper, if there are
@@ -6269,12 +13722,20 @@ apis:
 
                   For more information, refer to [Retrieve stored
                   details](https://docs.adyen.com/classic-integration/recurring-payments/retrieve-stored-details/).
-                x-sortIndex: 1
-                x-methodName: listRecurringDetails
             /notifyShopper:
               post:
                 tags:
-                  - General
+                  - Ask
+                  - Issuer
+                  - To
+                  - Notify
+                  - The
+                  - Shopper
+                  - Permit
+                  - Disable
+                  - Recurring
+                  - Details
+                  - Shopper
                 summary: Ask issuer to notify the shopper
                 description: >-
                   Sends a request to the issuer so they can inform the shopper
@@ -6282,12 +13743,21 @@ apis:
                   only for local acquiring in India. For more information, refer
                   to [Recurring card payments in
                   India](https://docs.adyen.com/payment-methods/cards/cards-recurring-india).
-                x-sortIndex: 4
-                x-methodName: notifyShopper
             /scheduleAccountUpdater:
               post:
                 tags:
-                  - General
+                  - Schedule
+                  - Running
+                  - The
+                  - Account
+                  - Updater
+                  - Permit
+                  - Disable
+                  - Recurring
+                  - Details
+                  - Shopper
+                  - Account
+                  - Updater
                 summary: Schedule running the Account Updater
                 description: >-
                   When making the API call, you can submit either the credit
@@ -6298,14 +13768,11 @@ apis:
                   `card` are mandatory.
 
                   * If the recurring detail reference is provided, the fields
-                  for `shopperReference` and `selectedRecurringDetailReference`
-                  are mandatory.
-                x-addedInVersion: '4'
-                x-sortIndex: 3
-                x-methodName: scheduleAccountUpdater
+                  for `shopperReference` and `selectedRecurringDetailR
     overlays:
       - type: APIs.io Search
         url: overlays/recurring-openapi-search.yml
+    aid: adyen:adyen-recurring-api
   - name: Adyen Report Webhooks API
     description: >-
       Adyen sends webhooks to inform your system that reports were generated and
@@ -6326,6 +13793,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/report-webhooks-openapi-search.yml
+    aid: adyen:adyen-report-webhooks-api
   - name: Adyen Stored Value API
     description: A set of API endpoints to manage stored value products.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -6351,64 +13819,84 @@ apis:
             /changeStatus:
               post:
                 tags:
-                  - General
+                  - Changes
+                  - The
+                  - Status
+                  - Of
+                  - Payment
+                  - Method.
+                  - Status
                 summary: Changes the status of the payment method.
                 description: >-
                   Changes the status of the provided payment method to the
                   specified status.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: changeStatus
             /checkBalance:
               post:
                 tags:
-                  - General
+                  - Checks
+                  - The
+                  - Balance.
+                  - Status
+                  - Balance
                 summary: Checks the balance.
                 description: Checks the balance of the provided payment method.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: checkBalance
             /issue:
               post:
                 tags:
-                  - General
+                  - Issues
+                  - New
+                  - Card.
+                  - Status
+                  - Balance
+                  - Issue
                 summary: Issues a new card.
                 description: Issues a new card of the given payment method.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: issue
             /load:
               post:
                 tags:
-                  - General
+                  - Loads
+                  - The
+                  - Payment
+                  - Method.
+                  - Status
+                  - Balance
+                  - Issue
+                  - Load
                 summary: Loads the payment method.
                 description: Loads the payment method with the specified funds.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: load
             /mergeBalance:
               post:
                 tags:
-                  - General
+                  - Merge
+                  - The
+                  - Balance
+                  - Of
+                  - Two
+                  - Cards.
+                  - Status
+                  - Balance
+                  - Issue
+                  - Load
                 summary: Merge the balance of two cards.
                 description: >-
                   Increases the balance of the paymentmethod by the full amount
                   left on the source paymentmethod
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: mergeBalance
             /voidTransaction:
               post:
                 tags:
-                  - General
+                  - Voids
+                  - Transaction.
+                  - Status
+                  - Balance
+                  - Issue
+                  - Load
+                  - Transaction
                 summary: Voids a transaction.
-                description: Voids the referenced stored value transaction.
-                x-groupName: General
-                x-sortIndex: 0
-                x-methodName: voidTransaction
+                description: Voids the referenced
     overlays:
       - type: APIs.io Search
         url: overlays/stored-value-openapi-search.yml
+    aid: adyen:adyen-stored-value-api
   - name: Adyen Terminal API
     description: >-
       The Adyen Terminal API lets you make payments, issue refunds, collect
@@ -6440,10 +13928,19 @@ apis:
                   a Login and the following Logout) to process. Content of the
                   Login Request message.
                 summary: Login Request
+                tags:
+                  - Login
+                  - Request
+                  - Login
             /logout:
               post:
                 description: Empty. Content of the Logout Request message.
                 summary: Logout Request
+                tags:
+                  - Logout
+                  - Request
+                  - Login
+                  - Logout
             /enableservice:
               post:
                 description: >-
@@ -6452,10 +13949,24 @@ apis:
                   possible invitation for the Customer to start the services.
                   Content of the Enable Service Request message.
                 summary: EnableService Request
+                tags:
+                  - Enable
+                  - Service
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
             /admin:
               post:
                 description: Empty. Content of the Custom Admin Request message.
                 summary: Admin Request
+                tags:
+                  - Admin
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
             /payment:
               post:
                 description: >-
@@ -6463,6 +13974,14 @@ apis:
                   Information related to the Payment transaction to process.
                   Content of the Payment Request message.
                 summary: Payment Request
+                tags:
+                  - Payment
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
             /cardacquisition:
               post:
                 description: >-
@@ -6472,18 +13991,50 @@ apis:
                   refers to this Card Acquisition message pair. Content of the
                   Card Acquisition Request message.
                 summary: CardAcquisition Request
+                tags:
+                  - Card
+                  - Acquisition
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
             /loyalty:
               post:
                 description: >-
                   It conveys Information related to the Loyalty transaction to
                   process. Content of the Loyalty Request message.
                 summary: Loyalty Request
+                tags:
+                  - Loyalty
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
             /storedvalue:
               post:
                 description: >-
                   It conveys Information related to the Stored Value transaction
                   to process. Content of the Stored Value Request message.
                 summary: StoredValue Request
+                tags:
+                  - Stored
+                  - Value
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
             /reversal:
               post:
                 description: >-
@@ -6491,6 +14042,18 @@ apis:
                   payment or a loyalty transaction. Content of the Reversal
                   Request message.
                 summary: Reversal Request
+                tags:
+                  - Reversal
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
             /reconciliation:
               post:
                 description: >-
@@ -6498,6 +14061,19 @@ apis:
                   by the Sale System. Content of the Reconciliation Request
                   message.
                 summary: Reconciliation Request
+                tags:
+                  - Reconciliation
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
             /gettotals:
               post:
                 description: >-
@@ -6505,6 +14081,21 @@ apis:
                   scope and the format of the totals to be computed by the POI
                   System. Content of the Get Totals Request message.
                 summary: GetTotals Request
+                tags:
+                  - Get
+                  - Totals
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
             /balanceinquiry:
               post:
                 description: >-
@@ -6512,6 +14103,22 @@ apis:
                   Balance Inquiry is requested. Content of the Balance Inquiry
                   Request message.
                 summary: BalanceInquiry Request
+                tags:
+                  - Balance
+                  - Inquiry
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
             /transactionstatus:
               post:
                 description: >-
@@ -6519,6 +14126,23 @@ apis:
                   current Payment, Loyalty or Reversal transaction. Content of
                   the TransactionStatus Request message.
                 summary: TransactionStatus Request
+                tags:
+                  - Transaction
+                  - Status
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
             /diagnosis:
               post:
                 description: >-
@@ -6526,6 +14150,23 @@ apis:
                   diagnosis is requested. Content of the Diagnosis Request
                   message.
                 summary: Diagnosis Request
+                tags:
+                  - Diagnosis
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
+                  - Diagnosis
             /display:
               post:
                 description: >-
@@ -6534,6 +14175,24 @@ apis:
                   contain an operation (the DisplayOutput element) per Display
                   Device type. Content of the Display Request message.
                 summary: Display Request
+                tags:
+                  - Display
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
+                  - Diagnosis
+                  - Display
             /input:
               post:
                 description: >-
@@ -6543,6 +14202,25 @@ apis:
                   (the DisplayOutput element) per Display Device type. Content
                   of the Input Request message.
                 summary: Input Request
+                tags:
+                  - Input
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
+                  - Diagnosis
+                  - Display
+                  - Input
             /print:
               post:
                 description: >-
@@ -6550,6 +14228,26 @@ apis:
                   It contains the complete content to print. Content of the
                   Print Request message.
                 summary: Print Request
+                tags:
+                  - Print
+                  - Request
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
+                  - Diagnosis
+                  - Display
+                  - Input
+                  - Print
             /cardreaderapdu:
               post:
                 description: >-
@@ -6557,10 +14255,33 @@ apis:
                   and a possible invitation message to display on the
                   CashierInterface or the CustomerInterface. Content of the Card
                   Reader APDU Request message.
-                summary: CardReaderAPDU Request
+                summary: CardReaderAPDU Reque
+                tags:
+                  - Card
+                  - Reader
+                  - Reque
+                  - Login
+                  - Logout
+                  - Enableservice
+                  - Admin
+                  - Payment
+                  - Cardacquisition
+                  - Loyalty
+                  - Storedvalue
+                  - Reversal
+                  - Reconciliation
+                  - Gettotals
+                  - Balanceinquiry
+                  - Transactionstatus
+                  - Diagnosis
+                  - Display
+                  - Input
+                  - Print
+                  - Cardreaderap
     overlays:
       - type: APIs.io Search
         url: overlays/terminal-openapi-search.yml
+    aid: adyen:adyen-terminal-api
   - name: Adyen Test Cards API
     description: >-
       The Test Cards API provides endpoints for generating custom test card
@@ -6593,14 +14314,22 @@ apis:
             /createTestCardRanges:
               post:
                 tags:
-                  - General
+                  - Creates
+                  - One
+                  - Or
+                  - More
+                  - Test
+                  - Card
+                  - Ranges.
+                  - Test
+                  - Card
+                  - Ranges
                 summary: Creates one or more test card ranges.
-                description: Creates one or more test card ranges.
-                x-groupName: General
-                x-sortIndex: 0
+                description: Creates o
     overlays:
       - type: APIs.io Search
         url: overlays/test-cards-openapi-search.yml
+    aid: adyen:adyen-test-cards-api
   - name: Adyen Transaction Webhooks API
     description: >-
       Adyen sends webhooks to inform your system about incoming and outgoing
@@ -6624,6 +14353,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/transaction-webhooks-openapi-search.yml
+    aid: adyen:adyen-transaction-webhooks-api
   - name: Adyen Transfer Webhooks API
     description: >-
       Adyen sends webhooks to inform your system about incoming and outgoing
@@ -6645,6 +14375,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/transfer-webhooks-openapi-search.yml
+    aid: adyen:adyen-transfer-webhooks-api
   - name: Adyen Transfers API
     description: >-
       This API provides endpoints that you can use to transfer funds, whether
@@ -6685,34 +14416,41 @@ apis:
             /grants:
               get:
                 tags:
+                  - Get
                   - Capital
+                  - Account
+                  - Grants
                 summary: Get a capital account
                 description: Returns a list of grants with status and outstanding balances.
-                x-addedInVersion: '3'
-                x-sortIndex: 2
-                x-methodName: getCapitalAccount
               post:
                 tags:
-                  - Capital
+                  - Request
+                  - Grant
+                  - Payout
+                  - Grants
                 summary: Request a grant payout
                 description: Requests the payout of the selected grant offer.
-                x-addedInVersion: '3'
-                x-sortIndex: 1
-                x-methodName: requestGrantPayout
             /grants/{id}:
               get:
                 tags:
-                  - Capital
+                  - Get
+                  - Grant
+                  - Reference
+                  - Details
+                  - Grants
+                  - Id
                 summary: Get grant reference details
                 description: >-
                   Returns the details of a capital account specified in the
                   path.
-                x-addedInVersion: '3'
-                x-sortIndex: 3
-                x-methodName: getGrantReferenceDetails
             /transactions:
               get:
                 tags:
+                  - Get
+                  - All
+                  - Transactions
+                  - Grants
+                  - Id
                   - Transactions
                 summary: Get all transactions
                 description: >+
@@ -6739,12 +14477,13 @@ apis:
                   next and previous pages when applicable. You can use the links
                   to page through the results.
 
-                x-addedInVersion: '1'
-                x-sortIndex: 1
-                x-methodName: getAllTransactions
             /transactions/{id}:
               get:
                 tags:
+                  - Get
+                  - Transaction
+                  - Grants
+                  - Id
                   - Transactions
                 summary: Get a transaction
                 description: >-
@@ -6753,12 +14492,14 @@ apis:
 
 
                   Returns a transaction.
-                x-addedInVersion: '1'
-                x-sortIndex: 2
-                x-methodName: getTransaction
             /transfers:
               post:
                 tags:
+                  - Transfer
+                  - Funds
+                  - Grants
+                  - Id
+                  - Transactions
                   - Transfers
                 summary: Transfer funds
                 description: >-
@@ -6777,23 +14518,22 @@ apis:
                   To use this endpoint, you need an additional role for your API
                   credential and transfers must be enabled for the source
                   balance account. Your Adyen contact will set these up for you.
-                x-addedInVersion: '2'
-                x-sortIndex: 1
-                x-methodName: transferFunds
             /transfers/{transferId}/returns:
               post:
                 tags:
+                  - Return
+                  - Transfer
+                  - Grants
+                  - Id
+                  - Transactions
                   - Transfers
+                  - Returns
                 summary: Return a transfer
-                description: >-
-                  Returns previously transferred funds without creating a new
-                  `transferId`.
-                x-addedInVersion: '3'
-                x-sortIndex: 2
-                x-methodName: returnTransfer
+                description: Returns previously transferred funds without crea
     overlays:
       - type: APIs.io Search
         url: overlays/transfers-openapi-search.yml
+    aid: adyen:adyen-transfers-api
   - name: Adyen Webhooks API
     description: >-
       We use webhooks to send you updates about payment status updates, newly
@@ -6815,6 +14555,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/webhooks-openapi-search.yml
+    aid: adyen:adyen-webhooks-api
 common:
   - type: Terms of Service
     url: https://www.adyen.com/legal/terms-and-conditions
@@ -6847,4 +14588,5 @@ maintainers:
   - FN: API Evangelist
     url: http://apievangelist.com
     email: info@apievangelist.com
+aid: adyen
 ---

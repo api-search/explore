@@ -30,6 +30,7 @@ apis:
       - type: OpenAPI
         url: https://developers.facebook.com/docs/graph-api/
     overlays: []
+    aid: meta:meta-graph-api
 common:
   - type: Getting Started
     url: https://developers.facebook.com/docs/graph-api/get-started
@@ -66,4 +67,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: meta
 ---

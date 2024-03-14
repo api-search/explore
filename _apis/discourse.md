@@ -25,7 +25,7 @@ apis:
     humanURL: https://developer.example.com
     baseURL: https://api.example.com
     tags:
-      - APIs
+      - API
       - Forums
       - Communities
     properties:
@@ -40,6 +40,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/https://docs.discourse.org/openapi.json-openapi-search.yml
+    aid: discourse:discourse-api
 common:
   - type: Plans
     url: https://www.discourse.org/pricing
@@ -62,4 +63,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: discourse
 ---

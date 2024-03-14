@@ -31,6 +31,7 @@ apis:
       - type: OpenAPI
         url: https://ogcapi.ogc.org/features/overview.html
     overlays: []
+    aid: open-geospatial-consortium:open-geospatial-consortium-api-features
 common:
   - type: Property
     url: https://example.com
@@ -41,4 +42,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: open-geospatial-consortium
 ---

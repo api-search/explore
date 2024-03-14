@@ -40,6 +40,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/paypal/paypal-rest-api-specifications/main/openapi/billing_subscriptions_v1.json-openapi-search.yml
+    aid: paypal:paypal-billing-subscriptions-api
   - name: Paypal Catalog Products API
     description: >-
       Merchants can use the Catalog Products API to create products, which are
@@ -60,6 +61,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/paypal/paypal-rest-api-specifications/main/openapi/catalogs_products_v1.json-openapi-search.yml
+    aid: paypal:paypal-catalog-products-api
   - name: Paypal Orders API
     description: >-
       An order represents a payment between two or more parties. Use the Orders
@@ -79,6 +81,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/paypal/paypal-rest-api-specifications/main/openapi/checkout_orders_v2.json-openapi-search.yml
+    aid: paypal:paypal-orders-api
   - name: Paypal Disputes API
     description: >-
       Occasionally, something goes wrong with a customer's order. To dispute a
@@ -101,6 +104,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/paypal/paypal-rest-api-specifications/main/openapi/customer_disputes_v1.json-openapi-search.yml
+    aid: paypal:paypal-disputes-api
 common:
   - type: OpenAPI Specs
     url: https://github.com/paypal/paypal-rest-api-specifications/tree/main/openapi
@@ -125,4 +129,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: paypal
 ---

@@ -24,7 +24,7 @@ apis:
     humanURL: https://doc.bunq.com/
     baseURL: https://api.example.com
     tags:
-      - APIs
+      - API
       - Banks
       - Banking
       - PSD2
@@ -38,6 +38,7 @@ apis:
         url: http://example.com
         email: info@example.com
     overlays: []
+    aid: bunq:bunq-api
 common:
   - type: Portal
     url: https://developer.bunq.com/en/
@@ -77,4 +78,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: bunq
 ---

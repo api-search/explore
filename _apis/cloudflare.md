@@ -40,6 +40,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/cloudflare/api-schemas/main/openapi.yaml-openapi-search.yml
+    aid: cloudflare:cloudflare-api
 common:
   - type: Learning Paths
     url: https://developers.cloudflare.com/learning-paths/
@@ -76,4 +77,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: cloudflare
 ---

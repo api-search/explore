@@ -20,6 +20,7 @@ apis:
       - type: OpenAPI
         url: https://www.foia.gov/developer/
     overlays: []
+    aid: freedom-of-information-act-foia:freedom-of-information-act-foia-api
 common:
   - type: Portal
     url: https://www.foia.gov/developer/
@@ -30,4 +31,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: freedom-of-information-act-foia
 ---

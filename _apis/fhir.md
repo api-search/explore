@@ -34,6 +34,8 @@ apis:
       - type: OpenAPI
         url: https://www.hl7.org/fhir/
     overlays: []
+    aid: >-
+      fast-healthcare-interoperability-resources-fhir:fast-healthcare-interoperability-resources-api
 common:
   - type: Property
     url: https://example.com
@@ -44,4 +46,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: fast-healthcare-interoperability-resources-fhir
 ---

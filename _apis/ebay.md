@@ -36,6 +36,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.ebay.com/api-docs/master/sell/account/openapi/3/sell_account_v1_oas3.json-openapi-search.yml
+    aid: ebay:ebay-account-api
   - name: Analytics API
     description: >-
       Provides information about an individual seller’s business performance
@@ -58,6 +59,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.ebay.com/api-docs/master/sell/analytics/openapi/3/sell_analytics_v1_oas3.json-openapi-search.yml
+    aid: ebay:analytics-api
   - name: Compliance API
     description: >-
       Provides tools for validating listings to help sellers keep their listings
@@ -78,6 +80,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.ebay.com/api-docs/master/sell/compliance/openapi/3/sell_compliance_v1_oas3.json-openapi-search.yml
+    aid: ebay:compliance-api
   - name: Feed API
     description: >-
       Manage your eBay business by downloading or uploading inventory, order,
@@ -89,7 +92,7 @@ apis:
     humanURL: https://developer.ebay.com/api-docs/sell/feed/resources/methods
     baseURL: https://api.example.com
     tags:
-      - Feed
+      - Feeds
       - Sellers
     properties:
       - type: OpenAPI
@@ -101,6 +104,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.ebay.com/api-docs/master/sell/feed/openapi/3/sell_feed_v1_oas3.json-openapi-search.yml
+    aid: ebay:feed-api
 common:
   - type: Getting Started
     url: https://developer.ebay.com/develop/get-started
@@ -137,4 +141,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: ebay
 ---

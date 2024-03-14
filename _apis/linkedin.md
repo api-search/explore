@@ -44,6 +44,7 @@ apis:
         url: >-
           https://www.postman.com/linkedin-developer-apis/workspace/linkedin-consumer-solutions/overview
     overlays: []
+    aid: linkedin:linkedin-consumer-api
   - name: LinkedIn Marketing API
     description: >-
       Grow your business by building scalable solutions that drive workflow
@@ -72,6 +73,7 @@ apis:
         url: >-
           https://learn.microsoft.com/en-us/linkedin/marketing/integrations/recent-changes?view=li-lms-2023-11
     overlays: []
+    aid: linkedin:linkedin-marketing-api
 common:
   - type: Status
     url: https://www.linkedin-apistatus.com/
@@ -94,4 +96,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: linkedin
 ---

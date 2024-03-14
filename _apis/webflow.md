@@ -28,6 +28,7 @@ apis:
       - type: OpenAPI
         url: https://developers.webflow.com/reference/designer-api-reference
     overlays: []
+    aid: webflow:webflow-api
 common:
   - type: Getting Started
     url: https://developers.webflow.com/docs
@@ -60,4 +61,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: webflow
 ---

@@ -35,6 +35,7 @@ apis:
         url: >-
           https://god.gw.postman.com/run-collection/20651290-809b13c1-4ada-46c1-af65-ab276c434068
     overlays: []
+    aid: datadog:datadog-api
 common:
   - type: Authentication
     url: https://docs.datadoghq.com/api/latest/authentication/
@@ -62,4 +63,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: datadog
 ---

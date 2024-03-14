@@ -42,6 +42,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.apis.guru/v2/specs/googleapis.com/apigateway/v1alpha2/openapi.json-openapi-search.yml
+    aid: google:google-cloud-api-gateway
   - name: Books API
     description: >-
       This document is intended for developers who want to write applications
@@ -69,6 +70,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.apis.guru/v2/specs/googleapis.com/books/v1/openapi.json-openapi-search.yml
+    aid: google:books-api
 common:
   - type: Google Cloud
     url: https://cloud.google.com
@@ -92,4 +94,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: google
 ---

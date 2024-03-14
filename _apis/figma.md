@@ -31,6 +31,7 @@ apis:
       - type: OpenAPI
         url: https://www.figma.com/developers/api#intro
     overlays: []
+    aid: figma:figma-api
 common:
   - type: Authentication
     url: https://www.figma.com/developers/api#authentication
@@ -59,4 +60,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: figma
 ---

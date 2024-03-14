@@ -38,6 +38,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/http://example.com/openapi.json-openapi-search.yml
+    aid: postmark:postmark-api
 common:
   - type: Blog
     url: https://postmarkapp.com/blog
@@ -68,4 +69,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: postmark
 ---

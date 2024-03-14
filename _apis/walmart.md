@@ -32,6 +32,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/feeds
     overlays: []
+    aid: walmart:walmart-feeds-api
   - name: Walmart Items API
     description: >-
       The Item Management APIs enable you to set up and manage items on
@@ -48,6 +49,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/items
     overlays: []
+    aid: walmart:walmart-items-api
   - name: Walmart Prices API
     description: >-
       The price is a fundamental building block for your listing on Walmart.com.
@@ -63,6 +65,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/price
     overlays: []
+    aid: walmart:walmart-prices-api
   - name: Walmart Promotion API
     description: >-
       Sellers can set regular or promotional prices for their items. Setting the
@@ -78,6 +81,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/promotion
     overlays: []
+    aid: walmart:walmart-promotion-api
   - name: Walmart Order API
     description: >-
       The Walmart Order Management APIs help Sellers to manage customer’s Sales
@@ -93,6 +97,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/orders
     overlays: []
+    aid: walmart:walmart-order-api
   - name: Walmart Returns API
     description: >-
       Buyers can now Initiate Returns from Walmart.com for Marketplace seller
@@ -110,6 +115,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/returns
     overlays: []
+    aid: walmart:walmart-returns-api
   - name: Walmart Inventory API
     description: >-
       Maintaining up-to-date inventory for your items on Walmart.com ensures a
@@ -125,6 +131,7 @@ apis:
       - type: OpenAPI
         url: https://developer.walmart.com/api/us/mp/inventory
     overlays: []
+    aid: walmart:walmart-inventory-api
 common:
   - type: Portal
     url: https://developer.walmart.com/
@@ -149,4 +156,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: walmart
 ---

@@ -29,7 +29,7 @@ apis:
       - Websites
       - Serverless
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://open-api.netlify.com/
       - type: OpenAPI
         url: https://open-api.netlify.com/6dac5474-6daf-41e6-8a14-6d9bcb8aca52
@@ -37,6 +37,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://open-api.netlify.com/6dac5474-6daf-41e6-8a14-6d9bcb8aca52-openapi-search.yml
+    aid: netlify:netlify-api
 common:
   - type: Terms of Service
     url: https://www.netlify.com/legal/terms-of-use/
@@ -61,4 +62,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: netlify
 ---

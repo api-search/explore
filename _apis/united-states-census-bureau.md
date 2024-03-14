@@ -32,6 +32,7 @@ apis:
       - type: OpenAPI
         url: https://www.census.gov/data/developers.html
     overlays: []
+    aid: united-states-census-bureau-census:united-states-census-bureau-census-api
 common:
   - type: Property
     url: https://example.com
@@ -42,4 +43,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: united-states-census-bureau-census
 ---

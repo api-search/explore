@@ -30,6 +30,7 @@ apis:
       - type: OpenAPI
         url: https://developers.notion.com/reference/intro
     overlays: []
+    aid: notion:notion-api
 common:
   - type: Guides
     url: https://developers.notion.com/docs
@@ -57,4 +58,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: notion
 ---

@@ -31,6 +31,7 @@ apis:
       - Investments
     properties: []
     overlays: []
+    aid: murex:mx3
 common:
   - type: Website
     url: https://www.murex.com
@@ -45,4 +46,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: murex
 ---

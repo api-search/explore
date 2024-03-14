@@ -26,7 +26,7 @@ apis:
     tags:
       - Videos
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developers.google.com/youtube/v3/docs
       - type: OpenAPI
         url: https://api.apis.guru/v2/specs/googleapis.com/youtube/v3/openapi.yaml
@@ -34,6 +34,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.apis.guru/v2/specs/googleapis.com/youtube/v3/openapi.yaml-openapi-search.yml
+    aid: youtube:youtube-data-api
   - name: Youtube Analytics API
     description: >-
       The YouTube Reporting and YouTube Analytics APIs let you retrieve YouTube
@@ -45,7 +46,7 @@ apis:
     tags:
       - Video Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developers.google.com/youtube/analytics/reference
       - type: OpenAPI
         url: >-
@@ -54,6 +55,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.apis.guru/v2/specs/googleapis.com/youtubeAnalytics/v1/openapi.yaml-openapi-search.yml
+    aid: youtube:youtube-analytics-api
 common:
   - type: Bugs
     url: >-
@@ -74,4 +76,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: youtube
 ---

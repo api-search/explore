@@ -29,6 +29,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
     overlays: []
+    aid: mapbox:mapbox-tiling-service
   - name: Vector Tiles API
     description: >-
       The Mapbox Vector Tiles API serves vector tiles from Mapbox-hosted vector
@@ -43,6 +44,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/vector-tiles/
     overlays: []
+    aid: mapbox:vector-tiles-api
   - name: Mapbox Raster Tiles API
     description: >-
       The Mapbox Raster Tiles API serves raster tiles generated from satellite
@@ -58,6 +60,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/raster-tiles/
     overlays: []
+    aid: mapbox:mapbox-raster-tiles-api
   - name: Mapbox Static Images API
     description: >-
       The Mapbox Static Images API serves standalone, static map images
@@ -74,6 +77,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/static-images/
     overlays: []
+    aid: mapbox:mapbox-static-images-api
   - name: Mapbox Static Tiles API
     description: >-
       The Mapbox Static Tiles API serves raster tiles generated from Mapbox
@@ -91,6 +95,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/static-tiles/
     overlays: []
+    aid: mapbox:mapbox-static-tiles-api
   - name: Mapbox Styles API
     description: >-
       The Mapbox Styles API lets you read and change map styles, fonts, and
@@ -113,6 +118,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/styles/
     overlays: []
+    aid: mapbox:mapbox-styles-api
   - name: Mapbox Tilequery API
     description: >-
       The Mapbox Tilequery API allows you to retrieve data about specific
@@ -130,6 +136,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/tilequery/
     overlays: []
+    aid: mapbox:mapbox-tilequery-api
   - name: Mapbox Uploads API
     description: >-
       The Mapbox Uploads API transforms geographic data into tilesets that can
@@ -146,6 +153,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/uploads/
     overlays: []
+    aid: mapbox:mapbox-uploads-api
   - name: Mapbox Tiling Service (MTS)
     description: >-
       Mapbox Tiling Service (MTS) is a tool for creating vector tilesets. With
@@ -162,6 +170,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/mapbox-tiling-service/
     overlays: []
+    aid: mapbox:mapbox-tiling-service-mts
   - name: Mapbox Datasets API
     description: >-
       The Mapbox Datasets API supports reading, creating, updating, and removing
@@ -181,6 +190,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/datasets/
     overlays: []
+    aid: mapbox:mapbox-datasets-api
   - name: Mapbox Fonts API
     description: >-
       The Mapbox Fonts API accepts fonts as raw binary data, allows those fonts
@@ -198,6 +208,7 @@ apis:
       - type: OpenAPI
         url: https://docs.mapbox.com/api/maps/fonts/
     overlays: []
+    aid: mapbox:mapbox-fonts-api
 common:
   - type: Support
     url: https://docs.mapbox.com/help/
@@ -242,4 +253,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: mapbox
 ---

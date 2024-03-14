@@ -44,6 +44,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/https://dev.elsevier.com/elsdoc/scopus-openapi-search.yml
+    aid: elsevier:elsevier-scopus-apis
   - name: Elsevier ScienceDirect APIs
     description: >+
       ScienceDirect APIs expose peer-reviewed full-text scientific, technical
@@ -67,6 +68,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://dev.elsevier.com/elsdoc/sciencedirect-openapi-search.yml
+    aid: elsevier:elsevier-sciencedirect-apis
   - name: Elsevier SciVal API
     description: >+
       The SciVal API gives access to a comprehensive basket of metrics for
@@ -91,6 +93,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/https://dev.elsevier.com/elsdoc/scival-openapi-search.yml
+    aid: elsevier:elsevier-scival-api
 common:
   - type: Portal
     url: https://dev.elsevier.com/
@@ -115,4 +118,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: elsevier
 ---

@@ -31,6 +31,7 @@ apis:
       - type: OpenAPI
         url: https://sportsdata.io/developers/api-documentation/nfl
     overlays: []
+    aid: sportsdata:nfl-api
   - name: MLB API
     description: >-
       This is the documentation for our MLB API. To get a more comprehensive
@@ -47,6 +48,7 @@ apis:
       - type: OpenAPI
         url: https://sportsdata.io/developers/api-documentation/mlb
     overlays: []
+    aid: sportsdata:mlb-api
   - name: NBA API
     description: >
       This is the documentation for our NBA API. To get a more comprehensive
@@ -63,6 +65,7 @@ apis:
       - type: OpenAPI
         url: https://sportsdata.io/developers/api-documentation/nba
     overlays: []
+    aid: sportsdata:nba-api
   - name: NHL API
     description: >-
       This is the documentation for our NHL API. To get a more comprehensive
@@ -79,6 +82,7 @@ apis:
       - type: OpenAPI
         url: https://sportsdata.io/developers/api-documentation/nhl
     overlays: []
+    aid: sportsdata:nhl-api
 common:
   - type: Getting Started
     url: https://sportsdata.io/developers
@@ -103,4 +107,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: sportsdata
 ---

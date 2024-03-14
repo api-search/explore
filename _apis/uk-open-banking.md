@@ -26,6 +26,7 @@ apis:
       - type: OpenAPI
         url: https://www.openbanking.org.uk/
     overlays: []
+    aid: uk-open-banking:uk-open-banking
 common:
   - type: Property
     url: https://example.com
@@ -36,4 +37,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: uk-open-banking
 ---

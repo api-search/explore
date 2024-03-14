@@ -44,6 +44,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://developer.oxforddictionaries.com/swagger/spec/od_api_demo_v2.json-openapi-search.yml
+    aid: oxford-english-dictionaries:oxford-dictionaries-api
 common:
   - type: Updates
     url: https://developer.oxforddictionaries.com/updates
@@ -72,4 +73,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: oxford-english-dictionaries
 ---

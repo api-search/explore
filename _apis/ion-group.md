@@ -39,9 +39,40 @@ apis:
           https://iongroup.com/analytics/data-portal/apis-data-feeds/entities-api/documentation/low-level-documentation/
       - type: OpenAPI
         url: properties/entities-openapi-original.yml
+        data:
+          openapi: 3.0.2
+          info:
+            title: Acuris Entities API
+          tags:
+            - name: entities
+              description: Get list of entities
+          paths:
+            /entities:
+              get:
+                tags:
+                  - entities
+                summary: Get list of entities (with optional filters)
+                description: >-
+                  Returns JSON containing entities matching given filtering
+                  criteria set (or top ten entities when no filters are
+                  provided).
+            /entities/{id}:
+              get:
+                tags:
+                  - entityById
+                summary: Get one entity by its ID
+            /entities/hierarchy:
+              get:
+                tags:
+                  - entitiesHierarchy
+                summary: Get entities hierarchy (with optional filters)
+                description: >-
+                  Returns JSON containing entities matching given filtering
+                  criteria set (or top ten entities when no filters are 
     overlays:
       - type: APIs.io Search
         url: overlays/entities-openapi-search.yml
+    aid: ion-group:acuris-entities-api
   - name: Dealogic Analytics Spac API
     description: >-
       Detailed profiling of Special Purpose Acquisition Companies (SPACs). Gain
@@ -60,6 +91,36 @@ apis:
           https://iongroup.com/analytics/data-portal/apis-data-feeds/spac-api/documentation/low-level-documentation/
       - type: OpenAPI
         url: properties/dealogic-analytics-spac-openapi-original.yml
+        data:
+          openapi: 3.0.2
+          info:
+            title: Acuris Entities API
+          tags:
+            - name: entities
+              description: Get list of entities
+          paths:
+            /entities:
+              get:
+                tags:
+                  - entities
+                summary: Get list of entities (with optional filters)
+                description: >-
+                  Returns JSON containing entities matching given filtering
+                  criteria set (or top ten entities when no filters are
+                  provided).
+            /entities/{id}:
+              get:
+                tags:
+                  - entityById
+                summary: Get one entity by its ID
+            /entities/hierarchy:
+              get:
+                tags:
+                  - entitiesHierarchy
+                summary: Get entities hierarchy (with optional filters)
+                description: >-
+                  Returns JSON containing entities matching given filtering
+                  criteria set (or top ten entities when no filters are 
       - type: OpenAPI
         url: >-
           https://iongroup.com/analytics/data-portal/apis-data-feeds/spac-api/data-glossary/
@@ -72,6 +133,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/dealogic-analytics-spac-openapi-search.yml
+    aid: ion-group:dealogic-analytics-spac-api
 common:
   - type: APIs & Data Feed
     url: https://iongroup.com/analytics/data-portal/apis-data-feeds/
@@ -86,4 +148,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: ion-group
 ---

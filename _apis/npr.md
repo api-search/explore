@@ -33,6 +33,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://listening.api.npr.org/v2/swagger.json-openapi-search.yml
+    aid: npr:listening
   - name: Station
     description: NPR Station information.
     image: https://dev.npr.org/NPRLogo_BlackOutline.png
@@ -51,6 +52,7 @@ apis:
         url: ''
         email: ''
     overlays: []
+    aid: npr:station
   - name: Identity
     description: User management API.
     image: https://dev.npr.org/NPRLogo_BlackOutline.png
@@ -69,6 +71,7 @@ apis:
         url: ''
         email: ''
     overlays: []
+    aid: npr:identity
   - name: Authorization
     description: API Authorization.
     image: https://dev.npr.org/NPRLogo_BlackOutline.png
@@ -90,6 +93,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://authorization.api.npr.org/v2/swagger.json-openapi-search.yml
+    aid: npr:authorization
 maintainers:
   - FN: Steven Willmott
     url: http://timewarp.com
@@ -97,4 +101,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: npr
 ---

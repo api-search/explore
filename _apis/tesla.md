@@ -30,6 +30,7 @@ apis:
       - type: OpenAPI
         url: https://developer.tesla.com/docs/fleet-api
     overlays: []
+    aid: tesla:tesla-fleetapi
 common:
   - type: Property
     url: https://example.com
@@ -40,4 +41,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: tesla
 ---

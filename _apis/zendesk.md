@@ -32,6 +32,7 @@ apis:
       - type: OpenAPI
         url: https://www.postman.com/zendesk-redback/workspace/zendesk-public-api
     overlays: []
+    aid: zendesk:zendesk-api
 common:
   - type: Webhooks
     url: https://developer.zendesk.com/api-reference/webhooks/introduction/
@@ -61,4 +62,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: zendesk
 ---

@@ -39,6 +39,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/https://api.europeana.eu/api/api-docs-openapi-search.yml
+    aid: europeana:europeana-search-and-record-api
 common:
   - type: Portal
     url: https://pro.europeana.eu/
@@ -65,4 +66,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: europeana
 ---

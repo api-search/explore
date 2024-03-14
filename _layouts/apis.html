@@ -12,7 +12,7 @@ layout: default
 
                     <h1 class="uk-article-title">{{ page.name | escape }}</h1>
 
-                    <p>{{ page.description }}</p>  
+                    <p>{{ page.description | strip_html | strip_newlines }}</p>  
 
                     <h2>Tags</h2>
                     <ul>
@@ -25,7 +25,7 @@ layout: default
 
                     {% for api in page.apis %}
                         <h3>{{ api.name }}</h3>
-                        <p>{{ api.description }}</p> 
+                        <p>{{ api.description | strip_html | strip_newlines }}</p> 
                         <h4>Properties</h4>
                         <ul id="">
                             <li><a href="{{ api.humanURL }}">Human URL</a></li>
@@ -35,7 +35,19 @@ layout: default
                             {% for property in api.properties %}
                                 <li><a href="{{ property.url }}">{{ property.type }}</a></li>
                             {% endfor %}    
-                        </ul>   
+                        </ul> 
+                        <h4>Operations</h4>
+                        <ul id="">
+                        {% for property in api.properties %}
+                            {% if property.type == 'OpenAPI' %}
+                                {% for path in property.data.paths %}
+                                    {% for method in path[1] %}
+                                            <li><strong>{{ method[1].summary | strip_html | strip_newlines }}</strong> ({{ method[0] }}) - {{ method[1].description | strip_html | strip_newlines }}</li>
+                                    {% endfor %}                                          
+                                {% endfor %}    
+                            {% endif %}
+                        {% endfor %}    
+                        </ul>                           
                         <h4>Tags</h4>
                         <ul id="">
                             {% for tag in api.tags %}

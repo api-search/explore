@@ -28,6 +28,7 @@ apis:
       - type: OpenAPI
         url: https://docs.lemonsqueezy.com/
     overlays: []
+    aid: lemon-squeezy:lemon-squeezy-api
 common:
   - type: Property
     url: https://example.com
@@ -38,4 +39,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: lemon-squeezy
 ---

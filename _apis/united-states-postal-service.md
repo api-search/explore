@@ -30,6 +30,7 @@ apis:
       - type: OpenAPI
         url: https://www.usps.com/business/web-tools-apis/
     overlays: []
+    aid: united-states-postal-service-usps:united-states-postal-service-usps-api
 common:
   - type: Property
     url: https://example.com
@@ -40,4 +41,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: united-states-postal-service-usps
 ---

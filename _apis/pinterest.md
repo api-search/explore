@@ -32,6 +32,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/pinterest/api-description/main/v5/openapi.yaml-openapi-search.yml
+    aid: pinterest:pinterest-api
 common:
   - type: Guidelines
     url: https://www.pinterest.com/_/_/policy/developer-guidelines
@@ -50,4 +51,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: pinterest
 ---

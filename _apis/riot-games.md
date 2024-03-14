@@ -29,6 +29,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#account-v1
     overlays: []
+    aid: riot-games:riot-games-account-api
   - name: Riot Games Champion Master API
     description: The Riot Games API for champion master.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -41,6 +42,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#champion-mastery-v4
     overlays: []
+    aid: riot-games:riot-games-champion-master-api
   - name: Riot Games Champion API
     description: The Riot Games API for champion.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -53,6 +55,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#champion-v3
     overlays: []
+    aid: riot-games:riot-games-champion-api
   - name: Riot Games Clash API
     description: The Riot Games API for clash.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -65,6 +68,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#clash-v1
     overlays: []
+    aid: riot-games:riot-games-clash-api
   - name: Riot Games League Exp API
     description: The Riot Games API for league exp.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -77,6 +81,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#league-exp-v4
     overlays: []
+    aid: riot-games:riot-games-league-exp-api
   - name: Riot Games League API
     description: The Riot Games API for league.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -89,6 +94,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#league-v4
     overlays: []
+    aid: riot-games:riot-games-league-api
   - name: Riot Games LOL Challenges API
     description: The Riot Games API forLOL challenges,
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
@@ -101,6 +107,7 @@ apis:
       - type: OpenAPI
         url: https://developer.riotgames.com/apis#lol-challenges-v1
     overlays: []
+    aid: riot-games:riot-games-lol-challenges-api
 common:
   - type: Portal
     url: https://developer.riotgames.com/docs/portal
@@ -131,4 +138,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: riot-games
 ---

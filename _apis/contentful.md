@@ -32,6 +32,7 @@ apis:
         url: >-
           https://www.contentful.com/developers/docs/references/content-delivery-api/
     overlays: []
+    aid: contenful:contentful-content-delivery-api
   - name: Contentful Content Management API
     description: >-
       Contentful's Content Management API (CMA) helps you manage content in your
@@ -49,6 +50,7 @@ apis:
         url: >-
           https://www.contentful.com/developers/docs/references/content-management-api/
     overlays: []
+    aid: contenful:contentful-content-management-api
   - name: Contentful Preview API
     description: >-
       In addition to the Content Delivery API (CDA) for published content, is
@@ -67,6 +69,7 @@ apis:
         url: >-
           https://www.contentful.com/developers/docs/references/content-preview-api/
     overlays: []
+    aid: contenful:contentful-preview-api
   - name: Contentful Images API
     description: >-
       The Contentful Images API allows the retrieval and manipulation of image
@@ -81,6 +84,7 @@ apis:
       - type: OpenAPI
         url: https://www.contentful.com/developers/docs/references/images-api/
     overlays: []
+    aid: contenful:contentful-images-api
   - name: Contentful GraphQL Content API
     description: >-
       The GraphQL Content API provides a GraphQL API interface to the content
@@ -97,6 +101,7 @@ apis:
       - type: OpenAPI
         url: https://www.contentful.com/developers/docs/references/graphql/
     overlays: []
+    aid: contenful:contentful-graphql-content-api
   - name: Contentful User Management API
     description: >-
       Contentful's User Management API helps organizations programmatically
@@ -113,6 +118,7 @@ apis:
         url: >-
           https://www.contentful.com/developers/docs/references/user-management-api/
     overlays: []
+    aid: contenful:contentful-user-management-api
   - name: Contentful SCIM API
     description: >-
       System for Cross-domain Identity Management, or SCIM, is an API
@@ -128,6 +134,7 @@ apis:
       - type: OpenAPI
         url: https://www.contentful.com/developers/docs/references/scim-api/
     overlays: []
+    aid: contenful:contentful-scim-api
 common:
   - type: Portal
     url: https://www.contentful.com/developers/
@@ -164,4 +171,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: contenful
 ---

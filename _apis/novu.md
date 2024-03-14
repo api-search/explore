@@ -37,6 +37,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/https://api.novu.co/api#/-openapi-search.yml
+    aid: novu:novu-api
 common:
   - type: SDKs
     url: https://docs.novu.co/sdks/introduction
@@ -73,4 +74,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: novu
 ---

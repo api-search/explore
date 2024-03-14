@@ -20,6 +20,7 @@ apis:
       - type: OpenAPI
         url: https://developer.parliament.uk/
     overlays: []
+    aid: united-kingdom-parliament:united-kingdom-parliament-api
 common:
   - type: Portal
     url: https://developer.parliament.uk/
@@ -30,4 +31,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: united-kingdom-parliament
 ---

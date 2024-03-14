@@ -40,6 +40,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimanagement.json-openapi-search.yml
+    aid: microsoft-azure:azure-api-management
   - name: Azure Cognitive Search
     description: >-
       Azure Cognitive Search, an AI-powered information retrieval platform,
@@ -63,6 +64,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/stable/2023-05-01/cognitiveservices.json-openapi-search.yml
+    aid: microsoft-azure:azure-cognitive-search
   - name: Azure Key Vault
     description: >-
       Use Key Vault to safeguard and manage cryptographic keys, certificates and
@@ -82,6 +84,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://github.com/Azure/azure-rest-api-specs/tree/main/specification/keyvault/resource-manager/Microsoft.KeyVault/stable/2023-07-01-openapi-search.yml
+    aid: microsoft-azure:azure-key-vault
 common:
   - type: Pricing
     url: https://azure.microsoft.com/en-us/pricing/
@@ -107,4 +110,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: microsoft-azure
 ---

@@ -28,6 +28,7 @@ apis:
       - type: OpenAPI
         url: https://auth0.com/docs/api
     overlays: []
+    aid: auth0:auth0-api
 common:
   - type: Articles
     url: https://auth0.com/docs/articles
@@ -62,4 +63,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: auth0
 ---

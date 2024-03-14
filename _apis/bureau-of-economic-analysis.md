@@ -35,6 +35,7 @@ apis:
       - type: OpenAPI
         url: https://www.bea.gov/tools/
     overlays: []
+    aid: bureau-of-economic-analysis-bea:bureau-of-economic-analysis-bea-api
 common:
   - type: Property
     url: https://example.com
@@ -45,4 +46,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: bureau-of-economic-analysis-bea
 ---

@@ -38,6 +38,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://github.com/okta/okta-management-openapi-spec-openapi-search.yml
+    aid: okta:okta-api
 common:
   - type: Concepts
     url: https://developer.okta.com/docs/concepts/
@@ -69,4 +70,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: okta
 ---

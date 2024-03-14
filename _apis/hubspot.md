@@ -37,6 +37,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.hubspot.com/api-catalog-public/v1/apis/cms/v3/domains-openapi-search.yml
+    aid: hubspot:hubspot-domains-api
   - name: HubSpot Source Code API
     description: >-
       Endpoints for interacting with files in the CMS Developer File System.
@@ -59,6 +60,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.hubspot.com/public/api/spec/v1/specs/cms/v3/source-code-openapi-search.yml
+    aid: hubspot:hubspot-source-code-api
   - name: HubSpot Posts API
     description: >-
       Use these endpoints for interacting with Blog Posts, Blog Authors, and
@@ -80,6 +82,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.hubspot.com/api-catalog-public/v1/apis/cms/v3/blogs/blog-posts-openapi-search.yml
+    aid: hubspot:hubspot-posts-api
   - name: HubSpot Authors API
     description: >-
       Use the blog authors API to manage author information for your blog
@@ -100,6 +103,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.hubspot.com/api-catalog-public/v1/apis/cms/v3/blogs/authors-openapi-search.yml
+    aid: hubspot:hubspot-authors-api
   - name: HubSpot URL Redirects API
     description: >-
       URL redirects allow you to redirect traffic from a HubSpot-hosted page or
@@ -122,6 +126,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://api.hubspot.com/api-catalog-public/v1/apis/cms/v3/url-redirects-openapi-search.yml
+    aid: hubspot:hubspot-url-redirects-api
 common:
   - type: Index
     url: https://api.hubspot.com/api-catalog-public/v1/apis
@@ -154,4 +159,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: hubspot
 ---

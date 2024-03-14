@@ -24,6 +24,7 @@ apis:
       - type: OpenAPI
         url: https://www.loc.gov/apis/
     overlays: []
+    aid: library-of-congress:library-of-congress-api
 common:
   - type: Portal
     url: https://www.loc.gov/apis/
@@ -34,4 +35,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: library-of-congress
 ---

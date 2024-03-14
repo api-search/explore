@@ -33,6 +33,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/master/admin.rest.swagger-v2.json-openapi-search.yml
+    aid: docusign:docusign-admin-api
   - name: DocuSign Click API
     description: >-
       DocuSign Click lets you capture consent to standard agreement terms with a
@@ -55,6 +56,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/master/click.rest.swagger-v2.json-openapi-search.yml
+    aid: docusign:docusign-click-api
   - name: DocuSign eSignature API
     description: >-
       The DocuSign eSignature API provides you with a powerful, convenient, and
@@ -75,6 +77,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/master/esignature.rest.swagger-v2.1.json-openapi-search.yml
+    aid: docusign:docusign-esignature-api
   - name: Docusign Monitor API
     description: >+
       DocuSign Monitor helps organizations protect their agreements with
@@ -101,6 +104,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/docusign/OpenAPI-Specifications/master/monitor.rest.swagger-v2.0.json-openapi-search.yml
+    aid: docusign:docusign-monitor-api
 common:
   - type: Getting Started
     url: https://developers.docusign.com/get-started
@@ -149,4 +153,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: docusign
 ---

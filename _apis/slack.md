@@ -37,6 +37,7 @@ apis:
       - type: APIs.io Search
         url: >-
           overlays/https://raw.githubusercontent.com/slackapi/slack-api-specs/master/web-api/slack_web_openapi_v2.json-openapi-search.yml
+    aid: slack:slack-web-api
 common:
   - type: GettingStarted
     url: https://api.slack.com/automation/quickstart
@@ -65,4 +66,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: slack
 ---

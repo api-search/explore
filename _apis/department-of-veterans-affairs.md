@@ -22,6 +22,7 @@ apis:
       - type: OpenAPI
         url: https://developer.va.gov/
     overlays: []
+    aid: department-of-veterans-affairs-va:department-of-veterans-affairs-va-api
 common:
   - type: Portal
     url: https://developer.va.gov/
@@ -32,4 +33,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: department-of-veterans-affairs-va
 ---

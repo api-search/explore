@@ -41,6 +41,7 @@ apis:
       - type: OpenAPI
         url: https://developers.marketo.com/performance/
     overlays: []
+    aid: marketo:marketo-rest-api
 common:
   - type: Portal
     url: https://developers.marketo.com/
@@ -67,4 +68,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: marketo
 ---

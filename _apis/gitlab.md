@@ -31,7 +31,7 @@ apis:
     humanURL: https://docs.gitlab.com/ee/api/rest/index.html
     baseURL: https://api.example.com
     tags:
-      - APIs
+      - API
       - Code
       - DevOps
       - Repositories
@@ -51,6 +51,7 @@ apis:
     overlays:
       - type: APIs.io Search
         url: overlays/gitlab-openapi-original.yaml-openapi-search.yml
+    aid: gitlab:gitlab-rest-api
   - name: GitLab GraphQL API
     description: >-
       GraphQL is a query language for APIs. You can use it to request the exact
@@ -63,7 +64,7 @@ apis:
     humanURL: https://docs.gitlab.com/ee/api/graphql/
     baseURL: https://api.example.com
     tags:
-      - APIs
+      - API
       - Code
       - DevOps
       - Repositories
@@ -79,6 +80,7 @@ apis:
       - type: OpenAPI
         url: https://docs.gitlab.com/ee/api/graphql/#limits
     overlays: []
+    aid: gitlab:gitlab-graphql-api
 common:
   - type: Terms of Service
     url: https://about.gitlab.com/terms/
@@ -97,4 +99,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: gitlab
 ---
