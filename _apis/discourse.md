@@ -25,7 +25,7 @@ apis:
     humanURL: https://developer.example.com
     baseURL: https://api.example.com
     tags:
-      - API
+      - APIs
       - Forums
       - Communities
     properties:
@@ -62,6 +62,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: discourse
 ---

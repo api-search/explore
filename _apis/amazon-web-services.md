@@ -15,7 +15,7 @@ tags:
   - APIs
   - Cloud
 apis:
-  - name: Amazon Certificate Manager (ACM)
+  - name: acm
     description: >-
       <fullname>Certificate Manager</fullname> <p>You can use Certificate
       Manager (ACM) to manage SSL/TLS certificates for your Amazon Web
@@ -27,12 +27,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/acm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -48,11 +47,45 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency">
                   Opting Out of Certificate Transparency Logging</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/acm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/acm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:acm
-  - name: Identity and Access Management Access Analyzer
+  - name: accessanalyzer
     description: >-
       <p>Identity and Access Management Access Analyzer helps you to set,
       verify, and refine your IAM policies by providing a suite of capabilities.
@@ -86,12 +119,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/accessanalyzer-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -210,11 +242,47 @@ apis:
                   findings. The findings help you identify issues and provide
                   actionable recommendations to resolve the issue and enable you
                   to author functional policies that meet security best practic
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/accessanalyzer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/accessanalyzer-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:accessanalyzer
-  - name: AWS Migration Hub
+  - name: AWSMigrationHub
     description: >-
       <p>The AWS Migration Hub API methods help to obtain server and application
       migration status and integrate your resource-specific migration tool by
@@ -226,12 +294,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/awsmigrationhub-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -261,22 +328,55 @@ apis:
                   not. To confirm if an association was found based on the
                   provided details, call
                   <code>ListDiscoveredResources</code>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/awsmigrationhub-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/awsmigrationhub-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:awsmigrationhub
-  - name: Amazon Web Services Account Management
+  - name: account
     description: <p>Operations for Amazon Web Services Account Management</p>
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/account-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -371,11 +471,45 @@ apis:
                   the primary contact operations, see <a
                   href="https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-update-contact.html">Update
                   the primary and alternate contact information<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/account-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/account-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:account
-  - name: Amazon Managed Service for Prometheus
+  - name: amp
     description: >-
       <p>Amazon Managed Service for Prometheus is a serverless,
       Prometheus-compatible monitoring service for container metrics that makes
@@ -398,12 +532,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/amp-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -483,9 +616,45 @@ apis:
               POST:
                 summary: UpdateWorkspaceAlias
                 description: <p>Updates the alias of an existing worksp
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/amp-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/amp-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:amp
   - name: amplifybackend
     description: <p>AWS Amplify Admin API</p>
@@ -493,12 +662,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/amplifybackend-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -647,9 +815,45 @@ apis:
               POST:
                 summary: UpdateBackendStorage
                 description: <p>Updates an existing backend storage resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
     overlays:
       - type: APIs.io Search
         url: overlays/amplifybackend-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/amplifybackend-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:amplifybackend
   - name: apigateway
     description: >-
@@ -662,12 +866,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/apigateway-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -912,9 +1115,43 @@ apis:
                 description: >-
                   <p>Grants a temporary extension to the remaining quota of a
                   usage plan associated with a specified API 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/apigateway-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/apigateway-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:apigateway
   - name: apigatewayv2
     description: <p>Amazon API Gateway V2</p>
@@ -922,12 +1159,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/apigatewayv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1067,9 +1303,41 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Deletes a
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/apigatewayv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/apigatewayv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:apigatewayv2
   - name: acm-pca
     description: >-
@@ -1100,12 +1368,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/acm-pca-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1128,9 +1395,45 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html#s3-policies">Access
                   policies for CRLs in Amazon S3</a>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/acm-pca-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/acm-pca-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:acm-pca
   - name: amplifyuibuilder
     description: >-
@@ -1153,12 +1456,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/amplifyuibuilder-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1245,9 +1547,45 @@ apis:
                   <note> <p>This is for internal use.</p> </note> <p>Amplify
                   uses this action to refresh a previously issued access token
                   that might have expi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/amplifyuibuilder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/amplifyuibuilder-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:amplifyuibuilder
   - name: apigatewaymanagementapi
     description: >-
@@ -1262,12 +1600,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/apigatewaymanagementapi-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1277,9 +1614,43 @@ apis:
               POST:
                 summary: PostToConnection
                 description: <p>Sends the provided data to the specified connect
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/apigatewaymanagementapi-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/apigatewaymanagementapi-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:apigatewaymanagementapi
   - name: appconfig
     description: >-
@@ -1321,12 +1692,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appconfig-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1459,9 +1829,45 @@ apis:
                 description: >-
                   <p>Uses the validators in a configuration profile to validate
                   a configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appconfig-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appconfig-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appconfig
   - name: appconfigdata
     description: >-
@@ -1512,12 +1918,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appconfigdata-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1555,9 +1960,45 @@ apis:
                   <a>GetLatestConfiguration</a> API action, see <a
                   href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration">Retrieving
                   the configuration</a> in the <i>AppConfig User Guide</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appconfigdata-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appconfigdata-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appconfigdata
   - name: appfabric
     description: >-
@@ -1579,12 +2020,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appfabric-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1672,9 +2112,45 @@ apis:
               POST:
                 summary: StopIngestion
                 description: <p>Stops (disables) an ingest
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appfabric-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appfabric-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appfabric
   - name: appflow
     description: >-
@@ -1712,12 +2188,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appflow-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1920,9 +2395,45 @@ apis:
               POST:
                 summary: UpdateFlow
                 description: <p> Updates an existing f
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appflow-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appflow-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appflow
   - name: application-insights
     description: >-
@@ -1944,12 +2455,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/application-insights-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1961,9 +2471,45 @@ apis:
                 description: >-
                   <p>Adds a workload to a component. Each component can have at
                   most five worklo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/application-insights-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/application-insights-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:application-insights
   - name: application-autoscaling
     description: >-
@@ -2005,12 +2551,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/application-autoscaling-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2023,9 +2568,45 @@ apis:
                   <p>Deletes tags from an Application Auto Scaling scalable
                   target. To delete a tag, specify the tag key and the
                   Application Auto Scaling scalable tar
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/application-autoscaling-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/application-autoscaling-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:application-autoscaling
   - name: appintegrations
     description: >-
@@ -2041,12 +2622,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appintegrations-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2123,9 +2703,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes the specified tags from the specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appintegrations-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appintegrations-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appintegrations
   - name: applicationcostprofiler
     description: >-
@@ -2141,12 +2757,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/applicationcostprofiler-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2173,9 +2788,45 @@ apis:
                 description: >-
                   <p>Creates the report definition for a report in Application
                   Cost Profi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/applicationcostprofiler-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/applicationcostprofiler-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:applicationcostprofiler
   - name: appmesh
     description: >-
@@ -2200,12 +2851,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appmesh-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2304,9 +2954,43 @@ apis:
               PUT:
                 summary: UntagResource
                 description: <p>Deletes specified tags from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appmesh-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appmesh-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appmesh
   - name: appsync
     description: >-
@@ -2316,12 +3000,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appsync-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2544,9 +3227,41 @@ apis:
               POST:
                 summary: UpdateApiCache
                 description: <p>Updates the cache for the GraphQL
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appsync-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appsync-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appsync
   - name: appstream
     description: >-
@@ -2573,12 +3288,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/appstream-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2588,9 +3302,45 @@ apis:
               POST:
                 summary: UpdateStack
                 description: <p>Updates the specified fields for the specified st
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/appstream-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/appstream-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:appstream
   - name: amplify
     description: >-
@@ -2606,12 +3356,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/amplify-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2715,9 +3464,45 @@ apis:
               DELETE:
                 summary: StopJob
                 description: <p> Stops a job that is in progress for a branch of an Amplify
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/amplify-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/amplify-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:amplify
   - name: apprunner
     description: >-
@@ -2747,12 +3532,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/apprunner-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2767,9 +3551,45 @@ apis:
                   following states to be updated:</p> <ul> <li> <p> AVAILABLE
                   </p> </li> <li> <p> FAILED_CREATION </p> </li> <li> <p>
                   FAILED_UPDATE </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/apprunner-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/apprunner-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:apprunner
   - name: athena
     description: >-
@@ -2791,12 +3611,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/athena-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2809,9 +3628,45 @@ apis:
                   <p>Updates the workgroup with the specified name. The
                   workgroup's name cannot be changed. Only
                   <code>ConfigurationUpdates</code> can be specif
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/athena-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/athena-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:athena
   - name: autoscaling
     description: >-
@@ -2827,12 +3682,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/autoscaling-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2888,9 +3742,43 @@ apis:
                   <a>DescribePolicies</a> API. If the group has scaling
                   policies, you can update them by calling the
                   <a>PutScalingPolicy</a> 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/autoscaling-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/autoscaling-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:autoscaling
   - name: b2bi
     description: >-
@@ -2913,12 +3801,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/b2bi-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2932,9 +3819,45 @@ apis:
                   transformer describes how to process the incoming EDI
                   documents and extract the necessary information to the output
                   f
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/b2bi-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/b2bi-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:b2bi
   - name: auditmanager
     description: >-
@@ -2971,12 +3894,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/auditmanager-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3446,9 +4368,45 @@ apis:
                 description: >-
                   <p> Validates the integrity of an assessment report in Audit
                   Mana
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/auditmanager-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/auditmanager-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:auditmanager
   - name: arc-zonal-shift
     description: >-
@@ -3485,12 +4443,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/arc-zonal-shift-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3579,9 +4536,45 @@ apis:
                   href="https://docs.aws.amazon.com/r53recovery/latest/dg/arc-zonal-shift.html">Zonal
                   shift</a> in the Amazon Route 53 Application Recovery
                   Controller Developer Gu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/arc-zonal-shift-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/arc-zonal-shift-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:arc-zonal-shift
   - name: autoscaling-plans
     description: >-
@@ -3605,12 +4598,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/autoscaling-plans-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3623,9 +4615,45 @@ apis:
                   <p>Updates the specified scaling plan.</p> <p>You cannot
                   update a scaling plan if it is in the process of being
                   created, updated, or dele
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/autoscaling-plans-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/autoscaling-plans-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:autoscaling-plans
   - name: backup-gateway
     description: >-
@@ -3645,12 +4673,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/backup-gateway-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3664,9 +4691,45 @@ apis:
                   username, and password. Specify which hypervisor to update
                   using the Amazon Resource Name (ARN) of the hypervisor in your
                   requ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/backup-gateway-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/backup-gateway-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:backup-gateway
   - name: backupstorage
     description: The frontend service for Cryo Storage.
@@ -3674,12 +4737,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/backupstorage-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3719,9 +4781,43 @@ apis:
                 description: >-
                   Upload object that can store object metadata String and data
                   blob in single API call using inline chun
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/backupstorage-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/backupstorage-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:backupstorage
   - name: backup
     description: >-
@@ -3733,12 +4829,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/backup-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4225,9 +5320,45 @@ apis:
                   <p>Removes a set of key-value pairs from a recovery point,
                   backup plan, or backup vault identified by an Amazon Resource
                   Name (
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/backup-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/backup-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:backup
   - name: batch
     description: >-
@@ -4250,12 +5381,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/batch-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4532,9 +5662,43 @@ apis:
               POST:
                 summary: UpdateSchedulingPolicy
                 description: <p>Updates a scheduling pol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/batch-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/batch-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:batch
   - name: bcm-data-exports
     description: >-
@@ -4547,12 +5711,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/bcm-data-exports-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4565,9 +5728,43 @@ apis:
                   <p>Updates an existing data export by overwriting all export
                   parameters. All export parameters must be provided in the
                   UpdateExport requ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/bcm-data-exports-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bcm-data-exports-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:bcm-data-exports
   - name: bedrock-agent-runtime
     description: <p>Amazon Bedrock Agent</p>
@@ -4575,12 +5772,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/bedrock-agent-runtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4600,9 +5796,43 @@ apis:
               POST:
                 summary: RetrieveAndGenerate
                 description: <p>RetrieveAndGenerate
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/bedrock-agent-runtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bedrock-agent-runtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:bedrock-agent-runtime
   - name: bedrock
     description: >-
@@ -4612,12 +5842,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/bedrock-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4733,9 +5962,43 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/bedrock/latest/userguide/what-is-service.html">Tagging
                   resources</a> in the Bedrock User Gu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/bedrock-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bedrock-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:bedrock
   - name: bedrock-agent
     description: >-
@@ -4745,12 +6008,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/bedrock-agent-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4832,9 +6094,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Untag a reso
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/bedrock-agent-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bedrock-agent-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:bedrock-agent
   - name: bedrock-runtime
     description: >-
@@ -4844,12 +6142,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/bedrock-runtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4876,9 +6173,43 @@ apis:
                   href="https://docs.aws.amazon.com/bedrock/latest/userguide/api-methods-run.html">Run
                   inference</a> in the Bedrock User Guide.</p> <p>For an example
                   request and response, see Examples (after the Errors secti
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/bedrock-runtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bedrock-runtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:bedrock-runtime
   - name: billingconductor
     description: >-
@@ -4907,12 +6238,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/billingconductor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -5106,9 +6436,45 @@ apis:
               PUT:
                 summary: UpdatePricingRule
                 description: <p> Updates an existing pricing r
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/billingconductor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/billingconductor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:billingconductor
   - name: budgets
     description: >-
@@ -5144,12 +6510,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/budgets-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -5159,9 +6524,45 @@ apis:
               POST:
                 summary: UpdateSubscriber
                 description: <p>Updates a subscri
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/budgets-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/budgets-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:budgets
   - name: ce
     description: >-
@@ -5180,12 +6581,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ce-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -5199,9 +6599,45 @@ apis:
                   Category rules will be used to categorize the current month’s
                   expenses and future expenses. This won’t change categorization
                   for the previous mon
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ce-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ce-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ce
   - name: chime
     description: >-
@@ -5252,12 +6688,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -6788,9 +8223,45 @@ apis:
                   href="https://docs.aws.amazon.com/chime-sdk/latest/dg/migrate-from-chm-namespace.html">Migrating
                   from the Amazon Chime namespace</a> in the <i>Amazon Chime SDK
                   Developer Guide</i>.</p> </im
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime
   - name: chime-sdk-identity
     description: >-
@@ -6805,12 +8276,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-sdk-identity-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -6914,9 +8384,43 @@ apis:
                 description: >-
                   <p>Removes the specified tags from the specified Amazon Chime
                   SDK identity resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-sdk-identity-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-sdk-identity-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime-sdk-identity
   - name: chime-sdk-media-pipelines
     description: >-
@@ -6930,12 +8434,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-sdk-media-pipelines-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -7058,9 +8561,43 @@ apis:
               PUT:
                 summary: UpdateMediaInsightsPipelineStatus
                 description: <p>Updates the status of a media insights pipel
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-sdk-media-pipelines-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-sdk-media-pipelines-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime-sdk-media-pipelines
   - name: chime-sdk-voice
     description: >-
@@ -7073,12 +8610,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-sdk-voice-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -7426,9 +8962,43 @@ apis:
                   Object file that you include in SIP requests. That helps
                   ensure that addresses are routed to the appropriate Public
                   Safety Answering Po
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-sdk-voice-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-sdk-voice-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime-sdk-voice
   - name: chime-sdk-meetings
     description: >-
@@ -7443,12 +9013,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-sdk-meetings-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -7702,9 +9271,43 @@ apis:
                   video or content streams, remote attendees can receive those
                   streams, but only after media renegotiation between the client
                   and the Amazon Chime back-end server.</p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-sdk-meetings-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-sdk-meetings-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime-sdk-meetings
   - name: cleanrooms
     description: >-
@@ -7724,12 +9327,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cleanrooms-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -7918,9 +9520,45 @@ apis:
                 description: >-
                   <p>An estimate of the number of aggregation functions that the
                   member who can query can run given epsilon and noise paramet
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cleanrooms-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cleanrooms-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cleanrooms
   - name: braket
     description: >-
@@ -7933,12 +9571,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/braket-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -8002,9 +9639,43 @@ apis:
               POST:
                 summary: SearchQuantumTasks
                 description: <p>Searches for tasks that match the specified filter val
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/braket-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/braket-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:braket
   - name: cloudcontrol
     description: >-
@@ -8016,12 +9687,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudcontrol-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -8053,9 +9723,43 @@ apis:
                   href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Resource
                   and property types reference</a> in the <i>CloudFormation
                   Users Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudcontrol-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudcontrol-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudcontrol
   - name: clouddirectory
     description: >-
@@ -8073,12 +9777,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/clouddirectory-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -8535,9 +10238,43 @@ apis:
                   <p>Upgrades a published schema under a new minor version
                   revision using the current contents of
                   <code>DevelopmentSchemaArn</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/clouddirectory-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/clouddirectory-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:clouddirectory
   - name: cloudformation
     description: >-
@@ -8564,12 +10301,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudformation-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -8583,9 +10319,45 @@ apis:
                   if the template is valid JSON. If it isn't, CloudFormation
                   checks if the template is valid YAML. If both these checks
                   fail, CloudFormation returns a template validation er
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudformation-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudformation-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudformation
   - name: cloud9
     description: >-
@@ -8620,12 +10392,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloud9-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -8637,9 +10408,45 @@ apis:
                 description: >-
                   <p>Changes the settings of an existing environment member for
                   an Cloud9 development environm
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloud9-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloud9-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloud9
   - name: cloudfront
     description: >-
@@ -8653,12 +10460,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudfront-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -9373,9 +11179,43 @@ apis:
                   modified and those that you didn't.</p> </li> </ol> <p>You
                   cannot update a real-time log configuration's
                   <code>Name</code> or <code>ARN</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/cloudfront-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudfront-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudfront
   - name: cleanroomsml
     description: >-
@@ -9398,12 +11238,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cleanroomsml-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -9463,9 +11302,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes metadata tags from a specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cleanroomsml-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cleanroomsml-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cleanroomsml
   - name: chime-sdk-messaging
     description: >-
@@ -9479,12 +11354,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/chime-sdk-messaging-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -9829,9 +11703,43 @@ apis:
                   request header is mandatory. Use the ARN of the
                   <code>AppInstanceUser</code> or <code>AppInstanceBot</code>
                   that makes the API call as the value in the header.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/chime-sdk-messaging-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chime-sdk-messaging-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:chime-sdk-messaging
   - name: cloudhsmv2
     description: >-
@@ -9843,12 +11751,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudhsmv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -9860,9 +11767,43 @@ apis:
                 description: >-
                   <p>Removes the specified tag or tags from the specified AWS
                   CloudHSM clus
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudhsmv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudhsmv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudhsmv2
   - name: cloudsearchdomain
     description: >-
@@ -9881,12 +11822,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudsearchdomain-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -9974,9 +11914,43 @@ apis:
                   indexing, see <a
                   href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading
                   Data</a> in the <i>Amazon CloudSearch Developer Guide</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudsearchdomain-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudsearchdomain-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudsearchdomain
   - name: cloudsearch
     description: >-
@@ -9995,12 +11969,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudsearch-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10016,9 +11989,45 @@ apis:
                   href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html"
                   target="_blank"> Configuring Access for an Amazon CloudSearch
                   Domain<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudsearch-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudsearch-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudsearch
   - name: cloudtrail-data
     description: >-
@@ -10035,12 +12044,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudtrail-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10055,9 +12063,45 @@ apis:
                   records (also called <i>payload</i>) of events that you want
                   CloudTrail to ingest. You can add up to 100 of these events
                   (or up to 1 MB) per <code>PutAuditEvents</code> requ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudtrail-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudtrail-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudtrail-data
   - name: cloudhsm
     description: >-
@@ -10079,12 +12123,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudhsm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10113,9 +12156,45 @@ apis:
                   tag, specify only the tag key to remove (not the value). To
                   overwrite the value for an existing tag, use
                   <a>AddTagsToResource<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudhsm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudhsm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudhsm
   - name: codecatalyst
     description: >-
@@ -10194,12 +12273,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codecatalyst-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10370,9 +12448,45 @@ apis:
                   <p>Verifies whether the calling user has a valid Amazon
                   CodeCatalyst login and session. If successful, this returns
                   the ID of the user in Amazon CodeCatal
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/codecatalyst-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codecatalyst-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codecatalyst
   - name: cloudfront-keyvaluestore
     description: >-
@@ -10382,12 +12496,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudfront-keyvaluestore-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10409,9 +12522,43 @@ apis:
                 description: >-
                   <p>Puts or Deletes multiple key value pairs in a single,
                   all-or-nothing operat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudfront-keyvaluestore-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudfront-keyvaluestore-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudfront-keyvaluestore
   - name: codebuild
     description: >-
@@ -10431,12 +12578,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codebuild-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10449,9 +12595,45 @@ apis:
                   <p> Updates the webhook associated with an CodeBuild build
                   project. </p> <note> <p> If you use Bitbucket for your
                   repository, <code>rotateSecret</code> is ignored. </p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codebuild-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codebuild-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codebuild
   - name: codeguru-reviewer
     description: >-
@@ -10475,12 +12657,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codeguru-reviewer-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -10550,9 +12731,45 @@ apis:
                   <p>Stores customer feedback for a CodeGuru Reviewer
                   recommendation. When this API is called again with different
                   reactions the previous feedback is overwrit
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codeguru-reviewer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codeguru-reviewer-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codeguru-reviewer
   - name: codeartifact
     description: >-
@@ -10701,12 +12918,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codeartifact-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11007,9 +13223,43 @@ apis:
                   <code>Published</code>, or <code>Unlisted</code>. To set the
                   status of a package version to <code>Disposed</code>, use <a
                   href="https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_DisposePackageVersions.html">DisposePackageVersions<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codeartifact-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codeartifact-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codeartifact
   - name: cloudtrail
     description: >-
@@ -11037,12 +13287,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cloudtrail-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11061,9 +13310,45 @@ apis:
                   <code>UpdateTrail</code> must be called from the Region in
                   which the trail was created; otherwise, an
                   <code>InvalidHomeRegionException</code> is thr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cloudtrail-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cloudtrail-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cloudtrail
   - name: codedeploy
     description: >-
@@ -11131,12 +13416,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codedeploy-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11146,9 +13430,45 @@ apis:
               POST:
                 summary: UpdateDeploymentGroup
                 description: <p>Changes information about a deployment gr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codedeploy-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codedeploy-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codedeploy
   - name: codeguru-security
     description: >-
@@ -11167,12 +13487,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codeguru-security-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11236,9 +13555,45 @@ apis:
                 description: >-
                   <p>Use to update account-level configuration with an
                   encryption
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codeguru-security-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codeguru-security-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codeguru-security
   - name: codecommit
     description: >-
@@ -11424,12 +13779,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codecommit-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11447,9 +13801,45 @@ apis:
                   repository names, see <a
                   href="https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html">Quotas</a>
                   in the CodeCommit User Gu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codecommit-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codecommit-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codecommit
   - name: codeguruprofiler
     description: >-
@@ -11476,12 +13866,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codeguruprofiler-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11658,9 +14047,45 @@ apis:
                 description: >-
                   <p>Sends feedback to CodeGuru Profiler about whether the
                   anomaly detected by the analysis is useful or 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codeguruprofiler-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codeguruprofiler-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codeguruprofiler
   - name: codestar
     description: >-
@@ -11700,12 +14125,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codestar-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11719,9 +14143,45 @@ apis:
                   is not project-specific. Information in the user profile is
                   displayed wherever the user's information appears to other
                   users in AWS CodeSt
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codestar-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codestar-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codestar
   - name: codepipeline
     description: >-
@@ -11815,12 +14275,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codepipeline-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11835,9 +14294,45 @@ apis:
                   <code>UpdatePipeline</code> to provide the full structure of
                   the pipeline. Updating the pipeline increases the version
                   number of the pipeline b
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codepipeline-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codepipeline-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codepipeline
   - name: codestar-notifications
     description: >-
@@ -11875,12 +14370,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codestar-notifications-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -11969,9 +14463,45 @@ apis:
                   the rule, and the targets that receive the notifications.</p>
                   <note> <p>To add or remove tags for a notification rule, you
                   must use <a>TagResource</a> and <a>UntagResource</a>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codestar-notifications-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codestar-notifications-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codestar-notifications
   - name: codestar-connections
     description: >-
@@ -12023,12 +14553,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/codestar-connections-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12040,9 +14569,45 @@ apis:
                 description: >-
                   <p>Updates the sync configuration for your connection and a
                   specified external Git reposit
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/codestar-connections-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/codestar-connections-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:codestar-connections
   - name: cognito-idp
     description: >-
@@ -12107,12 +14672,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cognito-idp-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12140,9 +14704,45 @@ apis:
                   href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html">Using
                   the Amazon Cognito user pools API and user pool
                   endpoints</a>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cognito-idp-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cognito-idp-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cognito-idp
   - name: cognito-sync
     description: >-
@@ -12171,12 +14771,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cognito-sync-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12304,9 +14903,45 @@ apis:
                   modified by another device.</p><p>This API can only be called
                   with temporary credentials provided by Cognito Identity. You
                   cannot call this API with developer credenti
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cognito-sync-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cognito-sync-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cognito-sync
   - name: comprehendmedical
     description: >-
@@ -12322,12 +14957,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/comprehendmedical-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12337,9 +14971,45 @@ apis:
               POST:
                 summary: StopSNOMEDCTInferenceJob
                 description: <p> Stops an InferSNOMEDCT inference job in progr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/comprehendmedical-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/comprehendmedical-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:comprehendmedical
   - name: cognito-identity
     description: >-
@@ -12364,12 +15034,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cognito-identity-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12381,9 +15050,45 @@ apis:
                 description: >-
                   <p>Updates an identity pool.</p> <p>You must use AWS Developer
                   credentials to call this 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cognito-identity-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cognito-identity-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cognito-identity
   - name: connect
     description: >-
@@ -12407,12 +15112,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/connect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14046,9 +16750,45 @@ apis:
                 description: >-
                   <p>Updates the view metadata. Note that either
                   <code>Name</code> or <code>Description</code> must be provi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/connect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/connect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:connect
   - name: config
     description: >-
@@ -14080,12 +16820,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/config-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14095,9 +16834,45 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Deletes specified tags from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/config-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/config-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:config
   - name: connect-contact-lens
     description: >-
@@ -14115,12 +16890,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/connect-contact-lens-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14132,9 +16906,45 @@ apis:
                 description: >-
                   <p>Provides a list of analysis segments for a real-time
                   analysis sess
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/connect-contact-lens-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/connect-contact-lens-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:connect-contact-lens
   - name: compute-optimizer
     description: >-
@@ -14157,12 +16967,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/compute-optimizer-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14188,9 +16997,45 @@ apis:
                   href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/using-service-linked-roles.html">Using
                   Service-Linked Roles for Compute Optimizer</a> in the
                   <i>Compute Optimizer User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/compute-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/compute-optimizer-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:compute-optimizer
   - name: connectparticipant
     description: >-
@@ -14208,12 +17053,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/connectparticipant-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14338,9 +17182,45 @@ apis:
                   Amazon Connect Participant Service APIs do not use <a
                   href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature
                   Version 4 authentication<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/connectparticipant-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/connectparticipant-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:connectparticipant
   - name: connectcases
     description: >-
@@ -14355,12 +17235,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/connectcases-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14578,9 +17457,45 @@ apis:
               PUT:
                 summary: UpdateField
                 description: <p>Updates the properties of an existing fi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/connectcases-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/connectcases-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:connectcases
   - name: connectcampaigns
     description: <p>Provide APIs to create and manage Amazon Connect Campaigns.</p>
@@ -14588,12 +17503,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/connectcampaigns-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14687,9 +17601,43 @@ apis:
                 description: >-
                   <p>Updates the outbound call config of a campaign. This API is
                   idempot
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/connectcampaigns-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/connectcampaigns-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:connectcampaigns
   - name: comprehend
     description: >-
@@ -14701,12 +17649,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/comprehend-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14716,9 +17663,43 @@ apis:
               POST:
                 summary: UpdateFlywheel
                 description: <p>Update the configuration information for an existing flywh
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/comprehend-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/comprehend-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:comprehend
   - name: cost-optimization-hub
     description: >-
@@ -14732,12 +17713,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cost-optimization-hub-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14751,9 +17731,43 @@ apis:
                   account-specific preferences into the service. These
                   preferences impact how the savings associated with
                   recommendations are presen
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cost-optimization-hub-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cost-optimization-hub-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cost-optimization-hub
   - name: controltower
     description: >-
@@ -14830,12 +17844,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/controltower-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15043,9 +18056,45 @@ apis:
                   asynchronous operation that updates the landing zone based on
                   the new landing zone version, or on the changed parameters
                   specified in the updated manifest fi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/controltower-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/controltower-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:controltower
   - name: databrew
     description: >-
@@ -15058,12 +18107,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/databrew-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15217,9 +18265,43 @@ apis:
               PUT:
                 summary: UpdateRecipeJob
                 description: <p>Modifies the definition of an existing DataBrew recipe
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/databrew-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/databrew-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:databrew
   - name: customer-profiles
     description: >-
@@ -15236,12 +18318,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/customer-profiles-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15535,9 +18616,45 @@ apis:
                   operation supports searching for profiles with a minimum of 1
                   key-value(s) pair and up to 5 key-value(s) pairs using either
                   <code>AND</code> or <code>OR</code> lo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/customer-profiles-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/customer-profiles-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:customer-profiles
   - name: cur
     description: >-
@@ -15557,12 +18674,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/cur-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15572,9 +18688,45 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Disassociates a set of tags from a report definit
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/cur-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/cur-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:cur
   - name: datasync
     description: >-
@@ -15590,12 +18742,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/datasync-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15612,9 +18763,45 @@ apis:
                   href="https://docs.aws.amazon.com/datasync/latest/userguide/API_Options.html#DataSync-Type-Options-BytesPerSecond">BytesPerSecond</a>
                   </code>, which throttles bandwidth for a running or queued
                   task execution.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/datasync-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/datasync-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:datasync
   - name: datazone
     description: >-
@@ -15629,12 +18816,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/datazone-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -15900,9 +19086,43 @@ apis:
                 description: >-
                   <p>Updates the status of the specified subscription grant
                   status in Amazon DataZ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/datazone-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/datazone-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:datazone
   - name: dataexchange
     description: >-
@@ -15930,12 +19150,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/dataexchange-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16013,9 +19232,45 @@ apis:
               POST:
                 summary: SendDataSetNotification
                 description: <p>The type of event associated with the data
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/dataexchange-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/dataexchange-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:dataexchange
   - name: datapipeline
     description: >-
@@ -16043,12 +19298,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/datapipeline-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16060,9 +19314,45 @@ apis:
                 description: >-
                   <p>Validates the specified pipeline definition to ensure that
                   it is well formed and can be run without er
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/datapipeline-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/datapipeline-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:datapipeline
   - name: devicefarm
     description: >-
@@ -16082,12 +19372,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/devicefarm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16099,9 +19388,45 @@ apis:
                 description: >-
                   <p>Updates information about an Amazon Virtual Private Cloud
                   (VPC) endpoint configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/devicefarm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/devicefarm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:devicefarm
   - name: directconnect
     description: >-
@@ -16119,12 +19444,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/directconnect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16145,9 +19469,45 @@ apis:
                   <a>DescribeConnections</a>. To check whether your virtual
                   interface supports jumbo frames, call
                   <a>DescribeVirtualInterfaces<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/directconnect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/directconnect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:directconnect
   - name: detective
     description: >-
@@ -16204,12 +19564,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/detective-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16487,9 +19846,45 @@ apis:
                   <p>Updates the configuration for the Organizations integration
                   in the current Region. Can only be called by the Detective
                   administrator account for the organizat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/detective-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/detective-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:detective
   - name: dlm
     description: >-
@@ -16506,12 +19901,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/dlm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16537,9 +19931,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes the specified tags from the specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/dlm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/dlm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:dlm
   - name: devops-guru
     description: >-
@@ -16566,12 +19996,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/devops-guru-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16793,9 +20222,45 @@ apis:
                   You can specify up to 500 Amazon Web Services CloudFormation
                   stacks. This method also creates the IAM role required for you
                   to use DevOps Gu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/devops-guru-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/devops-guru-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:devops-guru
   - name: dax
     description: >-
@@ -16810,12 +20275,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/dax-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16825,9 +20289,43 @@ apis:
               POST:
                 summary: UpdateSubnetGroup
                 description: <p>Modifies an existing subnet gr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/dax-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/dax-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:dax
   - name: discovery
     description: >-
@@ -16899,12 +20397,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/discovery-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16914,9 +20411,45 @@ apis:
               POST:
                 summary: UpdateApplication
                 description: <p>Updates metadata about an applicat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/discovery-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/discovery-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:discovery
   - name: ds
     description: >-
@@ -16941,12 +20474,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ds-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -16960,9 +20492,45 @@ apis:
                   to configure and verify trust relationships.</p> <p>This
                   action verifies a trust relationship between your Managed
                   Microsoft AD directory and an external dom
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ds-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ds-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ds
   - name: drs
     description: <p>AWS Elastic Disaster Recovery Service.</p>
@@ -16970,12 +20538,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/drs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17299,9 +20866,43 @@ apis:
               POST:
                 summary: UpdateReplicationConfigurationTemplate
                 description: <p>Updates a ReplicationConfigurationTemplate by
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/drs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/drs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:drs
   - name: dms
     description: >-
@@ -17320,12 +20921,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/dms-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17351,9 +20951,45 @@ apis:
                   href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html#CHAP_Events-migrate-to-eventbridge">Migrating
                   event subscriptions to Amazon EventBridge</a> in the <i>Amazon
                   Web Services Database Migration Service User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/dms-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/dms-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:dms
   - name: ebs
     description: >-
@@ -17388,12 +21024,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ebs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17475,9 +21110,45 @@ apis:
                   href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/error-retries.html">Error
                   retries</a> in the <i>Amazon Elastic Compute Cloud User
                   Guide</i>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ebs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ebs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ebs
   - name: docdb
     description: >-
@@ -17490,12 +21161,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/docdb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17510,9 +21180,43 @@ apis:
                   <i>available</i> state. For more information, see <a
                   href="https://docs.aws.amazon.com/documentdb/latest/developerguide/db-cluster-stop-start.html">Stopping
                   and Starting an Amazon DocumentDB Cluster<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/docdb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/docdb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:docdb
   - name: docdb-elastic
     description: <p>The new Amazon Elastic DocumentDB service endpoint.</p>
@@ -17520,12 +21224,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/docdb-elastic-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17574,9 +21277,43 @@ apis:
               POST:
                 summary: RestoreClusterFromSnapshot
                 description: <p>Restores a Elastic DocumentDB cluster from a snaps
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/docdb-elastic-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/docdb-elastic-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:docdb-elastic
   - name: ec2-instance-connect
     description: >-
@@ -17587,12 +21324,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ec2-instance-connect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17608,9 +21344,43 @@ apis:
                   SSH. For more information, see <a
                   href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-serial-console.html">EC2
                   Serial Console</a> in the <i>Amazon EC2 User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ec2-instance-connect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ec2-instance-connect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ec2-instance-connect
   - name: dynamodb
     description: >-
@@ -17622,12 +21392,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/dynamodb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17664,9 +21433,45 @@ apis:
                   standard delete operation.</p> <p>For more information, see <a
                   href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html">Time
                   To Live</a> in the Amazon DynamoDB Developer Gui
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/dynamodb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/dynamodb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:dynamodb
   - name: ec2
     description: >-
@@ -17679,12 +21484,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ec2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -17700,9 +21504,45 @@ apis:
                   ranges each time.</p> <p>It can take a few minutes before
                   traffic to the specified addresses stops routing to Amazon Web
                   Services because of BGP propagation del
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ec2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ec2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ec2
   - name: eks
     description: >-
@@ -17722,12 +21562,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/eks-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18054,9 +21893,45 @@ apis:
                   <code>force</code> the update if Amazon EKS is unable to drain
                   the nodes as a result of a <code>Pod</code> disruption budget
                   is
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/eks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/eks-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:eks
   - name: ecr
     description: >-
@@ -18075,12 +21950,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ecr-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18095,9 +21969,45 @@ apis:
                   retrieve the contents of the Amazon Web Services Secrets
                   Manager secret, verify the syntax, and then validate that
                   authentication to the upstream registry is success
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ecr-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ecr-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ecr
   - name: ecs
     description: >-
@@ -18121,12 +22031,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ecs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18142,9 +22051,45 @@ apis:
                   href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html">Amazon
                   ECS Deployment Types</a> in the <i>Amazon Elastic Container
                   Service Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ecs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ecs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ecs
   - name: elasticache
     description: >-
@@ -18162,12 +22107,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticache-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18179,9 +22123,45 @@ apis:
                 description: >-
                   <p> Async API to test connection between source and target
                   replication gro
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elasticache-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticache-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticache
   - name: ecr-public
     description: >-
@@ -18200,12 +22180,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ecr-public-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18224,9 +22203,45 @@ apis:
                   customers for pulling and pushing images. In most cases, you
                   should use the <code>docker</code> CLI to pull, tag, and push
                   images.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ecr-public-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ecr-public-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ecr-public
   - name: elasticfilesystem
     description: >-
@@ -18244,12 +22259,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticfilesystem-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18554,9 +22568,45 @@ apis:
                   <p>Updates protection on the file system.</p> <p>This
                   operation requires permissions for the
                   <code>elasticfilesystem:UpdateFileSystemProtection</code> acti
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/elasticfilesystem-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticfilesystem-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticfilesystem
   - name: elasticloadbalancing
     description: >-
@@ -18586,12 +22636,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticloadbalancing-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18612,9 +22661,45 @@ apis:
                   Session Stickiness</a>, and <a
                   href="https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html#enable-sticky-sessions-application">Application-Controlled
                   Session Stickiness</a> in the <i>Classic Load Balancers Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elasticloadbalancing-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticloadbalancing-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticloadbalancing
   - name: elasticbeanstalk
     description: >-
@@ -18636,12 +22721,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticbeanstalk-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18656,9 +22740,45 @@ apis:
                   those values are valid.</p> <p>This action returns a list of
                   messages indicating any errors or warnings associated with the
                   selection of option val
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elasticbeanstalk-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticbeanstalk-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticbeanstalk
   - name: elastic-inference
     description: >-
@@ -18675,12 +22795,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elastic-inference-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18747,9 +22866,45 @@ apis:
                   Amazon EI at least once during the past 30-day period are
                   considered current customers and will be able to continue
                   using the servi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elastic-inference-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elastic-inference-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elastic-inference
   - name: eks-auth
     description: >-
@@ -18759,12 +22914,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/eks-auth-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18781,9 +22935,43 @@ apis:
                   Amazon Web Services services; if credentials from an EKS Pod
                   Identity association are available in the pod, the latest
                   versions of the SDKs use them automatica
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/eks-auth-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/eks-auth-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:eks-auth
   - name: elasticloadbalancingv2
     description: >-
@@ -18814,12 +23002,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticloadbalancingv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18837,9 +23024,45 @@ apis:
                   Balancer you must include all subnets that were enabled
                   previously, with their existing configurations, plus any
                   additional subn
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elasticloadbalancingv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticloadbalancingv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticloadbalancingv2
   - name: elasticmapreduce
     description: >-
@@ -18852,12 +23075,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elasticmapreduce-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18869,9 +23091,43 @@ apis:
                 description: >-
                   <p>Updates the session policy attached to the user or group
                   for the specified Amazon EMR Stu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elasticmapreduce-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elasticmapreduce-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elasticmapreduce
   - name: emr-containers
     description: >-
@@ -18901,12 +23157,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/emr-containers-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -18996,9 +23251,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes tags from resour
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/emr-containers-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/emr-containers-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:emr-containers
   - name: elastictranscoder
     description: >-
@@ -19008,12 +23299,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/elastictranscoder-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19114,9 +23404,41 @@ apis:
                   them; if you pause the pipeline to which you submitted the
                   jobs, you have more time to get the job IDs for the jobs that
                   you want to cancel, and to send a <a>CancelJob</a> reque
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/elastictranscoder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/elastictranscoder-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:elastictranscoder
   - name: email
     description: >-
@@ -19145,12 +23467,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/email-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19166,9 +23487,45 @@ apis:
                   operation, a verification email is sent to the specified
                   address.</p> <p>You can execute this operation no more than
                   once per sec
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/email-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/email-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:email
   - name: emr-serverless
     description: >-
@@ -19193,12 +23550,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/emr-serverless-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19252,9 +23608,45 @@ apis:
                   <p>Stops a specified application and releases initial capacity
                   if configured. All scheduled and running jobs must be
                   completed or cancelled before stopping an applicat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/emr-serverless-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/emr-serverless-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:emr-serverless
   - name: es
     description: >-
@@ -19275,12 +23667,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/es-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19588,9 +23979,45 @@ apis:
                 description: >-
                   <p>Allows you to either upgrade your domain or perform an
                   Upgrade eligibility check to a compatible Elasticsearch vers
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/es-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/es-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:es
   - name: entitlement.marketplace
     description: >-
@@ -19607,12 +24034,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/entitlementmarketplace-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19625,9 +24051,45 @@ apis:
                   <p>GetEntitlements retrieves entitlement values for a given
                   product. The results can be filtered based on customer
                   identifier or product dimensi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/entitlementmarketplace-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/entitlementmarketplace-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:entitlementmarketplace
   - name: entityresolution
     description: >-
@@ -19649,12 +24111,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/entityresolution-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19758,9 +24219,45 @@ apis:
                   Resolution resource. In Entity Resolution,
                   <code>SchemaMapping</code>, and <code>MatchingWorkflow</code>
                   can be tag
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/entityresolution-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/entityresolution-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:entityresolution
   - name: eventbridge
     description: >-
@@ -19783,12 +24280,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/eventbridge-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19803,9 +24299,45 @@ apis:
                   href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html">Making
                   applications Regional-fault tolerant with global endpoints and
                   event replication</a> in the <i>Amazon EventBridge User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/eventbridge-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/eventbridge-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:eventbridge
   - name: events
     description: >-
@@ -19828,12 +24360,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/events-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19843,9 +24374,45 @@ apis:
               POST:
                 summary: UpdateConnection
                 description: <p>Updates settings for a connect
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/events-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/events-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:events
   - name: firehose
     description: >-
@@ -19858,12 +24425,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/firehose-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -19907,9 +24473,43 @@ apis:
                   retrieved using <a>DescribeDeliveryStream</a>. Use the new
                   version ID to set <code>CurrentDeliveryStreamVersionId</code>
                   in the next c
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/firehose-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/firehose-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:firehose
   - name: evidently
     description: >-
@@ -19928,12 +24528,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/evidently-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20159,9 +24758,45 @@ apis:
                   other experiment results that you can view.</p> <p>You can't
                   specify both <code>cloudWatchLogs</code> and
                   <code>s3Destination</code> in the same operat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/evidently-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/evidently-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:evidently
   - name: forecast
     description: <p>Provides APIs for creating and managing Amazon Forecast resources.</p>
@@ -20169,12 +24804,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/forecast-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20190,9 +24824,43 @@ apis:
                   dataset group to create a predictor. Use the <a
                   href="https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html">DescribeDatasetGroup</a>
                   operation to get the status.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/forecast-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/forecast-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:forecast
   - name: fis
     description: >-
@@ -20205,12 +24873,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/fis-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20284,9 +24951,43 @@ apis:
               GET:
                 summary: ListTargetResourceTypes
                 description: <p>Lists the target resource ty
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/fis-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/fis-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:fis
   - name: forecastquery
     description: <p>Provides APIs for creating and managing Amazon Forecast resources.</p>
@@ -20294,12 +24995,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/forecastquery-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20309,9 +25009,43 @@ apis:
               POST:
                 summary: QueryWhatIfForecast
                 description: <p>Retrieves a what-if forec
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/forecastquery-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/forecastquery-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:forecastquery
   - name: frauddetector
     description: >-
@@ -20338,12 +25072,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/frauddetector-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20353,9 +25086,45 @@ apis:
               POST:
                 summary: UpdateVariable
                 description: <p>Updates a varia
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/frauddetector-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/frauddetector-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:frauddetector
   - name: fms
     description: >-
@@ -20372,12 +25141,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/fms-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20387,9 +25155,45 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Removes one or more tags from an Amazon Web Services resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/fms-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/fms-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:fms
   - name: gamelift
     description: >-
@@ -20437,12 +25241,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/gamelift-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20459,9 +25262,45 @@ apis:
                   string.</p> <p> <b>Learn more</b> </p> <ul> <li> <p> <a
                   href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html">Build
                   a rule set</a> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/gamelift-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/gamelift-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:gamelift
   - name: freetier
     description: >-
@@ -20480,12 +25319,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/freetier-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20497,9 +25335,45 @@ apis:
                 description: >-
                   <p>Returns a list of all Free Tier usage objects that match
                   your filt
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/freetier-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/freetier-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:freetier
   - name: globalaccelerator
     description: >-
@@ -20563,12 +25437,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/globalaccelerator-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -20588,9 +25461,45 @@ apis:
                   href="https://docs.aws.amazon.com/global-accelerator/latest/dg/using-byoip.html">Bring
                   your own IP addresses (BYOIP)</a> in the <i>Global Accelerator
                   Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/globalaccelerator-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/globalaccelerator-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:globalaccelerator
   - name: glacier
     description: >-
@@ -20624,12 +25533,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/glacier-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21148,9 +26056,45 @@ apis:
                   an Archive in Amazon Glacier</a> and <a
                   href="https://docs.aws.amazon.com/amazonglacier/latest/dev/api-archive-post.html">Upload
                   Archive</a> in the <i>Amazon Glacier Developer Guide</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/glacier-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/glacier-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:glacier
   - name: finspace-data
     description: <p> The FinSpace APIs let you take actions inside the FinSpace.</p>
@@ -21158,12 +26102,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/finspace-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21277,9 +26220,43 @@ apis:
                   temporary one. Only a superuser can reset password for other
                   users. Resetting the password immediately invalidates the
                   previous password associated with the u
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/finspace-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/finspace-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:finspace-data
   - name: finspace
     description: >-
@@ -21289,12 +26266,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/finspace-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21432,9 +26408,43 @@ apis:
                   you cannot change it again. Network update might require
                   termination of any clusters that are running in the existing
                   netw
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/finspace-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/finspace-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:finspace
   - name: fsx
     description: >-
@@ -21444,12 +26454,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/fsx-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21461,9 +26470,43 @@ apis:
                 description: >-
                   <p>Updates the configuration of an Amazon FSx for NetApp ONTAP
                   or Amazon FSx for OpenZFS vol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/fsx-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/fsx-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:fsx
   - name: greengrassv2
     description: >-
@@ -21487,12 +26530,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/greengrassv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21753,9 +26795,45 @@ apis:
                   IoT device certificate. For more information, see <a
                   href="https://docs.aws.amazon.com/general/latest/gr/greengrass.html">IoT
                   Greengrass endpoints and quotas</a>.</p> </im
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/greengrassv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/greengrassv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:greengrassv2
   - name: glue
     description: >-
@@ -21765,12 +26843,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/glue-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21780,9 +26857,43 @@ apis:
               POST:
                 summary: UpdateWorkflow
                 description: <p>Updates an existing workf
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/glue-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/glue-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:glue
   - name: grafana
     description: >-
@@ -21800,12 +26911,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/grafana-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -21890,9 +27000,45 @@ apis:
                   <p>Lists available versions of Grafana. These are available
                   when calling <code>CreateWorkspace</code>. Optionally, include
                   a workspace to list the versions to which it can be upgra
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/grafana-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/grafana-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:grafana
   - name: guardduty
     description: >-
@@ -21923,12 +27069,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/guardduty-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22365,9 +27510,45 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_regions.html">Regions
                   and endpoints<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/guardduty-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/guardduty-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:guardduty
   - name: greengrass
     description: >-
@@ -22382,12 +27563,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/greengrass-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22625,9 +27805,43 @@ apis:
                   cannot start a new bulk deployment while a previous deployment
                   is in the ''Stopping'' state. This action doesn't rollback
                   completed deployments or cancel pending depl
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/greengrass-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/greengrass-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:greengrass
   - name: healthlake
     description: >-
@@ -22638,12 +27852,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/healthlake-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22653,9 +27866,43 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p> Removes tags from a data st
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/healthlake-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/healthlake-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:healthlake
   - name: honeycode
     description: >-
@@ -22667,12 +27914,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/honeycode-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22792,9 +28038,43 @@ apis:
                   import job on a table. This API will only return the id of the
                   job that was started. To find out the status of the import
                   request, you need to call the DescribeTableDataImportJob A
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/honeycode-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/honeycode-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:honeycode
   - name: iam
     description: >-
@@ -22812,12 +28092,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iam-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22854,9 +28133,45 @@ apis:
                   using the Query API with IAM, see <a
                   href="https://docs.aws.amazon.com/IAM/latest/UserGuide/IAM_UsingQueryAPI.html">Making
                   query requests</a> in the <i>IAM User Guide</i>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iam-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iam-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iam
   - name: groundstation
     description: >-
@@ -22869,12 +28184,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/groundstation-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -22982,9 +28296,43 @@ apis:
                 description: >-
                   <note> <p> For use by AWS Ground Station Agent and shouldn't
                   be called directly.</p> </note> <p>Update the status of the ag
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/groundstation-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/groundstation-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:groundstation
   - name: identitystore
     description: >-
@@ -23001,12 +28349,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/identitystore-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23018,9 +28365,45 @@ apis:
                 description: >-
                   <p>For the specified user in the specified identity store,
                   updates the user metadata and attribu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/identitystore-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/identitystore-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:identitystore
   - name: imagebuilder
     description: >-
@@ -23033,12 +28416,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/imagebuilder-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23510,9 +28892,43 @@ apis:
               PUT:
                 summary: UpdateLifecyclePolicy
                 description: <p>Update the specified lifecycle pol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/imagebuilder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/imagebuilder-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:imagebuilder
   - name: importexport
     description: >-
@@ -23527,12 +28943,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/importexport-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23589,9 +29004,43 @@ apis:
                   original manifest file. You can only use the operation after a
                   CreateJob request but before the data transfer starts and you
                   can only use it on jobs 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/importexport-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/importexport-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:importexport
   - name: inspector-scan
     description: >-
@@ -23602,12 +29051,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/inspector-scan-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23621,9 +29069,43 @@ apis:
                   vulnerabilities discovered in that SBOM. You can generate
                   compatible SBOMs for your resources using the <a
                   href="">Amazon Inspector SBOM generator<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/inspector-scan-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/inspector-scan-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:inspector-scan
   - name: health
     description: >-
@@ -23680,12 +29162,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/health-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23719,9 +29200,45 @@ apis:
                   view feature. For more information, see <a
                   href="https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html">Aggregating
                   Health events</a> in the <i>Health User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/health-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/health-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:health
   - name: inspector
     description: >-
@@ -23734,12 +29251,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/inspector-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -23753,9 +29269,43 @@ apis:
                   of the assessment target.</p> <p>If resourceGroupArn is not
                   specified, all EC2 instances in the current AWS account and
                   region are included in the assessment tar
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/inspector-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/inspector-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:inspector
   - name: iot
     description: >-
@@ -23785,12 +29335,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25162,9 +30711,47 @@ apis:
                   specification.</p> <p>Requires permission to access the <a
                   href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ValidateSecurityProfileBehaviors</a>
                   act
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/iot-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot
   - name: iot-jobs-data
     description: >-
@@ -25186,12 +30773,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot-jobs-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25213,9 +30799,45 @@ apis:
                 description: >-
                   <p>Gets and starts the next pending (status IN_PROGRESS or
                   QUEUED) job execution for a th
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iot-jobs-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot-jobs-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot-jobs-data
   - name: iot-roborunner
     description: >-
@@ -25225,12 +30847,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot-roborunner-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25316,9 +30937,43 @@ apis:
               POST:
                 summary: UpdateWorkerFleet
                 description: <p>Grants permission to update a worker f
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iot-roborunner-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot-roborunner-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot-roborunner
   - name: internetmonitor
     description: >-
@@ -25355,12 +31010,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/internetmonitor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25462,9 +31116,45 @@ apis:
               DELETE:
                 summary: StopQuery
                 description: <p>Stop a query that is progress for a specific moni
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/internetmonitor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/internetmonitor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:internetmonitor
   - name: iotanalytics
     description: >-
@@ -25495,12 +31185,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotanalytics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25594,9 +31283,45 @@ apis:
                 description: >-
                   <p>Starts the reprocessing of raw message data through the
                   pipel
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotanalytics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotanalytics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotanalytics
   - name: inspector2
     description: >-
@@ -25607,12 +31332,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/inspector2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -25950,9 +31674,43 @@ apis:
                 description: >-
                   <p>Updates the configurations for your Amazon Inspector
                   organizat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/inspector2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/inspector2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:inspector2
   - name: iotdeviceadvisor
     description: >-
@@ -25972,12 +31730,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotdeviceadvisor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26054,9 +31811,45 @@ apis:
                   running.</p> <p>Requires permission to access the <a
                   href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopSuiteRun</a>
                   act
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotdeviceadvisor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotdeviceadvisor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotdeviceadvisor
   - name: iot1click-projects
     description: <p>The AWS IoT 1-Click Projects API Reference</p>
@@ -26064,12 +31857,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot1click-projects-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26117,9 +31909,43 @@ apis:
                 description: >-
                   <p>Removes one or more tags (metadata key/value pairs) from a
                   resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iot1click-projects-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot1click-projects-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot1click-projects
   - name: iotevents-data
     description: >-
@@ -26134,12 +31960,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotevents-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26225,9 +32050,45 @@ apis:
               GET:
                 summary: ListDetectors
                 description: <p>Lists detectors (the instances of a detector mod
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/iotevents-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotevents-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotevents-data
   - name: iotfleethub
     description: >-
@@ -26239,12 +32100,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotfleethub-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26273,9 +32133,43 @@ apis:
                   <p>Removes the specified tags (metadata) from the
                   resource.</p> <note> <p>Fleet Hub for AWS IoT Device
                   Management is in public preview and is subject to change.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotfleethub-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotfleethub-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotfleethub
   - name: iot-data
     description: >-
@@ -26296,12 +32190,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26373,9 +32266,47 @@ apis:
                   information about messaging costs, see <a
                   href="http://aws.amazon.com/iot-core/pricing/#Messaging">Amazon
                   Web Services IoT Core pricing - Messaging<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
     overlays:
       - type: APIs.io Search
         url: overlays/iot-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot-data
   - name: iot1click-devices
     description: >-
@@ -26387,12 +32318,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iot1click-devices-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26471,9 +32401,43 @@ apis:
                 description: |-
                   <p>Using a Boolean value (true or false), this operation
                    enables or disables the device given a device
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iot1click-devices-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iot1click-devices-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iot1click-devices
   - name: iotsecuretunneling
     description: >-
@@ -26486,12 +32450,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotsecuretunneling-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26501,9 +32464,43 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Removes a tag from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotsecuretunneling-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotsecuretunneling-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotsecuretunneling
   - name: iotthingsgraph
     description: >-
@@ -26520,12 +32517,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotthingsgraph-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26562,9 +32558,45 @@ apis:
                   <code>Service</code>, <code>Capability</code>,
                   <code>State</code>, <code>Action</code>, <code>Event</code>,
                   <code>Property</code>, <code>Mapping</code>, <code>Enum</cod
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotthingsgraph-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotthingsgraph-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotthingsgraph
   - name: iotfleetwise
     description: >-
@@ -26581,12 +32613,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotfleetwise-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -26596,9 +32627,45 @@ apis:
               POST:
                 summary: UpdateVehicle
                 description: <p> Updates a vehi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotfleetwise-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotfleetwise-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotfleetwise
   - name: ivs
     description: >-
@@ -26781,12 +32848,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ivs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -27052,9 +33118,45 @@ apis:
               POST:
                 summary: UpdatePlaybackRestrictionPolicy
                 description: <p>Updates a specified playback restriction pol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ivs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ivs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ivs
   - name: iotevents
     description: >-
@@ -27066,12 +33168,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotevents-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -27169,9 +33270,45 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-analyze-api.html">Troubleshooting
                   a detector model</a> in the <i>AWS IoT Events Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/iotevents-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotevents-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotevents
   - name: iotsitewise
     description: >-
@@ -27188,12 +33325,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotsitewise-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -27680,9 +33816,47 @@ apis:
                   OPC-UA sources are stored in one capability configuration. To
                   list all capability configurations for a gateway, use <a
                   href="https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_DescribeGateway.html">DescribeGateway<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/iotsitewise-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotsitewise-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotsitewise
   - name: iottwinmaker
     description: >-
@@ -27696,12 +33870,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iottwinmaker-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -27835,9 +34008,43 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes tags from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iottwinmaker-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iottwinmaker-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iottwinmaker
   - name: kafkaconnect
     description: <p/>
@@ -27845,12 +34052,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kafkaconnect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -27888,9 +34094,41 @@ apis:
               GET:
                 summary: DescribeWorkerConfiguration
                 description: <p>Returns information about a worker configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kafkaconnect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kafkaconnect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kafkaconnect
   - name: ivs-realtime
     description: >-
@@ -27988,12 +34226,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ivs-realtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -28157,9 +34394,45 @@ apis:
               POST:
                 summary: UpdateStage
                 description: <p>Updates a stage’s configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ivs-realtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ivs-realtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ivs-realtime
   - name: ivschat
     description: >-
@@ -28285,12 +34558,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ivschat-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -28399,9 +34671,45 @@ apis:
               POST:
                 summary: UpdateRoom
                 description: <p>Updates a room’s configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ivschat-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ivschat-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ivschat
   - name: kafka
     description: <p>The operations for managing an Amazon MSK cluster.</p>
@@ -28409,12 +34717,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kafka-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -28622,9 +34929,43 @@ apis:
                 description: >-
                   <p>Updates cluster broker volume size (or) sets cluster
                   storage mode to TIE
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
     overlays:
       - type: APIs.io Search
         url: overlays/kafka-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kafka-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kafka
   - name: kendra
     description: <p>Amazon Kendra is a service for indexing large document sets.</p>
@@ -28632,12 +34973,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kendra-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -28647,9 +34987,43 @@ apis:
               POST:
                 summary: UpdateThesaurus
                 description: <p>Updates a thesaurus for an in
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kendra-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kendra-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kendra
   - name: keyspaces
     description: >-
@@ -28682,12 +35056,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/keyspaces-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -28701,9 +35074,45 @@ apis:
                   settings, for example capacity mode, auto scaling, encryption,
                   point-in-time recovery, or ttl settings. Note that you can
                   only update one specific table setting per update operat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/keyspaces-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/keyspaces-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:keyspaces
   - name: iotwireless
     description: >-
@@ -28725,12 +35134,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/iotwireless-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29038,9 +35446,45 @@ apis:
                 description: >-
                   <p>Simulates a provisioned device by sending an uplink data
                   payload of <code>Hello</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/iotwireless-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/iotwireless-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:iotwireless
   - name: kinesis-video-media
     description: <p/>
@@ -29048,12 +35492,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesis-video-media-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29103,9 +35546,43 @@ apis:
                   this topic, as well as <a
                   href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/CommonErrors.html">Common
                   Errors</a>. </p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesis-video-media-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesis-video-media-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesis-video-media
   - name: kendra-ranking
     description: >-
@@ -29115,12 +35592,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kendra-ranking-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29136,9 +35612,43 @@ apis:
                   number of capacity units you require for Amazon Kendra
                   Intelligent Ranking to rescore or re-rank a search service's
                   resu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kendra-ranking-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kendra-ranking-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kendra-ranking
   - name: kinesis-video-archived-media
     description: <p/>
@@ -29146,12 +35656,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesis-video-archived-media-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29574,9 +36083,44 @@ apis:
                   bottom of this topic, as well as <a
                   href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/CommonErrors.html">Common
                   Errors</a>. </p> </im
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesis-video-archived-media-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/kinesis-video-archived-media-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesis-video-archived-media
   - name: kinesisvideo
     description: <p/>
@@ -29584,12 +36128,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesisvideo-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29926,9 +36469,43 @@ apis:
                   latest stream version, use the <code>DescribeStream</code>
                   API. </p> <p> <code>UpdateStream</code> is an asynchronous
                   operation, and takes time to compl
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesisvideo-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesisvideo-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesisvideo
   - name: kinesisanalyticsv2
     description: >-
@@ -29941,12 +36518,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesisanalyticsv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -29978,9 +36554,43 @@ apis:
                   Data Analytics for Apache Flink Maintenance</a>.</p> <note>
                   <p>This operation is supported only for Amazon Kinesis Data
                   Analytics for Apache Flink.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesisanalyticsv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesisanalyticsv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesisanalyticsv2
   - name: kinesisanalytics
     description: >-
@@ -29996,12 +36606,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesisanalytics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30024,9 +36633,45 @@ apis:
                   <code>CurrentApplicationVersionId</code> each time you update
                   your application. </p> <p>This operation requires permission
                   for the <code>kinesisanalytics:UpdateApplication</code> act
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesisanalytics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesisanalytics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesisanalytics
   - name: kinesis-video-signaling
     description: >-
@@ -30038,12 +36683,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesis-video-signaling-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30084,9 +36728,41 @@ apis:
                   answer from the connected master. If the master is not
                   connected to the signaling channel, redelivery requests are
                   made until the message expi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesis-video-signaling-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesis-video-signaling-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesis-video-signaling
   - name: lambda
     description: >-
@@ -30101,12 +36777,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lambda-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30625,9 +37300,45 @@ apis:
                   container image, Lambda resolves the image tag to an image
                   digest. In Amazon ECR, if you update the image tag to a new
                   image, Lambda does not automatically update the function.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/lambda-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lambda-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lambda
   - name: kinesis
     description: >-
@@ -30638,12 +37349,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesis-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30657,9 +37367,43 @@ apis:
                   in Kinesis Data Streams, you can choose between an
                   <b>on-demand</b> capacity mode and a <b>provisioned</b>
                   capacity mode for your data stre
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesis-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kinesis-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesis
   - name: kms
     description: >-
@@ -30734,12 +37478,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kms-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30781,9 +37524,45 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/kms/latest/developerguide/programming-eventual-consistency.html">KMS
                   eventual consistency<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kms-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/kms-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kms
   - name: launch-wizard
     description: >-
@@ -30796,12 +37575,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/launch-wizard-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -30843,9 +37621,43 @@ apis:
               POST:
                 summary: ListWorkloads
                 description: <p>Lists the worklo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/launch-wizard-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/launch-wizard-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:launch-wizard
   - name: lex-models
     description: >-
@@ -30857,12 +37669,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lex-models-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31331,9 +38142,45 @@ apis:
               POST:
                 summary: StartImport
                 description: <p>Starts a job to import a resource to Amazon
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/lex-models-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lex-models-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lex-models
   - name: license-manager
     description: >-
@@ -31344,12 +38191,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/license-manager-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31359,9 +38205,43 @@ apis:
               POST:
                 summary: UpdateServiceSettings
                 description: <p>Updates License Manager settings for the current Reg
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/license-manager-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/license-manager-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:license-manager
   - name: license-manager-user-subscriptions
     description: >-
@@ -31372,12 +38252,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/license-manager-user-subscriptions-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31461,9 +38340,44 @@ apis:
                 description: >-
                   <p>Updates additional product configuration settings for the
                   registered identity provi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/license-manager-user-subscriptions-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/license-manager-user-subscriptions-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:license-manager-user-subscriptions
   - name: lightsail
     description: >-
@@ -31491,12 +38405,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lightsail-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31522,9 +38435,45 @@ apis:
                   information, see the <a
                   href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-controlling-access-using-tags">Amazon
                   Lightsail Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/lightsail-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lightsail-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lightsail
   - name: lookoutequipment
     description: >-
@@ -31535,12 +38484,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lookoutequipment-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31550,9 +38498,43 @@ apis:
               POST:
                 summary: UpdateRetrainingScheduler
                 description: <p>Updates a retraining schedu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/lookoutequipment-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lookoutequipment-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lookoutequipment
   - name: lakeformation
     description: >-
@@ -31562,12 +38544,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lakeformation-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -31985,9 +38966,43 @@ apis:
                 description: >-
                   <p>Updates the configuration of the storage optimizers for a
                   ta
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/lakeformation-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lakeformation-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lakeformation
   - name: logs
     description: >-
@@ -32022,12 +39037,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/logs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32037,9 +39051,45 @@ apis:
               POST:
                 summary: UpdateLogAnomalyDetector
                 description: <p>Updates an existing log anomaly detec
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/logs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/logs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:logs
   - name: lookoutmetrics
     description: >-
@@ -32051,12 +39101,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lookoutmetrics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32223,9 +39272,43 @@ apis:
               POST:
                 summary: UpdateMetricSet
                 description: <p>Updates a data
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/lookoutmetrics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lookoutmetrics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lookoutmetrics
   - name: lookoutvision
     description: >-
@@ -32242,12 +39325,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/lookoutvision-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32430,9 +39512,43 @@ apis:
                   <code>TRAINED</code>.</p> <p>This operation requires
                   permissions to perform the
                   <code>lookoutvision:StopModel</code> operat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/lookoutvision-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/lookoutvision-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:lookoutvision
   - name: kinesis-video-webrtc-storage
     description: <p> </p>
@@ -32440,12 +39556,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/kinesis-video-webrtc-storage-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32476,9 +39591,44 @@ apis:
                   one client joins the session of a specific channel as a video
                   producing device, the most recent client request takes
                   precedence. </p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/kinesis-video-webrtc-storage-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/kinesis-video-webrtc-storage-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:kinesis-video-webrtc-storage
   - name: license-manager-linux-subscriptions
     description: >-
@@ -32488,12 +39638,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/license-manager-linux-subscriptions-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32521,9 +39670,44 @@ apis:
               POST:
                 summary: UpdateServiceSettings
                 description: <p>Updates the service settings for Linux subscripti
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/license-manager-linux-subscriptions-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/license-manager-linux-subscriptions-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:license-manager-linux-subscriptions
   - name: machinelearning
     description: Definition of the public APIs exposed by Amazon Machine Learning
@@ -32531,12 +39715,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/machinelearning-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32550,9 +39733,43 @@ apis:
                   <code>ScoreThreshold</code> of an <code>MLModel</code>.</p>
                   <p>You can use the <code>GetMLModel</code> operation to view
                   the contents of the updated data elem
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/machinelearning-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/machinelearning-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:machinelearning
   - name: macie2
     description: >-
@@ -32569,12 +39786,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/macie2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -32887,9 +40103,45 @@ apis:
                 description: >-
                   <p>Enables an Amazon Macie administrator to suspend or
                   re-enable Macie for a member acco
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/macie2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/macie2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:macie2
   - name: m2
     description: >-
@@ -32904,12 +40156,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/m2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -33059,9 +40310,43 @@ apis:
               POST:
                 summary: StopApplication
                 description: <p>Stops a running applicat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/m2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/m2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:m2
   - name: location
     description: >-
@@ -33071,12 +40356,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/location-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -33523,9 +40807,43 @@ apis:
                   box using <code>FilterBBox</code>. Providing both parameters
                   simultaneously returns an error.</p> </note> <p>Search results
                   are returned in order of highest to lowest releva
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/location-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/location-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:location
   - name: marketplace-catalog
     description: >-
@@ -33540,12 +40858,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/marketplace-catalog-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -33665,9 +40982,43 @@ apis:
                   or <a
                   href="https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets">change
                   set</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/marketplace-catalog-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/marketplace-catalog-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:marketplace-catalog
   - name: managedblockchain-query
     description: >-
@@ -33684,12 +41035,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/managedblockchain-query-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -33770,9 +41120,45 @@ apis:
                 description: >-
                   <p>Lists all of the transactions on a given wallet address or
                   to a specific contr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/managedblockchain-query-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/managedblockchain-query-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:managedblockchain-query
   - name: marketplace-deployment
     description: >-
@@ -33787,12 +41173,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/marketplace-deployment-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -33808,9 +41193,43 @@ apis:
                 description: >-
                   <p>Creates or updates a deployment parameter and is targeted
                   by <code>catalog</code> and <code>agreementId</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/marketplace-deployment-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/marketplace-deployment-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:marketplace-deployment
   - name: mediaconnect
     description: API for AWS Elemental MediaConnect
@@ -33818,12 +41237,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediaconnect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34005,9 +41423,43 @@ apis:
               PUT:
                 summary: UpdateBridgeState
                 description: Updates the brid
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/mediaconnect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediaconnect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediaconnect
   - name: managedblockchain
     description: >-
@@ -34028,12 +41480,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/managedblockchain-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34140,9 +41591,45 @@ apis:
                   called by a principal in an Amazon Web Services account that
                   has received an invitation to create a member and join a
                   network.</p> <p>Applies only to Hyperledger Fab
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/managedblockchain-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/managedblockchain-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:managedblockchain
   - name: mediaconvert
     description: AWS Elemental MediaConvert
@@ -34150,12 +41637,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediaconvert-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34250,9 +41736,41 @@ apis:
                   Add tags to a MediaConvert queue, preset, or job template. For
                   information about tagging, see the User Guide at
                   https://docs.aws.amazon.com/mediaconvert/latest/ug/tagging-resour
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mediaconvert-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediaconvert-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediaconvert
   - name: medialive
     description: API for AWS Elemental MediaLive
@@ -34260,12 +41778,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/medialive-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34477,9 +41994,43 @@ apis:
               PUT:
                 summary: UpdateChannelClass
                 description: Changes the class of the
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/medialive-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/medialive-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:medialive
   - name: mediapackage-vod
     description: AWS Elemental MediaPackage VOD
@@ -34487,12 +42038,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediapackage-vod-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34542,9 +42092,43 @@ apis:
                 description: >-
                   Removes tags from the specified resource. You can specify one
                   or more tags to
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mediapackage-vod-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediapackage-vod-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediapackage-vod
   - name: mediapackage
     description: AWS Elemental MediaPackage
@@ -34552,12 +42136,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediapackage-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34610,9 +42193,43 @@ apis:
                 description: >-
                   Rotate the IngestEndpoint's username and password, as
                   specified by the IngestEndpoi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mediapackage-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediapackage-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediapackage
   - name: marketplace-agreement
     description: >-
@@ -34635,12 +42252,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/marketplace-agreement-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34691,9 +42307,45 @@ apis:
                   </li> <li> <p> <code>PartyType</code> as <code>Proposer</code>
                   + <code>AgreementType</code> + <code>AcceptorAccountId</code>
                   + <code>ResourceType</code> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/marketplace-agreement-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/marketplace-agreement-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:marketplace-agreement
   - name: mediastore
     description: >-
@@ -34704,12 +42356,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediastore-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34721,9 +42372,43 @@ apis:
                 description: >-
                   <p>Removes tags from the specified container. You can specify
                   one or more tags to remo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mediastore-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediastore-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediastore
   - name: mediastore-data
     description: >-
@@ -34734,12 +42419,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediastore-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34758,9 +42442,45 @@ apis:
                 description: >-
                   <p>Provides a list of metadata entries about folders and
                   objects in the specified fol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/mediastore-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediastore-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediastore-data
   - name: marketplacecommerceanalytics
     description: Provides AWS Marketplace business intelligence data on-demand.
@@ -34768,12 +42488,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/marketplacecommerceanalytics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34797,9 +42516,44 @@ apis:
                   policy providing Allow permissions for the following actions:
                   s3:PutObject, s3:GetBucketLocation, sns:GetTopicAttributes,
                   sns:Publish, iam:GetRol
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/marketplacecommerceanalytics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/marketplacecommerceanalytics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:marketplacecommerceanalytics
   - name: meteringmarketplace
     description: >-
@@ -34844,12 +42598,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/meteringmarketplace-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -34873,9 +42626,45 @@ apis:
                   href="https://docs.aws.amazon.com/marketplace/latest/userguide/saas-code-examples.html#saas-resolvecustomer-example">
                   ResolveCustomer code example</a> in the <i>AWS Marketplace
                   Seller Guide</i>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/meteringmarketplace-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/meteringmarketplace-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:meteringmarketplace
   - name: mgn
     description: <p>The Application Migration Service service.</p>
@@ -34883,12 +42672,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mgn-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35256,9 +43044,43 @@ apis:
               POST:
                 summary: UpdateWave
                 description: <p>Update w
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mgn-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mgn-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mgn
   - name: medical-imaging
     description: >-
@@ -35367,12 +43189,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/medical-imaging-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35449,9 +43270,45 @@ apis:
               POST:
                 summary: UpdateImageSetMetadata
                 description: <p>Update image set metadata attribu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/medical-imaging-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/medical-imaging-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:medical-imaging
   - name: migration-hub-refactor-spaces
     description: >-
@@ -35472,12 +43329,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/migration-hub-refactor-spaces-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35565,9 +43421,46 @@ apis:
                   <code>arn:aws:ram::aws:permission/AWSRAMDefaultPermissionRefactorSpacesEnvironment</code>
                   permission in Resource Access Manager. The policy must not
                   contain new lines or blank lin
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/migration-hub-refactor-spaces-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/migration-hub-refactor-spaces-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:migration-hub-refactor-spaces
   - name: mediapackagev2
     description: >-
@@ -35596,12 +43489,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediapackagev2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35675,9 +43567,47 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes one or more tags from the specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/mediapackagev2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediapackagev2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediapackagev2
   - name: memorydb
     description: >-
@@ -35692,12 +43622,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/memorydb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35707,9 +43636,43 @@ apis:
               POST:
                 summary: UpdateUser
                 description: <p>Changes user password(s) and/or access str
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/memorydb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/memorydb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:memorydb
   - name: migrationhub-config
     description: >-
@@ -35731,12 +43694,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/migrationhub-config-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35753,9 +43715,45 @@ apis:
                   <code>GetHomeRegion</code> at least once before you call any
                   other AWS Application Discovery Service and AWS Migration Hub
                   APIs, to obtain the account's Migration Hub home reg
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/migrationhub-config-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/migrationhub-config-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:migrationhub-config
   - name: migrationhubstrategy
     description: >-
@@ -35771,12 +43769,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/migrationhubstrategy-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35890,9 +43887,47 @@ apis:
               POST:
                 summary: UpdateServerConfig
                 description: <p> Updates the configuration of the specified ser
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/migrationhubstrategy-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/migrationhubstrategy-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:migrationhubstrategy
   - name: migrationhuborchestrator
     description: >-
@@ -35906,12 +43941,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/migrationhuborchestrator-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -35997,9 +44031,45 @@ apis:
               POST:
                 summary: StopWorkflow
                 description: <p>Stop an ongoing migration workf
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/migrationhuborchestrator-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/migrationhuborchestrator-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:migrationhuborchestrator
   - name: mobile
     description: >-
@@ -36011,12 +44081,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mobile-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36057,9 +44126,43 @@ apis:
               POST:
                 summary: UpdateProject
                 description: <p> Update an existing proj
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mobile-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mobile-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mobile
   - name: mediatailor
     description: >-
@@ -36079,12 +44182,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mediatailor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36233,9 +44335,45 @@ apis:
                   channels, see <a
                   href="https://docs.aws.amazon.com/mediatailor/latest/ug/channel-assembly-channels.html">Working
                   with channels</a> in the <i>MediaTailor User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mediatailor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mediatailor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mediatailor
   - name: mturk-requester
     description: <fullname>Amazon Mechanical Turk API Reference</fullname>
@@ -36243,12 +44381,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mturk-requester-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36290,9 +44427,43 @@ apis:
                   be granted manually. </p> <p> You can also update the
                   AutoGranted and AutoGrantedValue attributes of the
                   Qualification t
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mturk-requester-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mturk-requester-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mturk-requester
   - name: monitoring
     description: >-
@@ -36314,12 +44485,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/monitoring-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36329,9 +44499,45 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Removes one or more tags from the specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/monitoring-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/monitoring-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:monitoring
   - name: mwaa
     description: >-
@@ -36372,12 +44578,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mwaa-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36424,9 +44629,45 @@ apis:
                 description: >-
                   <p> <b>Internal only</b>. Publishes environment health metrics
                   to Amazon CloudWa
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mwaa-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mwaa-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mwaa
   - name: neptune
     description: >-
@@ -36453,12 +44694,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/neptune-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -36473,9 +44713,45 @@ apis:
                   its endpoints and DB parameter groups.</p> <p>Neptune also
                   retains the transaction logs so you can do a point-in-time
                   restore if necess
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/neptune-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/neptune-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:neptune
   - name: mq
     description: >-
@@ -36488,15 +44764,46 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/mq-openapi-original.yml
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/mq-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/mq-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:mq
   - name: models.lex.v2
     description: <p/>
@@ -36504,12 +44811,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/modelslexv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -37059,9 +45365,45 @@ apis:
               PUT:
                 summary: StopBotRecommendation
                 description: <p>Stop an already running Bot Recommendation requ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/modelslexv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/modelslexv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:modelslexv2
   - name: neptune-graph
     description: >-
@@ -37073,12 +45415,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/neptune-graph-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -37149,9 +45490,45 @@ apis:
               POST:
                 summary: RestoreGraphFromSnapshot
                 description: <p>Restores a graph from a snaps
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/neptune-graph-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/neptune-graph-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:neptune-graph
   - name: neptunedata
     description: >-
@@ -37165,12 +45542,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/neptunedata-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -37633,9 +46009,43 @@ apis:
                   restrict the use of openCypher queries (see <a
                   href="https://docs.aws.amazon.com/neptune/latest/userguide/iam-data-condition-keys.html">Condition
                   keys available in Neptune IAM data-access policy statements</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/neptunedata-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/neptunedata-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:neptunedata
   - name: nimble
     description: >-
@@ -37648,12 +46058,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/nimble-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -37820,9 +46229,41 @@ apis:
                   the <code>STOPPED</code> state. The
                   <code>STOP_IN_PROGRESS</code> state is the intermediate state
                   between the <code>READY</code> and <code>STOPPED</code> sta
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/nimble-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/nimble-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:nimble
   - name: networkmonitor
     description: >-
@@ -37844,12 +46285,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/networkmonitor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -37886,9 +46326,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes a key-value pair from a monitor or pr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/networkmonitor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/networkmonitor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:networkmonitor
   - name: omics
     description: >-
@@ -37900,12 +46376,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/omics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -38177,9 +46652,43 @@ apis:
                   <p> This operation uploads a specific part of a read set. If
                   you upload a new part using a previously used part number, the
                   previously uploaded part will be overwritt
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/omics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/omics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:omics
   - name: oam
     description: >-
@@ -38204,12 +46713,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/oam-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -38350,9 +46858,45 @@ apis:
                   with this operation.</p> <p>To update the list of tags
                   associated with the sink, use <a
                   href="https://docs.aws.amazon.com/OAM/latest/APIReference/API_TagResource.html">TagResource<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/oam-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/oam-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:oam
   - name: network-firewall
     description: >-
@@ -38414,12 +46958,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/network-firewall-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -38440,9 +46983,45 @@ apis:
                   current <a>TLSInspectionConfiguration</a> object, update the
                   object as needed, and then provide the updated object to this
                   c
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/network-firewall-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/network-firewall-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:network-firewall
   - name: opensearchserverless
     description: >-
@@ -38460,12 +47039,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/opensearchserverless-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -38479,9 +47057,45 @@ apis:
                   endpoint. For more information, see <a
                   href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-vpc.html">Access
                   Amazon OpenSearch Serverless using an interface endpoint<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/opensearchserverless-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/opensearchserverless-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:opensearchserverless
   - name: opensearch
     description: >-
@@ -38502,12 +47116,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/opensearch-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -38943,9 +47556,45 @@ apis:
                   <p>Allows you to either upgrade your Amazon OpenSearch Service
                   domain or perform an upgrade eligibility check to a compatible
                   version of OpenSearch or Elasticsea
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/opensearch-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/opensearch-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:opensearch
   - name: organizations
     description: >-
@@ -39003,12 +47652,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/organizations-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39024,9 +47672,45 @@ apis:
                   operation can be called only from the organization's
                   management account or by a member account that is a delegated
                   administrator for an Amazon Web Services serv
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/organizations-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/organizations-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:organizations
   - name: opsworkscm
     description: >-
@@ -39079,12 +47763,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/opsworkscm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39107,9 +47790,45 @@ apis:
                   <code>ResourceNotFoundException</code> is thrown when the
                   server does not exist. A <code>ValidationException</code> is
                   raised when parameters of the request are not val
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/opsworkscm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/opsworkscm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:opsworkscm
   - name: osis
     description: >-
@@ -39123,12 +47842,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/osis-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39250,9 +47968,43 @@ apis:
                   information, see <a
                   href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/creating-pipeline.html">Creating
                   Amazon OpenSearch Ingestion pipelines<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/osis-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/osis-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:osis
   - name: panorama
     description: >-
@@ -39265,12 +48017,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/panorama-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39379,9 +48130,43 @@ apis:
               PUT:
                 summary: SignalApplicationInstanceNodeInstances
                 description: <p>Signal camera nodes to stop or res
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/panorama-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/panorama-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:panorama
   - name: opsworks
     description: >-
@@ -39441,12 +48226,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/opsworks-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39465,9 +48249,45 @@ apis:
                   permissions. For more information on user permissions, see <a
                   href="https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html">Managing
                   User Permissions<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/opsworks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/opsworks-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:opsworks
   - name: payment-cryptography
     description: >-
@@ -39502,12 +48322,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/payment-cryptography-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39530,9 +48349,45 @@ apis:
                   </li> <li> <p> <a>DeleteAlias</a> </p> </li> <li> <p>
                   <a>GetAlias</a> </p> </li> <li> <p> <a>ListAliases</a> </p>
                   </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/payment-cryptography-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/payment-cryptography-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:payment-cryptography
   - name: pca-connector-ad
     description: >-
@@ -39546,12 +48401,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pca-connector-ad-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39623,9 +48477,43 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes one or more tags from your resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pca-connector-ad-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pca-connector-ad-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pca-connector-ad
   - name: personalize-events
     description: >-
@@ -39638,12 +48526,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/personalize-events-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -39696,9 +48583,43 @@ apis:
                   information see <a
                   href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">Importing
                   users individually<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/personalize-events-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/personalize-events-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:personalize-events
   - name: networkmanager
     description: >-
@@ -39709,12 +48630,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/networkmanager-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -40057,9 +48977,43 @@ apis:
               PATCH:
                 summary: UpdateNetworkResourceMetadata
                 description: <p>Updates the resource metadata for the specified global netw
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/networkmanager-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/networkmanager-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:networkmanager
   - name: outposts
     description: >-
@@ -40074,12 +49028,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/outposts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -40220,9 +49173,43 @@ apis:
                   User Guide. </p> <p>To update a rack at a site with an order
                   of <code>IN_PROGRESS</code>, you must wait for the order to
                   complete or cancel the or
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/outposts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/outposts-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:outposts
   - name: personalize-runtime
     description: <p/>
@@ -40230,12 +49217,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/personalize-runtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -40285,9 +49271,43 @@ apis:
                   on use case requirements see <a
                   href="https://docs.aws.amazon.com/personalize/latest/dg/domain-use-cases.html">Choosing
                   recommender use cases</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/personalize-runtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/personalize-runtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:personalize-runtime
   - name: personalize
     description: >-
@@ -40297,12 +49317,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/personalize-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -40323,9 +49342,43 @@ apis:
                   <code>latestRecommenderUpdate</code> returned in the <a
                   href="https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeRecommender.html">DescribeRecommender</a>
                   operati
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/personalize-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/personalize-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:personalize
   - name: payment-cryptography-data
     description: >-
@@ -40346,12 +49399,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/payment-cryptography-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -40736,9 +49788,45 @@ apis:
                   different Amazon Web Services accounts.</p> <p> <b>Related
                   operations:</b> </p> <ul> <li> <p> <a>GeneratePinData</a> </p>
                   </li> <li> <p> <a>TranslatePinData</a> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/payment-cryptography-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/payment-cryptography-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:payment-cryptography-data
   - name: pinpoint-email
     description: >-
@@ -40783,12 +49871,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pinpoint-email-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41073,9 +50160,43 @@ apis:
                   body. You can use this message type to send messages that
                   contain attachments. The message that you specify has to be a
                   valid MIME message.</p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pinpoint-email-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pinpoint-email-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pinpoint-email
   - name: pinpoint
     description: <p>Doc Engage API - Amazon Pinpoint API</p>
@@ -41083,12 +50204,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pinpoint-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41481,9 +50601,41 @@ apis:
               POST:
                 summary: VerifyOTPMessage
                 description: <p>Verify an
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pinpoint-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pinpoint-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pinpoint
   - name: pinpoint-sms-voice-v2
     description: >-
@@ -41529,12 +50681,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pinpoint-sms-voice-v2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41547,9 +50698,45 @@ apis:
                   <p>Use the verification code that was received by the verified
                   destination phone number to opt-in the verified destination
                   phone number to receive more messa
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pinpoint-sms-voice-v2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pinpoint-sms-voice-v2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pinpoint-sms-voice-v2
   - name: pipes
     description: >-
@@ -41564,12 +50751,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pipes-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41619,9 +50805,43 @@ apis:
               POST:
                 summary: StopPipe
                 description: <p>Stop an existing p
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/pipes-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pipes-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pipes
   - name: proton
     description: >-
@@ -41723,12 +50943,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/proton-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41744,9 +50963,45 @@ apis:
                   linked repository. A linked repository is a repository that
                   has been registered with Proton. For more information, see
                   <a>CreateRepository<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/proton-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/proton-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:proton
   - name: privatenetworks
     description: >-
@@ -41759,12 +51014,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/privatenetworks-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -41908,9 +51162,43 @@ apis:
               PUT:
                 summary: UpdateNetworkSitePlan
                 description: <p>Updates the specified network site p
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/privatenetworks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/privatenetworks-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:privatenetworks
   - name: polly
     description: >-
@@ -41923,12 +51211,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/polly-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42011,9 +51298,41 @@ apis:
                   unless phoneme mapping is used. For more information, see <a
                   href="https://docs.aws.amazon.com/polly/latest/dg/how-text-to-speech-works.html">How
                   it Works<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/polly-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/polly-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:polly
   - name: qconnect
     description: >-
@@ -42042,12 +51361,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/qconnect-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42211,9 +51529,45 @@ apis:
                   href="https://docs.aws.amazon.com/amazon-q-connect/latest/APIReference/API_UpdateContent.html">UpdateContent</a>
                   to modify an existing resource. You can only upload content to
                   a knowledge base of type CUS
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/qconnect-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/qconnect-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:qconnect
   - name: qbusiness
     description: >-
@@ -42259,12 +51613,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/qbusiness-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42428,9 +51781,45 @@ apis:
                 description: >-
                   <p>Stops an Amazon Q data source connector synchronization job
                   already in progr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/qbusiness-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/qbusiness-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:qbusiness
   - name: pi
     description: >-
@@ -42463,12 +51852,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pi-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42480,9 +51868,45 @@ apis:
                 description: >-
                   <p>Deletes the metadata tags from the Amazon RDS Performance
                   Insights resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pi-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pi-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pi
   - name: pricing
     description: >-
@@ -42513,12 +51937,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/pricing-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42544,9 +51967,45 @@ apis:
                   can use the <code>PriceListArn</code> from the response to get
                   your preferred Price List files through the <a
                   href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_pricing_GetPriceListFileUrl.html">GetPriceListFileUrl</a>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/pricing-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pricing-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:pricing
   - name: qldb-session
     description: >-
@@ -42568,12 +52027,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/qldb-session-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42600,9 +52058,45 @@ apis:
                   interact with a ledger. For information, see <a
                   href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing
                   Amazon QLDB using the QLDB shell</a>.</p> </li> </ul>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/qldb-session-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/qldb-session-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:qldb-session
   - name: ram
     description: >-
@@ -42623,12 +52117,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ram-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -42963,9 +52456,45 @@ apis:
                 description: >-
                   <p>Modifies some of the properties of the specified resource
                   sh
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ram-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ram-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ram
   - name: rds-data
     description: >-
@@ -42982,12 +52511,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rds-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -43062,9 +52590,45 @@ apis:
                 description: >-
                   <p>Performs a rollback of a transaction. Rolling back a
                   transaction cancels its chan
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/rds-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rds-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rds-data
   - name: quicksight
     description: >-
@@ -43078,12 +52642,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/quicksight-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -43836,9 +53399,45 @@ apis:
                   href="https://docs.aws.amazon.com/quicksight/latest/user/security_iam_service-with-iam.html">Using
                   Amazon QuickSight with IAM</a> in the <i>Amazon QuickSight
                   User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/quicksight-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/quicksight-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:quicksight
   - name: redshift
     description: >-
@@ -43870,12 +53469,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/redshift-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -43885,9 +53483,45 @@ apis:
               POST:
                 summary: UpdatePartnerStatus
                 description: <p>Updates the status of a partner integrat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/redshift-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/redshift-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:redshift
   - name: rbin
     description: >-
@@ -43910,12 +53544,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rbin-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -43963,9 +53596,45 @@ apis:
                   <p>Unlocks a retention rule. After a retention rule is
                   unlocked, it can be modified or deleted only after the unlock
                   delay period expi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/rbin-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rbin-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rbin
   - name: redshift-data
     description: >-
@@ -43980,12 +53649,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/redshift-data-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44035,9 +53703,43 @@ apis:
                   href="https://docs.aws.amazon.com/redshift/latest/mgmt/data-api.html">Using
                   the Amazon Redshift Data API</a> in the <i>Amazon Redshift
                   Management Guide</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/redshift-data-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/redshift-data-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:redshift-data
   - name: qldb
     description: <p>The resource management API for Amazon QLDB</p>
@@ -44045,12 +53747,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/qldb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44184,9 +53885,43 @@ apis:
                   href="https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-management.basics.html#ledger-mgmt.basics.update-permissions.migrating">Migrating
                   to the standard permissions mode</a> in the <i>Amazon QLDB
                   Developer Guide</i>.</p> </im
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/qldb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/qldb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:qldb
   - name: rekognition
     description: >-
@@ -44348,12 +54083,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rekognition-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44366,9 +54100,45 @@ apis:
                   <p> Allows you to update a stream processor. You can change
                   some settings and regions of interest and delete certain
                   paramete
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/rekognition-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rekognition-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rekognition
   - name: redshift-serverless
     description: >-
@@ -44389,12 +54159,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/redshift-serverless-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44409,9 +54178,45 @@ apis:
                   For example, you can update <code>baseCapacity</code> or
                   <code>port</code> in a single request, but you can't update
                   both in the same requ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/redshift-serverless-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/redshift-serverless-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:redshift-serverless
   - name: resource-explorer-2
     description: >-
@@ -44450,12 +54255,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/resource-explorer-2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44748,9 +54552,45 @@ apis:
                   <p>Modifies some of the details of a view. You can change the
                   filter string and the list of included properties. You can't
                   change the name of the v
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/resource-explorer-2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/resource-explorer-2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:resource-explorer-2
   - name: resourcegroupstaggingapi
     description: <fullname>Resource Groups Tagging API</fullname>
@@ -44758,12 +54598,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/resourcegroupstaggingapi-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -44794,9 +54633,43 @@ apis:
                   the following permissions:</p> <ul> <li> <p>
                   <code>tag:UntagResource</code> </p> </li> <li> <p>
                   <code>ec2:DeleteTags</code> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/resourcegroupstaggingapi-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/resourcegroupstaggingapi-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:resourcegroupstaggingapi
   - name: robomaker
     description: >-
@@ -44806,12 +54679,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/robomaker-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45128,9 +55000,43 @@ apis:
               POST:
                 summary: UpdateWorldTemplate
                 description: <p>Updates a world templ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/robomaker-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/robomaker-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:robomaker
   - name: repostspace
     description: >-
@@ -45148,12 +55054,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/repostspace-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45188,9 +55093,45 @@ apis:
               POST:
                 summary: SendInvites
                 description: <p>Sends an invitation email to selected users and gro
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/repostspace-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/repostspace-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:repostspace
   - name: rds
     description: null
@@ -45198,12 +55139,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rds-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45218,9 +55158,43 @@ apis:
                   Guard environment, making it the new primary database. Issue
                   this command in the Region that hosts the current standby
                   datab
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/rds-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rds-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rds
   - name: rolesanywhere
     description: >-
@@ -45246,12 +55220,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rolesanywhere-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45412,9 +55385,45 @@ apis:
                 description: >-
                   <p>Removes tags from the resource.</p> <p> <b>Required
                   permissions: </b> <code>rolesanywhere:UntagResource</cod
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/rolesanywhere-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rolesanywhere-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rolesanywhere
   - name: resource-groups
     description: >-
@@ -45449,12 +55458,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/resource-groups-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45639,9 +55647,45 @@ apis:
                   permissions</b> </p> <p>To run this command, you must have the
                   following permissions:</p> <ul> <li> <p>
                   <code>resource-groups:UpdateGroupQuery</code> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/resource-groups-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/resource-groups-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:resource-groups
   - name: route53-recovery-cluster
     description: >-
@@ -45695,12 +55739,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53-recovery-cluster-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -45744,9 +55787,45 @@ apis:
                   <li> <p> <a
                   href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.html">Working
                   with routing controls overall</a> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/route53-recovery-cluster-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/route53-recovery-cluster-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53-recovery-cluster
   - name: route53
     description: "<p>Amazon Route\_53 is a highly available and scalable Domain Name System (DNS) web service.</p> <p>You can use Route\_53 to:</p> <ul> <li> <p>Register domain names.</p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-domain-registration.html\">How domain registration works</a>.</p> </li> <li> <p>Route internet traffic to the resources for your domain</p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-dns-service.html\">How internet traffic is routed to your website or web application</a>.</p> </li> <li> <p>Check the health of your resources.</p> <p>For more information, see <a href=\"https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/welcome-health-checks.html\">How Route\_53 checks the health of your resources</a>.</p> </li> </ul>"
@@ -45754,12 +55833,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -46511,9 +56589,45 @@ apis:
                   <code>dig</code> command. Therefore, if you query for the name
                   servers of a subdomain that point to the parent name servers,
                   those will not be returned.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/route53-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/route53-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53
   - name: route53-recovery-readiness
     description: <p>Recovery readiness</p>
@@ -46521,12 +56635,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53-recovery-readiness-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -46625,9 +56738,43 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes a tag from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/route53-recovery-readiness-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/route53-recovery-readiness-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53-recovery-readiness
   - name: resiliencehub
     description: >-
@@ -46642,12 +56789,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/resiliencehub-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47073,9 +57219,43 @@ apis:
                   estimated workload RPO result will be near zero and the
                   <b>Compliance status</b> for your application will be set to
                   <b>Policy breached</b>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/resiliencehub-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/resiliencehub-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:resiliencehub
   - name: route53domains
     description: >-
@@ -47085,12 +57265,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53domains-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47102,9 +57281,43 @@ apis:
                 description: >-
                   <p>Returns all the domain-related billing records for the
                   current Amazon Web Services account for a specified pe
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/route53domains-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/route53domains-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53domains
   - name: route53resolver
     description: >-
@@ -47143,12 +57356,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53resolver-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47162,9 +57374,45 @@ apis:
                   <code>ResolverRuleId</code> is required, and all other
                   parameters are optional. If you don't specify a parameter, it
                   retains its current va
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/route53resolver-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/route53resolver-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53resolver
   - name: runtime.lex
     description: >-
@@ -47184,12 +57432,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/runtimelex-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47316,9 +57563,47 @@ apis:
                   <code>sessionAttributes</code>. For more information, see <a
                   href="https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html">Managing
                   Conversation Context</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/runtimelex-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/runtimelex-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:runtimelex
   - name: rum
     description: >-
@@ -47337,12 +57622,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/rum-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47427,9 +57711,47 @@ apis:
                   <code>PutRumEvents</code> operations to send this data to
                   RUM.</p> <p>Each <code>PutRumEvents</code> operation can send
                   a batch of events from one user sess
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/rum-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rum-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:rum
   - name: runtime.lex.v2
     description: >-
@@ -47439,12 +57761,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/runtimelexv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47566,9 +57887,43 @@ apis:
                   SDK for Java V2</a> </p> </li> <li> <p> <a
                   href="https://docs.aws.amazon.com/goto/SdkForRubyV3/runtime.lex.v2-2020-08-07/StartConversation">AWS
                   SDK for Ruby V3</a> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/runtimelexv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/runtimelexv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:runtimelexv2
   - name: route53-recovery-control-config
     description: >-
@@ -47578,12 +57933,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/route53-recovery-control-config-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -47680,9 +58034,44 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes a tag from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/route53-recovery-control-config-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/route53-recovery-control-config-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:route53-recovery-control-config
   - name: s3control
     description: >-
@@ -47692,12 +58081,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/s3control-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -48848,9 +59236,41 @@ apis:
                   </p> </li> <li> <p> <a
                   href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_UpdateJobStatus.html">UpdateJobStatus</a>
                   </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/s3control-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/s3control-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:s3control
   - name: sagemaker-a2i-runtime
     description: >-
@@ -48888,12 +59308,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-a2i-runtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -48916,9 +59335,45 @@ apis:
               POST:
                 summary: StopHumanLoop
                 description: <p>Stops the specified human l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-a2i-runtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sagemaker-a2i-runtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker-a2i-runtime
   - name: sagemaker
     description: >-
@@ -48932,12 +59387,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -48949,9 +59403,43 @@ apis:
                 description: >-
                   <p>Updates an existing work team with new member definitions
                   or descript
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sagemaker-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker
   - name: s3
     description: <p/>
@@ -48959,12 +59447,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/s3-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51478,9 +61965,45 @@ apis:
                   href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-examples.html">Using
                   Amazon Web Services built Lambda functions</a> in the
                   <i>Amazon S3 User Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/s3-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/s3-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:s3
   - name: sagemaker-edge
     description: >-
@@ -51490,12 +62013,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-edge-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51517,9 +62039,43 @@ apis:
                 description: >-
                   <p>Use to get the current status of devices registered on
                   SageMaker Edge Mana
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-edge-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sagemaker-edge-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker-edge
   - name: sagemaker-featurestore-runtime
     description: >-
@@ -51540,12 +62096,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-featurestore-runtime-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51584,9 +62139,46 @@ apis:
                   level <code>TtlDuration</code>. A record level
                   <code>TtlDuration</code> supersedes the group level
                   <code>TtlDuration</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-featurestore-runtime-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/sagemaker-featurestore-runtime-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker-featurestore-runtime
   - name: s3outposts
     description: <p>Amazon S3 on Outposts provides access to S3 on Outposts operations.</p>
@@ -51594,12 +62186,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/s3outposts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51657,9 +62248,43 @@ apis:
                   </p> </li> <li> <p> <a
                   href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3outposts_DeleteEndpoint.html">DeleteEndpoint</a>
                   </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/s3outposts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/s3outposts-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:s3outposts
   - name: sagemaker-metrics
     description: >-
@@ -51672,12 +62297,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-metrics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51690,9 +62314,43 @@ apis:
                   <p>Used to ingest training metrics into SageMaker. These
                   metrics can be visualized in SageMaker Studio and retrieved
                   with the <code>GetMetrics</code> A
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-metrics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sagemaker-metrics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker-metrics
   - name: sagemaker-geospatial
     description: >-
@@ -51702,12 +62360,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sagemaker-geospatial-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51797,9 +62454,43 @@ apis:
               POST:
                 summary: StopVectorEnrichmentJob
                 description: <p>Stops the Vector Enrichment job for a given job
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sagemaker-geospatial-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sagemaker-geospatial-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sagemaker-geospatial
   - name: savingsplans
     description: >-
@@ -51813,12 +62504,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/savingsplans-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51862,9 +62552,43 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Removes the specified tags from the specified resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/savingsplans-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/savingsplans-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:savingsplans
   - name: schemas
     description: <p>Amazon EventBridge Schema Registry</p>
@@ -51872,12 +62596,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/schemas-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -51957,9 +62680,43 @@ apis:
               GET:
                 summary: ExportSchema
                 description: <p>Exports a schema to a different specificat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/schemas-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/schemas-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:schemas
   - name: scheduler
     description: >-
@@ -51973,12 +62730,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/scheduler-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52018,9 +62774,43 @@ apis:
                 description: >-
                   <p>Removes one or more tags from the specified EventBridge
                   Scheduler schedule gr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/scheduler-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/scheduler-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:scheduler
   - name: sdb
     description: >-
@@ -52043,12 +62833,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sdb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52071,9 +62860,45 @@ apis:
                   of results. </p> <p> For information on how to construct
                   select expressions, see Using Select to Create Amazon SimpleDB
                   Queries in the Developer Gui
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sdb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sdb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sdb
   - name: secretsmanager
     description: >-
@@ -52116,12 +62941,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/secretsmanager-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52156,9 +62980,45 @@ apis:
                   IAM policy actions for Secrets Manager</a> and <a
                   href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication
                   and access control in Secrets Manager</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/secretsmanager-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/secretsmanager-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:secretsmanager
   - name: serverlessrepo
     description: >-
@@ -52187,12 +63047,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/serverlessrepo-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52250,9 +63109,45 @@ apis:
                   <p>Unshares an application from an AWS
                   Organization.</p><p>This operation can be called only from the
                   organization's master acco
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/serverlessrepo-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/serverlessrepo-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:serverlessrepo
   - name: securitylake
     description: >-
@@ -52296,12 +63191,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/securitylake-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52472,9 +63366,43 @@ apis:
                   Security Lake resource: a subscriber, or the data lake
                   configuration for your Amazon Web Services account in a
                   particular Amazon Web Services Reg
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/securitylake-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/securitylake-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:securitylake
   - name: service-quotas
     description: >-
@@ -52488,12 +63416,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/service-quotas-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52505,9 +63432,43 @@ apis:
                 description: >-
                   <p>Removes tags from the specified applied quota. You can
                   specify one or more tags to rem
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/service-quotas-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/service-quotas-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:service-quotas
   - name: runtime.sagemaker
     description: <p> The Amazon SageMaker runtime API. </p>
@@ -52515,12 +63476,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/runtimesagemaker-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52615,9 +63575,43 @@ apis:
                   href="https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html">Authenticating
                   Requests (Amazon Web Services Signature Version 4)</a> in the
                   <i>Amazon S3 API Reference<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/runtimesagemaker-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/runtimesagemaker-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:runtimesagemaker
   - name: servicediscovery
     description: >-
@@ -52633,12 +63627,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/servicediscovery-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52666,9 +63659,45 @@ apis:
                   update settings for a service, Cloud Map also updates the
                   corresponding settings in all the records and health checks
                   that were created by using the specified serv
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/servicediscovery-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/servicediscovery-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:servicediscovery
   - name: servicecatalog-appregistry
     description: >-
@@ -52681,12 +63710,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/servicecatalog-appregistry-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -52769,9 +63797,43 @@ apis:
                   AppRegistry system tags if it does not associate with the
                   application. The caller must have permissions to read and
                   update the resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/servicecatalog-appregistry-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/servicecatalog-appregistry-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:servicecatalog-appregistry
   - name: sesv2
     description: >-
@@ -52788,12 +63850,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sesv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53319,9 +64380,45 @@ apis:
                   <p>Creates a preview of the MIME content of an email when
                   provided with a template and a set of replacement data.</p>
                   <p>You can execute this operation no more than once per sec
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/sesv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sesv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sesv2
   - name: shield
     description: >-
@@ -53336,12 +64433,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/shield-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53357,9 +64453,43 @@ apis:
                   Organizations organization, Shield Advanced subscriptions are
                   billed against the organization's payer account, regardless of
                   whether the payer account itself is subscribed. </p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/shield-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/shield-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:shield
   - name: simspaceweaver
     description: >-
@@ -53380,12 +64510,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/simspaceweaver-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53502,9 +64631,45 @@ apis:
                   restart a simulation after you stop it. If you want to restart
                   a simulation, then you must stop it, delete it, and start a
                   new instance of it.</p> </im
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/simspaceweaver-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/simspaceweaver-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:simspaceweaver
   - name: sms
     description: >-
@@ -53526,12 +64691,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sms-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53543,9 +64707,45 @@ apis:
                 description: >-
                   <p>Updates the specified settings for the specified
                   replication
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sms-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sms-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sms
   - name: sms-voice
     description: Pinpoint SMS and Voice Messaging public facing APIs
@@ -53553,12 +64753,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sms-voice-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53593,9 +64792,41 @@ apis:
               POST:
                 summary: SendVoiceMessage
                 description: Create a new voice message and send it to a recipient's phone
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sms-voice-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sms-voice-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sms-voice
   - name: snow-device-management
     description: <p>Amazon Web Services Snow Device Management documentation.</p>
@@ -53603,12 +64834,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/snow-device-management-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -53684,9 +64914,43 @@ apis:
               GET:
                 summary: ListTasks
                 description: <p>Returns a list of tasks that can be filtered by st
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/snow-device-management-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/snow-device-management-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:snow-device-management
   - name: securityhub
     description: >-
@@ -53768,12 +65032,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/securityhub-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54343,9 +65606,45 @@ apis:
                 description: >-
                   <p>Used to control whether an individual security standard
                   control is enabled or disab
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/securityhub-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/securityhub-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:securityhub
   - name: snowball
     description: >-
@@ -54365,12 +65664,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/snowball-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54380,9 +65678,45 @@ apis:
               POST:
                 summary: UpdateLongTermPricing
                 description: <p>Updates the long-term pricing t
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/snowball-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/snowball-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:snowball
   - name: sns
     description: >-
@@ -54410,12 +65744,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sns-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54439,9 +65772,45 @@ apis:
                   restrictions, see <a
                   href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS
                   sandbox</a> in the <i>Amazon SNS Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sns-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sns-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sns
   - name: sqs
     description: >-
@@ -54476,12 +65845,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sqs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54500,9 +65868,45 @@ apis:
                   href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-customer-managed-policy-examples.html#grant-cross-account-permissions-to-role-and-user-name">Grant
                   cross-account permissions to a role and a username</a> in the
                   <i>Amazon SQS Developer Guide</i>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sqs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sqs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sqs
   - name: servicecatalog
     description: >-
@@ -54517,12 +65921,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/servicecatalog-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54532,9 +65935,43 @@ apis:
               POST:
                 summary: UpdateTagOption
                 description: <p>Updates the specified TagOpt
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/servicecatalog-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/servicecatalog-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:servicecatalog
   - name: ssm
     description: >-
@@ -54571,12 +66008,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ssm-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54605,9 +66041,45 @@ apis:
                   <a>ResetServiceSetting</a> to change the value back to the
                   original value defined by the Amazon Web Services service
                   team.</p> <p>Update the service setting for the accou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ssm-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ssm-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ssm
   - name: signer
     description: >-
@@ -54644,12 +66116,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/signer-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54767,9 +66238,45 @@ apis:
               POST:
                 summary: SignPayload
                 description: <p>Signs a binary payload and returns a signature envel
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/signer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/signer-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:signer
   - name: ssm-incidents
     description: >-
@@ -54786,12 +66293,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ssm-incidents-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -54975,9 +66481,45 @@ apis:
                 description: >-
                   <p>Updates a timeline event. You can update events of type
                   <code>Custom Event</co
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ssm-incidents-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ssm-incidents-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ssm-incidents
   - name: sso
     description: >-
@@ -55004,12 +66546,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sso-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55058,9 +66599,45 @@ apis:
                   href="https://docs.aws.amazon.com/singlesignon/latest/userguide/authconcept.html">User
                   authentications</a> in the <i>IAM Identity Center User
                   Guide</i>.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sso-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sso-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sso
   - name: ssm-sap
     description: >-
@@ -55072,12 +66649,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ssm-sap-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55179,9 +66755,43 @@ apis:
                 description: >-
                   <p>Updates the settings of an application registered with AWS
                   Systems Manager for 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ssm-sap-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ssm-sap-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ssm-sap
   - name: sso-admin
     description: >-
@@ -55213,12 +66823,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sso-admin-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55234,9 +66843,45 @@ apis:
                   trusted token issuer configuration might cause users to lose
                   access to any applications that are configured to use the
                   trusted token issuer.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sso-admin-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sso-admin-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sso-admin
   - name: ssm-contacts
     description: >-
@@ -55253,12 +66898,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/ssm-contacts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55268,9 +66912,45 @@ apis:
               POST:
                 summary: UpdateRotation
                 description: <p>Updates the information specified for an on-call rotat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/ssm-contacts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ssm-contacts-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:ssm-contacts
   - name: states
     description: >-
@@ -55302,12 +66982,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/states-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55339,9 +67018,45 @@ apis:
                   <a>DescribeStateMachineAlias</a> </p> </li> <li> <p>
                   <a>ListStateMachineAliases</a> </p> </li> <li> <p>
                   <a>DeleteStateMachineAlias</a> </p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/states-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/states-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:states
   - name: sso-oidc
     description: >-
@@ -55385,12 +67100,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sso-oidc-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55427,9 +67141,45 @@ apis:
                 description: >-
                   <p>Initiates device authorization by requesting a pair of
                   verification codes from the authorization serv
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sso-oidc-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sso-oidc-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sso-oidc
   - name: storagegateway
     description: >-
@@ -55485,12 +67235,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/storagegateway-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55506,9 +67255,45 @@ apis:
                   different type of medium changer after a tape gateway is
                   activated. This operation is only supported in the tape
                   gateway t
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/storagegateway-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/storagegateway-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:storagegateway
   - name: supplychain
     description: >-
@@ -55526,12 +67311,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/supplychain-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55552,9 +67336,47 @@ apis:
               GET:
                 summary: GetBillOfMaterialsImportJob
                 description: <p>Get status and details of a BillOfMaterialsImport
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/supplychain-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/supplychain-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:supplychain
   - name: sts
     description: >-
@@ -55568,12 +67390,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/sts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55646,9 +67467,43 @@ apis:
                   href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getsessiontoken">Temporary
                   Credentials for Users in Untrusted Environments</a> in the
                   <i>IAM User Guide</
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/sts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/sts-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:sts
   - name: support
     description: >-
@@ -55696,12 +67551,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/support-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55723,9 +67577,45 @@ apis:
                   support plan, see <a
                   href="http://aws.amazon.com/premiumsupport/">Amazon Web
                   Services Support</a>.</p> </li> </ul>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/support-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/support-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:support
   - name: swf
     description: >-
@@ -55747,12 +67637,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/swf-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55762,9 +67651,45 @@ apis:
               POST:
                 summary: UntagResource
                 description: <p>Remove a tag from a Amazon SWF dom
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/swf-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/swf-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:swf
   - name: support-app
     description: >-
@@ -55805,12 +67730,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/support-app-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -55931,9 +67855,45 @@ apis:
                 description: >-
                   <p>Updates the configuration for a Slack channel, such as case
                   update notificati
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/support-app-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/support-app-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:support-app
   - name: synthetics
     description: >-
@@ -55958,12 +67918,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/synthetics-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56139,9 +68098,45 @@ apis:
                   not recorded in Synthetics as a completed run.</p> <p>You can
                   use <code>StartCanary</code> to start it running again with
                   the canary’s current schedule at any point in the futu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/synthetics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/synthetics-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:synthetics
   - name: streams.dynamodb
     description: >-
@@ -56155,12 +68150,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/streamsdynamodb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56176,9 +68170,43 @@ apis:
                   streams ARNs for that table.</p> <note> <p>You can call
                   <code>ListStreams</code> at a maximum rate of 5 times per
                   second.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/streamsdynamodb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/streamsdynamodb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:streamsdynamodb
   - name: timestream-query
     description: <fullname>Amazon Timestream Query </fullname> <p/>
@@ -56186,12 +68214,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/timestream-query-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56201,9 +68228,43 @@ apis:
               POST:
                 summary: UpdateScheduledQuery
                 description: <p>Update a scheduled qu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/timestream-query-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/timestream-query-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:timestream-query
   - name: textract
     description: >-
@@ -56214,12 +68275,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/textract-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56232,9 +68292,43 @@ apis:
                   <p>Update the configuration for an adapter. FeatureTypes
                   configurations cannot be updated. At least one new parameter
                   must be specified as an argum
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/textract-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/textract-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:textract
   - name: timestream-write
     description: >-
@@ -56256,12 +68350,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/timestream-write-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56322,9 +68415,45 @@ apis:
                   <code>3</code>. Any further updates would need to send a
                   version number greater than <code>3</code>, or the update
                   requests would receive a <code>RejectedRecordsException</cod
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/timestream-write-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/timestream-write-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:timestream-write
   - name: transfer
     description: >-
@@ -56345,12 +68474,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/transfer-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56366,9 +68494,45 @@ apis:
                   <code>ServerId</code> you specify.</p> <p>The response returns
                   the <code>ServerId</code> and the <code>UserName</code> for
                   the updated u
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/transfer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transfer-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:transfer
   - name: transcribe-streaming
     description: >-
@@ -56388,12 +68552,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/transcribe-streaming-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56445,9 +68608,45 @@ apis:
                   information on streaming with Amazon Transcribe, see <a
                   href="https://docs.aws.amazon.com/transcribe/latest/dg/streaming.html">Transcribing
                   streaming audio<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/transcribe-streaming-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transcribe-streaming-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:transcribe-streaming
   - name: transcribe
     description: >-
@@ -56465,12 +68664,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/transcribe-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56484,9 +68682,45 @@ apis:
                   list of words. The new list you provide overwrites all
                   previous entries; you cannot append new terms onto an existing
                   custom vocabulary fil
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/transcribe-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transcribe-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:transcribe
   - name: tnb
     description: >-
@@ -56499,12 +68733,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/tnb-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56710,9 +68943,43 @@ apis:
                   Archive) format defines the function packages you want to
                   deploy and the Amazon Web Services infrastructure you want to
                   deploy them
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-version-in-path-info
+              message: Version in Path
     overlays:
       - type: APIs.io Search
         url: overlays/tnb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/tnb-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:tnb
   - name: translate
     description: >-
@@ -56722,12 +68989,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/translate-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56739,9 +69005,43 @@ apis:
                 description: >-
                   <p>Updates a previously created parallel data resource by
                   importing a new input file from Amazon
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/translate-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/translate-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:translate
   - name: verifiedpermissions
     description: >-
@@ -56801,12 +69101,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/verifiedpermissions-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56830,9 +69129,45 @@ apis:
                   changed element to be propagate through the service and be
                   visible in the results of other Verified Permissions
                   operations.</p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/verifiedpermissions-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/verifiedpermissions-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:verifiedpermissions
   - name: trustedadvisor
     description: <p>TrustedAdvisor Public API</p>
@@ -56840,12 +69175,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/trustedadvisor-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -56907,9 +69241,41 @@ apis:
                 description: >-
                   <p>Update the lifecyle of a Recommendation. This API only
                   supports prioritized recommendati
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/trustedadvisor-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/trustedadvisor-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:trustedadvisor
   - name: vpc-lattice
     description: >-
@@ -56925,12 +69291,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/vpc-lattice-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57070,9 +69435,43 @@ apis:
                 description: >-
                   <p>Registers the targets with the target group. If it's a
                   Lambda target, you can only have one target in a target gr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/vpc-lattice-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/vpc-lattice-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:vpc-lattice
   - name: waf
     description: >-
@@ -57098,12 +69497,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/waf-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57156,9 +69554,45 @@ apis:
                   HTTP requests, see the <a
                   href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS
                   WAF Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/waf-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/waf-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:waf
   - name: voice-id
     description: >-
@@ -57169,12 +69603,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/voice-id-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57186,9 +69619,43 @@ apis:
                 description: >-
                   <p>Updates the specified watchlist. Every domain has a default
                   watchlist which cannot be updat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/voice-id-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/voice-id-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:voice-id
   - name: wisdom
     description: >-
@@ -57202,12 +69669,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/wisdom-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57364,9 +69830,43 @@ apis:
                   href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_UpdateContent.html">UpdateContent</a>
                   to modify an existing resource. You can only upload content to
                   a knowledge base of type CUS
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/wisdom-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/wisdom-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:wisdom
   - name: waf-regional
     description: >-
@@ -57395,12 +69895,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/waf-regional-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57453,9 +69952,45 @@ apis:
                   HTTP requests, see the <a
                   href="https://docs.aws.amazon.com/waf/latest/developerguide/">AWS
                   WAF Developer Guide<
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/waf-regional-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/waf-regional-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:waf-regional
   - name: wellarchitected
     description: >-
@@ -57473,12 +70008,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/wellarchitected-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57812,9 +70346,47 @@ apis:
               PUT:
                 summary: UpgradeReviewTemplateLensReview
                 description: <p>Upgrade the lens review of a review templ
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
     overlays:
       - type: APIs.io Search
         url: overlays/wellarchitected-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/wellarchitected-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:wellarchitected
   - name: wafv2
     description: >-
@@ -57875,12 +70447,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/wafv2-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -57931,9 +70502,45 @@ apis:
                   </p> </li> <li> <p>After you add an IP address to an IP set
                   that is in use in a blocking rule, the new address might be
                   blocked in one area while still allowed in another.</p> </l
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/wafv2-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/wafv2-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:wafv2
   - name: worklink
     description: >-
@@ -57950,12 +70557,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/worklink-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58131,9 +70737,45 @@ apis:
               POST:
                 summary: UpdateIdentityProviderConfiguration
                 description: <p>Updates the identity provider configuration for the fl
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/worklink-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/worklink-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:worklink
   - name: workmail
     description: >-
@@ -58161,12 +70803,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workmail-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58180,9 +70821,45 @@ apis:
                   it must be preceded by a <a>DescribeUser</a> call. The dataset
                   in the request should be the one expected when performing
                   another <code>DescribeUser</code> c
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workmail-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workmail-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workmail
   - name: workspaces
     description: >-
@@ -58214,12 +70891,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workspaces-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58250,9 +70926,45 @@ apis:
                   Web Services GovCloud (US). To share BYOL images across
                   accounts in Amazon Web Services GovCloud (US), contact Amazon
                   Web Services Support.</p> </li> </ul>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workspaces-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workspaces-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workspaces
   - name: workspaces-thin-client
     description: >-
@@ -58278,12 +70990,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workspaces-thin-client-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58321,9 +71032,45 @@ apis:
               DELETE:
                 summary: UntagResource
                 description: <p>Removes a tag or tags from a resou
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workspaces-thin-client-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workspaces-thin-client-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workspaces-thin-client
   - name: workdocs
     description: >-
@@ -58366,12 +71113,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workdocs-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58588,9 +71334,45 @@ apis:
                 description: >-
                   <p>Searches metadata and the content of folders, documents,
                   document versions, and comme
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workdocs-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workdocs-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workdocs
   - name: workmailmessageflow
     description: >-
@@ -58600,12 +71382,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workmailmessageflow-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58630,9 +71411,43 @@ apis:
                   message, the message remains unchanged, even though <a
                   href="https://docs.aws.amazon.com/workmail/latest/APIReference/API_messageflow_GetRawMessageContent.html">GetRawMessageContent</a>
                   returns an updated message. </p>
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workmailmessageflow-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workmailmessageflow-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workmailmessageflow
   - name: workspaces-web
     description: >-
@@ -58648,12 +71463,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/workspaces-web-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -58773,9 +71587,45 @@ apis:
               GET:
                 summary: ListTrustStoreCertificates
                 description: <p>Retrieves a list of trust store certifica
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/workspaces-web-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/workspaces-web-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:workspaces-web
   - name: xray
     description: >-
@@ -58786,12 +71636,11 @@ apis:
     humanURL: https://example.com
     baseURL: https://example.com
     tags:
-      - Tags
+      - Tag
     properties:
       - type: OpenAPI
         url: https://example.com
       - type: OpenAPI
-        url: properties/xray-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -59048,9 +71897,43 @@ apis:
               POST:
                 summary: UpdateSamplingRule
                 description: <p>Modifies a sampling rule's configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-error
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
     overlays:
       - type: APIs.io Search
         url: overlays/xray-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/xray-openapi-api-evangelist-ratings.yml
     aid: amazon-web-services:xray
 common:
   - type: Getting Started
@@ -59079,6 +71962,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: amazon-web-services
 ---

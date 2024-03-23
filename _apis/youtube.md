@@ -26,7 +26,7 @@ apis:
     tags:
       - Videos
     properties:
-      - type: Documentation
+      - type: OpenAPI
         url: https://developers.google.com/youtube/v3/docs
       - type: OpenAPI
         url: https://api.apis.guru/v2/specs/googleapis.com/youtube/v3/openapi.yaml
@@ -46,7 +46,7 @@ apis:
     tags:
       - Video Analytics
     properties:
-      - type: Documentation
+      - type: OpenAPI
         url: https://developers.google.com/youtube/analytics/reference
       - type: OpenAPI
         url: >-
@@ -75,6 +75,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: youtube
 ---

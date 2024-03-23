@@ -37,5 +37,7 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
+    url: overlays/apis-io-search.yml
 aid: united-states-national-library-of-medicine
 ---

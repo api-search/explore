@@ -33,10 +33,172 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/classic/configure-notifications/
       - type: OpenAPI
-        url: properties/accounting-notifications-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Accounting Notifications
+            x-timestamp: '2023-02-10T11:25:40Z'
+          x-groups:
+            - General
+          tags: []
+          x-staticResponse: response.json
+          webhooks:
+            balancePlatform.transfer.created:
+              post:
+                tags:
+                  - General
+                summary: Transfer created
+                description: >-
+                  Adyen sends this webhook when there are fund movements on your
+                  platform.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.transfer.created
+                x-groupName: General
+                x-sortIndex: 0
+                x-methodName: transferCreated
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-transfer-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.transfer.created-balancePlatform-transfer-created
+                      schema:
+                        $ref: '#/components/schemas/TransferNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-transfer-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.transfer.updated:
+              post:
+                tags:
+                  - General
+                summary: Transfer updated
+                description: >+
+                  Adyen sends this webhook when the status of a transfer
+                  changes. Use the `data.id` to track the original transfer
+                  resource in the
+                  [balancePlatform.transfer.created](https://docs.adyen.com/api-explorer/accounting-webhooks/1/post/balancePlatform.transfer.created)
+                  webhook.
+
+
+                  The `status` field indicates the event that triggered the
+                  webhook. 
+
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.transfer.updated
+                x-groupName: General
+                x-sortIndex: 0
+                x-methodName: transferUpdated
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-transfer-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.transfer.updated-balancePlatform-transfer-updated
+                      schema:
+                        $ref: '#/components/schemas/TransferNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-transfer-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-one-error
+              message: One Tag
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/accounting-notifications-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/accounting-notifications-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-accounting-notifications-api
   - name: Adyen Account API
     description: >-
@@ -57,7 +219,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/Account/6/overview
       - type: OpenAPI
-        url: properties/accounts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -517,9 +678,157 @@ apis:
                   Uploads a document for an account holder. Adyen uses the
                   documents during the [verification
                   process](https://docs.adyen.com/marketplaces-and-platforms/classi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/accounts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/accounts-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-account-api
   - name: Adyen Authentication Webhooks API
     description: >-
@@ -536,10 +845,134 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/development-resources/webhooks/
       - type: OpenAPI
-        url: properties/authentication-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Authentication Webhooks
+          tags:
+            - name: General
+          webhooks:
+            balancePlatform.authentication.created:
+              post:
+                tags:
+                  - General
+                summary: Cardholder authenticated
+                description: >-
+                  Adyen sends this webhook when the process of cardholder
+                  authentication is finalized, whether it is completed
+                  successfully, fails, or expires.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.authentication.created
+                x-sortIndex: 1
+                x-methodName: cardholderAuthenticated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-authentication-created-authenticated-challenge:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.authentication.created-balancePlatform-authentication-created-authenticated-challenge
+                        balancePlatform-authentication-created-authenticated-frictionless:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.authentication.created-balancePlatform-authentication-created-authenticated-frictionless
+                        balancePlatform-authentication-created-rejected:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.authentication.created-balancePlatform-authentication-created-rejected
+                      schema:
+                        $ref: '#/components/schemas/AuthenticationNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-authentication-created-authenticated-challenge:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-authentication-created-authenticated-frictionless:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-authentication-created-rejected:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/authentication-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/authentication-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-authentication-webhooks-api
   - name: Adyen Balance Control API
     description: >-
@@ -558,7 +991,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/BalanceControl/1/overview
       - type: OpenAPI
-        url: properties/balance-control-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -598,9 +1030,137 @@ apis:
                   destination merchant accounts, send the requests sequentially
                   and *not* in parallel. Some requests may not be processed if
                   the reques
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/balance-control-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/balance-control-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-balance-control-api
   - name: Adyen BinLookup API
     description: >-
@@ -616,7 +1176,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/BinLookup/52/overview
       - type: OpenAPI
-        url: properties/binlookup-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -677,9 +1236,153 @@ apis:
                   or if you also plan to provide additional Level 2/3 data), the
                   returned amounts are based on a set of assumption criteria you
                   define in the 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/binlookup-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/binlookup-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-binlookup-api
   - name: Adyen Checkout API
     description: This is the description of your API.
@@ -687,13 +1390,12 @@ apis:
     humanURL: https://docs.adyen.com/api-explorer/Checkout/71/overview
     baseURL: https://api.example.com
     tags:
-      - Checkouts
+      - Checkout
       - Commerce
     properties:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/Checkout/71/overview
       - type: OpenAPI
-        url: properties/checkout-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -1556,9 +2258,237 @@ apis:
                 description: >-
                   Deletes the token identified in the path. The token can no
                   longer be use
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/checkout-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/checkout-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-checkout-api
   - name: Adyen Configuration API
     description: >-
@@ -1569,7 +2499,7 @@ apis:
     humanURL: https://docs.adyen.com/api-explorer/balanceplatform/2/overview
     baseURL: https://api.example.com
     tags:
-      - Configurations
+      - Configuration
       - Accounts
       - Balances
       - Cards
@@ -1577,7 +2507,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/balanceplatform/2/overview
       - type: OpenAPI
-        url: properties/configuration-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2768,9 +3697,219 @@ apis:
                   transfer](https://docs.adyen.com/api-explorer/transfers/latest/post/transfers)
                   or [create a transfer
                   instrument](https://docs.adyen.com/api-explorer/legalentity/latest/po
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/configuration-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/configuration-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-configuration-api
   - name: Adyen Configuration Webhooks API
     description: >-
@@ -2784,7 +3923,7 @@ apis:
     humanURL: https://docs.adyen.com/api-explorer/balanceplatform-webhooks/1/overview
     baseURL: https://api.example.com
     tags:
-      - Configurations
+      - Configuration
       - Webhooks
       - Accounts
     properties:
@@ -2792,10 +3931,479 @@ apis:
         url: >-
           https://docs.adyen.com/api-explorer/balanceplatform-webhooks/1/overview
       - type: OpenAPI
-        url: properties/configuration-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Configuration webhooks
+          tags:
+            - name: Account holder
+            - name: Balance account
+            - name: Payment instrument
+            - name: Card order
+          x-staticResponse: response.json
+          webhooks:
+            balancePlatform.accountHolder.created:
+              post:
+                tags:
+                  - Account holder
+                summary: Account holder created
+                description: >-
+                  Adyen sends this webhook when you successfully [create an
+                  account
+                  holder](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/accountHolders).
+                operationId: post-balancePlatform.accountHolder.created
+                x-sortIndex: 1
+                x-methodName: accountHolderCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-accountHolder-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.created-balancePlatform-accountHolder-created
+                        balancePlatform-accountHolder-created-lem-v3:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.created-balancePlatform-accountHolder-created-lem-v3
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-accountHolder-created:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-accountHolder-created-lem-v3:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.accountHolder.updated:
+              post:
+                tags:
+                  - Account holder
+                summary: Account holder updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update an
+                  account
+                  holder](https://docs.adyen.com/api-explorer/balanceplatform/latest/patch/accountHolders/_id_).
+                operationId: post-balancePlatform.accountHolder.updated
+                x-sortIndex: 2
+                x-methodName: accountHolderUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-accountHolder-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.updated-balancePlatform-accountHolder-updated
+                        balancePlatform-accountHolder-updated-lem-v3:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.updated-balancePlatform-accountHolder-updated-lem-v3
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-accountHolder-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-accountHolder-updated-lem-v3:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccount.created:
+              post:
+                tags:
+                  - Balance account
+                summary: Balance account created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  balance
+                  account](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/balanceAccounts).
+                operationId: post-balancePlatform.balanceAccount.created
+                x-sortIndex: 1
+                x-methodName: balanceAccountCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-balanceAccount-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccount.created-balancePlatform-balanceAccount-created
+                      schema:
+                        $ref: '#/components/schemas/BalanceAccountNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-balanceAccount-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccount.updated:
+              post:
+                tags:
+                  - Balance account
+                summary: Balance account updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update a
+                  balance
+                  account](https://docs.adyen.com/api-explorer/balanceplatform/latest/patch/balanceAccounts/_id_).
+                operationId: post-balancePlatform.balanceAccount.updated
+                x-sortIndex: 2
+                x-methodName: balanceAccountUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-balanceAccount-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccount.updated-balancePlatform-balanceAccount-updated
+                      schema:
+                        $ref: '#/components/schemas/BalanceAccountNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-balanceAccount-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.created:
+              post:
+                tags:
+                  - Balance account
+                summary: Sweep created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  sweep](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/balanceAccounts/_balanceAccountId_/sweeps).
+                operationId: post-balancePlatform.balanceAccountSweep.created
+                x-sortIndex: 3
+                x-methodName: sweepCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.created-balancePlatform-sweep-created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.deleted:
+              post:
+                tags:
+                  - Balance account
+                summary: Sweep deleted
+                description: >-
+                  Adyen sends this webhook when you successfully [delete a
+                  sweep](https://docs.adyen.com/api-explorer/balanceplatform/latest/delete/balanceAccounts/_balanceAccountId_/sweeps/_sweepId_).
+                operationId: post-balancePlatform.balanceAccountSweep.deleted
+                x-sortIndex: 5
+                x-methodName: sweepDeleted
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-deleted:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.deleted-balancePlatform-sweep-deleted
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-deleted:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.updated:
+              post:
+                tags:
+                  - Balance account
+                summary: Sweep updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update a
+                  sweep](https://docs.adyen.com/api-explorer/balanceplatform/latest/patch/balanceAccounts/_balanceAccountId_/sweeps/_sweepId_).
+                operationId: post-balancePlatform.balanceAccountSweep.updated
+                x-sortIndex: 4
+                x-methodName: sweepUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.updated-balancePlatform-sweep-updated
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.cardorder.created:
+              post:
+                tags:
+                  - Card order
+                summary: Card order created
+                description: >-
+                  Adyen sends this webhook to indicate a successful creation of
+                  a card order after you create a [payment
+                  instrument](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/paymentInstruments)
+                  of `type` **card** and `formFactor` **physical**.
+                operationId: post-balancePlatform.cardorder.created
+                x-sortIndex: 1
+                x-methodName: cardOrderCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/CardOrderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.cardorder.updated:
+              post:
+                tags:
+                  - Card order
+                summary: Card order updated
+                description: >-
+                  Adyen sends this webhook when there is an update in card order
+                  status.
+                operationId: post-balancePlatform.cardorder.updated
+                x-sortIndex: 2
+                x-methodName: cardOrderUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/CardOrderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.paymentInstrument.created:
+              post:
+                tags:
+                  - Payment instrument
+                summary: Payment instrument created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  payment
+                  instrument](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/paymentInstruments). 
+
+                  >The webhook does not include the card number when creating
+                  virtual cards. You can only get the card number in the
+                  response of the POST
+                  [/paymentInstruments](https://docs.adyen.com/api-explorer/balanceplatform/latest/post/paymentInstruments#responses-200-card-number)
+                  request.
+                operationId: post-balancePlatform.paymentInstrument.created
+                x-sortIndex: 1
+                x-methodName: paymentInstrumentCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-paymentInstrument-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.paymentInstrument.created-balancePlatform-paymentInstrument-created
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-paymentInstrument-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.paymentInstrument.updated:
+              post:
+                tags:
+                  - Payment instrument
+                summary: Payment instrument updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update a
+                  payment
+                  instrument](https://docs.adyen.com/api-explorer/balanceplatform/latest/patch/paymentInstruments/_id_). 
+                operationId: post-balancePlatform.paymentInstrument.updated
+                x-sortIndex: 2
+                x-methodName: paymentInstrumentUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-paymentInstrument-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.paymentInstrument.updated-balancePlatform-paymentInstrument-updated
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-paymentInstrument-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/configuration-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/configuration-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-configuration-webhooks-api
   - name: Adyen Data Protection API
     description: >-
@@ -2815,7 +4423,6 @@ apis:
       - type: OpenAPI
         url: https://gdpr-info.eu/art-17-gdpr/
       - type: OpenAPI
-        url: properties/data-protection-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2835,9 +4442,137 @@ apis:
                   - Erasure
                 summary: Submit a Subject Erasure Request.
                 description: Sends the PSP reference containing the shopper
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/data-protection-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/data-protection-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-data-protection-api
   - name: Adyen Disputes API
     description: >-
@@ -2855,7 +4590,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/risk-management/disputes-api
       - type: OpenAPI
-        url: properties/disputes-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -2922,9 +4656,135 @@ apis:
                   - Reasons
                 summary: Supply a defense document
                 description: Supplies a specific d
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/disputes-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/disputes-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-disputes-api
   - name: Adyen Funds API
     description: >-
@@ -2944,7 +4804,6 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/classic/fund-transfer/
       - type: OpenAPI
-        url: properties/funds-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3152,9 +5011,155 @@ apis:
                   accounts must be in the same platform, but can have different
                   account holders. The transfer must include a transfer code,
                   which should be determined by the platform, in compliance
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/funds-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/funds-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-funds-api
   - name: Adyen Hosted Onboarding API
     description: >-
@@ -3175,7 +5180,6 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/collect-verification-details/hosted/
       - type: OpenAPI
-        url: properties/hosted-onboarding-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3223,9 +5227,149 @@ apis:
                   Returns a link to a PCI compliance questionnaire that you can
                   send to your account holder.
                    > You should only use this endpoint if you have a [partner platform setup](https://docs.adyen.com/marketplaces-and-platforms/classic/
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/hosted-onboarding-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/hosted-onboarding-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-hosted-onboarding-api
   - name: Adyen Legal Entity API
     description: >-
@@ -3235,16 +5379,15 @@ apis:
     humanURL: >-
       https://docs.adyen.com/marketplaces-and-platforms/legal-entity-management-api/
     baseURL: https://api.example.com
-    tags: &ref_0
+    tags:
       - Legal
       - Entities
-      - Verifications
+      - Verification
     properties:
       - type: OpenAPI
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/legal-entity-management-api/
       - type: OpenAPI
-        url: properties/legal-entity-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -3988,9 +6131,203 @@ apis:
                   - Instruments
                 summary: Update a transfer instrument
                 description: Updat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/legal-entity-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/legal-entity-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-legal-entity-api
   - name: Adyen Legal Entity API
     description: >-
@@ -4000,13 +6337,15 @@ apis:
     humanURL: >-
       https://docs.adyen.com/marketplaces-and-platforms/legal-entity-management-api/
     baseURL: https://api.example.com
-    tags: *ref_0
+    tags:
+      - Legal
+      - Entities
+      - Verification
     properties:
       - type: OpenAPI
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/legal-entity-management-api/
       - type: OpenAPI
-        url: properties/legal-entity-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -4750,9 +7089,203 @@ apis:
                   - Instruments
                 summary: Update a transfer instrument
                 description: Updat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/legal-entity-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/legal-entity-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-legal-entity-api
   - name: Adyen Management API
     description: >-
@@ -4770,7 +7303,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/Management/3/overview
       - type: OpenAPI
-        url: properties/management-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12739,9 +15271,217 @@ apis:
                   your API credential must have the following role:
 
                   * Management API—Terminal settings
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/management-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/management-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-management-api
   - name: Adyen Management Webhooks API
     description: >-
@@ -12765,10 +15505,275 @@ apis:
         url: >-
           https://docs.adyen.com/api-explorer/#/ManagementService/latest/overview
       - type: OpenAPI
-        url: properties/management-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Management Webhooks
+          tags:
+            - name: Merchant account
+            - name: Payment method
+          x-staticResponse: response.json
+          webhooks:
+            merchant.created:
+              post:
+                tags:
+                  - Merchant account
+                summary: Merchant account created
+                description: >-
+                  A merchant account [was
+                  created](https://docs.adyen.com/api-explorer/#/ManagementService/latest/post/merchants).
+                x-addedInVersion: '1'
+                operationId: post-merchant.created
+                x-sortIndex: 1
+                x-methodName: merchantAccountCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        merchant.created:
+                          $ref: >-
+                            #/components/examples/post-merchant.created-merchant.created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/MerchantCreatedNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          merchant.created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/AccountNotificationResponse'
+                    description: OK - the request has succeeded.
+            merchant.updated:
+              post:
+                tags:
+                  - Merchant account
+                summary: Merchant account capability updated
+                description: >-
+                  There were changes to the verification status and capabilities
+                  of a [merchant
+                  account](https://docs.adyen.com/api-explorer/#/ManagementService/latest/post/merchants).
+                  If the verification fails, this webhook includes the errors
+                  and the actions that you can take to resolve them.
+                x-addedInVersion: '1'
+                operationId: post-merchant.updated
+                x-sortIndex: 2
+                x-methodName: merchantAccountCapabilityUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        merchant-updated-valid:
+                          $ref: >-
+                            #/components/examples/post-merchant.updated-merchant-updated-valid
+                        merchant-updated-with-errors:
+                          $ref: >-
+                            #/components/examples/post-merchant.updated-merchant-updated-with-errors
+                      schema:
+                        $ref: >-
+                          #/components/schemas/MerchantUpdatedNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          merchant-updated-valid:
+                            $ref: '#/components/examples/WebhookAck'
+                          merchant-updated-with-errors:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/AccountNotificationResponse'
+                    description: OK - the request has succeeded.
+            paymentMethod.created:
+              post:
+                tags:
+                  - Payment method
+                summary: Payment method created
+                description: >-
+                  A request to [add a payment
+                  method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings)
+                  was completed.
+                x-addedInVersion: '1'
+                operationId: post-paymentMethod.created
+                x-sortIndex: 1
+                x-methodName: paymentMethodCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        paymentMethod.created:
+                          $ref: >-
+                            #/components/examples/post-paymentMethod.created-paymentMethod.created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/PaymentMethodCreatedNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          paymentMethod.created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/PaymentMethodNotificationResponse
+                    description: OK - the request has succeeded.
+            paymentMethod.requestRemoved:
+              post:
+                tags:
+                  - Payment method
+                summary: Payment method request removed
+                description: >-
+                  A request to add a payment method is removed. You must make
+                  another request to [add a payment
+                  method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings).
+                x-addedInVersion: '2'
+                operationId: post-paymentMethod.requestRemoved
+                x-sortIndex: 3
+                x-methodName: paymentMethodRequestRemoved
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        paymentMethod.requestRemoved:
+                          $ref: >-
+                            #/components/examples/post-paymentMethod.requestRemoved-paymentMethod.requestRemoved
+                      schema:
+                        $ref: >-
+                          #/components/schemas/PaymentMethodRequestRemovedNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          paymentMethod.requestRemoved:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/PaymentMethodNotificationResponse
+                    description: OK - the request has succeeded.
+            paymentMethod.requestScheduledForRemoval:
+              post:
+                tags:
+                  - Payment method
+                summary: Payment method request scheduled for removal
+                description: >-
+                  A request to [add a payment
+                  method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings)
+                  will be removed in 30 days. To make sure the payment method is
+                  added, provide the missing [KYC
+                  information](https://docs.adyen.com/marketplaces-and-platforms/collect-verification-details).
+                x-addedInVersion: '2'
+                operationId: post-paymentMethod.requestScheduledForRemoval
+                x-sortIndex: 2
+                x-methodName: paymentMethodRequestScheduledForRemoval
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        paymentMethod.requestScheduledForRemoval:
+                          $ref: >-
+                            #/components/examples/post-paymentMethod.requestScheduledForRemoval-paymentMethod.requestScheduledForRemoval
+                      schema:
+                        $ref: >-
+                          #/components/schemas/PaymentMethodScheduledForRemovalNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          paymentMethod.requestScheduledForRemoval:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/PaymentMethodNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/management-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/management-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-management-webhooks-api
   - name: Adyen Notification Configuration API
     description: >-
@@ -12790,7 +15795,6 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/classic/notifications
       - type: OpenAPI
-        url: properties/notification-configurations-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -12902,9 +15906,154 @@ apis:
                   Updates an existing notification subscription configuration.
                   If you are updating the event types, you must provide all
                   event types, otherwise the previous event type configurat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/notification-configurations-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/notification-configurations-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-notification-configuration-api
   - name: Adyen Notification Webhooks API
     description: >-
@@ -12928,10 +16077,711 @@ apis:
         url: >-
           https://docs.adyen.com/point-of-sale/design-your-integration/notifications/
       - type: OpenAPI
-        url: properties/notification-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Notification webhooks
+            x-timestamp: '2022-09-19T22:19:02Z'
+          x-groups:
+            - Account holder and balance account
+            - Payment Instrument
+            - Authorisation, refund, or transfer requests
+            - Fund movements
+            - Reports
+          tags: []
+          x-staticResponse: response.json
+          webhooks:
+            balancePlatform.accountHolder.created:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Account holder created
+                description: >-
+                  Adyen sends this webhook when you successfully [create an
+                  account
+                  holder](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/accountHolders).
+                operationId: post-balancePlatform.accountHolder.created
+                x-groupName: Account holder and balance account
+                x-sortIndex: 5
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-accountHolder-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.created-balancePlatform-accountHolder-created
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-accountHolder-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.accountHolder.updated:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Account holder updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update an
+                  account
+                  holder](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/patch/accountHolders/{id}).
+                operationId: post-balancePlatform.accountHolder.updated
+                x-groupName: Account holder and balance account
+                x-sortIndex: 5
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-accountHolder-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.accountHolder.updated-balancePlatform-accountHolder-updated
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-accountHolder-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccount.created:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Balance account created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  balance
+                  account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts).
+                operationId: post-balancePlatform.balanceAccount.created
+                x-groupName: Account holder and balance account
+                x-sortIndex: 5
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-balanceAccount-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccount.created-balancePlatform-balanceAccount-created
+                      schema:
+                        $ref: '#/components/schemas/BalanceAccountNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-balanceAccount-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.created:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Balance account sweep created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  sweep](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts/{balanceAccountId}/sweeps).
+                operationId: post-balancePlatform.balanceAccountSweep.created
+                x-groupName: Account holder and balance account
+                x-sortIndex: 6
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.created-balancePlatform-sweep-created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.deleted:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Balance account sweep deleted
+                description: >-
+                  Adyen sends this webhook when you successfully [delete a
+                  sweep](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/delete/balanceAccounts/{balanceAccountId}/sweeps/{sweepId}).
+                operationId: post-balancePlatform.balanceAccountSweep.deleted
+                x-groupName: Account holder and balance account
+                x-sortIndex: 6
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-deleted:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.deleted-balancePlatform-sweep-deleted
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-deleted:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.balanceAccountSweep.updated:
+              post:
+                tags:
+                  - Account holder and balance account
+                summary: Balance account sweep updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update a
+                  sweep](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/patch/balanceAccounts/{balanceAccountId}/sweeps/{sweepId}).
+                operationId: post-balancePlatform.balanceAccountSweep.updated
+                x-groupName: Account holder and balance account
+                x-sortIndex: 6
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-sweep-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.balanceAccountSweep.updated-balancePlatform-sweep-updated
+                      schema:
+                        $ref: >-
+                          #/components/schemas/SweepConfigurationNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-sweep-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.incomingTransfer.created:
+              post:
+                tags:
+                  - Fund movements
+                summary: Incoming transfer created
+                description: >-
+                  Adyen sends this webhook when there are incoming funds due to
+                  a refund or a fund transfer. Use the `paymentId` to link to
+                  the original refund request or funds transfer request. Check
+                  the content of the webhook to differentiate the events.
+
+
+                  * For refunds, the webhook includes the payment instrument to
+                  which funds will be refunded.
+
+
+                  * For incoming fund transfers, the webhook only includes
+                  information about the balance account.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.incomingTransfer.created
+                x-groupName: Fund movements
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-incomingTransfer-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.incomingTransfer.created-balancePlatform-incomingTransfer-created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/IncomingTransferNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-incomingTransfer-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.incomingTransfer.updated:
+              post:
+                tags:
+                  - Fund movements
+                summary: Outgoing transfer updated
+                description: >-
+                  Adyen sends this webhook when funds were added to the balance
+                  account. This could be due to a refund or a funds transfer.
+                  Use the `data.id` to track the original incoming transfer
+                  resource in the `balancePlatform.incomingTransfer.created`
+                  webhook.
+
+
+                  The `status` field indicates the event that triggered the
+                  webhook. 
+
+
+                  * For refunds, the `status` is **Refunded**. 
+
+
+                  * For incoming fund transfers, the `status` is
+                  **IncomingTransfer**.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.incomingTransfer.updated
+                x-groupName: Fund movements
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-incomingTransfer-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.incomingTransfer.updated-balancePlatform-incomingTransfer-updated
+                      schema:
+                        $ref: >-
+                          #/components/schemas/IncomingTransferNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-incomingTransfer-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.outgoingTransfer.created:
+              post:
+                tags:
+                  - Fund movements
+                summary: Outgoing transfer created
+                description: >-
+                  Adyen sends this webhook when funds were deducted from a
+                  balance account due to a capture or a funds transfer. Use the
+                  `paymentId` to link to the original payment authorisation or
+                  funds transfer request.
+
+
+                  The `status` field indicates the event that triggered the
+                  webhook. 
+
+
+                  * For captures, the `status` will be **Captured**. 
+
+
+                  * For outgoing fund transfers, the `status` will be
+                  **OutgoingTransfer**.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.outgoingTransfer.created
+                x-groupName: Fund movements
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-outgoingTransfer-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.outgoingTransfer.created-balancePlatform-outgoingTransfer-created
+                      schema:
+                        $ref: >-
+                          #/components/schemas/OutgoingTransferNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-outgoingTransfer-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.outgoingTransfer.updated:
+              post:
+                tags:
+                  - Fund movements
+                summary: Outgoing transfer updated
+                description: >-
+                  Adyen sends this webhook when there is updated information
+                  after funds have been deducted from a balance account. For
+                  example, if the fund transfer failed.
+
+
+                  Use the `data.id` to track the original outgoing transfer
+                  resource from the `balancePlatform.outgoingTransfer.created`
+                  webhook.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.outgoingTransfer.updated
+                x-groupName: Fund movements
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-outgoingTransfer-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.outgoingTransfer.updated-balancePlatform-outgoingTransfer-updated
+                      schema:
+                        $ref: >-
+                          #/components/schemas/OutgoingTransferNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-outgoingTransfer-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.payment.created:
+              post:
+                tags:
+                  - Authorisation, refund, or transfer requests
+                summary: Payment authorisation, refund, or funds transfer initiated
+                description: >-
+                  Adyen sends this webhook when a payment authorisation, a
+                  refund, or a funds transfer has been initiated. This webhook
+                  only informs your server of requests. For the actual fund
+                  movements, you'll get the information from the subsequent
+                  outgoing or incoming transfer webhooks.
+
+                   To differentiate the requests, check the content of the webhook.
+
+                  * For payments, the webhook contains the authorisation result,
+                  information about the processing merchant, and shows a
+                  negative amount.
+
+                   * For refunds, the webhook contains to which payment instrument the funds will be refunded, and shows a positive amount.
+
+                  * For outgoing or incoming fund transfers, the webhook shows a
+                  positive or negative amount depending on the direction of the
+                  transfer, and only includes information about the balance
+                  account.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.payment.created
+                x-groupName: Authorisation, refund, or transfer requests
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-payment-created-authorized:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.created-balancePlatform-payment-created-authorized
+                        balancePlatform-payment-created-funds-transfer:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.created-balancePlatform-payment-created-funds-transfer
+                        balancePlatform-payment-created-refund-requested:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.created-balancePlatform-payment-created-refund-requested
+                        balancePlatform-payment-created-rejected:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.created-balancePlatform-payment-created-rejected
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest-2'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-payment-created-authorized:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-payment-created-funds-transfer:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-payment-created-refund-requested:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-payment-created-rejected:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.payment.updated:
+              post:
+                tags:
+                  - Authorisation, refund, or transfer requests
+                summary: Payment authorisation expired or cancelled
+                description: >-
+                  Adyen sends this webhook when a payment authorisation has
+                  expired or has been cancelled. Use the `data.id` to track the
+                  original payment authorisation from the
+                  `balancePlatform.payment.created` webhook.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.payment.updated
+                x-groupName: Authorisation, refund, or transfer requests
+                x-sortIndex: 1
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-payment-updated-expired:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.updated-balancePlatform-payment-updated-expired
+                        balancePlatform-payment-updated-partially-cancelled:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.updated-balancePlatform-payment-updated-partially-cancelled
+                        balancePlatform-payment-updated-partially-expired:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.payment.updated-balancePlatform-payment-updated-partially-expired
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest-2'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-payment-updated-expired:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-payment-updated-partially-cancelled:
+                            $ref: '#/components/examples/WebhookAck'
+                          balancePlatform-payment-updated-partially-expired:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.paymentInstrument.created:
+              post:
+                tags:
+                  - Payment Instrument
+                summary: Payment instrument created
+                description: >-
+                  Adyen sends this webhook when you successfully [create a
+                  payment
+                  instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments). 
+
+                  >The notification does not include the card number when
+                  creating virtual cards. You can only get the card number in
+                  the POST response.
+                operationId: post-balancePlatform.paymentInstrument.created
+                x-groupName: Payment Instrument
+                x-sortIndex: 3
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-paymentInstrument-created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.paymentInstrument.created-balancePlatform-paymentInstrument-created
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-paymentInstrument-created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.paymentInstrument.updated:
+              post:
+                tags:
+                  - Payment Instrument
+                summary: Payment instrument updated
+                description: >-
+                  Adyen sends this webhook when you successfully [update a
+                  payment
+                  instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/patch/paymentInstruments/{id}). 
+                operationId: post-balancePlatform.paymentInstrument.updated
+                x-groupName: Payment Instrument
+                x-sortIndex: 3
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform-paymentInstrument-updated:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.paymentInstrument.updated-balancePlatform-paymentInstrument-updated
+                      schema:
+                        $ref: '#/components/schemas/PaymentNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform-paymentInstrument-updated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.report.created:
+              post:
+                tags:
+                  - Reports
+                summary: Report generated
+                description: >-
+                  Adyen sends this webhook after a report is generated and ready
+                  to be downloaded. The webhook contains the URL at which the
+                  report can be downloaded.
+
+
+                  Before you download reports, ask your Adyen contact for your
+                  report credentials. You must use your the credentials to
+                  authenticate your GET request.
+                operationId: post-balancePlatform.report.created
+                x-groupName: Reports
+                x-sortIndex: 7
+                security:
+                  - ApiKeyAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform.report.created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.report.created-balancePlatform.report.created
+                      schema:
+                        $ref: '#/components/schemas/ReportNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform.report.created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-one-error
+              message: One Tag
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/notification-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/notification-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-notification-webhooks-api
   - name: Adyen Notifications API
     description: >-
@@ -12950,10 +16800,763 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/classic/notifications
       - type: OpenAPI
-        url: properties/notifications-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Classic Platforms - Notifications
+            x-timestamp: '2023-06-02T11:23:48Z'
+          x-groups:
+            - Account holders
+            - Accounts
+            - Fund management
+            - Other
+          tags: []
+          x-staticResponse: response.json
+          webhooks:
+            /ACCOUNT_CLOSED:
+              post:
+                tags:
+                  - Accounts
+                summary: Account closed
+                description: >-
+                  Adyen sends this webhook when [an account is
+                  closed](https://docs.adyen.com/api-explorer/#/Account/latest/post/closeAccount).
+                operationId: post-ACCOUNT_CLOSED
+                x-groupName: Accounts
+                x-sortIndex: 3
+                x-methodName: accountClosed
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountClosed:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_CLOSED-accountClosed
+                      schema:
+                        $ref: '#/components/schemas/AccountCloseNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountClosed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_CREATED:
+              post:
+                tags:
+                  - Accounts
+                summary: Account created
+                description: >-
+                  Adyen sends this webhook when [an account is
+                  created](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccount).
+                operationId: post-ACCOUNT_CREATED
+                x-groupName: Accounts
+                x-sortIndex: 1
+                x-methodName: accountCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountCreated:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_CREATED-accountCreated
+                      schema:
+                        $ref: '#/components/schemas/AccountCreateNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountCreated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_FUNDS_BELOW_THRESHOLD:
+              post:
+                tags:
+                  - Fund management
+                summary: Liable account's funds are below configured threshold
+                description: >-
+                  Adyen sends this notification when the current funds of your
+                  liable account are below the configured threshold.
+                operationId: post-ACCOUNT_FUNDS_BELOW_THRESHOLD
+                x-groupName: Fund management
+                x-sortIndex: 7
+                x-methodName: liableAccountsFundsAreBelowConfiguredThreshold
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountFundsBelowThreshold:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_FUNDS_BELOW_THRESHOLD-accountFundsBelowThreshold
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AccountFundsBelowThresholdNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountFundsBelowThreshold:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_CREATED:
+              post:
+                tags:
+                  - Account holders
+                summary: Account holder created
+                description: >-
+                  Adyen sends this webhook when [an account holder is
+                  created](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder).
+                operationId: post-ACCOUNT_HOLDER_CREATED
+                x-groupName: Account holders
+                x-sortIndex: 1
+                x-methodName: accountHolderCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderCreated-businesses:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_CREATED-accountHolderCreated-businesses
+                        accountHolderCreated-failed:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_CREATED-accountHolderCreated-failed
+                        accountHolderCreated-individuals:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_CREATED-accountHolderCreated-individuals
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderCreateNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderCreated-businesses:
+                            $ref: '#/components/examples/WebhookAck'
+                          accountHolderCreated-failed:
+                            $ref: '#/components/examples/WebhookAck'
+                          accountHolderCreated-individuals:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_PAYOUT:
+              post:
+                tags:
+                  - Fund management
+                summary: Paid out to account holder
+                description: >-
+                  Adyen sends this notification when a [payout
+                  request](https://docs.adyen.com/api-explorer/#/Fund/latest/post/payoutAccountHolder)
+                  to an account holder is processed and the payout is scheduled.
+                operationId: post-ACCOUNT_HOLDER_PAYOUT
+                x-groupName: Fund management
+                x-sortIndex: 1
+                x-methodName: paidOutToAccountHolder
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderPayout-failed:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_PAYOUT-accountHolderPayout-failed
+                        accountHolderPayout-initiated:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_PAYOUT-accountHolderPayout-initiated
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderPayoutNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderPayout-failed:
+                            $ref: '#/components/examples/WebhookAck'
+                          accountHolderPayout-initiated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_STATUS_CHANGE:
+              post:
+                tags:
+                  - Account holders
+                summary: Account holder status changed
+                description: >-
+                  Adyen sends this webhook when [the status of an account holder
+                  is
+                  changed](https://docs.adyen.com/api-explorer/#/Account/latest/post/updateAccountHolderState).
+                operationId: post-ACCOUNT_HOLDER_STATUS_CHANGE
+                x-groupName: Account holders
+                x-sortIndex: 4
+                x-methodName: accountHolderStatusChanged
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderStatusChange:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_STATUS_CHANGE-accountHolderStatusChange
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AccountHolderStatusChangeNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderStatusChange:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_STORE_STATUS_CHANGE:
+              post:
+                tags:
+                  - Account holders
+                summary: Store status changed
+                description: >-
+                  Adyen sends this webhook when [the status of a
+                  store](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder__reqParam_accountHolderDetails-storeDetails-status)
+                  associated with an account holder is changed.
+                operationId: post-ACCOUNT_HOLDER_STORE_STATUS_CHANGE
+                x-groupName: Account holders
+                x-sortIndex: 4
+                x-methodName: storeStatusChanged
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderStoreStatusChange:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_STORE_STATUS_CHANGE-accountHolderStoreStatusChange
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AccountHolderStoreStatusChangeNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderStoreStatusChange:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_UPCOMING_DEADLINE:
+              post:
+                tags:
+                  - Account holders
+                summary: Upcoming deadline
+                description: >-
+                  Adyen sends this notification when an account holders deadline
+                  to fulfill the requirements of a specific event is coming up.
+                operationId: post-ACCOUNT_HOLDER_UPCOMING_DEADLINE
+                x-groupName: Account holders
+                x-sortIndex: 1
+                x-methodName: upcomingDeadline
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderUpcomingDeadline:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_UPCOMING_DEADLINE-accountHolderUpcomingDeadline
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AccountHolderUpcomingDeadlineNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderUpcomingDeadline:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_UPDATED:
+              post:
+                tags:
+                  - Account holders
+                summary: Account holder updated
+                description: >-
+                  Adyen sends this webhook when [an account holder is
+                  updated](https://docs.adyen.com/api-explorer/#/Account/latest/post/updateAccountHolder).
+                operationId: post-ACCOUNT_HOLDER_UPDATED
+                x-groupName: Account holders
+                x-sortIndex: 2
+                x-methodName: accountHolderUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderUpdated:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_UPDATED-accountHolderUpdated
+                      schema:
+                        $ref: '#/components/schemas/AccountHolderUpdateNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderUpdated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_HOLDER_VERIFICATION:
+              post:
+                tags:
+                  - Account holders
+                summary: Verification results received
+                description: >-
+                  Adyen sends this webhook when verification results are
+                  available.
+                operationId: post-ACCOUNT_HOLDER_VERIFICATION
+                x-groupName: Account holders
+                x-sortIndex: 3
+                x-methodName: verificationResultsReceived
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountHolderVerification:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_HOLDER_VERIFICATION-accountHolderVerification
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AccountHolderVerificationNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountHolderVerification:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ACCOUNT_UPDATED:
+              post:
+                tags:
+                  - Accounts
+                summary: Account updated
+                description: >-
+                  Adyen sends this webhook when [an account is
+                  updated](https://docs.adyen.com/api-explorer/#/Account/latest/post/updateAccount).
+                operationId: post-ACCOUNT_UPDATED
+                x-groupName: Accounts
+                x-sortIndex: 2
+                x-methodName: accountUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        accountUpdated:
+                          $ref: >-
+                            #/components/examples/post-ACCOUNT_UPDATED-accountUpdated
+                      schema:
+                        $ref: '#/components/schemas/AccountUpdateNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          accountUpdated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /BENEFICIARY_SETUP:
+              post:
+                tags:
+                  - Fund management
+                summary: Beneficiary defined
+                description: >-
+                  Adyen sends this notification when a [benefactor/beneficiary
+                  relationship is
+                  created](https://docs.adyen.com/api-explorer/#/Fund/latest/post/transferFunds).
+                operationId: post-BENEFICIARY_SETUP
+                x-groupName: Fund management
+                x-sortIndex: 3
+                x-methodName: beneficiaryDefined
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        beneficiarySetup:
+                          $ref: >-
+                            #/components/examples/post-BENEFICIARY_SETUP-beneficiarySetup
+                      schema:
+                        $ref: '#/components/schemas/BeneficiarySetupNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          beneficiarySetup:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /COMPENSATE_NEGATIVE_BALANCE:
+              post:
+                tags:
+                  - Fund management
+                summary: Negative account balances compensated
+                description: >-
+                  Adyen sends this notification when funds are transferred from
+                  your platform's liable account to an overdrawn account to
+                  compensate for the overdraft.
+                operationId: post-COMPENSATE_NEGATIVE_BALANCE
+                x-groupName: Fund management
+                x-sortIndex: 5
+                x-methodName: negativeAccountBalancesCompensated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        compensateNegativeBalance:
+                          $ref: >-
+                            #/components/examples/post-COMPENSATE_NEGATIVE_BALANCE-compensateNegativeBalance
+                      schema:
+                        $ref: >-
+                          #/components/schemas/CompensateNegativeBalanceNotification
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          compensateNegativeBalance:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /DIRECT_DEBIT_INITIATED:
+              post:
+                tags:
+                  - Fund management
+                summary: Automated direct debit initiated
+                description: >-
+                  Adyen sends this notification when a [direct debit is
+                  initiated](https://docs.adyen.com/api-explorer/#/Fund/latest/post/debitAccountHolder).
+                operationId: post-DIRECT_DEBIT_INITIATED
+                x-groupName: Fund management
+                x-sortIndex: 7
+                x-methodName: automatedDirectDebitInitiated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        directDebitInitiated:
+                          $ref: >-
+                            #/components/examples/post-DIRECT_DEBIT_INITIATED-directDebitInitiated
+                      schema:
+                        $ref: '#/components/schemas/DirectDebitInitiatedNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          directDebitInitiated:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PAYMENT_FAILURE:
+              post:
+                tags:
+                  - Other
+                summary: Booking for a capture or refund failed
+                description: >-
+                  Adyen sends this notification when a [split
+                  payment](https://docs.adyen.com/marketplaces-and-platforms/classic/processing-payments#providing-split-information)
+                  booking for a capture or refund fails. When a booking fails
+                  due to an invalid account status or an unknown `accountCode`,
+                  the funds are credited or debited to or fromyour platform's
+                  liable account instead of the account specified in the split
+                  data.
+                operationId: post-PAYMENT_FAILURE
+                x-groupName: Other
+                x-sortIndex: 1
+                x-methodName: bookingForCaptureOrRefundFailed
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        paymentFailure:
+                          $ref: >-
+                            #/components/examples/post-PAYMENT_FAILURE-paymentFailure
+                      schema:
+                        $ref: '#/components/schemas/PaymentFailureNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          paymentFailure:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REFUND_FUNDS_TRANSFER:
+              post:
+                tags:
+                  - Fund management
+                summary: Funds transfer between accounts refunded
+                description: >-
+                  Adyen sends this notification when [funds transferred between
+                  accounts are
+                  refunded](https://docs.adyen.com/api-explorer/#/Fund/v6/latest/refundFundsTransfer).
+                operationId: post-REFUND_FUNDS_TRANSFER
+                x-groupName: Fund management
+                x-sortIndex: 6
+                x-methodName: fundsTransferBetweenAccountsRefunded
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        refundFundsTransfer:
+                          $ref: >-
+                            #/components/examples/post-REFUND_FUNDS_TRANSFER-refundFundsTransfer
+                      schema:
+                        $ref: '#/components/schemas/RefundFundsTransferNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          refundFundsTransfer:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REPORT_AVAILABLE:
+              post:
+                tags:
+                  - Other
+                summary: Report available
+                description: >-
+                  Adyen sends this notification when a report has been generated
+                  and it is available for download.
+                operationId: post-REPORT_AVAILABLE
+                x-groupName: Other
+                x-sortIndex: 2
+                x-methodName: reportAvailable
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        reportAvailable:
+                          $ref: >-
+                            #/components/examples/post-REPORT_AVAILABLE-reportAvailable
+                      schema:
+                        $ref: '#/components/schemas/ReportAvailableNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          reportAvailable:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /SCHEDULED_REFUNDS:
+              post:
+                tags:
+                  - Fund management
+                summary: >-
+                  'Refund Transfers Not Paid Out' call processed and refunds
+                  scheduled
+                description: >-
+                  Adyen sends this notification when a request to [refund
+                  transfers that are not yet paid
+                  out](https://docs.adyen.com/api-explorer/#/Fund/latest/refundNotPaidOutTransfers)
+                  is processed and the associated refunds are scheduled.
+                operationId: post-SCHEDULED_REFUNDS
+                x-groupName: Fund management
+                x-sortIndex: 4
+                x-methodName: refundTransfersNotPaidOutCallProcessedAndRefundsScheduled
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        scheduledRefunds:
+                          $ref: >-
+                            #/components/examples/post-SCHEDULED_REFUNDS-scheduledRefunds
+                      schema:
+                        $ref: '#/components/schemas/ScheduledRefundsNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          scheduledRefunds:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /TRANSFER_FUNDS:
+              post:
+                tags:
+                  - Fund management
+                summary: Funds transferred between accounts
+                description: >-
+                  Adyen sends this notification when [funds are transferred
+                  between
+                  accounts](https://docs.adyen.com/api-explorer/#/Fund/latest/post/transferFunds).
+                operationId: post-TRANSFER_FUNDS
+                x-groupName: Fund management
+                x-sortIndex: 2
+                x-methodName: fundsTransferredBetweenAccounts
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        transferFunds:
+                          $ref: >-
+                            #/components/examples/post-TRANSFER_FUNDS-transferFunds
+                      schema:
+                        $ref: '#/components/schemas/TransferFundsNotification'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          transferFunds:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-one-error
+              message: One Tag
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/notifications-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/notifications-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-notifications-api
   - name: Adyen Payments API
     description: >-
@@ -12970,7 +17573,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/online-payments/
       - type: OpenAPI
-        url: properties/payments-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -13379,9 +17981,161 @@ apis:
 
                   For more information, refer to [Cancel an unreferenced
                   refund](https://docs.adyen.com/point-of-sale/refund-payme
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/payments-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/payments-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-payments-api
   - name: Adyen Payouts API
     description: >-
@@ -13397,7 +18151,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/online-payments/online-payouts
       - type: OpenAPI
-        url: properties/payouts-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -13509,9 +18262,159 @@ apis:
 
                   The submitted payout must be confirmed or declined either by a
                   reviewer or via `/confirmThirdParty` or `/d
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/payouts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/payouts-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-payouts-api
   - name: Adyen POS Terminal API
     description: >-
@@ -13532,7 +18435,6 @@ apis:
         url: >-
           https://docs.adyen.com/point-of-sale/design-your-integration/terminal-api/
       - type: OpenAPI
-        url: properties/pos-terminal-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -13627,9 +18529,141 @@ apis:
                   account, merchant account, or store. The response shows
                   whether the terminals are in the inventory, or in-store (ready
                   for board
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/pos-terminal-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pos-terminal-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-pos-terminal-api
   - name: Adyen Recurring API
     description: >-
@@ -13646,7 +18680,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/online-payments/tokenization
       - type: OpenAPI
-        url: properties/recurring-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -13769,9 +18802,153 @@ apis:
 
                   * If the recurring detail reference is provided, the fields
                   for `shopperReference` and `selectedRecurringDetailR
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/recurring-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/recurring-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-recurring-api
   - name: Adyen Report Webhooks API
     description: >-
@@ -13789,10 +18966,122 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/report-webhooks/1/overview
       - type: OpenAPI
-        url: properties/report-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Report Webhooks
+          tags:
+            - name: General
+          webhooks:
+            balancePlatform.report.created:
+              post:
+                tags:
+                  - General
+                summary: Report generated
+                description: >-
+                  Adyen sends this webhook after a report is generated and ready
+                  to be downloaded. The webhook contains the URL at which the
+                  report can be downloaded.
+
+
+                  Before you download reports, ask your Adyen contact for your
+                  report credentials. You must use your the credentials to
+                  authenticate your GET request.
+                operationId: post-balancePlatform.report.created
+                x-sortIndex: 0
+                x-methodName: reportGenerated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        balancePlatform.report.created:
+                          $ref: >-
+                            #/components/examples/post-balancePlatform.report.created-balancePlatform.report.created
+                      schema:
+                        $ref: '#/components/schemas/ReportNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          balancePlatform.report.created:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/report-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/report-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-report-webhooks-api
   - name: Adyen Stored Value API
     description: A set of API endpoints to manage stored value products.
@@ -13805,7 +19094,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/payment-methods/gift-cards/stored-value-api/
       - type: OpenAPI
-        url: properties/stored-value-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -13893,9 +19181,143 @@ apis:
                   - Transaction
                 summary: Voids a transaction.
                 description: Voids the referenced
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/stored-value-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/stored-value-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-stored-value-api
   - name: Adyen Terminal API
     description: >-
@@ -13915,7 +19337,6 @@ apis:
         url: >-
           https://docs.adyen.com/point-of-sale/design-your-integration/terminal-api/terminal-api-reference/
       - type: OpenAPI
-        url: properties/terminal-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14278,9 +19699,151 @@ apis:
                   - Input
                   - Print
                   - Cardreaderap
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-error
+              message: Operation Tags
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/terminal-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/terminal-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-terminal-api
   - name: Adyen Test Cards API
     description: >-
@@ -14299,7 +19862,6 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/development-resources/testing/create-test-cards
       - type: OpenAPI
-        url: properties/test-cards-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14326,9 +19888,143 @@ apis:
                   - Ranges
                 summary: Creates one or more test card ranges.
                 description: Creates o
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/test-cards-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/test-cards-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-test-cards-api
   - name: Adyen Transaction Webhooks API
     description: >-
@@ -14349,10 +20045,112 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/business-accounts/transactions/transaction-webhooks/
       - type: OpenAPI
-        url: properties/transaction-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Transaction webhooks
+          x-groups:
+            - General
+          tags:
+            - name: General
+          x-staticResponse: response.json
+          webhooks:
+            balancePlatform.transaction.created:
+              post:
+                tags:
+                  - General
+                summary: Transaction created
+                description: Adyen sends this webhook when there are new fund transfers.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.transaction.created
+                x-groupName: General
+                x-sortIndex: 0
+                x-methodName: transactionCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/TransactionNotificationRequestV4'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/transaction-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transaction-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-transaction-webhooks-api
   - name: Adyen Transfer Webhooks API
     description: >-
@@ -14371,10 +20169,158 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/api-explorer/transfer-webhooks/3/overview
       - type: OpenAPI
-        url: properties/transfer-webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Transfer webhooks
+          tags:
+            - name: General
+          x-staticResponse: response.json
+          webhooks:
+            balancePlatform.transfer.created:
+              post:
+                tags:
+                  - General
+                summary: Transfer created
+                description: >-
+                  Adyen sends this webhook when there are fund movements on your
+                  platform.
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.transfer.created
+                x-sortIndex: 0
+                x-methodName: transferCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/TransferNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+            balancePlatform.transfer.updated:
+              post:
+                tags:
+                  - General
+                summary: Transfer updated
+                description: >+
+                  Adyen sends this webhook when the status of a transfer
+                  changes. Use the `data.id` to track the original transfer
+                  resource in the
+                  [balancePlatform.transfer.created](https://docs.adyen.com/api-explorer/transfer-webhooks/1/post/balancePlatform.transfer.created)
+                  webhook.
+
+
+                  The `status` field indicates the event that triggered the
+                  webhook. 
+
+                x-addedInVersion: '1'
+                operationId: post-balancePlatform.transfer.updated
+                x-sortIndex: 0
+                x-methodName: transferUpdated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/TransferNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        schema:
+                          $ref: >-
+                            #/components/schemas/BalancePlatformNotificationResponse
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/transfer-webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transfer-webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-transfer-webhooks-api
   - name: Adyen Transfers API
     description: >-
@@ -14402,7 +20348,6 @@ apis:
         url: >-
           https://docs.adyen.com/marketplaces-and-platforms/payout-to-users/on-demand-payouts
       - type: OpenAPI
-        url: properties/transfers-openapi-original.yml
         data:
           openapi: 3.1.0
           info:
@@ -14530,9 +20475,205 @@ apis:
                   - Returns
                 summary: Return a transfer
                 description: Returns previously transferred funds without crea
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/transfers-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/transfers-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-transfers-api
   - name: Adyen Webhooks API
     description: >-
@@ -14551,10 +20692,1279 @@ apis:
       - type: OpenAPI
         url: https://docs.adyen.com/development-resources/webhooks
       - type: OpenAPI
-        url: properties/webhooks-openapi-original.yml
+        data:
+          openapi: 3.1.0
+          info:
+            x-publicVersion: true
+            title: Webhooks
+          tags:
+            - name: Standard
+            - name: Dispute
+            - name: Payout
+            - name: Additional configuration
+            - name: Other webhooks
+          x-staticResponse: response.json
+          webhooks:
+            /ACH_NOTIFICATION_OF_CHANGE:
+              post:
+                tags:
+                  - Other webhooks
+                summary: ACH Notification of Change
+                description: >-
+                  An ACH Notification of Change was processed regarding changed
+                  bank account details.
+                operationId: post-ACH_NOTIFICATION_OF_CHANGE
+                x-sortIndex: 0
+                x-methodName: achNotificationOfChange
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        ach_notification_of_change:
+                          $ref: >-
+                            #/components/examples/post-ACH_NOTIFICATION_OF_CHANGE-ach_notification_of_change
+                      schema:
+                        $ref: >-
+                          #/components/schemas/AchNotificationOfChangeNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          ach_notification_of_change:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /AUTHORISATION:
+              post:
+                tags:
+                  - Standard
+                summary: Result of authorisation request
+                description: >-
+                  The result of the [authorisation
+                  request](https://docs.adyen.com/api-explorer/#/Payment/latest/post/authorise).
+                operationId: post-AUTHORISATION
+                x-sortIndex: 0
+                x-methodName: resultOfAuthorisationRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        authorisation:
+                          $ref: >-
+                            #/components/examples/post-AUTHORISATION-authorisation
+                      schema:
+                        $ref: '#/components/schemas/AuthorisationNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          authorisation:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /AUTHORISATION_ADJUSTMENT:
+              post:
+                tags:
+                  - Standard
+                summary: Result of payment authorisation adjustment request
+                description: >-
+                  The result of the request to [adjust the authorised
+                  amount](https://docs.adyen.com/online-payments/adjust-authorisation)
+                  sent through the
+                  [/adjustAuthorisation](https://docs.adyen.com/api-explorer/#/Payment/latest/post/adjustAuthorisation)
+                  endpoint.
+                operationId: post-AUTHORISATION_ADJUSTMENT
+                x-sortIndex: 0
+                x-methodName: resultOfPaymentAuthorisationAdjustmentRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        authorisation_adjustment:
+                          $ref: >-
+                            #/components/examples/post-AUTHORISATION_ADJUSTMENT-authorisation_adjustment
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          authorisation_adjustment:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /AUTORESCUE:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Auto Rescue process ended
+                description: >-
+                  The [Auto Rescue
+                  process](https://docs.adyen.com/online-payments/auto-rescue#rescue-process-ended)
+                  ended.
+                operationId: post-AUTORESCUE
+                x-sortIndex: 0
+                x-methodName: autoRescueProcessEnded
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        autorescue:
+                          $ref: '#/components/examples/post-AUTORESCUE-autorescue'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          autorescue:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CANCELLATION:
+              post:
+                tags:
+                  - Standard
+                summary: Result of cancel request
+                description: >-
+                  The result of the request to [cancel a
+                  payment](https://docs.adyen.com/online-payments/cancel).
+                operationId: post-CANCELLATION
+                x-sortIndex: 0
+                x-methodName: resultOfCancelRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        cancellation:
+                          $ref: '#/components/examples/post-CANCELLATION-cancellation'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          cancellation:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CANCEL_AUTORESCUE:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Auto Rescue process canceled
+                description: >-
+                  The [Auto Rescue
+                  process](https://docs.adyen.com/online-payments/auto-rescue)
+                  was canceled.
+                operationId: post-CANCEL_AUTORESCUE
+                x-sortIndex: 0
+                x-methodName: autoRescueProcessCanceled
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        cancel_autorescue:
+                          $ref: >-
+                            #/components/examples/post-CANCEL_AUTORESCUE-cancel_autorescue
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          cancel_autorescue:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CANCEL_OR_REFUND:
+              post:
+                tags:
+                  - Standard
+                summary: Result of cancel or refund request
+                description: >-
+                  The result of the request to [cancel or refund a
+                  payment](https://docs.adyen.com/online-payments/classic-integrations/modify-payments/cancel-or-refund).
+                operationId: post-CANCEL_OR_REFUND
+                x-sortIndex: 0
+                x-methodName: resultOfCancelOrRefundRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        cancel_or_refund:
+                          $ref: >-
+                            #/components/examples/post-CANCEL_OR_REFUND-cancel_or_refund
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          cancel_or_refund:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CAPTURE:
+              post:
+                tags:
+                  - Standard
+                summary: Result of capture request
+                description: >-
+                  The result of the request to [capture a
+                  payment](https://docs.adyen.com/online-payments/capture).
+                operationId: post-CAPTURE
+                x-sortIndex: 0
+                x-methodName: resultOfCaptureRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        capture:
+                          $ref: '#/components/examples/post-CAPTURE-capture'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          capture:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CAPTURE_FAILED:
+              post:
+                tags:
+                  - Standard
+                summary: Capture request failed due to scheme rejection
+                description: >-
+                  The capture request [failed due to rejection by the card
+                  scheme](https://docs.adyen.com/online-payments/capture#failed-capture).
+                operationId: post-CAPTURE_FAILED
+                x-sortIndex: 0
+                x-methodName: captureRequestFailedDueToSchemeRejection
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        capture_failed:
+                          $ref: >-
+                            #/components/examples/post-CAPTURE_FAILED-capture_failed
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          capture_failed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CHARGEBACK:
+              post:
+                tags:
+                  - Dispute
+                summary: Payment charged back
+                description: >-
+                  The payment was [charged
+                  back](https://docs.adyen.com/risk-management/disputes-api/dispute-notifications#chargeback),
+                  and the funds were deducted from your account.
+                operationId: post-CHARGEBACK
+                x-sortIndex: 0
+                x-methodName: paymentChargedBack
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        chargeback:
+                          $ref: '#/components/examples/post-CHARGEBACK-chargeback'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          chargeback:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /CHARGEBACK_REVERSED:
+              post:
+                tags:
+                  - Dispute
+                summary: Chargeback successfully defended
+                description: >-
+                  The chargeback was successfully
+                  [defended](https://docs.adyen.com/risk-management/understanding-disputes/defense-requirements)
+                  towards the issuing bank. This stage is not final. If the
+                  issuing bank presents a second chargeback, you can still lose
+                  the chargeback case.
+                operationId: post-CHARGEBACK_REVERSED
+                x-sortIndex: 0
+                x-methodName: chargebackSuccessfullyDefended
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        chargeback_reversed:
+                          $ref: >-
+                            #/components/examples/post-CHARGEBACK_REVERSED-chargeback_reversed
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          chargeback_reversed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /EXPIRE:
+              post:
+                tags:
+                  - Standard
+                summary: Authorisation expired
+                description: The remaining uncaptured amount expired
+                operationId: post-EXPIRE
+                x-sortIndex: 0
+                x-methodName: authorisationExpired
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        expire:
+                          $ref: '#/components/examples/post-EXPIRE-expire'
+                      schema:
+                        $ref: '#/components/schemas/ExpireNotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          expire:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /MANUAL_REVIEW_ACCEPT:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Manual review accepted
+                description: >-
+                  The [manual
+                  review](https://docs.adyen.com/risk-management/case-management)
+                  was accepted.
+                operationId: post-MANUAL_REVIEW_ACCEPT
+                x-sortIndex: 0
+                x-methodName: manualReviewAccepted
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        manual_review_accept:
+                          $ref: >-
+                            #/components/examples/post-MANUAL_REVIEW_ACCEPT-manual_review_accept
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          manual_review_accept:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /MANUAL_REVIEW_REJECT:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Manual review rejected
+                description: >-
+                  The [manual
+                  review](https://docs.adyen.com/risk-management/case-management)
+                  was rejected.
+                operationId: post-MANUAL_REVIEW_REJECT
+                x-sortIndex: 0
+                x-methodName: manualReviewRejected
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        manual_review_reject:
+                          $ref: >-
+                            #/components/examples/post-MANUAL_REVIEW_REJECT-manual_review_reject
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          manual_review_reject:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /NOTIFICATION_OF_CHARGEBACK:
+              post:
+                tags:
+                  - Dispute
+                summary: Dispute process opened
+                description: >-
+                  The [dispute
+                  process](https://docs.adyen.com/risk-management/understanding-disputes/dispute-process-and-flow#dispute-process)
+                  was opened. You should investigate the dispute and [supply the
+                  defense
+                  documents](https://docs.adyen.com/risk-management/disputes-api#supply-dispute-defense-documents).
+                operationId: post-NOTIFICATION_OF_CHARGEBACK
+                x-sortIndex: 0
+                x-methodName: disputeProcessOpened
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        notification_of_chargeback:
+                          $ref: >-
+                            #/components/examples/post-NOTIFICATION_OF_CHARGEBACK-notification_of_chargeback
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          notification_of_chargeback:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /NOTIFICATION_OF_FRAUD:
+              post:
+                tags:
+                  - Dispute
+                summary: Issuer sent fraud alert notification
+                description: >-
+                  The issuer sent a [fraud alert
+                  notification](https://docs.adyen.com/risk-management/understanding-disputes/dispute-process-and-flow#dispute-process)
+                  to schemes and to processors. Visa calls them TC40 and
+                  Mastercard calls them System to Avoid Fraud Effectively
+                  (SAFE). These are informational notifications from Adyen,
+                  providing you the opportunity to take action, such as blocking
+                  a shopper or issuing a refund before a chargeback happens.
+                operationId: post-NOTIFICATION_OF_FRAUD
+                x-sortIndex: 0
+                x-methodName: issuerSentFraudAlertNotification
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        notification_of_fraud:
+                          $ref: >-
+                            #/components/examples/post-NOTIFICATION_OF_FRAUD-notification_of_fraud
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          notification_of_fraud:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /OFFER_CLOSED:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Offer expired
+                description: >-
+                  The offer expired, for example, because the shopper abandoned
+                  the session. For cards, offers expire after 12 hours by
+                  default.
+                operationId: post-OFFER_CLOSED
+                x-sortIndex: 0
+                x-methodName: offerExpired
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        offer_closed:
+                          $ref: '#/components/examples/post-OFFER_CLOSED-offer_closed'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          offer_closed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ORDER_CLOSED:
+              post:
+                tags:
+                  - Standard
+                summary: Result of last partial payment for order
+                description: >-
+                  The result of the last [partial
+                  payment](https://docs.adyen.com/online-payments/partial-payments)
+                  for the order.
+                operationId: post-ORDER_CLOSED
+                x-sortIndex: 0
+                x-methodName: resultOfLastPartialPaymentForOrder
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        order_closed:
+                          $ref: '#/components/examples/post-ORDER_CLOSED-order_closed'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          order_closed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /ORDER_OPENED:
+              post:
+                tags:
+                  - Standard
+                summary: First partial payment request for order
+                description: >-
+                  The first [partial
+                  payment](https://docs.adyen.com/online-payments/partial-payments)
+                  was made, and the order was created.
+                operationId: post-ORDER_OPENED
+                x-sortIndex: 0
+                x-methodName: firstPartialPaymentRequestForOrder
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        order_opened:
+                          $ref: '#/components/examples/post-ORDER_OPENED-order_opened'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          order_opened:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PAIDOUT_REVERSED:
+              post:
+                tags:
+                  - Payout
+                summary: Financial institution rejected payout
+                description: >-
+                  The financial institution [rejected the
+                  payout](https://docs.adyen.com/online-payments/online-payouts/payout-notifications).
+                  We will return the funds back to your account. 
+
+                  The reason field contains the bank statement description if
+                  present.
+                operationId: post-PAIDOUT_REVERSED
+                x-sortIndex: 0
+                x-methodName: financialInstitutionRejectedPayout
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        paidout_reversed:
+                          $ref: >-
+                            #/components/examples/post-PAIDOUT_REVERSED-paidout_reversed
+                      schema:
+                        $ref: >-
+                          #/components/schemas/PaidoutReversedNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          paidout_reversed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PAYOUT_DECLINE:
+              post:
+                tags:
+                  - Payout
+                summary: Payout declined
+                description: >-
+                  The [payout was
+                  declined](https://docs.adyen.com/online-payments/online-payouts/confirm-or-decline-payout).
+                operationId: post-PAYOUT_DECLINE
+                x-sortIndex: 0
+                x-methodName: payoutDeclined
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        payout_decline:
+                          $ref: >-
+                            #/components/examples/post-PAYOUT_DECLINE-payout_decline
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          payout_decline:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PAYOUT_EXPIRE:
+              post:
+                tags:
+                  - Payout
+                summary: Payout expired
+                description: >-
+                  The [payout
+                  expired](https://docs.adyen.com/online-payments/online-payouts/payout-notifications).
+                operationId: post-PAYOUT_EXPIRE
+                x-sortIndex: 0
+                x-methodName: payoutExpired
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        payout_expire:
+                          $ref: >-
+                            #/components/examples/post-PAYOUT_EXPIRE-payout_expire
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          payout_expire:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PAYOUT_THIRDPARTY:
+              post:
+                tags:
+                  - Payout
+                summary: Result of payout request
+                description: >-
+                  The result of the [payout
+                  request](https://docs.adyen.com/online-payments/online-payouts).
+                operationId: post-PAYOUT_THIRDPARTY
+                x-sortIndex: 0
+                x-methodName: resultOfPayoutRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        payout_thirdparty:
+                          $ref: >-
+                            #/components/examples/post-PAYOUT_THIRDPARTY-payout_thirdparty
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          payout_thirdparty:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /POSTPONED_REFUND:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Refund postponed until after payment capture
+                description: >-
+                  The refund was postponed until after [payment
+                  capture](https://docs.adyen.com/online-payments/capture). To
+                  enable this notification, contact our [Support
+                  Team](https://www.adyen.help/hc/en-us/requests/new).
+                operationId: post-POSTPONED_REFUND
+                x-sortIndex: 0
+                x-methodName: refundPostponedUntilAfterPaymentCapture
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        postponed_refund:
+                          $ref: >-
+                            #/components/examples/post-POSTPONED_REFUND-postponed_refund
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          postponed_refund:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PREARBITRATION_LOST:
+              post:
+                tags:
+                  - Dispute
+                summary: Cardholder's bank declined pre-arbitration case
+                description: >-
+                  The cardholder's bank declined the
+                  [pre-arbitration](https://docs.adyen.com/risk-management/understanding-disputes/dispute-process-and-flow#dispute-process)
+                  case.
+                operationId: post-PREARBITRATION_LOST
+                x-sortIndex: 0
+                x-methodName: cardholdersBankDeclinedPrearbitrationCase
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        prearbitration_lost:
+                          $ref: >-
+                            #/components/examples/post-PREARBITRATION_LOST-prearbitration_lost
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          prearbitration_lost:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /PREARBITRATION_WON:
+              post:
+                tags:
+                  - Dispute
+                summary: Cardholder's bank accepted pre-arbitration case
+                description: >-
+                  The cardholder's bank accepted the
+                  [pre-arbitration](https://docs.adyen.com/risk-management/understanding-disputes/dispute-process-and-flow#dispute-process)
+                  case.
+                operationId: post-PREARBITRATION_WON
+                x-sortIndex: 0
+                x-methodName: cardholdersBankAcceptedPrearbitrationCase
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        prearbitration_won:
+                          $ref: >-
+                            #/components/examples/post-PREARBITRATION_WON-prearbitration_won
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          prearbitration_won:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /RECURRING_CONTRACT:
+              post:
+                tags:
+                  - Additional configuration
+                summary: Recurring contract created
+                description: >-
+                  A recurring contract has been created. [Enable this
+                  webhook](https://docs.adyen.com/development-resources/webhooks/webhook-types#non-default-event-codes)
+                  in your Customer Area.
+                operationId: post-RECURRING_CONTRACT
+                x-sortIndex: 0
+                x-methodName: recurringContractCreated
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        recurring_contract:
+                          $ref: >-
+                            #/components/examples/post-RECURRING_CONTRACT-recurring_contract
+                      schema:
+                        $ref: >-
+                          #/components/schemas/RecurringContractNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          recurring_contract:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REFUND:
+              post:
+                tags:
+                  - Standard
+                summary: Result of refund request
+                description: >-
+                  The result of the request to [refund a
+                  payment](https://docs.adyen.com/online-payments/refund).
+                operationId: post-REFUND
+                x-sortIndex: 0
+                x-methodName: resultOfRefundRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        refund:
+                          $ref: '#/components/examples/post-REFUND-refund'
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          refund:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REFUNDED_REVERSED:
+              post:
+                tags:
+                  - Standard
+                summary: Refunded amount reversed
+                description: >-
+                  The refunded amount was
+                  [reversed](https://docs.adyen.com/online-payments/refund#refunded-reversed)
+                  and returned to your bank account.
+                operationId: post-REFUNDED_REVERSED
+                x-sortIndex: 0
+                x-methodName: refundedAmountReversed
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        refunded_reversed:
+                          $ref: >-
+                            #/components/examples/post-REFUNDED_REVERSED-refunded_reversed
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          refunded_reversed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REFUND_FAILED:
+              post:
+                tags:
+                  - Standard
+                summary: Refund failed due to scheme rejection
+                description: >-
+                  The refund [failed due to rejection by the card
+                  scheme](https://docs.adyen.com/online-payments/refund#refund-failed).
+                operationId: post-REFUND_FAILED
+                x-sortIndex: 0
+                x-methodName: refundFailedDueToSchemeRejection
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        refund_failed:
+                          $ref: >-
+                            #/components/examples/post-REFUND_FAILED-refund_failed
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          refund_failed:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REFUND_WITH_DATA:
+              post:
+                tags:
+                  - Standard
+                summary: Result of refund request with data
+                description: >-
+                  The result of the request to [refund with
+                  data](https://docs.adyen.com/online-payments/classic-integrations/modify-payments/refund#unreferenced-refund).
+                operationId: post-REFUND_WITH_DATA
+                x-sortIndex: 0
+                x-methodName: resultOfRefundRequestWithData
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        refund_with_data:
+                          $ref: >-
+                            #/components/examples/post-REFUND_WITH_DATA-refund_with_data
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          refund_with_data:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REPORT_AVAILABLE:
+              post:
+                tags:
+                  - Standard
+                summary: Report available
+                description: The report is generated and ready to be downloaded.
+                operationId: post-REPORT_AVAILABLE
+                x-sortIndex: 0
+                x-methodName: reportAvailable
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        report_available:
+                          $ref: >-
+                            #/components/examples/post-REPORT_AVAILABLE-report_available
+                      schema:
+                        $ref: >-
+                          #/components/schemas/ReportAvailableNotificationRequest
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          report_available:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /REQUEST_FOR_INFORMATION:
+              post:
+                tags:
+                  - Dispute
+                summary: Issuer opened Request for Information (RFI)
+                description: >-
+                  The issuer opened a [Request for Information
+                  (RFI)](https://docs.adyen.com/risk-management/understanding-disputes/dispute-process-and-flow#dispute-process).
+                  You should [supply defense
+                  documents](https://docs.adyen.com/risk-management/disputes-api#supply-dispute-defense-documents)
+                  to help shopper understand the charge.
+                operationId: post-REQUEST_FOR_INFORMATION
+                x-sortIndex: 0
+                x-methodName: issuerOpenedRequestForInformationrfi
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        request_for_information:
+                          $ref: >-
+                            #/components/examples/post-REQUEST_FOR_INFORMATION-request_for_information
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          request_for_information:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /SECOND_CHARGEBACK:
+              post:
+                tags:
+                  - Dispute
+                summary: Issuing bank declined chargeback defense
+                description: >-
+                  The issuing bank declined the material submitted during
+                  [defense of the original
+                  chargeback](https://docs.adyen.com/risk-management/understanding-disputes/defense-requirements).
+                  The disputed amount is deducted from your account.
+                operationId: post-SECOND_CHARGEBACK
+                x-sortIndex: 0
+                x-methodName: issuingBankDeclinedChargebackDefense
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        second_chargeback:
+                          $ref: >-
+                            #/components/examples/post-SECOND_CHARGEBACK-second_chargeback
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          second_chargeback:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /TECHNICAL_CANCEL:
+              post:
+                tags:
+                  - Standard
+                summary: Result of technical cancel request
+                description: >-
+                  The result of the [technical
+                  cancel](https://docs.adyen.com/online-payments/cancel#technical-cancel-webhook)
+                  request.
+                operationId: post-TECHNICAL_CANCEL
+                x-sortIndex: 0
+                x-methodName: resultOfTechnicalCancelRequest
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        technical_cancel:
+                          $ref: >-
+                            #/components/examples/post-TECHNICAL_CANCEL-technical_cancel
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          technical_cancel:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+            /VOID_PENDING_REFUND:
+              post:
+                tags:
+                  - Standard
+                summary: Result of request to cancel POS refund
+                description: >-
+                  The result of the request to [cancel a POS
+                  refund](https://docs.adyen.com/point-of-sale/refund-payment/cancel-a-pos-refund-request).
+                operationId: post-VOID_PENDING_REFUND
+                x-sortIndex: 0
+                x-methodName: resultOfRequestToCancelPosRefund
+                security:
+                  - BasicAuth: []
+                requestBody:
+                  content:
+                    application/json:
+                      examples:
+                        void_pending_refund:
+                          $ref: >-
+                            #/components/examples/post-VOID_PENDING_REFUND-void_pending_refund
+                      schema:
+                        $ref: '#/components/schemas/NotificationRequest'
+                responses:
+                  '200':
+                    content:
+                      application/json:
+                        examples:
+                          void_pending_refund:
+                            $ref: '#/components/examples/WebhookAck'
+                        schema:
+                          $ref: '#/components/schemas/NotificationResponse'
+                    description: OK - the request has succeeded.
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-email-error
+              message: Contact Email
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/webhooks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/webhooks-openapi-api-evangelist-ratings.yml
     aid: adyen:adyen-webhooks-api
 common:
   - type: Terms of Service
@@ -14583,6 +21993,8 @@ common:
     url: https://github.com/Adyen/adyen-openapi
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 maintainers:
   - FN: API Evangelist

@@ -92,7 +92,7 @@ apis:
     humanURL: https://developer.ebay.com/api-docs/sell/feed/resources/methods
     baseURL: https://api.example.com
     tags:
-      - Feeds
+      - Feed
       - Sellers
     properties:
       - type: OpenAPI
@@ -140,6 +140,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: ebay
 ---

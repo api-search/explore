@@ -34,7 +34,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/pa-engine-api#changelog
       - type: OpenAPI
-        url: properties/pa-engine-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -289,9 +288,241 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/pa-
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/pa-engine-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/pa-engine-openapi-api-evangelist-ratings.yml
     aid: factset:factset-pa-engine-api
   - name: Factset Formula API
     description: >-
@@ -315,7 +546,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/formula-api#changelog
       - type: OpenAPI
-        url: properties/formula-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -555,9 +785,207 @@ apis:
                     *This feature is available to Individual Users subscribed to the Performance Package and Performance Package Plus Performance Tiers and all Production Users. If you are unsure which Performance Tier you are subscribed to or you would like to gain access to the batch capabilities, please contact your FactSet Account Team or "Report Issue" above and our support teams can assist.*
                 tags:
                   - Batch
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
     overlays:
       - type: APIs.io Search
         url: overlays/formula-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/formula-openapi-api-evangelist-ratings.yml
     aid: factset:factset-formula-api
   - name: FactSet Global Prices API
     description: >-
@@ -586,7 +1014,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#changelog
       - type: OpenAPI
-        url: properties/global-prices-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -741,9 +1168,211 @@ apis:
                   wish to receive your data in CSV format, you can edit the
                   header to have the "accept" parameter as "text/csv" instead of
                   "applicat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-type-error
+              message: Schema Type
     overlays:
       - type: APIs.io Search
         url: overlays/global-prices-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/global-prices-openapi-api-evangelist-ratings.yml
     aid: factset:factset-global-prices-api
   - name: Open FactSet Database (OFDB) API
     description: >-
@@ -766,7 +1395,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/ofdb-api#changelog
       - type: OpenAPI
-        url: properties/ofdb-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -1011,9 +1639,199 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-type-error
+              message: Schema Type
     overlays:
       - type: APIs.io Search
         url: overlays/ofdb-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ofdb-openapi-api-evangelist-ratings.yml
     aid: factset:open-factset-database-ofdb-api
   - name: FactSet Signals API
     description: >-
@@ -1024,7 +1842,7 @@ apis:
     humanURL: https://developer.factset.com/api-catalog/signals-api
     baseURL: https://example.com
     tags:
-      - Artificial Intelligence
+      - AI/ML
     properties:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/signals-api#overview
@@ -1037,7 +1855,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/signals-api#changelog
       - type: OpenAPI
-        url: properties/signals-openapi-original.yml
         data:
           openapi: 3.0.2
           info:
@@ -1145,9 +1962,199 @@ apis:
                 tags:
                   - Metadata
                 description: Fetch a list of available signal ca
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-302-info
+              message: 3.0.2 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-allof-info
+              message: Schema Properties AllOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/signals-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/signals-openapi-api-evangelist-ratings.yml
     aid: factset:factset-signals-api
   - name: FactSet Natural Language Processing API
     description: >-
@@ -1157,7 +2164,7 @@ apis:
     humanURL: https://developer.factset.com/api-catalog/natural-language-processing-api
     baseURL: https://example.com
     tags:
-      - Artificial Intelligence
+      - AI/ML
     properties:
       - type: OpenAPI
         url: >-
@@ -1175,7 +2182,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#changelog
       - type: OpenAPI
-        url: properties/natural-language-processing-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -1286,9 +2292,210 @@ apis:
                 summary: Endpoint to get the completion status for a Q&A request
                 tags:
                   - Questi
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/natural-language-processing-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/natural-language-processing-openapi-api-evangelist-ratings.yml
     aid: factset:factset-natural-language-processing-api
   - name: FactSet Universal Screening API
     description: >-
@@ -1317,7 +2524,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#changelog
       - type: OpenAPI
-        url: properties/universal-screening-openapi-original.yml
         data:
           info:
             title: Universal Screening API
@@ -1373,9 +2579,183 @@ apis:
                   with 10,000 being the default page size.
                 tags:
                   - Screening Op
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-openapi-version-302-info
+              message: 3.0.2 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
     overlays:
       - type: APIs.io Search
         url: overlays/universal-screening-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/universal-screening-openapi-api-evangelist-ratings.yml
     aid: factset:factset-universal-screening-api
   - name: FactSet Portfolio
     description: >-
@@ -1399,7 +2779,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/portfolio-api#changelog
       - type: OpenAPI
-        url: properties/portfolio-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -1468,9 +2847,181 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/ap
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-put-204-status-code-info
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/portfolio-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/portfolio-openapi-api-evangelist-ratings.yml
     aid: factset:factset-portfolio
   - name: FactSet SPAR Engine API
     description: >-
@@ -1495,7 +3046,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/spar-engine-api#changelog
       - type: OpenAPI
-        url: properties/spar-engine-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -1614,9 +3164,235 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/spar-en
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/spar-engine-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/spar-engine-openapi-api-evangelist-ratings.yml
     aid: factset:factset-spar-engine-api
   - name: FactSet Prices API
     description: >-
@@ -1643,7 +3419,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-prices-api#changelog
       - type: OpenAPI
-        url: properties/prices-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -1985,9 +3760,229 @@ apis:
                 description: >-
                   Return the response data for the underlying batch request that
                   is specified b
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: overlays/prices-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/prices-openapi-api-evangelist-ratings.yml
     aid: factset:factset-prices-api
   - name: FactSet Concordance API
     description: >-
@@ -2017,7 +4012,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#changelog
       - type: OpenAPI
-        url: properties/concordance-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -2325,9 +4319,219 @@ apis:
                   specified in the input file.
                 tags:
                   - People M
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/concordance-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/concordance-openapi-api-evangelist-ratings.yml
     aid: factset:factset-concordance-api
   - name: FactSet ESG API
     description: FactSet ESG API giving access to SASB & SDG Score data
@@ -2348,7 +4552,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-esg-api#changelog
       - type: OpenAPI
-        url: properties/esg-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -2690,9 +4893,203 @@ apis:
                   used by the AI engine to calculate the ESG Scores of companies
                   and therefore provides ESG relevant news and also transparency
                   into the E
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/esg-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/esg-openapi-api-evangelist-ratings.yml
     aid: factset:factset-esg-api
   - name: FactSet Digital Cards
     description: >-
@@ -2720,7 +5117,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#changelog
       - type: OpenAPI
-        url: properties/digital-cards-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -2747,9 +5143,83 @@ apis:
                 tags:
                   - Digital Card
                 summary: Retrieve One Digital Card in Microsoft Adaptive Ca
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-error
+              message: Schema GET
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/digital-cards-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/digital-cards-openapi-api-evangelist-ratings.yml
     aid: factset:factset-digital-cards
   - name: FactSet Vault API
     description: >-
@@ -2773,7 +5243,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/vault-api#changelog
       - type: OpenAPI
-        url: properties/vault-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -2887,9 +5356,231 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/v
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/vault-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/vault-openapi-api-evangelist-ratings.yml
     aid: factset:factset-vault-api
   - name: FactSet Chart Generation Service
     description: >-
@@ -2918,7 +5609,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#changelog
       - type: OpenAPI
-        url: properties/chart-generation-service-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -2949,11 +5639,139 @@ apis:
                 tags:
                   - Chart Templates
                 summary: Get chart image back in PNG or JP
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-security-schemes-error
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
     overlays:
       - type: APIs.io Search
         url: overlays/ chart-generation-service-openapi-search.yml
       - type: APIs.io Search
         url: overlays/chart-generation-service-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/chart-generation-service-openapi-api-evangelist-ratings.yml
     aid: factset:factset-chart-generation-service
   - name: FactSet Real-Time News API
     description: >-
@@ -2978,7 +5796,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/real-time-news-api#changelog
       - type: OpenAPI
-        url: properties/real-time-news-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -3101,9 +5918,187 @@ apis:
           x-interface-version: 2
           x-documenter-version: 6.3.9
           x-api-version: nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/real-time-news-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/real-time-news-openapi-api-evangelist-ratings.yml
     aid: factset:factset-real-time-news-api
   - name: FactSet Vermilion API
     description: >-
@@ -3128,7 +6123,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/vermilion-api#changelog
       - type: OpenAPI
-        url: properties/vermilion-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -3302,9 +6296,235 @@ apis:
                   - SCIM
                 summary: Updates a VRS Group
                 description: Updates (replaces) a VRS Group with the properties in
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-warn
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-warn
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-error
+              message: 500 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: invalid-ref
+              message: 'ENOENT: no such file or directory, open ''VRSAPI/scim/v2/Users/1'''
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
     overlays:
       - type: APIs.io Search
         url: overlays/vermilion-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/vermilion-openapi-api-evangelist-ratings.yml
     aid: factset:factset-vermilion-api
   - name: FactSet Estimates API
     description: >-
@@ -3334,7 +6554,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#changelog
       - type: OpenAPI
-        url: properties/estimates-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -3595,9 +6814,195 @@ apis:
                   **By default, Factset provides Estimated items in millions.
                   For specific metric methodology definitions, reference the
                   `OAurl` response items to launch the available methodolog
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/estimates-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/estimates-openapi-api-evangelist-ratings.yml
     aid: factset:factset-estimates-api
   - name: FactSet Issue Tracker API
     description: >-
@@ -3621,7 +7026,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/issue-tracker-api#changelog
       - type: OpenAPI
-        url: properties/issue-tracker-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -3656,9 +7060,173 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/issue-t
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/issue-tracker-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/issue-tracker-openapi-api-evangelist-ratings.yml
     aid: factset:factset-issue-tracker-api
   - name: FactSet Axioma Equity Optimizer API
     description: >-
@@ -3687,7 +7255,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#changelog
       - type: OpenAPI
-        url: properties/axioma-equity-optimizer-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -3765,9 +7332,213 @@ apis:
                 description: >-
                   This endpoint looks up all Axioma Equity strategy documents
                   and sub-directories in a given 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/axioma-equity-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/axioma-equity-optimizer-openapi-api-evangelist-ratings.yml
     aid: factset:factset-axioma-equity-optimizer-api
   - name: FactSet Barra Portfolio Optimizer
     description: Barra Portfolio Optimizer (BPM) API
@@ -3793,7 +7564,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#changelog
       - type: OpenAPI
-        url: properties/barra-portfolio-optimizer-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -3871,9 +7641,215 @@ apis:
                 description: >-
                   This endpoint looks up all Barra strategy documents and
                   sub-directories in a given 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/barra-portfolio-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/barra-portfolio-optimizer-openapi-api-evangelist-ratings.yml
     aid: factset:factset-barra-portfolio-optimizer
   - name: FactSet Exchange DataFeed Snapshot API - Symbol List
     description: >-
@@ -3904,8 +7880,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#changelog
       - type: OpenAPI
-        url: >-
-          properties/exchange-datafeed-snapshot-api-symbol-list-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -3950,9 +7924,156 @@ apis:
                 description: >-
                   Request Snapshot exchange data. Use POST when your URL length
                   exceeds 2,048 c
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: invalid-ref
+              message: '''#/components/responses/402'' does not exist'
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
     overlays:
       - type: APIs.io Search
         url: overlays/exchange-datafeed-snapshot-api-symbol-list-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/exchange-datafeed-snapshot-api-symbol-list-openapi-api-evangelist-ratings.yml
     aid: factset:factset-exchange-datafeed-snapshot-api-symbol-list
   - name: FactSet Event Calendar API
     description: >-
@@ -3977,7 +8098,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/event-calendar-api#changelog
       - type: OpenAPI
-        url: properties/event-calendar-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -4000,9 +8120,123 @@ apis:
                   request.
                 tags:
                   - nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/event-calendar-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/event-calendar-openapi-api-evangelist-ratings.yml
     aid: factset:factset-event-calendar-api
   - name: FactSet ID Lookup API
     description: >-
@@ -4027,7 +8261,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/id-lookup-api#changelog
       - type: OpenAPI
-        url: properties/id-lookup-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -4047,9 +8280,129 @@ apis:
                   parameters contain search term and filters defined by the end
                   user. This would display a specific set of identifiers based
                   on th
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
     overlays:
       - type: APIs.io Search
         url: overlays/id-lookup-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/id-lookup-openapi-api-evangelist-ratings.yml
     aid: factset:factset-id-lookup-api
   - name: FactSet Conversational API Powered by FactSet Mercury
     description: >-
@@ -4060,7 +8413,7 @@ apis:
       https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury
     baseURL: https://example.com
     tags:
-      - Artificial Intelligence
+      - AI/ML
     properties:
       - type: OpenAPI
         url: >-
@@ -4078,7 +8431,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#changelog
       - type: OpenAPI
-        url: properties/conversational-api-powered-by-mercury-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -4128,9 +8480,162 @@ apis:
             description: API Documentation
             url: >-
               https://developer.factset.com/api-catalog/conversational-api-powered-facts
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/conversational-api-powered-by-mercury-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/conversational-api-powered-by-mercury-openapi-api-evangelist-ratings.yml
     aid: factset:factset-conversational-api-powered-by-factset-mercury
   - name: FactSet IRN Contacts API
     description: >-
@@ -4153,7 +8658,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/irn-contacts-api#changelog
       - type: OpenAPI
-        url: properties/irn-contacts-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -4232,9 +8736,215 @@ apis:
           tags:
             - name: Contacts
             - name: Contacts - Rel
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/irn-contacts-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/irn-contacts-openapi-api-evangelist-ratings.yml
     aid: factset:factset-irn-contacts-api
   - name: FactSet Overview Report Builder API
     description: >-
@@ -4262,7 +8972,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/overview-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           externalDocs:
@@ -4314,9 +9023,153 @@ apis:
                 tags:
                   - Company
                 summary: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-path-description-info
+              message: Path Description
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/overview-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/overview-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-overview-report-builder-api
   - name: FactSet Documents Distributor - CallStreet Events
     description: >-
@@ -4345,8 +9198,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#changelog
       - type: OpenAPI
-        url: >-
-          properties/documents-distributor-callstreet-events-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -4434,9 +9285,138 @@ apis:
               description: >-
                 The Near Real-Time Transcripts API enables access to Near
                 Real-time Transcripts provided by CallStreet to time-sensitiv
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/documents-distributor-callstreet-events-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/documents-distributor-callstreet-events-openapi-api-evangelist-ratings.yml
     aid: factset:factset-documents-distributor-callstreet-events
   - name: FactSet Recommendation List API for Digital Portals
     description: >-
@@ -4492,7 +9472,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#changelog
       - type: OpenAPI
-        url: properties/benchmarks-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -4662,9 +9641,197 @@ apis:
                   representation of the most commonly requested. For complete
                   assistance with ID lookup or concordance services, please
                   reach out to FactSet Sup
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: overlays/benchmarks-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/benchmarks-openapi-api-evangelist-ratings.yml
     aid: factset:factset-benchmarks-api
   - name: FactSet Bonds API for Digital Portals
     description: >-
@@ -4750,8 +9917,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#changelog
       - type: OpenAPI
-        url: >-
-          properties/s-p-global-fixed-income-evaluated-prices-and-analytics-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -4912,10 +10077,201 @@ apis:
                   Get coupon information like accrued interest, coupon, coupon
                   type and coupon frequency provided by Markit for specified
                   date range and fr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-length-error
+              message: Info Title Length
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: >-
           overlays/s-p-global-fixed-income-evaluated-prices-and-analytics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/s-p-global-fixed-income-evaluated-prices-and-analytics-openapi-api-evangelist-ratings.yml
     aid: factset:factset-sp-global-fixed-income-evaluated-prices-and-analytics-api
   - name: FactSet Foreign Exchange Rate API
     description: >-
@@ -4943,7 +10299,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#changelog
       - type: OpenAPI
-        url: properties/foreign-exchange-rate-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -5003,9 +10358,187 @@ apis:
                   month, 2 month, 3 month, 6 month, 9 month, 1 year, 2 year, 5
                   year. All identifiers have spot rates, but not all identifiers
                   have forward 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: overlays/foreign-exchange-rate-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/foreign-exchange-rate-openapi-api-evangelist-ratings.yml
     aid: factset:factset-foreign-exchange-rate-api
   - name: FactSet Fixed Income Analytics Batcher API
     description: >-
@@ -5034,7 +10567,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#changelog
       - type: OpenAPI
-        url: properties/fixed-income-analytics-batcher-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -5062,9 +10594,180 @@ apis:
                 description: >-
                   This is the endpoint to check on the progress of a previously
                   requested ca
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/fixed-income-analytics-batcher-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/fixed-income-analytics-batcher-openapi-api-evangelist-ratings.yml
     aid: factset:factset-fixed-income-analytics-batcher-api
   - name: FactSet Open Risk API
     description: >-
@@ -5088,7 +10791,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/openrisk-api#changelog
       - type: OpenAPI
-        url: properties/open-risk-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -5166,9 +10868,195 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/op
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-allof-info
+              message: Schema Properties AllOf
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/open-risk-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/open-risk-openapi-api-evangelist-ratings.yml
     aid: factset:factset-open-risk-api
   - name: FactSet Intraday Tick History API
     description: >-
@@ -5199,7 +11087,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#changelog
       - type: OpenAPI
-        url: properties/intraday-tick-history-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -5258,9 +11145,145 @@ apis:
                   Request returns the before and after trade data along with the
                   associated quotes for the specified time
                 description: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/intraday-tick-history-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/intraday-tick-history-openapi-api-evangelist-ratings.yml
     aid: factset:factset-intraday-tick-history-api
   - name: FactSet Funds API
     description: Reference and Time Series Mutual Fund Data
@@ -5282,7 +11305,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-funds-api#changelog
       - type: OpenAPI
-        url: properties/funds-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -5786,9 +11808,199 @@ apis:
                   Get the funds active status, share class status, and database
                   availability. Most common use is for coverage checks and id
                   resoluti
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/funds-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/funds-openapi-api-evangelist-ratings.yml
     aid: factset:factset-funds-api
   - name: FactSet Terms and Conditions API
     description: FactSet Security Reference - Fixed Income Terms & Conditions
@@ -5814,7 +12026,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#changelog
       - type: OpenAPI
-        url: properties/terms-and-conditions-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -6105,9 +12316,189 @@ apis:
                   Description.
                 tags:
                   - Conv
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
     overlays:
       - type: APIs.io Search
         url: overlays/terms-and-conditions-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/terms-and-conditions-openapi-api-evangelist-ratings.yml
     aid: factset:factset-terms-and-conditions-api
   - name: FactSet Northfield Portfolio Optimizer
     description: Northfield Portfolio Optimizer API
@@ -6133,7 +12524,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#changelog
       - type: OpenAPI
-        url: properties/northfield-portfolio-optimizer-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -6211,9 +12601,216 @@ apis:
                 description: >-
                   This endpoint looks up all Northfield strategy documents and
                   sub-directories in a given 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/northfield-portfolio-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/northfield-portfolio-optimizer-openapi-api-evangelist-ratings.yml
     aid: factset:factset-northfield-portfolio-optimizer
   - name: FactSet Security Modeling API
     description: >-
@@ -6242,7 +12839,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#changelog
       - type: OpenAPI
-        url: properties/security-modeling-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -6272,9 +12868,141 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/security-modeling-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/security-modeling-openapi-api-evangelist-ratings.yml
     aid: factset:factset-security-modeling-api
   - name: FactSet Stocks API for Digital Portals
     description: >-
@@ -6328,7 +13056,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#changelog
       - type: OpenAPI
-        url: properties/company-logo-api-for-digital-portals-openapi-original.yml
         data:
           host: api.factset.com
           swagger: '2.0'
@@ -6580,9 +13307,96 @@ apis:
           securityDefinitions:
             Basic:
               type: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-schema-error
+              message: Parameter Schema Type
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-enum-info
+              message: Parameter Enum
+            - code: openapi-parameters-enum-casing-info
+              message: Parameter Enum Upper Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/company-logo-api-for-digital-portals-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/company-logo-api-for-digital-portals-openapi-api-evangelist-ratings.yml
     aid: factset:factset-company-logo-api-for-digital-portals
   - name: FactSet Securitized Derivatives API for Digital Portals
     description: >-
@@ -6666,7 +13480,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#changelog
       - type: OpenAPI
-        url: properties/quant-factor-library-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -6717,9 +13530,201 @@ apis:
                   Fetch the list of all available factors and related meta data.
                 tags:
                   - nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
     overlays:
       - type: APIs.io Search
         url: overlays/quant-factor-library-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/quant-factor-library-openapi-api-evangelist-ratings.yml
     aid: factset:factset-quant-factor-library-api
   - name: FactSet Exchange DataFeed Data Model API
     description: >-
@@ -6747,7 +13752,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#changelog
       - type: OpenAPI
-        url: properties/exchange-datafeed-data-model-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -6761,9 +13765,128 @@ apis:
                 description: >
                   Data can be returned in CSV, JSON or XML format, use the
                   `format` parameter to chnage from the default JS
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
     overlays:
       - type: APIs.io Search
         url: overlays/exchange-datafeed-data-model-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/exchange-datafeed-data-model-openapi-api-evangelist-ratings.yml
     aid: factset:factset-exchange-datafeed-data-model-api
   - name: FactSet Fixed Income Calculation API
     description: >-
@@ -6791,7 +13914,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#changelog
       - type: OpenAPI
-        url: properties/fixed-income-calculation-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -6854,9 +13976,227 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/fixed-income-calcu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/fixed-income-calculation-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/fixed-income-calculation-openapi-api-evangelist-ratings.yml
     aid: factset:factset-fixed-income-calculation-api
   - name: FactSet Tick History API
     description: >-
@@ -6884,7 +14224,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#changelog
       - type: OpenAPI
-        url: properties/tick-history-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -6979,9 +14318,195 @@ apis:
                 historical tick data
             - name: Level 2
               description: API provides access to the  historical tick data up to 10 levels
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/tick-history-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/tick-history-openapi-api-evangelist-ratings.yml
     aid: factset:factset-tick-history-api
   - name: FactSet IRN Configuration API
     description: >-
@@ -7009,7 +14534,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#changelog
       - type: OpenAPI
-        url: properties/irn-configuration-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -7270,9 +14794,245 @@ apis:
             - name: CustomSymbols - Relationships
             - name: CustomSymbols - Types
             - name: Notes - Con
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-500-status-code-error
+              message: 500 Status Code for PUT Responses
+            - code: openapi-response-put-204-status-code-info
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/irn-configuration-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/irn-configuration-openapi-api-evangelist-ratings.yml
     aid: factset:factset-irn-configuration-api
   - name: FactSet IRN Custom Symbols API
     description: >-
@@ -7301,7 +15061,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#changelog
       - type: OpenAPI
-        url: properties/irn-custom-symbols-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -7390,9 +15149,237 @@ apis:
             - name: CustomSymbols
             - name: CustomSymbols - Relationships
             - name: Hyb
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-get-201-content-error
+              message: POST Content
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-warn
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-warn
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-error
+              message: 500 Status Code for PUT Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/irn-custom-symbols-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/irn-custom-symbols-openapi-api-evangelist-ratings.yml
     aid: factset:factset-irn-custom-symbols-api
   - name: FactSet Portfolio Optimizer API
     description: >-
@@ -7422,7 +15409,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#changelog
       - type: OpenAPI
-        url: properties/portfolio-optimizer-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -7498,9 +15484,217 @@ apis:
                 description: >-
                   This endpoint looks up all FactSet Portfolio Optimizer
                   strategy documents and sub-directories in a given 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/portfolio-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/portfolio-optimizer-openapi-api-evangelist-ratings.yml
     aid: factset:factset-portfolio-optimizer-api
   - name: FactSet Standard Datafeed API
     description: Download standard datafeed tables and schemas based on user subscription
@@ -7526,7 +15720,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#changelog
       - type: OpenAPI
-        url: properties/standard-datafeed-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -7564,9 +15757,147 @@ apis:
           tags:
             - name: Schema
             - name: SDF and QFL Content
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/standard-datafeed-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/standard-datafeed-openapi-api-evangelist-ratings.yml
     aid: factset:factset-standard-datafeed-api
   - name: FactSet Real-Time Time Series API
     description: >-
@@ -7595,7 +15926,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#changelog
       - type: OpenAPI
-        url: properties/real-time-time-series-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -7728,9 +16058,149 @@ apis:
           x-interface-version: 2
           x-documenter-version: 6.3.9
           x-api-version: nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/real-time-time-series-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/real-time-time-series-openapi-api-evangelist-ratings.yml
     aid: factset:factset-real-time-time-series-api
   - name: FactSet BookBuilder API
     description: >-
@@ -7754,7 +16224,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/bookbuilder-api#changelog
       - type: OpenAPI
-        url: properties/bookbuilder-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -7871,9 +16340,177 @@ apis:
                   Retrieves the list of documents uploaded before using the
                   endpoint "/upload-custom-document". The documents uploaded are
                   available for 30 days from the date of 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-one-error
+              message: One Tag
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-no-path-trailing-slash-error
+              message: Path Trailing Slash
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-no-api-in-path-info
+              message: No API in Path
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-path-names-camel-case-error
+              message: Parameter Path Name Camel Case
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
     overlays:
       - type: APIs.io Search
         url: overlays/bookbuilder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/bookbuilder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-bookbuilder-api
   - name: FactSet Exchange DataFeed Snapshot API - Entire Exchange
     description: >-
@@ -7902,8 +16539,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#changelog
       - type: OpenAPI
-        url: >-
-          properties/exchange-datafeed-snapshot-api-entire-exchange-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -7918,10 +16553,133 @@ apis:
                   A service that provides access to Real Time or Delayed data
                   snapped at hourly intervals for an entire Exchange
               parameters: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: >-
           overlays/exchange-datafeed-snapshot-api-entire-exchange-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/exchange-datafeed-snapshot-api-entire-exchange-openapi-api-evangelist-ratings.yml
     aid: factset:factset-exchange-datafeed-snapshot-api-entire-exchange
   - name: FactSet Ownership API
     description: >-
@@ -7951,7 +16709,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#changelog
       - type: OpenAPI
-        url: properties/ownership-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -7994,9 +16751,183 @@ apis:
                   security identifiers. The services allows filtering by "Topn"
                   holders and by holder "type", such as Institutions, Insiders,
                   and Sta
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: overlays/ownership-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ownership-openapi-api-evangelist-ratings.yml
     aid: factset:factset-ownership-api
   - name: FactSet Portfolio Reporting Batcher API
     description: The PRB API allows clients to trigger existing PRB jobs.
@@ -8022,7 +16953,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#changelog
       - type: OpenAPI
-        url: properties/portfolio-reporting-batcher-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -8070,9 +17000,192 @@ apis:
               description: These endpoints relate to PRB jobs
             - name: Runs
               description: These endpoints refer to specific runs for
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/portfolio-reporting-batcher-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/portfolio-reporting-batcher-openapi-api-evangelist-ratings.yml
     aid: factset:factset-portfolio-reporting-batcher-api
   - name: FactSet Global Filings API
     description: ' This API is designed to expose document search and document retrieval functionality'
@@ -8095,7 +17208,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/global-filings-api#changelog
       - type: OpenAPI
-        url: properties/global-filings-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -8139,9 +17251,141 @@ apis:
               description: >-
                 API provides access to search and download filings documents
                 from vario
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/global-filings-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/global-filings-openapi-api-evangelist-ratings.yml
     aid: factset:factset-global-filings-api
   - name: FactSet Symbology API
     description: >-
@@ -8166,7 +17410,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/symbology-api#changelog
       - type: OpenAPI
-        url: properties/symbology-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -8586,9 +17829,189 @@ apis:
                   would like to gain access to these symbol types, please
                   contact your FactSet Account Team or "Report Issue" above and
                   our support teams can 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/symbology-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/symbology-openapi-api-evangelist-ratings.yml
     aid: factset:factset-symbology-api
   - name: FactSet StreetAccount News API
     description: >-
@@ -8616,7 +18039,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#changelog
       - type: OpenAPI
-        url: properties/streetaccount-news-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -8737,9 +18159,225 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/streetaccount-
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-404-status-code-warn
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-404-status-code-error
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
     overlays:
       - type: APIs.io Search
         url: overlays/streetaccount-news-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/streetaccount-news-openapi-api-evangelist-ratings.yml
     aid: factset:factset-streetaccount-news-api
   - name: FactSet Entity Report Builder API
     description: >-
@@ -8768,7 +18406,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/entity-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -8789,9 +18426,137 @@ apis:
                   - Entity Structure
                 summary: Entity structure
                 description: Returns full entity tree for table and tr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/entity-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/entity-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-entity-report-builder-api
   - name: FactSet People API
     description: >-
@@ -8816,7 +18581,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-people-api#changelog
       - type: OpenAPI
-        url: properties/people-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -8982,11 +18746,207 @@ apis:
                   analyzing a company's board and management. 
                 tags:
                   - nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: invalid-ref
+              message: '''#/components/responses/400'' does not exist'
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-type-error
+              message: Schema Type
     overlays:
       - type: APIs.io Search
         url: overlays/people-openapi-original.yml
       - type: APIs.io Search
         url: overlays/people-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/people-openapi-api-evangelist-ratings.yml
     aid: factset:factset-people-api
   - name: FactSet Axioma Fixed Income Optimizer
     description: Fixed Income-based portfolio optimization
@@ -9012,7 +18972,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#changelog
       - type: OpenAPI
-        url: properties/axioma-fixed-income-optimizer-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -9074,9 +19033,214 @@ apis:
                 description: >-
                   This endpoint looks up all Axioma FI strategy documents and
                   sub-directories in a given 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/axioma-fixed-income-optimizer-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/axioma-fixed-income-optimizer-openapi-api-evangelist-ratings.yml
     aid: factset:factset-axioma-fixed-income-optimizer
   - name: FactSet IRN Meetings API
     description: >-
@@ -9099,7 +19263,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/irn-meetings-api#changelog
       - type: OpenAPI
-        url: properties/irn-meetings-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -9201,9 +19364,243 @@ apis:
             - name: Comments
             - name: Events
             - name: nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-500-status-code-error
+              message: 500 Status Code for PUT Responses
+            - code: openapi-response-put-204-status-code-info
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/irn-meetings-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/irn-meetings-openapi-api-evangelist-ratings.yml
     aid: factset:factset-irn-meetings-api
   - name: FactSet Fundamentals Report Builder API
     description: >-
@@ -9233,7 +19630,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/fundamentals-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -9266,11 +19662,140 @@ apis:
                   - Financials
                 summary: Cash Flow
                 description: Returns a standardized Cash Flow based on
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/fundamentals-report-builder-openapi-original.yml
       - type: APIs.io Search
         url: overlays/fundamentals-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/fundamentals-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-fundamentals-report-builder-api
   - name: FactSet ETF Profile and Prices API
     description: >-
@@ -9298,7 +19823,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#changelog
       - type: OpenAPI
-        url: properties/etf-profile-and-prices-openapi-original.yml
         data:
           host: api.factset.com
           swagger: '2.0'
@@ -9844,9 +20368,99 @@ apis:
           securityDefinitions:
             Basic:
               type: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-schema-error
+              message: Parameter Schema Type
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-enum-info
+              message: Parameter Enum
+            - code: openapi-parameters-enum-casing-info
+              message: Parameter Enum Upper Snake Case
+            - code: openapi-parameters-enum-casing-error
+              message: Parameter Enum Upper Snake Case
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/etf-profile-and-prices-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/etf-profile-and-prices-openapi-api-evangelist-ratings.yml
     aid: factset:factset-etf-profile-and-prices-api
   - name: FactSet Classifications API
     description: Get Industry Classifications from a variety of vendors
@@ -9871,7 +20485,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/classifications-api#changelog
       - type: OpenAPI
-        url: properties/classifications-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -9925,9 +20538,189 @@ apis:
                   *Licensing for GICS Classifications, Regions, and History is
                   required in addition to FactSet API license. Reach out to your
                   FactSet Account Team for as
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/classifications-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/classifications-openapi-api-evangelist-ratings.yml
     aid: factset:factset-classifications-api
   - name: FactSet Analytics Datastore API
     description: >-
@@ -9955,7 +20748,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#changelog
       - type: OpenAPI
-        url: properties/analytics-datastore-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -10055,9 +20847,187 @@ apis:
                 description: >-
                   Retrieves a list of product types that have been specified
                   across all documents the user has
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/analytics-datastore-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/analytics-datastore-openapi-api-evangelist-ratings.yml
     aid: factset:factset-analytics-datastore-api
   - name: FactSet Quant Engine API
     description: >-
@@ -10080,7 +21050,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/quant-engine-api#changelog
       - type: OpenAPI
-        url: properties/quant-engine-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -10143,9 +21112,233 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/quant-en
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/quant-engine-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/quant-engine-openapi-api-evangelist-ratings.yml
     aid: factset:factset-quant-engine-api
   - name: FactSet Investment Banking Office Refresh API
     description: Refresh FactSet models (e.g., Excel templates with =FDS codes).
@@ -10172,7 +21365,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#changelog
       - type: OpenAPI
-        url: properties/investment-banking-office-refresh-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -10208,11 +21400,166 @@ apis:
                   - Refresh Operations
           tags:
             - name: Refresh
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/investment-banking-office-refresh-openapi-original.yml
       - type: APIs.io Search
         url: overlays/investment-banking-office-refresh-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/investment-banking-office-refresh-openapi-api-evangelist-ratings.yml
     aid: factset:factset-investment-banking-office-refresh-api
   - name: FactSet Funds API for Digital Portals
     description: >-
@@ -10267,7 +21614,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#changelog
       - type: OpenAPI
-        url: properties/content-feeds-data-dictionary-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -10316,9 +21662,174 @@ apis:
                   Returns the data items (along with the products they belong
                   to) that contain at least one of the search terms as a
                   substring of either their name or de
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-path-names-camel-case-error
+              message: Parameter Path Name Camel Case
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/content-feeds-data-dictionary-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/content-feeds-data-dictionary-openapi-api-evangelist-ratings.yml
     aid: factset:factset-content-feeds-data-dictionary
   - name: FactSet Private Markets API
     description: FactSet Private Markets API
@@ -10344,7 +21855,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#changelog
       - type: OpenAPI
-        url: properties/private-markets-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -10418,9 +21928,181 @@ apis:
                   name. <p>**Max of 25 Names inputted.**</p><p>
                 tags:
                   - nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
     overlays:
       - type: APIs.io Search
         url: overlays/private-markets-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/private-markets-openapi-api-evangelist-ratings.yml
     aid: factset:factset-private-markets-api
   - name: FactSet Programmatic Environment API
     description: FactSet Programmatic Environment API
@@ -10447,7 +22129,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#changelog
       - type: OpenAPI
-        url: properties/programmatic-environment-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -10497,9 +22178,159 @@ apis:
                 description: >-
                   This is the endpoint to check on the progress of a previous
                   uplo
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-security-schemes-error
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
     overlays:
       - type: APIs.io Search
         url: overlays/programmatic-environment-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/programmatic-environment-openapi-api-evangelist-ratings.yml
     aid: factset:factset-programmatic-environment-api
   - name: FactSet Procure to Pay SCIM
     description: >-
@@ -10527,7 +22358,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#changelog
       - type: OpenAPI
-        url: properties/procure-to-pay-api-scim-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -10627,9 +22457,221 @@ apis:
                 tags:
                   - FileManagerAudit
                 summary: Get File Manager a
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: invalid-ref
+              message: '''#/components/schemas/Error'' does not exist'
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-warn
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-allof-info
+              message: Schema Properties AllOf
     overlays:
       - type: APIs.io Search
         url: overlays/procure-to-pay-api-scim-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/procure-to-pay-api-scim-openapi-api-evangelist-ratings.yml
     aid: factset:factset-procure-to-pay-scim
   - name: FactSet Publisher API
     description: >-
@@ -10654,10 +22696,215 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/publisher-api#changelog
       - type: OpenAPI
-        url: properties/publisher-openapi-original.yml
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-warn
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/publisher-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/publisher-openapi-api-evangelist-ratings.yml
     aid: factset:factset-publisher-api
   - name: FactSet Options API
     description: >-
@@ -10685,7 +22932,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-options-api#changelog
       - type: OpenAPI
-        url: properties/options-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -11046,9 +23292,163 @@ apis:
                   [OA 16276](https://my.apps.factset.com/oa/pages/16276)*
 
                     *Currently only OPRA Exchange traded options are 
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/options-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/options-openapi-api-evangelist-ratings.yml
     aid: factset:factset-options-api
   - name: FactSet Ownership Report Builder API
     description: Returns top holders of company and fund equity
@@ -11075,7 +23475,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/ownership-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -11096,9 +23495,137 @@ apis:
                   - Ownership
                 summary: Holders of a company or fund
                 description: Holders of a com
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/ownership-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/ownership-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-ownership-report-builder-api
   - name: FactSet Documents Distributor - Documents API
     description: >-
@@ -11127,7 +23654,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#changelog
       - type: OpenAPI
-        url: properties/documents-distributor-documents-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -11206,9 +23732,136 @@ apis:
                 description: >-
                   Need to plug-in the source and jobID got from /request-files
                   into /get-file
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
     overlays:
       - type: APIs.io Search
         url: overlays/documents-distributor-documents-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/documents-distributor-documents-openapi-api-evangelist-ratings.yml
     aid: factset:factset-documents-distributor-documents-api
   - name: FactSet Portfolio Metadata API
     description: >-
@@ -11236,7 +23889,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#changelog
       - type: OpenAPI
-        url: properties/portfolio-metadata-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -11356,9 +24008,209 @@ apis:
               description: CRUD operations on User Defined Field
             - name: User Defined Field Group
               description: CRUD operations on User Defined F
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/portfolio-metadata-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/portfolio-metadata-openapi-api-evangelist-ratings.yml
     aid: factset:factset-portfolio-metadata-api
   - name: FactSet Optimization Engine API (Multi-period)
     description: >-
@@ -11388,7 +24240,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#changelog
       - type: OpenAPI
-        url: properties/optimization-engine-api-multi-period-openapi-original.yml
         data:
           swagger: '2.0'
           info:
@@ -13696,9 +26547,72 @@ apis:
                 0 - eCost 
                 1 - eTotalCost 
                 2 - eMa
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-warn
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-summary-error
+              message: Operation Summary
+            - code: openapi-operations-tags-error
+              message: Operation Tags
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
     overlays:
       - type: APIs.io Search
         url: overlays/optimization-engine-api-multi-period-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/optimization-engine-api-multi-period-openapi-api-evangelist-ratings.yml
     aid: factset:factset-optimization-engine-api-multi-period
   - name: FactSet Real-Time Price Alerting API
     description: >-
@@ -13727,7 +26641,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#changelog
       - type: OpenAPI
-        url: properties/real-time-price-alerting-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -13773,9 +26686,181 @@ apis:
           x-interface-version: 2
           x-documenter-version: 6.3.9
           x-api-version: nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/real-time-price-alerting-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/real-time-price-alerting-openapi-api-evangelist-ratings.yml
     aid: factset:factset-real-time-price-alerting-api
   - name: FactSet Real-Time Quotes API
     description: >-
@@ -13804,7 +26889,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#changelog
       - type: OpenAPI
-        url: properties/real-time-quotes-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -14830,9 +27914,191 @@ apis:
           x-interface-version: 2
           x-documenter-version: 6.3.9
           x-api-version: nu
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/real-time-quotes-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/real-time-quotes-openapi-api-evangelist-ratings.yml
     aid: factset:factset-real-time-quotes-api
   - name: FactSet Open FactSet Marketplace API
     description: >-
@@ -14860,7 +28126,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#changelog
       - type: OpenAPI
-        url: properties/open-marketplace-openapi-original.yml
         data:
           swagger: '2.0'
           info:
@@ -15964,9 +29229,121 @@ apis:
           securityDefinitions:
             Basic:
               type: null
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-url-error
+              message: Info License URL
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-error
+              message: Parameter Schema Type
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-error
+              message: Parameter Schema Type
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-request-body-on-post-error
+              message: Request Body POST
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-parameters-enum-info
+              message: Parameter Enum
+            - code: openapi-parameters-enum-casing-info
+              message: Parameter Enum Upper Snake Case
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
     overlays:
       - type: APIs.io Search
         url: overlays/open-marketplace-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/open-marketplace-openapi-api-evangelist-ratings.yml
     aid: factset:factset-open-factset-marketplace-api
   - name: FactSet Entity API
     description: ' FactSet’s Entity API provides access to FactSet’s complete security and entity level symbology, comprehensive entity reference data, and all of the necessary relationships and connections to create a foundation that tightly correlates disparate sources o'
@@ -15989,7 +29366,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-entity-api#changelog
       - type: OpenAPI
-        url: properties/entity-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -16141,9 +29517,195 @@ apis:
                   that occur on all seven days of the week.
                 tags:
                   - Historical Cr
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/entity-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/entity-openapi-api-evangelist-ratings.yml
     aid: factset:factset-entity-api
   - name: Procure to Pay Invoice and Billing
     description: >-
@@ -16172,7 +29734,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#changelog
       - type: OpenAPI
-        url: properties/procure-to-pay-api-scim-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -16272,9 +29833,221 @@ apis:
                 tags:
                   - FileManagerAudit
                 summary: Get File Manager a
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-operation-ids-error
+              message: Operation ID.
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operation-security-definitions-info
+              message: Operation Security Definition
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-error
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: invalid-ref
+              message: '''#/components/schemas/Error'' does not exist'
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-camel-case-error
+              message: Request Body Schema Property Names Camel Case
+            - code: openapi-request-body-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-warn
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-response-put-500-status-code-info
+              message: 500 Status Code for PUT Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-204-status-code-info
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-request-body-schema-properties-type-error
+              message: Request Body Schema Properties Type
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-allof-info
+              message: Schema Properties AllOf
     overlays:
       - type: APIs.io Search
         url: overlays/procure-to-pay-api-scim-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/procure-to-pay-api-scim-openapi-api-evangelist-ratings.yml
     aid: factset:procure-to-pay-invoice-and-billing
   - name: FactSet IRN Notes API
     description: >-
@@ -16297,10 +30070,241 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/irn-notes-api#changelog
       - type: OpenAPI
-        url: properties/irn-notes-openapi-original.yml
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-camel-case-error
+              message: Operation ID Camel Case
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-schema-components-warn
+              message: GET Response 200 Schema Components
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-parameters-description-error
+              message: Parameter Description
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-properties-type-info
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-post-201-status-code-info
+              message: POST 201 Status Code
+            - code: openapi-response-get-201-content-info
+              message: POST Content
+            - code: openapi-response-post-201-media-type-info
+              message: JSON Media Type POST
+            - code: openapi-response-post-201-media-type-schema-info
+              message: Schema POST
+            - code: openapi-response-post-201-schema-components-warn
+              message: GET Response 201 Schema Components
+            - code: openapi-response-post-201-schema-ref-error
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-201-schema-ref-info
+              message: GET Response 201 Schema Ref
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-parameters-path-names-snake-case-error
+              message: Parameter Path Name Snake Case
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-default-status-code-info
+              message: Response Has Default Status Code
+            - code: openapi-response-get-default-content-info
+              message: Default Content
+            - code: openapi-response-get-default-media-type-info
+              message: JSON Media Type Default
+            - code: openapi-response-get-default-media-type-schema-info
+              message: Schema Default
+            - code: openapi-response-get-default-schema-ref-warn
+              message: Default Response Schema Ref
+            - code: openapi-request-body-on-put-info
+              message: Request Body PUT
+            - code: openapi-request-body-content-on-put-info
+              message: Request Body Content PUT
+            - code: openapi-request-body-json-media-type-on-put-error
+              message: JSON Media Type POSPUTT
+            - code: openapi-request-body-json-media-type-on-put-info
+              message: JSON Media Type PUT
+            - code: openapi-response-put-204-status-code-error
+              message: PUT 204 Status Code
+            - code: openapi-response-put-500-status-code-error
+              message: 500 Status Code for PUT Responses
+            - code: openapi-response-put-400-status-code-info
+              message: 400 Status Code for PUT Responses
+            - code: openapi-response-put-404-status-code-info
+              message: 404 Status Code for PUT Responses
+            - code: openapi-no-request-body-on-delete-info
+              message: DELETE Request Body
+            - code: openapi-response-delete-204-status-code-error
+              message: DELETE 204 Status Code
+            - code: openapi-response-delete-500-status-code-error
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-response-delete-400-status-code-info
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-404-status-code-info
+              message: 404 Status Code for DELETE Responses
+            - code: openapi-request-body-json-media-type-on-post-error
+              message: JSON Media Type POST
+            - code: openapi-response-get-200-content-error
+              message: GET Content
+            - code: openapi-response-post-404-status-code-info
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-response-delete-400-status-code-warn
+              message: 400 Status Code for DELETE Responses
+            - code: openapi-response-delete-500-status-code-info
+              message: 500 Status Code for DELETE Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
     overlays:
       - type: APIs.io Search
         url: overlays/irn-notes-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/irn-notes-openapi-api-evangelist-ratings.yml
     aid: factset:factset-irn-notes-api
   - name: FactSet RBICS API
     description: >-
@@ -16326,7 +30330,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-rbics-api#changelog
       - type: OpenAPI
-        url: properties/rbics-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -16403,9 +30406,195 @@ apis:
                   lists of `rbicsIds`.
                 tags:
                   - S
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-400-status-code-warn
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-error
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
     overlays:
       - type: APIs.io Search
         url: overlays/rbics-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/rbics-openapi-api-evangelist-ratings.yml
     aid: factset:factset-rbics-api
   - name: FactSet GeoRev API
     description: >-
@@ -16431,7 +30620,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-georev-api#changelog
       - type: OpenAPI
-        url: properties/georev-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -16499,11 +30687,195 @@ apis:
                   using the /country-mappings endpoint or visit [OA
                   8754](https://my.apps.factset.com/oa/pages/8754) for a list of
                   ISO2 Coun
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-names-snake-case-error
+              message: Request Body Schema Property Names Snake Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
     overlays:
       - type: APIs.io Search
         url: overlays/georev-openapi-original.yml
       - type: APIs.io Search
         url: overlays/georev-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/georev-openapi-api-evangelist-ratings.yml
     aid: factset:factset-georev-api
   - name: FactSet Direct Streaming of Transaction Messages API
     description: >-
@@ -16532,8 +30904,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#changelog
       - type: OpenAPI
-        url: >-
-          properties/direct-streaming-of-transaction-messages-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -16554,11 +30924,132 @@ apis:
             description: API Documentation
             url: >-
               https://developer.factset.com/api-catalog/direct-streaming-transaction-me
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-info
+              message: Request Body Schema Properties Nullable
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-security-schemes-info
+              message: Security Scheme
     overlays:
       - type: APIs.io Search
         url: overlays/direct-streaming-of-transaction-messages-openapi-original.yml
       - type: APIs.io Search
         url: overlays/direct-streaming-of-transaction-messages-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/direct-streaming-of-transaction-messages-openapi-api-evangelist-ratings.yml
     aid: factset:factset-direct-streaming-of-transaction-messages-api
   - name: Open FactSet Partners - Documents
     description: 'Access to all job listing files provided by the OFM Partners: LinkUp'
@@ -16584,7 +31075,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#changelog
       - type: OpenAPI
-        url: properties/open-partners-documents-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -16776,9 +31266,139 @@ apis:
                 <a
                 href=https://go.factset.com/marketplace/catalog/product/linkup-raw>LinkUp</a>
                 API provides access to job list
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-length-error
+              message: Schema Properties Name Length
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/open-partners-documents-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/open-partners-documents-openapi-api-evangelist-ratings.yml
     aid: factset:open-factset-partners-documents
   - name: FactSet Estimates Report Builder API
     description: >-
@@ -16808,7 +31428,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/estimates-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -16898,9 +31517,137 @@ apis:
                 description: >-
                   Returns a timeseries grid of Interim and Annual data for a
                   sing
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/estimates-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/estimates-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-estimates-report-builder-api
   - name: FactSet Data Monitor API
     description: >-
@@ -16952,7 +31699,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#changelog
       - type: OpenAPI
-        url: properties/fundamentals-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -17069,9 +31815,205 @@ apis:
                   wish to receive your data in CSV format, you can edit the
                   header to have the "accept" parameter as "text/csv" instead of
                   "applicat
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-description-length-error
+              message: Operation Description Length
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-response-get-200-status-code-error
+              message: A GET operation should have a 200 status code for the response.
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
     overlays:
       - type: APIs.io Search
         url: overlays/fundamentals-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/fundamentals-openapi-api-evangelist-ratings.yml
     aid: factset:factset-fundamentals-api
   - name: FactSet ETF API
     description: ETF Reference Data
@@ -17092,7 +32034,6 @@ apis:
       - type: OpenAPI
         url: https://developer.factset.com/api-catalog/factset-etf-api#changelog
       - type: OpenAPI
-        url: properties/etf-openapi-original.yml
         data:
           openapi: 3.0.0
           info:
@@ -17124,9 +32065,193 @@ apis:
                   Returns a list of available metrics that can be used in the
                   `metrics` parameter of related endpoints. Leave _category_
                   blank to request all availa
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-300-info
+              message: 3.0.0 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-description-length-error
+              message: Info Description Length
+            - code: openapi-info-terms-of-service-info
+              message: Terms of Service
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-operations-summary-length-error
+              message: Operation Summary Length
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-response-get-400-status-code-warn
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-error
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-enum-casing-info
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
     overlays:
       - type: APIs.io Search
         url: overlays/etf-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/etf-openapi-api-evangelist-ratings.yml
     aid: factset:factset-etf-api
   - name: FactSet Search Answers
     description: >-
@@ -17154,7 +32279,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#changelog
       - type: OpenAPI
-        url: properties/search-answers-openapi-original.yml
         data:
           openapi: 3.0.2
           info:
@@ -17177,9 +32301,145 @@ apis:
                 description: >-
                   Returns an answer to the specified query (if valid answer
                   exists) in the Adaptive Card format (https://adaptivecar
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-external-docs-error
+              message: External Docs
+            - code: openapi-tags-object-error
+              message: Tag Object
+            - code: openapi-openapi-version-302-info
+              message: 3.0.2 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-license-error
+              message: License Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-url-error
+              message: Contact URL
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-404-status-code-warn
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-oneof-info
+              message: Schema Properties OneOf
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-type-error
+              message: Schema Type
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-camel-case-error
+              message: Schema Property Names Camel Case
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-examples-info
+              message: Schema Enum
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
     overlays:
       - type: APIs.io Search
         url: overlays/search-answers-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/search-answers-openapi-api-evangelist-ratings.yml
     aid: factset:factset-search-answers
   - name: FactSet Capital Structure Report Builder API
     description: >-
@@ -17208,7 +32468,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#changelog
       - type: OpenAPI
-        url: properties/capital-structure-report-builder-openapi-original.yml
         data:
           openapi: 3.0.3
           info:
@@ -17238,9 +32497,138 @@ apis:
                 tags:
                   - Capital Structure
                 summary: Debt Capital Structure (DC
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-303-info
+              message: 3.0.3 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-contact-error
+              message: Contact Object
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-error
+              message: Info Description
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-description-error
+              message: Tag Descriptions
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-no-request-body-on-get-info
+              message: GET Request Body
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-description-error
+              message: Operation Description
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-parameters-name-info
+              message: Parameter Name
+            - code: openapi-parameters-in-info
+              message: Parameters In
+            - code: openapi-parameters-description-info
+              message: Parameter Description
+            - code: openapi-parameters-query-names-camel-case-error
+              message: Parameter Query Name Camel Case
+            - code: openapi-parameters-query-names-snake-case-error
+              message: Parameter Query Name Snake Case
+            - code: openapi-parameters-required-error
+              message: Parameters MUST have a required property.
+            - code: openapi-parameters-schema-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-schema-type-info
+              message: Parameter Schema Type
+            - code: openapi-parameters-required-info
+              message: Parameter has a required property.
+            - code: openapi-response-get-200-content-info
+              message: GET Content
+            - code: openapi-response-get-200-media-type-info
+              message: JSON Media Type GET
+            - code: openapi-response-get-200-media-type-schema-info
+              message: Schema GET
+            - code: openapi-response-get-200-schema-ref-warn
+              message: GET Response 200 Schema Ref
+            - code: openapi-response-get-200-status-code-info
+              message: GET Response Has 200 Status Code
+            - code: openapi-responses-examples-error
+              message: Schema COULD have an example.
+            - code: openapi-response-get-400-status-code-info
+              message: 400 Status Code for GET Responses
+            - code: openapi-response-get-404-status-code-info
+              message: 404 Status Code for GET Responses
+            - code: openapi-response-get-500-status-code-info
+              message: 500 Status Code for GET Responses
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-type-error
+              message: Schema Properties Type
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-description-length-error
+              message: Description needs to be less than 250 characters.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-descriptions-length-error
+              message: Schema Description Length
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
     overlays:
       - type: APIs.io Search
         url: overlays/capital-structure-report-builder-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: >-
+          overlays/capital-structure-report-builder-openapi-api-evangelist-ratings.yml
     aid: factset:factset-capital-structure-report-builder-api
   - name: FactSet Trading API
     description: This Trading API gives programmatic access to FactSet's trading platform
@@ -17265,7 +32653,6 @@ apis:
         url: >-
           https://developer.factset.com/api-catalog/factset-trading-api#changelog
       - type: OpenAPI
-        url: properties/trading-openapi-original.yml
         data:
           openapi: 3.0.1
           info:
@@ -17326,9 +32713,147 @@ apis:
           externalDocs:
             description: API Documentation
             url: https://developer.factset.com/api-catalog/factset-tra
+      - type: API Evangelist Ratings
+        data:
+          weekNumber: 12
+          rules:
+            - code: openapi-openapi-version-301-info
+              message: 3.0.1 Version of OpenAPI
+            - code: openapi-openapi-version-310-info
+              message: 3.1.0 Version of OpenAPI
+            - code: openapi-info-terms-of-service-error
+              message: Terms of Service
+            - code: openapi-info-title-info
+              message: Info Title
+            - code: openapi-info-title-upper-case-info
+              message: Info Title Upper Case
+            - code: openapi-info-description-info
+              message: Info Description
+            - code: openapi-info-contact-info
+              message: Contact Object
+            - code: openapi-info-contact-name-info
+              message: Contact Name
+            - code: openapi-info-contact-url-info
+              message: Contact URL
+            - code: openapi-info-contact-email-info
+              message: Contact Email
+            - code: openapi-info-license-info
+              message: License Object
+            - code: openapi-info-license-name-info
+              message: Info License Name
+            - code: openapi-info-license-url-info
+              message: Info License URL
+            - code: openapi-info-version-info
+              message: Info Version
+            - code: openapi-no-api-in-path-error
+              message: No API in Path
+            - code: openapi-no-path-trailing-slash-info
+              message: Path Trailing Slash
+            - code: openapi-path-description-warn
+              message: Path Description
+            - code: openapi-version-in-path-info
+              message: Version in Path
+            - code: openapi-operation-security-definitions-error
+              message: Operation Security Definition
+            - code: openapi-operations-tags-info
+              message: Operation Tags
+            - code: openapi-operations-summary-info
+              message: Operation Summary
+            - code: openapi-operations-summary-period-none-error
+              message: Operation Summary Period
+            - code: openapi-operations-description-info
+              message: Operation Description
+            - code: openapi-operations-operation-ids-info
+              message: Operation ID.
+            - code: openapi-request-body-on-post-info
+              message: Request Body POST
+            - code: openapi-request-body-content-on-post-info
+              message: Request Body Content POST
+            - code: openapi-request-body-have-content-info
+              message: Request Body Content
+            - code: openapi-request-body-have-application-json-info
+              message: Request Body Application JSON
+            - code: openapi-request-body-json-media-type-on-post-info
+              message: JSON Media Type POST
+            - code: openapi-request-body-have-schema-info
+              message: Request Body Schema
+            - code: openapi-request-body-have-schema-properties-warn
+              message: Request Body Schema Components
+            - code: openapi-request-body-have-schema-required-info
+              message: Request Body Schema Required
+            - code: openapi-request-body-have-schema-required-warn
+              message: Request Body Schema Required
+            - code: openapi-request-body-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-request-body-schema-properties-format-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-properties-names-pascal-case-error
+              message: Request Body Schema Property Names Pascal Case
+            - code: openapi-request-body-schema-properties-nullable-error
+              message: Request Body Schema Properties Format
+            - code: openapi-request-body-schema-ref-warn
+              message: Request Body Schema Ref
+            - code: openapi-response-post-201-status-code-error
+              message: POST 201 Status Code
+            - code: openapi-response-post-404-status-code-warn
+              message: 404 Status Code for POST Responses
+            - code: openapi-response-post-400-status-code-info
+              message: 400 Status Code for POST Responses
+            - code: openapi-response-post-500-status-code-info
+              message: 500 Status Code for POST Responses
+            - code: openapi-operations-summary-period-none-info
+              message: Operation Summary Period
+            - code: openapi-schema-names-camel-case-warn
+              message: Schema Name Camel Case
+            - code: openapi-schema-names-snake-case-warn
+              message: Schema Name Snake Case
+            - code: openapi-schema-type-info
+              message: Schema Type
+            - code: openapi-schema-properties-format-error
+              message: Schema Properties Format
+            - code: openapi-schema-properties-names-pascal-case-error
+              message: Schema Property Names Pascal Case
+            - code: openapi-schema-properties-pii-info
+              message: Schema PII
+            - code: openapi-schema-properties-descriptions-error
+              message: Schema Description
+            - code: openapi-schema-properties-descriptions-info
+              message: Schema Description
+            - code: openapi-schema-properties-nullable-info
+              message: Schema Properties Nullable
+            - code: openapi-schema-description-info
+              message: Schemas has a description.
+            - code: openapi-schema-names-pascal-case-warn
+              message: Schema Name Pascal Case
+            - code: openapi-schema-properties-names-snake-case-error
+              message: Schema Property Names Snake Case
+            - code: openapi-schema-properties-nullable-error
+              message: Schema Properties Format
+            - code: openapi-schema-description-error
+              message: Schema SHOULD have a description.
+            - code: openapi-schema-properties-enum-info
+              message: Schema Property Enum
+            - code: openapi-schema-properties-enum-casing-error
+              message: Schema Property Enum Casing
+            - code: openapi-schema-properties-type-info
+              message: Schema Properties Format
+            - code: openapi-schema-names-length-error
+              message: Schema Name Length
+            - code: openapi-security-schemes-info
+              message: Security Scheme
+            - code: openapi-tags-object-info
+              message: Tag Object
+            - code: openapi-tags-name-info
+              message: Tag Name
+            - code: openapi-tags-description-info
+              message: Tag Descriptions
     overlays:
       - type: APIs.io Search
         url: overlays/trading-openapi-search.yml
+      - type: API Evangelist Ratings
+        url: overlays/trading-openapi-api-evangelist-ratings.yml
     aid: factset:factset-trading-api
 common:
   - type: Portal
@@ -17364,6 +32889,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: factset
 ---

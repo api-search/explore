@@ -63,7 +63,7 @@ apis:
     baseURL: https://api.example.com
     tags:
       - Weather
-      - Forecasts
+      - Forecast
     properties:
       - type: OpenAPI
         url: https://www.weatherbit.io/api/weather-forecast-api
@@ -151,6 +151,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: weatherbit
 ---

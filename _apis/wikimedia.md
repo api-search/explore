@@ -34,7 +34,7 @@ apis:
     baseURL: https://api.example.com
     tags:
       - Wiki
-      - Feeds
+      - Feed
     properties:
       - type: OpenAPI
         url: https://api.wikimedia.org/wiki/Feed_API
@@ -99,6 +99,8 @@ maintainers:
     email: info@apievangelist.com
 overlays:
   - type: APIs.io Search
+    url: overlays/apis-io-search.yml
+  - type: API Evangelist Ratings
     url: overlays/apis-io-search.yml
 aid: wikimedia
 ---
