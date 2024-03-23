@@ -23,15 +23,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/pa-engine-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/pa-engine-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/pa-engine-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/pa-engine-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/pa-engine-api#changelog
       - type: OpenAPI
         data:
@@ -535,15 +535,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/formula-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/formula-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/formula-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/formula-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/formula-api#changelog
       - type: OpenAPI
         data:
@@ -998,19 +998,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-global-prices-api#changelog
       - type: OpenAPI
@@ -1384,15 +1384,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/ofdb-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/ofdb-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/ofdb-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/ofdb-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/ofdb-api#changelog
       - type: OpenAPI
         data:
@@ -1844,15 +1844,15 @@ apis:
     tags:
       - AI/ML
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/signals-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/signals-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/signals-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/signals-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/signals-api#changelog
       - type: OpenAPI
         data:
@@ -2166,19 +2166,19 @@ apis:
     tags:
       - AI/ML
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/natural-language-processing-api#changelog
       - type: OpenAPI
@@ -2508,19 +2508,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/universal-screening-api#changelog
       - type: OpenAPI
@@ -2768,15 +2768,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/portfolio-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/portfolio-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/portfolio-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/portfolio-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/portfolio-api#changelog
       - type: OpenAPI
         data:
@@ -3035,15 +3035,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/spar-engine-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/spar-engine-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/spar-engine-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/spar-engine-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/spar-engine-api#changelog
       - type: OpenAPI
         data:
@@ -3406,17 +3406,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-prices-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-prices-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-prices-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-prices-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-prices-api#changelog
       - type: OpenAPI
         data:
@@ -3996,19 +3996,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-concordance-api#changelog
       - type: OpenAPI
@@ -4541,15 +4541,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-esg-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/factset-esg-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-esg-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/factset-esg-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-esg-api#changelog
       - type: OpenAPI
         data:
@@ -5101,19 +5101,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-digital-cards#changelog
       - type: OpenAPI
@@ -5232,15 +5232,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/vault-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/vault-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/vault-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/vault-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/vault-api#changelog
       - type: OpenAPI
         data:
@@ -5593,19 +5593,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/chart-generation-service#changelog
       - type: OpenAPI
@@ -5783,17 +5783,17 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/real-time-news-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/real-time-news-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/real-time-news-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/real-time-news-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/real-time-news-api#changelog
       - type: OpenAPI
         data:
@@ -6112,15 +6112,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/vermilion-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/vermilion-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/vermilion-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/vermilion-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/vermilion-api#changelog
       - type: OpenAPI
         data:
@@ -6538,19 +6538,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-api#changelog
       - type: OpenAPI
@@ -7014,16 +7014,16 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/issue-tracker-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/issue-tracker-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/issue-tracker-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/issue-tracker-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/issue-tracker-api#changelog
       - type: OpenAPI
         data:
@@ -7239,19 +7239,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/axioma-equity-optimizer-api#changelog
       - type: OpenAPI
@@ -7548,19 +7548,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/barra-portfolio-optimizer#changelog
       - type: OpenAPI
@@ -7864,19 +7864,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-symbol-list#changelog
       - type: OpenAPI
@@ -8085,17 +8085,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/event-calendar-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/event-calendar-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/event-calendar-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/event-calendar-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/event-calendar-api#changelog
       - type: OpenAPI
         data:
@@ -8250,15 +8250,15 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/id-lookup-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/id-lookup-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/id-lookup-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/id-lookup-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/id-lookup-api#changelog
       - type: OpenAPI
         data:
@@ -8415,19 +8415,19 @@ apis:
     tags:
       - AI/ML
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/conversational-api-powered-factset-mercury#changelog
       - type: OpenAPI
@@ -8647,15 +8647,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/irn-contacts-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/irn-contacts-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/irn-contacts-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/irn-contacts-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/irn-contacts-api#changelog
       - type: OpenAPI
         data:
@@ -8956,19 +8956,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/overview-report-builder-api#changelog
       - type: OpenAPI
@@ -9182,19 +9182,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-callstreet-events#changelog
       - type: OpenAPI
@@ -9429,19 +9429,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/recommendation-list-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/recommendation-list-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/recommendation-list-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/recommendation-list-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/recommendation-list-api-digital-portals#changelog        
     overlays: []
@@ -9456,19 +9456,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-benchmarks-api#changelog
       - type: OpenAPI
@@ -9843,19 +9843,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/bonds-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/bonds-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/bonds-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/bonds-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/bonds-api-digital-portals#changelog       
     overlays: []
@@ -9871,19 +9871,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/virtual-portfolio-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/virtual-portfolio-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/virtual-portfolio-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/virtual-portfolio-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/virtual-portfolio-api-digital-portals#changelog        
     overlays: []
@@ -9901,19 +9901,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/sp-global-fixed-income-evaluated-prices-and-analytics-api#changelog
       - type: OpenAPI
@@ -10283,19 +10283,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/foreign-exchange-rate-api#changelog
       - type: OpenAPI
@@ -10551,19 +10551,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-analytics-batcher-api#changelog
       - type: OpenAPI
@@ -10780,15 +10780,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/openrisk-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/openrisk-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/openrisk-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/openrisk-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/openrisk-api#changelog
       - type: OpenAPI
         data:
@@ -11071,19 +11071,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-intraday-tick-history-api#changelog
       - type: OpenAPI
@@ -11293,16 +11293,16 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-funds-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/factset-funds-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-funds-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-funds-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-funds-api#changelog
       - type: OpenAPI
         data:
@@ -12010,19 +12010,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-terms-and-conditions-api#changelog
       - type: OpenAPI
@@ -12508,19 +12508,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/northfield-portfolio-optimizer#changelog
       - type: OpenAPI
@@ -12823,19 +12823,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/security-modeling-api#changelog
       - type: OpenAPI
@@ -13015,19 +13015,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/stocks-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/stocks-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/stocks-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/stocks-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/stocks-api-digital-portals#changelog       
     overlays: []
@@ -13040,19 +13040,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/company-logo-api-digital-portals#changelog
       - type: OpenAPI
@@ -13409,19 +13409,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/securitized-derivatives-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/securitized-derivatives-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/securitized-derivatives-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/securitized-derivatives-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/securitized-derivatives-api-digital-portals#changelog         
     overlays: []
@@ -13436,19 +13436,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/watchlist-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/watchlist-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/watchlist-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/watchlist-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/watchlist-api-digital-portals#changelog         
     overlays: []
@@ -13464,19 +13464,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-quant-factor-library-api#changelog
       - type: OpenAPI
@@ -13736,19 +13736,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-data-model-api#changelog
       - type: OpenAPI
@@ -13898,19 +13898,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/fixed-income-calculation-api#changelog
       - type: OpenAPI
@@ -14208,19 +14208,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-tick-history-api#changelog
       - type: OpenAPI
@@ -14518,19 +14518,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/irn-configuration-api#changelog
       - type: OpenAPI
@@ -15045,19 +15045,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/irn-custom-symbols-api#changelog
       - type: OpenAPI
@@ -15393,19 +15393,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-portfolio-optimizer-api#changelog
       - type: OpenAPI
@@ -15704,19 +15704,19 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/standard-datafeed-api#changelog
       - type: OpenAPI
@@ -15910,19 +15910,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/real-time-time-series-api#changelog
       - type: OpenAPI
@@ -16213,15 +16213,15 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/bookbuilder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/bookbuilder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/bookbuilder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/bookbuilder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/bookbuilder-api#changelog
       - type: OpenAPI
         data:
@@ -16523,19 +16523,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/exchange-datafeed-snapshot-api-entire-exchange#changelog
       - type: OpenAPI
@@ -16693,19 +16693,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-api#changelog
       - type: OpenAPI
@@ -16937,19 +16937,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/portfolio-reporting-batcher-api#changelog
       - type: OpenAPI
@@ -17195,17 +17195,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/global-filings-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/global-filings-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/global-filings-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/global-filings-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/global-filings-api#changelog
       - type: OpenAPI
         data:
@@ -17399,15 +17399,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/symbology-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/symbology-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/symbology-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/symbology-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/symbology-api#changelog
       - type: OpenAPI
         data:
@@ -18023,19 +18023,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/streetaccount-news-api#changelog
       - type: OpenAPI
@@ -18390,19 +18390,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-report-builder-api#changelog
       - type: OpenAPI
@@ -18568,17 +18568,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-people-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-people-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-people-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-people-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-people-api#changelog
       - type: OpenAPI
         data:
@@ -18956,19 +18956,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/axioma-fixed-income-optimizer#changelog
       - type: OpenAPI
@@ -19252,15 +19252,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/irn-meetings-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/irn-meetings-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/irn-meetings-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/irn-meetings-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/irn-meetings-api#changelog
       - type: OpenAPI
         data:
@@ -19614,19 +19614,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-report-builder-api#changelog
       - type: OpenAPI
@@ -19807,19 +19807,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/etf-profile-and-prices-api#changelog
       - type: OpenAPI
@@ -20470,18 +20470,18 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/classifications-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/classifications-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/classifications-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/classifications-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/classifications-api#changelog
       - type: OpenAPI
@@ -20732,19 +20732,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/analytics-datastore-api#changelog
       - type: OpenAPI
@@ -21039,15 +21039,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/quant-engine-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/quant-engine-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/quant-engine-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/quant-engine-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/quant-engine-api#changelog
       - type: OpenAPI
         data:
@@ -21349,19 +21349,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/investment-banking-office-refresh-api#changelog
       - type: OpenAPI
@@ -21571,19 +21571,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/funds-api-digital-portals#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/funds-api-digital-portals#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/funds-api-digital-portals#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/funds-api-digital-portals#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/funds-api-digital-portals#changelog       
     overlays: []
@@ -21598,19 +21598,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/content-feeds-data-dictionary#changelog
       - type: OpenAPI
@@ -21839,19 +21839,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-private-markets-api#changelog
       - type: OpenAPI
@@ -22113,19 +22113,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-programmatic-environment-api#changelog
       - type: OpenAPI
@@ -22342,19 +22342,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-api-scim#changelog
       - type: OpenAPI
@@ -22685,15 +22685,15 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/publisher-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/publisher-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/publisher-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/publisher-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/publisher-api#changelog
       - type: OpenAPI
       - type: API Evangelist Ratings
@@ -22917,18 +22917,18 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-options-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-options-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-options-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-options-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-options-api#changelog
       - type: OpenAPI
@@ -23459,19 +23459,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-ownership-report-builder-api#changelog
       - type: OpenAPI
@@ -23638,19 +23638,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/documents-distributor-documents-api#changelog
       - type: OpenAPI
@@ -23873,19 +23873,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/portfolio-metadata-api#changelog
       - type: OpenAPI
@@ -24224,19 +24224,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/optimization-engine-api-multi-period#changelog
       - type: OpenAPI
@@ -26625,19 +26625,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/real-time-price-alerting-api#changelog
       - type: OpenAPI
@@ -26873,19 +26873,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/real-time-quotes-api#changelog
       - type: OpenAPI
@@ -28110,19 +28110,19 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/openfactset-marketplace-api#changelog
       - type: OpenAPI
@@ -29353,17 +29353,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-entity-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-entity-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-entity-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-entity-api#changelog
       - type: OpenAPI
         data:
@@ -29718,19 +29718,19 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/procure-to-pay-invoice-and-billing#changelog
       - type: OpenAPI
@@ -30059,15 +30059,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/irn-notes-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/irn-notes-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/irn-notes-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/irn-notes-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/irn-notes-api#changelog
       - type: OpenAPI
       - type: API Evangelist Ratings
@@ -30318,16 +30318,16 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-rbics-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/factset-rbics-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-rbics-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-rbics-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-rbics-api#changelog
       - type: OpenAPI
         data:
@@ -30607,17 +30607,17 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-georev-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-georev-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-georev-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-georev-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-georev-api#changelog
       - type: OpenAPI
         data:
@@ -30888,19 +30888,19 @@ apis:
     tags:
       - Analytics
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/direct-streaming-transaction-messages-api#changelog
       - type: OpenAPI
@@ -31059,19 +31059,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/openfactset-partners-documents#changelog
       - type: OpenAPI
@@ -31412,19 +31412,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-estimates-report-builder-api#changelog
       - type: OpenAPI
@@ -31659,15 +31659,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/data-monitor-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/data-monitor-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/data-monitor-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/data-monitor-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/data-monitor-api#changelog
     overlays: []
     aid: factset:factset-data-monitor-api
@@ -31683,19 +31683,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-fundamentals-api#changelog
       - type: OpenAPI
@@ -32023,15 +32023,15 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-etf-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: https://developer.factset.com/api-catalog/factset-etf-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: https://developer.factset.com/api-catalog/factset-etf-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: https://developer.factset.com/api-catalog/factset-etf-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: https://developer.factset.com/api-catalog/factset-etf-api#changelog
       - type: OpenAPI
         data:
@@ -32263,19 +32263,19 @@ apis:
     tags:
       - Utility
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-search-answers#changelog
       - type: OpenAPI
@@ -32452,19 +32452,19 @@ apis:
     tags:
       - Content
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/capital-structure-report-builder-api#changelog
       - type: OpenAPI
@@ -32638,18 +32638,18 @@ apis:
     tags:
       - Functional
     properties:
-      - type: OpenAPI
+      - type: Documentation
         url: https://developer.factset.com/api-catalog/factset-trading-api#overview
-      - type: OpenAPI
+      - type: SDK
         url: >-
           https://developer.factset.com/api-catalog/factset-trading-api#sdkLibrary
-      - type: OpenAPI
+      - type: Jupyter Notebooks
         url: >-
           https://developer.factset.com/api-catalog/factset-trading-api#notebooks
-      - type: OpenAPI
+      - type: Code Snippets
         url: >-
           https://developer.factset.com/api-catalog/factset-trading-api#codeSnippet
-      - type: OpenAPI
+      - type: Change Log
         url: >-
           https://developer.factset.com/api-catalog/factset-trading-api#changelog
       - type: OpenAPI
