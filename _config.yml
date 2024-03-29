@@ -97,7 +97,10 @@ collections:
     permalink: /tags/:path/   
   rules:
     output: true
-    permalink: /rules/:path/       
+    permalink: /rules/:path/  
+  properties:
+    output: true
+    permalink: /properties/:path/           
 
 defaults:
 
@@ -118,3 +121,9 @@ defaults:
       type:         rules
     values:
       layout:       rules        
+
+  - scope:
+      path:         ""
+      type:         properties
+    values:
+      layout:       properties         

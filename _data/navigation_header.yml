@@ -10,6 +10,9 @@ left:
     url: /tags/    
 
   - title: Rules
-    url: /rules/      
+    url: /rules/    
+
+  - title: Properties
+    url: /properties/          
 
 right: 
