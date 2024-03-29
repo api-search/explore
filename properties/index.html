@@ -1,0 +1,22 @@
+---
+layout: default
+title: Explore - Properties
+---
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+
+            <h1>Tags</h1>
+            <table width="100%">
+            {% for property in site.properties %}
+                <tr>
+                    <td width="40%">{{ property.name }}</td>
+                    <td width="20%" align="center>"><a href="{{ property.url }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
+                </tr>
+            {% endfor %}  
+            </table>          
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>            
