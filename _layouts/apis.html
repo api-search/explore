@@ -24,6 +24,8 @@ layout: default
                     </ul> 
 
                     {% for api in page.apis %}
+                        <a name="{{ api.name }}"></a>
+                        <br><br>
                         <h3>{{ api.name }}</h3>
                         <p>{{ api.description | strip_html | strip_newlines }}</p> 
                         <h4>Properties</h4>
