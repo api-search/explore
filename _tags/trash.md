@@ -1,0 +1,15 @@
+---
+name: Trash
+description: Needs a description.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/trash.png
+url: https://example.com/apis/trash.yml
+created: 2024/3/29
+modified: 2024/3/29
+specificationVersion: '0.16'
+tags:
+  - Trash
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---

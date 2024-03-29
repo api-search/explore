@@ -1,0 +1,16 @@
+---
+name: Transferwise Quote Temporary
+description: Needs a description.
+image: >-
+  https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/transferwise-quote-temporary.png
+url: https://example.com/apis/transferwise-quote-temporary.yml
+created: 2024/3/29
+modified: 2024/3/29
+specificationVersion: '0.16'
+tags:
+  - Transferwise Quote Temporary
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---

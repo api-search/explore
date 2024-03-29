@@ -1,0 +1,16 @@
+---
+name: Modelpackagingjobs
+description: Needs a description.
+image: >-
+  https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/modelpackagingjobs.png
+url: https://example.com/apis/modelpackagingjobs.yml
+created: 2024/3/29
+modified: 2024/3/29
+specificationVersion: '0.16'
+tags:
+  - Modelpackagingjobs
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---
