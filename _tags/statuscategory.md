@@ -1,0 +1,16 @@
+---
+name: Statuscategory
+description: Needs a description.
+image: >-
+  https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/statuscategory.png
+url: https://example.com/apis/statuscategory.yml
+created: 2024/3/30
+modified: 2024/3/30
+specificationVersion: '0.16'
+tags:
+  - Statuscategory
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---

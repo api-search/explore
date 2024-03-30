@@ -1,0 +1,15 @@
+---
+name: Upload
+description: Needs a description.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/upload.png
+url: https://example.com/apis/upload.yml
+created: 2024/3/30
+modified: 2024/3/30
+specificationVersion: '0.16'
+tags:
+  - Upload
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---
