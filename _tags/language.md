@@ -1,5 +1,5 @@
 ---
-name: Language
+name: Language.
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/language.png
 url: https://example.com/apis/language.yml
@@ -7,7 +7,7 @@ created: 2024/3/30
 modified: 2024/3/30
 specificationVersion: '0.16'
 tags:
-  - Language
+  - Language.
 apis: []
 maintainers:
   - FN: API Evangelist
