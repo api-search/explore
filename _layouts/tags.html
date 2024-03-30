@@ -31,13 +31,11 @@ layout: default
                             {% if property.type == "OpenAPI" %}
                                 {% for this_path in property.data.paths %}
                                     {% for this_verb in this_path[1] %}
-                                        {% for this_operation in this_verb[1] %}
-                                            {% for this_tag in this_operation.tags %}
-                                                {% for page_tag in page.tags %}
-                                                    {% if this_tag == page_tag %}
-                                                        {% assign show_api = 1 %}
-                                                    {% endif %}
-                                                {% endfor %} 
+                                        {% for this_tag in this_verb[1].tags %}
+                                            {% for page_tag in page.tags %}
+                                                {% if this_tag == page_tag %}
+                                                    {% assign show_api = 1 %}
+                                                {% endif %}
                                             {% endfor %} 
                                         {% endfor %} 
                                     {% endfor %} 
@@ -47,7 +45,7 @@ layout: default
 
                         {% if show_api == 1 %}
                             <tr>
-                                <td width="90%">{{ api }}</td>
+                                <td width="90%">{{ api.name }}</td>
                                 <td width="10%" align="center"><a href="{{ index.url }}#{{ api.name }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
                             </tr>
                         {% endif %}
