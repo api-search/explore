@@ -1,0 +1,15 @@
+---
+name: Supports
+description: Needs a description.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/supports.png
+url: https://example.com/apis/supports.yml
+created: 2024/4/5
+modified: 2024/4/5
+specificationVersion: '0.16'
+tags:
+  - Supports
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---

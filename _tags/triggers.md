@@ -1,13 +1,13 @@
 ---
-name: Triggers.
+name: Triggers
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/triggers.png
 url: https://example.com/apis/triggers.yml
-created: 2024/3/30
-modified: 2024/3/30
+created: 2024/4/5
+modified: 2024/4/5
 specificationVersion: '0.16'
 tags:
-  - Triggers.
+  - Triggers
 apis: []
 maintainers:
   - FN: API Evangelist

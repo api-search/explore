@@ -5,8 +5,8 @@ image: >-
   https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/trusthub-v1-customer-profiles-channel-endpoint-assignment.png
 url: >-
   https://example.com/apis/trusthub-v1-customer-profiles-channel-endpoint-assignment.yml
-created: 2024/3/30
-modified: 2024/3/30
+created: 2024/4/5
+modified: 2024/4/5
 specificationVersion: '0.16'
 tags:
   - Trusthub V1 Customer Profiles Channel Endpoint Assignment
