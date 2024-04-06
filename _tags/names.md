@@ -1,5 +1,5 @@
 ---
-name: Names,
+name: Names
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/names.png
 url: https://example.com/apis/names.yml
@@ -7,7 +7,7 @@ created: 2024/4/6
 modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
-  - Names,
+  - Names
 apis: []
 maintainers:
   - FN: API Evangelist

@@ -1,5 +1,5 @@
 ---
-name: Funds.
+name: Funds
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/funds.png
 url: https://example.com/apis/funds.yml
@@ -7,7 +7,7 @@ created: 2024/4/6
 modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
-  - Funds.
+  - Funds
 apis: []
 maintainers:
   - FN: API Evangelist

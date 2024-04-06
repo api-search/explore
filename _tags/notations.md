@@ -1,5 +1,5 @@
 ---
-name: Notations.
+name: Notations
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/notations.png
 url: https://example.com/apis/notations.yml
@@ -7,7 +7,7 @@ created: 2024/4/6
 modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
-  - Notations.
+  - Notations
 apis: []
 maintainers:
   - FN: API Evangelist

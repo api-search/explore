@@ -5,8 +5,8 @@ image: >-
   https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/additional-transaction-information-category-user-defined.png
 url: >-
   https://example.com/apis/additional-transaction-information-category-user-defined.yml
-created: 2024/4/5
-modified: 2024/4/5
+created: 2024/4/6
+modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
   - Additional Transaction Information Category User Defined

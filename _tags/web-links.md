@@ -1,0 +1,15 @@
+---
+name: Web Links
+description: Needs a description.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/web-links.png
+url: https://example.com/apis/web-links.yml
+created: 2024/4/6
+modified: 2024/4/6
+specificationVersion: '0.16'
+tags:
+  - Web Links
+apis: []
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+---
