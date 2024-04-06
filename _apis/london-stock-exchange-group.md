@@ -21,9 +21,7 @@ apis:
     humanURL: >-
       https://developers.lseg.com/content/dam/devportal/en_us/product-docs/wc1-api/index.html
     baseURL: https://example.com
-    tags:
-      - Data
-      - Financial
+    tags: []
     properties:
       - type: OpenAPI
         url: >-
@@ -12426,6 +12424,7 @@ apis:
                 errorDescription:
                   type: string
                   description: The details about
+    aid: london-stock-exchange-group:lseg-world-check-one-api
     overlays: []
 common:
   - type: Portal
@@ -12439,4 +12438,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: london-stock-exchange-group
 ---

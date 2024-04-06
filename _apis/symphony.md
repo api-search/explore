@@ -12,13 +12,14 @@ modified: 2024/03/13
 specificationVersion: '0.17'
 tags: []
 apis:
-  - name: Symphony Profile Manager API
-    description: Profile Manager is a microservice to manage users profile and groups.
+  - name: Symphony Pod API
+    description: >-
+      The Symphony Pod API is used to build tools in order to manage and
+      administer Symphony for your organization. 
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.developers.symphony.com/bots/overview-of-rest-api/pod-api
     baseURL: https://example.com
-    tags: &ref_1
-      - Profiles
+    tags: []
     properties:
       - type: OpenAPI
         url: https://docs.developers.symphony.com/bots/overview-of-rest-api/pod-api
@@ -9918,13 +9919,18 @@ apis:
                     account. Must be valid JSON.
               required:
                 - nu
-    overlays: []
-  - name: Symphony Profile Manager API
-    description: Profile Manager is a microservice to manage users profile and groups.
+    aid: symphony:symphony-pod-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/pod-openapi-search.yml
+  - name: Symphony Agent API
+    description: >-
+      The Symphony Agent is responsible for encryption and decryption of
+      messages and content sent to and from a bot.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.developers.symphony.com/bots/overview-of-rest-api/agent-api
     baseURL: https://example.com
-    tags: *ref_1
+    tags: []
     properties:
       - type: OpenAPI
         url: >-
@@ -12412,13 +12418,19 @@ apis:
                   must: share the same 
 
                   service account provide the same "tag" and same "filte
-    overlays: []
-  - name: Symphony Profile Manager API
-    description: Profile Manager is a microservice to manage users profile and groups.
+    aid: symphony:symphony-agent-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/agent-openapi-search.yml
+  - name: Symphony Authenticator API
+    description: >-
+      Tailor your portfolio exposures and risks using our hedging and
+      optimization tools. Dynamically manage objectives and constraints while
+      controlling for cost and tradability to meet your investment goals.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.developers.symphony.com/bots/authentication
     baseURL: https://example.com
-    tags: *ref_1
+    tags: []
     properties:
       - type: OpenAPI
         url: https://docs.developers.symphony.com/bots/authentication
@@ -12530,13 +12542,20 @@ apis:
               properties:
                 message:
                   type: null
-    overlays: []
-  - name: Symphony Profile Manager API
-    description: Profile Manager is a microservice to manage users profile and groups.
+    aid: symphony:symphony-authenticator-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/authenticator-openapi-search.yml
+  - name: Symphony Community Connect API
+    description: >-
+      Access the full range of Goldman Sachs indices and basket products, or
+      create bespoke solutions to tailor your own investment strategies. Design,
+      create, and rebalance fully-customized, ready-to-trade basket solutions to
+      express thematic and risk views.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://docs.developers.symphony.com/symphony-rest-api/channel-connect
     baseURL: https://example.com
-    tags: *ref_1
+    tags: []
     properties:
       - type: OpenAPI
         url: https://docs.developers.symphony.com/symphony-rest-api/channel-connect
@@ -12650,13 +12669,20 @@ apis:
                   - Roles
                   - Add
                 summary: Disable cha
-    overlays: []
-  - name: Symphony Profile Manager API
-    description: Profile Manager is a microservice to manage users profile and groups.
+    aid: symphony:symphony-community-connect-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/community-connect-openapi-search.yml
+  - name: Symphony Login API
+    description: >-
+      Programmatically manage your portfolio lifecycle from creation and update
+      to scheduling reports with full control over visibility and sharing.
+      Automate your portfolio workflow using our APIs — leaving you to focus on
+      the alpha driving decisions.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://symphony-1.gitbook.io/restapi
     baseURL: https://example.com
-    tags: *ref_1
+    tags: []
     properties:
       - type: OpenAPI
         url: https://symphony-1.gitbook.io/restapi
@@ -12943,13 +12969,16 @@ apis:
                 https://datatracker.ietf.org/doc/html/rfc7517#section-4.
               additionalProperties:
                 type: null
-    overlays: []
+    aid: symphony:symphony-login-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/login-openapi-search.yml
   - name: Symphony Profile Manager API
     description: Profile Manager is a microservice to manage users profile and groups.
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     humanURL: https://developers.symphony.com/restapi
     baseURL: https://example.com
-    tags: *ref_1
+    tags: []
     properties:
       - type: OpenAPI
         url: https://developers.symphony.com/restapi
@@ -13097,7 +13126,10 @@ apis:
                   - Avatar
                   - All
                   - Typ
-    overlays: []
+    aid: symphony:symphony-profile-manager-api
+    overlays:
+      - type: APIs.io Search
+        url: overlays/profile-manager-openapi-search.yml
 common:
   - type: Portal
     url: https://developers.symphony.com/
@@ -13132,4 +13164,5 @@ maintainers:
 overlays:
   - type: APIs.io Search
     url: overlays/apis-io-search.yml
+aid: symphony
 ---
