@@ -3,8 +3,8 @@ name: Relationship
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/relationship.png
 url: https://example.com/apis/relationship.yml
-created: 2024/4/5
-modified: 2024/4/5
+created: 2024/4/6
+modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
   - Relationship

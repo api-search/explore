@@ -3,8 +3,8 @@ name: Transition
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/transition.png
 url: https://example.com/apis/transition.yml
-created: 2024/4/4
-modified: 2024/4/4
+created: 2024/4/5
+modified: 2024/4/5
 specificationVersion: '0.16'
 tags:
   - Transition

@@ -3,8 +3,8 @@ name: Regulatory
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/regulatory.png
 url: https://example.com/apis/regulatory.yml
-created: 2024/4/5
-modified: 2024/4/5
+created: 2024/4/6
+modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
   - Regulatory

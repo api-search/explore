@@ -4,8 +4,8 @@ description: Needs a description.
 image: >-
   https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/searchformatsdkprettytrue.png
 url: https://example.com/apis/searchformatsdkprettytrue.yml
-created: 2024/4/4
-modified: 2024/4/4
+created: 2024/4/5
+modified: 2024/4/5
 specificationVersion: '0.16'
 tags:
   - Search?format=sdk&pretty=true

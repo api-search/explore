@@ -3,8 +3,8 @@ name: Cvc2
 description: Needs a description.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/cvc2.png
 url: https://example.com/apis/cvc2.yml
-created: 2024/4/5
-modified: 2024/4/5
+created: 2024/4/6
+modified: 2024/4/6
 specificationVersion: '0.16'
 tags:
   - Cvc2
