@@ -1,5 +1,0 @@
-<h2>Tags (Icons):</h2>
-{% for icon in page.tags %}
-    <div style="text-align: center; width: 75px; display: inline;">{% assign icon = icon | replace: ' ','-' | replace: '%20','-' %}<img src="https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/{{ icon | downcase | replace: ' ','-' | replace: '%20','-' | strip }}.png" width="75" style="padding: 3px; display: inline;" title="{{ icon }}"></div>
-{% endfor %}     
-<br>          
