@@ -216,6 +216,7 @@ title: Network Search
                         //console.log(doc.name);
 
                         node_url = node_url.replace("apis.md","overlays/apis-io-search.yml");
+                        console.log(node_url);
 
                         fetch(node_url,options)
                             .then(function(response) {
@@ -231,7 +232,7 @@ title: Network Search
                                     try {
 
                                         const overlay_doc = jsyaml.load(overlay_yaml);
-                                        //console.log(doc.name);                        
+                                        console.log(overlay_doc);                        
 
                                         // BEGIN API INDEX
                                         for (let i = 0; i < doc.apis.length; i++) {
