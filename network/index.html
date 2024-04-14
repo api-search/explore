@@ -14,7 +14,7 @@ title: APIs.io Network
             {% for network in site.data.apis.network %}  
                 <tr>
                     <td width="80%">{{ network.name }}</td>
-                    <td align="center" width="20%"><a href="{{ network.url }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
+                    <td align="center" width="20%"><a href="{{ network.url | replace: "apis.json","" }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
                 </tr>
             {% endfor %}  
             </table>  
