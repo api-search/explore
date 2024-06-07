@@ -47,8 +47,14 @@ network:
   - name: Payments
     url: https://payments.apis.io/apis.json
 
+  - name: Social
+    url: https://social.apis.io/apis.json    
+
   - name: Travel
     url: https://travel.apis.io/apis.json
+
+  - name: US Federal Government
+    url: https://us-federal-government.apis.io/apis.json    
 
   - name: Videos
     url: https://videos.apis.io/apis.json
