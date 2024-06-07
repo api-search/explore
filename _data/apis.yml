@@ -38,14 +38,26 @@ network:
   - name: Financial
     url: https://financial.apis.io/apis.json
 
+  - name: Images
+    url: https://images.apis.io/apis.json
+
   - name: Infrastructure
     url: https://infrastructure.apis.io/apis.json
 
   - name: Messaging
     url: https://messaging.apis.io/apis.json
 
+  - name: Music
+    url: https://music.apis.io/apis.json    
+
+  - name: News
+    url: https://news.apis.io/apis.json    
+
   - name: Payments
     url: https://payments.apis.io/apis.json
+
+  - name: Shipping
+    url: https://shipping.apis.io/apis.json    
 
   - name: Social
     url: https://social.apis.io/apis.json    
@@ -55,6 +67,9 @@ network:
 
   - name: US Federal Government
     url: https://us-federal-government.apis.io/apis.json    
+
+  - name: Weather
+    url: https://weather.apis.io/apis.json
 
   - name: Videos
     url: https://videos.apis.io/apis.json
