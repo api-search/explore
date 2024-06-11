@@ -71,14 +71,14 @@ title: Network Search
                 method: 'get'
             };	
 
-        //console.log(node_url);
+        ////console.log(node_url);
         // PULL OVERLAY
         //node_url = node_url.replace("apis.md","overlays/apis-io-search.yml");
 
         fetch(node_url,options)
             .then(function(response) {
                 if (!response.ok) {
-                    console.log('Error with Status Code: ' + response.status);
+                    //console.log('Error with Status Code: ' + response.status);
                     return;
                 }
                 response.text().then(function(yaml) {	
@@ -89,15 +89,15 @@ title: Network Search
                     try {
 
                         const doc = jsyaml.load(yaml);
-                        //console.log(doc.name);
+                        ////console.log(doc.name);
 
                         node_url = node_url.replace("apis.md","overlays/apis-io-search.yml");
-                        console.log(node_url);
+                        //console.log(node_url);
 
                         fetch(node_url,options)
                             .then(function(response) {
                                 if (!response.ok) {
-                                    console.log('Error with Status Code: ' + response.status);
+                                    //console.log('Error with Status Code: ' + response.status);
                                     return;
                                 }
                                 response.text().then(function(overlay_yaml) {	
@@ -108,7 +108,7 @@ title: Network Search
                                     try {
 
                                         const overlay_doc = jsyaml.load(overlay_yaml);
-                                        console.log(overlay_doc); 
+                                        //console.log(overlay_doc); 
                                         
                                         var query_search = query.toLowerCase(); 
 
@@ -148,9 +148,9 @@ title: Network Search
                                                 } 
                                             } 
                                             
-                                            //console.log("api_name_match: " + api_name_match);
-                                            //console.log("api_description_match: " + api_name_match);
-                                            //console.log("api_tag_match: " + api_name_match);
+                                            ////console.log("api_name_match: " + api_name_match);
+                                            ////console.log("api_description_match: " + api_name_match);
+                                            ////console.log("api_tag_match: " + api_name_match);
                                             
                                             if(api_name_match == true || api_description_match == true || api_tag_match == true){
 
@@ -169,23 +169,23 @@ title: Network Search
                                         // END API INDEX
 
                                     } catch (e) {
-                                        console.log(e);
+                                        //console.log(e);
                                     }                    
                                         
                                 });
                             })
                             .catch(function(err) {
-                                console.log('Error: ' + err);
+                                //console.log('Error: ' + err);
                         });                                         
 
                     } catch (e) {
-                        console.log(e);
+                        //console.log(e);
                     }                    
                         
                 });
             })
             .catch(function(err) {
-                console.log('Error: ' + err);
+                //console.log('Error: ' + err);
         }); 
 
     }
@@ -199,22 +199,22 @@ title: Network Search
         fetch(network_url,options)
             .then(function(response) {
                 if (!response.ok) {
-                    console.log('Error with Status Code: ' + response.status);
+                    //console.log('Error with Status Code: ' + response.status);
                     return;
                 }
                 response.json().then(function(search) {	
 
-                    //console.log(search.name); 
+                    ////console.log(search.name); 
 
                     for (let i = 0; i < search.includes.length; i++) {
-                        //console.log(search.includes[i].name + ' - ' + search.includes[i].url);
+                        ////console.log(search.includes[i].name + ' - ' + search.includes[i].url);
                         pullNode(search.includes[i].url,query,network_url);
                         }                    
                         
                 });
             })
             .catch(function(err) {
-                console.log('Error: ' + err);
+                //console.log('Error: ' + err);
         }); 
 
     }
@@ -266,7 +266,7 @@ title: Network Search
         fetch('{{ site.search_url }}?search=' + query + '&limit=' + limit + '&page=0',options)
             .then(function(response) {
                 if (!response.ok) {
-                    console.log('Error with Status Code: ' + response.status);
+                    //console.log('Error with Status Code: ' + response.status);
                     return;
                 }
                 response.json().then(function(search) {	
@@ -294,7 +294,7 @@ title: Network Search
                 });
             })
             .catch(function(err) {
-                console.log('Error: ' + err);
+                //console.log('Error: ' + err);
         });               
     }
 </script>
