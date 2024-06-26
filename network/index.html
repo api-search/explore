@@ -14,7 +14,7 @@ title: APIs.io Network
             {% for network in site.data.apis.network %}  
                 <tr>
                     <td width="70%">{{ network.name }}</td>
-                    <td align="center" width="10%"><a href="{{ network.url | replace: "apis.json","" }}"><button type="button" class="btn btn-outline-success">Details</button></a></td>
+                    <td align="center" width="10%"><a href="{{ network.url | replace: "apis.json","" }}apis/"><button type="button" class="btn btn-outline-success">Details</button></a></td>
                     <td align="center" width="10%"><a href="https://github.com/api-search/{{ network.url | replace: "https://","" | replace: ".apis.io/apis.json","" }}/tree/main/_apis"><button type="button" class="btn btn-outline-success">YAML</button></a></td>
                     <td align="center" width="10%"><a href="{{ network.url }}"><button type="button" class="btn btn-outline-success">APIs.json</button></a></td>
                 </tr>
