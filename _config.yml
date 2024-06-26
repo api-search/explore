@@ -1,7 +1,6 @@
 name: APIs.io
 description: The first API search engine.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-
 url: https://apis.io
 
 node: explore
@@ -10,6 +9,7 @@ keywords:
 
   - APIs
   - Search
+  - Discovery
 
 permalink: /:categories/:year/:month/:day/:title/
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
