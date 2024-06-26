@@ -7,4 +7,4 @@ We welcome submissions to the APs.io index, using [a URL to a valid APIs.json fi
 
 {% include add.html %}
 
-If the [APIs.json file](https://apisjson.org/) is accepted, you will receive a message immediately, but then it takes time for the APIs.json to be submitted for processing and rating.
+If the [APIs.json file](https://apisjson.org/) is accepted, you will receive a message here after your submission, and share an GitHub issue to drive discussion and support.
