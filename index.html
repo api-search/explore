@@ -4,6 +4,7 @@ title: Network Search
 ---
 
 <center>
+<p class="uk-text-lead uk-text-center" style="font-size: 24px; margin-bottom: 10px;">{{ site.name }} {{ page.title }}</p>
 <form class="row">
     <table align="center" style="width: 250px;">
         <tr>
@@ -26,6 +27,14 @@ title: Network Search
 <table  class="table table-hover" id="search-results"></table>    
 {% if site.search_local == true %}     
 <script>     
+
+    <!--
+        
+    This is an intentionally crude search engine, exploring what is possible with a network of independent search nodes. 
+    We are working on a cloud version, allowing users to switch between network or cloud search.
+    The goal is to redefine API search with federated, cloud, localized, and any other type of search possible using APIs.json.
+    If you have a better way to write a search -- let's see it!!    
+    -->
 
     function slugify(str) {
         return String(str)
@@ -70,14 +79,10 @@ title: Network Search
                 method: 'get'
             };	
 
-        ////console.log(node_url);
-        // PULL OVERLAY
-        //node_url = node_url.replace("apis.md","overlays/apis-io-search.yml");
-
         fetch(node_url,options)
             .then(function(response) {
                 if (!response.ok) {
-                    //console.log('Error with Status Code: ' + response.status);
+                    console.log('Error with Status Code: ' + response.status);
                     return;
                 }
                 response.text().then(function(yaml) {	
@@ -88,10 +93,7 @@ title: Network Search
                     try {
 
                         const doc = jsyaml.load(yaml);
-                        ////console.log(doc.name);
-
                         node_url = node_url.replace("apis.md","overlays/apis-io-search.yml");
-                        //console.log(node_url);
 
                         fetch(node_url,options)
                             .then(function(response) {
@@ -107,7 +109,6 @@ title: Network Search
                                     try {
 
                                         const overlay_doc = jsyaml.load(overlay_yaml);
-                                        //console.log(overlay_doc); 
                                         
                                         var query_search = query.toLowerCase(); 
 
@@ -146,11 +147,7 @@ title: Network Search
                                                     }
                                                 } 
                                             } 
-                                            
-                                            ////console.log("api_name_match: " + api_name_match);
-                                            ////console.log("api_description_match: " + api_name_match);
-                                            ////console.log("api_tag_match: " + api_name_match);
-                                            
+                       
                                             if(api_name_match == true || api_description_match == true || api_tag_match == true){
 
                                                 api.nodeUrl = network_url;
@@ -168,23 +165,23 @@ title: Network Search
                                         // END API INDEX
 
                                     } catch (e) {
-                                        //console.log(e);
+                                        console.log(e);
                                     }                    
                                         
                                 });
                             })
                             .catch(function(err) {
-                                //console.log('Error: ' + err);
+                                console.log('Error: ' + err);
                         });                                         
 
                     } catch (e) {
-                        //console.log(e);
+                        console.log(e);
                     }                    
                         
                 });
             })
             .catch(function(err) {
-                //console.log('Error: ' + err);
+                console.log('Error: ' + err);
         }); 
 
     }
@@ -228,7 +225,7 @@ title: Network Search
         if(document.getElementById('api-search').value != ''){                        
             query = document.getElementById('api-search').value;
         }
-
+        
         {% assign apis = site.data.apis %}
         {% for node in apis.network %}      
             // Search Network
