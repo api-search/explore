@@ -21,7 +21,7 @@ title: Network Search
 </center>
 <table  class="table table-hover" id="search-results"></table>    
 {% if site.search_local == true %}     
-<script src="http://apis.io/assets/search-local.js"></script>
+    {% include search-local.html %}
 {% else %} 
-<script src="http://apis.io/assets/search-cloud.js"></script>
+    {% include search-cloud.html %}
 {% endif %}                    
