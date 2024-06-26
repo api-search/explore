@@ -5,10 +5,6 @@ function search(){
     if(document.getElementById('api-search').value != ''){                        
         query = document.getElementById('api-search').value;
     }
-
-    let limit = document.getElementById('api-limit').value;
-    if(limit == ''){ limit = 10; }
-
     const options = {
             method: 'get',
             headers: {
@@ -16,10 +12,10 @@ function search(){
             }
         };	
 
-    fetch('{{ site.search_url }}?search=' + query + '&limit=' + limit + '&page=0',options)
+    fetch('{{ site.search_url }}?search=' + query,options)
         .then(function(response) {
             if (!response.ok) {
-                //console.log('Error with Status Code: ' + response.status);
+                console.log('Error with Status Code: ' + response.status);
                 return;
             }
             response.json().then(function(search) {	
@@ -47,6 +43,6 @@ function search(){
             });
         })
         .catch(function(err) {
-            //console.log('Error: ' + err);
+            console.log('Error: ' + err);
     });               
 }
