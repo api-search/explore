@@ -86,6 +86,11 @@ function pullNode(node_url,query,network_url){
                                     if(doc.apis){
                                         for (let i = 0; i < doc.apis.length; i++) {
 
+                                            var total_apis = document.getElementById("total_apis").innerHTML;
+                                            total_apis = total_apis - 0;
+                                            total_apis = total_apis + 1;
+                                            document.getElementById("total_apis").innerHTML = total_apis;   
+
                                             var api = overlay_doc.apis[i];
 
                                             var api_name_match = false;
@@ -160,6 +165,13 @@ function pullNode(node_url,query,network_url){
 
 function searchNode(network_url,query){
 
+    var total_networks = document.getElementById("total_networks").innerHTML;
+    total_networks = total_networks - 0;
+    total_networks = total_networks + 1;
+    document.getElementById("total_networks").innerHTML = total_networks;    
+
+    document.getElementById("counter-table").style.display = "";
+
     const options = {
             method: 'get'
         };	
@@ -175,6 +187,12 @@ function searchNode(network_url,query){
                 ////console.log(search.name); 
 
                 for (let i = 0; i < search.includes.length; i++) {
+
+                    var total_providers = document.getElementById("total_providers").innerHTML;
+                    total_providers = total_providers - 0;
+                    total_providers = total_providers + 1;
+                    document.getElementById("total_providers").innerHTML = total_providers;   
+
                     ////console.log(search.includes[i].name + ' - ' + search.includes[i].url);
                     pullNode(search.includes[i].url,query,network_url);
                     }                    

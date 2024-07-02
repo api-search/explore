@@ -18,6 +18,9 @@ title: Network Search
     </table>
     <textarea id="search_json" rows="10" cols="100" style="display: none;">[]</textarea>
 </form>
+<div width="100%" id="counter-table" style="display: none; padding: 25px;">
+Searching across <div id="total_networks" style="display: inline;">0</div> networks, <div id="total_providers" style="display: inline;">0</div> providers, and <div id="total_apis" style="display: inline;">0</div> individual APIs
+</div>
 </center>
 <table  class="table table-hover" id="search-results"></table>    
 {% if site.search_local == true %}     
