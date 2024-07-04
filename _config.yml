@@ -1,7 +1,7 @@
 name: APIs.io
 description: The first API search engine.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-url: https://apis.io
+url: https://explore.apis.io
 
 node: explore
 
