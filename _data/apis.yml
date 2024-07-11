@@ -17,8 +17,14 @@ network:
   - name: Artisanal
     url: https://artisanal.apis.io/apis.json    
 
+  - name: Agriculture
+    url: https://agriculture.apis.io/apis.json        
+
   - name: Artificial Intelligence
     url: https://ai.apis.io/apis.json
+
+  - name: Automobiles
+    url: https://automobiles.apis.io/apis.json    
 
   - name: Banking
     url: https://banking.apis.io/apis.json
